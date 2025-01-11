@@ -62,6 +62,6 @@ create nodes with an ``ndm`` of ``2`` and with ``3`` degrees-of-freedom at each 
 
 Note that ``opensees`` must come before ``openseespy`` in the ``import`` statement.
 
-For more examples, visit the STAIRlab example [gallery](https://stairlab.github.io/opensees-gallery).
+For more examples, visit the STAIRlab example `gallery <https://gallery.stairlab.io>`_.
 
 Code Developed by: *cmp*
