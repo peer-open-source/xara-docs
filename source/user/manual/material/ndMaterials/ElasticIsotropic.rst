@@ -5,7 +5,7 @@ Elastic Isotropic Material
 
 This command is used to construct an ElasticIsotropic material object.
 
-.. function nDMaterial ElasticIsotropic $matTag $E $v <$rho>
+.. function:: nDMaterial ElasticIsotropic $matTag $E $v <$rho>
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
@@ -18,6 +18,18 @@ This command is used to construct an ElasticIsotropic material object.
 
 .. note::
    The material formulations for the ElasticIsotropic object are "ThreeDimensional," "PlaneStrain," "Plane Stress," "AxiSymmetric," and "PlateFiber."
+
+
+Formulations
+============
+
+A linear isotropic function can be expressed in terms of two parameters :math:`\lambda` and :math:`\mu` as follows :cite:p:`gurtin1981introduction`:
+
+.. math::
+   \boldsymbol{S}
+
+
+
 
 Code Developed by: |mhs|
 
