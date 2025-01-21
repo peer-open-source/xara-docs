@@ -96,6 +96,7 @@ html_theme_options = {
     "body_max_width": None,
     'style_nav_header_background': 'white',
 }
+html_show_sourcelink = False
 
 #  'style_nav_header_background': '#F2F2F2' #64B5F6 #607D8B,
 
