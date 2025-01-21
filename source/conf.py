@@ -19,9 +19,9 @@ sys.path.append(os.path.abspath('./sphinx_ext/'))
 numfig = True
 numfig_secnum_depth = 3
 
-project = 'OpenSees Documentation'
-copyright = '2022, The Regents of the University of California'
-author = 'Frank McKenna, Michael Scott, Pedro Arduino, Minjie Zhu'
+project = 'OpenSeesRT'
+copyright = '2025, The Regents of the University of California'
+#author = 'Frank McKenna, Michael Scott, Pedro Arduino, Minjie Zhu'
 html_logo = 'OpenSeesLogo.png'
 
 master_doc = 'index'
