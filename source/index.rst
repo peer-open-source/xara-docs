@@ -16,7 +16,7 @@ As part of the code development efforts, a number of applications built using th
 .. toctree::
    :caption: Applications for Users
    :maxdepth: 1
-   :numbered: 5
+   :numbered: 1
 
    user/install
    user/userManual
@@ -30,7 +30,7 @@ The OpenSees framework is presented in the following chapters for developers wis
 .. toctree::
    :caption: Framework for Developer
    :maxdepth: 2
-   :numbered: 3
+   :numbered: 1
 
    developer/references
    developer/extend
