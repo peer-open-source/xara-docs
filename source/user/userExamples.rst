@@ -2,13 +2,5 @@
 Examples
 **************
 
+Examples are currated by the STAIRLab at https://gallery.stairlab.io
 
-In this section, several example script of OpenSees model is shown.
-
-.. _examples:
-
-.. toctree::
-   :maxdepth: 1   
-
-   examples/basicExamples
-   examples/thermalExamples
