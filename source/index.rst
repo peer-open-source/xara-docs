@@ -32,9 +32,7 @@ The OpenSees framework is presented in the following chapters for developers wis
    :maxdepth: 2
    :numbered: 3
 
-   developer/sourceCode
-   developer/build
    developer/references
    developer/extend
-   developer/contribute
    developer/issues
+
