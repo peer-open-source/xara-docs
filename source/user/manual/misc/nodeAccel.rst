@@ -1,7 +1,7 @@
 .. _nodeAccel:
 
-nodeAccel Command
-*****************
+``nodeAccel``
+*************
 
 This command returns the current acceleration at a specified node.
 

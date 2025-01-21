@@ -1,7 +1,7 @@
 .. _nodeDisp:
 
-nodeDisp Command
-****************
+``nodeDisp``
+************
 
 This command returns the current displacement at a specified node.
 

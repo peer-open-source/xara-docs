@@ -1,9 +1,9 @@
 .. _wipeAnalysis:
 
-wipeAnalysis Command
+``wipeAnalysis``
 ********************
 
-The wipeAnalysis command is used to remove all the analysis objects. 
+Remove all the analysis objects. 
 
 .. function:: wipeAnalsyis
 

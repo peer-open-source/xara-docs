@@ -1,7 +1,7 @@
 .. _nodeVel:
 
-nodeVel Command
-****************
+``nodeVel``
+***********
 
 This command returns the current velocity at a specified node.
 

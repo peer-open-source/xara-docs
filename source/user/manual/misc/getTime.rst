@@ -1,7 +1,7 @@
 .. _getTime:
 
-getTime Command
-****************
+``getTime``
+***********
 
 This command returns the current time in the **Domain**.
 
@@ -25,3 +25,4 @@ This command returns the current time in the **Domain**.
 
 
 Code developed by: |fmk|
+

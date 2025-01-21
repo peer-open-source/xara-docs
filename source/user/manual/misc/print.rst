@@ -1,7 +1,7 @@
 .. print_
 
-print Command
-*************
+``print``
+*********
 
 This command is used to print output to screen or file. There are a number of
 
@@ -28,6 +28,9 @@ To print element information:
 
 EXAMPLE:
 
-print -ele; # print all elements
+.. code:: tcl
 
-print -node 1 2 3; # print data for nodes 1,2 & 3
+  print -ele; # print all elements
+
+  print -node 1 2 3; # print data for nodes 1,2 & 3
+

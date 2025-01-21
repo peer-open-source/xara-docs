@@ -1,7 +1,7 @@
 .. _eleRespone:
 
-eleResponse Command
-*******************
+``eleResponse``
+***************
 
 This command is used to obtain state information from the element. The quantities that can be obtained from the element are the same as that whcih can be obtained using the :ref:`elementRecorder`.
 
