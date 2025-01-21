@@ -66,7 +66,7 @@ rst_prolog = """
 # ones.
 extensions = [
     'toctree_filter',
-    'sphinx_rtd_theme',
+#   'sphinx_rtd_theme',
     'sphinx_tabs.tabs',
     'sphinxcontrib.bibtex'
 ]
@@ -87,12 +87,14 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+#html_theme = "pydata_sphinx_theme"
 
 html_theme_options = {
 #      'analytics_id': 'UA-2431545-1',
 	'logo_only': True,
 	'prev_next_buttons_location': None,
-        "body_max_width": None
+    "body_max_width": None,
+    'style_nav_header_background': 'white',
 }
 
 #  'style_nav_header_background': '#F2F2F2' #64B5F6 #607D8B,

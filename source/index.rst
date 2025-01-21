@@ -18,11 +18,8 @@ As part of the code development efforts, a number of applications built using th
    :maxdepth: 1
    :numbered: 5
 
-   user/interpreters
    user/install
    user/userManual
-   user/userExamples
-   user/messageBoard
    developer/license
 
 

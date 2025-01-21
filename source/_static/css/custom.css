@@ -11,17 +11,7 @@ wy-nav-content {
     float: right;
 }
 
-
-#div.wy-side-scroll{
-#	background:#cb463f;
-#}
-
-
-#span.caption-text{
-#	color: #000000;
-#}
-
-td{
+td {
 	white-space: normal !important;
 }
 
