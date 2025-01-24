@@ -1,10 +1,20 @@
 
 .. _printA:
 
-``printA``
-**********
+``getTangent`` (``printA``)
+***************************
 
-.. function:: printA <-file $fileName> <-m $m> <-c $c> <-k $k>
+The ``getTangent`` function, or ``printA`` in Tcl, is used to return system matrices like the stiffness or mass.
+.. tabs::
+
+   .. tab:: Python
+
+      .. function:: getTangent(m, c, k)
+
+   .. tab:: Tcl
+
+      .. function:: printA <-file $fileName> <-m $m> <-c $c> <-k $k>
+
 
    
 .. list-table:: 
