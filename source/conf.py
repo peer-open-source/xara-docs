@@ -41,7 +41,7 @@ rst_prolog = """
 .. |OPS link| replace:: `OpenSees app`_
 .. _OpenSees app: http://opensees.berkeley.edu/
 .. |githubLink| replace:: `OpenSees Github link`_
-.. _OpenSees Github link: https://github.com/OpenSees/OpenSees
+.. _OpenSees Github link: https://github.com/STAIRLab
 .. |messageBoard| replace:: `OpenSees Message Board`_
 .. _OpenSees Message Board: https://opensees.berkeley.edu/community/index.php
 .. |glf| replace:: `Gregory L. Fenves`_
@@ -86,6 +86,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
+html_baseurl = "https://opensees.stairlab.io"
+
 html_theme = 'sphinx_rtd_theme'
 #html_theme = "pydata_sphinx_theme"
 
