@@ -5,11 +5,12 @@
 ***************************
 
 The ``getTangent`` function, or ``printA`` in Tcl, is used to return system matrices like the stiffness or mass.
+
 .. tabs::
 
    .. tab:: Python
 
-      .. function:: getTangent(m, c, k)
+      .. function:: Model.getTangent(m, c, k)
 
    .. tab:: Tcl
 
