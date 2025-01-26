@@ -20,6 +20,7 @@ As part of the code development efforts, a number of applications built using th
 
    user/install
    user/userManual
+   user/userExamples
    developer/license
 
 
