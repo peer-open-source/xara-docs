@@ -3,7 +3,7 @@ Installation
 ************
 
 There are several distributions available for installing OpenSees. 
-The `STAIRLab <https://stairlab.berkeley.edu`_ recommends the OpenSeesRT distribution, which is developed and maintained at UC Berkeley. 
+The `STAIRLab <https://stairlab.berkeley.edu>`_ recommends the OpenSeesRT distribution, which is developed and maintained at UC Berkeley. 
 
 * To install
 
