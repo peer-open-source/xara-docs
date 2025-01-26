@@ -21,7 +21,7 @@ The OpenSees interpreters add `commands <http://en.wikipedia.org/wiki/Command_(c
 .. toctree::
    :maxdepth: 1   
 
-   manual/modelCommands
+   manual/modeling
    manual/analysisCommands
    manual/outputCommands
    manual/miscCommands

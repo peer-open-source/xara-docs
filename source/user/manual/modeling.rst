@@ -1,5 +1,5 @@
-Model Commands
---------------
+Modeling
+--------
 
 These commands are used to create a finite element model. 
 A finite element model consists of **Nodes**, **Elements**, **Constraints**, and **Loads**. 
