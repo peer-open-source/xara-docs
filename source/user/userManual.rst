@@ -13,8 +13,7 @@ In OpenSees there exists:
 
 4. The **Recorders**, code that allows the user to obtain output from a finite element analysis, e.g. to record the node displacement history.
 
-
-The OpenSees interpreters add `commands <http://en.wikipedia.org/wiki/Command_(computing)>`_ to interpreters, e.g. Python and Tcl, to allow the user to specify the model builder, the domain, the analysis and the output. Each of these added commands is associated (bound) with a C++ procedure that is provided in the OpenSees Framework. It is this procedure that is called upon by the interpreter to parse the command when it is encountered. In this document we focus primarily on those commands which have been added to these languages. All existing commands that exist in the Tcl and Python languages are available to these interpreters. We provide a brief [[Introduction To Tcl]], more detailed documentation on these existing commands can be found in books and on-line.
+Functions which provide the interface to these abstractions are documented below:
 
 .. _command-manual:
 
