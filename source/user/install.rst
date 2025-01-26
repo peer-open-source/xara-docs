@@ -2,13 +2,26 @@
 Installation
 ************
 
-Depending on choice of interpreter you wish to use there are 2 installation procedures to follow:
+There are several distributions available for installing OpenSees. 
+The `STAIRLab <https://stairlab.berkeley.edu`_ recommends the OpenSeesRT distribution, which is developed and maintained at UC Berkeley. 
 
-.. _installation:
+* To install
 
-.. toctree::
-   :maxdepth: 1
+   ::
 
-   tclInstall
-   pythonInstall
+      python -m pip install opensees
+
+
+* To upgrade
+
+   ::
+
+      python -m pip install --upgrade opensees
+
+
+* To import
+
+  ::
+
+     import opensees.openseespy as ops
 
