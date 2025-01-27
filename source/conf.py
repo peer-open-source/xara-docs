@@ -68,7 +68,8 @@ extensions = [
     'toctree_filter',
 #   'sphinx_rtd_theme',
     'sphinx_tabs.tabs',
-    'sphinxcontrib.bibtex'
+    'sphinxcontrib.bibtex',
+    'sphinx_sitemap'
 ]
 
 bibtex_bibfiles = ["references.bib"]
@@ -86,7 +87,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_baseurl = "https://opensees.stairlab.io"
+html_baseurl = "https://opensees.stairlab.io/"
+sitemap_url_scheme = "{link}"
 
 html_theme = 'sphinx_rtd_theme'
 #html_theme = "pydata_sphinx_theme"
