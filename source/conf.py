@@ -25,6 +25,7 @@ copyright = '2025, The Regents of the University of California'
 html_logo = 'OpenSeesLogo.png'
 
 master_doc = 'index'
+html_extra_path = ["robots.txt"]
 
 rst_prolog = """
 .. |floatList| replace:: *list float*
