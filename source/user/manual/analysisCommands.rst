@@ -12,6 +12,8 @@ In OpenSees, an analysis is an object which is composed by the aggregation of co
 #. Solution Algorithm -- determines the sequence of steps taken to solve the non-linear equation at the current time step
 #. Integrator -- determines the equations to solve, the predictive step, and how to update the response at the nodes given the solution to :math:`Ax=b`
 
+As with the modeling commands, all analysis commands should be invoked as methods of the ``Model`` class.
+
 
 .. toctree::
    :maxdepth: 1
