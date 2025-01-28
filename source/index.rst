@@ -2,7 +2,7 @@
 STAIRLab's  OpenSees
 ======================
 
-Welcome to the STAIRLab's fork of the OpenSees documentation.
+Welcome to the STAIRLab's OpenSees documentation.
 
 The Open System for Earthquake Engineering Simulation (OpenSees) is a software framework for simulating the dynamic response of structural and geotechnical systems. OpenSees was originally developed as the computational platform for research in performance-based earthquake engineering at the Pacific Earthquake Engineering Research Center. It is now widely used as a finite element application to study response of structures across all natural hazards including Fire, Wind, Earthquake, and Wave action due to Tsunami or Storm Surge.
 
