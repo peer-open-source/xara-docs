@@ -1,18 +1,39 @@
 .. _lblAnalysisCommands:
 
-Analysis Commands
------------------
+Analysis
+--------
 
-In OpenSees, an analysis is an object which is composed by the aggregation of component objects. It is the component objects which define the type of analysis that is performed on the model. The component classes, as shown in the figure below, consist of the following:
+.. _lblAnalysisCommands:
 
-#. Constraint Handler -- determines how the constraint equations are enforced in the analysis -- how it handles the boundary conditions/imposed displacements
-#. DOF Numberer -- determines the mapping between equation numbers in the system of equation and the degrees-of-freedom at the nodes
-#. SystemOfEqn & Solver -- it specifies how to store and solve the system of equations :math:`Ax=b`
-#. Convergence Test -- determines when convergence has been achieved.
-#. Solution Algorithm -- determines the sequence of steps taken to solve the non-linear equation at the current time step
-#. Integrator -- determines the equations to solve, the predictive step, and how to update the response at the nodes given the solution to :math:`Ax=b`
+Analysis
+--------
+ 
+In OpenSees, an analysis is constructed by combining various component objects. These components determine the specific type of analysis executed on the model. As illustrated in the figure below, the component classes include:
 
-As with the modeling commands, all analysis commands should be invoked as methods of the ``Model`` class.
+#. **Constraint Handler** – Manages the enforcement of constraint equations during the analysis, handling boundary conditions and imposed displacements.
+#. **DOF Numberer** – Establishes the correspondence between equation numbers in the system of equations and the degrees of freedom at the nodes.
+#. **SystemOfEqn & Solver** – Defines the storage and solution method for the system of equations :math:`Ax=b`.
+#. **Convergence Test** – Identifies when the analysis has achieved convergence.
+#. **Solution Algorithm** – Outlines the sequence of steps to resolve the non-linear equations at each time step.
+#. **Integrator** – Specifies the equations to solve, the predictive steps, and the method for updating node responses based on the solution to :math:`Ax=b`.
+
+Similar to modeling commands, all analysis commands should be executed as methods of the ``Model`` class.
+
+.. toctree::
+   :maxdepth: 1
+
+   analysis/constraints
+   analysis/numberer
+   analysis/system
+   analysis/test
+   analysis/algorithm
+   analysis/integrator
+   analysis/analysis
+   analysis/analyze
+   analysis/eigen
+   analysis/modalProperties
+   analysis/responseSpectrumAnalysis
+
 
 
 .. toctree::
