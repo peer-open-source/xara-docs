@@ -31,5 +31,4 @@ The OpenSees framework is presented in the following chapters for developers wis
    :numbered: 1
 
    developer/references
-   developer/extend
 
