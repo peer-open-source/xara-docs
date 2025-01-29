@@ -23,7 +23,7 @@ This command is used to construct an NDMaterial object which represents the stre
 The following contain information about matType? and the args required for each of the available material types:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    ndMaterials/ElasticIsotropic
    ndMaterials/ElasticOrthotropic
@@ -47,39 +47,41 @@ The following contain information about matType? and the args required for each 
    ndMaterials/OrthotropicRAConcrete
    ndMaterials/SmearedSteelDoubleLayer
 
-Concrete Damage Model
-Plane Stress Material
-Plane Strain Material
-Multi Axial Cyclic Plasticity
-Plate Fiber Material
-Plane Stress Concrete Materials
-FSAM - 2D RC Panel Constitutive Behavior
-Tsinghua Sand Models
-CycLiqCP Material (Cyclic ElasticPlasticity)
-CycLiqCPSP Material
-Manzari Dafalias Material
-Stress Density Material
-Materials for Modeling Concrete Walls
-PlaneStressUserMaterial
-PlateFromPlaneStress
-PlateRebar
-LayeredShell
-Contact Materials for 2D and 3D
-ContactMaterial2D
-ContactMaterial3D
-Wrapper material for Initial State Analysis
-InitialStateAnalysisWrapper
-UC San Diego soil models (Linear/Nonlinear, dry/drained/undrained soil response under general 2D/3D static/cyclic loading conditions (please visit UCSD for examples)
-PressureIndependMultiYield Material
-PressureDependMultiYield Material
-PressureDependMultiYield02 Material
-PressureDependMultiYield03 Material
-UC San Diego Saturated Undrained soil
-FluidSolidPorousMaterial
-Misc.
-AcousticMedium
-Steel & Reinforcing-Steel Materials
-UVCmultiaxial (Updated Voce-Chaboche)
-UVCplanestress (Updated Voce-Chaboche)
+
+..
+    Concrete Damage Model
+    Plane Stress Material
+    Plane Strain Material
+    Multi Axial Cyclic Plasticity
+    Plate Fiber Material
+    Plane Stress Concrete Materials
+    FSAM - 2D RC Panel Constitutive Behavior
+    Tsinghua Sand Models
+    CycLiqCP Material (Cyclic ElasticPlasticity)
+    CycLiqCPSP Material
+    Manzari Dafalias Material
+    Stress Density Material
+    Materials for Modeling Concrete Walls
+    PlaneStressUserMaterial
+    PlateFromPlaneStress
+    PlateRebar
+    LayeredShell
+    Contact Materials for 2D and 3D
+    ContactMaterial2D
+    ContactMaterial3D
+    Wrapper material for Initial State Analysis
+    InitialStateAnalysisWrapper
+    UC San Diego soil models (Linear/Nonlinear, dry/drained/undrained soil response under general 2D/3D static/cyclic loading conditions (please visit UCSD for examples)
+    PressureIndependMultiYield Material
+    PressureDependMultiYield Material
+    PressureDependMultiYield02 Material
+    PressureDependMultiYield03 Material
+    UC San Diego Saturated Undrained soil
+    FluidSolidPorousMaterial
+    Misc.
+    AcousticMedium
+    Steel & Reinforcing-Steel Materials
+    UVCmultiaxial (Updated Voce-Chaboche)
+    UVCplanestress (Updated Voce-Chaboche)
 
 
