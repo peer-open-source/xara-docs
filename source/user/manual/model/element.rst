@@ -71,33 +71,33 @@ The following subsections contain information about **$eleType** and the number 
    elements/mixedBeamColumnAsym
    elements/E_SFI
 
+4. Plane Elements
 
-4. Quadrilateral & Shell Elements
+.. toctree::
+   :maxdepth: 1
+
+   elements/Quad
+   elements/Tri31
+   elements/SSPquad
+   elements/BbarPlaneStrainQuadrilateral
+   elements/EnhancedStrainQuadrilateral
+   elements/MEFI
+
+5. Shell Elements
 
 .. toctree::
    :maxdepth: 1
 
    elements/ASDShellQ4
-   elements/Quad
-   elements/SSPquad
    elements/Shell
    elements/ShellDKGQ
    elements/ShellNLDKGQ
    elements/ShellNL
-   elements/BbarPlaneStrainQuadrilateral
-   elements/EnhancedStrainQuadrilateral
-   elements/MEFI
-
-   
-5. Triangles
-
-.. toctree::
-   :maxdepth: 1
-
-   elements/Tri31
    elements/ShellDKGT
    elements/ShellNLDKGT
    elements/ASDShellT3
+
+   
 
 6. Bricks
 

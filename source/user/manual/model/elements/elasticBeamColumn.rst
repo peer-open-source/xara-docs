@@ -5,7 +5,43 @@
 
 The ``PrismFrame`` element represents a linear-elastic prismatic beam element. The arguments for the construction of an elastic beam-column element depend on the dimension of the problem, ndm:
 
-For a two-dimensional problem:
+
+.. tabs::
+
+   .. tab:: Tcl
+
+      .. function:: element PrismFrame $tag $iNode $jNode $sect $tran
+
+      The required arguments are:
+
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
+
+         ``tag``, |integer|,	       unique element object tag
+         ``iNode`` ``jNode`` , |integer|,  end nodes
+         ``sect``, |integer|,         section tag
+         ``tran``, |integer|,      identifier for previously-defined coordinate-transformation
+
+
+   .. tab:: Python (RT)
+
+      .. function:: element("PrismFrame", tag, (iNode, jNode), section=sect, transform=tran)
+
+      The required arguments are:
+
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
+
+         ``tag``, |integer|,	       unique element tag
+         ``iNode`` ``jNode`` , |integer|,  tags of end nodes
+         ``sect``, |integer|,         section tag
+         ``tran``, |integer|,      identifier for previously-defined coordinate-transformation
+
+
+
+The creation of a ``Section`` can be skipped, and elastic properties can be passed directly. In 2D:
 
 .. function:: element PrismFrame $eleTag $iNode $jNode $A $E $Iz $transfTag <-release $relcode> <-mass $massDens> <-cMass>
 
@@ -48,13 +84,13 @@ The valid queries to an elastic beam-column element when creating an ElementReco
 
    .. code-block:: tcl
 
-      element elasticBeamColumn 1 2 4 5.5 100.0 1e6 9; 
+      element PrismFrame 1 2 4 5.5 100.0 1e6 9; 
 
    2. **Python Code**
 
    .. code-block:: python
 
-      element('elasticBeamColumn',1,2,4,5.5,100.0, 1.0e6, 9)
+      model.element('PrismFrame',1,2,4,5.5,100.0, 1.0e6, 9)
 
 Code developed by: |fmk|
 
