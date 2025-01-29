@@ -17,9 +17,8 @@ The **ElasticFrame** section implements a general linear elastic frame section.
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
 
-         $tag, |integer|,	       unique element object tag
-         $iNode  $jNode, |integer|,  end nodes
-         $secTag, |integer|,         section tag
+         $tag, |integer|,	  unique element object tag
+         $secTag, |integer|,      section tag
          $transf, |integer|,      identifier for previously-defined coordinate-transformation (CrdTransf)
 
 

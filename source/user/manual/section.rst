@@ -27,7 +27,6 @@ The following contain information about secType? and the args required for each 
 .. toctree::
    :maxdepth: 1
 
-   section/ElasticSection
    section/ElasticFrame
    section/NDFiberSection
    section/WideFlangeSection
