@@ -55,21 +55,22 @@ The following subsections contain information about **$eleType** and the number 
 
    elements/elasticBeamColumn
    elements/ExactFrame
+   elements/ForceBasedBeamColumnElement
    elements/ModElasticBeam
    elements/ElasticBeamColumnElementWithStiffnessModifiers
-   elements/ElasticTimoshenkoBeamColumnElement
-   elements/BeamWithHingesElement
    elements/DisplacementBasedBeamColumnElement
-   elements/ForceBasedBeamColumnElement
    elements/gradientInelasticBeamColumn   
    elements/FlexureShearInteractionDisplacementBasedBeamColumnElement
+   elements/dispBeamColumnAsym
+   elements/mixedBeamColumnAsym
+
+.. toctree::
+   :maxdepth: 1   
    elements/MVLEM
    elements/MVLEM_3D
    elements/SFI_MVLEM_3D
-   elements/E_SFI_MVLEM_3D
-   elements/dispBeamColumnAsym
-   elements/mixedBeamColumnAsym
    elements/E_SFI
+   elements/E_SFI_MVLEM_3D
 
 4. Plane Elements
 
@@ -217,4 +218,6 @@ The following subsections contain information about **$eleType** and the number 
    elements/FSIFluidBoundaryElement2D
    elements/FSIFluidElement2D
    elements/FSIInterfaceElement2D
+
+
 
