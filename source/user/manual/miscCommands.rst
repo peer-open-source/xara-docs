@@ -1,7 +1,7 @@
-Misc. Commands
+State Commands
 ==============
 
-These are commands added to the interpreter which don't fit into one of the other three categories! The commands can be broken into two groups: (1) those that return values for use in the scripts, and (2) those that don't!!
+These are methods which don't fit into one of the other three categories! The commands can be broken into two groups: (1) those that return values for use in the scripts, and (2) those that don't!!
 
 .. toctree::
    :caption: 1. Commands that return values
