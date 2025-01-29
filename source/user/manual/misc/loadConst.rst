@@ -32,7 +32,7 @@ This command is used to set the loads constant in the domain and to also set the
 
    .. code-block:: python
 
-      loadConst('-time',0.0)
+      model.loadConst('-time',0.0)
 
 
 Code Developed by: |fmk|

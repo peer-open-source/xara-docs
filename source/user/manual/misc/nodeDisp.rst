@@ -26,13 +26,13 @@ This command returns the current displacement at a specified node.
 
    .. code-block:: tcl
 
-	set disp1 [nodeDisp $nodeTag 1]
+      set disp1 [nodeDisp $nodeTag 1]
 
    2. **Python Code**
 
    .. code-block:: python
 
-	disp1 = nodeDisp(nodeTag,1)
+      disp1 = model.nodeDisp(nodeTag,1)
 
 
 Code developed by: |fmk|

@@ -21,7 +21,7 @@ This command returns the current time in the **Domain**.
 
    .. code-block:: python
 
-	currentTime = getTime()
+	currentTime = model.getTime()
 
 
 Code developed by: |fmk|

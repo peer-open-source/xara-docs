@@ -23,7 +23,7 @@ This command is used to start over without having to exit and restart the interp
 
    .. code-block:: python
 
-      wipe()
+      model.wipe()
 
 
 Code Developed by: |fmk|

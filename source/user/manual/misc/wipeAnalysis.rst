@@ -28,7 +28,7 @@ This command is needed for example when the user wishes to switch from a static 
 
    .. code-block:: python
 
-      wipeAnalysis()
+      model.wipeAnalysis()
 
 
 Code Developed by: |fmk|

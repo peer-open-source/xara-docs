@@ -26,13 +26,13 @@ This command returns the current velocity at a specified node.
 
    .. code-block:: tcl
 
-	set vel1 [nodeVel $nodeTag 1]
+      set vel1 [nodeVel $nodeTag 1]
 
    2. **Python Code**
 
    .. code-block:: python
 
-	vel1 = nodeVel(nodeTag,1)
+      vel1 = model.nodeVel(nodeTag,1)
 
 
 Code developed by: |fmk|

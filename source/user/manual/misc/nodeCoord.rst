@@ -26,13 +26,13 @@ This command returns the current coordinate at a specified node.
 
    .. code-block:: tcl
 
-	set crdNode [nodeCoord $nodeTag]
+      set crdNode [nodeCoord $nodeTag]
 
    2. **Python Code**
 
    .. code-block:: python
 
-	crdNode = nodeCoord(nodeTag)
+      crdNode = model.nodeCoord(nodeTag)
 
 
 Code developed by: |fmk|

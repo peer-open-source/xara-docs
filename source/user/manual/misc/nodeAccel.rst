@@ -26,13 +26,13 @@ This command returns the current acceleration at a specified node.
 
    .. code-block:: tcl
 
-	set accel1 [nodeAccel $nodeTag]
+      set accel1 [nodeAccel $nodeTag]
 
    2. **Python Code**
 
    .. code-block:: python
 
-	accel1 = nodeAccel(nodeTag)
+      accel1 = model.nodeAccel(nodeTag)
 
 
 Code developed by: |fmk|
