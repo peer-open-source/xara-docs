@@ -1,21 +1,21 @@
 .. _elasticBeamColumn:
 
-Elastic Beam Column Element
+``PrismFrame``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This command is used to construct an elasticBeamColumn element object. The arguments for the construction of an elastic beam-column element depend on the dimension of the problem, ndm:
+The ``PrismFrame`` element represents a linear-elastic prismatic beam element. The arguments for the construction of an elastic beam-column element depend on the dimension of the problem, ndm:
 
 For a two-dimensional problem:
 
-.. function:: element elasticBeamColumn $eleTag $iNode $jNode $A $E $Iz $transfTag <-release $relcode> <-mass $massDens> <-cMass>
+.. function:: element PrismFrame $eleTag $iNode $jNode $A $E $Iz $transfTag <-release $relcode> <-mass $massDens> <-cMass>
 
-.. function:: element elasticBeamColumn $eleTag $iNode $jNode $secTag $transfTag <-release $relcode> <-mass $massDens> <-cMass>
+.. function:: element PrismFrame $eleTag $iNode $jNode $secTag $transfTag <-release $relcode> <-mass $massDens> <-cMass>
 
 For a three-dimensional problem:
 
-.. function:: element elasticBeamColumn $eleTag $iNode $jNode $A $E $G $J $Iy $Iz $transfTag <-releasez $relcode> <-releasey $relcode> <-mass $massDens> <-cMass>
+.. function:: element PrismFrame $eleTag $iNode $jNode $A $E $G $J $Iy $Iz $transfTag <-releasez $relcode> <-releasey $relcode> <-mass $massDens> <-cMass>
 
-.. function:: element elasticBeamColumn $eleTag $iNode $jNode $secTag $transfTag <-releasez $relcode> <-releasey $relcode> <-mass $massDens> <-cMass>
+.. function:: element PrismFrame $eleTag $iNode $jNode $secTag $transfTag <-releasez $relcode> <-releasey $relcode> <-mass $massDens> <-cMass>
 
 .. csv-table::
    :header: "Argument", "Type", "Description"
