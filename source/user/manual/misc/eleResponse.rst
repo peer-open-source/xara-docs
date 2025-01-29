@@ -34,8 +34,8 @@ This command is used to obtain state information from the element. The quantitie
 
    .. code-block:: python
 
-      eleForces = eleResponse(1,'forces')
-      eleMatStress = eleResponse(1, 'material','stress')
+      eleForces = model.eleResponse(1,'forces')
+      eleMatStress = model.eleResponse(1, 'material','stress')
 
 Code developed by: |fmk|
 

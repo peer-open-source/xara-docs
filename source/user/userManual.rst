@@ -2,22 +2,30 @@
 Manual
 ******
 
-To understand how to run a finite element simulation using OpenSees, it is helpful to have a basic understanding of the following abstractions. 
-In OpenSees there exists:
+The :ref:`Model <modelClass>` class encapsulates a finite element analysis in OpenSees. 
+The simplest way to create a model is by using its constructor:
 
-1. The **Model Generator**, code that allows the user to build a finite element model.
+.. code:: Python
+   
+   model = ops.Model(ndm=2, ndf=3)
 
-2. The **Domain**, code that holds the current state and the last committed state of the finite element model.
 
-3. The **Analysis**, code that moves the state of the model from one converged state to another via a number of trial steps.
+Once a Model has been created, its `methods` are used to perform various operations. 
+These are organized as follows:
 
-4. The **Recorders**, code that allows the user to obtain output from a finite element analysis, e.g. to record the node displacement history.
+1. :ref:`Modeling <modeling>` methods are used to add components to the finite element model.
 
-Functions which provide the interface to these abstractions are documented below:
+2. :ref:`Analysis <lblAnalysisCommands>` methods are used to move the state of the model from one converged state to another via a number of trial steps.
+
+3. The **Domain**, code that holds the current state and the last committed state of the finite element model.
+
+4. :ref:`Output <output>` methods allow the user to obtain output from a finite element analysis, e.g. to record the node displacement history.
+
 
 .. _command-manual:
 
 .. toctree::
+   :hidden:
    :maxdepth: 1   
 
    manual/modeling
