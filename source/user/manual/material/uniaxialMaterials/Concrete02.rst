@@ -6,10 +6,10 @@ Concrete02
 This command is used to construct a uniaxial concrete material Material with linear tension softening as described in [Yassin1994]_
 
 .. tabs::
-  
+
    .. tab:: Python
 
-      .. function:: model.uniaxialMaterial('Concrete02', tag, fpc, epsc0, fpcu, epsU, lambda, ft, Ets)
+      .. function:: model.uniaxialMaterial("Concrete02", tag, fpc, epsc0, fpcu, epsU, lambda, ft, Ets)
 
    .. tab:: Tcl
 
@@ -42,8 +42,8 @@ Typical Hysteretic Stress-Strain Relation for material
 Comparison with Concrete01
 
 .. figure:: figures/Concrete02/Concrete02Hysteretic.jpg
-  :align: center
-  :figclass: align-center
+   :align: center
+   :figclass: align-center
 
 Code Developed by: Filip Filippou, UC Berkeley
 Images Developed by Silvia Mazzoni

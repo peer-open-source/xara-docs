@@ -10,4 +10,17 @@ These methods are used to output results. OpenSees unlike other finite element a
 
    output/recorder
    output/printA
+   output/getTime
+   output/eleResponse
+   output/getCrdTransfTags
+
+
+.. toctree::
+   :caption: Node output
+   :maxdepth: 1
+
+   output/nodeDisp
+   output/nodeVel
+   output/nodeAccel
+   output/nodeCoord   
 

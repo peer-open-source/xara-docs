@@ -1,14 +1,16 @@
 ``DisplacementControl``
 -----------------------
 
-This command is used to define a *DisplacementControl* integrator. In an analysis step with Displacement Control we seek to determine the time step that will result in a displacement increment for a particular degree-of-freedom at a node to be a prescribed value.
+This command is used to define a *DisplacementControl* integrator. 
+In an analysis step with Displacement Control we seek to determine the time step that will result in a displacement increment for a particular degree-of-freedom at a node to be a prescribed value.
 
 .. tabs::
+
    .. tab:: Python
 
       .. code-block:: python
 
-         integrator('DisplacementControl', node, dof, incr, numIter, dUmin, dUmax)
+         model.integrator("DisplacementControl", node, dof, incr, numIter, dUmin, dUmax)
    
    .. tab:: Tcl
 
@@ -27,9 +29,14 @@ This command is used to define a *DisplacementControl* integrator. In an analysi
    ``dUmax``, |float|, the max step size the user will allow. optional: default :math:`\Delta U_{max} = \Delta U_0`
 
 
+Example
+=======
+
+
 .. code:: Tcl
 
-   integrator DisplacementControl 1 2 0.1; # displacement control algorithm seeking constant increment of 0.1 at node 1 at 2'nd dof.
+   # displacement control algorithm seeking constant increment of 0.1 at node 1 at 2'nd dof.
+   integrator DisplacementControl 1 2 0.1; 
 
 
 Theory
@@ -53,7 +60,6 @@ This equation represents n equations in :math:`n+1`` unknowns, and so an additio
 
    \Delta U_\text{dof} = \text{incr}\!</math>
 
-MORE TO COME:
 
 
 In Displacement Control the :math:`\Delta_U\text{dof}` set to :math:`t + \lambda_{t+1}` where,

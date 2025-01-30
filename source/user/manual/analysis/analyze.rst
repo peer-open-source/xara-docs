@@ -3,7 +3,8 @@
 analyze Command
 ***************
 
-This command is used to perform the analysis. It returns a value indicating success or failure of the analysis. 
+This command is used to perform the analysis. 
+It returns a value indicating success or failure of the analysis. 
 
 .. tabs::
    
@@ -29,7 +30,7 @@ RETURNS:
 
 ``0`` if successful
 
-``<0`` if NOT successful
+``< 0`` if NOT successful
 
 
 Static Analysis Example
@@ -39,7 +40,7 @@ The following example shows how to construct a Static analysis.
 
 .. tabs::
    
-   .. tab:: Python 
+   .. tab:: Python
 
       .. code:: python
 
@@ -76,13 +77,13 @@ The following example shows how to construct a Transient analysis.
 
       .. code:: python
 
-         model.system('SuperLU');
-         model.constraints('Transformation')
-         model.numberer('RCM')
-         model.test('NormDispIncr',1.0e-12, 10, 3)
-         model.algorithm('Newton')
-         model.integrator('Newmark', 0.5, 0.25)
-         model.analysis('Transient')
+         model.system("SuperLU")
+         model.constraints("Transformation")
+         model.numberer("RCM")
+         model.test("NormDispIncr",1.0e-12, 10, 3)
+         model.algorithm("Newton")
+         model.integrator("Newmark", 0.5, 0.25)
+         model.analysis("Transient")
          ok = model.analyze(2000, 0.02)
 
    .. tab:: Tcl

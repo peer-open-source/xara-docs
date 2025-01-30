@@ -3,7 +3,9 @@
 constraints Command
 *******************
 
-This command is used to construct the ConstraintHandler object. The ConstraintHandler object determines how the constraint equations are enforced in the analysis. Constraint equations define a specified value for a DOF, or a relationship between DOFs.
+This command is used to construct the ConstraintHandler object. 
+The ConstraintHandler object determines how the constraint equations are enforced in the analysis. 
+Constraint equations define a specified value for a DOF, or a relationship between DOFs.
 
 
 .. function:: constraints type? arg1? ...

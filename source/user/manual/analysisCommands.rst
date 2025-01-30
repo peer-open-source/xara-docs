@@ -8,8 +8,8 @@ Similar to modeling commands, all analysis commands should be executed as method
 
 The primary methods which determine *what* analysis is performed are:
 
-#. :ref:`integrator <integrator>` – Specifies the equations to solve, the predictive steps, and the method for updating node responses based on the solution to :math:`\boldsymbol{A}x=b`.
-#. :ref:`algorithm <algorithm>` – Outlines the sequence of steps to resolve the non-linear equations at each time step.
+#. :ref:`integrator <integrator>` Specifies the equations to solve, the predictive steps, and the method for updating node responses based on the solution to :math:`\boldsymbol{A}x=b`.
+#. :ref:`algorithm <algorithm>` Outlines the sequence of steps to resolve the non-linear equations at each time step.
 
 Analysis is performed by invoking the :ref:`analyze <analyze>` method:
 

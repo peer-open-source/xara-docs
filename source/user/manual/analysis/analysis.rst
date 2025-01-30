@@ -94,10 +94,10 @@ The following example shows how to construct a Transient analysis.
 
 .. code:: python
 
-   model.system("SuperLU");
+   model.system("SuperLU")
    model.constraints("Transformation")
    model.numberer("RCM")
-   model.test("NormDispIncr",1.0e-12, 10, 3)
+   model.test("NormDispIncr", 1.0e-12, 10, 3)
    model.algorithm("Newton")
    model.integrator("Newmark", 0.5, 0.25)
    model.analysis("Transient")
