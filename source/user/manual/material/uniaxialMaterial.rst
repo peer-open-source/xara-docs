@@ -55,6 +55,7 @@ The following subsections contain information about **$matType**
       uniaxialMaterials/FRPConfinedConcrete
       uniaxialMaterials/ConcreteCM
 
+
 #. Some Standard Uniaxial Materials
 
 .. toctree::
@@ -112,6 +113,7 @@ The following subsections contain information about **$matType**
       uniaxialMaterials/JankowskiImpact
       uniaxialMaterials/ViscoelasticGap
       uniaxialMaterials/Ratchet
+      uniaxialMaterials/FlagShape
 
 ..    uniaxialMaterials/CastFuse
       uniaxialMaterials/ViscousDamper

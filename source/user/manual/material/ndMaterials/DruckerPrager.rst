@@ -7,13 +7,13 @@ Code Developed by: |peter| and |pedro| at U.Washington.
 
 This command is used to construct an multi dimensional material object that has a Drucker-Prager yield criterion.
 
-.. function:: nDMaterial DruckerPrager $matTag $k $G $sigmaY $rho $rhoBar $Kinf $Ko $delta1 $delta2 $H $theta $density <$atmPressure>
+.. function:: nDMaterial DruckerPrager $tag $k $G $sigmaY $rho $rhoBar $Kinf $Ko $delta1 $delta2 $H $theta $density <$atmPressure>
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $matTag, |float|, integer tag identifying material
+   $tag, |float|, integer tag identifying material
    $k, |float|,	bulk modulus
    $G, |float|, shear modulus
    $sigmaY, |float|, yield stress
@@ -30,9 +30,9 @@ This command is used to construct an multi dimensional material object that has 
 
 .. note::
 
-   The material formulations for the Drucker-Prager object are "ThreeDimensional" and "PlaneStrain"
+   The material formulations for the Drucker-Prager object are ``"ThreeDimensional"`` and ``"PlaneStrain"``
 
-The yield condition for the Drucker-Prager model can be expressed as
+The yield condition for the Drucker-Prager model can be expressed as ([Drucker-Prager1952]_ and [Chen-Saleeb1994]_)
 
 .. math:: 
 
@@ -52,7 +52,7 @@ is the deviatoric stress tensor,
    I_1 = \mathrm{tr}(\mathbf{\sigma})
 
 
-is the first invariant of the stress tensor, and the parameters .. math::\rho_{}^{}</math> and .. math::\sigma_Y^{}</math> are positive material constants.
+is the first invariant of the stress tensor, and the parameters :math:`\rho_{}^{}` and :math:`\sigma_Y^{}` are positive material constants.
 
 The isotropic hardening stress is defined as
 
@@ -88,11 +88,11 @@ and
    T_o = \sqrt{\frac{2}{3}} \frac{\sigma_Y}{\rho}
 
 
-Further, general, information on theory for the Drucker-Prager yield criterion can be found at wikipedia here
+Further, general, information on theory for the Drucker-Prager yield criterion can be found at wikipedia.
 
 .. note::
 
-   The valid queries to the Drucker-Prager material when creating an ElementRecorder are 'strain' and 'stress' (as with all nDmaterial) as well as 'state'. The query 'state' records a vector of state variables during a particular analysis. The columns of this vector are as follows. (Note: If the option '-time' is included in the creation of the recorder, the first column will be the time variable for each recorded point and the columns below are shifted accordingly.)
+   The valid queries to the Drucker-Prager material when creating an ElementRecorder are 'strain' and 'stress' (as with all nDmaterial) as well as 'state'. The query 'state' records a vector of state variables during a particular analysis. The columns of this vector are as follows. (Note: If the option ``-time`` is included in the creation of the recorder, the first column will be the time variable for each recorded point and the columns below are shifted accordingly.)
 
    Column 1 - First invariant of the stress tensor, :math:`I_1 = \mathrm{tr}(\mathbf{\sigma})`.
    Column 2 - The following tensor norm, :math:`\left\| \mathbf{s} + \mathbf{q}^{kin} \right\| `, where .. math::\mathbf{s}` is the deviatoric stress tensor and :math:`\mathbf{q}^{kin}` is the back-stress tensor.
@@ -109,9 +109,6 @@ Further, general, information on theory for the Drucker-Prager yield criterion c
    
 	\sigma_Y = \frac{6 c \cos \phi}{\sqrt{2} (3 - \sin \phi)}
 
-.. [Drucker-Prager1952] Drucker, D. C. and Prager, W., "Soil mechanics and plastic analysis for limit design." Quarterly of Applied Mathematics, vol. 10, no. 2, pp. 157–165, 1952.
-
-.. [Chen-Saleeb1994] Chen, W. F. and Saleeb, A. F., Constitutive Equations for Engineering Materials Volume I: Elasticity and Modeling. Elsevier Science B.V., Amsterdam, 1994.
 
 .. admonition:: Example
 
@@ -127,3 +124,10 @@ Further, general, information on theory for the Drucker-Prager yield criterion c
    .. literalinclude:: DruckerPragerExample.tcl
       :language: tcl
 
+
+References
+^^^^^^^^^^
+
+.. [Drucker-Prager1952] Drucker, D. C. and Prager, W., "Soil mechanics and plastic analysis for limit design." Quarterly of Applied Mathematics, vol. 10, no. 2, pp. 157–165, 1952.
+
+.. [Chen-Saleeb1994] Chen, W. F. and Saleeb, A. F., Constitutive Equations for Engineering Materials Volume I: Elasticity and Modeling. Elsevier Science B.V., Amsterdam, 1994.

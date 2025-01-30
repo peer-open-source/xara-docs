@@ -1,12 +1,22 @@
 .. _Concrete02 :
 
-Concrete02 Material -- Linear Tension Softening
-^^^^^^^^^^^^^^^^^^
+Concrete02
+^^^^^^^^^^
 
-This command is used to construct a uniaxial concrete material as described in [Yassin1994]_
-.. function:: uniaxialMaterial Concrete02 $matTag $fpc $epsc0 $fpcu $epsU $lambda $ft $Ets 
+This command is used to construct a uniaxial concrete material Material with linear tension softening as described in [Yassin1994]_
 
-.. csv-table:: 
+.. tabs::
+  
+   .. tab:: Python
+
+      .. function:: model.uniaxialMaterial('Concrete02', tag, fpc, epsc0, fpcu, epsU, lambda, ft, Ets)
+
+   .. tab:: Tcl
+
+      .. function:: uniaxialMaterial Concrete02 $matTag $fpc $epsc0 $fpcu $epsU $lambda $ft $Ets 
+
+
+.. csv-table::
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 

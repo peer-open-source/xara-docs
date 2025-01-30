@@ -1,4 +1,6 @@
-** Single 2D plane-strain quadrilateral element, subjected to sinusoidal base shaking**
+
+Single 2D plane-strain quadrilateral element, subjected to sinusoidal base shaking
+----------------------------------------------------------------------------------
 
 1. **Tcl Code**
 
