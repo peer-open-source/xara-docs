@@ -1,7 +1,9 @@
-Output Commands
----------------
+.. _output:
 
- These are the commands added to the interpreter to output results. OpenSees unlike other finite element applications will output nothing unless the user requests it in their scripts. 
+Output
+------
+
+These methods are used to output results. OpenSees unlike other finite element applications will output nothing unless the user requests it in their scripts. 
 
 .. toctree::
    :maxdepth: 1

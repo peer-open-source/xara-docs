@@ -1,20 +1,29 @@
 .. _LoadControl:
 
-LoadControl Command
--------------------
+``LoadControl``
+---------------
 
-This command is used to construct a LoadControl integrator object.
+.. tabs::
 
-.. function:: integrator LoadControl $lambda <$numIter $minLambda $maxLambda>
+   .. tab:: python 
+      .. code-block:: python
+
+         integrator('LoadControl', lamda, numIter, minLambda, maxLambda)
+
+   .. tab:: tcl
+      .. code-block:: tcl
+
+         integrator LoadControl $lamda <$numIter $minLambda $maxLambda>
+
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $lambda, |float|,the load factor increment :math:`\lambda`
-   $numIter, |integer|,   the number of iterations the user would like to occur in the solution algorithm. Optional: optional default = 1
-   $minLambda, |float|, the min stepsize the user will allow. optional: defualt :math:`= \lambda_{min} = \lambda`
-   $maxLambda, |float|, the max stepsize the user will allow. optional: default :math:`= \lambda_{max} = \lambda`
+   lamda, |float|,the load factor increment :math:`\lambda`
+   numIter, |integer|,   the number of iterations the user would like to occur in the solution algorithm. Optional: optional default = 1
+   minLambda, |float|, the min stepsize the user will allow. optional: defualt :math:`= \lambda_{min} = \lambda`
+   maxLambda, |float|, the max stepsize the user will allow. optional: default :math:`= \lambda_{max} = \lambda`
 
 .. note::
 

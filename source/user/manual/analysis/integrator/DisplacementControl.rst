@@ -1,41 +1,47 @@
-DisplacementControl Command
----------------------------
+``DisplacementControl``
+-----------------------
 
-This command is used to construct a DisplacementControl integrator object. In an analysis step with Displacement Control we seek to determine the time step that will result in a displacement increment for a particular degree-of-freedom at a node to be a prescribed value.
+This command is used to define a *DisplacementControl* integrator. In an analysis step with Displacement Control we seek to determine the time step that will result in a displacement increment for a particular degree-of-freedom at a node to be a prescribed value.
 
+.. tabs::
+   .. tab:: Python
 
-.. function:: integrator DisplacementControl $node $dof $incr <$numIter :math`\Delta U \text{min}` $:math:\Delta U \text{max}`>
+      .. code-block:: python
+
+         integrator('DisplacementControl', node, dof, incr, numIter, dUmin, dUmax)
+   
+   .. tab:: Tcl
+
+      .. function:: integrator DisplacementControl $node $dof $incr <$numIter $dUmin $dUmax >
 
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $node, |integer|, node whose response controls solution
-
-   $dof, |integer|, degree of freedom at the node; valid options: 1 through ndf at node.
-   $incr, |float|, first displacement increment <math>\Delta U_{\text{dof}}</math>
-   $numIter, |integer|, the number of iterations the user would like to occur in the solution algorithm. Optional; default = 1.0.
-   $dUmin, |float|,   the min step size the user will allow. optional; default :math:`\Delta U_{min} = \Delta U_0`
-   $dUmax, |float|, the max step size the user will allow. optional: default :math:`\Delta U_{max} = \Delta U_0`
-   
-:math:`f(x_n+\Delta x) = 0`
+   ``node``, |integer|, node whose response controls solution
+   ``dof``, |integer|, degree of freedom at the node; valid options: 1 through ndf at node.
+   ``incr``, |float|, first displacement increment <math>\Delta U_{\text{dof}}</math>
+   ``numIter``, |integer|, the number of iterations the user would like to occur in the solution algorithm. Optional; default = 1.0.
+   ``dUmin``, |float|,   the min step size the user will allow. optional; default :math:`\Delta U_{min} = \Delta U_0`
+   ``dUmax``, |float|, the max step size the user will allow. optional: default :math:`\Delta U_{max} = \Delta U_0`
 
 
+.. code:: Tcl
 
-integrator DisplacementControl 1 2 0.1; # displacement control algorithm seeking constant increment of 0.1 at node 1 at 2'nd dof.
+   integrator DisplacementControl 1 2 0.1; # displacement control algorithm seeking constant increment of 0.1 at node 1 at 2'nd dof.
 
 
 Theory
 =======
 
-If we write the governing finite element equation at :math:`t + \Delta t\` as:
+If we write the governing finite element equation at :math:`t + \Delta t` as:
 
 .. math::
 
-    R(U_{t+\Delta t}, \lambda_{t+\Delta t}) = \lambda_{t+\Delta t} F^{ext} - F(U_{t+\Delta t}) \!`
+    R(U_{t+\Delta t}, \lambda_{t+\Delta t}) = \lambda_{t+\Delta t} F^{ext} - F(U_{t+\Delta t}) `
 
-where :math:`F(U_{t+\Delta t})\!` are the internal forces which are a function of the displacements :math:`U_{t+\Delta t}\!`, :math:`F^{ext}\!` is the set of reference loads and :math:`\lambda\!` is the load multiplier. Linearizing the equation results in:
+where :math:`F(U_{t+\Delta t})` are the internal forces which are a function of the displacements :math:`U_{t+\Delta t}`, :math:`F^{ext}` is the set of reference loads and :math:`\lambda` is the load multiplier. Linearizing the equation results in:
 
 .. math::
 
@@ -54,3 +60,4 @@ In Displacement Control the :math:`\Delta_U\text{dof}` set to :math:`t + \lambda
 
 
 :math:`\Delta U_\text{dof}^{t+1} = \max \left ( \Delta U_{min}, \min \left ( \Delta U_\text{max}, \frac{\text{numIter}}{\text{lastNumIter}} \Delta U_\text{dof}^{t} \right ) \right )`
+

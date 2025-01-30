@@ -1,43 +1,66 @@
 .. _LinearAlgorithm:
 
 Linear Algorithm
-----------------
+================
 
 This command is used to construct a Linear algorithm object which takes one iteration to solve the system of equations.
 
-.. function:: algorithm Linear <-initial> <-factorOnce>
+.. tabs::
+
+   .. tab:: Python
+
+      .. function:: model.algorithm("Linear", [initial=False, factorOnce=False])
+      
+      
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
+      
+         initial, |bool|,  optional flag to indicate to use initial stiffness
+         factorOnce, |bool|, optional flag to indicate to only set up and factor matrix once
 
 
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+   .. tab:: Tcl
 
-   -initial, |string|,  optional flag to indicate to use initial stiffness
-   -factorOnce, |string|, optional flag to indicate to only set up and factor matrix once
+      .. function:: algorithm Linear <-initial> <-factorOnce>
+      
+      
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
+      
+         -initial, |string|,  optional flag to indicate to use initial stiffness
+         -factorOnce, |string|, optional flag to indicate to only set up and factor matrix once
+
 
 .. note:: 
    
-   As the tangent matrix typically will not change during the analysis in case of an elastic system it is highly advantageous to use the -factorOnce option. Do not use this option if you have a nonlinear system and you want the tangent used to be actual tangent at time of the analysis step.
+   As the tangent matrix typically will not change during the analysis in case of an elastic system it is highly advantageous to use the ``factorOnce`` option. 
+   Do not use this option if you have a nonlinear system and you want the tangent used to be actual tangent at time of the analysis step.
 
-   The Linear algorithm REQUIRES NO :ref:`test` and will complain if one is provided. This means that convergence is not checked.
+   The Linear algorithm requires no :ref:`test` and will complain if one is provided. This means that convergence is not checked.
 
    Certain transient explicit :ref:`integration` schemes require a Linear algorithm.
 
-.. admonition:: Example:
 
-   The following examples demonstrate the command to create a Linear solution algorithm.
+Example
+-------
 
-   1. **Tcl Code**
+The following examples demonstrate the command to create a Linear solution algorithm.
 
-   .. code-block:: tcl
+.. tabs::
 
-      algorithm Linear
+   .. tab:: Tcl
 
-   2. **Python Code**
+      .. code-block:: tcl
 
-   .. code-block:: python
+         algorithm Linear
 
-      algorithm('Linear')
+   .. tab:: Python
+
+      .. code-block:: python
+
+         model.algorithm('Linear')
 
 
 Code Developed by: |fmk|

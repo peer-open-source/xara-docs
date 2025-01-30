@@ -17,7 +17,7 @@ This command is used to construct a uniaxialMaterial model that simulates the hy
    $G2, |float|, Secondary piston hydrodynamic viscosity.
    $Alpha, |float|, Velocity exponent.
    $L, |float|, The thickness of the total piston (The primary piston is equal to the secondary piston.).
-   $LC, |float|, The thickness of the two ends of the secondary piston head (To ensure the secondary piston could smoothly move from the free segment into the damping segment, it is a smaller diameter than that at the middle.).
+   $LC, |float|, "The thickness of the two ends of the secondary piston head (To ensure the secondary piston could smoothly move from the free segment into the damping segment, it is a smaller diameter than that at the middle.)."
    $DP, |float|, The diameters of the piston (The primary piston is equal to the secondary piston.).
    $DG, |float|, The diameters of the piston rod.
    $N1, |float|, Number of primary piston circular orifices.
@@ -29,7 +29,7 @@ This command is used to construct a uniaxialMaterial model that simulates the hy
    $HP, |float|, Height of annular gap between cylinder inner surface and piston middle outer surface (The value cannot be zero.).
    $HC, |float|, Height of annular gap between cylinder inner surface and outer surface of piston two ends (The value cannot be zero.).
    $LGap, |float|, Gap length to simulate the gap length due to the pin tolerance.
-   $NM, |float|, Employed adaptive numerical algorithm (default value NM = 1; 1 = Dormand-Prince54, 2=6th order Adams-Bashforth-Moulton, 3=modified Rosenbrock Triple).
+   $NM, |float|, "Employed adaptive numerical algorithm (default value NM = 1; 1 = Dormand-Prince54, 2=6th order Adams-Bashforth-Moulton, 3=modified Rosenbrock Triple)."
    $RelTol, |float|, Tolerance for absolute relative error control of the adaptive iterative algorithm (default value 10^-6).
    $AbsTol, |float|, Tolerance for absolute error control of adaptive iterative algorithm (default value 10^-10).
    $MaxHalf, |float|, Maximum number of sub-step iterations within an integration step (default value 15).
@@ -39,21 +39,25 @@ This command is used to construct a uniaxialMaterial model that simulates the hy
 	:align: center
 	:figclass: align-center
 
-.. note::
-Example:
-   In order to verify the reliability of the asynchronous parallel double-stage viscous fluid damper, two sets of test and simulation results are selected for verification. Material parameters are shown in the following table (Units can be arbitrarily converted, but must be unified):
+
+
+Example
+-------
+
+In order to verify the reliability of the asynchronous parallel double-stage viscous fluid damper, two sets of test and simulation results are selected for verification. Material parameters are shown in the following table (Units can be arbitrarily converted, but must be unified):
+
 
 .. figure:: figures/APDVFD/APDVFD2.png
 	:align: center
 	:figclass: align-center
-   The input parameters for the material should be as follows: 
-    **Tcl Code**
 
-   .. code-block:: tcl
+The input parameters for the material should be as follows: 
 
+ .. code-block:: tcl
 
       uniaxialMaterial  APDVFD   1  300  0.009   0.009  0.2238  170  25  179.8 90  6  6  4.5  5  180 20  0.1 0.5
       uniaxialMaterial  APDVFD   1  300  0.013   0.013  0.1986  170  25  179.8 90  6  6  4.5  5  180 20  0.1 0.5
+
 Using these parameters, comparison between the experimental and simulated load-deformation curves of APDVFD1 for sinusoidal displacement increment of 80mm and a frequency f = 0.02Hz is shown in Fig. 2. The comparison between the experimental and simulated load-deformation curves of APDVFD2 for sinusoidal displacement increment of 120mm and a frequency f = 0.02Hz is shown in Fig. 3.
 
 
