@@ -27,7 +27,6 @@ def run_sample(
 	print('Running Sample: "{}"'.format(title))
 	
 	# define a random input
-	# adapted from: https://portwooddigital.com/2024/04/21/material-testing-with-white-noise/
 	seed = 2
 	random.seed(seed)
 	Npulse = 150 # Number of pulses
