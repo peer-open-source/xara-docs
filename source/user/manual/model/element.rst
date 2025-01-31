@@ -1,7 +1,7 @@
 .. _element:
 
-Element Command
-***************
+Elements
+********
 
 This method is used to construct an element and add it to the :class:`Model`. 
 
@@ -30,12 +30,8 @@ This method is used to construct an element and add it to the :class:`Model`.
          ``nodes``,   |integerlist|, a list of element nodes with number dependent on ele type
          ``args``, |list|,        a list of element arguments with number dependent on ele type
 
-.. note::
 
-   The type of element created and the additional arguments required depends on the **$type** provided.
-
-   The valid queries to any element when creating an ElementRecorder are documented in the NOTES section for each element. 
-
+The type of element created and the additional arguments required depends on the **$type** provided.
 
 The following subsections contain information about ``type`` and the number of nodes and args required for each of the available element types:
 
