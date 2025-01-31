@@ -3,12 +3,14 @@
 Corotational Transformation
 ***************************
 
-This command is used to construct the Corotational Coordinate Transformation (CorotCrdTransf) object, which performs an exact geometric transformation of beam stiffness and resisting force from the basic system to the global coordinate system.
+This command is used to construct the Corotational coordinate transformation, which performs an exact geometric transformation of beam stiffness and resisting force from the basic system to the global coordinate system.
 
 * For a two-dimensional problem:
+
 .. function:: geomTransf Corotational $transfTag <-jntOffset $dXi $dYi $dXj $dYj>
 
 * For a three-dimensional problem:
+
 .. function:: geomTransf Corotational $transfTag $vecxzX $vecxzY $vecxzZ <-jntOffset $dXi $dYi $dZi $dXj $dYj $dZj>
 
 .. csv-table:: 

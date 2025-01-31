@@ -29,16 +29,14 @@ The following contain information about secType? and the args required for each 
 
    section/ElasticFrame
    section/NDFiberSection
-   section/WideFlangeSection
-   section/RCSection
-   section/ParallelSection
-   section/SectionAggregator
-   section/UniaxialSection
-   section/ElasticMembranePlateSection
    section/PlateFiberSection
-   section/BidirectionalSection
+   section/ElasticShell
    section/Isolator2springSection
    section/ReinforcedConcreteLayeredMembraneSection
    section/LayeredMembraneSection
    section/ASDCoupledHinge3D
 
+..
+   section/ParallelSection
+   section/SectionAggregator
+   section/UniaxialSection

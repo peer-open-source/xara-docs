@@ -5,7 +5,7 @@ Tri31 Element
 This command is used to construct a constant strain triangular element (Tri31) which uses three nodes and one integration points.
 
 
-.. function:: element('Tri31', tag, nodes, thick, type, material, <pressure, rho, b1, b2>)
+.. function:: model.element('Tri31', tag, nodes, thick, type, material, <pressure, rho, b1, b2>)
    :noindex:
 
    ===================================   ===========================================================================

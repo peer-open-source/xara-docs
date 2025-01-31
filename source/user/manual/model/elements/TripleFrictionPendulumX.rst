@@ -1,7 +1,7 @@
 .. _TripleFrictionPendulumX::
 
-TripleFrictionPendulumX Element
-^^^^^^^^^^^^^^^^
+TripleFrictionPendulumX
+^^^^^^^^^^^^^^^^^^^^^^^
 
 This command is used to construct the TripleFrictionPendulumX element [KimConstantinou2022]_ [KimConstantinou2023]_ [KimConstantinou2024]_ object, which is an extension of the TripleFrictionPendulum element [DaoEtAl2013]_ with added capability for accounting for heating effects on the frictional behavior of triple friction pendulum isolators. The horizontal behavior of the element is achieved by the series model, which consists of properly combined hysteretic/frictional and multidirectional gap elements.  
 
@@ -9,21 +9,21 @@ Three main modifications in the TripleFrictionPendulumX element include: 1) comp
 
 .. math::
   
-      \mu(p,v,T)=\mu_{ref} k_{p} k_{v} k_{T} 　　　　　　(1)
+      \mu(p,v,T)=\mu_{ref} k_{p} k_{v} k_{T}             (1)
   
-      k_{p}=0.7^{0.02(p-p_{0})} 　　　　　　(2)
+      k_{p}=0.7^{0.02(p-p_{0})}             (2)
 
-      k_{v}=1-0.5e^{-av} 　　　　　　(3)
+      k_{v}=1-0.5e^{-av}             (3)
   
-      k_{T}=0.79(0.7^{0.02T}+0.40) 　　　　　　(4)
+      k_{T}=0.79(0.7^{0.02T}+0.40)             (4)
 
 In the TripleFrictionPendulumX element, the temperature-dependency of the friction coefficient was expanded beyond the single case described by equation (4).  Specifically, two additional cases were added, described by equations (5) and (6).  Figure 1 depicts the coefficient :math:`k_T` as function of temperature for the three cases.  In the three cases, the value of coefficient :math:`k_T` drops from the unity at the normal temperature to 1/3, 1/2 or 2/3 at approximately the temperature of :math:`200℃`.
 
 .. math::
 
-      k_{T}=0.84(0.7^{0.0085T}+0.25) 　　　　　(5)
+      k_{T}=0.84(0.7^{0.0085T}+0.25)           (5)
 
-      k_{T}=0.97(0.7^{0.029T}+0.22) 　　　　　(6)
+      k_{T}=0.97(0.7^{0.029T}+0.22)           (6)
 
 
 .. figure:: figures/TripleFrictionPendulumX/FIGURE1.jpg
@@ -130,7 +130,9 @@ For more information about the element formulation, please refer to the referenc
    
    :math:`7`: :math:`lb, ft, sec, ℃`
    
-   :math:`8`: :math:`kip, ft, sec, ℃`"  
+   :math:`8`: :math:`kip, ft, sec, ℃`"
+
+
 .. admonition:: Recorders
 
         **Typical Element Recorders**

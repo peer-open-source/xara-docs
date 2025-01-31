@@ -15,7 +15,7 @@ TCL:
 
 Python:
 
-.. function:: element('ElasticTubularJoint', eleTag, iNode, jNode, Brace_Diameter, Brace_Angle, E, Chord_Diameter, Chord_Thickness, Chord_Angle)
+.. function:: model.element('ElasticTubularJoint', eleTag, (iNode, jNode), Brace_Diameter, Brace_Angle, E, Chord_Diameter, Chord_Thickness, Chord_Angle)
 
 where:
 

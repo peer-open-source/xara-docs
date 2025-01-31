@@ -91,8 +91,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_baseurl = "https://opensees.stairlab.io/"
 sitemap_url_scheme = "{link}"
 
-html_theme = 'sphinx_rtd_theme'
-#html_theme = "pydata_sphinx_theme"
+#html_theme = 'sphinx_rtd_theme'
+html_theme = "pydata_sphinx_theme"
 
 html_theme_options = {
 #      'analytics_id': 'UA-2431545-1',

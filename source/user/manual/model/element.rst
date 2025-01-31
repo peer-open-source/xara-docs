@@ -3,18 +3,32 @@
 Element Command
 ***************
 
-This command is used to construct an element and add it to the Domain. 
+This method is used to construct an element and add it to the :class:`Model`. 
 
-.. function:: element $type $tag (num $nodes) $arg1 ...
+.. tabs::
 
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+   .. tab:: Python
 
-   ``type``, |string|,      element type
-   ``tag``,  |integer|,     unique element tag.
-   ``nodes``,   |integerlist|, a list of element nodes with number dependent on ele type
-   ``eleArgs``, |list|,        a list of element arguments with number dependent on ele type
+      .. function:: model.element(type, tag, nodes, *args, **kwds)
+
+         :param type: string defining the type of element
+         :param tag: integer tag identifying the element
+         :param nodes: tuple of integer tags identifying the nodes that form the element
+         :param args, kwds: arguments particular to the element ``type``
+
+
+   .. tab:: Tcl
+
+      .. function:: element $type $tag (num $nodes) $args ...
+
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
+
+         ``type``, |string|,      element type
+         ``tag``,  |integer|,     unique element tag.
+         ``nodes``,   |integerlist|, a list of element nodes with number dependent on ele type
+         ``args``, |list|,        a list of element arguments with number dependent on ele type
 
 .. note::
 
@@ -24,22 +38,6 @@ This command is used to construct an element and add it to the Domain.
 
 
 The following subsections contain information about ``type`` and the number of nodes and args required for each of the available element types:
-
-1. Zero-Length Elements
-
-.. toctree::
-   :maxdepth: 4
-
-   elements/zeroLength
-   elements/zeroLengthSection
-   elements/zeroLengthND
-   elements/CoupledZeroLength
-   elements/zeroLengthContact
-   elements/zeroLengthContactNTS2D
-   elements/zeroLengthInterface2D
-   elements/zeroLengthImpact3D 
-   elements/zeroLengthContactASDimplex
-
 
 2. Truss Elements
 
@@ -106,7 +104,7 @@ The following subsections contain information about ``type`` and the number of n
 
    
 
-6. Bricks
+6. Solid Elements
 
 .. toctree::
    :maxdepth: 1
@@ -114,14 +112,24 @@ The following subsections contain information about ``type`` and the number of n
    elements/stdBrick
    elements/bbarBrick
    elements/SSPbrick
-
-7. Tetrahedrons
-
-.. toctree::
-   :maxdepth: 1
-
    elements/FourNodeTetrahedron
    elements/TenNodeTetrahedron
+
+
+1. Zero-Length Elements
+
+.. toctree::
+   :maxdepth: 4
+
+   elements/zeroLength
+   elements/zeroLengthSection
+   elements/zeroLengthND
+   elements/CoupledZeroLength
+   elements/zeroLengthContact
+   elements/zeroLengthContactNTS2D
+   elements/zeroLengthInterface2D
+   elements/zeroLengthImpact3D 
+   elements/zeroLengthContactASDimplex
 
 
 8. Joint Elements

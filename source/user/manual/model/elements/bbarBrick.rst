@@ -7,13 +7,13 @@ This command is used to construct an eight-node mixed volume/pressure brick elem
 
 .. admonition:: Command
 
-   **element bbarBrick $eleTag $node1 $node2 $node3 $node4 $node5 $node6 $node7 $node8 $matTag <$b1 $b2 $b3>**
+   **element bbarBrick $tag $node1 $node2 $node3 $node4 $node5 $node6 $node7 $node8 $matTag <$b1 $b2 $b3>**
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $eleTag, |integer|,	unique element object tag
+   $tag, |integer|,	unique element object tag
    $node1 .. $node8, 8 |integer|, nodes of brick (ordered as shown in fig below)
    $matTag, |integer|, tag of nDMaterial
    $b1 $b2 $b3, |listFloat|, optional: body forces in global x y z directions
@@ -23,7 +23,7 @@ This command is used to construct an eight-node mixed volume/pressure brick elem
 	:align: center
 	:figclass: align-center
 
-	bbarBrick Element Node Numbering
+	``BbarBrick`` element node numbering
 
 .. note::
 

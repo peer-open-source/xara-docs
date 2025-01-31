@@ -5,25 +5,40 @@ ASDShellT3 Element
 
 This command is used to construct an ASDShellT3 element object. The ASDShellT3 element is a 3-node general purpose thick shell element with the following features:
 
+.. tabs::
+   
+   .. tab:: Python
+
+      .. function:: model.element("ASDShellT3", tag, nodes, section, *args, **kwargs)
+
+         :param tag: integer tag identifying the element
+         :param nodes: tuple of three integer tags identifying the nodes that form the element
+         :param section: integer tag associated with previously-defined SectionForceDeformation object
+         :param args: optional arguments
+         :param kwargs: optional keyword arguments
+
+   .. tab:: Tcl
+
+      .. function:: element ASDShellT3 $tag $n1 $n2 $n3 $section <-corotational> <-reducedIntegration> <-drillingNL> <-damp $dampTag> <-local $x1 $x2 $x3>
+
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
+
+         $tag, |integer|, "unique integer tag identifying element object"
+         $n1 $n2 $n3, 3 |integer|, "the three nodes defining the element (-ndm 3 -ndf 6)"
+         $section, |integer|, "unique integer tag associated with previously-defined SectionForceDeformation object"
+         -corotational, |string|, "optional flag, if provided, the element uses non-linear kinematics, suitable for large displacement/rotation problems."
+         -reducedIntegration, |string|, "optional flag, if provided, the element uses 1-point integration rule."
+         -drillingNL, |string|, "optional flag, if provided, the Hughes-Brezzi drilling DOF formulation considers the non-linear behavior of the section. Used only when -reducedIntegration is used."
+         -damp $dampTag, |string| + |integer|, "optional, to activate elemental damping as per :ref:`elementalDamping <elementalDamping>`"
+         -local $x1 $x2 $x3, |string| + 3 |float|, "optional, if provided it will be used as the local-x axis of the element (otherwise the default local X will be the direction of the 1-2 side). Note: it will be automatically normalized and projected onto the element plane. It must not be zero or parallel to the shell's normal vector."
+
+
 #. The membrane behavior is based on the **ANDeS** [Felippa2003]_ formulation, which uses the corner rotational DOFs (drilling DOFs) to improve the membrane behavior of the element.
 #. The plate bending part is treated using the **MITC3** [PSLee2004]_ formulation, to avoid the well known transverse shear locking behavior of thick plate elements.
 #. Kinematics can be either **linear** or **corotational**. The corotational kinematics is based on the work of Felippa et al., i.e. the **EICR** [Felippa2000]_ [FelippaEtAl2005]_ (Element Independent Corotational formulation). Finite rotations are treated with Quaternions.
 #. It uses 3 integration points to have a full rank for the ANDeS formulation and the MITC3 formulation. However, for computational efficiency, the user can optionally choose a single-point integration scheme. In this case, the 3 spurious zero-energy modes for the membrane behavior are constrained using the drilling DOF formulation according to **Hughes-Brezzi** [HughesEtAl1989]_ . This formulation constrains the drilling DOFs to the rigid body rotation via a penalty parameter as a function of the initial in-plane shear modulus. However, when using strain-softening materials, this (elastic) constraint may overstiffen the element as the in-plane shear modulus degrades. As a remedy in such a situation, the user can choose to make this constraint non-linear.
-
-.. function:: element ASDShellT3 $eleTag $n1 $n2 $n3 $secTag <-corotational> <-reducedIntegration> <-drillingNL> <-damp $dampTag> <-local $x1 $x2 $x3>
-
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
-
-   $eleTag, |integer|, "unique integer tag identifying element object"
-   $n1 $n2 $n3, 3 |integer|, "the three nodes defining the element (-ndm 3 -ndf 6)"
-   $secTag, |integer|, "unique integer tag associated with previously-defined SectionForceDeformation object"
-   -corotational, |string|, "optional flag, if provided, the element uses non-linear kinematics, suitable for large displacement/rotation problems."
-   -reducedIntegration, |string|, "optional flag, if provided, the element uses 1-point integration rule."
-   -drillingNL, |string|, "optional flag, if provided, the Hughes-Brezzi drilling DOF formulation considers the non-linear behavior of the section. Used only when -reducedIntegration is used."
-   -damp $dampTag, |string| + |integer|, "optional, to activate elemental damping as per :ref:`elementalDamping <elementalDamping>`"
-   -local $x1 $x2 $x3, |string| + 3 |float|, "optional, if provided it will be used as the local-x axis of the element (otherwise the default local X will be the direction of the 1-2 side). Note: it will be automatically normalized and projected onto the element plane. It must not be zero or parallel to the shell's normal vector."
 
 
 .. figure:: figures/ASDShellT3/ASDShellT3_geometry.png
@@ -40,9 +55,9 @@ This command is used to construct an ASDShellT3 element object. The ASDShellT3 e
        *  Internal forces at the element's nodes.
        *  Orientation: global coordinate system.
        *  Size: 18 columns of data, 6 components for each one of the 3 nodes.
-   *  '**material $secTag $secArg1 ... $secArgN**':
-       *  Section response at section **$secTag**
-       *  **$secTag** is the 1-based index of the integration point (1 to 3).
+   *  '**material $section $secArg1 ... $secArgN**':
+       *  Section response at section **$section**
+       *  **$section** is the 1-based index of the integration point (1 to 3).
        *  '**$secArg1 ... $secArgN**' are the arguments required by the SectionDeformationObject at the requested integration point.
 
 .. admonition:: Example 1 - Cantilever Bending Roll-up (corotational)

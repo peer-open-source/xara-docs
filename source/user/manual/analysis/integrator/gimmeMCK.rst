@@ -1,9 +1,17 @@
 .. _gimmeMCK:
 
-GimmeMCK Command
--------------------
+GimmeMCK
+--------
 
-This command is used to construct a GimmeMCK integrator object. The GimmeMCK Integrator alow the user to return the mass, damping, and stiffness matrix. Depending on the user input, it enable the user to retrieve the desired by using the printA command.
+.. admonition:: Obsolete 
+  
+   The GimmeMCK integrator no longer needs to be explicitly constructed. The mass, damping, and stiffness matrices can be retrieved using the new ``m``, ``c`` and ``k`` parameters of the :ref:`printA` method.
+
+
+This command is used to construct a GimmeMCK integrator. 
+The GimmeMCK integrator allows the user to return the mass, damping, and stiffness matrix. 
+Depending on the user input, it enable the user to retrieve the desired by using the printA command.
+
 
 .. function:: integrator GimmeMCK $m $c $k $ki
 
@@ -27,15 +35,20 @@ This command is used to construct a GimmeMCK integrator object. The GimmeMCK Int
      - |float| 
      - If the value is not zero, add the initial stiffness matrix to tangent matrix  with factored value as large as the input.
 
+
 Theory
 ^^^^^^
+
 Assembles A = m*M + c*C + kt*KT + ki*KI
 
 .. note::
+
   * The system used for the model must be FullGeneral
   * To get the desired output (Mass, Stiffness or Damping matrix), you need to print the result using printA command.
   
-.. admonition:: Example:
+
+Example
+-------
 
 
    1. **Tcl Code**
@@ -94,7 +107,7 @@ Assembles A = m*M + c*C + kt*KT + ki*KI
       K.shape = (N,N)
       
       # Damping
-      ops.integrator('GimmeMCK',0.0,1.0,0.0)
+      model.integrator('GimmeMCK',0.0,1.0,0.0)
       ops.analyze(1,0.0)
       C = ops.printA('-ret')
       C = np.array(C)
@@ -102,6 +115,3 @@ Assembles A = m*M + c*C + kt*KT + ki*KI
 
 
 Code Developed by: |MHS|
-
-
-.. [MHS2020] Scott, M. H., Gimme All Your Damping, All Your Mass and Stiffness Too (https://portwooddigital.com/2020/05/17/gimme-all-your-damping-all-your-mass-and-stiffness-too/)

@@ -6,19 +6,23 @@ InertiaTruss
 This command is used to construct an InertiaTruss element object. 
 
 
-.. function:: element InertiaTruss $eleTag $iNode $jNode $mr
+.. function:: element InertiaTruss $tag $iNode $jNode $mr
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $eleTag, |integer|,	unique element object tag
+   $tag, |integer|,	unique element object tag
    $iNode $jNode, |integer|,  end nodes
    $mr, |float|,     the inertance or inertial mass of an Inertia Truss
 
-.. note::
 
-The valid queries to an InertiaTruss element when creating an ElementRecorder object are 'force' and ‘relAccel’, which output the axial force or relative acceleration between two end-nodes in local coordinates (along the element)
+The valid queries to an InertiaTruss element when creating an ElementRecorder object are 
+
+#. ``"force"`` and 
+#. ``"relAccel"``, 
+
+which output the axial force or relative acceleration between two end-nodes in local coordinates (along the element)
 
 This element has been examined for modal analysis and linear/nonlinear time history analysis
 

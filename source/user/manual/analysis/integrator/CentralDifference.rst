@@ -1,17 +1,19 @@
 .. _CentralDifference:
 
 Central Difference
---------------------------------
+------------------
+
 .. function:: integrator CentralDifference 
 
-.. note:: 
+.. note::
+
     * The calculation of :math:`U_{t+\Delta t}`, as shown below, is based on using the equilibrium equation at time t. For this reason the method is called an explicit integration method.
     * If there is no rayleigh damping and the C matrix is 0, for a diagonal mass matrix a diagonal solver may and should be used.
     * For stability, :math:`\frac{\Delta t}{T_n} < \frac{1}{\pi}` 
 
 
-THEORY:
-^^^^^^^^^
+Theory
+^^^^^^
 
 The Central difference approximations for velocity and acceleration:
 

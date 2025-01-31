@@ -8,25 +8,29 @@ In an analysis step with Displacement Control we seek to determine the time step
 
    .. tab:: Python
 
-      .. code-block:: python
+      .. py:function:: model.integrator("DisplacementControl", node, dof, incr, numIter, dUmin, dUmax)
 
-         model.integrator("DisplacementControl", node, dof, incr, numIter, dUmin, dUmax)
+         :param node: integer tag identifying the node whose response controls solution
+         :param dof: integer tag identifying the degree of freedom at the node
+         :param incr: float value of the displacement increment
+         :param numIter: integer value of the number of iterations the user would like to occur in the solution algorithm. Optional; default = 1.0.
+         :param dUmin: float value of the min step size the user will allow. Optional; default :math:`\Delta U_{min} = \Delta U_0`
+         :param dUmax: float value of the max step size the user will allow. Optional; default :math:`\Delta U_{max} = \Delta U_0`
    
    .. tab:: Tcl
 
       .. function:: integrator DisplacementControl $node $dof $incr <$numIter $dUmin $dUmax >
 
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
 
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
-
-   ``node``, |integer|, node whose response controls solution
-   ``dof``, |integer|, degree of freedom at the node; valid options: 1 through ndf at node.
-   ``incr``, |float|, first displacement increment <math>\Delta U_{\text{dof}}</math>
-   ``numIter``, |integer|, the number of iterations the user would like to occur in the solution algorithm. Optional; default = 1.0.
-   ``dUmin``, |float|,   the min step size the user will allow. optional; default :math:`\Delta U_{min} = \Delta U_0`
-   ``dUmax``, |float|, the max step size the user will allow. optional: default :math:`\Delta U_{max} = \Delta U_0`
+         ``node``, |integer|, node whose response controls solution
+         ``dof``, |integer|, degree of freedom at the node; valid options: 1 through ndf at node.
+         ``incr``, |float|, first displacement increment <math>\Delta U_{\text{dof}}</math>
+         ``numIter``, |integer|, the number of iterations the user would like to occur in the solution algorithm. Optional; default = 1.0.
+         ``dUmin``, |float|,   the min step size the user will allow. optional; default :math:`\Delta U_{min} = \Delta U_0`
+         ``dUmax``, |float|, the max step size the user will allow. optional: default :math:`\Delta U_{max} = \Delta U_0`
 
 
 Example
@@ -46,7 +50,8 @@ If we write the governing finite element equation at :math:`t + \Delta t` as:
 
 .. math::
 
-    R(U_{t+\Delta t}, \lambda_{t+\Delta t}) = \lambda_{t+\Delta t} F^{ext} - F(U_{t+\Delta t}) `
+    R(U_{t+\Delta t}, \lambda_{t+\Delta t}) = \lambda_{t+\Delta t} F^{ext} - F(U_{t+\Delta t})`
+
 
 where :math:`F(U_{t+\Delta t})` are the internal forces which are a function of the displacements :math:`U_{t+\Delta t}`, :math:`F^{ext}` is the set of reference loads and :math:`\lambda` is the load multiplier. Linearizing the equation results in:
 

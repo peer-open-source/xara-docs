@@ -3,12 +3,14 @@
 Linear Transformation
 *********************
 
-This command is used to construct a linear coordinate transformation (LinearCrdTransf) object, which performs a linear geometric transformation of beam stiffness and resisting force from the basic system to the global-coordinate system.
+This command is used to construct a linear coordinate transformation, which performs a linear geometric transformation of beam stiffness and resisting force from the basic system to the global-coordinate system.
 
 * For a two-dimensional problem:
+
 .. function:: geomTransf Linear $transfTag <-jntOffset $dXi $dYi $dXj $dYj> 
 
 * For a three-dimensional problem:
+
 .. function:: geomTransf Linear $transfTag $vecxzX $vecxzY $vecxzZ <-jntOffset $dXi $dYi $dZi $dXj $dYj $dZj> 
 
 .. csv-table:: 

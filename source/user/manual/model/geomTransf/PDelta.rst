@@ -25,6 +25,7 @@ This command is used to construct the P-Delta Coordinate Transformation (PDeltaC
    $dXj $dYj $dZj, |float|, "joint offset values -- offsets specified with respect to the global coordinate system for element-end node j (optional, the number of arguments depends on the dimensions of the current model)."
 
 .. note::
+
    The element coordinate system and joint offset values are specified as in the :ref:`linearTR`.
 
 | Code Developed by: Remo Magalhaes de Souza 

@@ -1,20 +1,33 @@
 .. _Newmark:
 
-Newmark Method
--------------------
+Newmark
+^^^^^^^
 
-This command is used to construct a Newmark integrator object.
+This command is used to construct a Newmark integrator, based on  [Newmark1959]_.
 
-.. function:: integrator Newmark $gamma $beta
+.. tabs::
 
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+   .. tab:: Python
 
-   $gamma, |float|,  :math:`\gamma` factor
-   $beta, |float|, :math:`\beta` factor
+      .. function:: model.integrator("Newmark", gamma, beta)
+
+         :param gamma: float, :math:`\gamma` factor
+         :param beta: float, :math:`\beta` factor
+
+
+   .. tab:: Tcl
+
+      .. function:: integrator Newmark $gamma $beta
+
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
+
+         $gamma, |float|,  :math:`\gamma` factor
+         $beta, |float|, :math:`\beta` factor
 
 .. note::
+
    1. If the accelerations are chosen as the unknowns and :math:`\beta` is chosen as 0, the formulation results in the fast but conditionally stable explicit Central Difference method. Otherwise the method is implicit and requires an iterative solution process.
    
    2. Two common sets of choices are:
@@ -31,7 +44,7 @@ This command is used to construct a Newmark integrator object.
 
 
 Theory
-^^^^^^
+------
 
 The Newmark method is a one step implicit method for solving the transient problem, represented by the residual for the momentum equation:
 
@@ -105,9 +118,10 @@ and,
    R_{t+\Delta t}^i = F_{t + \Delta t}^{ext} - F(U_{t + \Delta t}^{i-1})^{int} - C \dot U_{t+\Delta t}^{i-1} - M \ddot U_{t+ \Delta t}^{i-1}
 
 
-.. admonition:: Example 
+Example 
+-------
 
-   The following example shows how to construct a Newmark Integrator.
+The following example shows how to construct a Newmark Integrator.
 
    1. **Tcl Code**
 
@@ -119,8 +133,11 @@ and,
 
    .. code-block:: python
 
-      integrator('Newmark', 0.5, 0.25)
+      model.integrator("Newmark", 0.5, 0.25)
 
+
+References
+----------
 
 .. [Newmark1959] Newmark, N.M. "A Method of Computation for Structural Dynamics" ASCE Journal of Engineering Mechanics Division, Vol 85. No EM3, 1959.
 

@@ -44,7 +44,7 @@ and
 
 
 Theory
-^^^^^^^^
+^^^^^^
 
 The Generalized :math:`\alpha` method (sometimes called the :math:`\alpha` method) is a one step implicit method for solving the transient problem which attempts to increase the amount of numerical damping present without degrading the order of accuracy. In the HHT method, the same Newmark approximations are used:
 

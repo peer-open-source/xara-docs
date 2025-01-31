@@ -1,7 +1,8 @@
 .. _HilberHughesTaylorMethod:
 
 Hilber-Hughes-Taylor Method
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 .. function:: integrator HHT $alpha <$gamma $beta> 
 
 This command is used to construct a Hilber-Hughes-Taylor (HHT) integration object. This is an implicit method that allows for energy dissipation and second order accuracy (which is not possible with the regular Newmark method). Depending on choices of input parameters, the method can be unconditionally stable. 
@@ -47,7 +48,8 @@ This command is used to construct a Hilber-Hughes-Taylor (HHT) integration objec
 
 
 Theory
-^^^^^^^^
+------
+
 The HHT method (sometimes called the :math:` \alpha` method) is a one step implicit method for solving the transient problem which attempts to increase the amount of numerical damping present without degrading the order of accuracy. In the HHT method, the same Newmark approximations are used:
 
 .. math::
