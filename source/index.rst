@@ -11,24 +11,11 @@ As part of the ongoing code development efforts, several applications built usin
 .. _user-manual:
 
 .. toctree::
-   :caption: Users
    :maxdepth: 1
-   :numbered: 1
 
    user/install
    user/userManual
    user/userExamples
-   developer/license
+   about
 
-
-The OpenSees framework is presented in the following chapters for developers wishing to create their own applications or extend the existing applications.
-
-.. _developer-manual:
-
-.. toctree::
-   :caption: Developers
-   :maxdepth: 2
-   :numbered: 1
-
-   developer/references
 

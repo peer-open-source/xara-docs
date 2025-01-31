@@ -60,7 +60,7 @@ rst_prolog = """
 .. |silvia| replace:: `Silvia Mazzoni`_
 .. _`Silvia Mazzoni`: https://www.silviasbrainery.com/
 .. |csasj| replace:: **csasj**
-"""	
+"""    
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -96,17 +96,19 @@ html_theme = "pydata_sphinx_theme"
 
 html_theme_options = {
 #      'analytics_id': 'UA-2431545-1',
-	'logo_only': True,
-	'prev_next_buttons_location': None,
-    "body_max_width": None,
+#   'logo_only': True,
+#   'prev_next_buttons_location': None,
+#   "body_max_width": None,
     'style_nav_header_background': 'white',
+    "footer_items": [], #["copyright", "sphinx-version"],
 }
+html_show_sphinx = False
 html_show_sourcelink = False
 
 #  'style_nav_header_background': '#F2F2F2' #64B5F6 #607D8B,
 
 html_css_files = [
-	'css/custom.css'
+    'css/custom.css'
 ]
 
 html_secnum_suffix = " "
