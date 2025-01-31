@@ -1,7 +1,7 @@
 .. _node:
 
-node Command
-************
+Nodes
+*****
 
 This method is used to construct a ``Node`` which stores information about coordinates and mass at a single point. The assignment of mass is optional.
 

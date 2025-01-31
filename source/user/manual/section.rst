@@ -1,9 +1,9 @@
 .. _section:
 
-section Command
-***************
+Sections
+********
 
-This command is used to construct a SectionForceDeformation object, hereto referred to as Section, which represents force-deformation (or resultant stress-strain) relationships at beam-column and plate sample points.
+This command is used to construct a Section, which represents force-deformation (or resultant stress-strain) relationships at beam-column and plate sample points.
 
 
 .. function:: section secType? secTag? arg1? ...
