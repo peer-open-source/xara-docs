@@ -51,7 +51,14 @@ The following subsections contain information about ``type`` and the number of n
 3. Beam Column Elements
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
+
+   elements/frame/index
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1   
 
    elements/elasticBeamColumn
    elements/ExactFrame
@@ -60,11 +67,6 @@ The following subsections contain information about ``type`` and the number of n
    elements/FlexureShearInteractionDisplacementBasedBeamColumnElement
    elements/dispBeamColumnAsym
    elements/mixedBeamColumnAsym
-
-.. toctree::
-   :hidden:
-   :maxdepth: 1   
-
    elements/MVLEM
    elements/MVLEM_3D
    elements/SFI_MVLEM_3D
