@@ -1,5 +1,8 @@
+User-agent: SiteAuditBot
+Allow: /
+
 User-agent: *
 Allow: /user/manual/model/elements/ExactFrame.html
 Allow: /user/manual/model/element.html
 Allow: /user/manual/model/model_class.html
-#Disallow: /
+Disallow: /
