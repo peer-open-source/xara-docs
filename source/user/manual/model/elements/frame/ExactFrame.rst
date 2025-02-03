@@ -8,7 +8,7 @@
 	:figclass: align-center
 	:scale: 55
 
-	Fig. 1: Torsional instability captured by the **ExactFrame** formulation and rendered with `veux <https://veux.stairlab.io>`_.
+	Fig. 1: Torsional instability captured by the **ExactFrame** formulation and rendered with `veux <https://veux.io>`_.
 
 
 The **ExactFrame** element is a geometrically exact beam element based on Simo's
