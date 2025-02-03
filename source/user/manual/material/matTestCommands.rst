@@ -6,21 +6,21 @@ Material Testing Commands
 The material testing environment is separate from the OpenSees domain, and allows for simple tests to be performed on OpenSees materials, including uniaxial materials, n-dimensional materials, and section force-deformation relationships.
 In order to use the material testing commands, the test material/section must first be specified with testUniaxialMaterial, testNDMaterial, or testSection.
 
-.. function:: testUniaxialMaterial $matTag
+.. function:: testUniaxialMaterial $tag
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $matTag,  |integer|,     unique uniaxial material tag.
+   $tag,  |integer|,     unique uniaxial material tag.
    
-.. function:: testNDMaterial $matTag
+.. function:: testNDMaterial $tag
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $matTag,  |integer|,     unique n-dimensional material tag.
+   $tag,  |integer|,     unique n-dimensional material tag.
    
 .. function:: testSection $secTag
 

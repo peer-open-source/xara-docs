@@ -13,31 +13,32 @@ This command is used to construct a uniaxial concrete material Material with lin
 
    .. tab:: Tcl
 
-      .. function:: uniaxialMaterial Concrete02 $matTag $fpc $epsc0 $fpcu $epsU $lambda $ft $Ets 
+      .. function:: uniaxialMaterial Concrete02 $tag $fpc $epsc0 $fpcu $epsU $lambda $ft $Ets 
 
 
 .. csv-table::
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $matTag, |integer|, integer tag identifying material.
+   $tag, |integer|, integer tag identifying material.
    $fpc, |float|,  concrete compressive strength at 28 days (compression is negative)* .
    $epsc0, |float|, concrete strain at maximum strength* .
    $fpcu, |float|, concrete crushing strength*.
    $epsU, |float|, concrete strain at crushing strength*.
-   $lambda, |float|, ratio between unloading slope at $epscu and initial slope.
+   $lambda, |float|, ratio between unloading slope at ``epscu`` and initial slope.
    $ft, |float|, tensile strength.
    $ets, |float|, tension softening stiffness (absolute value) (slope of the linear tension softening branch) 
 
 .. note::
   * Compressive concrete parameters should be input as negative values (if input as positive, they will be converted to negative internally).
-  * The initial slope for this model is (2*$fpc/$epsc0)
+  * The initial slope for this model is (``2*fpc/epsc0``)
 
 Typical Hysteretic Stress-Strain Relation for material 
 
 .. figure:: figures/Concrete02/Concrete02.jpg
-  :align: center
-  :figclass: align-center
+   :align: center
+   :figclass: align-center
+
 
 Comparison with Concrete01
 

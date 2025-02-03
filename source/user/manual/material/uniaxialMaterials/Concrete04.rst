@@ -4,13 +4,13 @@ Concrete04 Material -- Popovics Concrete Material
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This command is used to construct a uniaxial Popovics concrete material object with degraded linear unloading/reloading stiffness according to the work of Karsan-Jirsa and tensile strength with exponential decay. 
-.. function:: uniaxialMaterial Concrete04 $matTag $fc $ec $ecu $Ec <$fct $et> <$beta>  
+.. function:: uniaxialMaterial Concrete04 $tag $fc $ec $ecu $Ec <$fct $et> <$beta>  
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $matTag, |integer|, integer tag identifying material.
+   $tag, |integer|, integer tag identifying material.
    $fc, |float|,  concrete compressive strength at 28 days (compression is negative)*.
    $ec, |float|, concrete strain at maximum strength*.
    $ecu, |float|, concrete crushing strength*.
