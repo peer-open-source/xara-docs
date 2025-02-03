@@ -1,7 +1,7 @@
 .. _matTestCommands:
 
-Material Testing Commands
-*************************
+Material Testing Methods
+************************
 
 The material testing environment is separate from the OpenSees domain, and allows for simple tests to be performed on OpenSees materials, including uniaxial materials, n-dimensional materials, and section force-deformation relationships.
 In order to use the material testing commands, the test material/section must first be specified with testUniaxialMaterial, testNDMaterial, or testSection.

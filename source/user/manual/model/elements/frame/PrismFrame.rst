@@ -10,7 +10,7 @@ The ``PrismFrame`` element represents a linear-elastic prismatic beam element. T
 
    .. tab:: Python (RT)
 
-      .. function:: Model.element("PrismFrame", tag, nodes, section=None, transform=None, *args)
+      .. py:function:: Model.element("PrismFrame", tag, nodes, section=None, transform=None, *args)
 
       The required arguments are:
 
@@ -83,17 +83,17 @@ Example
 The following example constructs an elastic element with tag ``1`` between nodes **2** and **4** with an area 
 of **5.5**, Young's modulus :math:`E` of **100.0** and an Iz of **1e6** which uses the geometric transformation object with a tag of **9**
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: tcl
 
       element PrismFrame 1 2 4 5.5 100.0 1e6 9; 
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 
-      model.element('PrismFrame',1, (2,4), 5.5, 100.0, 1.0e6, 9)
+      model.element("PrismFrame",1, (2,4), 5.5, 100.0, 1.0e6, 9)
 
 
 Code developed by: |fmk|

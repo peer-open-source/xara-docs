@@ -4,7 +4,7 @@ Solids
 .. toctree::
    :maxdepth: 1
 
-   stdBrick
+   brick
    bbarBrick
    SSPbrick
    FourNodeTetrahedron

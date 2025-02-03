@@ -10,6 +10,7 @@ These methods are used to output results. OpenSees unlike other finite element a
 
    output/recorder
    output/printA
+   output/print
    output/getTime
    output/eleResponse
    output/getCrdTransfTags
