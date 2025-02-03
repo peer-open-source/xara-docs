@@ -9,7 +9,7 @@ This command is used to construct a uniaxial Giuffre-Menegotto-Pinto steel mater
    
    .. tab:: Python 
 
-      .. function:: model.uniaxialMaterial('Steel02', tag, fy, E0, b, R0, cR1, cR2, [a1, a2, a3, a4, sigInit])
+      .. function:: model.uniaxialMaterial("Steel02", tag, fy, E0, b, R0, cR1, cR2, [a1, a2, a3, a4, sigInit])
 
    .. tab:: Tcl
 

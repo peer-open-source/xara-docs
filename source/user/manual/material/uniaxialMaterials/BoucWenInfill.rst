@@ -1,9 +1,10 @@
 .. _BoucWenInfill:
 
-BoucWenInfill Material
-^^^^^^^^^^^^^^^^^^
+BoucWenInfill
+^^^^^^^^^^^^^
 
-This command is used to construct the uniaxial BoucWenInfill material producing smooth hysteretic loops with stiffness and strength degradation and pinching effect. The pinching formulation is particularly suitable to simulate the behavior of infill panels and masonry walls.
+This command is used to construct the uniaxial BoucWenInfill material producing smooth hysteretic loops with stiffness and strength degradation and pinching effect. 
+The pinching formulation is particularly suitable to simulate the behavior of infill panels and masonry walls.
 
 .. function:: uniaxialMaterial BoucWenInfill $matTag $mass $alpha $beta0 $eta0 $n $k $xy $deltak $deltaf $psi $Zs $As $epsp $tol $maxIter
 
@@ -60,6 +61,7 @@ Parameters $Zs, $As and $epsp control the amount and activation of the pinching 
    .. code-block:: tcl
 
       uniaxialMaterial BoucWenInfill 1 1 0.06 0.25 0.1 1.2 65 1 0.005 0.005 0.001 0.01 5 10000 10e-6 10e6
+
 
   
 Code Developed by: Stefano Sirotti, University of Modena and Reggio Emilia, Italy, stefano.sirotti@unimore.it 

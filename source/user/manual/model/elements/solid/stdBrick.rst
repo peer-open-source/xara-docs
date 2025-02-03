@@ -1,7 +1,7 @@
 .. _stdBrick::
 
-stdBrick Element
-^^^^^^^^^^^^^^^^
+Brick
+^^^^^
 
 This command is used to construct an eight-node brick element, which uses the standard isoparametric formulation.
 
@@ -69,7 +69,7 @@ The following example constructs a brick element with tag **1** between nodes **
 
    .. code-block:: python
 
-      model.element('Brick',1,(1,2,3,4,5,6,7,8),1, b1, b2, b3)
+      model.element("Brick",1,(1,2,3,4,5,6,7,8), 1, (b1, b2, b3))
 
 
 Code Developed by: **Edward Love, Sandia National Laboratories**

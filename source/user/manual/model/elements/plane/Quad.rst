@@ -1,7 +1,7 @@
 .. _quad::
 
-Quadrilateral Element
-^^^^^^^^^^^^^^^^^^^^^
+Quadrilateral
+^^^^^^^^^^^^^
 
 This command is used to construct a FourNodeQuad element object which uses a bilinear isoparametric formulation.
 
@@ -29,29 +29,28 @@ This command is used to construct a FourNodeQuad element object which uses a bil
 
 	Quad Element Node Numbering
 
-.. note::
 
-   The optional arguments must either be all specified or none specified.
 
-   Consistent nodal loads are computed from the pressure and body forces.
+ The valid queries to a Quad element when creating an ElementRecorder object are 'forces', 'stresses,' and 'material $matNum matArg1 matArg2 ...' where ``$matNum`` refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
 
-   The valid queries to a Quad element when creating an ElementRecorder object are 'forces', 'stresses,' and 'material $matNum matArg1 matArg2 ...' Where $matNum refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
+ Consistent nodal loads are computed from the pressure and body forces.
 
-.. admonition:: Example 
+Example
+-------
 
-   The following example constructs a quad element for use in a plane stress problem with tag **1** between nodes **1, 2, 3, 4** with an nDMaterial of tag **1**.
+ The following example constructs a quad element for use in a plane stress problem with tag **1** between nodes **1, 2, 3, 4** with an nDMaterial of tag **1**.
 
-   1. **Tcl Code**
+ 1. **Tcl Code**
 
-   .. code-block:: tcl
+ .. code-block:: tcl
 
-      element quad 1 1 2 3 4 "PlaneStress" 1 
+    element quad 1 1 2 3 4 "PlaneStress" 1 
 
-   2. **Python Code**
+ 2. **Python Code**
 
-   .. code-block:: python
+ .. code-block:: python
 
-      element('quad',1,1,2,3,4, 'PlaneStress', 1, b1, b2, b3)
+    model.element("quad",1, (1,2,3,4), (1.0, "PlaneStress", 1), (b1, b2, b3))
 
 
 

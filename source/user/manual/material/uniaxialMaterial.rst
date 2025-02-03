@@ -31,6 +31,22 @@ These quantities are typically stress and strain, but can also be force and defo
 
 The following subsections contain information about **$type** 
 
+..
+      #. Some Standard Uniaxial Materials
+
+      .. toctree::
+            :maxdepth: 1
+                  
+            uniaxialMaterials/Elastic
+            uniaxialMaterials/ElasticPP
+            uniaxialMaterials/ElasticPP_Gap
+            uniaxialMaterials/ElasticNoTension
+            uniaxialMaterials/ElasticBilin
+            uniaxialMaterials/ElasticMultiLinear
+            uniaxialMaterials/Hardening
+            uniaxialMaterials/MultiLinear
+
+
 #. Steel & Reinforcing-Steel Materials
 
    .. toctree::
@@ -39,14 +55,15 @@ The following subsections contain information about **$type**
       uniaxialMaterials/Steel01
       uniaxialMaterials/Steel02
       uniaxialMaterials/Steel4
-      uniaxialMaterials/ReinforcingSteel
       uniaxialMaterials/DoddRestrepo
       uniaxialMaterials/RambergOsgoodSteel
+
+..
+      uniaxialMaterials/ReinforcingSteel
       uniaxialMaterials/SteelMPF
-      uniaxialMaterials/UVCuniaxial
       uniaxialMaterials/SteelFractureDI
       uniaxialMaterials/DuctileFracture
-
+      uniaxialMaterials/UVCuniaxial
 
 #. Concrete Materials
 
@@ -67,20 +84,6 @@ The following subsections contain information about **$type**
       uniaxialMaterials/FRPConfinedConcrete
       uniaxialMaterials/ConcreteCM
 
-
-#. Some Standard Uniaxial Materials
-
-.. toctree::
-      :maxdepth: 1
-		 
-..    uniaxialMaterials/Elastic
-      uniaxialMaterials/ElasticPP
-      uniaxialMaterials/ElasticPP_Gap
-      uniaxialMaterials/ElasticNoTension
-      uniaxialMaterials/ElasticBilin
-      uniaxialMaterials/ElasticMultiLinear
-      uniaxialMaterials/Hardening
-      uniaxialMaterials/MultiLinear
       
 #. Generic Multilinear Hysteretic Materials
 
@@ -102,13 +105,16 @@ The following subsections contain information about **$type**
 .. toctree::
       :maxdepth: 1
       
-..    uniaxialMaterials/Fatigue
       uniaxialMaterials/Parallel
       uniaxialMaterials/Series
+      uniaxialMaterials/Fatigue
+
+..
       uniaxialMaterials/InitialStrain
       uniaxialMaterials/InitialStress
       uniaxialMaterials/MinMax
       uniaxialMaterials/PathIndependent
+
 
 #. Other Uniaxial Materials
 
@@ -116,18 +122,19 @@ The following subsections contain information about **$type**
       :maxdepth: 1
 
       uniaxialMaterials/BoucWenInfill
-      uniaxialMaterials/HystereticPoly
-      uniaxialMaterials/HystereticAsym
-      uniaxialMaterials/HystereticSmooth
-      uniaxialMaterials/DowelType
       uniaxialMaterials/CoulombDamper
       uniaxialMaterials/HertzDamp
       uniaxialMaterials/JankowskiImpact
+
+..
+      uniaxialMaterials/HystereticPoly
+      uniaxialMaterials/HystereticAsym
+      uniaxialMaterials/DowelType
       uniaxialMaterials/ViscoelasticGap
       uniaxialMaterials/Ratchet
       uniaxialMaterials/FlagShape
-
-..    uniaxialMaterials/CastFuse
+      uniaxialMaterials/HystereticSmooth
+      uniaxialMaterials/CastFuse
       uniaxialMaterials/ViscousDamper
       uniaxialMaterials/BilinearOilDamper
       uniaxialMaterials/SAWS
