@@ -1,7 +1,7 @@
 .. _eigen:
 
-eigen Command
-*************
+eigen
+*****
 
 This command is used to perform the eigenvalue analysis.
 

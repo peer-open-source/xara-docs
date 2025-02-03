@@ -1,7 +1,7 @@
 .. _modalProperties:
 
-modalProperties Command
-***********************
+modalProperties
+***************
 
 |  This command is used to compute the modal properties of a model after an :ref:`eigen`.
 |  This command computes the following modal properties:

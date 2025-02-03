@@ -1,7 +1,7 @@
 .. _responseSpectrumAnalysis:
 
-responseSpectrumAnalysis Command
-********************************
+responseSpectrumAnalysis
+************************
 
 |  This command is used to perform a response spectrum analysis.
 |  The response spectrum analysis performs N linear analysis steps, where N is the number of eigenvalues requested in a previous call to :ref:`eigen`.

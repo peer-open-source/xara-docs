@@ -1,7 +1,7 @@
 .. _algorithm:
 
-algorithm Command
-*****************
+algorithm
+*********
 
 This method is used to define a ``SolutionAlgorithm``, which determines the sequence of steps taken to solve the non-linear equation.
 

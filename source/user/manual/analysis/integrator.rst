@@ -1,7 +1,7 @@
 .. _integrator:
 
-integrator Command
-******************
+integrator
+**********
 
 This method is used to define an *integrator*. The Integrator object is used for the following:
 

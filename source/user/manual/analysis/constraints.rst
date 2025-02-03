@@ -1,7 +1,7 @@
 .. _constraints:
 
-constraints Command
-*******************
+constraints
+***********
 
 This command is used to construct the ConstraintHandler object. 
 The ConstraintHandler object determines how the constraint equations are enforced in the analysis. 
