@@ -100,7 +100,15 @@ html_theme_options = {
 #   'prev_next_buttons_location': None,
 #   "body_max_width": None,
     'style_nav_header_background': 'white',
+    "show_prev_next": False,
     "footer_items": [], #["copyright", "sphinx-version"],
+}
+html_context = {
+    # "github_url": "https://github.com", # or your GitHub Enterprise site
+    "github_user": "STAIRLab",
+    "github_repo": "OpenSeesRT",
+#   "github_version": "<your-branch>",
+#   "doc_path": "<path-from-root-to-your-docs>",
 }
 html_show_sphinx = False
 html_show_sourcelink = False
