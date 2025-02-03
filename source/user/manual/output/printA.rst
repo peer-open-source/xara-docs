@@ -10,7 +10,7 @@ The ``getTangent`` function, or ``printA`` in Tcl, is used to return system matr
 
    .. tab:: Python
 
-      .. function:: Model.getTangent(m, c, k)
+      .. function:: Model.getTangent(m=0, c=0, k=1)
 
    .. tab:: Tcl
 
@@ -24,29 +24,22 @@ The ``getTangent`` function, or ``printA`` in Tcl, is used to return system matr
    * - ``$fileName``
      - *string*
      - file name to write tangent to.
-   * - ``$m``
+   * - ``m``
      - |float|
-     - factor with which to scale the inertial part of the tangent (OpenSeesRT only).
-   * - ``$c``
+     - factor with which to scale the inertial part of the tangent (default is ``0.0``; OpenSeesRT only).
+   * - ``c``
      - |float|
-     - factor with which to scale the damped part of the tangent (OpenSeesRT only).
-   * - ``$k``
+     - factor with which to scale the damped part of the tangent (default is ``0.0``; OpenSeesRT only).
+   * - ``k``
      - |float|
-     - factor with which to scale the static part of the tangent (OpenSeesRT only).
+     - factor with which to scale the static part of the tangent (default is ``1.0``; OpenSeesRT only).
 
-Print the contents of the matrix that the integrator
-creates to the screen or a file if the ``-file`` option is used. 
-If using a
-static integrator, the resulting matrix is the stiffness matrix. If a
+
+Return the current tangent to the equilibrium residual. 
+If using a static integrator, the resulting matrix is the *stiffness* matrix. If a
 transient integrator, it will be some combination of mass and stiffness
 matrices.
 
-.. note::
-
-   The full version of this command as documented above is supported from Python and Tcl
-   through OpenSeesRT.
-   In OpenSeesPy and older Tcl versions this command only works with the FullGeneral linear system,
-   and the ``GimmeMCK`` integrator must be used to specify ``m`` ``c`` and ``k`` factors.
 
 Examples
 ========
@@ -72,3 +65,10 @@ and in Python with OpenSeesRT:
     A = model.getTangent(m=0.5, k=0.1)
 
 
+
+.. note::
+
+   The full version of this command as documented above is supported from Python and Tcl
+   through OpenSeesRT.
+   In OpenSeesPy and older Tcl versions this command only works with the ``FullGeneral`` linear system,
+   and the ``GimmeMCK`` integrator must be used to specify ``m`` ``c`` and ``k`` factors.

@@ -1,16 +1,34 @@
 .. _geomTransf:
 
-Geometric Transformation Command
-********************************
+Transformations
+***************
 
-The geometric-transformation command is used to construct a coordinate-transformation (CrdTransf) object, which transforms beam element stiffness and resisting force from the basic system to the global-coordinate system. The command has at least one argument, the transformation type. Each type is outlined below.
+A geometric-transformation models a configuration-dependent transformation of a finite element's response. 
+This is particularly useful for modeling large-displacement effects in constrained structural members like beams and shells. 
 
-.. function:: geomTransf transfType? arg1? ...
+.. tabs::
 
+   .. tab:: Python
 
-The type of transformation created and the additional arguments required depends on the transfType? provided in the command.
+      .. function:: model.geomTransf(type, tag, *args)
 
-The following contain information about transfType? and the args required for each of the available geometric transformation types:
+         :param type: string, transformation type
+         :param tag: integer, unique transformation tag.
+         :param args: list, a list of transformation arguments with number dependent on transformation type
+
+   .. tab:: Tcl
+
+      .. function:: geomTransf type? args? ...
+
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
+
+         type, |string|,      transformation type
+         tag,  |integer|,     unique transformation tag.
+         args, |list|,        a list of transformation arguments with number dependent on transformation type
+
+Each type is outlined below. 
 
 .. toctree::
    :maxdepth: 1
