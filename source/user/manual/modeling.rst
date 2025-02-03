@@ -20,7 +20,6 @@ In OpenSees there are commands to add each of these types of objects to a domain
    model/geomTransf
    model/beamIntegrations
    model/mpConstraints
-   model/timeSeries
    model/pattern
    model/damping
    model/mass

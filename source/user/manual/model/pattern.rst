@@ -8,18 +8,19 @@ The pattern command is used to construct a LoadPattern and add it to the Domain.
 
 The command has the following form:
 
-.. function:: pattern patternType? arg1? arg2? ...
+.. function:: pattern type? arg1? arg2? ...
 
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $patternType, |string|, pattern type
+   $type, |string|, pattern type
    $eleTag,  |integer|,  unique epattern tag.
    $args, |list|,  a list of args
 
-The type of pattern created and the additional arguments required depends on the patternType? provided in the command. The following contain information about patternType? and the additional args required for each of the available pattern types:
+The type of pattern created and the additional arguments required depends on the ``type`` provided in the command. 
+The following contain information about ``type`` and the additional args required for each of the available pattern types:
 
 
 .. figure:: figures/OpenSeesLoads.png
