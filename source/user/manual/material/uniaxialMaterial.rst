@@ -1,23 +1,35 @@
 .. _uniaxialMaterial:
 
-uniaxialMaterial Command
-************************
+Uniaxial Materials
+******************
 
-This command is used to construct a uniaxial material, which provides a uniaxial stress-strain (or force-deformation) relationships.
-. 
+Uniaxial materials define a mathematical relationship between two scalar quantities. 
+These quantities are typically stress and strain, but can also be force and deformation, or any other two scalar quantities.
 
-.. function:: uniaxialMaterial $matType $matTag $matArgs
+.. tabs::
+ 
+   .. tab:: Python
 
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+      .. function:: model.uniaxialMaterial(type, tag, *args)
 
-   $matType, |string|,      material type
-   $matTag,  |integer|,     unique material tag.
-   $matArgs, |list|,        a list of material arguments with number dependent on material type
+         :param type: string, material type
+         :param tag: integer, unique material tag.
+         :param args: list, a list of material arguments with number dependent on material type
+
+   .. tab:: Tcl
+
+      .. function:: uniaxialMaterial $type $tag $args
+
+      .. csv-table:: 
+      :header: "Argument", "Type", "Description"
+      :widths: 10, 10, 40
+
+      $type, |string|,      material type
+      $tag,  |integer|,     unique material tag.
+      $args, |list|,        a list of material arguments with number dependent on material type
 
 
-The following subsections contain information about **$matType** 
+The following subsections contain information about **$type** 
 
 #. Steel & Reinforcing-Steel Materials
 

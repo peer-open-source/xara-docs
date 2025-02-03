@@ -30,8 +30,8 @@ The implementation closely follows the treatment by Perez and Filippou (2024) [3
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
 
-         ``tag``, |integer|,	       unique element tag
-         ``iNode`` ``jNode`` , |integer|,  tags of end nodes
+         ``tag``, |integer|,	   unique element tag
+         ``nodes`` , |integer|,  tags of end nodes
          ``section``, |integer|,         section tag
          ``transform``, |integer|,      identifier for previously-defined coordinate-transformation
 

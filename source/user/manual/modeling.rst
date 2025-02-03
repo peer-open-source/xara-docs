@@ -8,19 +8,18 @@ In OpenSees the Constraints are divided into two types: single-point constraints
 
 In OpenSees there are commands to add each of these types of objects to a domain:
 
+
 .. toctree::
    :maxdepth: 1
 
    model/model_class
-   model/node
    model/spConstraints
-   model/mpConstraints
-   material/uniaxialMaterial
-   material/ndMaterial
+   material/index
    section
    model/element
    model/geomTransf
-   model/beamIntegrations   
+   model/beamIntegrations
+   model/mpConstraints
    model/timeSeries
    model/pattern
    model/damping

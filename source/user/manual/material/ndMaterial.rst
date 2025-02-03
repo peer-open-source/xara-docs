@@ -1,26 +1,39 @@
 .. _nDMaterial:
 
-nDMaterial Command
-************************
+General Materials
+*****************
 
 This command is used to construct an NDMaterial object which represents the stress-strain relationship at the gauss-point of a continuum element. 
 
-.. function:: nDMaterial $matType $matTag $matArgs
+.. tabs::
+   
+   .. tab:: Python 
 
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+      .. function:: model.material(type, tag, *args)
 
-   $matType, |string|,      material type
-   $matTag,  |integer|,     unique material tag.
-   $matArgs, |list|,        a list of material arguments with number dependent on material type
+         :param type: string, material type
+         :param tag: integer, unique material tag.
+         :param args: list, a list of material arguments with number dependent on material type
+
+   .. tab:: Tcl
+
+      .. function:: material $type $tag {*}$args
+
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
+
+         $type, |string|,      material type
+         $tag,  |integer|,     unique material tag.
+         $args, |list|,        a list of material arguments with number dependent on material type
 
 .. note::
 
-   The valid queries to any uniaxial material when creating an ElementRecorder are 'strain', and 'stress'. Some materials have additional queries to which they will respond. These are documented in the NOTES section for those materials.
+   The valid queries to any material when creating an ElementRecorder are ``'strain'``, and ``'stress'``. 
+   Some materials have additional queries to which they will respond. These are documented in the NOTES section for those materials.
 
 
-The following contain information about matType? and the args required for each of the available material types:
+The following contain information about ``type`` and the ``args`` required for each of the available material types:
 
 .. toctree::
    :maxdepth: 1

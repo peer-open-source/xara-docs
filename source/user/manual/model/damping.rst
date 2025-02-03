@@ -1,9 +1,9 @@
 .. _damping:
 
-Damping Commands
-****************
+Damping
+*******
 
-OpenSees provides the user several method to introduce damping effects. List of the available method are:
+OpenSees provides several method to introduce damping effects. List of the available method are:
 
 .. toctree::
    :maxdepth: 1
