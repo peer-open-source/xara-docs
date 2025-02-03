@@ -1,7 +1,7 @@
 .. _SSPquad:
 
-SSPquad Element
-^^^^^^^^^^^^^^^
+SSPquad
+^^^^^^^
 
 This command is used to construct a SSPquad element object. The SSPquad element is a four-node quadrilateral element using physically stabilized single-point integration (SSP --> Stabilized Single Point). The stabilization incorporates an assumed strain field in which the volumetric dilation and the shear strain associated with the the hourglass modes are zero, resulting in an element which is free from volumetric and shear locking. The elimination of shear locking results in greater coarse mesh accuracy in bending dominated problems, and the elimination of volumetric locking improves accuracy in nearly-incompressible problems. Analysis times are generally faster than corresponding full integration elements. The formulation for this element is identical to the solid phase portion of the SSPquadUP element as described by [McGannEtAl2012]_.
 
@@ -13,9 +13,9 @@ This command is used to construct a SSPquad element object. The SSPquad element 
    :widths: 10, 10, 40
 
    $eleTag	unique integer tag identifying element object
-   $iNode $jNode $kNode $lNode, 4 |integer|, the four nodes defining the element input in counterclockwise order (-ndm 2 -ndf 2)
+   $iNode $jNode $kNode $lNode, 4 |integer|, the four nodes defining the element input in counterclockwise order (``ndm=2`` and ``ndf=2``)
    $thick, |float|, thickness of the element in out-of-plane direction
-   $type, |float|, string to relay material behavior to the element (either "PlaneStrain" or "PlaneStress")
+   $type, |float|, string to relay material behavior to the element (either ``"PlaneStrain"`` or ``"PlaneStress"``)
    $matTag, |integer|,	unique integer tag associated with previously-defined nDMaterial object
    $b1 $b2, |float|, constant body forces in global x- and y-directions respectively (optional: default = 0.0)
 
@@ -26,11 +26,11 @@ This command is used to construct a SSPquad element object. The SSPquad element 
 
 	SSPquad Element Node Numbering
 
-.. note::
 
-   Valid queries to the SSPquad element when creating an ElementalRecorder object correspond to those for the nDMaterial object assigned to the element (e.g., 'stress', 'strain'). Material response is recorded at the single integration point located in the center of the element.
+Valid queries to the SSPquad element when creating an ElementalRecorder object correspond to those for the nDMaterial object assigned to the element (e.g., 'stress', 'strain'). Material response is recorded at the single integration point located in the center of the element.
 
-   The SSPquad element was designed with intentions of duplicating the functionality of the Quad Element. If an example is found where the SSPquad element cannot do something that works for the Quad Element, e.g., material updating, please contact the developers listed below so the bug can be fixed.
+The SSPquad element was designed with intentions of duplicating the functionality of the Quad Element. 
+If an example is found where the SSPquad element cannot do something that works for the Quad Element, e.g., material updating, please contact the developers listed below so the bug can be fixed.
 
 Elemental recorders for stress and strain when using the SSPquad element (note the difference from the Quad Element)
 
@@ -50,7 +50,7 @@ Elemental recorders for stress and strain when using the SSPquad element (note t
 
    .. code-block:: python
 
-      element('SSPquad', 1, 1, 2,  3,  4,   1,  'PlaneStrain',  1.0,  0.0,  -10.0)
+      model.element("SSPquad", 1, (1, 2,  3,  4),   (1,  'PlaneStrain',  1.0),  0.0,  -10.0)
 
 Code Developed by: |chris|, |pedro|, |peter| at University of Washington.
 
