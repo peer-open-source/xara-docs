@@ -1,7 +1,8 @@
 .. _Broyden:
 
-Broyden Algorithm
---------------------------------
+Broyden
+-------
+
 .. function:: algorithm Broyden <$count>
 
 .. list-table:: 

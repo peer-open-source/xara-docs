@@ -1,7 +1,7 @@
 .. _CoulombDamper:
 
-CoulombDamper Material
-^^^^^^^^^^^^^^^^^^^^^^
+CoulombDamper
+^^^^^^^^^^^^^
 
 This command is used to construct the uniaxial CoulombDamper material producing elastic stiffness and friction force.
 

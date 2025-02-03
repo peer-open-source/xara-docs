@@ -1,9 +1,10 @@
 .. _Concrete04 :
 
-Concrete04 Material -- Popovics Concrete Material
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Concrete04 -- Popovics Backbone
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This command is used to construct a uniaxial Popovics concrete material object with degraded linear unloading/reloading stiffness according to the work of Karsan-Jirsa and tensile strength with exponential decay. 
+This command is used to construct a uniaxial Popovics concrete material with degraded linear unloading/reloading stiffness according to the work of Karsan-Jirsa and tensile strength with exponential decay. 
+
 .. function:: uniaxialMaterial Concrete04 $tag $fc $ec $ecu $Ec <$fct $et> <$beta>  
 
 .. csv-table:: 
@@ -20,6 +21,7 @@ This command is used to construct a uniaxial Popovics concrete material object w
    $beta, |float|, exponential curve parameter to define the residual stress (as a factor of $ft) at $etu. 
 
 .. note::
+
   * Compressive concrete parameters should be input as negative values (if input as positive, they will be converted to negative internally).
   * The envelope of the compressive stress-strain response is defined using the model proposed by [Popovic1973]_. If the user defines :math:`E_c = 57000 \sqrt(f_{cc})` (in psi unit) then the envelope curve is identical to proposed by [Mander1988]_.
   * Model Characteristic: For loading in compression, the envelope to the stress-strain curve follows the model proposed by Popovics (1973) until the concrete crushing strength is achieved and also for strains beyond that corresponding to the crushing strength. For unloading and reloading in compression, the [Karsan1969]_ is used to determine the slope of the curve. For tensile loading, an exponential curve is used to define the envelope to the stress-strain curve. For unloading and reloading in tensile, the secant stiffness is used to define the path.

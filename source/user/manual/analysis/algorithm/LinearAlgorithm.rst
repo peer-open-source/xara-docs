@@ -1,9 +1,9 @@
 .. _LinearAlgorithm:
 
 Linear Algorithm
-================
+^^^^^^^^^^^^^^^^
 
-This command is used to construct a Linear algorithm object which takes one iteration to solve the system of equations.
+This command is used to set a Linear algorithm which takes one iteration to solve the system of equations.
 
 .. tabs::
 

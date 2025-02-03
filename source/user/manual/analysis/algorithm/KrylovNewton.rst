@@ -1,7 +1,8 @@
 .. _KrylovNewton:
 
-Krylov-Newton Algorithm
---------------------------------
+Krylov-Newton
+-------------
+
 .. function:: algorithm KrylovNewton <-iterate $tangIter> <-increment $tangIncr> <-maxDim $maxDim> 
 
 .. list-table:: 

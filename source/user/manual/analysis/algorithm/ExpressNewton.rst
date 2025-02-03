@@ -1,7 +1,8 @@
 .. _ExpressNewton:
 
-ExpressNewton Algorithm
-----------------
+ExpressNewton
+-------------
+
 This command is used to construct an ExpressNewton algorithm object for nonlinear structural dynamics. It accepts the solution after a constant number of Newton-Raphson iterations using a constant system Jacobian matrix. It is advised to be combined with transient integrators only. The command is of the following form:
 
 .. function:: algorithm ExpressNewton $iter $kMultiplier <-initialTangent> <-currentTangent> <-factorOnce>

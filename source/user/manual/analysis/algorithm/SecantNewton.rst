@@ -1,7 +1,8 @@
 .. _SecantNewton:
 
-Secant Newton  Algorithm
-----------------
+Secant Newton
+-------------
+
 .. function:: algorithm SecantNewton <-iterate $tangIter> <-increment $tangIncr> <-maxDim $maxDim> 
 
 .. list-table:: 

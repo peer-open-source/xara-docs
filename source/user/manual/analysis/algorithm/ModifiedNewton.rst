@@ -1,7 +1,8 @@
 .. _ModifiedNewton:
 
-Modified Newton Algorithm
---------------------------------
+Modified Newton
+---------------
+
 .. function:: algorithm ModifiedNewton <-initial> 
 
 .. list-table:: 

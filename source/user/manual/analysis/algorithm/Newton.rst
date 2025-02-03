@@ -1,7 +1,7 @@
 .. _Newton:
 
-Newton Algorithm
-^^^^^^^^^^^^^^^^
+Newton
+^^^^^^
 
 This method is used to define a Newton-Raphson algorithm to solve the nonlinear residual equation. 
 The Newton-Raphson method is the most widely used and most robust method for solving nonlinear algebraic equations. 

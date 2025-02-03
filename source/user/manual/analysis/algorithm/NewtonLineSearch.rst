@@ -1,8 +1,9 @@
 .. _NewtonLineSearch:
 
-Newton Line Search Algorithm
-----------------
-This command is used to construct a NewtonLineSearch algorithm object which introduces line search to the Newton-Raphson algorithm to solve the nonlinear residual equation. Line search increases the effectiveness of the Newton method when convergence is slow due to roughness of the residual. The command is of the following form: 
+Newton Line Search
+------------------
+
+This command is used to select a NewtonLineSearch algorithm which introduces line search to the Newton-Raphson algorithm to solve the nonlinear residual equation. Line search increases the effectiveness of the Newton method when convergence is slow due to roughness of the residual. The command is of the following form: 
 
 .. function:: algorithm NewtonLineSearch <-type $typeSearch> <-tol $tol> <-maxIter $maxIter> <-minEta $minEta> <-maxEta $maxEta> 
 
@@ -18,7 +19,7 @@ This command is used to construct a NewtonLineSearch algorithm object which intr
    $maxEta, |float|, a maximum :math:`\eta` value. Optional; The default is 10.0
 
 Theory
-^^^^^^^^^^^^^^
+^^^^^^
 
 The rationale behind line search is that:
     1. The direction behind :math:`\delta_U` found by the Newton-Raphson method is often a good direction, but the step size :math:`\Delta_U` is not.

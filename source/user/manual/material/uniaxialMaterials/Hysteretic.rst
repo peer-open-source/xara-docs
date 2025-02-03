@@ -1,11 +1,11 @@
 .. _Hysteretic:
 
-Hysteretic Material
-^^^^^^^^^^^^^^^^
+Hysteretic
+^^^^^^^^^^
 
 This command is used to construct a uniaxial hysteretic material object with pinching of force and deformation, damage due to ductility and energy, and degraded unloading stiffness based on ductility. The backbone can be either bilinear or trilinear.
 
-.. function:: uniaxialMaterial Hysteretic $matTag $s1p $e1p $s2p $e2p <$s3p $e3p> $s1n $e1n $s2n $e2n <$s3n $e3n> $pinchX $pinchY $damage1 $damage2 <$beta> 
+.. function:: uniaxialMaterial Hysteretic $tag $s1p $e1p $s2p $e2p <$s3p $e3p> $s1n $e1n $s2n $e2n <$s3n $e3n> $pinchX $pinchY $damage1 $damage2 <$beta> 
 
 .. list-table:: 
    :widths: 10 10 40
@@ -14,7 +14,7 @@ This command is used to construct a uniaxial hysteretic material object with pin
    * - Argument
      - Type
      - Description
-   * - $matTag
+   * - $tag
      - |integer|
      - Integer tag identifying material
    * - $s1p $e1p 
