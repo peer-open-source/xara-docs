@@ -6,13 +6,13 @@ Sections
 This command is used to construct a Section, which represents force-deformation (or resultant stress-strain) relationships at beam-column and plate sample points.
 
 
-.. function:: section secType? secTag? arg1? ...
+.. function:: section type? secTag? arg1? ...
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $secType, |string|,      section type
+   $type,    |string|,      section type
    $secTag,  |integer|,     unique section tag.
    $secArgs, |list|,        a list of material arguments with number dependent on section type
 
@@ -28,6 +28,7 @@ The following contain information about secType? and the args required for each 
    :maxdepth: 1
 
    section/ElasticFrame
+   section/PlaneSection
    section/NDFiberSection
    section/PlateFiberSection
    section/ElasticShell

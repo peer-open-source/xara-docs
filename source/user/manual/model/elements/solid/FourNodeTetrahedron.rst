@@ -30,7 +30,7 @@ This is the simplest possible continuum finite element for 3-D analysis. It's ba
 
    The valid queries to a ``FourNodeTetrahedron`` element when creating an ElementRecorder object are 'forces', 'stresses,' ('strains' version > 2.2.0) and 'material $matNum matArg1 matArg2 ...' Where $matNum refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
 
-   This element can only be defined after a :ref:`model` with **-ndm 3 -ndf 3**
+   This element can only be defined after a :class:`Model` with **ndm=3, ndf=3**
 
 Example 
 -------
