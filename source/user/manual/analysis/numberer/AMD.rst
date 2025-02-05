@@ -3,11 +3,21 @@ Alternative Min Degree Numberer
 
 This command is used to construct an AMD degree-of-freedom numbering object to provide the mapping between the degrees-of-freedom at the nodes and the equation numbers. An AMD numberer uses the approximate minimum degree scheme to order the matrix equations. The command to construct an AMD numberer is a follows:
 
-.. function:: numberer AMD
+.. tabs::
 
-.. admonition:: Example 
+   .. tab:: Python
 
-   The following example shows how to construct an alternative min-degree numberer.
+      .. function:: model.numberer("AMD")
+
+   .. tab:: Tcl
+
+      .. function:: numberer AMD
+
+
+Example
+-------
+
+The following example shows how to define an alternative min-degree numberer.
 
    1. **Tcl Code**
 

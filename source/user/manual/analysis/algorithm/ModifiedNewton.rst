@@ -16,4 +16,23 @@ Modified Newton
      - |string|
      - optional flag to indicate to use initial stiffness iterations
 
-This command is used to construct a ModifiedNewton algorithm object, which uses the modified newton-raphson algorithm to solve the nonlinear residual equation. 
+This command is used to construct a ModifiedNewton algorithm, which uses the modified newton-raphson algorithm to solve the nonlinear residual equation. 
+
+Example 
+-------
+
+The following examples demonstrate the command to create a ModifiedNewton solution algorithm.
+
+.. tabs::
+
+   .. tab:: Tcl
+
+      .. code-block:: tcl
+
+         algorithm ModifiedNewton -initial
+
+   .. tab:: Python
+
+      .. code-block:: python
+
+         model.algorithm('ModifiedNewton', '-initial')

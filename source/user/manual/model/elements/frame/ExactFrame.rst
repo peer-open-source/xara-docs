@@ -22,7 +22,7 @@ The implementation closely follows the treatment by Perez and Filippou (2024) [3
 
    .. tab:: Python (RT)
 
-      .. function:: element("ExactFrame", tag, nodes, section, transform)
+      .. function:: model.element("ExactFrame", tag, nodes, section, transform)
 
       The required arguments are:
 
@@ -58,6 +58,24 @@ as follows:
   non-vectorial configuration space, and consequently may exhibit minor 
   path-dependence.
 
+Example 
+-------
+
+The following example demonstrates the command to create an **ExactFrame** element.
+
+.. tabs::
+
+   .. tab:: Tcl
+
+      .. code-block:: tcl
+
+         element ExactFrame 1 1 2 -section 1 -transform 1
+
+   .. tab:: Python
+
+      .. code-block:: python
+
+         model.element('ExactFrame', 1, (1, 2), section=1, transform=1)
 
 
 References

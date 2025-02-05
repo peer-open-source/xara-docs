@@ -24,7 +24,7 @@ Krylov-Newton
  
 
 
-This command is used to construct a KrylovNewton algorithm object which uses a modified Newton method with Krylov subspace acceleration to advance to the next time step. 
+This command is used to construct a KrylovNewton algorithm which uses a modified Newton method with Krylov subspace acceleration to advance to the next time step. 
 
 .. note:: 
     References:

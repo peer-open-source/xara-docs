@@ -26,9 +26,10 @@ This command is used to construct a convergence test which uses the norm of the 
 
    When using a :ref:`penalty` constraint handler, large forces (those necessary to enforce the constraint) are included in the :math:`x` vector. Even for very small changes in the displacement, if user has selected overly large penalty factor, large forces can appear in the :math:`x` vector.
 
-.. admonition:: Example:
+Example
+-------
 
-   The following examples demonstrate the command to create a NormDispIncr test which allows 10 iterations till failure with a 2-norm in the :math:`x` vector, i.e. :math:`\sqrt(x^T x)` of **1.0e-2**.
+The following examples demonstrate the command to create a NormDispIncr test which allows 10 iterations till failure with a 2-norm in the :math:`x` vector, i.e. :math:`\sqrt(x^T x)` of **1.0e-2**.
 
    1. **Tcl Code**
 
@@ -40,7 +41,7 @@ This command is used to construct a convergence test which uses the norm of the 
 
    .. code-block:: python
 
-      test('NormDispIncr', 1.0e-2, 10, 2)
+      model.test("NormDispIncr", 1.0e-2, 10, 2)
 
 
 Code Developed by: **fmk**

@@ -89,11 +89,12 @@ of **5.5**, Young's modulus :math:`E` of **100.0** and an Iz of **1e6** which us
 
       element PrismFrame 1 2 4 5.5 100.0 1e6 9; 
 
+
 2. **Python Code**
 
    .. code-block:: python
 
-      model.element("PrismFrame",1, (2,4), 5.5, 100.0, 1.0e6, 9)
+      model.element("PrismFrame", 1, (2, 4), 5.5, 100.0, 1.0e6, 9)
 
 
 Code developed by: |fmk|

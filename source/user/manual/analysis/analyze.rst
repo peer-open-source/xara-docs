@@ -10,7 +10,7 @@ It returns a value indicating success or failure of the analysis.
    
    .. tab:: Python
 
-      .. function:: analyze(n, dt=None, dtMin=None, dtMax=None, Jd=None)
+      .. function:: model.analyze(n, dt=None, dtMin=None, dtMax=None, Jd=None)
 
    .. tab:: Tcl
 

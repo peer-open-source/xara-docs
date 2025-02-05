@@ -26,15 +26,15 @@ This command is used to construct a convergence test which uses the energy incre
 
 .. admonition:: Example:
 
-   The following examples demonstrate the command to create a NormEnergyIncr test which allows 10 iterations till failure with an energy increment :math:`0.5 (x^T b)` of **1.0e-2**.
+The following examples demonstrate the command to create a NormEnergyIncr test which allows 10 iterations till failure with an energy increment :math:`0.5 (x^T b)` of **1.0e-2**.
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: tcl
 
       test EnergyIncr 1.0e-2  10 2
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 

@@ -61,6 +61,6 @@ Theory
       eigenvalues = model.eigen(10)
       
       # or, obtain 10 eigenvalues explicitly specifying the solver
-      eigenvalues = model.eigen('-fullGenLapack', 10)
+      eigenvalues = model.eigen("-fullGenLapack", 10)
 
 Code Developed by: |fmk|

@@ -13,9 +13,7 @@ This method is used to define an *integrator*. The Integrator object is used for
    
    .. tab:: python
 
-      .. code-block:: python
-
-         integrator(type, *args)
+      .. function:: model.integrator(type, *args)
 
    .. tab:: tcl
 

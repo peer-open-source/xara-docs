@@ -28,21 +28,22 @@ This command is used to construct a convergence test which uses the norms of the
    If numerically the solution has a very small unbalance at the first step, this may mean that the test may never indicate success even though the solution had indeed converged to a solution. This is because machine precision and numerical round-off limit how small the unbalance can become.
 
 
-.. admonition:: Example:
+Example
+-------
 
-   The following examples demonstrate the command to create a RelativeNormUnbalance test which allows 10 iterations till failure with a 2-norm in the :math:`b` vector, i.e. :math:`\sqrt(b^T b)` of **1.0e-2**.
+The following examples demonstrate the command to create a RelativeNormUnbalance test which allows 10 iterations till failure with a 2-norm in the :math:`b` vector, i.e. :math:`\sqrt(b^T b)` of **1.0e-2**.
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: tcl
 
       test RelativeNormUnbalance 1.0e-2  10 2
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 
-      test('RelativeNormUnbalance', 1.0e-2, 10, 2)
+      model.test('RelativeNormUnbalance', 1.0e-2, 10, 2)
 
 
 Code Developed by: |fmk|

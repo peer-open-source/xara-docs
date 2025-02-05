@@ -41,7 +41,7 @@ This command is used to construct a convergence test which uses the norm of the 
 
    .. code-block:: python
 
-      test('NormUnbalance', 1.0e-2, 10, 2)
+      model.test("NormUnbalance", 1.0e-2, 10, 2)
 
 
 Code Developed by: |fmk|

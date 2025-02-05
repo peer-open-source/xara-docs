@@ -1,7 +1,7 @@
 .. _LinearAlgorithm:
 
-Linear Algorithm
-^^^^^^^^^^^^^^^^
+Linear
+^^^^^^
 
 This command is used to set a Linear algorithm which takes one iteration to solve the system of equations.
 
