@@ -47,6 +47,6 @@ The following example constructs a FourNodeTetrahedron element with tag **1** be
 
    .. code-block:: python
 
-      element('FourNodeTetrahedron',1,1,2,3,4,1, b1, b2, b3)
+      model.element('FourNodeTetrahedron',1, (1,2,3,4), 1, (b1, b2, b3))
 
 Code Developed by: `José Antonio Abell <www.joseabell.com>`_ (UANDES). For issues, start a new issue on the `OpenSees github repo <https://github.com/OpenSees/OpenSees>`_ and tag me (@jaabell). 

@@ -1,7 +1,7 @@
 .. _elasticBeamColumn:
 
-``PrismFrame``
-^^^^^^^^^^^^^^
+``PrismFrame``: Prismatic linear-elastic frame
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
 
@@ -13,7 +13,7 @@ The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
 
          :param tag: unique element tag
          :type tag: int
-         :param nodes: two integer node tags
+         :param nodes: tuple of *two* integer node tags
          :type nodes: tuple
          :param section: section tag
          :type section: int
@@ -28,7 +28,7 @@ The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
          :widths: 10, 10, 40
 
          ``tag``, |integer|,	   unique element tag
-         ``nodes`` , |integer|,  tuple of two integer node tags
+         ``nodes`` , |integer|,  tuple of *two* integer node tags
          ``section``, |integer|,         section tag
          ``transform``, |integer|,      identifier for previously-defined coordinate-transformation
 

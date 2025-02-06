@@ -31,20 +31,21 @@ This command is used to construct an eight-node mixed volume/pressure brick elem
 
    This element can only be defined after a :numref:`model` with **-ndm 3 -ndf 3**
 
-.. admonition:: Example 
+Example
+-------
 
-   The following example constructs a bbar brick element with tag **1** between nodes **1, 2, 3, 4, 5, 6, 7, 8** with an nDMaterial of tag **1** and body forces given by varaiables **b1, b2, b3**.
+The following example constructs a bbar brick element with tag **1** between nodes ``1, 2, 3, 4, 5, 6, 7, 8`` with an nDMaterial of tag **1** and body forces given by varaiables **b1, b2, b3**.
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: tcl
 
       element bbarBrick 1 1 2 3 4 5 6 7 8 1 $b1 $b2 $b3
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 
-      element('bbarBrick',1,1,2,3,4,5,6,7,8,1, b1, b2, b3)
+      model.element('bbarBrick',1, (1,2,3,4,5,6,7,8), 1, (b1, b2, b3))
 
 Code Developed by: **Edward Love, Sandia National Laboratories**

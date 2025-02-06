@@ -3,7 +3,7 @@
 Brick
 ^^^^^
 
-This command is used to construct an eight-node brick element, which uses the standard isoparametric formulation.
+This command is used to construct an eight-node brick, which uses the standard isoparametric formulation.
 
 .. tabs::
 
@@ -19,6 +19,7 @@ This command is used to construct an eight-node brick element, which uses the st
 
 
    .. tab:: Tcl
+
       .. function:: element Brick $tag {*}$nodes $matTag <$b1 $b2 $b3>
 
       .. csv-table:: 
@@ -59,17 +60,17 @@ Example
 
 The following example constructs a brick element with tag **1** between nodes **1, 2, 3, 4, 5, 6, 7, 8** with an nDMaterial of tag **1** and body forces given by varaiables **b1, b2, b3**.
 
-   1. **Tcl Code**
-
-   .. code-block:: tcl
-
-      element Brick 1 1 2 3 4 5 6 7 8 1 $b1 $b2 $b3
-
-   2. **Python Code**
+1. **Python Code**
 
    .. code-block:: python
 
       model.element("Brick",1, (1,2,3,4,5,6,7,8), 1, (b1, b2, b3))
+
+2. **Tcl Code**
+
+   .. code-block:: tcl
+
+      element Brick 1 1 2 3 4 5 6 7 8 1 $b1 $b2 $b3
 
 
 Code Developed by: **Edward Love, Sandia National Laboratories**

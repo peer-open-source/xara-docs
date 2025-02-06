@@ -24,9 +24,10 @@ This command is used to construct a convergence test which uses the energy incre
 
    When using a :ref:`penalty` constraint handler, large forces (those necessary to enforce the constraint) are included in the :math:`x` vector. Even for very small changes in the displacement, if user has selected overly large penalty factor, large forces can appear in the :math:`x` vector.
 
-.. admonition:: Example:
+Example
+-------
 
-The following examples demonstrate the command to create a NormEnergyIncr test which allows 10 iterations till failure with an energy increment :math:`0.5 (x^T b)` of **1.0e-2**.
+The following examples demonstrate the command to create a ``NormEnergyIncr`` test which allows ``10`` iterations with an energy increment :math:`0.5 (x \cdot b)` of **1.0e-2**.
 
 1. **Tcl Code**
 
@@ -38,7 +39,7 @@ The following examples demonstrate the command to create a NormEnergyIncr test w
 
    .. code-block:: python
 
-      test('EnergyIncr', 1.0e-2, 10, 2)
+      model.test("EnergyIncr", 1.0e-2, 10, 2)
 
 
 Code Developed by: |fmk|

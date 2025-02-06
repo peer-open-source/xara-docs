@@ -2,23 +2,31 @@
 ShearFiber
 ^^^^^^^^^^
 
+A ``ShearFiber`` section is used to model a fiber section with shear deformation. 
+The section is defined by a collection of fibers that are discretized in the cross-section. 
+
 .. tabs::
 
    .. tab:: Python (RT)
     
       .. function:: model.section("ShearFiber", tag, **kwds)
+         
+         :param tag: unique section tag
+         :type tag: int
 
 
-    .. tab:: Tcl
+   .. tab:: Tcl
 
-        .. function:: section ShearFiber $tag {}
+      .. function:: section ShearFiber $tag {}
+         
+         :param tag: unique section tag
 
 
 The ``fiber`` method is used to populate the section with fibers. The required arguments are:
 
 .. tabs::
 
-   .. tab:: Python (RT)
+   .. tab:: Python
     
       .. function:: model.fiber((y, z), A, tag, warp, section)
 
