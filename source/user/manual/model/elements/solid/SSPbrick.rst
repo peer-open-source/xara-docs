@@ -50,6 +50,6 @@ The following example constructs a brick element with tag **1** between nodes **
 
    .. code-block:: python
 
-      element('SSPbrick', 1, (1,2,3,4,5,6,7,8), 1, (0.0, 0.0, -10.0))
+      model.element('SSPbrick', 1, (1,2,3,4,5,6,7,8), 1, (0.0, 0.0, -10.0))
 
 Code Developed by: |chris|, |pedro|, |peter| at University of Washington.

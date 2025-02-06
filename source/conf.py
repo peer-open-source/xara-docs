@@ -96,7 +96,7 @@ html_theme = 'sphinx_rtd_theme'
 
 if html_theme == 'sphinx_rtd_theme':
     html_theme_options = {
-        'navigation_depth': 6,
+        'navigation_depth': 5,
         'logo_only': True,
         'prev_next_buttons_location': None,
     }
