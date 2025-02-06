@@ -24,16 +24,14 @@ The implementation closely follows the treatment by Perez and Filippou (2024) [3
 
       .. function:: model.element("ExactFrame", tag, nodes, section, transform)
 
-      The required arguments are:
-
-      .. csv-table:: 
-         :header: "Argument", "Type", "Description"
-         :widths: 10, 10, 40
-
-         ``tag``, |integer|,	   unique element tag
-         ``nodes`` , |integer|,  tags of end nodes
-         ``section``, |integer|,         section tag
-         ``transform``, |integer|,      identifier for previously-defined coordinate-transformation
+         :param tag: unique element tag
+         :type tag: int
+         :param nodes: tuple of integer node tags (see :ref:`node`)
+         :type nodes: tuple 
+         :param section: section tag (see :ref:`section`)
+         :type section: int
+         :param transform: identifier for previously-defined coordinate-transformation (see :ref:`geomTransf`)
+         :type transform: int
 
    .. tab:: Tcl
 

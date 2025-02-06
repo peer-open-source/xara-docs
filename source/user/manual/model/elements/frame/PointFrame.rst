@@ -12,8 +12,11 @@ The nodes are connected by a single section object to represent the force-deform
       .. py:function:: model.element("PointFrame", tag, nodes, section, *args, **kwargs)
 
          :param tag: integer tag identifying the element
-         :param nodes: tuple of integer tags identifying the nodes that form the element
-         :param section: integer tag identifying the Section object
+         :type tag: int
+         :param nodes: tuple of integer tags identifying the nodes that form the element (see :ref:`node`)
+         :type nodes: tuple
+         :param section: integer tag identifying a :ref:`section`.
+         :type section: int
          :param args: optional arguments
          :param kwargs: optional keyword arguments
 
