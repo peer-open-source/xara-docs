@@ -7,6 +7,11 @@ The **ElasticFrame** section implements a general linear elastic frame section.
 
 .. tabs::
 
+   .. tab:: Python (RT)
+
+      .. function:: model.section("ElasticFrame", tag, **kwds)
+
+
    .. tab:: Tcl
 
       .. function:: section ElasticFrame $tag $E $A $Iz $Iy $G $J
@@ -17,13 +22,5 @@ The **ElasticFrame** section implements a general linear elastic frame section.
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
 
-         $tag, |integer|,	  unique element object tag
-         $secTag, |integer|,      section tag
-         $transf, |integer|,      identifier for previously-defined coordinate-transformation (CrdTransf)
-
-
-   .. tab:: Python (RT)
-
-      .. function:: model.section("ElasticFrame", tag, **kwds)
-
+         $tag, |integer|,	  unique section tag
 

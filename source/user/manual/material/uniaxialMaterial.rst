@@ -12,9 +12,11 @@ These quantities are typically stress and strain, but can also be force and defo
 
       .. function:: model.uniaxialMaterial(type, tag, *args)
 
-         :param type: string, material type
-         :param tag: integer, unique material tag.
-         :param args: list, a list of material arguments with number dependent on material type
+         :param type: material type
+         :type type: string
+         :param tag: unique material tag.
+         :type tag: integer
+         :param args: additional arguments dependent on material ``type``
 
    .. tab:: Tcl
 

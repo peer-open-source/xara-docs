@@ -1,3 +1,5 @@
+.. _Frame:
+
 Frames
 ======
 
@@ -13,4 +15,5 @@ All frame elements are constructed with the form
    :maxdepth: 1
 
    PrismFrame
+   MixedFrame
    ExactFrame

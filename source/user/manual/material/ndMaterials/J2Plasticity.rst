@@ -19,11 +19,10 @@ This command is used to construct an multi dimensional material object that has 
    $delta, |float|,	   exponential hardening parameter
    $H, |float|,linear hardening parameter
 
-.. note::
+The material formulations for the J2 object are ``"ThreeDimensional"``, ``"PlaneStrain"``, ``"PlaneStress"``, ``"AxiSymmetric"``, and ``"PlateFiber"``.
 
-   The material formulations for the J2 object are "ThreeDimensional," "PlaneStrain," "Plane Stress," "AxiSymmetric," and "PlateFiber."
-
-THEORY:
+Theory 
+------
 
 The theory for the non hardening case can be found [[1]]
 
@@ -33,19 +32,19 @@ Elastic Model
 
 .. math::
 
-   \sigma = K*trace(\epsilon_e) + (2*G)*dev(\epsilon_e)
+   \boldsymbol{S} = K \operatorname{tr}(\boldsymbol{E}_e) + 2 G \operatorname{dev}(\boldsymbol{E}_e)
 
 Yield Function
 
 .. math::
 
-   \phi(\sigma,q) = || dev(\sigma) || - \sqrt(\tfrac{2}{3}*q(xi)
+   \phi(\sigma,q) = || dev(\sigma) || - \sqrt{\tfrac{2}{3}} q(\boldsymbol{xi})
 
 Saturation Isotropic Hardening with linear term
 
 .. math::
    
-   q(xi) = \sigma_0 + (\sigma_\inf - \sigma_0)*exp(-delta*\xi) + H*\xi
+   q(xi) = \sigma_0 + (\sigma_\inf - \sigma_0) \exp (-\delta\boldsymbol{\xi}) + H \boldsymbol{\xi}
 
 Flow Rules
 

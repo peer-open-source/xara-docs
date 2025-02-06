@@ -1,16 +1,25 @@
 .. _elasticBeamColumn:
 
 ``PrismFrame``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
-The ``PrismFrame`` element represents a linear-elastic prismatic beam element. The arguments for the construction of an elastic beam-column element depend on the dimension of the problem, ndm:
-
+The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
 
 .. tabs::
 
    .. tab:: Python (RT)
 
       .. py:function:: Model.element("PrismFrame", tag, nodes, section=None, transform=None, *args)
+
+         :param tag: unique element tag
+         :type tag: int
+         :param nodes: two integer node tags
+         :type nodes: tuple
+         :param section: section tag
+         :type section: int
+         :param transform: identifier for previously-defined coordinate-transformation
+         :type transform: int
+
 
       The required arguments are:
 
@@ -97,6 +106,4 @@ of **5.5**, Young's modulus :math:`E` of **100.0** and an Iz of **1e6** which us
       model.element("PrismFrame", 1, (2, 4), 5.5, 100.0, 1.0e6, 9)
 
 
-Code developed by: |fmk|
-
-
+Code developed by: Claudio M. Perez

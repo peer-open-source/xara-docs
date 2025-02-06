@@ -1,7 +1,7 @@
 .. _ExactFrame:
 
-``ExactFrame``: Geometrically Exact Frame Element
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``ExactFrame``: Geometrically Exact Frame
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ExactFrame_Fig1.png
 	:align: center
