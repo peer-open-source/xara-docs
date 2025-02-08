@@ -97,14 +97,14 @@ html_theme = 'sphinx_rtd_theme'
 if html_theme == 'sphinx_rtd_theme':
     html_theme_options = {
         'navigation_depth': 5,
-        'logo_only': True,
+#       'logo_only': True,
+        'style_nav_header_background': 'white',
         'prev_next_buttons_location': None,
     }
 else:
     html_theme_options = {
     #      'analytics_id': 'UA-2431545-1',
     #   "body_max_width": None,
-        'style_nav_header_background': 'white',
         "show_prev_next": False,
         "footer_items": [], #["copyright", "sphinx-version"],
     }
