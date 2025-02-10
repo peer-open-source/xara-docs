@@ -3,7 +3,8 @@
 SSPquad
 ^^^^^^^
 
-This command is used to construct a SSPquad element object. The SSPquad element is a four-node quadrilateral element using physically stabilized single-point integration (SSP --> Stabilized Single Point). The stabilization incorporates an assumed strain field in which the volumetric dilation and the shear strain associated with the the hourglass modes are zero, resulting in an element which is free from volumetric and shear locking. The elimination of shear locking results in greater coarse mesh accuracy in bending dominated problems, and the elimination of volumetric locking improves accuracy in nearly-incompressible problems. Analysis times are generally faster than corresponding full integration elements. The formulation for this element is identical to the solid phase portion of the SSPquadUP element as described by [McGannEtAl2012]_.
+This command is used to construct a SSPquad element. 
+The SSPquad element is a four-node quadrilateral element using physically stabilized single-point integration (SSP --> Stabilized Single Point). The stabilization incorporates an assumed strain field in which the volumetric dilation and the shear strain associated with the the hourglass modes are zero, resulting in an element which is free from volumetric and shear locking. The elimination of shear locking results in greater coarse mesh accuracy in bending dominated problems, and the elimination of volumetric locking improves accuracy in nearly-incompressible problems. Analysis times are generally faster than corresponding full integration elements. The formulation for this element is identical to the solid phase portion of the SSPquadUP element as described by [McGannEtAl2012]_.
 
 
 .. function:: element SSPquad $eleTag $iNode $jNode $kNode $lNode $matTag $type $thick <$b1 $b2>
@@ -24,21 +25,23 @@ This command is used to construct a SSPquad element object. The SSPquad element 
 	:align: center
 	:figclass: align-center
 
-	SSPquad Element Node Numbering
+	SSPquad element node numbering
 
 
-Valid queries to the SSPquad element when creating an ElementalRecorder object correspond to those for the nDMaterial object assigned to the element (e.g., 'stress', 'strain'). Material response is recorded at the single integration point located in the center of the element.
+Valid :ref:`eleResponse` queries to the SSPquad element correspond to those for the nDMaterial object assigned to the element (e.g., ``'stress'``, ``'strain'``). 
+Material response is recorded at the single integration point located in the center of the element.
 
 The SSPquad element was designed with intentions of duplicating the functionality of the Quad Element. 
 If an example is found where the SSPquad element cannot do something that works for the Quad Element, e.g., material updating, please contact the developers listed below so the bug can be fixed.
 
 Elemental recorders for stress and strain when using the SSPquad element (note the difference from the Quad Element)
 
-.. admonition:: Example 
+Examples
+--------
 
-   SSPquad element definition with element tag 1, nodes 1, 2, 3, and 4, material tag 1, plane strain conditions, unit thickness, horizontal body force of zero, and vertical body force of -10.0
+SSPquad element definition with element tag 1, nodes 1, 2, 3, and 4, material tag 1, plane strain conditions, unit thickness, horizontal body force of zero, and vertical body force of -10.0
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: tcl
 
@@ -46,15 +49,11 @@ Elemental recorders for stress and strain when using the SSPquad element (note t
       recorder Element -eleRange 1 $numElem -time -file stress.out  stress
       recorder Element -eleRange 1 $numElem -time -file strain.out  strain
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: python
 
-      model.element("SSPquad", 1, (1, 2,  3,  4),   (1,  'PlaneStrain',  1.0),  0.0,  -10.0)
-
-Code Developed by: |chris|, |pedro|, |peter| at University of Washington.
-
-.. [McGannEtAl2012] McGann, C. R., Arduino, P., and Mackenzie-Helnwein, P. (2012). “Stabilized single-point 4-node quadrilateral element for dynamic analysis of fluid saturated porous media.” Acta Geotechnica, 7(4), 297-311.
+      model.element("SSPquad", 1, (1, 2,  3,  4),   (1, 'PlaneStrain',  1.0),  0.0,  -10.0)
 
 
 .. admonition:: Another Tcl Example 
@@ -66,4 +65,8 @@ Code Developed by: |chris|, |pedro|, |peter| at University of Washington.
    .. literalinclude:: SSPquadExample.tcl
       :language: tcl
 
+
+Code Developed by: |chris|, |pedro|, |peter| at University of Washington.
+
+.. [McGannEtAl2012] McGann, C. R., Arduino, P., and Mackenzie-Helnwein, P. (2012). “Stabilized single-point 4-node quadrilateral element for dynamic analysis of fluid saturated porous media.” Acta Geotechnica, 7(4), 297-311.
 

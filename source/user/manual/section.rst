@@ -38,6 +38,14 @@ The following contain information about ``type`` and the ``args`` required for e
 
    section/ElasticFrame
    section/ShearFiber
+
+.. _PlaneSection:
+
+For :ref:`PlaneElements` elements, the following section types are available:
+
+.. toctree::
+   :maxdepth: 1
+
    section/PlaneStrain
    section/PlaneStress
 
@@ -56,11 +64,3 @@ The following contain information about ``type`` and the ``args`` required for e
    section/ParallelSection
    section/SectionAggregator
    section/UniaxialSection
-
-The valid queries to any section when creating an ElementRecorder are 
-
-* ``'force'``, and 
-* ``'deformation'``. 
-
-Some sections have additional queries to which they will respond. 
-These are documented in the *notes* section for those sections.

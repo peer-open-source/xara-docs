@@ -7,7 +7,7 @@ MinUnbalDispNorm
    
    .. tab:: Python 
 
-      .. function:: model.integrator("MinUnbalDispNorm", dlam0 [, jd, min, max])
+      .. py:function:: model.integrator("MinUnbalDispNorm", dlam0 [, jd, min, max])
 
    .. tab:: Tcl
 

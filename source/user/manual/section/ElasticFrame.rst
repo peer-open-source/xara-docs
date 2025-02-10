@@ -24,3 +24,8 @@ The **ElasticFrame** section implements a general linear elastic frame section.
 
          $tag, |integer|,	  unique section tag
 
+
+The valid :ref:`eleResponse` queries are 
+
+* ``'force'``, and 
+* ``'deformation'``. 

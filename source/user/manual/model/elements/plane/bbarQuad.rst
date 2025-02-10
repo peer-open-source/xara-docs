@@ -10,14 +10,18 @@ This command is used to construct a four-node quadrilateral element object, whic
 
    .. tab:: Python
 
-      .. function:: model.element("bbarQuad", tag, nodes, thick, matTag, *args, **kwargs)
+      .. function:: model.element("bbarQuad", tag, nodes, section, *args, **kwargs)
 
          :param tag: integer tag identifying the element
          :param nodes: tuple of integer tags identifying the nodes that form the element
-         :param thick: float element thickness
-         :param matTag: integer tag identifying the nDMaterial object
-         :param args: optional arguments
-         :param kwargs: optional keyword arguments
+         :param section: tuple or int. If int, it is the tag of a previously defined :ref:`PlaneSection`. If tuple, it is a tuple of the form (``thick``, ``type``, ``material``) where 
+           
+             ===================================   ==============================================================================================================
+             ``thick`` |float|                     element thickness
+             ``type`` |str|                        string representing material behavior. The type parameter can be either ``'PlaneStrain'`` or ``'PlaneStress'``
+             ``material`` |integer|                tag of an :ref:`nDMaterial`
+             ===================================   ==============================================================================================================
+   
 
    .. tab:: Tcl
 

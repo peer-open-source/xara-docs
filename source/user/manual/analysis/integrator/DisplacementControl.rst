@@ -1,5 +1,5 @@
 ``DisplacementControl``
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 This command is used to define a *DisplacementControl* integrator. 
 In an analysis step with Displacement Control we seek to determine the time step that will result in a displacement increment for a particular degree-of-freedom at a node to be a prescribed value.
@@ -8,10 +8,12 @@ In an analysis step with Displacement Control we seek to determine the time step
 
    .. tab:: Python
 
-      .. py:function:: model.integrator("DisplacementControl", node, dof, incr, numIter, dUmin, dUmax)
+      .. py:function:: model.integrator("DisplacementControl", node, dof, incr [, numIter, dUmin, dUmax])
 
-         :param node: integer tag identifying the node whose response controls solution
-         :param dof: integer tag identifying the degree of freedom at the node
+         :param node: tag identifying the node whose response controls solution
+         :type node: int
+         :param dof: tag identifying the degree of freedom at the node
+         :type dof: int
          :param incr: float value of the displacement increment
          :param numIter: integer value of the number of iterations the user would like to occur in the solution algorithm. Optional; default = 1.0.
          :param dUmin: float value of the min step size the user will allow. Optional; default :math:`\Delta U_{min} = \Delta U_0`

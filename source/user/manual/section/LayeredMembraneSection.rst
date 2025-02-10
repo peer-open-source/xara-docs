@@ -1,17 +1,9 @@
 .. _LayeredMembraneSection:
 
 LayeredMembraneSection 
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 This command is used to construct a LayeredMembraneSection object. It is the abstract representation for the stress-strain behavior for a layered membrane element (based on the work of Rojas et al., 2016). The LayeredMembraneSection is similar to the **RCLMS** class, except that this class  allows the use of nd materials available in OpenSees.
-
-.. figure:: LMS_figure.png
-	:align: center
-	:figclass: align-center
-	:width: 60%
-	:name: LMS_FIG
-	
-	LayeredMembraneSection: (a) Layer discretization; (b) Strain field; (c) Resultant stress field.
 
 .. admonition:: Command
    
@@ -27,6 +19,15 @@ This command is used to construct a LayeredMembraneSection object. It is the abs
    $Material_tags, list int, a list of *nLayers* nDMaterial tags
    $Thicknesses, list float, a list of *nLayers* layers thicknesses
    $OutofPlaneModulus, float, Elasticity modulus of out of plane (optional: default = 0.0)
+
+
+.. figure:: LMS_figure.png
+	:align: center
+	:figclass: align-center
+	:width: 60%
+	:name: LMS_FIG
+	
+	LayeredMembraneSection: (a) Layer discretization; (b) Strain field; (c) Resultant stress field.
 
 
 The following recorders are available with the LayeredMembraneSection.

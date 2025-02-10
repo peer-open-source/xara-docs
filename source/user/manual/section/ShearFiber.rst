@@ -47,3 +47,8 @@ The ``fiber`` method is used to populate the section with fibers. The required a
 In general, the ``warp`` modes are scaled by independent amplitude fields which introduce additional degrees of freedom.
 When no additional degrees of freedom are provided by the model, elements in the :ref:`Frame` library will constrain these fields to match an appropriate strain field.
 
+
+The valid :ref:`eleResponse` queries are 
+
+* ``'force'``, and 
+* ``'deformation'``. 

@@ -39,7 +39,8 @@ This is an implicit method that allows for energy dissipation and second order a
 
         integrator('HHT', 0.9)
 
-.. note:: 
+.. note::
+
     :math:`\alpha` is defined differently that in the paper, we use :math:`\alpha = \alpha_{HHT} - 1` where :math:`\alpha_{HHT}` is that used in the paper.
 
         * Like Newmark and all the implicit schemes, the unconditional stability of this method applies to linear problems. There are no results showing stability of this method over the wide range of nonlinear problems that potentially exist. Experience indicates that the time step for implicit schemes in nonlinear situations can be much greater than those for explicit schemes.
