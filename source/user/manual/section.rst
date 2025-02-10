@@ -63,7 +63,6 @@ The following section types are valid for :ref:`shells`:
    :maxdepth: 1
 
    section/PlateFiberSection
-   section/ElasticShell
    section/Isolator2springSection
    section/ReinforcedConcreteLayeredMembraneSection
    section/LayeredMembraneSection
