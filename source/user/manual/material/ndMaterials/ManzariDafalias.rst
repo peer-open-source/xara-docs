@@ -140,16 +140,17 @@ The hardening modulus in this model is defined as
 
 where :math:`\mathbf{n}` is the deviatoric part of the gradient to yield surface.
 
-:math:`\mathbf{\alpha}^b_{\theta} = \sqrt{\frac{2}{3}} \left[g(\theta,c) M_c exp(-n^b\Psi) - m\right] \mathbf{n}
-`, :math:`\Psi` being the state parameter.
+.. math::
 
-the hardening parameter :math:`h` is defined as
+   \mathbf{\alpha}^b_{\theta} = \sqrt{\frac{2}{3}} \bigl( g(\theta,c) M_c \exp(-n^b \Psi) - m\bigr) \mathbf{n}
+
+where :math:`\Psi` is the state parameter. The hardening parameter :math:`h` is defined as
 
 .. math:: 
 
-   h = \frac{b_0}{(\mathbf{\alpha}-\mathbf{\alpha_{in}}):\mathbf{n}}
+   h \triangleq \frac{b_0}{(\mathbf{\alpha}-\mathbf{\alpha_{in}}):\mathbf{n}}
 
-:math:`\mathbf{\alpha_{in}}` is the value of :math:`\mathbf{\alpha}` at initiation of loading cycle.
+where :math:`\mathbf{\alpha_{in}}` is the value of :math:`\mathbf{\alpha}` at initiation of loading cycle.
 
 .. math::
 
@@ -163,12 +164,12 @@ Also the dilation parameters are defined as
 
 .. math:: 
 
-   \mathbf{\alpha}^d_{\theta} = \sqrt{\frac{2}{3}} \left[g(\theta,c) M_c exp(n^d\Psi) - m\right] \mathbf{n}
+   \mathbf{\alpha}^d_{\theta} = \sqrt{\frac{2}{3}} \left[g(\theta,c) M_c \exp(n^d \Psi) - m\right] \mathbf{n}
 
 
 .. math:: 
    
-   A_d = A_0 (1+\langle \mathbf{z : n}\rangle) 
+   A_d = A_0 (1+\langle \mathbf{z}:\mathbf{n}\rangle) 
 
 where :math:`\mathbf{z}` is the fabric tensor.
 
