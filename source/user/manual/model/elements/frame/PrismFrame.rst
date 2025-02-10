@@ -20,19 +20,6 @@ The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
          :param transform: identifier for previously-defined coordinate-transformation
          :type transform: int
 
-
-      The required arguments are:
-
-      .. csv-table:: 
-         :header: "Argument", "Type", "Description"
-         :widths: 10, 10, 40
-
-         ``tag``, |integer|,	   unique element tag
-         ``nodes`` , |integer|,  tuple of *two* integer node tags
-         ``section``, |integer|,         section tag
-         ``transform``, |integer|,      identifier for previously-defined coordinate-transformation
-
-
    .. tab:: Tcl
 
       .. function:: element PrismFrame $tag $iNode $jNode $sect $tran
@@ -49,41 +36,7 @@ The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
          ``tran``, |integer|,      identifier for previously-defined coordinate-transformation
 
 
-
-The creation of a ``Section`` can be skipped, and elastic properties can be passed directly. In 2D:
-
-.. function:: element PrismFrame $eleTag $iNode $jNode $A $E $Iz $transfTag <-release $relcode> <-mass $massDens> <-cMass>
-
-.. function:: element PrismFrame $eleTag $iNode $jNode $secTag $transfTag <-release $relcode> <-mass $massDens> <-cMass>
-
-For a three-dimensional problem:
-
-.. function:: element PrismFrame $eleTag $iNode $jNode $A $E $G $J $Iy $Iz $transfTag <-releasez $relcode> <-releasey $relcode> <-mass $massDens> <-cMass>
-
-.. function:: element PrismFrame $eleTag $iNode $jNode $secTag $transfTag <-releasez $relcode> <-releasey $relcode> <-mass $massDens> <-cMass>
-
-.. csv-table::
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
-
-   "$eleTag",       "|integer|", "Unique element object tag"
-   "$iNode $jNode", "|integer|", "End node tags"
-   "$A",            "|float|",   "Cross-sectional area of element"
-   "$E",            "|float|",   "Young's Modulus"
-   "$G",            "|float|",   "Shear Modulus"
-   "$J",            "|float|",   "Torsional moment of inertia of cross section"
-   "$Iz",           "|float|",   "Second moment of area about the local z-axis"
-   "$Iy",           "|float|",   "Second moment of area about the local y-axis"
-   "$secTag",       "|integer|", "Identifier for previously-defined section object"
-   "$transfTag",    "|integer|", "Identifier for previously-defined coordinate-transformation object"
-   "$relcode",      "|integer|", "Code for moment releases (0=no release, 1=release at end I, 2=release at end J, 3=release at both ends (optional, default = 0)"
-   "$massDens",     "|float|",   "Element mass per unit length (optional: default = 0.0)"
-   "-cMass",        "|string|",  "To form consistent mass matrix (optional)"
-
-
-.. note::
-
-The valid queries to an elastic beam-column element when creating an ElementRecorder object are 'force'.
+The valid :ref:`eleResponse` queries to this element are ``'force'``.
 
 
 Example 
@@ -106,4 +59,4 @@ of **5.5**, Young's modulus :math:`E` of **100.0** and an Iz of **1e6** which us
       model.element("PrismFrame", 1, (2, 4), 5.5, 100.0, 1.0e6, 9)
 
 
-Code developed by: Claudio M. Perez
+Code developed by: `Claudio M. Perez <https://github.com/claudioperez>`_ (University of California, Berkeley).

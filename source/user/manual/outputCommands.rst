@@ -9,11 +9,11 @@ These methods are used to output results. OpenSees unlike other finite element a
    :maxdepth: 1
 
    output/print
-   output/recorder
    output/printA
    output/getTime
    output/eleResponse
    output/getCrdTransfTags
+   output/recorder
 
 
 .. toctree::

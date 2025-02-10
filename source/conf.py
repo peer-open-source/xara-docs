@@ -22,7 +22,7 @@ numfig_secnum_depth = 3
 project = 'OpenSeesRT'
 copyright = '2025, The Regents of the University of California'
 #author = 'Frank McKenna, Michael Scott, Pedro Arduino, Minjie Zhu'
-# html_logo = 'OpenSeesLogo.png'
+html_logo = 'OpenSeesLogo.png'
 
 master_doc = 'index'
 html_extra_path = ["robots.txt"]
@@ -91,19 +91,19 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_baseurl = "https://opensees.stairlab.io/"
 sitemap_url_scheme = "{link}"
 
-html_theme = 'sphinx_rtd_theme'
-# html_theme = "pydata_sphinx_theme"
+#html_theme = 'sphinx_rtd_theme'
+html_theme = "pydata_sphinx_theme"
 
 if html_theme == 'sphinx_rtd_theme':
     html_theme_options = {
         'navigation_depth': 5,
-#       'logo_only': True,
+        'logo_only': True,
         'style_nav_header_background': 'white',
         'prev_next_buttons_location': None,
     }
 else:
     html_theme_options = {
-    #      'analytics_id': 'UA-2431545-1',
+    #   'analytics_id': 'UA-2431545-1',
     #   "body_max_width": None,
         "show_prev_next": False,
         "footer_items": [], #["copyright", "sphinx-version"],

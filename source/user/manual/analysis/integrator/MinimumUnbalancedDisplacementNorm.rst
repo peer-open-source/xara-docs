@@ -1,12 +1,18 @@
 .. _MinimumUnbalancedDisplacementNorm:
 
-MinimumUnbalancedDisplacementNorm
---------------------------------------
+MinUnbalDispNorm
+^^^^^^^^^^^^^^^^
 
+.. tabs::
+   
+   .. tab:: Python 
 
-This command is used to construct a StaticIntegrator object of type MinUnbalDispNorm.
+      .. function:: model.integrator("MinUnbalDispNorm", dlam0, jd=1, min=None, max=None)
 
-.. function:: integrator MinUnbalDispNorm $dlambda11 <$Jd $minLambda $maxLambda>
+   .. tab:: Tcl
+
+      .. function:: integrator MinUnbalDispNorm $dlambda11 <$Jd $minLambda $maxLambda>
+
 
 .. list-table:: 
    :widths: 10 10 40
@@ -29,7 +35,14 @@ This command is used to construct a StaticIntegrator object of type MinUnbalDisp
      - arguments used to bound the load increment (optional, default: $dLambda11)
 
 Theory
-^^^^^^
+------
+
 The load increment at iteration i, :math:`d\lambda_{1,i}` is related to load increment at i-1, :math:`d\lambda_{1,i-1}`, and the number of iteration at (i-1), :math:`J_{i-1}` by the following:
 
 :math:`d\lambda_{1,i} = d\lambda_{1,i-1} \frac{J_d}{J_{i-1}}`
+
+
+References
+----------
+
+* S. L. Chan, “Geometric and Material Non-Linear Analysis of Beam-Columns and Frames Using the Minimum Residual Displacement Method,”  International Journal for Numerical Methods in Engineering, Vol. 26, No. 12, 1988, pp. 2657-2669.  doi:10.1002/nme.1620261206

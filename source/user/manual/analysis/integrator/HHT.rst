@@ -1,11 +1,12 @@
 .. _HilberHughesTaylorMethod:
 
-Hilber-Hughes-Taylor Method
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Hilber-Hughes-Taylor
+^^^^^^^^^^^^^^^^^^^^
 
 .. function:: integrator HHT $alpha <$gamma $beta> 
 
-This command is used to construct a Hilber-Hughes-Taylor (HHT) integration object. This is an implicit method that allows for energy dissipation and second order accuracy (which is not possible with the regular Newmark method). Depending on choices of input parameters, the method can be unconditionally stable. 
+This command is used to construct a Hilber-Hughes-Taylor (HHT) integrator. 
+This is an implicit method that allows for energy dissipation and second order accuracy (which is not possible with the regular Newmark method). Depending on choices of input parameters, the method can be unconditionally stable. 
 
 .. list-table:: 
    :widths: 10 10 40

@@ -44,31 +44,33 @@ Example
 
 
 Theory
-=======
+======
 
 If we write the governing finite element equation at :math:`t + \Delta t` as:
 
 .. math::
 
-    R(U_{t+\Delta t}, \lambda_{t+\Delta t}) = \lambda_{t+\Delta t} F^{ext} - F(U_{t+\Delta t})`
+   g(u_{t+\Delta t}, \lambda_{t+\Delta t}) = \lambda_{t+\Delta t} F^{ext} - F(u_{t+\Delta t})
 
 
-where :math:`F(U_{t+\Delta t})` are the internal forces which are a function of the displacements :math:`U_{t+\Delta t}`, :math:`F^{ext}` is the set of reference loads and :math:`\lambda` is the load multiplier. Linearizing the equation results in:
+where :math:`F(u_{t+\Delta t})` are the internal forces which are a function of the displacements :math:`U_{t+\Delta t}`, :math:`F^{ext}` is the set of reference loads and :math:`\lambda` is the load multiplier. Linearizing the equation results in:
 
 .. math::
 
    K_{t+\Delta t}^{*i} \Delta U_{t+\Delta t}^{i+1} = \left ( \lambda^i_{t+\Delta t} + \Delta \lambda^i \right ) F^{ext} - F(U_{t+\Delta t})
 
-This equation represents n equations in :math:`n+1`` unknowns, and so an additional equation is needed to solve the equation. For displacement control, we introduce a new constraint equation in which in each analysis step we set to ensure that the displacement increment for the degree-of-freedom <math>\text{dof}</math> at the specified node is:
+This equation represents n equations in :math:`n+1` unknowns, and so an additional equation is needed to solve the equation. 
+For displacement control, we introduce a new constraint equation in which in each analysis step we set to ensure that the displacement increment for the degree-of-freedom at the specified node is:
 
 .. math::
 
-   \Delta U_\text{dof} = \text{incr}\!</math>
+   \Delta u_\text{dof} = \text{incr}
 
 
 
-In Displacement Control the :math:`\Delta_U\text{dof}` set to :math:`t + \lambda_{t+1}` where,
+In Displacement Control the :math:`\Delta u_{\text{dof}}` set to :math:`t + \lambda_{t+1}` where,
 
-
-:math:`\Delta U_\text{dof}^{t+1} = \max \left ( \Delta U_{min}, \min \left ( \Delta U_\text{max}, \frac{\text{numIter}}{\text{lastNumIter}} \Delta U_\text{dof}^{t} \right ) \right )`
+.. math::
+   
+   \Delta u_\text{dof}^{t+1} = \max \left( \Delta u_{\mathrm{min}}, \min \left( \Delta u_{\text{max}}, \frac{\text{numIter}}{\text{lastNumIter}} \Delta u_\text{dof}^{t} \right) \right)
 

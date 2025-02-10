@@ -2,5 +2,3 @@
 
 Element Recorder
 ^^^^^^^^^^^^^^^^
-
-text.

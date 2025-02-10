@@ -38,11 +38,13 @@ The nodes are connected by a single section object to represent the force-deform
          | rFlag = 0 NO RAYLEIGH DAMPING (default)
          | rFlag = 1 include rayleigh damping"
 
+
 .. note::
 
    If the optional orientation vectors are not specified, the local element axes coincide with the global axes. Otherwise the local z-axis is defined by the cross product between the vectors x and yp vectors specified on the command line.
 
    The section force-deformation response represented by section string P acts along the element local x-axis, and the response for code Vy along the local y-axis. The other modes of section response follow from this orientation.
+
 
 .. warning::
 

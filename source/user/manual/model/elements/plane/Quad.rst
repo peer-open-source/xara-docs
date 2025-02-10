@@ -48,7 +48,8 @@ This command is used to construct a FourNodeQuad element object which uses a bil
 
 
 
-The valid queries to a Quad element when creating an ElementRecorder object are 'forces', 'stresses,' and 'material $matNum matArg1 matArg2 ...' where ``$matNum`` refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
+
+The valid :ref:`eleResponse` queries to this element are ``'forces'``, ``'stresses'``, and ``'material $matNum matArg1 matArg2 ...'`` where ``$matNum`` refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
 
 Consistent nodal loads are computed from the pressure and body forces.
 

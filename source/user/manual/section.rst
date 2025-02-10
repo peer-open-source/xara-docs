@@ -38,8 +38,13 @@ The following contain information about ``type`` and the ``args`` required for e
 
    section/ElasticFrame
    section/ShearFiber
-   section/PlaneSection
-   section/NDFiberSection
+   section/PlaneStrain
+   section/PlaneStress
+
+
+.. toctree::
+   :maxdepth: 1
+
    section/PlateFiberSection
    section/ElasticShell
    section/Isolator2springSection

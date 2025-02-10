@@ -36,7 +36,11 @@ This command is used to construct a four-node quadrilateral element object, whic
 
    This element is ``PlainStrain`` only.
    
-The valid queries to a Quad element when creating an ElementRecorder object are 'forces', 'stresses,' and 'material $matNum matArg1 matArg2 ...' Where $matNum refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
+The valid :ref:`eleResponse` queries to this element are 
+
+* ``'forces'``, 
+* ``'stresses'`` and 
+* ``'material $matNum matArg1 matArg2 ...'`` Where $matNum refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
 
 
 Code Developed by: **Edward Love, Sandia National Laboratories**

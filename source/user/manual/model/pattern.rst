@@ -31,10 +31,11 @@ The following contain information about ``type`` and the additional args require
 	OpenSees Loads
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 3
 
    pattern/plainPattern
    pattern/uniformExcitationPattern
    pattern/multiSupportPattern
    pattern/DRM
    pattern/H5DRM
+
