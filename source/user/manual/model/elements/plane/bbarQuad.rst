@@ -35,7 +35,8 @@ This command is used to construct a four-node quadrilateral element object, whic
 .. note::
 
    This element is ``PlainStrain`` only.
-   
+
+
 The valid :ref:`eleResponse` queries to this element are 
 
 * ``'forces'``, 
