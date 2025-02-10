@@ -1,7 +1,7 @@
 .. _ASDShellT3:
 
-ASDShellT3 Element
-^^^^^^^^^^^^^^^^^^
+ASDShellT3
+^^^^^^^^^^
 
 This command is used to construct an ASDShellT3 element object. 
 
