@@ -1,7 +1,7 @@
-.. Inno3DPnPJoint:
+.. _Inno3DPnPJoint:
 
-Inno3DPnPJoint Element
-^^^^^^^^^^^^^^^^^^^^^^^
+Inno3DPnPJoint
+^^^^^^^^^^^^^^
 
 This command is used to construct a three-dimensional beam-column-joint element object for the 3D innovative plug-and-play steel tubular joint configuration proposed within the `INNO3DJOINTS <https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/how-to-participate/org-details/960532413/project/749959/program/31061225/details>`_ project.
 
@@ -15,7 +15,7 @@ TCL:
 
 Python:
 
-.. function:: element('Inno3DPnPJoint', eleTag, Node1, Node2, Node3, Node4, Node5, SprMatTag01, SprMatTag02, SprMatTag03, SprMatTag04, SprMatTag05, SprMatTag06, SprMatTag07, SprMatTag08, SprMatTag09, SprMatTag10, SprMatTag11, SprMatTag12, SprMatTag13, SprMatTag14, SprMatTag15, SprMatTag16, SprMatTag17, SprMatTag18, SprMatTag19, SprMatTag20, SprMatTag21, SprMatTag22, SprMatTag23, SprMatTag24, SprMatTag25, SprMatTag26, SprMatTag27, SprMatTag28, SprMatTag29, SprMatTag30, SprMatTag31, SprMatTag32)
+.. function:: model.element('Inno3DPnPJoint', eleTag, Node1, Node2, Node3, Node4, Node5, SprMatTag01, SprMatTag02, SprMatTag03, SprMatTag04, SprMatTag05, SprMatTag06, SprMatTag07, SprMatTag08, SprMatTag09, SprMatTag10, SprMatTag11, SprMatTag12, SprMatTag13, SprMatTag14, SprMatTag15, SprMatTag16, SprMatTag17, SprMatTag18, SprMatTag19, SprMatTag20, SprMatTag21, SprMatTag22, SprMatTag23, SprMatTag24, SprMatTag25, SprMatTag26, SprMatTag27, SprMatTag28, SprMatTag29, SprMatTag30, SprMatTag31, SprMatTag32)
 
 where:
 
@@ -37,7 +37,7 @@ where:
 
 	
 Output Recorders
-"""""""""""""""""""""""
+""""""""""""""""
 
 The simulation results of the Inno3DPnPJoint beam-to-column joint finite element can be analyzed by defining output records at both the element and component levels.
 

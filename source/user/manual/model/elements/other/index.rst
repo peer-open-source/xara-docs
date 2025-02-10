@@ -41,18 +41,6 @@ Other
    zeroLengthImpact3D 
    zeroLengthContactASDimplex
 
-
-8. Joint Elements
-
-.. toctree::
-   :maxdepth: 1
-
-   BeamColumnJoint
-   ElasticTubularJoint
-   Joint2D
-   Inno3DPnPJoint
-   LehighJoint2D
-
 ..
    9. Link Elements
    
@@ -60,6 +48,7 @@ Other
          :maxdepth: 1
       
          elements/TwoNodeLink
+
 
 10. Bearing Elements
 

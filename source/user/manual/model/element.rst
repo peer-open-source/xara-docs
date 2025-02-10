@@ -42,6 +42,7 @@ The following subsections contain information about ``type`` and the number of n
    elements/plane/index
    elements/shell/index
    elements/solid/index
+   elements/joint/index
    elements/other/index
 
 2. Truss Elements

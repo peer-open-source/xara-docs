@@ -1,13 +1,10 @@
-.. LehighJoint2D:
+.. _LehighJoint2D:
 
-LehighJoint2D Element
-^^^^^^^^^^^^^^^^^^^^^^^
+LehighJoint2D
+^^^^^^^^^^^^^
 
 This command is used to construct a LehighJoint2D element object, which is a 2D planar element with 4 nodes, each having 3 degrees of freedom (DOFs) per node.
 
-
-Command Lines
-"""""""""""""""""""""""
 
 TCL:
 
@@ -55,7 +52,7 @@ where:
    
 
 Examples
-"""""""""""""""""""""""
+""""""""
 
 .. admonition:: Command Lines
 

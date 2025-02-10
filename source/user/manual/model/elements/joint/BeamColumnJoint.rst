@@ -3,11 +3,12 @@
 BeamColumnJoint Element
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-This command is used to construct a two-dimensional beam-column-joint element object. The element may be used with both two-dimensional and three-dimensional structures; however, load is transferred only in the plane of the element.
+This command is used to construct a two-dimensional beam-column-joint. 
+The element may be used with both two-dimensional and three-dimensional structures; however, load is transferred only in the plane of the element.
 
 
 Command Lines
-"""""""""""""""""""""""
+""""""""""""""
 
 TCL:
 
@@ -51,10 +52,10 @@ where:
 	BeamColumnJoint Element: Graphic representation of the internal components of the element a) components of the beam-column joint model and b) beam-column joint finite element.
 
 
-Output Recorders
-"""""""""""""""""""""""
+Response
+""""""""""""""""
 
-The valid queries to a BeamColumnJoint element when creating an ElementRecorder are as follows:
+The valid :ref:`eleResponse` queries to a BeamColumnJoint element are as follows:
 
 - `internalDisplacement`: returns the displacements of the internal joint nodes.
 - `externalDisplacement`: returns the displacement of the external joint nodes.
@@ -75,19 +76,18 @@ The valid queries to a BeamColumnJoint element when creating an ElementRecorder 
 
 
 Examples
-"""""""""""""""""""""""
+""""""""
 
-.. admonition:: Command Lines
 
-   The following example constructs constructs a beamColumnJoint joint element with element tag *7*, that is connected to nodes *2*, *6*, *9*, *5*. The element uses the uniaxial material object with tags: *41* for left bar-slip spring at node 1, *42* for right bar-slip spring at node 1, *21* for lower bar-slip spring at node 2, *31* for upper bar-slip spring at node 2, *43* for left bar-slip spring at node 3, *44* for right bar-slip spring at node 3, *22* for lower bar-slip spring at node 4, *32* for upper bar-slip spring at node 4, *1* for interface-shear spring at nodes 1, 2, 3 and 4, and *5* for shear-panel. This joint element uses the default value (``1.0``) for both the element height (eleHeightFac) and width (eleWidthFac) factors.
+The following example constructs constructs a beamColumnJoint joint element with element tag *7*, that is connected to nodes *2*, *6*, *9*, *5*. The element uses the uniaxial material object with tags: *41* for left bar-slip spring at node 1, *42* for right bar-slip spring at node 1, *21* for lower bar-slip spring at node 2, *31* for upper bar-slip spring at node 2, *43* for left bar-slip spring at node 3, *44* for right bar-slip spring at node 3, *22* for lower bar-slip spring at node 4, *32* for upper bar-slip spring at node 4, *1* for interface-shear spring at nodes 1, 2, 3 and 4, and *5* for shear-panel. This joint element uses the default value (``1.0``) for both the element height (eleHeightFac) and width (eleWidthFac) factors.
 
-   1. **Tcl**
+1. **Tcl**
 
    .. code-block:: tcl
 
       element beamColumnJoint 7 2 6 9 5 41 42 1 21 31 1 43 44 1 22 32 1 5; 
 
-   2. **Python**
+2. **Python**
 
    .. code-block:: python
 

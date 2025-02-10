@@ -1,15 +1,10 @@
-.. ElasticTubularJoint:
+.. _ElasticTubularJoint:
 
-ElasticTubularJoint Element
-^^^^^^^^^^^^^^^^^^^^^^^
+ElasticTubularJoint
+^^^^^^^^^^^^^^^^^^^
 
 This command is used to construct an ElasticTubularJoint element object, which models joint flexibility of tubular joints in two dimensional analysis of any structure having tubular joints.
 
-
-Command Lines
-""""""""""""""
-
-TCL:
 
 .. function:: element ElasticTubularJoint $eleTag $iNode $jNode $Brace_Diameter $Brace_Angle $E $Chord_Diameter $Chord_Thickness $Chord_Angle
 
@@ -35,11 +30,10 @@ where:
    
 
 Examples
-"""""""""""""""""""""""
+""""""""
 
-.. admonition:: Command Lines
 
-   The following example constructs constructs a ElasticTubularJoint joint element with element tag *1*, that is connected to nodes *1* and *2*. The brace diameter is *0.25* m, intersection angle is *45* degrees, Young's modulus is *210e9*, outer diameter and thickness of the chord are *0.50* m and *0.016* m respectively, and angle between chord axis and global horizontal axis is *45* degrees.
+The following example constructs constructs a ElasticTubularJoint joint element with element tag *1*, that is connected to nodes *1* and *2*. The brace diameter is *0.25* m, intersection angle is *45* degrees, Young's modulus is *210e9*, outer diameter and thickness of the chord are *0.50* m and *0.016* m respectively, and angle between chord axis and global horizontal axis is *45* degrees.
 
    1. **Tcl**
 

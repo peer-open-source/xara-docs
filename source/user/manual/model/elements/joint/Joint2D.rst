@@ -1,7 +1,7 @@
-.. Joint2D:
+.. _Joint2D:
 
-Joint2D Element
-^^^^^^^^^^^^^^^^^^^^^^^
+Joint2D
+^^^^^^^
 
 This command is used to construct a two-dimensional beam-column-joint element object. The two dimensional beam-column joint is idealized as a parallelogram shaped shear panel with adjacent elements connected to its mid-points. The midpoints of the parallelogram are referred to as external nodes. These nodes are the only analysis components that connect the joint element to the surrounding structure.
 
@@ -15,7 +15,7 @@ TCL:
 
 Python:
 
-.. function:: element('Joint2D', eleTag, Node1, Node2, Node3, Node4, NodeC, <Mat1, Mat2, Mat3, Mat4>, MatC, LrgDspTag, <'-damage', DmgTag>, <'-damage', Dmg1 Dmg2 Dmg3 Dmg4 DmgC>)
+.. function:: model.element("Joint2D", eleTag, Node1, Node2, Node3, Node4, NodeC, [Mat1, Mat2, Mat3, Mat4], MatC, LrgDspTag, <'-damage', DmgTag>, <'-damage', Dmg1 Dmg2 Dmg3 Dmg4 DmgC>)
 
 where:
 
