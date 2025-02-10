@@ -7,11 +7,12 @@ This command returns a list of all defined coordinate transformation object tags
 
 .. function:: getCrdTransfTags
 
-.. admonition:: Example:
+Examples
+--------
 
-   The following example is used to set the variable **currentTime** to current state of **time** in the **Domain**
+The following example is used to set the variable **currentTime** to current state of **time** in the **Domain**
 
-   1. **Tcl Code** (note use of **set** and **[ ]**)
+1. **Tcl Code** (note use of **set** and **[ ]**)
 
    This example creates a set of **geomTransf** objects and the asks for a list of all the created objects using the 
    command **getCrdTransfTags** and assigning the list to the variable called **allCrdTransfTags**, then prints them.
@@ -30,7 +31,7 @@ This command returns a list of all defined coordinate transformation object tags
       
       puts $allCrdTransfTags
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 

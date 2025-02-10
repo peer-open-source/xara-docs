@@ -17,3 +17,4 @@ PlaneStress
          :type thickness: float
 
 
+A PlaneStress section imposes a plane stress condition on the response of it's material.

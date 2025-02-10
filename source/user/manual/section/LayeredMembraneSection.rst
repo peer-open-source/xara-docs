@@ -6,9 +6,7 @@ ShellFiber
 This command is used to construct a LayeredMembraneSection. 
 It is the abstract representation for the stress-strain behavior for a layered membrane element (based on the work of Rojas et al., 2016). The LayeredMembraneSection is similar to the **RCLMS** class, except that this class  allows the use of nd materials available in OpenSees.
 
-.. admonition:: Command
-
-   section LayeredMembraneSection $secTag $total_thickness $nLayers -mat{$Material_tags} -thick{$Thicknesses} <-Eout $OutofPlaneModulus>
+.. function:: section LayeredMembraneSection $secTag $total_thickness $nLayers -mat{$Material_tags} -thick{$Thicknesses} <-Eout $OutofPlaneModulus>
 
 .. csv-table:: 
    :header: "Parameter", "Type", "Description"
