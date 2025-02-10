@@ -37,7 +37,7 @@ where:
 	:figclass: align-center
 	:name: Joint2D
 	:scale: 50%
-	
+
 	Joint2D Element: The joint zones represented by rotational springs.
 
  

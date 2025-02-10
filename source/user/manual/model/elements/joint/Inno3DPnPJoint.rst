@@ -6,9 +6,6 @@ Inno3DPnPJoint
 This command is used to construct a three-dimensional beam-column-joint element object for the 3D innovative plug-and-play steel tubular joint configuration proposed within the `INNO3DJOINTS <https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/how-to-participate/org-details/960532413/project/749959/program/31061225/details>`_ project.
 
 
-Command Lines
-"""""""""""""""""""""""
-
 TCL:
 
 .. function:: element Inno3DPnPJoint $eleTag $Node1 $Node2 $Node3 $Node4 $Node5 $SprMatTag01 $SprMatTag02 $SprMatTag03 $SprMatTag04 $SprMatTag05 $SprMatTag06 $SprMatTag07 $SprMatTag08 $SprMatTag09 $SprMatTag10 $SprMatTag11 $SprMatTag12 $SprMatTag13 $SprMatTag14 $SprMatTag15 $SprMatTag16 $SprMatTag17 $SprMatTag18 $SprMatTag19 $SprMatTag20 $SprMatTag21 $SprMatTag22 $SprMatTag23 $SprMatTag24 $SprMatTag25 $SprMatTag26 $SprMatTag27 $SprMatTag28 $SprMatTag29 $SprMatTag30 $SprMatTag31 $SprMatTag32
@@ -55,12 +52,11 @@ At the component level, valid inquiries include:
 
 - `spring (or -spring or material or -material)`: Returns a pair of stress-strain for each time step, comprising 2 values.
 
+
 Examples
-"""""""""""""""""""""""
+"""""""" 
 
-.. admonition:: Command Lines
-
-   The following example constructs constructs an Inno3DPnPJoint joint element with element tag *99*, that is connected to nodes *101*, *102*, *103*, *104* and *105* and uses for the components’ behavior the uniaxial material object tags from *1* to *32*.
+The following example constructs constructs an Inno3DPnPJoint joint element with element tag *99*, that is connected to nodes *101*, *102*, *103*, *104* and *105* and uses for the components’ behavior the uniaxial material object tags from *1* to *32*.
 
    1. **Tcl**
 
@@ -74,8 +70,10 @@ Examples
 
       element('Inno3DPnPJoint', 99, 101, 102, 103, 104, 105, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32)
 	  
+
 Advanced Tool for Calculating Initial Stiffness of Tube Components
-"""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 The calculation of initial stiffness for tube components, encompassing face (components no. 25, 26, 27, and 28) and interaction components (components no. 29, 30, 31, and 32), within the Inno3DPnPJoint beam-to-column finite element, is facilitated through a specialized Jupyter notebook. This notebook allows dynamic execution via Binder, offering users an interactive platform for computational analysis.
 
 The notebook is publicly accessible on GitHub: https://github.com/cvmiculas/Inno3DPnPJoint_component_calc.
@@ -86,7 +84,8 @@ When citing this notebook, please use the following format: "Cristian V. Micula�
 
 
 References
-"""""""""""""""""""""""	
+""""""""""
+
 .. seealso::
 
 	More information available in the following reference:
@@ -99,9 +98,7 @@ References
 
 	#. C.V. Miculaş, R.J. Costa, L. Simões da Silva, R. Simões, H. Craveiro, T. Tankova, Macro-modelling of the three-dimensional interaction between the faces of a steel tubular column joint, in: F. Di Trapani, C. Demartino, G.C. Marano, G. Monti (Eds.), Proceedings of the 2022 Eurasian OpenSees Days, Springer Nature Switzerland, Cham, 2023, pp. 408–422, http://dx.doi.org/10.1007/978-3-031-30125-4_37
 
-	
-Other info
-"""""""""""""""""""""""	
+
 .. note::
 	
 	Code development: Cristian V. Miculaș  (github user name: cvmiculas)
