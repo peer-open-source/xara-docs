@@ -80,65 +80,67 @@ The files for this example can be downloaded from https://gallery.stairlab.io/ex
 Example 2
 """""""""
 
-1. **Tcl Code**
+.. tabs::
 
-   .. code-block:: tcl
+   .. tab:: Tcl
 
-      # set up a 3D-6DOFs model
-      model Basic -ndm 3 -ndf 6
-      node 1  0.0  0.0 0.0
-      node 2  1.0  0.0 0.0
-      node 3  1.0  1.0 0.0
-      node 4  0.0  1.0 0.0
-      
-      # create a fiber shell section with 4 layers of material 1
-      # each layer has a thickness = 0.025
-      nDMaterial ElasticIsotropic  1  1000.0  0.2
-      section LayeredShell  11  4   1 0.025   1 0.025   1 0.025   1 0.025
-      
-      # create the shell element using the small displacements/rotations assumption
-      element ASDShellQ4  1  1 2 3 4  11
-      # or you can use the corotational flag for large displacements/rotations (geometric nonlinearity)
-      element ASDShellQ4  1  1 2 3 4  11 -corotational
-      
-      # record global forces at element nodes (24 columns, 6 for each node)
-      recorder Element  -xml  force_out.xml  -ele  1  force
-      # record local section forces at gauss point 1 (8 columns: | 3 membrane | 3 bending | 2 transverse shear |)
-      # note: gauss point index is 1-based
-      recorder Element  -xml  force_gp1_out.xml  -ele  1  material  1  force
-      # record local stresses at fiber 1 of gauss point 1 (5 columns: Szz is neglected (0) )
-      # note: fiber index is 1-based (while in beams it is 0-based!)
-      recorder Element  -xml  stress_gp1_fib0_out.xml  -ele  1  material  1  fiber 1 stress
+      .. code-block:: tcl
 
-2. **Python Code**
+         # set up a 3D-6DOFs model
+         model Basic -ndm 3 -ndf 6
+         node 1  0.0  0.0 0.0
+         node 2  1.0  0.0 0.0
+         node 3  1.0  1.0 0.0
+         node 4  0.0  1.0 0.0
+         
+         # create a fiber shell section with 4 layers of material 1
+         # each layer has a thickness = 0.025
+         nDMaterial ElasticIsotropic  1  1000.0  0.2
+         section LayeredShell  11  4   1 0.025   1 0.025   1 0.025   1 0.025
+         
+         # create the shell element using the small displacements/rotations assumption
+         element ASDShellQ4  1  1 2 3 4  11
+         # or you can use the corotational flag for large displacements/rotations (geometric nonlinearity)
+         element ASDShellQ4  1  1 2 3 4  11 -corotational
+         
+         # record global forces at element nodes (24 columns, 6 for each node)
+         recorder Element  -xml  force_out.xml  -ele  1  force
+         # record local section forces at gauss point 1 (8 columns: | 3 membrane | 3 bending | 2 transverse shear |)
+         # note: gauss point index is 1-based
+         recorder Element  -xml  force_gp1_out.xml  -ele  1  material  1  force
+         # record local stresses at fiber 1 of gauss point 1 (5 columns: Szz is neglected (0) )
+         # note: fiber index is 1-based (while in beams it is 0-based!)
+         recorder Element  -xml  stress_gp1_fib0_out.xml  -ele  1  material  1  fiber 1 stress
 
-   .. code-block:: python
+   .. tab:: Python (RT)
 
-      # set up a 3D-6DOFs model
-      model.model('Basic', '-ndm', 3, '-ndf', 6)
-      model.node(1, (0.0, 0.0, 0.0))
-      model.node(2, (1.0, 0.0, 0.0))
-      model.node(3, (1.0, 1.0, 0.0))
-      model.node(4, (0.0, 1.0, 0.0))
-      
-      # create a fiber shell section with 4 layers of material 1
-      # each layer has a thickness = 0.025
-      model.material('ElasticIsotropic', 1, 1000.0, 0.2)
-      model.section('LayeredShell', 11, 4, (1,0.025),  (1,0.025),  (1,0.025),  (1,0.025))
-      
-      # create the shell element using the small displacements/rotations assumption
-      model.element('ASDShellQ4', 1, (1,2,3,4), 11)
-      # or you can use the corotational flag for large displacements/rotations (geometric nonlinearity)
-      # model.element('ASDShellQ4', 1, (1,2,3,4), 11, corotational=True)
-      
-      # record global forces at element nodes (24 columns, 6 for each node)
-      model.recorder('Element', "force", xml='force_out.xml', ele=1)
-      # record local section forces at gauss point 1 (8 columns: | 3 membrane | 3 bending | 2 transverse shear |)
-      # note: gauss point index is 1-based
-      model.recorder('Element', '-xml', 'force_gp1_out.xml', '-ele', 1, 'material', '1', 'force')
-      # record local stresses at fiber 1 of gauss point 1 (5 columns: Szz is neglected (0) )
-      # note: fiber index is 1-based (while in beams it is 0-based!)
-      model.recorder('Element', '-xml', 'stress_gp1_fib0_out.xml', '-ele', 1, 'material', '1', 'fiber', '1', 'stress')
+      .. code-block:: python
+
+         # set up a 3D-6DOFs model
+         model = ops.Model(ndm=3, ndf=6)
+         model.node(1, (0.0, 0.0, 0.0))
+         model.node(2, (1.0, 0.0, 0.0))
+         model.node(3, (1.0, 1.0, 0.0))
+         model.node(4, (0.0, 1.0, 0.0))
+         
+         # create a fiber shell section with 4 layers of material 1
+         # each layer has a thickness = 0.025
+         model.material('ElasticIsotropic', 1, 1000.0, 0.2)
+         model.section('LayeredShell', 11, 4, (1,0.025),  (1,0.025),  (1,0.025),  (1,0.025))
+         
+         # create the shell element using the small displacements/rotations assumption
+         model.element('ASDShellQ4', 1, (1,2,3,4), 11)
+         # or you can use the corotational flag for large displacements/rotations (geometric nonlinearity)
+         # model.element('ASDShellQ4', 1, (1,2,3,4), 11, corotational=True)
+         
+         # record global forces at element nodes (24 columns, 6 for each node)
+         model.recorder('Element', "force", xml='force_out.xml', ele=1)
+         # record local section forces at gauss point 1 (8 columns: | 3 membrane | 3 bending | 2 transverse shear |)
+         # note: gauss point index is 1-based
+         model.recorder('Element', '-xml', 'force_gp1_out.xml', '-ele', 1, 'material', '1', 'force')
+         # record local stresses at fiber 1 of gauss point 1 (5 columns: Szz is neglected (0) )
+         # note: fiber index is 1-based (while in beams it is 0-based!)
+         model.recorder('Element', '-xml', 'stress_gp1_fib0_out.xml', '-ele', 1, 'material', '1', 'fiber', '1', 'stress')
 
 Code Developed by: **Massimo Petracca** at ASDEA Software, Italy.
 

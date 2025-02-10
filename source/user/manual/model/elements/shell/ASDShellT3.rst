@@ -53,25 +53,25 @@ The ASDShellT3 element is a 3-node general purpose thick shell element with the 
 
 Valid queries to the ASDShellT3 element when creating an ElementRecorder object are:
 
-*  '**force**', '**forces**', '**globalForce**', or '**globalForces**':
+*  ``"force"``, ``"forces"``, ``"globalForce"``, or ``"globalForces"``:
       *  Internal forces at the element's nodes.
       *  Orientation: global coordinate system.
       *  Size: 18 columns of data, 6 components for each one of the 3 nodes.
-*  '**material $section $secArg1 ... $secArgN**':
-      *  Section response at section **$section**
+
+*  ``"material $section $secArg1 ... secArgN"``:
+      *  Section response at section **section**
       *  **$section** is the 1-based index of the integration point (1 to 3).
       *  '**$secArg1 ... $secArgN**' are the arguments required by the SectionDeformationObject at the requested integration point.
 
 
-Examples 
+Examples
 --------
 
-.. admonition:: Example 1 - Cantilever Bending Roll-up (corotational)
+A Cantilever beam is subjected to a total end-moment about the Y axis :math:`M_y = n 2 \pi EI/L`, where :math:`n` is the number of rotations (2 in this example).
+:download:`figures/ASDShellT3/ASDShellT3_Example_GNL_BendingRollUp.py`
 
-   | A Cantilever beam is subjected to a total end-moment about the Y axis :math:`M_y = n 2 \pi EI/L`, where :math:`n` is the number of rotations (2 in this example).
-   | :download:`figures/ASDShellT3/ASDShellT3_Example_GNL_BendingRollUp.py`
-   .. image:: figures/ASDShellT3/ASDShellT3_Example_GNL_BendingRollUp.png
-      :width: 30%
+.. image:: figures/ASDShellT3/ASDShellT3_Example_GNL_BendingRollUp.png
+   :width: 30%
 
 
 Code Developed by: **Massimo Petracca** at ASDEA Software, Italy.
