@@ -1,9 +1,9 @@
 .. _ElasticIsotropic:
 
-Elastic Isotropic Material
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Elastic Isotropic
+^^^^^^^^^^^^^^^^^
 
-This command is used to construct an ElasticIsotropic material.
+This command is used to construct an *ElasticIsotropic* material.
 
 .. tabs::
 
@@ -30,11 +30,12 @@ This command is used to construct an ElasticIsotropic material.
          $rho, |float|, mass density. optional default = 0.0.
 
 
-The material formulations for the ElasticIsotropic object are "ThreeDimensional," "PlaneStrain," "Plane Stress," "AxiSymmetric," and "PlateFiber."
+..
+  The material formulations for the ElasticIsotropic object are "ThreeDimensional", "PlaneStrain," "Plane Stress," "AxiSymmetric," and "PlateFiber."
 
 
-Formulations
-============
+Theory
+------
 
 A linear isotropic function can be expressed in terms of two parameters :math:`\lambda` and :math:`\mu` as follows :cite:p:`gurtin1981introduction`:
 

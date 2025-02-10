@@ -3,7 +3,7 @@
 ASDPlasticMaterial
 ^^^^^^^^^^^^^^^^^^
 
-| This command is used to construct an ``ASDPlasticMaterial`` material object. ``ASDPlasticMaterial`` implements a large family of constitutive models based on the classical theory of elastoplasticity. Users build new constitutive models by selecting the yield function, plastic-flow direction, elasticity law, and hardening models for the internal variables from several possible options for each component. 
+| This command is used to construct an ``ASDPlasticMaterial`` material. ``ASDPlasticMaterial`` implements a large family of constitutive models based on the classical theory of elastoplasticity. Users build new constitutive models by selecting the yield function, plastic-flow direction, elasticity law, and hardening models for the internal variables from several possible options for each component. 
 
 To create a new model, specify the Yield Function type (``$YieldFunctionType``), Plastic Flow type (``$PlasticFlowType``), and Elasticity type (``$ElasticityType``). All internal variables and model parameters are set to zero unless specified by the user, which might or not make sense depending on context, and this initialization is printed out to the screen. 
 
@@ -86,8 +86,8 @@ Explanation
 
 .. _ASDPlasticTheory:
 
-ASDPlasticMaterial Theory
-""""""""""""""""""""""""""
+Theory
+""""""
 
 The ``ASDPlasticMaterial`` internally uses Voigt notation to represent tensors. 
 
@@ -102,7 +102,7 @@ The ``ASDPlasticMaterial`` internally uses Voigt notation to represent tensors.
    \vec{\epsilon} = \matorvec{c}{\epsilon_{11} \\ \epsilon_{22} \\ \epsilon_{33} \\ \gamma_{12} \\ \gamma_{23} \\ \gamma_{13} }
    \vec{\sigma} = \matorvec{c}{\sigma_{11} \\ \sigma_{22} \\ \sigma_{22} \\ \tau_{12} \\ \tau_{23} \\ \tau_{13} }
 
-Where :math:`\gamma_{ij} = 2 \epsilon_{ij}`. 
+where :math:`\gamma_{ij} = 2 \epsilon_{ij}`. 
 
 The material recieves the total (trial) strain :math:`\vec{\epsilon}^{\text{trial}}` from the finite element that contains it. From this, the trial strain increment is computed by subtracting the previously committed total strain:
 
@@ -179,7 +179,7 @@ The **$f_relative_tol** parameter comes into play when the yield surface is bein
 .. _`Other Features`:
 
 Other Features
-""""""""""""""""""
+""""""""""""""
 
 .. admonition:: General parameters
 
@@ -201,6 +201,7 @@ Other Features
 .. admonition:: `setParameter` behavior 
 
    * Not yet provided. 
+
 
 Implementation details
 """"""""""""""""""""""
@@ -262,17 +263,17 @@ The following example defines an instance of ``ASDPlasticMaterial`` with a Druck
 If you subject this material to strain-controlled cyclic loading you get the following response.
 
 .. figure:: ASDPlasticMaterial/example1_fig2.png
-  :width: 50%
-  :alt: stress-strain response of the material
+   :width: 50%
+   :alt: stress-strain response of the material
 
-  (Left) strain response with input strain history in blue and plastic strains in orange. (Right) stress response. 
+   (Left) strain response with input strain history in blue and plastic strains in orange. (Right) stress response. 
 
 Plotted in principal-stress space you can see the material soften as it dilates. 
 
 .. figure:: ASDPlasticMaterial/example1_fig1.png
-  :width: 50%
+   :width: 50%
 
-  Response of the material in principal-stress space with Drucker-Prager surface for reference. 
+   Response of the material in principal-stress space with Drucker-Prager surface for reference. 
 
 
 Code Developed by: **José A. Abell** (UANDES, Chile and ASDEA), **Guido Camata** and **Massimo Petracca**  (ASDEA Software, Italy).
