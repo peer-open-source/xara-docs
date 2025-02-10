@@ -51,7 +51,7 @@ The ASDShellT3 element is a 3-node general purpose thick shell element with the 
    Nodes, Gauss points and local coordinate system
 
 
-Valid queries to the ASDShellT3 element when creating an ElementRecorder object are:
+Valid :ref:`eleResponse` queries to the ASDShellT3 element are:
 
 *  ``"force"``, ``"forces"``, ``"globalForce"``, or ``"globalForces"``:
       *  Internal forces at the element's nodes.
