@@ -36,25 +36,30 @@ This command is used to construct an ASDShellQ4 element object. The ASDShellQ4 e
 
 	Nodes, Gauss points, local coordinate system, warped and flat geometry
 
-.. note::
 
-   Valid queries to the ASDShellQ4 element when creating an ElementRecorder object are:
-   
-   *  '**force**', '**forces**', '**globalForce**', or '**globalForces**':
-       *  Internal forces at the element's nodes.
-       *  Orientation: global coordinate system.
-       *  Size: 24 columns of data, 6 components for each one of the 4 nodes.
-   *  '**material $secTag $secArg1 ... $secArgN**':
-       *  Section response at section **$secTag**
-       *  **$secTag** is the 1-based index of the integration point (1 to 4).
-       *  '**$secArg1 ... $secArgN**' are the arguments required by the SectionDeformationObject at the requested integration point.
+ Valid queries to the ASDShellQ4 element when creating an ElementRecorder object are:
+ 
+ *  '**force**', '**forces**', '**globalForce**', or '**globalForces**':
+     *  Internal forces at the element's nodes.
+     *  Orientation: global coordinate system.
+     *  Size: 24 columns of data, 6 components for each one of the 4 nodes.
+ *  '**material $secTag $secArg1 ... $secArgN**':
+     *  Section response at section **$secTag**
+     *  **$secTag** is the 1-based index of the integration point (1 to 4).
+     *  '**$secArg1 ... $secArgN**' are the arguments required by the SectionDeformationObject at the requested integration point.
 
-.. admonition:: Example 1 - Cantilever Bending Roll-up (corotational)
+Examples
+--------
 
-   | A Cantilever beam is subjected to a total end-moment about the Y axis :math:`M_y = n 2 \pi EI/L`, where :math:`n` is the number of rotations (2 in this example).
-   | :download:`figures/ASDShellQ4/ASDShellQ4_Example_GNL_BendingRollUp.py`
-   .. image:: figures/ASDShellQ4/ASDShellQ4_Example_GNL_BendingRollUp.png
-      :width: 30%
+Example 1 - Cantilever Bending Roll-up (corotational)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+A Cantilever beam is subjected to a total end-moment about the Y axis :math:`M_y = n 2 \pi EI/L`, where :math:`n` is the number of rotations (2 in this example).
+The files for this example can be downloaded from https://gallery.stairlab.io/examples/shellcircle/
+
+.. image:: figures/ASDShellQ4/ASDShellQ4_Example_GNL_BendingRollUp.png
+   :width: 30%
+
 
 .. admonition:: Example 2
 
@@ -107,7 +112,7 @@ This command is used to construct an ASDShellQ4 element object. The ASDShellQ4 e
       # create the shell element using the small displacements/rotations assumption
       model.element('ASDShellQ4', 1, (1,2,3,4), 11)
       # or you can use the corotational flag for large displacements/rotations (geometric nonlinearity)
-      # element('ASDShellQ4', 1, (1,2,3,4), 11, '-corotational')
+      # model.element('ASDShellQ4', 1, (1,2,3,4), 11, corotational=True)
       
       # record global forces at element nodes (24 columns, 6 for each node)
       model.recorder('Element', "force", xml='force_out.xml', ele=1)
@@ -126,3 +131,4 @@ Code Developed by: **Massimo Petracca** at ASDEA Software, Italy.
 .. [BatheEtAl1985] Bathe, Klaus-Jurgen, and Eduardo N. Dvorkin. "A four-node plate bending element based on Mindlin/Reissner plate theory and a mixed interpolation." International Journal for Numerical Methods in Engineering 21.2 (1985): 367-383. (`Link to article <http://www.simytec.com/docs/Short_communicaion_%20four_node_plate.pdf>`_)
 .. [Felippa2000] Felippa, Carlos A. "A systematic approach to the element-independent corotational dynamics of finite elements". Technical Report CU-CAS-00-03, Center for Aerospace Structures, 2000. (`Link to article <https://d1wqtxts1xzle7.cloudfront.net/40660892/A_Systematic_Approach_to_the_Element-Ind20151205-15144-36jazx.pdf?1449356169=&response-content-disposition=inline%3B+filename%3DA_Systematic_Approach_to_the_Element_Ind.pdf&Expires=1611329637&Signature=DTV4RrGLOp4AWynE4kpUPHDNDuazgbqhI6KU1LR7jMBG6sqtx8McLgll918M3CeyBsjBjb7bUTz4ZVGJaoaq0B9Orhr4FVy0AMxrHlSbaTk8lnAXduaOPt~hsbJbiC5PXjSeKzYuT-8-chgyQvaB1gPlUwZ4zTBVJZocbr~Jh0zpTNF2b846iHBu9NQ2qfD5yTciVxMFjoRvOrb4H4AtVgtU~kM9TsiszQa6Vq8Amf~DivjfyB9~v7zgwiwm65PCcErFM8llNev~F1btwqNbSNJ62It7eWgMbkFe92xs6FmOkAIE8tmXnhb1tpUsCjW4kwmVCYcSAsYO4YAyj~6wig__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA>`_)
 .. [FelippaEtAl2005] Felippa, Carlos A., and Bjorn Haugen. "A unified formulation of small-strain corotational finite elements: I. Theory." Computer Methods in Applied Mechanics and Engineering 194.21-24 (2005): 2285-2335. (`Link to article <http://www.cntech.com.cn/down/h000/h21/attach200903311026030.pdf>`_)
+

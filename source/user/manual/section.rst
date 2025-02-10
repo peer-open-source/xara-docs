@@ -49,6 +49,11 @@ For :ref:`PlaneElements` elements, the following section types are available:
    section/PlaneStrain
    section/PlaneStress
 
+.. toctree::
+   :maxdepth: 1
+
+   section/PlateFiberSection
+   section/ElasticShell
 
 .. toctree::
    :maxdepth: 1
