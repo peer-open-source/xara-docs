@@ -3,11 +3,9 @@
 Joint2D
 ^^^^^^^
 
-This command is used to construct a two-dimensional beam-column-joint element object. The two dimensional beam-column joint is idealized as a parallelogram shaped shear panel with adjacent elements connected to its mid-points. The midpoints of the parallelogram are referred to as external nodes. These nodes are the only analysis components that connect the joint element to the surrounding structure.
-
-
-Command Lines
-"""""""""""""""""""""""
+This command is used to construct a two-dimensional beam-column-joint element. 
+The two dimensional beam-column joint is idealized as a parallelogram shaped shear panel with adjacent elements connected to its mid-points. 
+The midpoints of the parallelogram are referred to as external nodes. These nodes are the only analysis components that connect the joint element to the surrounding structure.
 
 TCL:
 
@@ -67,7 +65,7 @@ where:
 
 	
 Output Recorders
-"""""""""""""""""""""""
+----------------
 
 The valid inquires to the Joint2D beam-to-column joint finite element include:
 
@@ -80,49 +78,59 @@ The valid inquires to the Joint2D beam-to-column joint finite element include:
 
 
 Examples
-"""""""""""""""""""""""
+--------
 
-.. admonition:: Command Lines
-
-   **Example 1** 
+Example 1
+"""""""""
    
-   The following example constructs constructs a Joint2D joint element with element tag *12*, that is connected to nodes *1*, *2*, *3*, *4*. The element will generate a center node with tag *112*, and it uses the uniaxial material object with tag *10* as the shear panel rotational spring. This joint element does not have rotational springs at external nodes and does not include large deformations.
+The following example constructs constructs a Joint2D joint element with element tag *12*, that is connected to nodes *1*, *2*, *3*, *4*. 
+The element will generate a center node with tag *112*, and it uses the uniaxial material object with tag *10* as the shear panel rotational spring. 
+This joint element does not have rotational springs at external nodes and does not include large deformations.
 
-   1.1. **Tcl**
+.. tabs::
 
-   .. code-block:: tcl
+   .. tab:: Tcl
 
-      element Joint2D 12 1 2 3 4 112 10 0; 
+      .. code-block:: tcl
 
-   1.2. **Python**
+         element Joint2D 12 1 2 3 4 112 10 0; 
 
-   .. code-block:: python
+   .. tab:: Python
 
-      element('Joint2D', 12, 1, 2, 3, 4, 112, 10, 0)
+      .. code-block:: python
+
+         model.element('Joint2D', 12, (1, 2, 3, 4), 112, 10, 0)
 
 
-   **Example 2** 
+Example 2
+"""""""""
    
-   The following example constructs constructs a Joint2D joint element with element tag *13*, that is connected to nodes *5*, *6*, *7*, *8*. The element will generate a center node with tag *113*, and it uses the uniaxial material object with tag 11 for nodes *5* and *7*, and rigid connections for nodes *6* and *8* to prevent member end rotations. The shear panel behavior is modeled with uniaxial material with tag *10*. The generated multipoint constraint matrices will be time varying to cover large deformations and the nodal positions will be corrected to maintain the initial joint size.
+The following example constructs constructs a Joint2D joint element with element tag *13*, that is connected to nodes *5*, *6*, *7*, *8*. 
+The element will generate a center node with tag *113*, and it uses the uniaxial material object with tag 11 for nodes *5* and *7*, and rigid connections for nodes *6* and *8* to prevent member end rotations. 
+The shear panel behavior is modeled with uniaxial material with tag *10*. 
+The generated multipoint constraint matrices will be time varying to cover large deformations and the nodal positions will be corrected to maintain the initial joint size.
 
-   2.1. **Tcl**
+.. tabs::
 
-   .. code-block:: tcl
+   .. tab:: Tcl
 
-      element Joint2D 13 5 6 7 8 113 11 0 11 0 10 2; 
+      .. code-block:: tcl
 
-   2.2. **Python**
+         element Joint2D 13 5 6 7 8 113 11 0 11 0 10 2; 
 
-   .. code-block:: python
+   .. tab:: Python
 
-      element('Joint2D', 13, 5, 6, 7, 8, 113, 11, 0, 11, 0, 10, 2)
-  
+      .. code-block:: python
+
+         model.element('Joint2D', 13, (5, 6, 7, 8), 113, 11, 0, 11, 0, 10, 2)
+   
+      
+References
+----------
+
+More information available in the following reference:
 	
-.. admonition:: References
-
-	More information available in the following reference:
-	
-	#. Arash Altoontash, 2004, "Simulation and damage models for performance assessment of reinforced concrete beam-column joints", PhD Dissertation, Stanford University, California, USA. [`URL <https://opensees.berkeley.edu/OpenSees/doc/Altoontash_Dissertation.pdf>`_].
+#. Arash Altoontash, 2004, "Simulation and damage models for performance assessment of reinforced concrete beam-column joints", PhD Dissertation, Stanford University, California, USA. [`URL <https://opensees.berkeley.edu/OpenSees/doc/Altoontash_Dissertation.pdf>`_].
 	
 
 	

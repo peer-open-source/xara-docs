@@ -1,22 +1,19 @@
-.. BeamColumnJoint:
+.. _BeamColumnJoint:
 
-BeamColumnJoint Element
-^^^^^^^^^^^^^^^^^^^^^^^
+BeamColumnJoint
+^^^^^^^^^^^^^^^
 
 This command is used to construct a two-dimensional beam-column-joint. 
 The element may be used with both two-dimensional and three-dimensional structures; however, load is transferred only in the plane of the element.
 
 
-Command Lines
-""""""""""""""
-
 TCL:
 
-.. function:: element beamColumnJoint $eleTag $Node1 $Node2 $Node3 $Node4 $Mat1 $Mat2 $Mat3 $Mat4 $Mat5 $Mat6 $Mat7 $Mat8 $Mat9 $Mat10 $Mat11 $Mat12 $Mat13 <$eleHeightFac $eleWidthFac>
+.. function:: element beamColumnJoint $tag $Node1 $Node2 $Node3 $Node4 $Mat1 $Mat2 $Mat3 $Mat4 $Mat5 $Mat6 $Mat7 $Mat8 $Mat9 $Mat10 $Mat11 $Mat12 $Mat13 <$eleHeightFac $eleWidthFac>
 
 Python:
 
-.. function:: element('beamColumnJoint', eleTag, Node1, Node2, Node3, Node4, Mat1, Mat2, Mat3, Mat4, Mat5, Mat6, Mat7, Mat8, Mat9, Mat10, Mat11, Mat12, Mat13, <eleHeightFac, eleWidthFac>)
+.. function:: model.element("beamColumnJoint", tag, Node1, Node2, Node3, Node4, Mat1, Mat2, Mat3, Mat4, Mat5, Mat6, Mat7, Mat8, Mat9, Mat10, Mat11, Mat12, Mat13, <eleHeightFac, eleWidthFac>)
 
 where:
 
@@ -24,7 +21,7 @@ where:
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   "$eleTag", "|integer|", "Unique element object tag"
+   "$tag", "|integer|", "Unique element object tag"
    "$Node1 ... $Node4", "|integer|", "Node tags"
    "$Mat1", "|integer|", "uniaxial material tag for left bar-slip spring at node 1"
    "$Mat2", "|integer|", "uniaxial material tag for right bar-slip spring at node 1"
@@ -53,7 +50,7 @@ where:
 
 
 Response
-""""""""""""""""
+--------
 
 The valid :ref:`eleResponse` queries to a BeamColumnJoint element are as follows:
 
@@ -76,8 +73,7 @@ The valid :ref:`eleResponse` queries to a BeamColumnJoint element are as follows
 
 
 Examples
-""""""""
-
+--------
 
 The following example constructs constructs a beamColumnJoint joint element with element tag *7*, that is connected to nodes *2*, *6*, *9*, *5*. The element uses the uniaxial material object with tags: *41* for left bar-slip spring at node 1, *42* for right bar-slip spring at node 1, *21* for lower bar-slip spring at node 2, *31* for upper bar-slip spring at node 2, *43* for left bar-slip spring at node 3, *44* for right bar-slip spring at node 3, *22* for lower bar-slip spring at node 4, *32* for upper bar-slip spring at node 4, *1* for interface-shear spring at nodes 1, 2, 3 and 4, and *5* for shear-panel. This joint element uses the default value (``1.0``) for both the element height (eleHeightFac) and width (eleWidthFac) factors.
 
@@ -93,12 +89,13 @@ The following example constructs constructs a beamColumnJoint joint element with
 
       element('beamColumnJoint', 7, 2, 6, 9, 5, 41, 42, 1, 21, 31, 1, 43, 44, 1, 22, 32, 1, 5)
 
-	
-.. admonition:: References
 
-	More information available in the following reference:
-	
-	#. Lowes, Laura N.; Mitra, Nilanjan; Altoontash, Arash A beam-column joint model for simulating the earthquake response of reinforced concrete frames PEER-2003/10 Pacific Earthquake Engineering Research Center, University of California, Berkeley 2003 59 pages (400/P33/2003-10). [`URL <https://peer.berkeley.edu/sites/default/files/0310_l._lowes_n._mitra_a._altoontash.pdf>`_].
+References
+----------
+
+More information available in the following reference:
+
+#. Lowes, Laura N.; Mitra, Nilanjan; Altoontash, Arash A beam-column joint model for simulating the earthquake response of reinforced concrete frames PEER-2003/10 Pacific Earthquake Engineering Research Center, University of California, Berkeley 2003 59 pages (400/P33/2003-10). [`URL <https://peer.berkeley.edu/sites/default/files/0310_l._lowes_n._mitra_a._altoontash.pdf>`_].
 
 
 Code developed by: Nilanjan Mitra, Cal Poly

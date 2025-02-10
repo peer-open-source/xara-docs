@@ -5,12 +5,11 @@ ElasticTubularJoint
 
 This command is used to construct an ElasticTubularJoint element object, which models joint flexibility of tubular joints in two dimensional analysis of any structure having tubular joints.
 
-
-.. function:: element ElasticTubularJoint $eleTag $iNode $jNode $Brace_Diameter $Brace_Angle $E $Chord_Diameter $Chord_Thickness $Chord_Angle
+.. function:: element ElasticTubularJoint $tag $iNode $jNode $Brace_Diameter $Brace_Angle $E $Chord_Diameter $Chord_Thickness $Chord_Angle
 
 Python:
 
-.. function:: model.element('ElasticTubularJoint', eleTag, (iNode, jNode), Brace_Diameter, Brace_Angle, E, Chord_Diameter, Chord_Thickness, Chord_Angle)
+.. function:: model.element('ElasticTubularJoint', tag, (iNode, jNode), Brace_Diameter, Brace_Angle, E, Chord_Diameter, Chord_Thickness, Chord_Angle)
 
 where:
 
@@ -30,7 +29,7 @@ where:
    
 
 Examples
-""""""""
+--------
 
 
 The following example constructs constructs a ElasticTubularJoint joint element with element tag *1*, that is connected to nodes *1* and *2*. The brace diameter is *0.25* m, intersection angle is *45* degrees, Young's modulus is *210e9*, outer diameter and thickness of the chord are *0.50* m and *0.016* m respectively, and angle between chord axis and global horizontal axis is *45* degrees.
@@ -48,11 +47,12 @@ The following example constructs constructs a ElasticTubularJoint joint element 
       element('ElasticTubularJoint', 1, 1, 2, 0.25, 45, 210E+09, 0.5, 0.016, 45)
 
 	
-.. admonition:: References
+References
+----------
 
-	More information available in the following reference:
+More information available in the following reference:
 	
-	#. Alanjari, P., Asgarian, B., & Salari, N. (2015). Elastic tubular joint element for modelling of multi-brace, uni-planar tubular connections. Ships and Offshore Structures, 10(4), 404–415. https://doi.org/10.1080/17445302.2014.942077
+#. Alanjari, P., Asgarian, B., & Salari, N. (2015). Elastic tubular joint element for modelling of multi-brace, uni-planar tubular connections. Ships and Offshore Structures, 10(4), 404–415. https://doi.org/10.1080/17445302.2014.942077
 
 
 Code developed by: M. Kia and P. Alanjari, Sharif University of Technology and K. N. Toosi University of Technology, Tehran, Iran.
