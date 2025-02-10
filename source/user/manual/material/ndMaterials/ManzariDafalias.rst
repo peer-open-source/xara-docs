@@ -1,7 +1,7 @@
 .. _ManzariDafalias:
 
-Manzari Dafalias Material
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Manzari Dafalias
+^^^^^^^^^^^^^^^^
 
 Code Developed by: **Alborz Ghofrani**, |pedro|, U. Washington
 
@@ -39,32 +39,40 @@ This command is used to construct a multi-dimensional [Manzari-Dafalias2004]_ ma
 
    The material formulations for the Manzari-Dafalias object are "ThreeDimensional" and "PlaneStrain"
 
-.. note::
-   #. Valid Element Recorder queries are:
-      stress, strain
-      alpha (or backstressratio) for :math:`\mathbf{\alpha}`
-      fabric for :math:`\mathbf{z}`
-      alpha_in (or alphain) for :math:`\mathbf{\alpha_{in}}`
+
+#. Valid Element Recorder queries are:
+
+   * ``stress``, ``strain``
+   * ``alpha`` (or backstressratio) for :math:`\mathbf{\alpha}`
+   * ``fabric`` for :math:`\mathbf{z}`
+   * ``alpha_in`` for :math:`\mathbf{\alpha_{in}}`
+
+   For example,
 
    .. code:: tcl
 
-    recorder Element -eleRange 1 $numElem -time -file stress.out  stress
+      recorder Element -eleRange 1 $numElem -time -file stress.out  stress
 
-    #. Elastic or Elastoplastic response could be enforced by
-       Elastic:   updateMaterialStage -material $matTag -stage 0
-       Elastoplastic:	updateMaterialStage -material $matTag -stage 1
+#. Elastic or Elastoplastic response could be enforced by
+   .. code:: tcl
+      updateMaterialStage -material $matTag -stage 0; # Elastic
+      updateMaterialStage -material $matTag -stage 1; # Elastoplastic
 
 Theory
+------
 
 .. math::
 	 p = \frac{1}{3} \mathrm{tr}(\mathbf{\sigma}) 
+
 
 .. math::
    
     \mathbf{s} = \mathrm{dev} (\mathbf{\sigma}) = \mathbf{\sigma} - \frac{1}{3} p \mathbf{1} 
 
 Elasticity
-Elastic moduli are considered to be functions of p and current void ratio:
+""""""""""
+
+Elastic moduli are considered to be functions of :math:`p` and current void ratio:
 
 .. math::
 
@@ -86,6 +94,7 @@ The elastic stress-strain relationship is:
    d\varepsilon^\mathrm{e}_v = \frac{dp}{K}
 
 Critical State Line
+"""""""""""""""""""
 A power relationship is assumed for the critical state line:
 
 .. math:: 
@@ -95,6 +104,8 @@ A power relationship is assumed for the critical state line:
 where :math:`e_0` is the void ratio at :math:`p_c = 0` and :math:`\lambda_c` and :math:`\xi` constants.
 
 Yield Surface
+"""""""""""""
+
 Yield surface is a stress-ratio dependent surface in this model and is defined as
 
 .. math::
@@ -104,6 +115,8 @@ Yield surface is a stress-ratio dependent surface in this model and is defined a
 with :math:`\mathbf{\alpha}` being the deviatoric back stress-ratio.
 
 Plastic Strain Increment
+""""""""""""""""""""""""
+
 The increment of the plastic strain tensor is given by
 
 .. math:: 
@@ -171,12 +184,13 @@ The evolution of fabric and the back stress-ratio tensors are defined as
 
 
 
-.. admonition:: Example
+Example
+-------
 
-   This example, provides an undrained confined triaxial compression test using one 8-node SSPBrickUP element and ManzariDafalias material model.
+This example, provides an undrained confined triaxial compression test using one 8-node SSPBrickUP element and ManzariDafalias material model.
 
-   .. literalinclude:: ManzariDafaliasExample.tcl
-      :language: tcl
+.. literalinclude:: ManzariDafaliasExample.tcl
+   :language: tcl
 
 
 .. [Manzari-Dafalias2004] Dafalias YF, Manzari MT. "Simple plasticity sand model accounting for fabric change effects". Journal of Engineering Mechanics 2004

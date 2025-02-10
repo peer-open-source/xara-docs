@@ -1,9 +1,9 @@
 .. _J2Plasticity:
 
-J2 Plasticity Material
-^^^^^^^^^^^^^^^^^^^^^^
+J2 Plasticity
+^^^^^^^^^^^^^
 
-This command is used to construct an multi dimensional material object that has a von Mises (J2) yield criterion and isotropic hardening.
+This command is used to construct a multi dimensional material that has a von Mises (J2) yield criterion and isotropic hardening.
 
 .. function:: nDMaterial J2Plasticity $matTag $K $G $sig0 $sigInf $delta $H
 
@@ -19,7 +19,7 @@ This command is used to construct an multi dimensional material object that has 
    $delta, |float|,	   exponential hardening parameter
    $H, |float|,linear hardening parameter
 
-The material formulations for the J2 object are ``"ThreeDimensional"``, ``"PlaneStrain"``, ``"PlaneStress"``, ``"AxiSymmetric"``, and ``"PlateFiber"``.
+
 
 Theory 
 ------
@@ -38,13 +38,13 @@ Yield Function
 
 .. math::
 
-   \phi(\sigma,q) = || dev(\sigma) || - \sqrt{\tfrac{2}{3}} q(\boldsymbol{xi})
+   \phi (\boldsymbol{S},q) = || \operatorname{dev} \boldsymbol{S} || - \sqrt{\tfrac{2}{3}} q(\boldsymbol{\xi})
 
-Saturation Isotropic Hardening with linear term
+Saturation Isotropic Hardening with linear term is given by:
 
 .. math::
    
-   q(xi) = \sigma_0 + (\sigma_\inf - \sigma_0) \exp (-\delta\boldsymbol{\xi}) + H \boldsymbol{\xi}
+   q(\boldsymbol{\xi}) = \sigma_0 + (\sigma_\inf - \sigma_0) \exp (-\delta\boldsymbol{\xi}) + H \boldsymbol{\xi}
 
 Flow Rules
 
@@ -56,8 +56,8 @@ Flow Rules
 
 Linear Viscosity: :math:`\gamma = \frac{\phi}{\eta}` ( if :math:`\phi > 0` )
 
-Backward Euler Integration Routine Yield condition enforced at time n+1
+Backward Euler integration is employed.
 
-set :math:`\eta = 0` for rate independent case
+For rate independent cases, set :math:`\eta = 0`.
 
 Code Developed by: **Ed Love**
