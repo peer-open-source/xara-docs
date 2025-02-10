@@ -50,7 +50,6 @@ For :ref:`PlaneElements` elements, the following section types are available:
    section/PlaneStrain
    section/PlaneStress
 
-.. _ShellSections:
 
 The following section types are valid for :ref:`shells`:
 
