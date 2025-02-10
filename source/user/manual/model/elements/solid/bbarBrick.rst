@@ -1,7 +1,7 @@
 .. _bbarBrick::
 
-bbarBrick Element
-^^^^^^^^^^^^^^^^^
+MixedBrick
+^^^^^^^^^^
 
 This command is used to construct an eight-node mixed volume/pressure brick element object, which uses a trilinear isoparametric formulation.
 

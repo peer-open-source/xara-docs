@@ -1,28 +1,44 @@
 .. _ASDShellQ4:
 
-ASDShellQ4 Element
-^^^^^^^^^^^^^^^^^^
+ASDShellQ4
+^^^^^^^^^^
 
-This command is used to construct an ASDShellQ4 element object. The ASDShellQ4 element is a 4-node general purpose thick shell element with the following features:
+This command is used to construct an ASDShellQ4 shell element. 
 
-.. function:: element ASDShellQ4 $tag $n1 $n2 $n3 $n4 $secTag <-corotational> <-noeas> <-drillingStab $drillingStab> <-drillingNL> <-damp $dampTag> <-local $x1 $x2 $x3>
+.. tabs::
 
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+   .. tab:: Python 
 
-   $tag, |integer|, unique integer tag identifying element object
-   $n1 $n2 $n3 $n4, 4 |integer|, the four nodes defining the element (-ndm 3 -ndf 6)
-   $secTag, |integer|, unique integer tag associated with previously-defined SectionForceDeformation object
-   -corotational, |string|, "optional flag, if provided, the element uses non-linear kinematics, suitable for large displacement/rotation problems"
-   -noeas, |string|, "optional flag, if provided, the membrane behavior will not be enhanced with the AGQ6-I enhanced assumed strain formulation."
-   -drillingStab $drillingStab, |string| + |float|, "optional flag, if provided, the user can specify the stabilization parameter $drillingStab to stabilize the 1-point quadrature drilling DOF formulation (default = 0.01)."
-   -drillingNL, |string|, "optional flag, if provided, the Hughes-Brezzi drilling DOF formulation considers the non-linear behavior of the section."
-   -damp $dampTag, |string| + |integer|, "optional, to activate elemental damping as per :ref:`elementalDamping <elementalDamping>`"
-   -local $x1 $x2 $x3, |string| + 3 |float|, "optional, if provided it will be used as the local-x axis of the element (otherwise the default local X will be the direction of the 1-2 side). Note: it will be automatically normalized and projected onto the element plane. It must not be zero or parallel to the shell's normal vector."
+      .. py:function:: model.element("ASDShellQ4", tag, nodes, section)
+
+         :param tag: integer tag identifying element object
+         :type tag: int
+         :param nodes: tuple of 4 integers defining the element :ref:`node`s
+         :type nodes: tuple
+         :param section: integer tag identifying a Shell :ref:`section`
+         :type section: int
+   
+   .. tab:: Tcl
+
+      .. function:: element ASDShellQ4 $tag $n1 $n2 $n3 $n4 $secTag <-corotational> <-noeas> <-drillingStab $drillingStab> <-drillingNL> <-damp $dampTag> <-local $x1 $x2 $x3>
+
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
+
+         $tag, |integer|, unique integer tag identifying element object
+         $n1 $n2 $n3 $n4, 4 |integer|, the four nodes defining the element (-ndm 3 -ndf 6)
+         $secTag, |integer|, unique integer tag associated with previously-defined SectionForceDeformation object
+         -corotational, |string|, "optional flag, if provided, the element uses non-linear kinematics, suitable for large displacement/rotation problems"
+         -noeas, |string|, "optional flag, if provided, the membrane behavior will not be enhanced with the AGQ6-I enhanced assumed strain formulation."
+         -drillingStab $drillingStab, |string| + |float|, "optional flag, if provided, the user can specify the stabilization parameter $drillingStab to stabilize the 1-point quadrature drilling DOF formulation (default = 0.01)."
+         -drillingNL, |string|, "optional flag, if provided, the Hughes-Brezzi drilling DOF formulation considers the non-linear behavior of the section."
+         -damp $dampTag, |string| + |integer|, "optional, to activate elemental damping as per :ref:`elementalDamping <elementalDamping>`"
+         -local $x1 $x2 $x3, |string| + 3 |float|, "optional, if provided it will be used as the local-x axis of the element (otherwise the default local X will be the direction of the 1-2 side). Note: it will be automatically normalized and projected onto the element plane. It must not be zero or parallel to the shell's normal vector."
 
 
-#. The membrane behavior is enhanced with the **AGQ6-I** [ChenEtAl2004]_ formulation, which makes the element almost insensitive to geometry distortion, as opposed to standard iso-parametric elements.
+The ASDShellQ4 element is a 4-node general purpose thick shell element with the following features:
+#. The membrane behavior is enhanced with the *AGQ6-I* [ChenEtAl2004]_ formulation, which makes the element almost insensitive to geometry distortion, as opposed to standard iso-parametric elements.
 #. The drilling DOF is treated with the **Hughes-Brezzi** [HughesEtAl1989]_ formulation, with special care to avoid membrane locking, using a 1 point quadrature plus stabilization. This formulation constrains the drilling DOFs to the rigid body rotation via a penalty parameter as a function of the initial in-plane shear modulus. However, when using strain-softening materials, this (elastic) constraint may overstiffen the element as the in-plane shear modulus degrades. As a remedy in such a situation, the user can choose to make this constraint non-linear.
 #. The plate bending part is treated using the **MITC4** [DvorkinEtAl1984]_ [BatheEtAl1985]_ formulation, to avoid the well known transverse shear locking behavior of thick plate elements.
 #. It can be used to model both **flat** and **warped** geometries.
@@ -37,7 +53,7 @@ This command is used to construct an ASDShellQ4 element object. The ASDShellQ4 e
 	Nodes, Gauss points, local coordinate system, warped and flat geometry
 
 
- Valid queries to the ASDShellQ4 element when creating an ElementRecorder object are:
+Valid queries to the ASDShellQ4 element when creating an ElementRecorder object are:
  
  *  '**force**', '**forces**', '**globalForce**', or '**globalForces**':
      *  Internal forces at the element's nodes.
@@ -61,9 +77,10 @@ The files for this example can be downloaded from https://gallery.stairlab.io/ex
    :width: 30%
 
 
-.. admonition:: Example 2
+Example 2
+"""""""""
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: tcl
 
@@ -93,7 +110,7 @@ The files for this example can be downloaded from https://gallery.stairlab.io/ex
       # note: fiber index is 1-based (while in beams it is 0-based!)
       recorder Element  -xml  stress_gp1_fib0_out.xml  -ele  1  material  1  fiber 1 stress
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 
@@ -107,7 +124,7 @@ The files for this example can be downloaded from https://gallery.stairlab.io/ex
       # create a fiber shell section with 4 layers of material 1
       # each layer has a thickness = 0.025
       model.material('ElasticIsotropic', 1, 1000.0, 0.2)
-      model.section('LayeredShell', 11, 4,  1,0.025,  1,0.025,  1,0.025,  1,0.025)
+      model.section('LayeredShell', 11, 4, (1,0.025),  (1,0.025),  (1,0.025),  (1,0.025))
       
       # create the shell element using the small displacements/rotations assumption
       model.element('ASDShellQ4', 1, (1,2,3,4), 11)

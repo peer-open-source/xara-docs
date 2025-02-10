@@ -3,18 +3,19 @@
 ASDShellT3 Element
 ^^^^^^^^^^^^^^^^^^
 
-This command is used to construct an ASDShellT3 element object. The ASDShellT3 element is a 3-node general purpose thick shell element with the following features:
+This command is used to construct an ASDShellT3 element object. 
 
 .. tabs::
    
    .. tab:: Python
 
-      .. function:: model.element("ASDShellT3", tag, nodes, section, *args, **kwargs)
+      .. function:: model.element("ASDShellT3", tag, nodes, section,  **kwargs)
 
          :param tag: integer tag identifying the element
+         :type tag: int
          :param nodes: tuple of three integer tags identifying the nodes that form the element
-         :param section: integer tag associated with previously-defined SectionForceDeformation object
-         :param args: optional arguments
+         :type nodes: tuple
+         :param section: integer tag associated with previously-defined shell :ref:`section`
          :param kwargs: optional keyword arguments
 
    .. tab:: Tcl
@@ -35,6 +36,8 @@ This command is used to construct an ASDShellT3 element object. The ASDShellT3 e
          -local $x1 $x2 $x3, |string| + 3 |float|, "optional, if provided it will be used as the local-x axis of the element (otherwise the default local X will be the direction of the 1-2 side). Note: it will be automatically normalized and projected onto the element plane. It must not be zero or parallel to the shell's normal vector."
 
 
+The ASDShellT3 element is a 3-node general purpose thick shell element with the following features:
+
 #. The membrane behavior is based on the **ANDeS** [Felippa2003]_ formulation, which uses the corner rotational DOFs (drilling DOFs) to improve the membrane behavior of the element.
 #. The plate bending part is treated using the **MITC3** [PSLee2004]_ formulation, to avoid the well known transverse shear locking behavior of thick plate elements.
 #. Kinematics can be either **linear** or **corotational**. The corotational kinematics is based on the work of Felippa et al., i.e. the **EICR** [Felippa2000]_ [FelippaEtAl2005]_ (Element Independent Corotational formulation). Finite rotations are treated with Quaternions.
@@ -47,18 +50,21 @@ This command is used to construct an ASDShellT3 element object. The ASDShellT3 e
 
    Nodes, Gauss points and local coordinate system
 
-.. note::
 
-   Valid queries to the ASDShellT3 element when creating an ElementRecorder object are:
-   
-   *  '**force**', '**forces**', '**globalForce**', or '**globalForces**':
-       *  Internal forces at the element's nodes.
-       *  Orientation: global coordinate system.
-       *  Size: 18 columns of data, 6 components for each one of the 3 nodes.
-   *  '**material $section $secArg1 ... $secArgN**':
-       *  Section response at section **$section**
-       *  **$section** is the 1-based index of the integration point (1 to 3).
-       *  '**$secArg1 ... $secArgN**' are the arguments required by the SectionDeformationObject at the requested integration point.
+Valid queries to the ASDShellT3 element when creating an ElementRecorder object are:
+
+*  '**force**', '**forces**', '**globalForce**', or '**globalForces**':
+      *  Internal forces at the element's nodes.
+      *  Orientation: global coordinate system.
+      *  Size: 18 columns of data, 6 components for each one of the 3 nodes.
+*  '**material $section $secArg1 ... $secArgN**':
+      *  Section response at section **$section**
+      *  **$section** is the 1-based index of the integration point (1 to 3).
+      *  '**$secArg1 ... $secArgN**' are the arguments required by the SectionDeformationObject at the requested integration point.
+
+
+Examples 
+--------
 
 .. admonition:: Example 1 - Cantilever Bending Roll-up (corotational)
 

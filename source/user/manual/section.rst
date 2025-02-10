@@ -1,7 +1,7 @@
 .. _section:
 
-Sections
-********
+Section
+*******
 
 This command is used to construct a Section, which represents force-deformation (or resultant stress-strain) relationships at beam-column and plate sample points.
 
@@ -29,6 +29,7 @@ This command is used to construct a Section, which represents force-deformation 
          $tag,     |integer|,     unique section tag.
          $secArgs, |list|,        a list of material arguments with number dependent on section type
 
+
 The type of section created and the additional arguments required depends on the ``type`` provided in the command.
 
 The following contain information about ``type`` and the ``args`` required for each of the available section types:
@@ -49,10 +50,14 @@ For :ref:`PlaneElements` elements, the following section types are available:
    section/PlaneStrain
    section/PlaneStress
 
+.. _ShellSections:
+
+The following section types are valid for :ref:`shells`:
+
 .. toctree::
    :maxdepth: 1
 
-   section/PlateFiberSection
+   section/ShellFiber
    section/ElasticShell
 
 .. toctree::
