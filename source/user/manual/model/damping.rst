@@ -10,7 +10,6 @@ OpenSees provides several method to introduce damping effects. List of the avail
 
    damping/rayleigh
    damping/modalDamping
-   damping/elementalDamping
 
 
 Reference material for damping includes [ChopraMcKenna2015]_, [HuangEtAl2019]_, and [TianEtAl2023]_.

@@ -93,13 +93,14 @@ The following subsections contain information about **$type**
       :maxdepth: 1
       
       uniaxialMaterials/Hysteretic
-      uniaxialMaterials/HystereticSM
       uniaxialMaterials/IMKBilin
       uniaxialMaterials/IMKPeakOriented
       uniaxialMaterials/IMKPinching
       uniaxialMaterials/SLModel
-	  
-..    uniaxialMaterials/Pinching4
+
+..
+      uniaxialMaterials/Pinching4
+      uniaxialMaterials/HystereticSM
 
       
 #. Wrapper Uniaxial Materials
