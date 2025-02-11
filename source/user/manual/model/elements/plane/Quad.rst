@@ -52,7 +52,7 @@ The valid :ref:`eleResponse` queries to this element are ``'forces'``, ``'stress
 Consistent nodal loads are computed from the pressure and body forces.
 
 
-.. figure:: quad.png
+.. figure:: Q9.svg
    :align: center
    :figclass: align-center
 

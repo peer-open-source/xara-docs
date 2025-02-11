@@ -46,6 +46,12 @@ EnhancedQuad
 Theory 
 ------
 
+.. figure:: Q4.svg
+   :align: center
+   :figclass: align-center
+
+   EnhancedQuad element node numbering
+
 This element implements the Q1/E4 assumed strain interpolation. The formulation 
 is generally credited to Taylor, Beresford, and Wilson (1976) [1]_. A variational basis 
 for the formulation is given by Simo and Rifai (1990) [2]_.

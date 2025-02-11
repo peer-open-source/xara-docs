@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="350" height="350" viewBox="-60 -60 320 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .node { fill: red; }
+      .label { font-family: sans-serif; font-size: 16px; fill: blue; }
+      .grid-line { stroke: gray; stroke-dasharray: 4 2; stroke-width: 1; }
+      .edge { fill: none; stroke: black; stroke-width: 2; }
+      .axis { stroke: green; stroke-width: 2; marker-end: url(#arrowhead); }
+      .axis-label { font-family: sans-serif; font-size: 18px; fill: green; }
+    </style>
+    <!-- Define arrowhead marker for axes -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+            refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="green" />
+    </marker>
+  </defs>
+
+  <!-- Outer quadrilateral edges -->
+  <polygon class="edge" points="0,0 200,0 200,200 0,200" />
+
+  <!-- Grid lines for visualization -->
+  <line class="grid-line" x1="100" y1="0" x2="100" y2="200" />
+  <line class="grid-line" x1="0" y1="100" x2="200" y2="100" />
+
+  <!-- Draw node squares -->
+  <!-- Each square centered at the node location, side length = 10 -->
+  <!-- Bottom row -->
+  <rect class="node" x="-5"   y="-5"    width="10" height="10" />
+  <rect class="node" x="95"   y="-5"    width="10" height="10" />
+  <rect class="node" x="195"  y="-5"    width="10" height="10" />
+  <!-- Middle row -->
+  <rect class="node" x="-5"   y="95"    width="10" height="10" />
+  <rect class="node" x="95"   y="95"    width="10" height="10" />
+  <rect class="node" x="195"  y="95"    width="10" height="10" />
+  <!-- Top row -->
+  <rect class="node" x="-5"   y="195"   width="10" height="10" />
+  <rect class="node" x="95"   y="195"   width="10" height="10" />
+  <rect class="node" x="195"  y="195"   width="10" height="10" />
+
+  <!-- Label nodes, offset labels to avoid crowding the squares -->
+  <!-- Top row labels -->
+  <text class="label" x="-20"  y="-10">4</text>
+  <text class="label" x="90"   y="-10">7</text>
+  <text class="label" x="210"  y="-10">3</text>
+
+  <!-- Middle row labels -->
+  <text class="label" x="-20"   y="120">8</text>
+  <text class="label" x="90"    y="120">9</text>
+  <text class="label" x="210"   y="120">6</text>
+
+  <!-- Bottom row labels -->
+  <text class="label" x="-20"   y="220">1</text>
+  <text class="label" x="90"    y="220">5</text>
+  <text class="label" x="210"   y="220">2</text>
+
+  <!-- ξ and η axes -->
+  <!--
+  <text class="axis-label" x="245" y="-10">ξ</text>
+  <line class="axis" x1="0" y1="200" x2="225" y2="200" />
+  <text class="axis-label" x="-20" y="245">η</text>
+  <line class="axis" x1="0" y1="0" x2="0" y2="250" />
+  -->
+</svg>
+

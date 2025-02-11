@@ -42,6 +42,13 @@ This command is used to construct a four-node quadrilateral element object, whic
    This element is ``PlainStrain`` only.
 
 
+.. figure:: Q9.svg
+   :align: center
+   :figclass: align-center
+
+   MixedQuad element node numbering
+
+
 The valid :ref:`eleResponse` queries to this element are 
 
 * ``'forces'``, 
