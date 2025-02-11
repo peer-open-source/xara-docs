@@ -25,7 +25,7 @@
 
   <!-- Draw node squares -->
   <!-- Each square centered at the node location, side length = 10 -->
-  <!-- Bottom row -->
+  <!-- Top row -->
   <rect class="node" x="-5"   y="-5"    width="10" height="10" />
   <rect class="node" x="95"   y="-5"    width="10" height="10" />
   <rect class="node" x="195"  y="-5"    width="10" height="10" />
@@ -33,7 +33,7 @@
   <rect class="node" x="-5"   y="95"    width="10" height="10" />
   <rect class="node" x="95"   y="95"    width="10" height="10" />
   <rect class="node" x="195"  y="95"    width="10" height="10" />
-  <!-- Top row -->
+  <!-- Bottom row -->
   <rect class="node" x="-5"   y="195"   width="10" height="10" />
   <rect class="node" x="95"   y="195"   width="10" height="10" />
   <rect class="node" x="195"  y="195"   width="10" height="10" />

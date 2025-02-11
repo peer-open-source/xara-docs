@@ -32,11 +32,12 @@ This command is used to construct an eight-node brick, which uses the standard i
          $b1 $b2 $b3, |listFloat|, optional: body forces in global x y z directions
 
 
-.. figure:: brick.png
+.. figure:: H20.svg
 	:align: center
 	:figclass: align-center
 
 	Brick element node numbering
+
 
 
 .. note::

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- A quadratic hexahedron (20-node brick) element, showing nodes and numbering.
+     Visible edges are drawn solid while hidden (background) edges are dashed.
+     The element is shown in an oblique view. -->
+<svg width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      /* Nodes drawn as red squares */
+      .node { fill: red; }
+      /* Labels in blue */
+      .label { font-family: sans-serif; font-size: 16px; fill: blue; }
+      /* Solid (foreground) edges */
+      .edge.solid { fill: none; stroke: black; stroke-width: 2; }
+      /* Dashed (background) edges */
+      .edge.dashed { fill: none; stroke: black; stroke-width: 2; stroke-dasharray: 6 4; }
+    </style>
+  </defs>
+
+  <!--
+       Corner node coordinates (in our 2D view):
+         Node1 = (100,300)
+         Node2 = (300,300)
+         Node3 = (350,250)
+         Node4 = (150,250)
+         Node5 = (100,100)
+         Node6 = (300,100)
+         Node7 = (350,50)
+         Node8 = (150,50)
+       Mid–edge nodes are computed as the midpoints of the connecting corners.
+  -->
+
+  <!-- Draw element edges as quadratic Bézier curves.
+       Each edge goes from one corner to the next with the mid–edge node used as the control point. -->
+
+  <!-- Bottom face edges (nodes 1–2–3–4) -->
+  <path class="edge solid"  d="M100,300 Q200,300 300,300" />   <!-- Edge 1–2 (visible) [mid–node 9 = (200,300)] -->
+  <path class="edge solid"  d="M300,300 Q325,275 350,250" />   <!-- Edge 2–3 (visible) [mid–node 10 = (325,275)] -->
+  <path class="edge dashed" d="M350,250 Q250,250 150,250" />   <!-- Edge 3–4 (hidden)  [mid–node 11 = (250,250)] -->
+  <path class="edge dashed" d="M150,250 Q125,275 100,300" />   <!-- Edge 4–1 (hidden)  [mid–node 12 = (125,275)] -->
+
+  <!-- Top face edges (nodes 5–6–7–8) -->
+  <path class="edge solid"  d="M100,100 Q200,100 300,100" />   <!-- Edge 5–6 (visible) [mid–node 13 = (200,100)] -->
+  <path class="edge solid"  d="M300,100 Q325,75 350,50"   />   <!-- Edge 6–7 (visible) [mid–node 14 = (325,75)] -->
+  <path class="edge solid"  d="M350,50  Q250,50 150,50"   />   <!-- Edge 7–8 (visible) [mid–node 15 = (250,50)] -->
+  <path class="edge solid"  d="M150,50  Q125,75 100,100"  />   <!-- Edge 8–5 (visible) [mid–node 16 = (125,75)] -->
+
+  <!-- Vertical (side) edges -->
+  <path class="edge solid"  d="M100,300 Q100,200 100,100" />   <!-- Edge 1–5 (visible) [mid–node 17 = (100,200)] -->
+  <path class="edge solid"  d="M300,300 Q300,200 300,100" />   <!-- Edge 2–6 (visible) [mid–node 18 = (300,200)] -->
+  <path class="edge solid"  d="M350,250 Q350,150 350,50"  />   <!-- Edge 3–7 (visible) [mid–node 19 = (350,150)] -->
+  <path class="edge dashed" d="M150,250 Q150,150 150,50"  />   <!-- Edge 4–8 (hidden)  [mid–node 20 = (150,150)] -->
+
+  <!-- Draw the 20 nodes as small red squares (10×10), centered at each node coordinate -->
+  <!-- Corner nodes -->
+  <rect class="node" x="95"  y="295" width="10" height="10" />  <!-- Node 1 at (100,300) -->
+  <rect class="node" x="295" y="295" width="10" height="10" />  <!-- Node 2 at (300,300) -->
+  <rect class="node" x="345" y="245" width="10" height="10" />  <!-- Node 3 at (350,250) -->
+  <rect class="node" x="145" y="245" width="10" height="10" />  <!-- Node 4 at (150,250) -->
+  <rect class="node" x="95"  y="95"  width="10" height="10" />  <!-- Node 5 at (100,100) -->
+  <rect class="node" x="295" y="95"  width="10" height="10" />  <!-- Node 6 at (300,100) -->
+  <rect class="node" x="345" y="45"  width="10" height="10" />  <!-- Node 7 at (350,50) -->
+  <rect class="node" x="145" y="45"  width="10" height="10" />  <!-- Node 8 at (150,50) -->
+
+  <!-- Mid–edge nodes -->
+  <rect class="node" x="195" y="295" width="10" height="10" />  <!-- Node 9  at (200,300) -->
+  <rect class="node" x="320" y="270" width="10" height="10" />  <!-- Node 10 at (325,275) -->
+  <rect class="node" x="245" y="245" width="10" height="10" />  <!-- Node 11 at (250,250) -->
+  <rect class="node" x="120" y="270" width="10" height="10" />  <!-- Node 12 at (125,275) -->
+  <rect class="node" x="195" y="95"  width="10" height="10" />  <!-- Node 13 at (200,100) -->
+  <rect class="node" x="320" y="70"  width="10" height="10" />  <!-- Node 14 at (325,75) -->
+  <rect class="node" x="245" y="45"  width="10" height="10" />  <!-- Node 15 at (250,50) -->
+  <rect class="node" x="120" y="70"  width="10" height="10" />  <!-- Node 16 at (125,75) -->
+  <rect class="node" x="95"  y="195" width="10" height="10" />  <!-- Node 17 at (100,200) -->
+  <rect class="node" x="295" y="195" width="10" height="10" />  <!-- Node 18 at (300,200) -->
+  <rect class="node" x="345" y="145" width="10" height="10" />  <!-- Node 19 at (350,150) -->
+  <rect class="node" x="145" y="145" width="10" height="10" />  <!-- Node 20 at (150,150) -->
+
+  <!-- Label the nodes.
+       For clarity we use a simple offset: nodes with x < 200 get labels shifted left,
+       while those with x > 200 get labels shifted right. (You may wish to tweak these.) -->
+  <text class="label" x="80"  y="315">1</text>
+  <text class="label" x="310" y="315">2</text>
+  <text class="label" x="355" y="255">3</text>
+  <text class="label" x="135" y="255">4</text>
+  <text class="label" x="80"  y="105">5</text>
+  <text class="label" x="315" y="105">6</text>
+  <text class="label" x="355" y="50">7</text>
+  <text class="label" x="135" y="50">8</text>
+  <text class="label" x="185" y="315">9</text>
+  <text class="label" x="330" y="280">10</text>
+  <text class="label" x="255" y="255">11</text>
+  <text class="label" x="110" y="280">12</text>
+  <text class="label" x="185" y="105">13</text>
+  <text class="label" x="330" y="80">14</text>
+  <text class="label" x="255" y="50">15</text>
+  <text class="label" x="110" y="80">16</text>
+  <text class="label" x="80"  y="205">17</text>
+  <text class="label" x="310" y="205">18</text>
+  <text class="label" x="355" y="155">19</text>
+  <text class="label" x="135" y="155">20</text>
+</svg>
