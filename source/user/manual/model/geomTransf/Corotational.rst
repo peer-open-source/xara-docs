@@ -32,5 +32,4 @@ This command is used to construct the Corotational coordinate transformation, wh
 
 
 
-| Code Developed by: Remo Magalhaes de Souza 
-| Images Developed by: |silvia|
+Code Developed by: Remo Magalhaes de Souza 

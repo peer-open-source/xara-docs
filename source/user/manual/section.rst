@@ -1,7 +1,7 @@
 .. _section:
 
 Section
-*******
+^^^^^^^
 
 This command is used to construct a Section, which represents force-deformation (or resultant stress-strain) relationships at beam-column and plate sample points.
 

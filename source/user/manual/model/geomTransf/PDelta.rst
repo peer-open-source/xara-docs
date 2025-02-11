@@ -28,5 +28,4 @@ This command is used to construct the P-Delta Coordinate Transformation (PDeltaC
 
    The element coordinate system and joint offset values are specified as in the :ref:`linearTR`.
 
-| Code Developed by: Remo Magalhaes de Souza 
-| Images Developed by: |silvia|
+Code Developed by: Remo Magalhaes de Souza, University of California, Berkeley

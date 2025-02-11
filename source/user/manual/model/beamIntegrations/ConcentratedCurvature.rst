@@ -3,11 +3,12 @@
 ConcentratedCurvature
 ^^^^^^^^^^^^^^^^^^^^^^
 
-This command creates a Concentrated-Plasticity beamIntegration object. This integration places one integration point at each element end, representing the plastic hinge and three elastic-curvature integration points along the elastic segment.
+This command creates a Concentrated-Plasticity beamIntegration. 
+This integration places one integration point at each element end, representing the plastic hinge and three elastic-curvature integration points along the elastic segment.
 
 .. function:: beamIntegration ConcentratedCurvature $integrationTag $secTagI $LpI $secTagJ $LpJ $secTagE
 
-.. function:: beamIntegration('ConcentratedCurvature',integrationTag,secTagI,LpI,secTagJ,LpJ,secTagE)
+.. function:: model.beamIntegration('ConcentratedCurvature',tag,secTagI,LpI,secTagJ,LpJ,secTagE)
 
 .. list-table:: 
    :widths: 10 10 40
