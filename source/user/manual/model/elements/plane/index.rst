@@ -9,8 +9,7 @@ Plane
    Quad
    Tri31
    SSPquad
-   bbarQuad
-   BbarPlaneStrainQuadrilateral
-   EnhancedStrainQuadrilateral
+   MixedQuad
+   EnhancedQuad
    MEFI
 

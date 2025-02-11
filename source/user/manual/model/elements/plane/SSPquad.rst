@@ -4,8 +4,11 @@ SSPquad
 ^^^^^^^
 
 This command is used to construct a SSPquad element. 
-The SSPquad element is a four-node quadrilateral element using physically stabilized single-point integration (SSP --> Stabilized Single Point). The stabilization incorporates an assumed strain field in which the volumetric dilation and the shear strain associated with the the hourglass modes are zero, resulting in an element which is free from volumetric and shear locking. The elimination of shear locking results in greater coarse mesh accuracy in bending dominated problems, and the elimination of volumetric locking improves accuracy in nearly-incompressible problems. Analysis times are generally faster than corresponding full integration elements. The formulation for this element is identical to the solid phase portion of the SSPquadUP element as described by [McGannEtAl2012]_.
-
+The SSPquad element is a four-node quadrilateral element using physically stabilized single-point (SSP) integration. 
+The stabilization incorporates an assumed strain field in which the volumetric dilation and the shear strain associated with the the hourglass modes are zero, resulting in an element which is free from volumetric and shear locking. 
+The elimination of shear locking results in greater coarse mesh accuracy in bending dominated problems, and the elimination of volumetric locking improves accuracy in nearly-incompressible problems. 
+Analysis times are generally faster than corresponding full integration elements. 
+The formulation for this element is identical to the solid phase portion of the SSPquadUP element as described by [McGannEtAl2012]_.
 
 .. function:: element SSPquad $eleTag $iNode $jNode $kNode $lNode $matTag $type $thick <$b1 $b2>
 
@@ -13,12 +16,12 @@ The SSPquad element is a four-node quadrilateral element using physically stabil
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $eleTag	unique integer tag identifying element object
+   $tag, unique integer tag identifying element object
    $iNode $jNode $kNode $lNode, 4 |integer|, the four nodes defining the element input in counterclockwise order (``ndm=2`` and ``ndf=2``)
    $thick, |float|, thickness of the element in out-of-plane direction
    $type, |float|, string to relay material behavior to the element (either ``"PlaneStrain"`` or ``"PlaneStress"``)
    $matTag, |integer|,	unique integer tag associated with previously-defined nDMaterial object
-   $b1 $b2, |float|, constant body forces in global x- and y-directions respectively (optional: default = 0.0)
+   $b1 $b2, |float|, constant body forces in global :math:`x`- and :math:`y`-directions respectively (optional: default = 0.0)
 
 
 .. figure:: quad.png

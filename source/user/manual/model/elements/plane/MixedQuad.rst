@@ -4,13 +4,13 @@
 MixedQuad
 ^^^^^^^^^
 
-This command is used to construct a four-node quadrilateral element object, which uses a bilinear isoparametric formulation along with a mixed volume/pressure B-bar assumption. This element is for plane strain problems only.
+This command is used to construct a four-node quadrilateral element object, which uses a bilinear isoparametric formulation derived against a three field variational principle in :math:`\boldsymbol{u}-p-\vartheta`. 
 
 .. tabs::
 
    .. tab:: Python
 
-      .. function:: model.element("bbarQuad", tag, nodes, section, *args, **kwargs)
+      .. function:: model.element("MixedQuad", tag, nodes, section)
 
          :param tag: integer tag identifying the element
          :param nodes: tuple of integer tags identifying the nodes that form the element
@@ -25,7 +25,7 @@ This command is used to construct a four-node quadrilateral element object, whic
 
    .. tab:: Tcl
 
-      .. function:: element bbarQuad $tag {*}$nodes $thick $matTag
+      .. function:: element bbarQuad $tag {*}$nodes $thick $mat
 
       .. csv-table:: 
          :header: "Argument", "Type", "Description"
@@ -35,6 +35,7 @@ This command is used to construct a four-node quadrilateral element object, whic
          $iNode $jNode $kNode $lNode, |integer|,  four nodes defining element boundaries, input in counter-clockwise order around the element.
          $thick, |float|, element thickness
          $matTag, |integer|, tag of nDMaterial
+
 
 .. note::
 
@@ -47,6 +48,10 @@ The valid :ref:`eleResponse` queries to this element are
 * ``'stresses'`` and 
 * ``'material $matNum matArg1 matArg2 ...'`` Where $matNum refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
 
+Theory 
+------
+
+With four nodes, the element is equivalent to the Q1/P0 formulation. 
 
 Code Developed by: **Edward Love, Sandia National Laboratories**
 

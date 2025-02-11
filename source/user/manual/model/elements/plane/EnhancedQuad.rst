@@ -1,15 +1,12 @@
-.. _quad:
 
-BasicQuad
-^^^^^^^^^
-
-This command is used to construct a BasicQuad element object which uses the standard Lagrange isoparametric formulation.
+EnhancedQuad
+^^^^^^^^^^^^
 
 .. tabs::
 
    .. tab:: Python 
 
-      .. function:: model.element("Quad", tag, nodes, section, [pressure, rho, b1, b2])
+      .. function:: model.element("EnhancedQuad", tag, nodes, section, [pressure, rho, b1, b2])
          :noindex:
 
          :param tag: integer, unique element object tag
@@ -46,38 +43,36 @@ This command is used to construct a BasicQuad element object which uses the stan
          $b1 $b2, |float|, constant body forces defined in the isoparametric domain (optional: default=0.0)
 
 
+Theory 
+------
 
-The valid :ref:`eleResponse` queries to this element are ``'forces'``, ``'stresses'``, and ``'material $matNum matArg1 matArg2 ...'`` where ``$matNum`` refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
+This element implements the Q1/E4 assumed strain interpolation. The formulation 
+is generally credited to Taylor, Beresford, and Wilson (1976) [1]_. A variational basis 
+for the formulation is given by Simo and Rifai (1990) [2]_.
 
-Consistent nodal loads are computed from the pressure and body forces.
+.. math::
 
+    \mathbf{M}_{\xi}=\left[\begin{array}{llll}
+    \xi & 0 & 0 & 0 \\
+    0 & \eta & 0 & 0 \\
+    0 & 0 & \xi & \eta
+    \end{array}\right]
 
-.. figure:: quad.png
-   :align: center
-   :figclass: align-center
+For linear-elastic response, the formulation is equivalent to a Hellinger-Reissner element [3]_ with interpolation 
 
-   Quad element node numbering
+.. math::
 
-
-Example
--------
-
-The following example constructs a quad element for use in a plane stress problem with tag **1** between nodes **1, 2, 3, 4** with an nDMaterial of tag **1**.
-
-1. **Tcl Code**
-
- .. code-block:: tcl
-
-    element quad 1 1 2 3 4 "PlaneStress" 1 
-
-2. **Python Code**
-
- .. code-block:: python
-
-    model.element("quad",1, (1,2,3,4), (1.0, "PlaneStress", 1), (b1, b2, b3))
+    \mathbf{P}_{\xi}=\left[\begin{array}{cccccccc}
+    1 & 0 & 0 & \eta & 0 & \xi \eta & 0 & 0 \\
+    0 & 1 & 0 & 0 & \xi & 0 & \xi \eta & 0 \\
+    0 & 0 & 1 & 0 & 0 & 0 & 0 & \xi \eta
+    \end{array}\right]
 
 
+References 
+----------
 
-
-Code Developed by: |mhs|
-
+.. [1] Taylor, R. L., Beresford, P. J., and Wilson, E. L. (1976). A nonconforming element for stress analysis. International Journal for Numerical Methods in Engineering, 10(6), 1211-1219.
+.. [2] Simo, J. C., and Rifai, M. S. (1990). A class of mixed assumed strain methods and the method of incompatible modes. International Journal for Numerical Methods in Engineering, 29(8), 1595-1638.
+.. [3] U. Andelfinger, E. Ramm (1993). EAS-elements for two-dimensional, three-dimensional, plate and shell structures and their equivalence to HR-elements.  https://doi.org/10.1002/nme.1620360805
+.. [4] Armero, F (2008). Assumed strain finite element methods for conserving temporal integrations in non-linear solid dynamics. https://doi.org/10.1002/nme.1620330705

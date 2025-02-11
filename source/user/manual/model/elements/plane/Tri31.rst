@@ -4,7 +4,6 @@ Triangle
 
 This command is used to construct a constant strain triangular element (``Tri31``) which uses three nodes and one integration points.
 
-
 .. function:: model.element("Tri31", tag, nodes, section, [pressure, rho, b1, b2])
    :noindex:
 
