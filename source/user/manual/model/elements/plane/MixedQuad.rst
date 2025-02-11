@@ -52,6 +52,7 @@ Theory
 ------
 
 With four nodes, the element is equivalent to the Q1/P0 formulation. 
+This formulation is suitable for nearly-incompressible response, but is not suitable for bending dominated problems.
 
 Code Developed by: **Edward Love, Sandia National Laboratories**
 
