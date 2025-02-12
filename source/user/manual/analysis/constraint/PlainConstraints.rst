@@ -1,5 +1,5 @@
-Plain Constraint Handler
-^^^^^^^^^^^^^^^^^^^^^^^^
+Plain Constraints
+^^^^^^^^^^^^^^^^^
 
 This command is used to construct a Plain constraint handler. A plain constraint handler can only enforce homogeneous single point constraints (fix command) and multi-point constraints constructed where the constraint matrix is equal to the identity (equalDOF command). The following is the command to construct a plain constraint handler:
 
@@ -27,7 +27,7 @@ It does not follow constraints, by that we mean the constrained node in a MP_Con
 
    .. code-block:: python
 
-      constraints('Plain')
+      model.constraints('Plain')
 
 
 Code Developed by: |fmk|

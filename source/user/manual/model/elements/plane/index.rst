@@ -11,5 +11,4 @@ Plane
    SSPquad
    MixedQuad
    EnhancedQuad
-   MEFI
 

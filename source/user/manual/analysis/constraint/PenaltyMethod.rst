@@ -1,5 +1,5 @@
-Penalty Method
-^^^^^^^^^^^^^^
+Penalty
+^^^^^^^
 
 This command is used to construct a PenaltyMethod constraint handler, which enforces the constraints by using the penalty method. The following is the command to construct such a constraint handler:
 
@@ -16,9 +16,10 @@ This command is used to construct a PenaltyMethod constraint handler, which enfo
 .. warning::
    The degree to which the constraints are enforced is dependent on the penalty values chosen. Problems can arise if these values are too small (constraint not enforced strongly enough) or too large (problems associated with conditioning of the system of equations).
 
-.. admonition:: Example 
+Example 
+-------
 
-   The following example shows how to construct a Penalty Method constraint handler
+The following example shows how to construct a Penalty Method constraint handler
 
    1. **Tcl Code**
 
@@ -31,6 +32,6 @@ This command is used to construct a PenaltyMethod constraint handler, which enfo
 
    .. code-block:: python
 
-      numberer('Penalty', 1.0e10, 1.0e10)
+      model.numberer('Penalty', 1.0e10, 1.0e10)
 
 Code Developed by: |fmk|

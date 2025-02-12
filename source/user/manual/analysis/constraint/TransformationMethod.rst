@@ -1,5 +1,5 @@
-Transformation Method
-^^^^^^^^^^^^^^^^^^^^^
+Transformation
+^^^^^^^^^^^^^^
 
 This command is used to construct a ``TransformationMethod`` constraint handler, which enforces the constraints by using the transformation method,  also known as static condensation method. The following is the command to construct such a constraint handler:
 
@@ -13,9 +13,10 @@ Great care must be taken when multiple constraints are being enforced as the tra
 
       2. If multiple nodes are constrained, make sure that the retained node is not constrained in any other constraint.
 
-.. admonition:: Example 
+Example
+-------
 
-   The following example shows how to construct a transformation constraint handler
+The following example shows how to construct a transformation constraint handler
 
    1. **Tcl Code**
 

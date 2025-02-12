@@ -4,7 +4,7 @@
 MixedQuad
 ^^^^^^^^^
 
-This command is used to construct a four-node quadrilateral element object, which uses a bilinear isoparametric formulation derived against a three field variational principle in :math:`\boldsymbol{u}-p-\vartheta`. 
+This command is used to construct a four-node quadrilateral element, which uses a bilinear isoparametric interpolation, derived against a three field variational principle in :math:`\boldsymbol{u}-p-\vartheta`. 
 
 .. tabs::
 

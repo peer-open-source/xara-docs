@@ -1,5 +1,5 @@
-Lagrange Multipliers
-^^^^^^^^^^^^^^^^^^^^
+Lagrange
+^^^^^^^^
 
 This command is used to construct a LagrangeMultiplier constraint handler, which enforces the constraints by introducing Lagrange multipliers to the system of equation. The following is the command to construct a plain constraint handler:
 
@@ -14,11 +14,13 @@ This command is used to construct a LagrangeMultiplier constraint handler, which
 
 .. warning::
 
-   The Lagrange multiplier method introduces new unknowns to the system of equations. The diagonal part of the system corresponding to these new unknowns is 0.0. This ensure that the system **IS NOT** symmetric positive definite and so do not use a positive definite solver.
+   The Lagrange multiplier method introduces new unknowns to the system of equations. The diagonal part of the system corresponding to these new unknowns is 0.0. 
+   This ensure that the system **IS NOT** symmetric positive definite and so do not use a positive definite solver.
 
-.. admonition:: Example 
+Example 
+-------
 
-   The following example shows how to construct a Lagrange constraint handler
+The following example shows how to construct a Lagrange constraint handler
 
    1. **Tcl Code**
 
@@ -31,7 +33,7 @@ This command is used to construct a LagrangeMultiplier constraint handler, which
 
    .. code-block:: python
 
-      numberer('Lagrange')
+      model.numberer('Lagrange')
 
 Code Developed by: |fmk|
 
