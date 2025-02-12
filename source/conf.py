@@ -22,7 +22,7 @@ numfig_secnum_depth = 3
 project = 'OpenSeesRT'
 copyright = '2025, The Regents of the University of California'
 #author = 'Frank McKenna, Michael Scott, Pedro Arduino, Minjie Zhu'
-html_logo = 'OpenSeesLogo.png'
+html_logo = 'OpenSeesLogoRT.svg'
 
 master_doc = 'index'
 html_extra_path = ["robots.txt"]
@@ -68,6 +68,7 @@ rst_prolog = """
 extensions = [
     'toctree_filter',
 #   'sphinx_rtd_theme',
+    'sphinx_copybutton',
     'sphinx_tabs.tabs',
     'sphinxcontrib.bibtex',
     'sphinx_sitemap'

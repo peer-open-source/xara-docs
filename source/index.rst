@@ -1,6 +1,3 @@
-========
-OpenSees
-========
 
 Welcome to the STAIRLab's OpenSees documentation.
 

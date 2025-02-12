@@ -3,5 +3,6 @@ sphinx_rtd_theme>=3.0.0
 pydata-sphinx-theme
 sphinx-tabs
 sphinx-sitemap
+sphinx-copybutton
 sphinxcontrib-bibtex
 
