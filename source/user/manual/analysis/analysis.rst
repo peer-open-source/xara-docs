@@ -1,8 +1,8 @@
 
 .. _analysis:
 
-analysis Command
-****************
+analysis
+^^^^^^^^
 
 This is the command issued to create an analysis.
 
@@ -10,7 +10,7 @@ This is the command issued to create an analysis.
 
    .. tab:: Python
 
-      .. function:: analysis(type, *args)
+      .. function:: model.analysis(type, *args)
 
    .. tab:: Tcl
 

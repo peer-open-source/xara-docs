@@ -38,6 +38,8 @@ OpenSees provides detailed control over several additional aspects of the analys
    analysis/system
    analysis/test
    analysis/eigen
+
+..
    analysis/modalProperties
    analysis/responseSpectrumAnalysis
 
