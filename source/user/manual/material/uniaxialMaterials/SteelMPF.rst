@@ -1,4 +1,0 @@
-.. _SteelMPF:
-
-SteelMPF Material
-^^^^^^^^^^^^^^^^

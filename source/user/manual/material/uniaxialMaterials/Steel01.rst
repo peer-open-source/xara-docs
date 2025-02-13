@@ -15,10 +15,10 @@ This command is used to construct a uniaxial bilinear steel material object with
          :param float fy: yield strength
          :param float E0: initial elastic tangent
          :param float b: strain-hardening ratio (ratio between post-yield tangent and initial elastic tangent)
-         :param float a1: optional: isotropic hardening parameter: increase of compression yield envelope as proportion of yield strength after a plastic strain of $a2*($Fy/E0).
-         :param float a2: optional: isotropic hardening parameter (see explanation under $a1)
-         :param float a3: optional: isotropic hardening parameter: increase of tension yield envelope as proportion of yield strength after a plastic strain of $a4*($Fy/E0)
-         :param float a4: optional: isotropic hardening parameter (see explanation under $a3)
+         :param float a1: optional: isotropic hardening parameter: increase of compression yield envelope as proportion of yield strength after a plastic strain of ``a2*(fy/E0)``.
+         :param float a2: optional: isotropic hardening parameter (see explanation under ``a1``)
+         :param float a3: optional: isotropic hardening parameter: increase of tension yield envelope as proportion of yield strength after a plastic strain of ``a4*(Fy/E0)``
+         :param float a4: optional: isotropic hardening parameter (see explanation under ``a3``)
 
    .. tab:: Tcl
 
@@ -82,6 +82,6 @@ This command is used to construct a uniaxial bilinear steel material object with
 
    .. code-block:: python
 
-      uniaxialMaterial('Steel01',60.0,30000.0)
+      model.uniaxialMaterial('Steel01',60.0,30000.0)
 
-Code Developed by: |mhs|
+Code Developed by: |fcf|, |mhs|

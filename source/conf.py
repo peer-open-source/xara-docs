@@ -50,6 +50,8 @@ rst_prolog = """
 .. |mhs| replace:: `Michael H. Scott`_
 .. _Michael H. Scott: https://cce.oregonstate.edu/scott
 .. |fmk| replace:: **fmk**
+.. |fcf| replace:: **fcf**
+.. |cmp| replace:: **cmp**
 .. |pedro| replace:: `Pedro Arduino`_
 .. _Pedro Arduino: https://www.ce.washington.edu/facultyfinder/pedro-arduino
 .. |peter| replace:: `Peter Mackenzie-Helnwein`_
@@ -60,7 +62,7 @@ rst_prolog = """
 .. |silvia| replace:: `Silvia Mazzoni`_
 .. _`Silvia Mazzoni`: https://www.silviasbrainery.com/
 .. |csasj| replace:: **csasj**
-"""    
+"""
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
