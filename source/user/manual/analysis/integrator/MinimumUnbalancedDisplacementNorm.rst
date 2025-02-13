@@ -45,4 +45,4 @@ The load increment at iteration i, :math:`d\lambda_{1,i}` is related to load inc
 References
 ----------
 
-* S. L. Chan, “Geometric and Material Non-Linear Analysis of Beam-Columns and Frames Using the Minimum Residual Displacement Method,”  International Journal for Numerical Methods in Engineering, Vol. 26, No. 12, 1988, pp. 2657-2669.  doi:10.1002/nme.1620261206
+.. [1]  SL Chan, "Geometric and Material Non-Linear Analysis of Beam-Columns and Frames Using the Minimum Residual Displacement Method,"  International Journal for Numerical Methods in Engineering, Vol. 26, No. 12, 1988, pp. 2657-2669.  doi: `10.1002/nme.1620261206 <https://doi.org/10.1002/nme.1620261206>`_

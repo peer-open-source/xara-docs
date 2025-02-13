@@ -1,4 +1,3 @@
-
 .. _analysis:
 
 analysis
@@ -63,7 +62,7 @@ The following example shows how to construct a Static analysis.
 
 .. code:: python
 
-   model.system("SuperLU");
+   model.system("SuperLU")
    model.constraints("Transformation")
    model.numberer("RCM")
    model.test("NormDispIncr", 1.0e-12, 10, 3)
