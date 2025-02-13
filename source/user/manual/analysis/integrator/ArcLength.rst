@@ -9,12 +9,10 @@ Arc-Length Control
       
       .. py:function:: model.integrator("ArcLength", s, alpha, det=False, exp=0.0, iterScale=1.0)
       
-         :param s: the arc-Length
-         :type s: float
-         :param alpha:  a scaling factor on the reference loads.
-         :type alpha: float
-         :param det: |bool|, use the determinant to choose incrementation sign.
-         :param exp: |float|
+         :param float s: the initial arc-Length
+         :param float alpha:  a scaling factor on the reference loads.
+         :param bool det:  if True, use the determinant to choose incrementation sign [1]_.
+         :param float exp: exponent parameter from [1]_
          :param iterScale: |float|, a scaling factor on the arc-length incrementation.
 
    .. tab::Tcl
@@ -68,3 +66,8 @@ Examples
 .. code-block:: tcl
 
    integrator ArcLength 1 -exp 0.5
+
+References
+----------
+
+.. [1] Clarke, M.J. and Hancock, G.J. (1990) ‘A study of incremental‐iterative strategies for non‐linear analyses’, International Journal for Numerical Methods in Engineering, 29(7), pp. 1365–1391. Available at: https://doi.org/10.1002/nme.1620290702 .
