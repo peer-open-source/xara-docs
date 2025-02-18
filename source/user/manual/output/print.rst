@@ -1,36 +1,40 @@
 .. print_
 
 ``print``
-*********
+^^^^^^^^^
 
-This command is used to print output to screen or file. There are a number of
+This command is used to print information about a :class:`Model`.
 
-To print all objects of the domain to a file
+.. tabs::
 
-..function:: print <-JSON> <-file $fileName> 
+   .. tab:: Python
+      
+      .. py:function:: model.print([node, ele])
+   
+   .. tab:: Tcl
+      
+      .. function:: print <-file $fileName> [-node|-ele] <-flag $flag > {*}$tags
+  
+         $fileName    (optional) name of file to which data will be sent. overwrites existing file. default is to print to stderr)
+         $flag	     integer flag to be sent to the print() method, depending on the node and element type (optional)
+         $node1 $node2 ..     (optional) integer tags of nodes to be printed. default is to print all.
+         $ele1 $ele2 ..	     (optional) integer tags of elements to be printed. default is to print all.
 
-To print all objects of the domain to a JSON file:
 
-.. function:: print -JSON -file $fileName
 
-To print node information:
 
-.. function:: print <-file $fileName> -node <-flag $flag> <$node1 $node2 ...>
-
-To print element information:
-
-.. function:: print <-file $fileName> -ele <-flag $flag> <$ele1 $ele2 ...>
-
-   $fileName    (optional) name of file to which data will be sent. overwrites existing file. default is to print to stderr)
-   $flag	     integer flag to be sent to the print() method, depending on the node and element type (optional)
-   $node1 $node2 ..     (optional) integer tags of nodes to be printed. default is to print all.
-   $ele1 $ele2 ..	     (optional) integer tags of elements to be printed. default is to print all.
-
-EXAMPLE:
+Examples
+--------
 
 .. code:: tcl
 
-  print -ele; # print all elements
+   print -ele; # print all elements
 
-  print -node 1 2 3; # print data for nodes 1,2 & 3
+   print -node 1 2 3; # print data for nodes 1,2 & 3
+
+.. code:: Python
+
+   model.print(ele=True)  # print all elements
+
+   model.print(node=(1, 2, 3))  # print data for nodes 1,2 & 3
 
