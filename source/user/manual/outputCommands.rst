@@ -24,4 +24,5 @@ These methods are used to output results. OpenSees unlike other finite element a
    output/nodeVel
    output/nodeAccel
    output/nodeCoord   
+   output/nodeRotation
 
