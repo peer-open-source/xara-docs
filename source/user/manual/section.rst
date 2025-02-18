@@ -59,16 +59,16 @@ The following section types are valid for :ref:`shells`:
    section/ShellFiber
    section/ElasticShell
 
-.. toctree::
-   :maxdepth: 1
-
-   section/PlateFiberSection
-   section/Isolator2springSection
-   section/ReinforcedConcreteLayeredMembraneSection
-   section/LayeredMembraneSection
-   section/ASDCoupledHinge3D
 
 ..
-   section/ParallelSection
-   section/SectionAggregator
-   section/UniaxialSection
+   .. toctree::
+      :maxdepth: 1
+   
+      section/PlateFiberSection
+      section/Isolator2springSection
+      section/ReinforcedConcreteLayeredMembraneSection
+      section/LayeredMembraneSection
+      section/ASDCoupledHinge3D
+      section/ParallelSection
+      section/SectionAggregator
+      section/UniaxialSection
