@@ -17,3 +17,10 @@ All frame elements are constructed with the form
    PrismFrame
    MixedFrame
    ExactFrame
+
+Loads include
+
+.. toctree::
+   maxdepth: 1
+
+   FrameLoad
