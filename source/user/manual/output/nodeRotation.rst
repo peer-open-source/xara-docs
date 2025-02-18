@@ -19,3 +19,14 @@ nodeRotation
    
          :param int tag: The tag of the :ref:`node`
 
+
+This method is used to obtain the current rotation state of a node during an analysis with finite rotations.
+Rotations are represented with `quaternions <https://en.wikipedia.org/wiki/Quaternion>`_. 
+Note that by convention, the *scalar* part of the quaternion is stored at the *end* of the returned list.
+
+This method can be used with the `veux <https://veux.io>`_ package to visualize 3D cross sectional deformations in
+frame elements, as demonstrated with `this <https://gallery.stairlab.io/examples/framecircle/>`_ example.
+
+
+This method is available in ``sees`` version ``0.1.15``.
+
