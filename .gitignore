@@ -278,4 +278,4 @@ build/
 __pycache__
 #*#
 build
-*.fig
+*.fig.DS_Store
