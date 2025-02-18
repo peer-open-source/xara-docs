@@ -28,5 +28,12 @@ This method can be used with the `veux <https://veux.io>`_ package to visualize 
 frame elements, as demonstrated with `this <https://gallery.stairlab.io/examples/framecircle/>`_ example.
 
 
+.. note::
+
+   In small deformation analysis, rotations are typically obtained using :ref:`nodeDisp`. However,
+   when finite rotations are involved, these values cannot be used reliably. This is because the
+   values returned by ``nodeDisp`` are defined as the algebraic sum of all increments to the solution;
+   this is not valid for finite 3D rotations.
+
 This method is available in ``sees`` version ``0.1.15``.
 
