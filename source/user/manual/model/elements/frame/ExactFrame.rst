@@ -59,6 +59,10 @@ as follows:
   non-vectorial configuration space, and consequently may exhibit minor 
   path-dependence.
 
+.. note::
+
+   This element always employs a Gauss-Legendre quadrature of order ``nen-1`` for an element with ``nen`` nodes, and does not accept user-defined quadrature schemes.
+
 Example 
 -------
 

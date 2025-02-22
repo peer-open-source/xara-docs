@@ -59,4 +59,13 @@ of **5.5**, Young's modulus :math:`E` of **100.0** and an Iz of **1e6** which us
       model.element("PrismFrame", 1, (2, 4), 5.5, 100.0, 1.0e6, 9)
 
 
+Theory
+------
+
+Warping
+=======
+
+@baigent1982structural
+
+
 Code developed by: `Claudio M. Perez <https://github.com/claudioperez>`_ (University of California, Berkeley).
