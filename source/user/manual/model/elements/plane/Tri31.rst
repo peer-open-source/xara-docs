@@ -23,7 +23,7 @@ This command is used to construct a constant strain triangular element (``Tri31`
    :param b2: constant body forces defined in the domain (optional, default=0.0)
 
 
-The valid queries to a Tri31 element when creating an ElementRecorder object are 
+The valid queries to a Tri31 element through :ref:`eleResponse` are 
 
 #. ``"forces"``, 
 #. ``"stresses"``, and 
