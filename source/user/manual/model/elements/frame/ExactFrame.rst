@@ -59,6 +59,9 @@ as follows:
   non-vectorial configuration space, and consequently may exhibit minor 
   path-dependence.
 
+As of ``sees`` version ``0.1.15``, the ``ExactFrame`` element can be used to model cross-sectional warping through an additional seventh degree of freedom.
+This feature is implemented through template metaprogramming and consequently incurs absolutely no overhead on standard six-degree-of-freedom simulations.
+
 .. note::
 
    This element always employs a Gauss-Legendre quadrature of order ``nen-1`` for an element with ``nen`` nodes, and does not accept user-defined quadrature schemes.
@@ -83,6 +86,7 @@ The following example demonstrates the command to create an **ExactFrame** eleme
          model.element('ExactFrame', 1, (1, 2), section=1, transform=1)
 
 
+
 References
 ==========
 
@@ -91,6 +95,7 @@ References
 .. [2] Antman, S.S. (2005) Nonlinear problems of elasticity. 2nd ed. New York: Springer (Applied mathematical sciences, v. 107).
 
 .. [3] Perez, C.M. and Filippou, F.C. (2024) ‘On nonlinear geometric transformations of finite elements’, International Journal for Numerical Methods in Engineering, p. e7506. Available at: https://doi.org/10.1002/nme.7506.
+
 
 Code developed by: `Claudio M. Perez <https://github.com/claudioperez>`_ (University of California, Berkeley).
 
