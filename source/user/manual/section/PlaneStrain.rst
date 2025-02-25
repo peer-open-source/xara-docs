@@ -27,4 +27,13 @@ The plane strain condition is characterized by the constraints:
 Example
 =======
 
+.. code-block:: Python
+
+   model = ops.Model(ndm=2, ndf=2)
+
+   model.material("ElasticIsotropic", 1, E=29e3, v=0.3)
+   model.section("PlaneStrain", 1, 1, 2.5)
+
+A complete example is available at the STAIRLab `gallery <https://gallery.stairlab.io/examples/example6/>`_.
+
 
