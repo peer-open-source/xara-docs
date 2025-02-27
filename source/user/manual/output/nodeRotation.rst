@@ -31,9 +31,10 @@ frame elements, as demonstrated with `this <https://gallery.stairlab.io/examples
 .. note::
 
    In small deformation analysis, rotations are typically obtained using :ref:`nodeDisp`. However,
-   when finite rotations are involved, these values cannot be used reliably. This is because the
+   when large rotations are involved, these values cannot be used reliably. This is because the
    values returned by ``nodeDisp`` are defined as the algebraic sum of all increments to the solution;
-   this is not valid for finite 3D rotations.
+   this is not valid for 3D rotational degrees of freedom.
+
 
 This method is available in ``sees`` version ``0.1.15``.
 

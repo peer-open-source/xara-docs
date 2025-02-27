@@ -24,3 +24,14 @@ Loads include
    maxdepth: 1
 
    FrameLoad
+
+Theory
+------
+
+A frame element represents a directed medium with a single characteristic coordinate :math:`\xi`.
+The embedding in space is described by:
+
+* A vector field :math:`\boldsymbol{x}(\xi)` identifying positions in space,
+* A rotation field :math:`\boldsymbol{\Lambda}(\xi)`, and
+* A vector field :math:`\boldsymbol{\alpha}(\xi)` identifying cross-sectional warping.
+

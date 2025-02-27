@@ -59,6 +59,8 @@ as follows:
   non-vectorial configuration space, and consequently may exhibit minor 
   path-dependence.
 
+The ``ExactFrame`` formulation is appropriate for a wide variety of structural members including thin-walled sections, asymmetric sections, and inelasticity.
+
 As of ``sees`` version ``0.1.15``, the ``ExactFrame`` element can be used to model cross-sectional warping through an additional seventh degree of freedom.
 This feature is implemented through template metaprogramming and consequently incurs absolutely no overhead on standard six-degree-of-freedom simulations.
 

@@ -11,6 +11,11 @@ The **ElasticFrame** section implements a general linear elastic frame section.
 
       .. function:: model.section("ElasticFrame", tag, **kwds)
 
+         :param E: Young's modulus
+         :param A: cross sectional area
+         :param J: Torsion constant
+         :param Im: density weighted polar moment of inertia
+
 
    .. tab:: Tcl
 
