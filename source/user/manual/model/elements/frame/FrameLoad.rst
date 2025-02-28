@@ -3,7 +3,8 @@ FrameLoad
 
 .. function:: model.applied("FrameLoad", distr, n, [r, m], /, basis, shape)
 
-   :param distr: string defining the distribution of the load. Options are ``"Dirac"`` and ``"Heaviside"``
+   :param distr: key defining the distribution of the load. Options are ``"Dirac"`` and ``"Heaviside"``
+   :type distr: str 
    :param n: force values 
    :param basis: string defining the coordinate basis of the load arguments ``n`` and ``m``. Options are ``"local"``, ``"global"``, and ``"director"``
 
