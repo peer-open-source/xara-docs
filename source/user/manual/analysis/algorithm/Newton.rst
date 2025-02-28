@@ -32,30 +32,43 @@ The Newton method used in finite element analysis is identical to that taught in
 
 The Taylor series of :math:`r(x)` about the point :math:`x=x_n+\Delta x` is given by
 
-:math:`f(x_n+\Delta x) = f(x_n)+r^{'}(x_n)\Delta x + 1/2r^{}(x_n) \Delta x^2+....`
+.. math::
+   
+   f(x_n+\Delta x) = f(x_n)+r^{'}(x_n)\Delta x + 1/2r^{}(x_n) \Delta x^2+....
 
 Keeping terms only to first order,
 
-:math:`f(x_n+\Delta x) \approx f(x_n)+r^{'}(x_n)\Delta x = f(x_n)+ \frac{df(x_n)}{dx}\Delta x`
+.. math::
+   
+   f(x_n+\Delta x) \approx f(x_n)+r^{'}(x_n)\Delta x = f(x_n)+ \frac{df(x_n)}{dx}\Delta x
 
 and since at the root we wish to find :math:`x_n + \Delta x`, the function equates to 0, i.e. :math:`f(x_n+\Delta x) = 0`, we can solve for an approximate :math:`\Delta x`
 
-:math:`\Delta x \approx -\frac{f(x_n)}{f^{'}(x_n)} = - \frac{df(x_n)}{dx}^{-1}f(x_n)`
+.. math::
+   
+   \Delta x \approx -\frac{f(x_n)}{f^{'}(x_n)} = - \frac{df(x_n)}{dx}^{-1}f(x_n)
 
 The Newmark method is thus an iterative method in which, starting at a good initial guess :math:`x_0` we keep iterating until our convergence criteria is met with the following:
 
-:math:`\Delta x = - \frac{df(x_n)}{dx}^{-1}f(x_n)`
+.. math::
+   
+   \Delta x = - \frac{df(x_n)}{dx}^{-1}f(x_n)
 
-:math:`x_{n+1} = x_n + \Delta x`
+.. math::
+   
+   x_{n+1} = x_n + \Delta x
 
 The method is generalized to :math:`n` unknowns by replacing the above scalar equations with matrix ones.
 
-:math:`R(U_n+\Delta x) = R(U_n)+\frac{\partial R(U_n)}{\partial U} \Delta U + O(\Delta U ^2) `
+.. math::
+   
+   R(U_n+\Delta x) = R(U_n)+\frac{\partial R(U_n)}{\partial U} \Delta U + O(\Delta U^2)
+
 The matrix :math:`\frac{\partial R(U_n)}{\partial U}` is called the system Jacobian matrix and will be denoted :math:`\boldsymbol{K}`:
 
 .. math::
 
-   `K = \frac{\partial R(U_n)}{\partial U}\,\!
+   `\boldsymbol{K} = \frac{\partial R(U_n)}{\partial U}
 
 resulting in our iterative procedure where starting from a good initial guess we iterate until our convergence criteria is met with the following:
 
@@ -70,19 +83,21 @@ resulting in our iterative procedure where starting from a good initial guess we
 Example
 -------
 
-   The following examples demonstrate the command to create a Linear solution algorithm.
+The following examples demonstrate the command to create a Linear solution algorithm.
 
-   1. **Tcl Code**
+.. tabs::
 
-   .. code-block:: tcl
+   .. tab:: Tcl
 
-      algorithm Newton
+      .. code-block:: tcl
 
-   2. **Python Code**
+         algorithm Newton
 
-   .. code-block:: python
+   .. tab:: Python
 
-      model.algorithm('Newton')
+      .. code-block:: python
+
+         model.algorithm('Newton')
 
 
 Code Developed by: |fmk|

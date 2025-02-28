@@ -3,7 +3,7 @@
 Section
 ^^^^^^^
 
-This command is used to construct a Section, which represents force-deformation (or resultant stress-strain) relationships at beam-column and plate sample points.
+This command is used to construct a Section, which represents a constitutive model between stress and strain *resultants*.
 
 .. tabs::
 
@@ -30,9 +30,10 @@ This command is used to construct a Section, which represents force-deformation 
          $secArgs, |list|,        a list of material arguments with number dependent on section type
 
 
-The type of section created and the additional arguments required depends on the ``type`` provided in the command.
+Library
+-------
 
-The following contain information about ``type`` and the ``args`` required for each of the available section types:
+The following section types are valid for :ref:`frame` elements:
 
 .. toctree::
    :maxdepth: 1

@@ -29,6 +29,7 @@ These are organized as follows:
    :maxdepth: 1   
 
    manual/modeling
+   manual/meshing/index
    manual/analysisCommands
    manual/outputCommands
    manual/miscCommands

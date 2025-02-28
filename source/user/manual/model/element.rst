@@ -1,7 +1,7 @@
 .. _element:
 
-Elements
-********
+Element
+*******
 
 This method is used to construct an element and add it to the :class:`Model`. 
 

@@ -1,7 +1,15 @@
 FrameLoad
 =========
 
-.. function:: model.applied("FrameLoad", n, [r, m], /, pattern, basis, shape)
+.. function:: model.applied("FrameLoad", distr, n, [r, m], /, basis, shape)
+
+   :param distr: string defining the distribution of the load. Options are ``"Dirac"`` and ``"Heaviside"``
+   :param n: force values 
+   :param basis: string defining the coordinate basis of the load arguments ``n`` and ``m``. Options are ``"local"``, ``"global"``, and ``"director"``
+
+
+Theory
+------
 
 .. math::
 
@@ -21,27 +29,11 @@ where
 
 
 ``Dirac``
-=========
+---------
 
 :math:`P_i = \delta(x - x_i)` so that :math:`\boldsymbol{p}_I = N_I(x_i) \boldsymbol{p}_i`
 
 
 ``Heaviside``
-=============
-
-
-Let $\left\{\xi_i, w_i\right\}$ be your standard quadrature nodes and weights on $[0,1]$. You define the new variable $x$ by an affine transformation:
-
-$$
-x=r+(1-r) \xi
-$$
-
-which maps $\xi=0$ to $x=r$ and $\xi=1$ to $x=1$.
-The differential transforms as:
-
-$$
-d x=(1-r) d \xi
-$$
-
-so the weights must be scaled by $(1-r)$.
+-------------
 
