@@ -37,14 +37,20 @@ This command is used to construct an *ElasticIsotropic* material.
 Theory
 ------
 
-A linear isotropic function can be expressed in terms of two parameters :math:`\lambda` and :math:`\mu` as follows :cite:p:`gurtin1981introduction`:
+The formulation of the Elastic Isotropic material is often referred to as the *Saint Venant–Kirchhoff model*.
+Any linear isotropic function can be expressed in terms of two parameters :math:`\lambda` and :math:`\mu` as follows :cite:p:`gurtin1981introduction`:
 
 .. math::
 
    \boldsymbol{S} = \lambda \text{tr}(\boldsymbol{E}) \boldsymbol{1} + 2\mu \boldsymbol{E}
 
+However, a more common representation of the model is in terms of the compression modulus :math:`K` and the shear modulus :math:`\mu`:
 
+.. math::
 
+   \boldsymbol{S} = K \text{tr}(\boldsymbol{E}) \boldsymbol{1} + 2\mu \operatorname{dev}\boldsymbol{E}
+
+where :math:`\operatorname{dev}\boldsymbol{E}` is the deviatoric part of the strain tensor :math:`\boldsymbol{E}`.
 
 Code Developed by: |mhs|
 
