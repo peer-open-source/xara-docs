@@ -22,7 +22,7 @@ This command is used to obtain state information from an element.
          $tag, |integer|, integer tag identifying element
          $args,  |list|, list of the arguments
 
-The quantities that can be obtained from the element are the same as that whcih can be obtained using the :ref:`elementRecorder`. Note:
+The quantities that can be obtained from the element are the same as that which can be obtained using the :ref:`elementRecorder`. Note:
 
 #. The values obtained are for the *current* state of the element. 
 #. The arguments are specific to the type of element being used and are the same as those that are used in :ref:`elementRecorder`.
