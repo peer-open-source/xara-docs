@@ -3,7 +3,8 @@
 Orthotropic Material Wrapper
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This command is used to construct an Orthotropic material object. It is a wrapper that can convert any 3D (Linear or Nonlinear) constitutive model to an orthotropic one.
+This command is used to construct an Orthotropic material. 
+It is a wrapper that can convert any 3D (Linear or Nonlinear) constitutive model to an orthotropic one.
 
 .. function:: nDMaterial Orthotropic $matTag $theIsoMatTag $Ex $Ey $Ez $Gxy $Gyz $Gzx $vxy $vyz $vzx $Asigmaxx $Asigmayy $Asigmazz $Asigmaxyxy $Asigmayzyz $Asigmaxzxz
 
@@ -44,7 +45,7 @@ Usage Notes
       :align: center
       :figclass: align-center
 
-   1. **Python Code**
+  1. **Python Code**
 
    .. code-block:: python
 

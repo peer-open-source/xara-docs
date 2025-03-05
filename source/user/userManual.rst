@@ -2,7 +2,7 @@
 Manual
 ******
 
-The :ref:`Model <modelClass>` class encapsulates a finite element analysis in OpenSees. 
+The :ref:`Model <modelClass>` class encapsulates a finite element analysis in *xara*. 
 The simplest way to create a model is by using its constructor:
 
 .. code:: Python

@@ -1,8 +1,8 @@
 
 .. _steelfracturedi:
 
-SteelFractureDI Material
-^^^^^^^^^^^^^^^^
+SteelFractureDI
+^^^^^^^^^^^^^^^
 
 This command is used to construct a uniaxial Giuffre-Menegotto-Pinto steel material object similar to Steel02 but equipped with a real-time stress-based fracture criterion and a post-fracture constitutive law to simulate the behavior of steel flates after fracture.
 

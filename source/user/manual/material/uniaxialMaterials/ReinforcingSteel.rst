@@ -1,4 +1,4 @@
 .. _ReinforcingSteel:
 
-Reinforcing Steel Material
-^^^^^^^^^^^^^^^^
+Reinforcing Steel
+^^^^^^^^^^^^^^^^^

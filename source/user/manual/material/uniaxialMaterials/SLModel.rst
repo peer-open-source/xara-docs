@@ -37,9 +37,6 @@ This command is used to construct a material based on the Suzuki and Lignos mode
    
    (-) means that the parameter is unitless
 
-.. [SuzukiAndLignos2020] Suzuki, Y., Lignos, D. G. (2020). "Fiber-based hysteretic model for simulating strength and stiffness deterioration of steel hollow structural section columns under cyclic loading." Earthquake Engineering & Structural Dynamics 49 (15): 1702–20. https://doi.org/10.1002/eqe.3324.
-
-
 .. _fig-SLModel:
 
 .. figure:: figures/SLModel/SLModel.jpg
@@ -60,9 +57,11 @@ This command is used to construct a material based on the Suzuki and Lignos mode
 
 	SLModel validation within a beam-column element
 
-.. admonition:: Example 
 
-   The following code is used to construct a SLModel material using SI units.
+Examples
+--------
+
+The following code is used to construct a SLModel material using SI units.
 
    .. code-block:: tcl
 
@@ -87,8 +86,14 @@ This command is used to construct a material based on the Suzuki and Lignos mode
 
 
 For code inquires or bug reporting, please contact: 
+
 - Diego Heredia, Ecole Polytechnique Federale Lausanne (EPFL), e-mail: diego.herediarosa@epfl.ch
 
 For more information visit: https://www.epfl.ch/labs/resslab/ 
 
+
+References
+----------
+
+.. [SuzukiAndLignos2020] Suzuki, Y., Lignos, D. G. (2020). "Fiber-based hysteretic model for simulating strength and stiffness deterioration of steel hollow structural section columns under cyclic loading." Earthquake Engineering & Structural Dynamics 49 (15): 1702–20. https://doi.org/10.1002/eqe.3324.
 
