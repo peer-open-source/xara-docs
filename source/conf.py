@@ -19,7 +19,7 @@ sys.path.append(os.path.abspath('./sphinx_ext/'))
 numfig = True
 numfig_secnum_depth = 3
 
-project = 'OpenSeesRT'
+project = 'xara'
 copyright = '2025, The Regents of the University of California'
 #author = 'Frank McKenna, Michael Scott, Pedro Arduino, Minjie Zhu'
 html_logo = 'OpenSeesLogoRT.svg'
@@ -38,13 +38,13 @@ rst_prolog = """
 .. |string| replace:: *string*
 .. |float| replace:: *float*
 .. |integer| replace:: *integer*
-.. |OPS| replace:: OpenSees
+.. |OPS| replace:: xara
 .. |OPS link| replace:: `OpenSees app`_
-.. _OpenSees app: http://opensees.berkeley.edu/
+.. _OpenSees app: https://stairlab.berkeley.edu/
 .. |githubLink| replace:: `OpenSees Github link`_
 .. _OpenSees Github link: https://github.com/STAIRLab
 .. |messageBoard| replace:: `OpenSees Message Board`_
-.. _OpenSees Message Board: https://opensees.berkeley.edu/community/index.php
+.. _OpenSees Message Board: https://github.com/claudioperez/OpenSeesRT/discussions
 .. |glf| replace:: `Gregory L. Fenves`_
 .. _Gregory L. Fenves: http://www.caee.utexas.edu/faculty/directory/fenves
 .. |mhs| replace:: `Michael H. Scott`_
