@@ -3,10 +3,13 @@
 integrator
 **********
 
-This method is used to define an *integrator*. The Integrator object is used for the following:
+This method is used to define an *integrator*. 
+In the context of dynamic analysis, the integrator implements a time-stepping algorithm for ordinary differential equations.
+In the context of static analysis, the integrator implements a *numerical continuation* method.
+More specifically, the integrator performs the following:
 
- #. determine the predictive step for time t+dt, :math:`\Delta U` in static analysis, :math:`\Delta U`, :math:`\Delta \dot U`, and :math:`\Delta \ddot U` in a transient analysis.
- #. specify the tangent matrix and residual vector at any iteration, i.e. what constitutes the :math:`A` matrix and :math:`b` vector in :math:`Ax=b`.
+ #. determine the predictive step for time :math:`t+\Delta t`, :math:`\Delta U` in static analysis, :math:`\Delta U`, :math:`\Delta \dot U`, and :math:`\Delta \ddot U` in a transient analysis.
+ #. specify the residual and tangent at any iteration, i.e. what constitutes the :math:`\boldsymbol{A}` matrix and :math:`\boldsymbol{b}` vector in :math:`Ax=b`.
  #. determine the corrective step based on the x vector, i.e. given :math:`x` what is :math:`\Delta U` in static analysis, :math:`\Delta U`, :math:`\Delta \dot U`, and :math:`\Delta \ddot U` in a transient analysis.
 
 .. tabs::
