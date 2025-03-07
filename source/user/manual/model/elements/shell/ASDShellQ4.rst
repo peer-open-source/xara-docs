@@ -13,7 +13,7 @@ This command is used to construct an ASDShellQ4 shell element.
 
          :param tag: integer tag identifying element object
          :type tag: int
-         :param nodes: tuple of 4 integers defining the element :ref:`node`s
+         :param nodes: tuple of 4 integers defining the element :ref:`node`
          :type nodes: tuple
          :param section: integer tag identifying a Shell :ref:`section`
          :type section: int
