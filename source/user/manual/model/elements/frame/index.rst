@@ -11,6 +11,8 @@ All frame elements are constructed with the form
    :noindex:
 
 
+Available frame elements include
+
 .. toctree::
    :maxdepth: 1
 
@@ -34,4 +36,5 @@ The embedding in space is described by:
 * A vector field :math:`\boldsymbol{x}(\xi)` identifying positions in space,
 * A rotation field :math:`\boldsymbol{\Lambda}(\xi)`, and
 * A vector field :math:`\boldsymbol{\alpha}(\xi)` identifying cross-sectional warping.
+
 
