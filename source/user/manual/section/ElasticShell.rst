@@ -3,6 +3,10 @@
 ElasticShell
 ^^^^^^^^^^^^
 
+An ElasticShell section is meant to be used with :ref:`shells` and 
+represents a Gauss point with thickness and that
+is homogeneous with an :ref:`ElasticIsotropic` material.
+
 .. tabs::
 
    .. tab:: Python (RT)
