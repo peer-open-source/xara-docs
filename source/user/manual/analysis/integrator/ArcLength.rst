@@ -65,6 +65,9 @@ Examples
 Theory
 ------
 
+The arc-length control method is a continuation method that appends the following constraint equation to the 
+static residual given in :ref:`Static <StaticAnalysis>`:
+
 .. math::
 
 
@@ -110,17 +113,18 @@ so that
 Implementation
 ~~~~~~~~~~~~~~
 
-Step 1
-======
+The arc-length control method is implemented with a distinct *increment* and *iteration* phase.
 
-At :math:`i=1`
+Increment
+=========
+
+During load incrementation the iteration is :math:`i=1` and the following assumption is taken:
 
 .. math::
 
-
    d \boldsymbol{u}_{(1)} = d \lambda_{(1)} \, d \hat{\boldsymbol{u}}_{(1)} + \boldsymbol{0}
 
-and
+Thus the constraint equation simplifies to
 
 .. math::
 
@@ -131,10 +135,10 @@ where :math:`d \lambda` from the previous time :math:`(n-1)` is used to
 determine the sign; if it was positive then the new
 :math:`d \lambda_{(1)}` is assumed positive, otherwise negative.
 
-Step 2
-======
+Iterations
+==========
 
-For :math:`i>1`
+During iterations (ie :math:`i>1`) the constraint equation is expressed in terms of the linearization direction :math:`d\boldsymbol{u}`:
 
 .. math::
 
