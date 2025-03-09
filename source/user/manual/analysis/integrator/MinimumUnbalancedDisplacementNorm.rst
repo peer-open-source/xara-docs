@@ -37,12 +37,41 @@ MinUnbalDispNorm
 Theory
 ------
 
-The load increment at iteration i, :math:`d\lambda_{1,i}` is related to load increment at i-1, :math:`d\lambda_{1,i-1}`, and the number of iteration at (i-1), :math:`J_{i-1}` by the following:
+Continuation
+~~~~~~~~~~~~
 
-:math:`d\lambda_{1,i} = d\lambda_{1,i-1} \frac{J_d}{J_{i-1}}`
+In this method, the constraint equation involving
+:math:`\Delta \lambda` is
+
+.. math::
+
+
+   \frac{\partial}{\partial \Delta \lambda}\left. d \boldsymbol{u} \cdot d \boldsymbol{u}\right.=0
+
+which guarantees a minimum value for the unbalanced displacement norm in
+each iteration. Evaluating the constraint equation furnishes
+
+.. math::
+
+
+   d \lambda = -\frac{d\hat{\boldsymbol{u}} \cdot d\bar{\boldsymbol{u}}}{d\hat{\boldsymbol{u}} \cdot d\hat{\boldsymbol{u}}}
+
+Incrementation
+~~~~~~~~~~~~~~
+
+The load increment at iteration :math:`i`, :math:`d\lambda_{1,i}` , is
+related to the load increment at :math:`(i-1)`,
+:math:`d\lambda_{1,i-1}`, and the number of iterations at :math:`(i-1)`,
+:math:`J_{i-1}`, by the following:
+
+.. math::
+
+
+   d\lambda_{1,i} = d\lambda_{1,i-1}\frac{J_d}{J_{i-1}}
 
 
 References
 ----------
 
 .. [1]  SL Chan, "Geometric and Material Non-Linear Analysis of Beam-Columns and Frames Using the Minimum Residual Displacement Method,"  International Journal for Numerical Methods in Engineering, Vol. 26, No. 12, 1988, pp. 2657-2669.  doi: `10.1002/nme.1620261206 <https://doi.org/10.1002/nme.1620261206>`_
+

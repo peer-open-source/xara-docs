@@ -26,6 +26,12 @@ This is the command issued to create an analysis.
    ``x``, |integer|, number of sublevels transient analysis should try if failure
    ``y``, |integer|, number of subdivisions to be tried at each sublevel
 
+
+.. toctree::
+
+   static
+   transient
+
 .. note::
 
    The ``<-numSublevels $x -numSubSteps $y>`` only works for the **Transient** type

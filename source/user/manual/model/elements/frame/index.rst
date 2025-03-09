@@ -30,7 +30,7 @@ Loads include
 Theory
 ------
 
-A frame element represents a directed medium with a single characteristic coordinate :math:`\xi`.
+A frame element represents a directed medium with a scalar characteristic coordinate :math:`\xi`.
 The embedding in space is described by:
 
 * A vector field :math:`\boldsymbol{x}(\xi)` identifying positions in space,

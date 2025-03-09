@@ -2,7 +2,9 @@
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 This command is used to define a *DisplacementControl* integrator. 
-In an analysis step with Displacement Control we seek to determine the time step that will result in a displacement increment for a particular degree-of-freedom at a node to be a prescribed value.
+In an analysis step with Displacement Control we seek to
+determine the time step :math:`\Delta \lambda` that will result in a displacement increment for
+a particular degree-of-freedom at a node to be a prescribed value.
 
 .. tabs::
 
@@ -66,7 +68,7 @@ For displacement control, we introduce a new constraint equation in which in eac
 
 .. math::
 
-   \Delta u_\text{dof} = \text{incr}
+   \Delta \boldsymbol{u}_\text{dof} = \text{incr}
 
 
 
@@ -74,5 +76,5 @@ In Displacement Control the :math:`\Delta u_{\text{dof}}` set to :math:`t + \lam
 
 .. math::
    
-   \Delta u_\text{dof}^{t+1} = \max \left( \Delta u_{\mathrm{min}}, \min \left( \Delta u_{\text{max}}, \frac{\text{numIter}}{\text{lastNumIter}} \Delta u_\text{dof}^{t} \right) \right)
+   \Delta \boldsymbol{u}_{\text{dof}}^{t+1} = \max \left( \Delta \boldsymbol{u}_{\mathrm{min}}, \min \left( \Delta u_{\text{max}}, \frac{\text{numIter}}{\text{lastNumIter}} \Delta u_\text{dof}^{t} \right) \right)
 

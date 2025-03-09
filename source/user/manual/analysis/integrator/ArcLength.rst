@@ -39,11 +39,6 @@ Arc-Length Control
         * - ``$iterScale``
           - |float|
           - a scaling factor on the arc-length incrementation. 
-      
-
-This command is used to construct an ArcLength integrator object. In an
-analysis step with ArcLength we seek to determine the time step that will
-result in our constraint equation being satisfied. 
 
 
 Examples
@@ -67,6 +62,137 @@ Examples
 
    integrator ArcLength 1 -exp 0.5
 
+Theory
+------
+
+.. math::
+
+
+   \Delta \boldsymbol{u}_{i+1} \cdot \Delta \boldsymbol{u}_{i+1} + \alpha^2 \Delta \lambda_{i+1}^2
+   = \Delta s^2
+
+where
+
+.. math::
+
+
+   \begin{aligned}
+   \Delta \boldsymbol{u}_{i+1}=\sum_{j=1}^i d \boldsymbol{u}_{(j)}
+   =\Delta \boldsymbol{u}_{(i)} + d \boldsymbol{u} \\
+   \Delta \lambda_{i+1}
+   =\sum_{j=1}^i d \lambda_{(j)}=\Delta \lambda_{(i)} + d \lambda
+   \end{aligned}
+
+Recall the linearized static residual
+
+.. math::
+
+
+   \boldsymbol{K} d \boldsymbol{u} = d \lambda \, \boldsymbol{p}_{\mathrm{ref}} +
+   \lambda_{(i)} \boldsymbol{p}_{\mathrm{ref}} - \boldsymbol{p}_{\sigma}(u_{(i)}) = d \lambda \, \boldsymbol{p}_{\mathrm{ref}} + g_{(i)}
+
+and define :math:`d\hat{\boldsymbol{u}}` and :math:`d\bar{\boldsymbol{u}}` by
+
+.. math::
+
+
+   d \hat{\boldsymbol{u}} \triangleq \boldsymbol{K}^{-1}_{(i)}\boldsymbol{p}_{\mathrm{ref}}
+   \qquad\text{ and }\qquad
+   d \bar{\boldsymbol{u}} \triangleq \boldsymbol{K}^{-1}_{(i)} \boldsymbol{g}_{(i)}
+
+so that
+
+.. math::
+
+
+   d \boldsymbol{u} = d \lambda \, d \hat{\boldsymbol{u}} + d \bar{\boldsymbol{u}}
+
+Implementation
+~~~~~~~~~~~~~~
+
+Step 1
+======
+
+At :math:`i=1`
+
+.. math::
+
+
+   d \boldsymbol{u}_{(1)} = d \lambda_{(1)} \, d \hat{\boldsymbol{u}}_{(1)} + \boldsymbol{0}
+
+and
+
+.. math::
+
+
+   d \lambda_{(1)} = \pm \sqrt{\frac{\Delta s^2}{d\hat{\boldsymbol{u}} \cdot d\hat{\boldsymbol{u}} + \alpha^2}}
+
+where :math:`d \lambda` from the previous time :math:`(n-1)` is used to
+determine the sign; if it was positive then the new
+:math:`d \lambda_{(1)}` is assumed positive, otherwise negative.
+
+Step 2
+======
+
+For :math:`i>1`
+
+.. math::
+
+
+   \left( \Delta \boldsymbol{u}_{(i)} + d\boldsymbol{u} \right) \cdot \left( \Delta \boldsymbol{u}_{(i)} +
+   d \boldsymbol{u} \right)
+   + \alpha^2 \left( \Delta \lambda_{(i)} + d\lambda
+   \right)^2 = \Delta s^2
+
+which expands to
+
+.. math::
+
+
+   \Delta u_{(i)} \cdot \Delta u_{(i)} + 2 \,d \boldsymbol{u} \cdot \Delta \boldsymbol{u}_{(i)} + d u \cdot du
+   + \alpha^2 \, d {\lambda_{(i)}}^2
+   + 2 \alpha^2 d\lambda \, \Delta \lambda_{(i)}
+   + \alpha^2 \, \Delta \lambda^2_{(i)}
+   = \Delta s^2
+
+assuming the constraint equation was solved at :math:`i-1` then one has
+:math:`\Delta \boldsymbol{u}_{(i)} \cdot \Delta \boldsymbol{u}_{(i)} + \alpha^2 \Delta \lambda^2_{(i)} = \Delta s^2`,
+and the constraint for the current iteration simplifies to
+
+.. math::
+
+
+   d \boldsymbol{u} \cdot d \boldsymbol{u} + 2\, d\boldsymbol{u} \cdot \Delta \boldsymbol{u}_{(i)} +
+   \alpha^2 d \lambda^2
+   + 2 \alpha^2 d\lambda \, \Delta \lambda_{(i)}
+   = 0
+
+Substituting the decomposed representation for :math:`d \boldsymbol{u}`
+this furnishes a quadratic equation in :math:`d \lambda`:
+
+.. math::
+
+
+     a \, d \lambda^2 +
+   2 b \, d \lambda
+   + c =0
+
+where we have defined the scalar constants
+
+.. math::
+
+
+   \begin{aligned}
+   a &\triangleq d\hat{\boldsymbol{u}} \cdot d\hat{\boldsymbol{u}} + \alpha^2 \\
+   b &\triangleq d \hat{\boldsymbol{u}} \cdot \left( \Delta\boldsymbol{u}_{(i)} + d \bar{\boldsymbol{u}}\right) + \alpha^2 \Delta \lambda_{(i)} \\
+   c &\triangleq d \bar{\boldsymbol{u}} \cdot d \bar{\boldsymbol{u}} + \Delta \boldsymbol{u}_{(i)} \cdot d \bar{\boldsymbol{u}}
+   \end{aligned}
+
+which can be solved for two roots. The root chosen is the one which will
+keep a positive angle between the incremental displacement before and
+after this step.
+
+
 References
 ----------
 
@@ -75,3 +201,4 @@ References
 .. [3] Wempner, GA (1971) 'Discrete approximations related to nonlinear theories of solids'
 .. [4] Crisfield, MA (1981) 'A fast incremental/iterative solution procedure that handles "snap-through"'
 .. [5] Ramm E 'Strategies for tracing nonlinear response near limit points'
+
