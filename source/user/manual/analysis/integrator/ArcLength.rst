@@ -3,6 +3,8 @@
 Arc-Length Control
 ^^^^^^^^^^^^^^^^^^
 
+The *ArcLength* static integrator is particularly useful for tracing the response of a structure across limit points, where the solution may exhibit snap-through or snap-back behavior [2]_.
+
 .. tabs::
    
    .. tab:: Python 

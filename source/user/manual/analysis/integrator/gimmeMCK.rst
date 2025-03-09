@@ -1,11 +1,12 @@
 .. _gimmeMCK:
 
 GimmeMCK
---------
+^^^^^^^^
 
 .. admonition:: Obsolete 
   
-   The GimmeMCK integrator no longer needs to be explicitly constructed. The mass, damping, and stiffness matrices can be retrieved using the new ``m``, ``c`` and ``k`` parameters of the :ref:`printA` method.
+   The GimmeMCK integrator no longer needs to be explicitly constructed. 
+   The mass, damping, and stiffness matrices can be retrieved using the new ``m``, ``c`` and ``k`` parameters of the :ref:`printA` method.
 
 
 This command is used to construct a GimmeMCK integrator. 
@@ -37,9 +38,13 @@ Depending on the user input, it enable the user to retrieve the desired by using
 
 
 Theory
-^^^^^^
+------
 
-Assembles A = m*M + c*C + kt*KT + ki*KI
+Assembles the tangent matrix:
+
+.. math::
+   
+   A = m \boldsymbol{M} + c \boldsymbol{C} + kt \boldsymbol{K}_T + ki \boldsymbol{K}_I
 
 .. note::
 
@@ -87,7 +92,7 @@ Example
 
       ops.system('FullGeneral')
       ops.analysis('Transient')
-      
+
       # Mass
       ops.integrator('GimmeMCK',1.0,0.0,0.0)
       ops.analyze(1,0.0)
@@ -98,14 +103,14 @@ Example
       M = ops.printA('-ret') # Or use ops.printA('-file','M.out')
       M = np.array(M) # Convert the list to an array
       M.shape = (N,N) # Make the array an NxN matrix
-      
+
       # Stiffness
       ops.integrator('GimmeMCK',0.0,0.0,1.0)
       ops.analyze(1,0.0)
       K = ops.printA('-ret')
       K = np.array(K)
       K.shape = (N,N)
-      
+
       # Damping
       model.integrator('GimmeMCK',0.0,1.0,0.0)
       ops.analyze(1,0.0)

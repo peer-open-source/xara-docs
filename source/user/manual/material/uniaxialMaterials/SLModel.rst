@@ -2,7 +2,7 @@
 .. SLModel:
 
 SLModel Material
-^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 This command is used to construct a material based on the Suzuki and Lignos model.
 

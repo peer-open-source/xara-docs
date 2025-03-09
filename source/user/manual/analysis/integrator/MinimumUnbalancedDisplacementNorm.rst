@@ -40,8 +40,7 @@ Theory
 Continuation
 ~~~~~~~~~~~~
 
-In this method, the constraint equation involving
-:math:`\Delta \lambda` is
+In this method, the constraint equation governing the evolution of :math:`\Delta \lambda` is
 
 .. math::
 
@@ -53,8 +52,8 @@ each iteration. Evaluating the constraint equation furnishes
 
 .. math::
 
-
    d \lambda = -\frac{d\hat{\boldsymbol{u}} \cdot d\bar{\boldsymbol{u}}}{d\hat{\boldsymbol{u}} \cdot d\hat{\boldsymbol{u}}}
+
 
 Incrementation
 ~~~~~~~~~~~~~~

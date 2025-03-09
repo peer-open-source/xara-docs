@@ -36,6 +36,8 @@ Each type is outlined below.
    geomTransf/Linear
    geomTransf/PDelta
    geomTransf/Corotational
+   geomTransf/Spherical
 
 
 Code Developed by: |fmk|
+
