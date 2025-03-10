@@ -8,9 +8,9 @@ In the context of dynamic analysis, the integrator implements a time-stepping al
 In the context of static analysis, the integrator implements a *numerical continuation* method.
 More specifically, the integrator performs the following:
 
- #. determine the predictive step for time :math:`t+\Delta t`, :math:`\Delta U` in static analysis, :math:`\Delta U`, :math:`\Delta \dot U`, and :math:`\Delta \ddot U` in a transient analysis.
- #. specify the residual and tangent at any iteration, i.e. what constitutes the :math:`\boldsymbol{A}` matrix and :math:`\boldsymbol{b}` vector in :math:`Ax=b`.
- #. determine the corrective step based on the x vector, i.e. given :math:`x` what is :math:`\Delta U` in static analysis, :math:`\Delta U`, :math:`\Delta \dot U`, and :math:`\Delta \ddot U` in a transient analysis.
+#. determine the predictive step for time :math:`t+\Delta t`, :math:`\Delta \boldsymbol{u}` in static analysis, :math:`\Delta \boldsymbol{u}`, :math:`\Delta \dot U`, and :math:`\Delta \ddot U` in a transient analysis.
+#. specify the residual and tangent at any iteration, i.e. what constitutes the :math:`\boldsymbol{A}` matrix and :math:`\boldsymbol{b}` vector in :math:`Ax=b`.
+#. determine the corrective step based on the x vector, i.e. given :math:`x` what is :math:`\Delta \boldsymbol{u}` in :ref:`StaticAnalysis` analysis, :math:`\Delta \boldsymbol{u}`, :math:`\Delta \dot{\boldsymbol{u}}`, and :math:`\Delta \ddot{\boldsymbol{u}}` in a transient analysis.
 
 .. tabs::
    
