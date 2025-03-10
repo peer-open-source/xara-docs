@@ -46,6 +46,9 @@ The *ArcLength* static integrator is particularly useful for tracing the respons
 Examples
 --------
 
+The following snippets demonstrate the syntax for configuring the ArcLength integrator.
+A complete example that reproduces the work presented in [1]_ is available `here <https://gallery.stairlab.io/examples/archstaticsnap/>`_.
+
 .. code-block:: python
 
    import sees.openseespy as ops
