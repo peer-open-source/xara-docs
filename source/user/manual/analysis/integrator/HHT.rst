@@ -60,17 +60,17 @@ The HHT method (sometimes called the :math:` \alpha` method) is a one step impli
 
 .. math::
 
-    \boldsymbol{u}_{t+\Delta t} = \boldsymbol{u}_t + \Delta t \dot{\boldsymbol{u}} + [(0.5 - \beta) \Delta t^2] \ddot{\boldsymbol{u}} + [\beta \Delta t^2] \ddot \boldsymbol{u}_{t+\Delta t}
+    \boldsymbol{u}_{t+\Delta t} = \boldsymbol{u}_t + \Delta t \dot{\boldsymbol{u}} + [(0.5 - \beta) \Delta t^2] \ddot{\boldsymbol{u}} + [\beta \Delta t^2] \ddot{\boldsymbol{u}}_{t+\Delta t}
 
 .. math::
     
-    \dot \boldsymbol{u}_{t+\Delta t} = \dot \boldsymbol{u}_t + [(1-\gamma)\Delta t] \ddot \boldsymbol{u}_t + [\gamma \Delta t ] \ddot \boldsymbol{u}_{t+\Delta t}
+    \dot{\boldsymbol{u}}_{t+\Delta t} = \dot{\boldsymbol{u}}_t + [(1-\gamma)\Delta t] \ddot{\boldsymbol{u}}_t + [\gamma \Delta t ] \ddot \boldsymbol{u}_{t+\Delta t}
 
 but the time-discrete momentum equation is modified:
 
 .. math::
     
-    R_{t + \alpha \Delta t} = F_{t+\Delta t}^{ext} - M \ddot \boldsymbol{u}_{t + \Delta t} - C \dot \boldsymbol{u}_{t+\alpha \Delta t} - F^{int}(\boldsymbol{u}_{t + \alpha \Delta t})
+    R_{t + \alpha \Delta t} = F_{t+\Delta t}^{ext} - M \ddot{\boldsymbol{u}}_{t + \Delta t} - C \dot{\boldsymbol{u}}_{t+\alpha \Delta t} - F^{int}(\boldsymbol{u}_{t + \alpha \Delta t})
 
 `
 
@@ -82,7 +82,7 @@ where the displacements and velocities at the intermediate point are given by:
 
 .. math::
     
-    \dot \boldsymbol{u}_{t+\alpha \Delta t} = (1-\alpha) \dot \boldsymbol{u}_t + \alpha \dot \boldsymbol{u}_{t + \Delta t}
+    \dot{\boldsymbol{u}}_{t+\alpha \Delta t} = (1-\alpha) \dot{\boldsymbol{u}}_t + \alpha \dot{\boldsymbol{u}}_{t + \Delta t}
 
 Following the methods outlined for Newmarks method, loinearization of the nonlinear momentum equation results in the following linear equations:
 
@@ -100,7 +100,7 @@ and
 
 .. math::
 
-    R_{t+\Delta t}^i = F_{t + \Delta t}^{ext} - F(\boldsymbol{u}_{t + \alpha \Delta t}^{i-1})^{int} - C \dot \boldsymbol{u}_{t+\alpha \Delta t}^{i-1} - M \ddot \boldsymbol{u}_{t+ \Delta t}^{i-1}
+    R_{t+\Delta t}^i = F_{t + \Delta t}^{ext} - F(\boldsymbol{u}_{t + \alpha \Delta t}^{i-1})^{int} - C \dot{\boldsymbol{u}}_{t+\alpha \Delta t}^{i-1} - M \ddot{\boldsymbol{u}}_{t+ \Delta t}^{i-1}
 
-The linear equations are used to solve for :math:`\boldsymbol{u}_{t+\alpha \Delta t}, \dot \boldsymbol{u}_{t + \alpha \Delta t} \ddot \boldsymbol{u}_{t+\Delta t}`. 
+The linear equations are used to solve for :math:`\boldsymbol{u}_{t+\alpha \Delta t}, \dot{\boldsymbol{u}}_{t + \alpha \Delta t} \ddot{\boldsymbol{u}}_{t+\Delta t}`. 
 Once convergence has been achieved the displacements and velocities at time :math:`t + \Delta t` can be computed. 
