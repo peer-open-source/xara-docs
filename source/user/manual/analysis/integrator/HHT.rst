@@ -64,7 +64,7 @@ The HHT method (sometimes called the :math:` \alpha` method) is a one step impli
 
 .. math::
     
-    \dot{\boldsymbol{u}}_{t+\Delta t} = \dot{\boldsymbol{u}}_t + [(1-\gamma)\Delta t] \ddot{\boldsymbol{u}}_t + [\gamma \Delta t ] \ddot \boldsymbol{u}_{t+\Delta t}
+    \dot{\boldsymbol{u}}_{t+\Delta t} = \dot{\boldsymbol{u}}_t + [(1-\gamma)\Delta t] \ddot{\boldsymbol{u}}_t + (\gamma \Delta t ) \ddot{\boldsymbol{u}}_{t+\Delta t}
 
 but the time-discrete momentum equation is modified:
 
