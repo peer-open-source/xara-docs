@@ -12,8 +12,8 @@ xara
    :maxdepth: 1
 
    user/install
-   user/userManual
-   user/userExamples
+   user/index
+   user/examples/index
    about
 
 
