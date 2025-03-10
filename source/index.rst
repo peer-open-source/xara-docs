@@ -2,7 +2,7 @@ xara
 ====
 
 *xara* is a free and open source tool for simulating the nonlinear response of structural and geotechnical systems. 
-*xara* is developed by PEER as an alternative front-end to the simulation framework proposed by McKenna (1997).
+*xara* is developed by PEER as an alternative front-end to the simulation framework proposed by `McKenna (1997) <https://opensees.stairlab.io/developer/references.html>`_.
 The design of the interface is distinguished by its emphasis on (1) performance and (2) robustness.
 
 
