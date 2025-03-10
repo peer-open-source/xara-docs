@@ -58,6 +58,7 @@ as follows:
 * **Path Dependence** The geometrically exact Cosserat rod theory is posed over a
   non-vectorial configuration space, and consequently may exhibit minor 
   path-dependence.
+* **Rotation parameters** for post-processing purposes, rotations should be obtained using the :ref:`nodeRotation`. Recall that in a finite rotation analysis, "rotational" components of the nodal displacement vector (ie, the vector returned by :ref:`nodeDisp`) is meaningless.
 
 The ``ExactFrame`` formulation is appropriate for a wide variety of structural members including thin-walled sections, asymmetric sections, and inelasticity.
 
@@ -67,6 +68,7 @@ This feature is implemented through template metaprogramming and consequently in
 .. note::
 
    This element always employs a Gauss-Legendre quadrature of order ``nen-1`` for an element with ``nen`` nodes, and does not accept user-defined quadrature schemes.
+
 
 Example 
 -------
