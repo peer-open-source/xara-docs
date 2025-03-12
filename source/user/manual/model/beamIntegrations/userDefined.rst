@@ -2,7 +2,7 @@
 
 
 UserDefined
-^^^^^^^^^^^^
+^^^^^^^^^^^
 
 Create a UserDefined beamIntegration object. This option allows the user to specified locations and weights of the integration points.
 
@@ -31,31 +31,30 @@ Create a UserDefined beamIntegration object. This option allows the user to spec
 
 
       
-.. admonition:: Example:
+Example
+-------
 
-   The following examples demonstrate the command in Tcl and Python script to add a Lobatto beam integration with tag 2 and 6 integration points that uses the previously defined section whose tag is 1.
+The following examples demonstrate the command in Tcl and Python script to add a Lobatto beam integration with tag 2 and 6 integration points that uses the previously defined section whose tag is 1.
 
-   1. **Tcl Code**
+.. tabs::
 
-   .. code-block:: tcl
+  .. tab:: Tcl
 
-      locs = [0.1, 0.3, 0.5, 0.7, 0.9]
-      wts = [0.2, 0.15, 0.3, 0.15, 0.2]
-      secs = [1, 2, 2, 2, 1]
-      beamIntegration 'UserDefined' 1 5  secs  locs wtsa
+     .. code-block:: Tcl
 
-
-   2. **Python Code**
-
-   .. code-block:: python
-
-      locs = [0.1, 0.3, 0.5, 0.7, 0.9]
-      wts = [0.2, 0.15, 0.3, 0.15, 0.2]
-      secs = [1, 2, 2, 2, 1]
-      beamIntegration('UserDefined',1,len(secs),*secs,*locs,*wts)
+        set locs  {0.1, 0.3, 0.5, 0.7, 0.9}
+        set wts  {0.2, 0.15, 0.3, 0.15, 0.2}
+        set secs  {1, 2, 2, 2, 1}
+        beamIntegration "UserDefined" 1 5  $secs  $locs $wtsa
 
 
+  .. tab:: Python
 
+     .. code-block:: python
 
+        locs = (0.1, 0.3 , 0.5, 0.7 , 0.9)
+        wts  = (0.2, 0.15, 0.3, 0.15, 0.2)
+        secs = (  1,    2,   2,    2,   1)
+        model.beamIntegration("UserDefined",1,len(secs), secs, locs, wts)
 
 

@@ -8,5 +8,5 @@ Uniaxial materials are used to define the material behavior in one direction.
 .. toctree::
     :maxdepth: 1
 
-    uniaxialMaterial
+    uniaxialMaterials/index
     ndMaterial

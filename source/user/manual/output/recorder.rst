@@ -17,22 +17,13 @@ The type of recorder created and the additional arguments required depends on th
 
    NodeRecorder
    EnvelopeNodeRecorder
-   DriftRecorder
 
 .. toctree::
    :caption: Element Information
    :maxdepth: 1
 
    ElementRecorder
-   EnvelopeElementRecorder
 
-
-.. toctree::
-   :caption: 3. Recorders for Graphic output
-   :maxdepth: 1
-
-   PlotRecorder
-   VTK
 
 
 .. toctree::
