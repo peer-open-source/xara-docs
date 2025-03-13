@@ -5,7 +5,6 @@ Hilber-Hughes-Taylor
 
 .. function:: integrator HHT $alpha <$gamma $beta> 
 
-This command is used to construct a Hilber-Hughes-Taylor (HHT) integrator. 
 This is an implicit method that allows for energy dissipation and second order accuracy (which is not possible with the regular Newmark method). Depending on choices of input parameters, the method can be unconditionally stable. 
 
 .. list-table:: 
@@ -72,7 +71,7 @@ but the time-discrete momentum equation is modified:
     
     R_{t + \alpha \Delta t} = F_{t+\Delta t}^{ext} - M \ddot{\boldsymbol{u}}_{t + \Delta t} - C \dot{\boldsymbol{u}}_{t+\alpha \Delta t} - F^{int}(\boldsymbol{u}_{t + \alpha \Delta t})
 
-`
+
 
 where the displacements and velocities at the intermediate point are given by:
 
@@ -94,13 +93,14 @@ where
 
 .. math::
 
-    K_{t+\Delta t}^{*i} = \alpha K_t + \frac{\alpha \gamma}{\beta \Delta t} C_t + \frac{1}{\beta \Delta t^2} M
+   K_{t+\Delta t}^{*i} = \alpha K_t + \frac{\alpha \gamma}{\beta \Delta t} C_t + \frac{1}{\beta \Delta t^2} M
 
 and
 
 .. math::
 
-    R_{t+\Delta t}^i = F_{t + \Delta t}^{ext} - F(\boldsymbol{u}_{t + \alpha \Delta t}^{i-1})^{int} - C \dot{\boldsymbol{u}}_{t+\alpha \Delta t}^{i-1} - M \ddot{\boldsymbol{u}}_{t+ \Delta t}^{i-1}
+   R_{t+\Delta t}^i = F_{t + \Delta t}^{ext} - F(\boldsymbol{u}_{t + \alpha \Delta t}^{i-1})^{int} - C \dot{\boldsymbol{u}}_{t+\alpha \Delta t}^{i-1} - M \ddot{\boldsymbol{u}}_{t+ \Delta t}^{i-1}
 
 The linear equations are used to solve for :math:`\boldsymbol{u}_{t+\alpha \Delta t}, \dot{\boldsymbol{u}}_{t + \alpha \Delta t} \ddot{\boldsymbol{u}}_{t+\Delta t}`. 
 Once convergence has been achieved the displacements and velocities at time :math:`t + \Delta t` can be computed. 
+

@@ -1,7 +1,7 @@
 .. _zeroLength:
 
-ZeroLength Element
-^^^^^^^^^^^^^^^^^^
+ZeroLength
+^^^^^^^^^^
 
 This command is used to construct a zeroLength element object, which is defined by two nodes at the same location. A zeroLength element is similar to a set of springs placed between two nodes, each spring providing the force displacement relationship for a specified degree-of-freedom. The nodes are connected by multiple UniaxialMaterial objects, which provide the force-deformation relationship for the element in that degree-of-freedom direction. 
 
@@ -36,9 +36,13 @@ This command is used to construct a zeroLength element object, which is defined 
 
    If the distance between end noes is not **0.0** a warning message will appear when the script is run. This is just a warning in case you have made a mistake as most users when they use zeroLength elements are wanting to use them in the more normal way. ZeroLength elements can be used between nodes with non-zero length.
 
-.. admonition:: 
+Examples
+--------
 
-   The following examples demonstrate the commands in a script to add three zeroLength elements to domain. The three to be added have element tags **1**, **2**, and **3**. Element **1** has nodes **2** and **3** as its end ndes, has two materials **5** and **6** acting in directions **1** and **2**. Element **2** has as its end nodes **4** and **5**, has only one material **1** acting in direction **1**, the element has a global orientation.
+The following examples demonstrate the commands in a script to add three zeroLength elements to domain. 
+The three to be added have element tags **1**, **2**, and **3**. 
+Element **1** has nodes **2** and **3** as its end ndes, has two materials **5** and **6** acting in directions **1** and **2**. 
+Element **2** has as its end nodes **4** and **5**, has only one material **1** acting in direction **1**, the element has a global orientation.
 
    1. **Tcl Code**
 
@@ -52,8 +56,8 @@ This command is used to construct a zeroLength element object, which is defined 
 
    .. code-block:: python
 
-      element('zeroLength',1,2,4,'-mat',5,6,'-dir',1,2)
-      element('zeroLength',2,4,5,'-mat',1,'-dir',1,'-orient',1,1,0,-1,1,0)
-      element('zeroLength',3,5,6,'-mat',1,'-dir',1,'-doRayleigh',1)
+      model.element("zeroLength",1,2,4,"-mat",5,6,"-dir",1,2)
+      model.element("zeroLength",2,4,5,"-mat",1,"-dir",1,"-orient",1,1,0,-1,1,0)
+      model.element("zeroLength",3,5,6,"-mat",1,"-dir",1,"-doRayleigh",1)
 
 Code Developed by: |glf|

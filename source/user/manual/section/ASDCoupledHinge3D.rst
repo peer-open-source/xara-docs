@@ -3,7 +3,7 @@
 ASDCoupledHinge3D
 ^^^^^^^^^^^^^^^^^
 
-| This command is used to construct an ASDCoupledHinge3D section object.
+| This command is used to construct an ASDCoupledHinge3D section.
 | It is a phenomenological section for lumped-plasticity modeling of RC beam-column elements that considers P-M-M interaction.
 | Internally it uses the Pinching4 material object for the moment-rotation responses in the My and Mz DOFs.
 | Using a P-M-M interaction domain, it internally updates the backbone curves of the My/Mz materials to account for P-M-M interaction.

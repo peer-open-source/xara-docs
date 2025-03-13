@@ -1,13 +1,13 @@
 .. _ASDAbsorbingBoundary:
 
-ASDAbsorbingBoundary Element (2D and 3D)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ASDAbsorbingBoundary
+^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: figures/ASD_Absorbing/ASDAbsorbingBoundary_Video.gif
    :align: center
    :figclass: align-center
 
-| This command is used to construct an ASDAbsorbingBoundary2D or ASDAbsorbingBoundary3D  object.
+| This command is used to construct an ASDAbsorbingBoundary2D or ASDAbsorbingBoundary3D element.
 | The ASDAbsorbingBoundary2D is a 4-node quadrilateral element, while the ASDAbsorbingBoundary3D is a 8-node hexaedron element.
 | This elements can be used as an extra layer at the boundaries of a soil domain to avoid wave reflections which typically arise with fixed boundaries.
 
@@ -18,7 +18,7 @@ ASDAbsorbingBoundary Element (2D and 3D)
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $tag, |integer|, unique integer tag identifying element object.
+   $tag, |integer|, unique integer tag identifying element.
    $n1 $n2 $n3 $n4 $n5 $n6 $n7 $n8, 4 (or 8) |integer|, the 4 (or 8) nodes defining the element.
    $G, |float|, the shear modulus.
    $v, |float|, the Poisson's ratio.
@@ -33,7 +33,7 @@ ASDAbsorbingBoundary Element (2D and 3D)
    $tszTag, |integer|, "optional, mandatory if -fz is provided. the tag of the time-series along the Z direction."
 
 Theory
-""""""
+------
 
 | When modelling a soil, only a portion of it is modelled, using artificial boundaries around it.
   Fixed conditions at these artificial boundaries are fine in static problems, but in dynamic problems they will reflect outgoing propagating waves.
@@ -53,8 +53,8 @@ Theory
 
    Sketch of the absorbing (macro) element in 2D problems.
 
-Usage Notes
-"""""""""""
+Notes
+-----
 
 .. admonition:: Note 1
 
@@ -106,7 +106,8 @@ Usage Notes
       
       Exploded-view: Effects of Z-distortion in 3D problems.
 
-.. admonition:: Example 
+Examples
+--------
 
    1. **Tcl Code**
 
@@ -255,6 +256,9 @@ Usage Notes
           error "Dynamic analysis failed"
       }
 
+References 
+----------
+
 Code Developed by: **Massimo Petracca** at ASDEA Software, Italy.
 
-.. [Nielsen2006] | Nielsen, Andreas H. "Absorbing boundary conditions for seismic analysis in ABAQUS." ABAQUS users’ conference. 2006.. (`Link to article <https://www.researchgate.net/profile/Sahand-Jabini-Asli-2/post/How_can_i_define_Absorbing_boundary_in_ABAQUS_EXPLICIT2/attachment/59d634b679197b80779925d8/AS%3A380916271730688%401467828924106/download/architecture_absorbing_auc06_babtie.pdf>`_)
+.. [Nielsen2006] | Nielsen, Andreas H. "Absorbing boundary conditions for seismic analysis in ABAQUS." ABAQUS users’ conference. 2006.. (`Link to article <https://www.researchgate.net/profile/Sahand-Jabini-Asli-2/post/How_can_i_define_Absorbing_boundary_in_ABAQUS_EXPLICIT2/attachment/59d634b679197b80779925d8/AS%3A380916271730688%401467828924106/download/architecture_absorbing_auc06_babtie.pdf>`__)

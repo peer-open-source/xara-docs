@@ -1,7 +1,7 @@
 .. _RampSeries:
 
 Ramp TimeSeries
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 
 This command is used to construct a TimeSeries object in which the load factor is a linear Ramp function. An optional **-smooth** flag provides an adjustable smoothness, allowing for a smooth transition at the start and end of the ramp. 
 The default behavior provides a linear ramp from 0 to 1.0. By providing a smoothness > 0, the time series has a continuous derivative. The smoothing interval is equal to the smoothness factor times half the ramp time.  
@@ -39,7 +39,7 @@ With: :math:`S = smoothness \rightarrow 0<=S<=1.0`
       $smoothness, |float|, smoothness parameter (optional: 0 ≤ $smoothness ≤ 1   default = 0.0)
      '-offset', |string|, optional flag to provide vertical offset
       $offset, |float|,        vertical offset amount (optional: default = 0.0
-     '-factor', |string|, optional flag to provide scale factor
+     factor= |string|, optional flag to provide scale factor
       $cFactor, |float|,  the load factor scale factor (optional: default = 1.0)
 
 | 
@@ -48,8 +48,8 @@ With: :math:`S = smoothness \rightarrow 0<=S<=1.0`
 
 
    .. figure:: figures/RampTimeSeries_2.png
-	:align: right
-	:figclass: align-right
+      :align: right
+      :figclass: align-right
 
    The following code demonstrates how a user would create a ramp time series with a tag of **1**, has a start time of $tStart = **5.0**, a ramp time of $tRamp = **30.0**, a $smoothness value of **0.25**, an $offset of **-1.0**, and a scale factor of $cFactor = **2.0**. 
    
@@ -64,9 +64,9 @@ With: :math:`S = smoothness \rightarrow 0<=S<=1.0`
 
    .. code-block:: python
 
-      timeSeries('Ramp', 1, 5.0, 30.0, '-smooth', 0.25, '-offset', -1.0, '-factor', 2.0)
+      model.timeSeries('Ramp', 1, 5.0, 30.0, smooth=0.25, offset=-1.0, factor=2.0)
    
-   |
+
 
    
 .. admonition:: Example 2:
@@ -89,7 +89,7 @@ With: :math:`S = smoothness \rightarrow 0<=S<=1.0`
 
    .. code-block:: python
 
-      timeSeries('Ramp', 2, 10.0, 30.0, '-smooth', 0.1, '-offset', 2.0, '-factor', -2.0)
+      timeSeries('Ramp', 2, 10.0, 30.0, '-smooth', 0.1, '-offset', 2.0, factor= -2.0)
     
    |
 

@@ -1,9 +1,9 @@
 .. _ReinforcedConcreteLayeredMembraneSection:
 
 ReinforcedConcreteLayeredMembraneSection
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This command is used to construct a ReinforcedConcreteLayeredMembraneSection object. It is the abstract representation for the stress-strain behavior for a reinforced concrete layered membrane element (based on the work of Rojas et al., 2016).
+This class is the abstract representation for the stress-strain behavior for a reinforced concrete layered membrane element (based on the work of Rojas et al., 2016).
 
 .. figure:: ReinforcedConcreteLayerMembraneSection_figure1.png
 	:align: center
@@ -13,9 +13,7 @@ This command is used to construct a ReinforcedConcreteLayeredMembraneSection obj
 	
 	ReinforcedConcreteLayeredMembraneSection: (a) Reinforced concrete wall; (b) Layer discretization.
 
-.. admonition:: Command
-   
-   section ReinforcedConcreteLayeredMembraneSection $secTag $nSteelLayers $nConcLayers -reinfSteel{$RSteelAtEachLayer} –conc{$concAtEachLayer} -concThick{$Thicknesses}
+.. function:: section ReinforcedConcreteLayeredMembraneSection $secTag $nSteelLayers $nConcLayers -reinfSteel{$RSteelAtEachLayer} –conc{$concAtEachLayer} -concThick{$Thicknesses}
 
 .. csv-table:: 
    :header: "Parameter", "Type", "Description"
@@ -56,9 +54,10 @@ The following recorders are available with the ReinforcedConcreteLayeredMembrane
    | 1. The **ReinforcedConcreteLayeredMembraneSection** should be used in conjunction with ``OrthotropicRAConcrete`` and ``SmearedSteelDoubleLayer`` NDMaterials. It can also be used in a ``MEFI`` element. 
    | 2. The section can also be referred to as **RCLayeredMembraneSection** or **RCLMS**.
    
-.. admonition:: Examples
+Examples
+--------
    
-   For the development of this example, the RW-A20-P10-S38 wall specimen was used (Tran, 2012). Uniaxial concrete and steel materials are defined, along with orthotropic layers for confined/unconfined concrete and distributed steel for the core and boundaries. Sections of types **a** and **b** are defined, composed of the layers created earlier.
+For the development of this example, the RW-A20-P10-S38 wall specimen was used (Tran, 2012). Uniaxial concrete and steel materials are defined, along with orthotropic layers for confined/unconfined concrete and distributed steel for the core and boundaries. Sections of types **a** and **b** are defined, composed of the layers created earlier.
 
    .. figure:: ReinforcedConcreteLayerMembraneSection_figure3.png
 	   :align: center
@@ -241,7 +240,8 @@ The following recorders are available with the ReinforcedConcreteLayeredMembrane
       ops.section('RCLMS', 11, 1, 2, '-reinfSteel', 9, '-conc', 6, 7, '-concThick', tnc, tc)      # Section type a (wall boundary)   
 
    
-**REFERENCES:**
+References 
+----------
 
 #. Rojas, F., Anderson, J. C., Massone, L. M. (2016). A nonlinear quadrilateral layered membrane element with drilling degrees of freedom for the modeling of reinforced concrete walls. Engineering Structures, 124, 521-538. (`link <https://www.sciencedirect.com/science/article/pii/S0141029616302954>`_).
 #. Tran, T. A. (2012). Experimental and Analytical Studies of Moderate Aspect Ratio Reinforced Concrete Structural Walls. Ph.D. Dissertation, Department of Civil and Environmental Engineering, University of California, Los Angeles. (`link <https://escholarship.org/uc/item/1538q2p8>`_).

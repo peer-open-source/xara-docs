@@ -1,7 +1,7 @@
 .. _ConcentratedCurvature:
 
 ConcentratedCurvature
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 This command creates a Concentrated-Plasticity beamIntegration. 
 This integration places one integration point at each element end, representing the plastic hinge and three elastic-curvature integration points along the elastic segment.
@@ -37,9 +37,11 @@ This integration places one integration point at each element end, representing 
      - Tag of previously-defined Elastic section object elastic behavior along element length. (see note 2 below)
    
 
-Note 1: The plastic-hinge behavior at the element ends represents plastic-hinge deformations assumed to be constant over the plastic-hinge length (LpNodeI and LpNodeJ) but located at the element ends. Bending must be defined in terms of bending moment vs curvature, 
-Axial must be defined in terms of axial force vs axial strain, etc. All deformations must be represented by the section. YES YOU MAY USE A FIBER SECTION!!! 
+* The plastic-hinge behavior at the element ends represents plastic-hinge deformations assumed to be constant over the plastic-hinge length (LpNodeI and LpNodeJ) but located at the element ends. Bending must be defined in terms of bending moment vs curvature, 
+  Axial must be defined in terms of axial force vs axial strain, etc. 
+  All deformations must be represented by the section. YES YOU MAY USE A FIBER SECTION!!! 
 
-Note 2: Use an elastic section which defines elastic moment-curvature, force-strain deformations
+* Use an elastic section which defines elastic moment-curvature, force-strain deformations
 
-Code Developed (2023) by: |Silvia Mazzoni (Silvia's Brainery) & Michael Scott (Oregon State University)|
+Code Developed (2023) by: *Silvia Mazzoni (Silvia's Brainery) & Michael Scott (Oregon State University)*
+

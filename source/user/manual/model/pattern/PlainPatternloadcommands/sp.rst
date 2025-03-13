@@ -20,8 +20,8 @@ This command is used to construct a single-point constraint object and add it to
    
    The $dofValue is a reference value, it is the time series that provides the load factor. (The load factor times the reference value is the constraint that is actually applied to the node)
    
-.. admonition:: Example:
-
+Examples
+--------
 
    1. **Tcl Code**
 

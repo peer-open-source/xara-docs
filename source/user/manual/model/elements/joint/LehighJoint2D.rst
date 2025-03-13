@@ -13,8 +13,8 @@ TCL:
 Python:
 
 .. function:: model.element('LehighJoint2D', eleTag, iNode, jNode, kNode, lNode, matTag1, matTag2, matTag3, matTag4, matTag5, matTag6, matTag7, matTag8, matTag9)
+   :no-index:
 
-where:
 
 .. csv-table::
    :header: "Argument", "Type", "Description"
@@ -32,27 +32,27 @@ where:
 	"$matTag8", "|integer|", "Uniaxial material tag for beam varying shear distortion"
 	"$matTag9", "|integer|", "Uniaxial material tag for column varying shear distorsion"
 
-	
-.. admonition:: Notes
-	
-	#. The node tags shall be entered in a counter-clockwise order.
-	 
-	#. The uniaxial material tags represents one of the nine deformation modes present in the element depicted in the figure below.
 
-	#. The force-deformation relation in **matTag3** is defined with tri-linear nonlinearity and all other force-deformation relations are modeled with linear behavior.
+.. note::
+   
+   #. The node tags shall be entered in a counter-clockwise order.
+    
+   #. The uniaxial material tags represents one of the nine deformation modes present in the element depicted in the figure below.
+
+   #. The force-deformation relation in **matTag3** is defined with tri-linear nonlinearity and all other force-deformation relations are modeled with linear behavior.
 
 
 .. figure:: figures/LehighJoint2D/LehighJoint2D_def_modes.png
-	:align: center
-	:figclass: align-center
-	:name: LehighJoint2D
-	:scale: 70%
-	
-	LehighJoint2D Element: The deformation modes in the panel zone.
+   :align: center
+   :figclass: align-center
+   :name: LehighJoint2D
+   :scale: 70%
+   
+   The deformation modes in the LehighJoint2D element panel zone.
    
 
 Examples
-""""""""
+--------
 
 The following example constructs constructs a LehighJoint2D joint element with element tag *4*, that is connected to nodes *2*, *3*, *4* and *5*. The element uses uniaxial material object tags from *1001* to *1009* for the panel deformation modes.
 
@@ -71,8 +71,6 @@ The following example constructs constructs a LehighJoint2D joint element with e
 	
 References
 ----------
-
-More information available in the following reference:
 	
 #. Karavasilis, Theodore & Seo, Choungyeol & Ricles, James. (2008). HybridFEM: A PROGRAM FOR DYNAMIC TIME HISTORY ANALYSIS OF 2D INELASTIC FRAMED STRUCTURES AND REAL-TIME HYBRID SIMULATION HybridFEM Version 4.2.4 User's Manual.
 	

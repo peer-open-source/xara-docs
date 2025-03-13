@@ -3,7 +3,7 @@
 analysis
 ^^^^^^^^
 
-This is the command issued to create an analysis.
+This is the command issued to configure an analysis.
 
 .. tabs::
 
@@ -19,26 +19,29 @@ This is the command issued to create an analysis.
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   ``type``, |string|, type of analysis object to be constructed. Currently 3 valid options:
-   , ,  **Static** - for static analysis
-   , ,  **Transient** - for transient analysis with constant time step
+   ``type``, |string|, type of analysis to be configured. Three variants are supported:
+   , ,  :ref:`"Static" <StaticAnalysis>` - for static analysis
+   , ,  :ref:`"Transient" <TransientAnalysis>` - for standard dynamic analysis with constant time step
    , ,  **VariableTransient** - for transient analysis with variable time step
    ``x``, |integer|, number of sublevels transient analysis should try if failure
    ``y``, |integer|, number of subdivisions to be tried at each sublevel
 
 
 .. toctree::
+   :hidden:
 
    static
    transient
 
+
 .. note::
 
-   The ``<-numSublevels $x -numSubSteps $y>`` only works for the **Transient** type
+   The components of the analysis, i.e. numberer, constraint handler, system, test, integrator, algorithm, should all be issued **before** the analysis object is created.
 
-   The components of the analysis, i.e. numberer, constraint handler, system, test, integrator, algorithm, should all be issued BEFORE the analysis object is created.
 
-   The **VariableTransient** option is still available. The optional additions for the Transient analysis have been found to provide better options for nonlinear problems with convergence issues.
+The ``<-numSublevels $x -numSubSteps $y>`` options only work for :ref:`Transient <TransientAnalysis>`.
+
+The **VariableTransient** option is still available. The optional additions for the Transient analysis have been found to provide better options for nonlinear problems with convergence issues.
 
 
 .. warning::
@@ -46,66 +49,65 @@ This is the command issued to create an analysis.
    When switching from one type of analysis to another, e.g. ``Static`` to ``Transient``, it is necessary to issue a :ref:`wipeAnalysis`.
 
 
-Static Analysis Example
------------------------
+Examples
+--------
 
 The following example shows how to construct a Static analysis.
 
-1. **Tcl Code**
+.. tabs::
 
-.. code:: tcl
+   .. tab:: Tcl
 
-   system SuperLU
-   constraints Transformation
-   numberer RCM
-   test NormDispIncr 1.0e-12  10 3
-   algorithm Newton
-   integrator LoadControl 0.1
-   analysis Static
+      .. code:: tcl
 
+         system SuperLU
+         constraints Transformation
+         numberer RCM
+         test NormDispIncr 1.0e-12  10 3
+         algorithm Newton
+         integrator LoadControl 0.1
+         analysis Static
 
-2. **Python Code**
+   .. tab:: Python
 
-.. code:: python
+      .. code:: python
 
-   model.system("SuperLU")
-   model.constraints("Transformation")
-   model.numberer("RCM")
-   model.test("NormDispIncr", 1.0e-12, 10, 3)
-   model.algorithm("Newton")
-   model.integrator("LoadControl", 0.1)
-   model.analysis("Static")
-
-
-Transient Analysis Example
---------------------------
-
-The following example shows how to construct a Transient analysis.
-
-1. **Tcl Code**
-
-.. code:: tcl
-
-   system SuperLU
-   constraints Transformation
-   numberer RCM
-   test NormDispIncr 1.0e-12  10 3
-   algorithm Newton
-   integrator Newmark 0.5 0.25
-   analysis Transient -numSubLevels 3  -numSubSteps 10
+         model.system("SuperLU")
+         model.constraints("Transformation")
+         model.numberer("RCM")
+         model.test("NormDispIncr", 1.0e-12, 10, 3)
+         model.algorithm("Newton")
+         model.integrator("LoadControl", 0.1)
+         model.analysis("Static")
 
 
-2. **Python Code**
+The following example shows how to construct a :ref:`Transient <TransientAnalysis>` analysis.
 
-.. code:: python
+.. tabs::
 
-   model.system("SuperLU")
-   model.constraints("Transformation")
-   model.numberer("RCM")
-   model.test("NormDispIncr", 1.0e-12, 10, 3)
-   model.algorithm("Newton")
-   model.integrator("Newmark", 0.5, 0.25)
-   model.analysis("Transient")
+   .. tab:: Tcl
+
+      .. code:: tcl
+
+         system SuperLU
+         constraints Transformation
+         numberer RCM
+         test NormDispIncr 1.0e-12  10 3
+         algorithm Newton
+         integrator Newmark 0.5 0.25
+         analysis Transient -numSubLevels 3  -numSubSteps 10
+
+   .. tab:: Python
+
+      .. code:: python
+
+         model.system("SuperLU")
+         model.constraints("Transformation")
+         model.numberer("RCM")
+         model.test("NormDispIncr", 1.0e-12, 10, 3)
+         model.algorithm("Newton")
+         model.integrator("Newmark", 0.5, 0.25)
+         model.analysis("Transient")
 
 
 Code Developed by |fmk|

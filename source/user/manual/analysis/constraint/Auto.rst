@@ -14,7 +14,7 @@ Auto Constraint Handler
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-     -verbose, |string|, "(optional, default = not-defined) If defined, OpenSees will report some debug information."
+     -verbose, |string|, "(optional, default = not-defined) If defined, |OpenSees| will report some debug information."
      -autoPenalty $oom, |string| + |float|, "(optional, default = -autoPenalty defined, oom = 3). With this option, each multi-point constraint will be assigned an automatic penalty value :math:`\alpha_M=10^{koom + oom}`, where :math:`koom=round(\log_{10}(K))` is the approximate order-of-magnitute of the (initial) stiffness matrix at the nodes involved in the multi-point constraint."
      -userPenalty $userPenalty, |string| + |float|, "(optional, default = note-defined). If defined, a uniform penalty parameter :math:`\alpha_M=userPenalty` will be used for all multi-point constraints"
 
@@ -33,7 +33,7 @@ Auto Constraint Handler
 
    .. code-block:: python
 
-      constraints('Auto')
+      model.constraints('Auto')
 
 .. admonition:: Example 2
 
@@ -50,6 +50,6 @@ Auto Constraint Handler
 
    .. code-block:: python
 
-      constraints('Auto', '-verbose', '-autoPenalty', 4)
+      model.constraints('Auto', '-verbose', '-autoPenalty', 4)
 
 Code Developed by: **Massimo Petracca** at ASDEA Software, Italy.

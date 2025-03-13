@@ -1,11 +1,12 @@
 .. _FSIFluidBoundaryElement2D:
 
-FSIFluidBoundaryElement2D Element
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FSIFluidBoundaryElement2D
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Description
 ###########
-This command is used to construct an FSIFluidBoundaryElement2D element object. The FSIFluidBoundaryElement2D element is a 2-node linear acoustic boundary element object with the following features:
+This command is used to construct an FSIFluidBoundaryElement2D element. 
+The FSIFluidBoundaryElement2D element is a 2-node linear acoustic boundary element object with the following features:
 
 #. It is based on the Eulerian pressure formulation ([ZienkiewiczEtAl1978]_ , [ZienkiewiczEtAl2000]_ , [LøkkeEtAl2017]_ ) for (Class I) fluid-structure interaction problems.
 #. It uses a 2 integration points Gauss quadrature.
@@ -120,6 +121,6 @@ Code Developed, implemented and tested by:
 References
 ##########
 
-.. [ZienkiewiczEtAl1978] Zienkiewicz O.C., Bettess P. (1978) "Fluid-structure dynamic interaction and wave forces. An introduction to numerical treatment", Inter. J. Numer. Meth. Eng.., 13(1): 1–16. (`Link to article <https://onlinelibrary.wiley.com/doi/10.1002/nme.1620130102>`_)
+.. [ZienkiewiczEtAl1978] Zienkiewicz O.C., Bettess P. (1978) "Fluid-structure dynamic interaction and wave forces. An introduction to numerical treatment", Inter. J. Numer. Meth. Eng.., 13(1): 1–16. (`Link to article <https://onlinelibrary.wiley.com/doi/10.1002/nme.1620130102>`__)
 .. [ZienkiewiczEtAl2000] Zienkiewicz O.C., Taylor R.L. (2000) "The Finite Element Method", Butterworth-Heinemann, Vol.1, 5th Ed., Ch.19.
-.. [LøkkeEtAl2017] Løkke A., Chopra A.K. (2017) "Direct finite element method for nonlinear analysis of semi-unbounded dam–water–foundation rock systems", Earthquake Engineering and Structural Dynamics 46(8): 1267–1285. (`Link to article <https://onlinelibrary.wiley.com/doi/abs/10.1002/eqe.2855>`_)
+.. [LøkkeEtAl2017] Løkke A., Chopra A.K. (2017) "Direct finite element method for nonlinear analysis of semi-unbounded dam–water–foundation rock systems", Earthquake Engineering and Structural Dynamics 46(8): 1267–1285. (`Link to article <https://onlinelibrary.wiley.com/doi/abs/10.1002/eqe.2855>`__)

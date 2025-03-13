@@ -10,9 +10,10 @@ The *ArcLength* static integrator is particularly useful for tracing the respons
    .. tab:: Python 
       
       .. py:function:: model.integrator("ArcLength", s, alpha, det=False, exp=0.0, iterScale=1.0)
-      
-         :param float s: the initial arc-Length
-         :param float alpha:  a scaling factor on the reference loads.
+         :no-index:
+
+         :param |float| s: the initial arc-Length
+         :param |float| alpha:  a scaling factor on the reference loads.
          :param bool det:  if True, use the determinant to choose incrementation sign [1]_.
          :param float exp: exponent parameter from [1]_
          :param iterScale: |float|, a scaling factor on the arc-length incrementation.
@@ -116,12 +117,12 @@ so that
    d \boldsymbol{u} = d \lambda \, d \hat{\boldsymbol{u}} + d \bar{\boldsymbol{u}}
 
 Implementation
-~~~~~~~~~~~~~~
+--------------
 
 The arc-length control method is implemented with a distinct *increment* and *iteration* phase.
 
 Increment
-=========
+~~~~~~~~~
 
 During load incrementation the iteration is :math:`i=1` and the following assumption is taken:
 
@@ -141,7 +142,7 @@ determine the sign; if it was positive then the new
 :math:`d \lambda_{(1)}` is assumed positive, otherwise negative.
 
 Iterations
-==========
+~~~~~~~~~~
 
 During iterations (ie :math:`i>1`) the constraint equation is expressed in terms of the linearization direction :math:`d\boldsymbol{u}`:
 
@@ -210,4 +211,3 @@ References
 .. [3] Wempner, GA (1971) 'Discrete approximations related to nonlinear theories of solids'
 .. [4] Crisfield, MA (1981) 'A fast incremental/iterative solution procedure that handles "snap-through"'
 .. [5] Ramm E 'Strategies for tracing nonlinear response near limit points'
-

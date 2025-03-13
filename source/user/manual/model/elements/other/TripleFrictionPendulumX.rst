@@ -1,29 +1,29 @@
-.. _TripleFrictionPendulumX::
+.. _TripleFrictionPendulumX:
 
 TripleFrictionPendulumX
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 This command is used to construct the TripleFrictionPendulumX element [KimConstantinou2022]_ [KimConstantinou2023]_ [KimConstantinou2024]_ object, which is an extension of the TripleFrictionPendulum element [DaoEtAl2013]_ with added capability for accounting for heating effects on the frictional behavior of triple friction pendulum isolators. The horizontal behavior of the element is achieved by the series model, which consists of properly combined hysteretic/frictional and multidirectional gap elements.  
 
-Three main modifications in the TripleFrictionPendulumX element include: 1) computation of the displacement and velocity histories at each of the four sliding interfaces of the isolator, 2) computation of the temperature history at each sliding interface, and 3) accounting for the dependency of the coefficient of friction on the instantaneous temperature at each sliding interface.  The factorized friction model used in OpenSees element FPBearingPTV [KumarEtAl2015]_ is used to account for the effects of pressure, velocity, and temperature on the friction coefficients at each sliding surfaces, with the latter effect expanded to include more possible friction-temperature laws. In OpenSees element FPBearingPTV, the friction coefficient is given by equations (1) to (4) in which :math:`\mu_{ref}` is the reference high speed coefficient of friction at the initial time :math:`t = 0`, initial temperature :math:`T_{0} = 20℃` and initial pressure :math:`p_{0}`, :math:`a` is velocity rate parameter :math:`(= 100sec/m)`, :math:`p` is the apparent pressure, and :math:`v` is the amplitude of the velocity.
+Three main modifications in the TripleFrictionPendulumX element include: 1) computation of the displacement and velocity histories at each of the four sliding interfaces of the isolator, 2) computation of the temperature history at each sliding interface, and 3) accounting for the dependency of the coefficient of friction on the instantaneous temperature at each sliding interface.  The factorized friction model used in OpenSees element FPBearingPTV [KumarEtAl2015]_ is used to account for the effects of pressure, velocity, and temperature on the friction coefficients at each sliding surfaces, with the latter effect expanded to include more possible friction-temperature laws. In the FPBearingPTV element, the friction coefficient is given by equations (1) to (4) in which :math:`\mu_{ref}` is the reference high speed coefficient of friction at the initial time :math:`t = 0`, initial temperature :math:`T_{0} = 20℃` and initial pressure :math:`p_{0}`, :math:`a` is velocity rate parameter :math:`(= 100sec/m)`, :math:`p` is the apparent pressure, and :math:`v` is the amplitude of the velocity.
 
 .. math::
   
-      \mu(p,v,T)=\mu_{ref} k_{p} k_{v} k_{T}             (1)
+      \mu(p,v,T)=\mu_{ref} k_{p} k_{v} k_{T}            \qquad (1)
   
-      k_{p}=0.7^{0.02(p-p_{0})}             (2)
+      k_{p}=0.7^{0.02(p-p_{0})}           \qquad  (2)
 
-      k_{v}=1-0.5e^{-av}             (3)
+      k_{v}=1-0.5e^{-av}           \qquad  (3)
   
-      k_{T}=0.79(0.7^{0.02T}+0.40)             (4)
+      k_{T}=0.79(0.7^{0.02T}+0.40)            \qquad (4)
 
 In the TripleFrictionPendulumX element, the temperature-dependency of the friction coefficient was expanded beyond the single case described by equation (4).  Specifically, two additional cases were added, described by equations (5) and (6).  Figure 1 depicts the coefficient :math:`k_T` as function of temperature for the three cases.  In the three cases, the value of coefficient :math:`k_T` drops from the unity at the normal temperature to 1/3, 1/2 or 2/3 at approximately the temperature of :math:`200℃`.
 
 .. math::
 
-      k_{T}=0.84(0.7^{0.0085T}+0.25)           (5)
+      k_{T}=0.84(0.7^{0.0085T}+0.25)        \qquad   (5)
 
-      k_{T}=0.97(0.7^{0.029T}+0.22)           (6)
+      k_{T}=0.97(0.7^{0.029T}+0.22)         \qquad  (6)
 
 
 .. figure:: figures/TripleFrictionPendulumX/FIGURE1.jpg
@@ -392,13 +392,13 @@ For more information about the element formulation, please refer to the referenc
 
    .. [DaoEtAl2013] Dao, N. D., Ryan, K. L., Sato, E. and Sasaki, T. (2013). “Predicting the displacement of triple pendulum bearings in a full-scale shaking experiment using a three-dimensional element”, Earthquake Engineering & Structural Dynamics, 42(11), 1677-1695. https://doi.org/10.1002/eqe.2293.
 
-   .. [KimConstantinou2022] “Modeling triple friction pendulum bearings in program OpenSees including frictional heating effects”, Report No. MCEER-22-0001, Multidisciplinary Center for Earthquake Engineering Research, Buffalo, NY. 
+   .. [KimConstantinou2022] "Modeling triple friction pendulum bearings in program OpenSees including frictional heating effects”, Report No. MCEER-22-0001, Multidisciplinary Center for Earthquake Engineering Research, Buffalo, NY. 
 
-   .. [KimConstantinou2023] “Modeling frictional heating effects in triple friction pendulum isolators”, Earthquake Engineering & Structural Dynamics, 52(4), 979–997. https://doi.org/10.1002/eqe.3797.
+   .. [KimConstantinou2023] "Modeling frictional heating effects in triple friction pendulum isolators”, Earthquake Engineering & Structural Dynamics, 52(4), 979–997. https://doi.org/10.1002/eqe.3797.
 
-   .. [KimConstantinou2024] “Validity of models for frictional heating in sliding isolators”, Earthquake Engineering & Structural Dynamics, 53(3), 1308–1325. https://doi.org/10.1002/eqe.4067.
+   .. [KimConstantinou2024] "Validity of models for frictional heating in sliding isolators”, Earthquake Engineering & Structural Dynamics, 53(3), 1308–1325. https://doi.org/10.1002/eqe.4067.
 
-   .. [KumarEtAl2015] “Characterizing friction in sliding isolation bearings”, Earthquake Engineering & Structural Dynamics, 44(9), 1409-1425. https://doi.org/10.1002/eqe.2524.
+   .. [KumarEtAl2015] "Characterizing friction in sliding isolation bearings”, Earthquake Engineering & Structural Dynamics, 44(9), 1409-1425. https://doi.org/10.1002/eqe.2524.
 
 
 Code Developed by: **Hyun-Myung Kim** and **Michael C. Constantinou**, University at Buffalo

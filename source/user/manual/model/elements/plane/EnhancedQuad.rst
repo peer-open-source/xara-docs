@@ -11,7 +11,7 @@ EnhancedQuad
 
          :param tag: integer, unique element object tag
          :param nodes: tuple, a tuple of four element nodes in counter-clockwise order
-         :param section: tuple or int. If int, it is the tag of a previously defined :ref:`PlaneSection`. If tuple, it is a tuple of the form (``thick``, ``type``, ``material``) where 
+         :param section: tuple or int. If int, it is the tag of a previously defined :ref:`PlaneSection <PlaneSection>`. If tuple, it is a tuple of the form (``thick``, ``type``, ``material``) where 
            
              ===================================   ==============================================================================================================
              ``thick`` |float|                     element thickness
@@ -52,7 +52,7 @@ Theory
 
    EnhancedQuad element node numbering
 
-This element implements the Q1/E4 assumed strain interpolation. The formulation 
+This element implements the Q1/E4 assumed strain interpolation [4]_. The formulation 
 is generally credited to Taylor, Beresford, and Wilson (1976) [1]_. A variational basis 
 for the formulation is given by Simo and Rifai (1990) [2]_.
 

@@ -1,7 +1,7 @@
 .. _TRBDF2:
 
 TRBDF2
-------
+^^^^^^
 
 This command is used to construct a TRBDF2 integrator. 
 The TRBDF2 integrator is a composite scheme that alternates between the Trapezoidal scheme and a 3 point backward Euler scheme. 

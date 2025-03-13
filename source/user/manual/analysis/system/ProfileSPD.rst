@@ -1,14 +1,15 @@
-ProfileSPD System
------------------
+ProfileSPD
+^^^^^^^^^^
 
-This command is used to construct a ProfileSPD linear system of equation object. As the name implies, this class is used for symmetric positive definite matrix systems. The matrix is stored as shown below in a 1 dimensional array with only those values below the first non-zero row in any column being stored. This is sometimes also referred to as a skyline storage scheme. The following command is used to construct such a system:
+This class is used for symmetric positive definite matrix systems. 
+The matrix is stored as shown below in a 1 dimensional array with only those values below the first non-zero row in any column being stored. This is sometimes also referred to as a skyline storage scheme. The following command is used to construct such a system:
 
 .. function:: system ProfileSPD
 
-An n×n matrix A= is a symmetric positive definite matrix if:
+An :math:`n\times n` matrix :math:`\boldsymbol{A}` is a *symmetric positive definite* matrix if:
 
 1. :math:`a_{i,j} = a_{j,i}`
-2. :math:`y^T A y != 0` for all non-zero vectors y with real entries (:math:`y \in \mathbb{R}^n`).
+2. :math:`y\cdot A y \ne 0` for all non-zero vectors y with real entries (:math:`y \in \mathbb{R}^n`).
 
 In the skyline or profile storage scheme only the entries below the first no-zero row entry in any column are stored if storing by rows: The reason for this is that as no reordering of the rows is required in gaussian eleimination because the matrix is SPD, no non-zero entries will ocur in the elimination process outside the area stored.
 
@@ -40,9 +41,10 @@ with a further array containing indices of diagonal elements:
    1 & 3 & 5 & 6 & 10 
    \end{bmatrix}
 
-.. admonition:: Example 
+Examples
+--------
 
-   The following example shows how to construct a ProfileSPD system
+The following example shows how to construct a ProfileSPD system
 
    1. **Tcl Code**
 
@@ -55,6 +57,6 @@ with a further array containing indices of diagonal elements:
 
    .. code-block:: python
 
-      system('ProfileSPD')
+      model.system("ProfileSPD")
 
 Code Developed by: |fmk|

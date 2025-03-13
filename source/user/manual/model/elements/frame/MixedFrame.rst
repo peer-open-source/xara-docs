@@ -2,13 +2,14 @@
 ``MixedFrame``: Frame with force-interpolation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Mixed finite element formulation for 3D frame elements.
+Mixed finite element formulation for 3D frame elements. [1]_ [2]_.
 
 .. tabs::
 
    .. tab:: Python (RT)
 
       .. py:function:: Model.element("MixedFrame", tag, nodes, section=None, transform=None, integration=None, *args)
+         :no-index:
 
          :param tag: unique element tag
          :type tag: int
@@ -32,5 +33,5 @@ References
 
 .. [2] Lee, C.‐L., and F. C. Filippou. “Frame Elements with Mixed Formulation for Singular Section Response.” International Journal for Numerical Methods in Engineering 78, no. 11 (June 11, 2009): 1320–44. https://doi.org/10.1002/nme.2531.
 
-Code developed by: `Claudio M. Perez <https://github.com/claudioperez>`_ (University of California, Berkeley).
+Code developed by: |cmp|, |fcf|, |mhs|, |fmk|
 

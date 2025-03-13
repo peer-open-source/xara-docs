@@ -1,6 +1,6 @@
-******
+
 Manual
-******
+^^^^^^
 
 The :ref:`Model <modelClass>` class encapsulates a finite element analysis in *xara*. 
 The simplest way to create a model is by using its constructor:
@@ -30,9 +30,9 @@ These are organized as follows:
 
    manual/modeling
    manual/meshing/index
-   manual/analysisCommands
-   manual/outputCommands
+   manual/analysis/index
+   manual/output/index
    manual/miscCommands
-
+   manual/guides/index
 
 

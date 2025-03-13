@@ -1,13 +1,14 @@
 .. _BFGS:
 
 BFGS
-----
+^^^^
 
 .. tabs::
 
    .. tab:: Python
       
       .. function:: model.algorithm("BFGS" [, count])
+         :no-index:
    
    .. tab:: Tcl 
 

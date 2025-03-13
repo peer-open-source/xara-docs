@@ -3,7 +3,7 @@
 Ground Motion
 ^^^^^^^^^^^^^
 
-The groundMotion command is used to construct a GroundMotion object used by the ImposedMotionSP constraints in a MultipleSupportExcitation object. This command is of the following form:
+The groundMotion command is used to construct a GroundMotion object used by the ImposedMotionSP constraints in a *MultipleSupportExcitation*. This command is of the following form:
 
 .. function:: groundMotion $tag $type arg1? ...
 
@@ -18,7 +18,7 @@ The type of GroundMotion created and the additional arguments required depends o
    $type, |string|, the type of ground motion
    $args, |floatList|, args specific to the type of motion
 
-There are presently two type of groundMotions that can be created: 1) :ref:`plainGroundMotion` and 2) :ref:`interpolaatedGroundMotion`
+There are presently two type of groundMotions that can be created: 1) :ref:`plainGroundMotion` and 2) :ref:`interpolatedGroundMotion`
 
 .. _plainGroundMotion:
 
@@ -28,6 +28,7 @@ Plain Ground Motion
 Each GroundMotion object is associated with a number of TimeSeries objects, which define the acceleration, velocity and displacement records for that ground motion. The particular form of the command is as follows:
 
 .. function:: groundMotion $gmTag Plain <-accel $tsTag> <-vel $tsTag> <-disp $tsTag> <-int (IntegratorType intArgs)> <-fact $cFactor>)
+
 where
 
 .. csv-table:: 
@@ -36,7 +37,7 @@ where
 
    $gmTag, |integer|, unique tag among ground motions in load pattern
    $tsTag, |integer|, tag of TimeSeries object created using timeSeries command.
-   integratorType, |string|, string inteagting type of integration (optional, default=Trapezoidal). See NOTES below.
+   integratorType, |string|, "string inteagting type of integration (optional, default=Trapezoidal). See NOTES below."
    $cFactor, |float|, factor to be applied to motions (optional: default=1.0)
 
 .. note::
@@ -90,12 +91,12 @@ This command is used to construct an interpolated GroundMotion object, where the
 
    .. code:: python
 
-      timeSeries('Path', 3, '-dt', 0.02, '-filePath', 'elCentroDisp.dat')
-      pattern('MultiSupport', 1)	 
-      groundMotion(101, 'Series', '-disp', 3)
-      imposedSupportMotion(1,1,101)
-      imposedSupportMotion(4,1,101)
-      imposedSupportMotion(7,1,101)
+      model.timeSeries("Path", 3, "-dt", 0.02, "-filePath", "elCentroDisp.dat")
+      model.pattern("MultiSupport", 1)	 
+      model.groundMotion(101, "Series", "-disp", 3)
+      model.imposedSupportMotion(1,1,101)
+      model.imposedSupportMotion(4,1,101)
+      model.imposedSupportMotion(7,1,101)
 
 Code Developed by: |fmk|
 

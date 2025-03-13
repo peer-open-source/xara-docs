@@ -1,9 +1,11 @@
-.. _RockingBC::
+.. _RockingBC:
 
-RockingBC Element
-^^^^^^^^^^^^^^^^
+RockingBC
+^^^^^^^^^
 
-This command is used to construct a RockingBC element. This element can be used to describe the rocking motion of 2d deformable bodies, either elastic or inelastic, under static or dynamic loading. Apart from the deformability along the length of the member, the element is able to account for deformability near the contact area, where nonlinear stress distributions develop and sections do not remain plane. Furthermore, the element is able to account for constraints along the length of the rocking member imposed by other structural members, as well as sliding and upthrow. More information about the theory and usage of the element can be found in the References below.
+This element can be used to describe the rocking motion of 2d deformable bodies, either elastic or inelastic, under static or dynamic loading. 
+Apart from the deformability along the length of the member, the element is able to account for deformability near the contact area, where nonlinear stress distributions develop and sections do not remain plane. 
+Furthermore, the element is able to account for constraints along the length of the rocking member imposed by other structural members, as well as sliding and upthrow. 
 
 .. figure:: RockingBC.png
    :align: center
@@ -12,9 +14,7 @@ This command is used to construct a RockingBC element. This element can be used 
 
    RockingBC element
 
-.. admonition:: Command
-
-   **element RockingBC $eleTag $iNode $jNode $Nw $E $nu $sy $B $w $mu <-convlim $convlim> <-useshear $useshear> <-blevery $blevery> <-useUelNM $useUelNM> <-usecomstiff $usecomstiff> <-af $af> <-aflim $aflim> <-convlimmult $convlimmult> <-maxtries $maxtries> <-NlimN $NlimN> <-NlimT $NlimT> <-Dtlim $Dtlim> <-errorifNexceeds $errorifNexceeds>**
+.. function:: element RockingBC $eleTag $iNode $jNode $Nw $E $nu $sy $B $w $mu <-convlim $convlim> <-useshear $useshear> <-blevery $blevery> <-useUelNM $useUelNM> <-usecomstiff $usecomstiff> <-af $af> <-aflim $aflim> <-convlimmult $convlimmult> <-maxtries $maxtries> <-NlimN $NlimN> <-NlimT $NlimT> <-Dtlim $Dtlim> <-errorifNexceeds $errorifNexceeds>
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
@@ -61,18 +61,22 @@ This command is used to construct a RockingBC element. This element can be used 
       forceratioTmax, maximum ratio of the increment in the total (deformation-inducing & damping) axial force in a dynamic analysis with respect to the last value of the axial force before the dynamic analysis
       *other* (arbitrary), "This option is used when the stress and plastic displacement distributions across the rocking interface are required at each step. The former are recorded in files *other_Ys* (coordinates) and *other_S* (stress values), while the latter in files *other_Yup* (coordinates) and *other_Up* (plastic displacement values)."
 
-.. admonition:: Example
 
-	An example file can be located at https://github.com/OpenSees/OpenSees/tree/master/EXAMPLES/ExampleScripts/RockingBC.tcl
+Examples
+--------
 
-.. admonition:: References 
+An example file can be located at https://github.com/OpenSees/OpenSees/tree/master/EXAMPLES/ExampleScripts/RockingBC.tcl
 
-   #. Avgenakis E. and Psycharis I.N. (2017) “Modeling of Rocking Elastic Flexible Bodies under Static Loading Considering the Nonlinear Stress Distribution at Their Base.” Journal of Structural Engineering 143(7): 04017051.
-	
-   #. Avgenakis E. and Psycharis I.N. (2019) “Determination of the nonlinear displacement distribution of the semi-infinite strip–Application to deformable rocking bodies.” International Journal of Solids and Structures, 170, 22-37.
-	
-   #. Avgenakis E. and Psycharis I.N. (2020) “Modeling of inelastic rocking bodies under cyclic loading.” Journal of Engineering Mechanics 146(4): 04020020.
-	
-   #. Avgenakis E. and Psycharis I.N. (2020) “An integrated macroelement formulation for the dynamic response of inelastic deformable rocking bodies.” Earthquake Engineering and Structural Dynamics, 49(11), 1072-1094.
+References 
+----------
+
+#. Avgenakis E. and Psycharis I.N. (2017) “Modeling of Rocking Elastic Flexible Bodies under Static Loading Considering the Nonlinear Stress Distribution at Their Base.” Journal of Structural Engineering 143(7): 04017051.
+    
+#. Avgenakis E. and Psycharis I.N. (2019) “Determination of the nonlinear displacement distribution of the semi-infinite strip–Application to deformable rocking bodies.” International Journal of Solids and Structures, 170, 22-37.
+    
+#. Avgenakis E. and Psycharis I.N. (2020) “Modeling of inelastic rocking bodies under cyclic loading.” Journal of Engineering Mechanics 146(4): 04020020.
+    
+#. Avgenakis E. and Psycharis I.N. (2020) “An integrated macroelement formulation for the dynamic response of inelastic deformable rocking bodies.” Earthquake Engineering and Structural Dynamics, 49(11), 1072-1094.
 
 Code Developed by: **Evangelos Avgenakis** and **Ioannis N. Psycharis**, School of Civil Engineering, National Technical University of Athens, Greece
+

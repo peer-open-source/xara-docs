@@ -1,21 +1,19 @@
-.. include:: sub.txt
 
 =============
  MidDistance
 =============
 
-.. function:: beamIntegration('MidDistance',tag,N,*secTags,*locs)
+.. py:function:: model.beamIntegration('MidDistance',tag,N,*secTags,*locs)
    :noindex:
 
-   Create a MidDistance beamIntegration object.
    This option allows user-specified locations of the integration points. The associated integration weights are determined from the midpoints between adjacent integration point locations.
    :math:`w_i=(x_{i+1}-x_{i-1})/2` for :math:`i=2...N-1`, :math:`w_1=(x_1+x_2)/2`, and :math:`w_N=1-(x_{N-1}+x_N)/2`.
 
    ========================   =============================================================
-   ``tag`` |int|              tag of the beam integration
-   ``N`` |int|                number of integration points along the element.
-   ``secTags`` |listi|        A list previous-defined section objects.
-   ``locs`` |listf|           Locations of integration points along the element.
+   ``tag`` |integer|              tag of the beam integration
+   ``N`` |integer|                number of integration points along the element.
+   ``secTags`` |integerList|        A list previous-defined section objects.
+   ``locs`` |floatList|           Locations of integration points along the element.
    ========================   =============================================================
 
    ::

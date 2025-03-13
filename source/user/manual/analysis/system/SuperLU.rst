@@ -1,7 +1,9 @@
-SuperLU System
-==============
+SuperLU
+^^^^^^^
 
-This command is used to construct a SparseGEN linear system of equation object. As the name implies, this class is used for sparse matrix systems. The solution of the sparse matrix is carried out using .. `SuperLU <https://portal.nersc.gov/project/sparse/superlu/>`_. To following command is used to construct such a system:
+This command is used to construct a SparseGEN linear system of equation. 
+As the name implies, this class is used for sparse matrix systems. 
+The solution of the sparse matrix is carried out using `SuperLU <https://portal.nersc.gov/project/sparse/superlu/>`_. To following command is used to construct such a system:
 
 .. function:: system SuperLU
 

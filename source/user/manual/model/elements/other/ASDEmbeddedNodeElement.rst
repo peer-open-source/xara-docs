@@ -1,9 +1,7 @@
 .. _ASDEmbeddedNodeElement:
 
-ASDEmbeddedNode Element
-^^^^^^^^^^^^^^^^^^^^^^^
-
-This command is used to construct an ASDEmbeddedNodeElement object.
+ASDEmbeddedNode
+^^^^^^^^^^^^^^^
 
 The ASDEmbeddedNodeElement is a constraint between **one constrained** node and **many retained** nodes.
 Since in OpenSees a Multi-Point constraint can have only one retained node, this constraint was implemented as an Element, thus imposing the constraint using the Penalty approach.
@@ -18,7 +16,7 @@ The constrained node should be inside (or on the boundary of) the domain defined
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $eleTag, |integer|, unique integer tag identifying element object.
+   $eleTag, |integer|, unique integer tag identifying :ref:`Element`.
    $Cnode, |integer|, the constrained node
    $Rnode1 $Rnode2 $Rnode3 <$Rnode4>, 3 or 4 |integer|, the 3 (or 4) retained nodes defining the surrounding triangle (or tetrahedron) domain.
    -rot, |string|, "optional flag. if provided, and if the constrained node has rotational DOFs, its rotation will be constrained as well."

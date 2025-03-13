@@ -14,25 +14,26 @@ This command is used to construct a number of Multi-Point Constraint (MP_Constra
    $constrainedNodeTag1 $constrainedNodeTag2 ... , |integerList|, integer tags identifying the secondary (constrained) nodes
 
 .. note::
+
    1. The constraint object is constructed assuming small rotations in 3D.
 
    2. The rigidDiaphragm command works for problems in three dimensions with six-degrees-of-freedom at the nodes (ndf=6) and in two dimensions with ndf=3.
 
 
-.. admonition:: Example:
+Examples
+--------
 
-   The following command will constrain nodes **4,5,6** to move as if in the same 1-2 plane as node *22*. The constraint matrix added for each of the constrained nodes, which defines the motion of degrees-of-freedom (**x**, **y**, **rZ**) or (**1**, **2**, and **6**) at node **4,5,6** relative to those same degrees-of-freedom at the retained node **22** is as follows:
+The following command will constrain nodes **4,5,6** to move as if in the same 1-2 plane as node *22*. The constraint matrix added for each of the constrained nodes, which defines the motion of degrees-of-freedom (**x**, **y**, **rZ**) or (**1**, **2**, and **6**) at node **4,5,6** relative to those same degrees-of-freedom at the retained node **22** is as follows:
 
-      .. math::
-        :label: rigidConstraintBeam3D
+  .. math::
 
-	\begin{bmatrix}
-		1 & 0 & -\Delta Y \\
-		0 & 1 & \Delta X \\
-		0 & 0 & 1
-	\end{bmatrix}
+    \begin{bmatrix}
+            1 & 0 & -\Delta Y \\
+            0 & 1 & \Delta X \\
+            0 & 0 & 1
+    \end{bmatrix}
 
-      where :math:`\Delta X` is **x** (or **1**) coordinate of constrained node minus the **x** coordinate of the retained node and :math:`\Delta Y` is **y** (or **2**) coordinate of constrained node minus the y coordinate of the retained node and :math:`\Delta Y` 
+where :math:`\Delta X` is **x** (or **1**) coordinate of constrained node minus the **x** coordinate of the retained node and :math:`\Delta Y` is **y** (or **2**) coordinate of constrained node minus the y coordinate of the retained node and :math:`\Delta Y` 
 
 
    1. **Tcl Code**
@@ -45,7 +46,7 @@ This command is used to construct a number of Multi-Point Constraint (MP_Constra
 
    .. code-block:: none
 
-      rigidDiaphragm(3,22,4,5,6)
+      model.rigidDiaphragm(3,22,4,5,6)
 
 
    

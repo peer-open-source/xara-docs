@@ -1,22 +1,34 @@
 .. _ModifiedNewton:
 
-Modified Newton
----------------
+ModifiedNewton
+^^^^^^^^^^^^^^
 
-.. function:: algorithm ModifiedNewton <-initial> 
+.. tabs::
 
-.. list-table:: 
-   :widths: 10 10 40
-   :header-rows: 1
+   .. tab:: Python
 
-   * - Argument
-     - Type
-     - Description
-   * - -initial
-     - |string|
-     - optional flag to indicate to use initial stiffness iterations
+      .. function:: model.algorithm("ModifiedNewton" [, initial=False])
+         :no-index:
 
-This command is used to construct a ModifiedNewton algorithm, which uses the modified newton-raphson algorithm to solve the nonlinear residual equation. 
+         :param initial: optional flag to indicate to use initial stiffness iterations
+         :param type: |bool| 
+
+   .. tab:: Tcl
+
+      .. function:: algorithm ModifiedNewton <-initial> 
+
+      .. list-table:: 
+         :widths: 10 10 40
+         :header-rows: 1
+
+         * - Argument
+           - Type
+           - Description
+         * - ``-initial``
+           - |string|
+           - optional flag to indicate to use initial stiffness iterations
+
+The ModifiedNewton algorithm uses the modified Newton-Raphson algorithm to solve the nonlinear residual equation. 
 
 Example 
 -------
@@ -35,4 +47,4 @@ The following examples demonstrate the command to create a ModifiedNewton soluti
 
       .. code-block:: python
 
-         model.algorithm('ModifiedNewton', '-initial')
+         model.algorithm("ModifiedNewton", initial=True)

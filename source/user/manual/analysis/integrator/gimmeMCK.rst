@@ -9,7 +9,6 @@ GimmeMCK
    The mass, damping, and stiffness matrices can be retrieved using the new ``m``, ``c`` and ``k`` parameters of the :ref:`printA` method.
 
 
-This command is used to construct a GimmeMCK integrator. 
 The GimmeMCK integrator allows the user to return the mass, damping, and stiffness matrix. 
 Depending on the user input, it enable the user to retrieve the desired by using the printA command.
 

@@ -1,9 +1,10 @@
 .. _OrthotropicRAConcrete:
 
-OrthotropicRAConcrete Material
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OrthotropicRAConcrete
+^^^^^^^^^^^^^^^^^^^^^
 
-This command is used to construct an OrthotropicRotatingAngleConcrete material object. It is the abstract representation of an orthotropic concrete layer (plane stress) 2D material with a rotating angle and tangent formulation for cycling or reversed loading with damage. In this formulation, the constitutive model of concrete in each of the principal strain directions (:math:`\theta_{pd}`) can be represented by a uniaxial concrete model (based on the work of Rojas et al., 2016).
+OrthotropicRotatingAngleConcrete is an abstract representation of an orthotropic concrete layer (plane stress) 2D material with a rotating angle and tangent formulation for cycling or reversed loading with damage. 
+In this formulation, the constitutive model of concrete in each of the principal strain directions (:math:`\theta_{pd}`) can be represented by a uniaxial concrete model (based on the work of Rojas et al., 2016).
 
 .. figure:: OrthotropicRAConcrete_figure.png
 	:align: center
@@ -13,9 +14,7 @@ This command is used to construct an OrthotropicRotatingAngleConcrete material o
 	
 	OrthotropicRAConcrete Material: (a) Local coordinate system of a concrete layer; (b) Concrete behavior in the local coordinate system; (c) Uniaxial concrete behavior along principal strain directions.
 
-.. admonition:: Command
-   
-   nDMaterial OrthotropicRAConcrete $matTag $conc $ecr $ec $rho <-damageCte1 $DamageCte1> <-damageCte2 $DamageCte2>
+.. function:: nDMaterial OrthotropicRAConcrete $matTag $conc $ecr $ec $rho <-damageCte1 $DamageCte1> <-damageCte2 $DamageCte2>
 
 .. csv-table:: 
    :header: "Parameter", "Type", "Description"
@@ -61,7 +60,7 @@ The following recorders are available with the OrthotropicRAConcrete material.
 
 .. admonition:: Examples
 
-   The following example constructs an OrthotropicRotatingAngleConcrete material with tag **2**, composed of a uniaxial concrete material (e.g. `Concrete02 <https://opensees.berkeley.edu/wiki/index.php/Concrete02_Material_--_Linear_Tension_Softening>`_, `Concrete06 <https://opensees.berkeley.edu/wiki/index.php/Concrete06_Material>`_) of tag **1**, a strain at tension cracking of **0.00008** and a strain at the compression strength of **-0.002** for a density of **0.0**.
+   The following example constructs an OrthotropicRotatingAngleConcrete material with tag **2**, composed of a uniaxial concrete material (e.g. `Concrete02 <https://opensees.berkeley.edu/wiki/index.php/Concrete02_Material_--_Linear_Tension_Softening>`__, `Concrete06 <https://opensees.berkeley.edu/wiki/index.php/Concrete06_Material>`_) of tag **1**, a strain at tension cracking of **0.00008** and a strain at the compression strength of **-0.002** for a density of **0.0**.
 
    1. **Tcl Code**
 
@@ -77,10 +76,11 @@ The following recorders are available with the OrthotropicRAConcrete material.
    
 
    
-**REFERENCES:**
+References
+----------
 
-#. Rojas, F., Anderson, J. C., Massone, L. M. (2016). A nonlinear quadrilateral layered membrane element with drilling degrees of freedom for the modeling of reinforced concrete walls. Engineering Structures, 124, 521-538. (`link <https://www.sciencedirect.com/science/article/pii/S0141029616302954>`_).
-#. Palermo, D., Vecchio, F.J. (2003). Compression ﬁeld modeling of reinforced concrete subjected to reversed loading: formulation.  ACI  Structural  Journal, 100(5), 616–625. (`link <https://www.scopus.com/record/display.uri?eid=2-s2.0-0141723356&origin=inward>`_)
+#. Rojas, F., Anderson, J. C., Massone, L. M. (2016). A nonlinear quadrilateral layered membrane element with drilling degrees of freedom for the modeling of reinforced concrete walls. Engineering Structures, 124, 521-538. (`link <https://www.sciencedirect.com/science/article/pii/S0141029616302954>`__).
+#. Palermo, D., Vecchio, F.J. (2003). Compression ﬁeld modeling of reinforced concrete subjected to reversed loading: formulation.  ACI  Structural  Journal, 100(5), 616–625. (`link <https://www.scopus.com/record/display.uri?eid=2-s2.0-0141723356&origin=inward>`__)
 
 **Code Developed by:** F. Rojas (University of Chile), M.J. Núñez (University of Chile).
 

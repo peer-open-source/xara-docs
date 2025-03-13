@@ -10,15 +10,12 @@ This command is used to set a Linear algorithm which takes one iteration to solv
    .. tab:: Python
 
       .. function:: model.algorithm("Linear", [initial=False, factorOnce=False])
-      
-      
-      .. csv-table:: 
-         :header: "Argument", "Type", "Description"
-         :widths: 10, 10, 40
-      
-         initial, |bool|,  optional flag to indicate to use initial stiffness
-         factorOnce, |bool|, optional flag to indicate to only set up and factor matrix once
-
+         :no-index:
+         
+         :param initial: optional flag to indicate to use initial stiffness
+         :type initial: |bool|
+         :param factorOnce: optional flag to indicate to only set up and factor matrix once
+         :type factorOnce: |bool|
 
    .. tab:: Tcl
 
@@ -40,7 +37,7 @@ This command is used to set a Linear algorithm which takes one iteration to solv
 
    The Linear algorithm requires no :ref:`test` and will complain if one is provided. This means that convergence is not checked.
 
-   Certain transient explicit :ref:`integration` schemes require a Linear algorithm.
+   Certain transient explicit :ref:`integrators <integrator>` require a Linear algorithm.
 
 
 Example

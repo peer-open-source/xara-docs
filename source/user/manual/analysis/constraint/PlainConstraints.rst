@@ -1,20 +1,18 @@
 Plain Constraints
 ^^^^^^^^^^^^^^^^^
 
-This command is used to construct a Plain constraint handler. A plain constraint handler can only enforce homogeneous single point constraints (fix command) and multi-point constraints constructed where the constraint matrix is equal to the identity (equalDOF command). The following is the command to construct a plain constraint handler:
 
 .. function:: constraints Plain
 
 .. warning::
 
-This constraint handler can only enforce homogeneous single point constraints (fix command) and multi-pont constraints where the constraint matrix is equal to the identity (equalDOF command).
+   This constraint handler can only enforce homogeneous single point constraints (:ref:`fix` command) and multi-pont constraints where the constraint matrix is equal to the identity (:ref:`equalDOF` command).
 
-It does not follow constraints, by that we mean the constrained node in a MP_Constraint cannot be a retained node in another MP_Constraint.
+   It does not *follow* constraints, in the sense that the constrained node in a :ref:`multi-point constraint <ModelConstraints>` cannot be a retained node in another multi-point constraint.
 
 
-.. admonition:: Example 
-
-   The following example shows how to construct a reverse Cuthill-McKee numberer.
+Examples
+--------
 
    1. **Tcl Code**
 

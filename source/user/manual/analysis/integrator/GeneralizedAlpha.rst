@@ -1,25 +1,11 @@
 .. _GeneralizedAlphaMethod:
 
 Generalized Alpha Method
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. function:: integrator GeneralizedAlpha $alphaM $alphaF <$gamma $beta> 
 
-This command is used to define a Generalized :math:`\alpha` integration scheme. This is an implicit method that like the HHT method allows for high frequency energy dissipation and second order accuracy, i.e. :math:`\Delta t^2`. Depending on choices of input parameters, the method can be unconditionally stable. 
-
-.. admonition:: Example 
-
-   1. **Tcl Code**
-
-   .. code-block:: tcl
-
-      integrator GeneralizedAlpha 1.0 1.0
-
-   2. **Python Code**
-
-   .. code-block:: python
-
-       model.integrator('GeneralizedAlpha', 1.0, 1.0)
+This is an implicit method that, like the HHT method, allows for high frequency energy dissipation and second order accuracy, i.e. :math:`\Delta t^2`. Depending on choices of input parameters, the method can be unconditionally stable. 
 
 .. note:: 
 
@@ -46,7 +32,7 @@ and
 
 
 Theory
-^^^^^^
+------
 
 The Generalized :math:`\alpha` method (sometimes called the :math:`\alpha` method) is a one step implicit method for solving the transient problem which attempts to increase the amount of numerical damping present without degrading the order of accuracy. In the HHT method, the same Newmark approximations are used:
 
@@ -98,3 +84,18 @@ and
 
 The linear equations are used to solve for :math:`\boldsymbol{u}_{t+\alpha F \Delta t}, \dot \boldsymbol{u}_{t + \alpha F \Delta t} \ddot \boldsymbol{u}_{t+ \alpha M \Delta t}`. Once convergence has been achieved the displacements, velocities and accelerations at time :math:`t + \Delta t` can be computed. 
 
+
+Examples
+--------
+
+   1. **Tcl Code**
+
+   .. code-block:: tcl
+
+      integrator GeneralizedAlpha 1.0 1.0
+
+   2. **Python Code**
+
+   .. code-block:: python
+
+       model.integrator('GeneralizedAlpha', 1.0, 1.0)

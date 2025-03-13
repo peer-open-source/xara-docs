@@ -10,7 +10,8 @@ The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
    .. tab:: Python (RT)
 
       .. py:function:: Model.element("PrismFrame", tag, nodes, section=None, transform=None, *args)
-
+         :no-index:
+         
          :param tag: unique element tag
          :type tag: int
          :param nodes: tuple of *two* integer node tags
@@ -68,4 +69,5 @@ Warping
 @baigent1982structural
 
 
-Code developed by: `Claudio M. Perez <https://github.com/claudioperez>`_ (University of California, Berkeley).
+Code developed by: |cmp|, |fmk|
+

@@ -3,7 +3,7 @@
 Parallel3D Material Wrapper
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This command is used to construct a Parallel3D material object. It is a wrapper that imposes an iso-strain condition to an arbitrary number of previously-defined 3D nDMaterial objects. Therefore, in each sub-material the strains are equal, the parallel stress and tangent are equal to the (weighted) sum of those of the sub-materials.
+This command is used to construct a Parallel3D material. It is a wrapper that imposes an iso-strain condition to an arbitrary number of previously-defined 3D nDMaterial objects. Therefore, in each sub-material the strains are equal, the parallel stress and tangent are equal to the (weighted) sum of those of the sub-materials.
 
 
 .. function:: nDMaterial Parallel3D $matTag    $tag1 $tag2 ... $tagN   <-weights $w1 $w2 ... $wN>

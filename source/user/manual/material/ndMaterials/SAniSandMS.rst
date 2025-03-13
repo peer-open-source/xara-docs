@@ -70,9 +70,10 @@ And :math:`\sigma^p` is the stress prediction using a :math:`p`-th order integra
 
 The above equations differ from those in the main reference by Liu et al. (2019) in that the use of the yield back-stress ratio :math:`\alpha` is resumed here, as in Dafalias and Manzari (2004), to avoid certain numerical inconveniences. 
 
+
 .. admonition:: Citation information
 
-   If you use SANISAND-MS in your published research work, please cite the main reference ([SANISAND-MS]_) and also inform ``jaabell`` (*at* miuandes *dot* cl), to update the list of published articles and works that use the code.
+   If you use SANISAND-MS in your published research work, please cite the main reference ([SANISAND-MS]_) and also inform ``jaabell`` (*at* miuandes *dot* cl), to update the list of published articles and works that use the code. 
 
 
 .. admonition:: Naming convention
@@ -110,12 +111,14 @@ The above equations differ from those in the main reference by Liu et al. (2019)
 
 
 
-.. admonition:: Example
+Examples
+--------
 
-   This example, provides an asymetric drained triaxial test of the constitutive model to show the effect of ratcheting. First the sample is compressed isotropically to 200KPa, then a cyclic deviator stress is applied. 
+This example, provides an asymetric drained triaxial test of the constitutive model to show the effect of ratcheting. 
+First the sample is compressed isotropically to 200KPa, then a cyclic deviator stress is applied. 
 
    .. literalinclude:: SAniSandMS.tcl
-      :language: tcl
+      :language: Tcl
 
 
    The script produces an output that can be visualized as follows. 
@@ -135,11 +138,12 @@ The above equations differ from those in the main reference by Liu et al. (2019)
       :width: 600px
       :figclass: align-center
 
-**Main references**
+References
+----------
 
 .. [SANISAND-MS] Liu, H. Y., Abell, J. A., Diambra, A., & Pisanò, F. (2019). `Modelling the cyclic ratcheting of sands through <https://www.researchgate.net/publication/328211282_Modelling_the_cyclic_ratcheting_of_sands_through_memory-enhanced_bounding_surface_plasticity>`_. Géotechnique, 69(9), 783-800.
 
-.. [PhDThesis] Liu, H.Y.  (2020). `Constitutive modelling of cyclic sand behaviour for offshore foundations <https://repository.tudelft.nl/islandora/object/uuid%3A6e3ae33c-e95d-474f-8d6b-d8c0f8aa4788?collection=research>`_ (Doctoral dissertation, Delft University of Technology).
+* Liu, H.Y.  (2020). `Constitutive modelling of cyclic sand behaviour for offshore foundations <https://repository.tudelft.nl/islandora/object/uuid%3A6e3ae33c-e95d-474f-8d6b-d8c0f8aa4788?collection=research>`_ (Doctoral dissertation, Delft University of Technology).
 
 **List of works using SANISAND-MS**
 
@@ -148,3 +152,4 @@ The above equations differ from those in the main reference by Liu et al. (2019)
 .. [2] Liu, H. Y., Kementzetzidis, E., Abell, J. A., & Pisanò, F. (2021). `From cyclic sand ratcheting to tilt accumulation of offshore monopiles: 3D FE modelling using SANISAND-MS <https://www.icevirtuallibrary.com/doi/pdf/10.1680/jgeot.20.P.029>`_. Géotechnique, 1-16.
 
 .. [3] Liu, H.Y., & Kaynia, A. M. (2021). `Characteristics of cyclic undrained model SANISAND-MSu and their effects on response of monopiles for offshore wind structures <https://www.icevirtuallibrary.com/doi/pdf/10.1680/jgeot.21.00068>`_. Géotechnique, 1-39.
+

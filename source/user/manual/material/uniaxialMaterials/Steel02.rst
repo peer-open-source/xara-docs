@@ -10,6 +10,7 @@ This command is used to construct a uniaxial Giuffre-Menegotto-Pinto steel mater
    .. tab:: Python 
 
       .. function:: model.uniaxialMaterial("Steel02", tag, fy, E0, b, R0, cR1, cR2, [a1, a2, a3, a4, sigInit])
+         :no-index:
 
    .. tab:: Tcl
 
@@ -38,7 +39,7 @@ This command is used to construct a uniaxial Giuffre-Menegotto-Pinto steel mater
 
    $a3 and $a4: increase of tension yield envelope as proportion of yield strength after a plastic strain of $a4*($Fy/E0). 
 
-   Recommended values: ``R0`` between 10 and 20, ``cR1``=0.925, ``cR2``=0.15
+   Recommended values: ``R0`` between 10 and 20, ``cR1=0.925``, ``cR2=0.15``
 
    If ``siginit`` is specified, strain is calculated from epsP=$sigInit/$E
 
@@ -92,4 +93,5 @@ References
 .. [FilippouEtAl1983] Filippou, F. C., Popov, E. P., Bertero, V. V. (1983). "Effects of Bond Deterioration on Hysteretic Behavior of Reinforced Concrete Joints". Report EERC 83-19, Earthquake Engineering Research Center, University of California, Berkeley.
 
 
-Code Developed by: |mhs|
+Code Developed by: |mhs|, |fcf|
+

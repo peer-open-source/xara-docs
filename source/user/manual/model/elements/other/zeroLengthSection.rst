@@ -1,5 +1,5 @@
-ZeroLength Section Element
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+ZeroLength Section
+^^^^^^^^^^^^^^^^^^
 
 This command is used to construct a zero length element object, which is defined by two nodes at the same location. The nodes are connected by a single section object to represent the force-deformation relationship for the element.
 
@@ -31,13 +31,17 @@ This command is used to construct a zero length element object, which is defined
 
 
 .. warning::
+
    If the distance between end noes is not **0.0** a warning message will appear when the script is run. This is just a warning in case you have made a mistake as most users when they use zeroLength elements are wanting to use them in the more normal way. ZeroLength elements can be used between nodes with non-zero length.
 
 
 Example
 ------- 
 
-The following examples demonstrate the commands in a script to add three zeroLength elements to domain. The three to be added have element tags **1**, **2**, and **3**. Element **1** has nodes **2** and **3** as its end ndes, has two materials **5** and **6** acting in directions **1** and **2**. Element **2** has as its end nodes **4** and **5**, has only one material **1** acting in direction **1**, the element has a global orientation.
+The following examples demonstrate the commands in a script to add three zeroLength elements to domain. 
+The three to be added have element tags **1**, **2**, and **3**. 
+Element **1** has nodes **2** and **3** as its end ndes, has two materials **5** and **6** acting in directions **1** and **2**. 
+Element **2** has as its end nodes **4** and **5**, has only one material **1** acting in direction **1**, the element has a global orientation.
 
    1. **Tcl Code**
 
@@ -50,3 +54,4 @@ The following examples demonstrate the commands in a script to add three zeroLen
 
 
 Code Developed by: |mhs|
+

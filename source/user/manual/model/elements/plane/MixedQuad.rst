@@ -11,10 +11,11 @@ This command is used to construct a four-node quadrilateral element, which uses 
    .. tab:: Python
 
       .. function:: model.element("MixedQuad", tag, nodes, section)
+         :no-index:
 
          :param tag: integer tag identifying the element
          :param nodes: tuple of integer tags identifying the nodes that form the element
-         :param section: tuple or int. If int, it is the tag of a previously defined :ref:`PlaneSection`. If tuple, it is a tuple of the form (``thick``, ``type``, ``material``) where 
+         :param section: tuple or int. If int, it is the tag of a previously defined :ref:`PlaneSection <PlaneSection>`. If tuple, it is a tuple of the form (``thick``, ``type``, ``material``) where 
            
              ===================================   ==============================================================================================================
              ``thick`` |float|                     element thickness
@@ -32,7 +33,7 @@ This command is used to construct a four-node quadrilateral element, which uses 
          :widths: 10, 10, 40
 
          $tag, |integer|,	unique element object tag
-         $iNode $jNode $kNode $lNode, |integer|,  four nodes defining element boundaries, input in counter-clockwise order around the element.
+         $iNode $jNode $kNode $lNode, |integer|,  "four nodes defining element boundaries, input in counter-clockwise order around the element."
          $thick, |float|, element thickness
          $matTag, |integer|, tag of nDMaterial
 

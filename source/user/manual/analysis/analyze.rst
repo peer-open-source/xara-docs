@@ -1,7 +1,8 @@
 .. _analyze:
 
+
 analyze
-*******
+^^^^^^^
 
 This command is used to perform the analysis. 
 It returns a value indicating success or failure of the analysis. 
@@ -10,7 +11,18 @@ It returns a value indicating success or failure of the analysis.
    
    .. tab:: Python
 
-      .. function:: model.analyze(n, dt=None, dtMin=None, dtMax=None, Jd=None)
+      .. function:: model.analyze(n, **options)
+
+         :param n: number of analysis steps to perform.
+         :type n: |integer|
+         :param dt: time-step increment. Required if transient or variable transient analysis
+         :type dt: |float|
+         :param dtMin: minimum time step. Required if a variable time step transient analysis was specified.
+         :type dtMin: |float|
+         :param dtMax: maximum time step. Required if a variable time step transient analysis was specified.
+         :type dtMax: |float|
+         :param Jd: number of iterations user would like performed at each step. The variable transient analysis will change current time step if last analysis step took more or less iterations than this to converge. Required if a variable time step transient analysis was specified.
+         :type Jd: |integer|
 
    .. tab:: Tcl
 
@@ -26,15 +38,16 @@ It returns a value indicating success or failure of the analysis.
    ``dtMin`` ``dtMax``, |float|, minimum and maximum time steps. Required if a variable time step transient analysis was specified.
    ``Jd``, |integer|, number of iterations user would like performed at each step. The variable transient analysis will change current time step if last analysis step took more or less iterations than this to converge. Required if a variable time step transient analysis was specified.
 
-RETURNS:
 
-``0`` if successful
+The function returns an integer value indicating the success or failure of the analysis:
 
-``< 0`` if NOT successful
+* ``0`` if successful
+
+* ``< 0`` if not successful
 
 
-Static Analysis Example
-======================= 
+Examples
+-------- 
 
 The following example shows how to construct a Static analysis.
 
@@ -66,9 +79,6 @@ The following example shows how to construct a Static analysis.
          analysis Static
          set ok [analyze 10]
 
-
-Transient Analysis Example 
-==========================
 
 The following example shows how to construct a Transient analysis.
 

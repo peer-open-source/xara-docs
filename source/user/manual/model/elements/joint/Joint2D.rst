@@ -7,13 +7,17 @@ This command is used to construct a two-dimensional beam-column-joint element.
 The two dimensional beam-column joint is idealized as a parallelogram shaped shear panel with adjacent elements connected to its mid-points. 
 The midpoints of the parallelogram are referred to as external nodes. These nodes are the only analysis components that connect the joint element to the surrounding structure.
 
-TCL:
+.. tabs::
 
-.. function:: element Joint2D $eleTag $Node1 $Node2 $Node3 $Node4 $NodeC <$Mat1 $Mat2 $Mat3 $Mat4> $MatC $LrgDspTag <-damage <Dmg1 Dmg2 Dmg3 Dmg4> DmgC>
+  .. tab:: Python
 
-Python:
+    .. function:: model.element("Joint2D", eleTag, Node1, Node2, Node3, Node4, NodeC, [Mat1, Mat2, Mat3, Mat4], MatC, LrgDspTag, <'-damage', DmgTag>, <'-damage', Dmg1 Dmg2 Dmg3 Dmg4 DmgC>)
+       :no-index:
 
-.. function:: model.element("Joint2D", eleTag, Node1, Node2, Node3, Node4, NodeC, [Mat1, Mat2, Mat3, Mat4], MatC, LrgDspTag, <'-damage', DmgTag>, <'-damage', Dmg1 Dmg2 Dmg3 Dmg4 DmgC>)
+  .. tab:: Tcl
+
+     .. function:: element Joint2D $eleTag $Node1 $Node2 $Node3 $Node4 $NodeC <$Mat1 $Mat2 $Mat3 $Mat4> $MatC $LrgDspTag <-damage <Dmg1 Dmg2 Dmg3 Dmg4> DmgC>
+
 
 where:
 
@@ -33,21 +37,20 @@ where:
    
 
 .. figure:: figures/Joint2D/Joint2D_sch_rep.png
-	:align: center
-	:figclass: align-center
-	:name: Joint2D
-	:scale: 50%
+   :align: center
+   :figclass: align-center
+   :scale: 50%
 
-	Joint2D Element: The joint zones represented by rotational springs.
+   Joint2D Element: The joint zones represented by rotational springs.
 
  
 .. figure:: figures/Joint2D/Joint2D_5SPR_and_1SPR.png
-	:align: center
-	:figclass: align-center
-	:name: Joint2D_5SPR_and_1SPR
-	:scale: 50%
-	
-	Joint2D Element: Graphic representation of the internal components of the element a) with 1 rotational spring and b) with 5 rotational springs.
+   :align: center
+   :figclass: align-center
+   :name: Joint2D_5SPR_and_1SPR
+   :scale: 50%
+     
+   Joint2D Element: Graphic representation of the internal components of the element a) with 1 rotational spring and b) with 5 rotational springs.
 
 .. admonition:: Notes
 	
@@ -64,8 +67,8 @@ where:
 	| 5. If the **LrgDspTag** flag is set to zero the element uses a constant constraint matrix for small-deformation formulation. In the large-deformation formulation the constraint matrix is time varying and it is updated at every converged time step.
 
 	
-Output Recorders
-----------------
+Recorders
+---------
 
 The valid inquires to the Joint2D beam-to-column joint finite element include:
 
@@ -128,8 +131,6 @@ The generated multipoint constraint matrices will be time varying to cover large
 References
 ----------
 
-More information available in the following reference:
-	
 #. Arash Altoontash, 2004, "Simulation and damage models for performance assessment of reinforced concrete beam-column joints", PhD Dissertation, Stanford University, California, USA. [`URL <https://opensees.berkeley.edu/OpenSees/doc/Altoontash_Dissertation.pdf>`_].
 	
 

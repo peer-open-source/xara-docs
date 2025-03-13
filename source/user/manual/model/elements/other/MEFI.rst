@@ -1,7 +1,7 @@
-.. _MEFI::
+.. _MEFI:
 
 MEFI Element
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 The Membrane Fiber (MEFI) element, is described by four nodes, each containing three degrees of freedom (DOFs), two translations, and one in-plane rotation (drilling) DOF, 
 which incorporates a blended interpolation function for the displacements over the element. The element formulation accommodates the quadrature points and weights of the 
@@ -16,11 +16,9 @@ classical finite element formulation of membrane elements to resemble strips (fi
 	MEFI Element: (a) Element idealization; (b) Interpolation function at bottom and top edges; (c) Interpolation function at left and right edges.
 	
 	
-This command is used to construct a MEFI element object.
+This command is used to construct a MEFI element.
 
-.. admonition:: Command
-
-   element MEFI $eleTag $iNode $jNode $kNode $lNode $numFib -width $widths -sec $secTags
+.. function:: element MEFI $eleTag $iNode $jNode $kNode $lNode $numFib -width $widths -sec $secTags
 
 .. csv-table:: 
    :header: "Parameter", "Type", "Description"

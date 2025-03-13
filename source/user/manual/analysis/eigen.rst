@@ -1,7 +1,7 @@
 .. _eigen:
 
 eigen
-*****
+^^^^^
 
 This command is used to perform the eigenvalue analysis.
 
@@ -25,23 +25,24 @@ This command is used to perform the eigenvalue analysis.
    2.  The default eigensolver is able to solve only for N-1 eigenvalues, where N is the number of inertial DOFs. When running into this limitation the -fullGenLapack solver can be used instead of the default Arpack solver.
 
 Theory
-^^^^^^
+------
 
-|  A *generalized eigenvalue problem* for two symmetric matrices :math:`K` and :math:`M` of size :math:`n \times n` is given by:
+A *generalized eigenvalue problem* for two symmetric matrices :math:`K` and :math:`M` of size :math:`n \times n` is given by:
 
 .. math::
    \left (K - \lambda M \right ) \Phi = 0
 
-|  where:
+where:
    
    *  :math:`K` is the stiffness matrix
    *  :math:`M` is the mass matrix
    *  :math:`\lambda` is the eigenvalue
    *  and :math:`\Phi` is the associated eigenvector
 
-.. admonition:: Example
+Examples
+--------
    
-   The following example shows how to use the eigen command to obtain a list of eigenvalues.
+The following example shows how to use the eigen command to obtain a list of eigenvalues.
 
    1. **Tcl Code**
    

@@ -28,6 +28,7 @@ The EnvelopeNode recorder type records the maxima and minima response of a numbe
    $respType, |string|,  a string indicating response required.
 
 .. note::
+
    1. Only one of the options **-file**, **-xml**, **-binary**, or **-tcp** may be used. The option specifies where the data is going to be sent.
 
    2. Similarly only one of the options: **-node**, **-nodeRange**, or **-region** may be used. This option specifies the node tags.
@@ -47,7 +48,7 @@ The EnvelopeNode recorder type records the maxima and minima response of a numbe
    4. | The function returns a value:   
       | SUCCESS: **>0** an integer tag that can be used as a handle on the recorder for the remove a recorder in the :ref:`remove`.
       | FAILURE: **-1** recorder command failed (read the log)
-   To remove a recorder using the :ref:`remove` you need to save this tag in a variable for use later in the script.
+      | To remove a recorder using the :ref:`remove` you need to save this tag in a variable for use later in the script.
 
    5. $deltaT, time interval for recording. will record when next step is $deltaT greater than last recorder step. Not really useful for Envelope recorder, a legacy from NodeRecorder!
 
@@ -56,7 +57,8 @@ The EnvelopeNode recorder type records the maxima and minima response of a numbe
    7. The -closeOnWrite option will slow the program down. It is useful if you want to see just exactly where the application is, as files are only written to disk when the operating system feels like it under typical operation.
 
 
-.. admonition:: Example:
+Examples
+--------
 
    The following examples demonstrate the use of the recorder Node command.
 
@@ -66,10 +68,9 @@ The EnvelopeNode recorder type records the maxima and minima response of a numbe
 
    .. code:: tcl
    
-     recorder EnvelopeNode -file nodesD.out -time -node 1 2 3 4 -dof 1 2 disp;
+      recorder EnvelopeNode -file nodesD.out -time -node 1 2 3 4 -dof 1 2 disp;
 
-     recorder EnvelopeNode -file nodesA.out -timeSeries 1 2 -time -node 1 2 3 4 -dof 1 2 accel;
+      recorder EnvelopeNode -file nodesA.out -timeSeries 1 2 -time -node 1 2 3 4 -dof 1 2 accel;
 
-   .. code:: python
 
 Code developed by: |fmk|

@@ -1,7 +1,7 @@
-.. _PML::
+.. _PML:
 
 PML Element
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
 
 This command is used to construct four-node and and eight-node PML elements. Perfectly Matched Layer (PML) elements are a numerical technique used in simulations to manage boundary conditions and minimize reflections at the edges of a computational domain. PMLs are often implemented as layers or regions at the edges of a computational domain, where the properties of the material in the PML are carefully designed to gradually absorb and attenuate outgoing waves. This absorption process is designed to be as efficient as possible, reducing the reflection of waves back into the domain. The choice of PML parameters, such as the profile of the absorbing material and its thickness, depends on the specific simulation and the desired level of accuracy.
 
@@ -13,8 +13,6 @@ W. Zhang, E. Esmaeilzadeh Seylabi, E. Taciroglu,(2019), An ABAQUS toolbox for so
 
 
 .. admonition:: Command
-
-
 
     1. PML2D
 
@@ -81,20 +79,22 @@ W. Zhang, E. Esmaeilzadeh Seylabi, E. Taciroglu,(2019), An ABAQUS toolbox for so
     8. It is highly recommended to use uniform and square mesh for the PML elements.
 
 
-.. admonition:: Example 
+Example 
+-------
 
-   The following example constructs a PML3D element with tag **1** between nodes **1, 2, 3, 4, 5, 6, 7, 8** with the properties **E=1e6, nu=0.3, rho=1.0, EleType=1, Thickness=1.0, m=2, R=1e-8, RD_half_width_x=10.0, RD_half_width_y=10.0, Depth=5.0, alpha=0.0, beta=0.0**.
-   
-   1. **Tcl Code**
+ The following example constructs a PML3D element with tag **1** between nodes **1, 2, 3, 4, 5, 6, 7, 8** with the properties **E=1e6, nu=0.3, rho=1.0, EleType=1, Thickness=1.0, m=2, R=1e-8, RD_half_width_x=10.0, RD_half_width_y=10.0, Depth=5.0, alpha=0.0, beta=0.0**.
+ 
+ 1. **Tcl Code**
 
-   .. code-block:: tcl
+ .. code-block:: tcl
 
-      element PML 1 1 2 3 4 5 6 7 8 1 0.5 0.25 0.0833333333333333 1e6 0.3 1.0 1 1.0 2 1e-8 10.0 10.0 5.0 0.0 0.0
+    element PML 1 1 2 3 4 5 6 7 8 1 0.5 0.25 0.0833333333333333 1e6 0.3 1.0 1 1.0 2 1e-8 10.0 10.0 5.0 0.0 0.0
 
-   2. **Python Code**
+ 2. **Python Code**
 
-   .. code-block:: python
+ .. code-block:: python
 
-      element('PML', 1, 1, 2, 3, 4, 5, 6, 7, 8, 1, 0.5, 0.25, 0.0833333333333333, 1e6, 0.3, 1.0, 1, 1.0, 2, 1e-8, 10.0, 10.0, 5.0, 0.0, 0.0)
+    model.element('PML', 1, 1, 2, 3, 4, 5, 6, 7, 8, 1, 0.5, 0.25, 0.0833333333333333, 1e6, 0.3, 1.0, 1, 1.0, 2, 1e-8, 10.0, 10.0, 5.0, 0.0, 0.0)
 
 Code Developed by: W. Zhang, E. Taciroglu, A. Pakzad, P. Arduino (UCLA, UW)
+

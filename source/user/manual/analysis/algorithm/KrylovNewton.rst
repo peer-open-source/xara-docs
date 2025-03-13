@@ -3,18 +3,21 @@
 Krylov-Newton
 ^^^^^^^^^^^^^
 
+The *KrylovNewton* algorithm uses a modified :ref:`Newton` method with Krylov subspace acceleration to advance to the next time step. 
+
 .. tabs::
    
    .. tab:: Python 
       
       .. function:: algorithm('KrylovNewton', iterate='current', increment='current', maxDim=3)
+         :no-index:
          
-          :param iterate: tangent to iterate on, options are ``current``, ``initial``, ``noTangent``. default is ``current``. 
-          :type iterate: string
-          :param increment: tangent to increment on, options are ``current``, ``initial``, ``noTangent``. default is ``current`` 
-          :type increment: string
-          :param maxDim: max number of iterations until the tangent is reformed and acceleration restarts (default = 3)  of iterations within a time step until a new tangent is formed
-          :type maxDim: float
+         :param iterate: tangent to iterate on, options are ``current``, ``initial``, ``noTangent``. default is ``current``. 
+         :type iterate: |string|
+         :param increment: tangent to increment on, options are ``current``, ``initial``, ``noTangent``. default is ``current`` 
+         :type increment: |string|
+         :param maxDim: max number of iterations until the tangent is reformed and acceleration restarts (default = 3)  of iterations within a time step until a new tangent is formed
+         :type maxDim: |float|
    
    .. tab:: Tcl
       
@@ -39,8 +42,7 @@ Krylov-Newton
       
 
 
-This command is used to construct a KrylovNewton algorithm which uses a modified :ref:`Newton` method with Krylov subspace acceleration to advance to the next time step. 
-
-References:
+References
+----------
 
 * Scott, M.H. and G.L. Fenves. "A Krylov Subspace Accelerated Newton Algorithm: Application to Dynamic Progressive Collapse Simulation of Frames." Journal of Structural Engineering, 136(5), May 2010. DOI 

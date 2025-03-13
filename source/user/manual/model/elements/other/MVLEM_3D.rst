@@ -1,4 +1,4 @@
-.. _MVLEM_3D::
+.. _MVLEM_3D:
 
 MVLEM_3D Element
 ^^^^^^^^^^^^^^^^
@@ -97,3 +97,4 @@ References
 ##########
 
 K. Kolozvari, K. Kalbasi, K. Orakcal & J. W. Wallace, "Three-Dimensional Model for Nonlinear Analysis of Slender Flanged Reinforced Concrete Walls", Engineering Structures, `Volume 236, 1 June 2021, 112105 <https://doi.org/10.1016/j.engstruct.2021.112105>`_.
+

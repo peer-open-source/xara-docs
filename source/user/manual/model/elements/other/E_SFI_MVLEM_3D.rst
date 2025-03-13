@@ -1,7 +1,7 @@
-.. _E_SFI_MVLEM_3D::
+.. _E_SFI_MVLEM_3D:
 
-E-SFI-MVLEM-3D Element
-^^^^^^^^^^^^^^^^^^^^
+E-SFI-MVLEM-3D
+^^^^^^^^^^^^^^
 
 | Developed and implemented by: 
 | `Kristijan Kolozvari <mailto:kkolozvari@fullerton.edu>`_ (CSU Fullerton)
@@ -15,14 +15,9 @@ The E-SFI-MVLEM-3D model (Kolozvari et al, 2023) is a three-dimensional four-nod
 
 For additional information please visit `E-SFI-MVLEM-3D GitHub Page <https://kkolozvari.github.io/E-SFI-MVLEM-3D/>`_.
 
-This element shall be used in Domain defined with **-ndm 3 -ndf 6**.
 
-Input Parameters
-################
 
-.. admonition:: Command
-
-   element E_SFI_MVLEM_3D eleTag iNode jNode kNode lNode m  -thick {Thicknesses} -width {Widths} -mat {Material_tags} <-CoR c> <-ThickMod tMod> <-Poisson Nu>  <-Density Dens>
+.. function:: element E_SFI_MVLEM_3D eleTag iNode jNode kNode lNode m  -thick {Thicknesses} -width {Widths} -mat {Material_tags} <-CoR c> <-ThickMod tMod> <-Poisson Nu>  <-Density Dens>
 
 .. csv-table:: 
    :header: "Parameter", "Type", "Description"
@@ -39,6 +34,8 @@ Input Parameters
    Nu, float, Poisson ratio for out-of-plane bending (optional; default = 0.25)
    Dens, float, Density (optional; default = 0.0)
 
+This element must be used in a :class:`Model` where ``ndm=3`` and ``ndf=6``.
+
 Recorders
 #########
 
@@ -53,12 +50,9 @@ The following recorders are available with the E-SFI-MVLEM-3D element.
    ShearDef, Element deformation
    RCPanel $fibTag $Response, Returns RC panel (macro-fiber) $Response for a $fibTag-th panel (1 ≤ fibTag ≤ m). For available $Response-s refer to nDMaterial (`FSAM <https://opensees.berkeley.edu/wiki/index.php/FSAM_-_2D_RC_Panel_Constitutive_Behavior>`_)
 
-OpenSeesPy Documentation
-########################
-
-User input for OpenSeesPy is essentially the same as for SFI_MVLEM_3D, with the exception of the element name. OpenSeesPy user documetation for the SFI_MVLEM_3D element can be accessed from `HERE <https://openseespydoc.readthedocs.io/en/latest/src/SFI_MVLEM_3D.html>`_.
 
 References
 ##########
 
-Kristijan Kolozvari, Carlos N. López, Leonardo M. Massone (2023), "Efficient Three-dimensional Shear-flexure Interaction Model for Reinforced Concrete Walls", Engineering Structures, Vol. 294, 116700. (`link <https://doi.org/10.1016/j.engstruct.2023.116700>`_).
+* Kristijan Kolozvari, Carlos N. López, Leonardo M. Massone (2023), "Efficient Three-dimensional Shear-flexure Interaction Model for Reinforced Concrete Walls", Engineering Structures, Vol. 294, 116700. (`link <https://doi.org/10.1016/j.engstruct.2023.116700>`_).
+

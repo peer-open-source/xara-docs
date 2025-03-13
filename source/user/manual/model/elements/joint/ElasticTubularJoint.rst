@@ -10,6 +10,7 @@ This command is used to construct an ElasticTubularJoint element object, which m
 Python:
 
 .. function:: model.element('ElasticTubularJoint', tag, (iNode, jNode), Brace_Diameter, Brace_Angle, E, Chord_Diameter, Chord_Thickness, Chord_Angle)
+   :no-index:
 
 where:
 
@@ -50,7 +51,6 @@ The following example constructs constructs a ElasticTubularJoint joint element 
 References
 ----------
 
-More information available in the following reference:
 	
 #. Alanjari, P., Asgarian, B., & Salari, N. (2015). Elastic tubular joint element for modelling of multi-brace, uni-planar tubular connections. Ships and Offshore Structures, 10(4), 404–415. https://doi.org/10.1080/17445302.2014.942077
 

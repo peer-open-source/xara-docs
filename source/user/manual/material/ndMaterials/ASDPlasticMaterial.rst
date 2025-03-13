@@ -163,11 +163,11 @@ Integration Options
    :header: "Parameter", "Type", "Description"
    :widths: 10, 10, 40
 
-   $f_relative_tol, |double|, "Relative tolerance to evaluate the yield function crossing."
-   $stress_relative_tol, |double|, "Tolerance for the convergece of the integration algorithm."
-   $n_max_iterations, |int|, "Maximum number of iterations for constitutive integration."
-   $return_to_yield_surface, |0 or 1|, "Whether to apply a return to yield surface algorithm after integration convergence."
-   $method, |string|, "Constitutive integration method. Options: ``Forward_Euler``, ``Runge_Kutta_45_Error_Control``"
+   $f_relative_tol, |float|, "Relative tolerance to evaluate the yield function crossing."
+   $stress_relative_tol, |float|, "Tolerance for the convergece of the integration algorithm."
+   $n_max_iterations, |integer|, "Maximum number of iterations for constitutive integration."
+   $return_to_yield_surface, *0 or 1*, "Whether to apply a return to yield surface algorithm after integration convergence."
+   $method, |str|, "Constitutive integration method. Options: ``Forward_Euler``, ``Runge_Kutta_45_Error_Control``"
 
 The default integration method is **Runge_Kutta_45_Error_Control** that uses the classical RK45 ODE integration algorithm employing a 4-th order prediction of the stress increment together with a 5-order prediction to estimate the integration error. In this scheme the strain increment provided by the element to the Gauss point is sub-divided into sub-increments, a process which is automated such that the provided **$stress_relative_tol** is met. This method is provided as a robust standard method which is applicable across all possible combinations of components, although there are possibly better approaches for specific cases which might become available in the future. 
 
@@ -241,7 +241,7 @@ The following example defines an instance of ``ASDPlasticMaterial`` with a Druck
 
     .. code-block:: python
 
-        ops.nDMaterial("ASDPlasticMaterial", 1, 
+        model.nDMaterial("ASDPlasticMaterial", 1, 
         "DruckerPrager_YF",
         "ConstantDilatancy_PF",
         "LinearIsotropic3D_EL",
@@ -277,3 +277,4 @@ Plotted in principal-stress space you can see the material soften as it dilates.
 
 
 Code Developed by: **José A. Abell** (UANDES, Chile and ASDEA), **Guido Camata** and **Massimo Petracca**  (ASDEA Software, Italy).
+

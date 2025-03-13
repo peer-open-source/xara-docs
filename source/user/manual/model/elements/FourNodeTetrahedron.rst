@@ -1,13 +1,11 @@
 .. _FourNodeTetrahedron:
 
-FourNodeTetrahedron Element
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FourNodeTetrahedron
+^^^^^^^^^^^^^^^^^^^
 
 This command is used to construct an four-node tetrahedron element object, which uses the standard isoparametric formulation.
 
-.. admonition:: Command
-
-   **element FourNodeTetrahedron $tag $node1 $node2 $node3 $node4 $matTag <$b1 $b2 $b3> <doInitDisp?>**
+.. function:: element FourNodeTetrahedron $tag $node1 $node2 $node3 $node4 $matTag <$b1 $b2 $b3> <doInitDisp?>
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
@@ -28,15 +26,17 @@ This is the simplest possible continuum finite element for 3-D analysis. It's ba
 
 	FourNodeTetrahedron Element Node Numbering
 
+
 .. note::
 
    The valid :ref:`eleResponse` queries to a `FourNodeTetrahedron` element are ``'forces'``, ``'stresses'``, ``'strains'``, and ``'material $matNum matArg1 matArg2 ...'`` Where $matNum refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
 
-   This element can only be defined after a :ref:`model` with **-ndm 3 -ndf 3**
+   This element can only be defined in a :class:`Model` with ``ndm=3`` and ``ndf=3``
 
-.. admonition:: Example 
+Example 
+-------
 
-   The following example constructs a FourNodeTetrahedron element with tag **1** between nodes **1, 2, 3, 4** with an nDMaterial of tag **1** and body forces given by varaiables **b1, b2, b3**.
+The following example constructs a FourNodeTetrahedron element with tag **1** between nodes **1, 2, 3, 4** with an nDMaterial of tag **1** and body forces given by varaiables **b1, b2, b3**.
 
    1. **Tcl Code**
 
@@ -48,6 +48,7 @@ This is the simplest possible continuum finite element for 3-D analysis. It's ba
 
    .. code-block:: python
 
-      element('FourNodeTetrahedron',1,1,2,3,4,1, b1, b2, b3)
+      model.element('FourNodeTetrahedron',1, (1,2,3,4),1, b1, b2, b3)
+
 
 Code Developed by: `José Antonio Abell <www.joseabell.com>`_ (UANDES). For issues, start a new issue on the `OpenSees github repo <https://github.com/OpenSees/OpenSees>`_ and tag me (@jaabell). 

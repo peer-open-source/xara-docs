@@ -8,6 +8,7 @@ PlaneStress
    .. tab:: Python 
       
       .. function:: Model.section("PlaneStress", tag, material, thickness)
+         :no-index:
 
          :param tag: integer tag identifying the section
          :type tag: int

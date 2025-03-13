@@ -1,7 +1,7 @@
 .. _rayleigh:
 
-Rayleigh Damping Command
-*******************
+Rayleigh Damping
+****************
 
 .. function:: rayleigh $alphaM $betaK $betaKInit $betaKcomm
 

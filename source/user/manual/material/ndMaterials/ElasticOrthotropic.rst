@@ -1,9 +1,7 @@
 .. _ElasticOrthotropic:
 
-Elastic Orthotropic Material
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This command is used to construct an ElasticOrthotropic material object.
+Elastic Orthotropic
+^^^^^^^^^^^^^^^^^^^
 
 .. function:: nDMaterial ElasticOrthotropic $matTag $Ex $Ey $Ez $vxy $vyz $vzx $Gxy $Gyz $Gzx <$rho>
 
@@ -36,4 +34,7 @@ with
 .. math::
 
    E_1>0, E_2>0, E_3>0, G_{12}>0, G_{23}>0, G_{13}>0
+
+
 Code Developed by: |mhs|
+

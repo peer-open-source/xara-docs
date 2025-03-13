@@ -3,7 +3,8 @@
 InitStrain Material Wrapper
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This command is used to construct a InitStrain material object. It is a wrapper that imposes an inital-strain to another nDMaterial such that :math:`\sigma = f\left (\varepsilon + \varepsilon_{0}\right )`.
+This command is used to construct a InitStrain material wrapper. 
+It is a wrapper that imposes an inital-strain to another nDMaterial such that :math:`\sigma = f\left (\varepsilon + \varepsilon_{0}\right )`.
 
 
 .. function:: nDMaterial InitStrain $matTag $otherTag $eps0_11 <$eps0_22 $eps0_33 $eps0_12 $eps0_23 $eps0_13>

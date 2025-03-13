@@ -25,9 +25,10 @@ This command is used to construct a TimeSeries object in which the load factor i
       $shift, |float|,	   phase shift in radians (optional: default=0.0)
       $cFactor, |float|,   the load factor amplification factor (optional: default=1.0)
 
-.. admonition:: Example:
+Examples
+--------
 
-   The following code demonstrates how user would create a trigonometric time series with a tag of **1**, has a start time of **0.0**, an end time of **10.0**, a period of **1.0**, and a max load factor of **2.0**.
+The following code demonstrates how user would create a trigonometric time series with a tag of **1**, has a start time of **0.0**, an end time of **10.0**, a period of **1.0**, and a max load factor of **2.0**.
 
    1. **Tcl Code**
 
@@ -40,7 +41,7 @@ This command is used to construct a TimeSeries object in which the load factor i
 
    .. code-block:: python
 
-      timSeries('Trig',  1, 0.0, 10.0, 1.0, '-factor', 2.0)
+      model.timeSeries('Trig',  1, 0.0, 10.0, 1.0, factor=2.0)
 
 
 Code Developed by: |fmk|

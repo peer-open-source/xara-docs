@@ -15,7 +15,7 @@ This command is used to construct a TimeSeries object in which the load factor i
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   	    $tag, |integer|, unique tag among TimeSeries objects
+   	 $tag, |integer|, unique tag among TimeSeries objects
 	    $tStart, |float|, starting time of non-zero load factor
 	    $tEnd, |float|,	ending time of non-zero load factor
 	    $period, |float|, characteristic period of triangular wave
@@ -37,7 +37,7 @@ This command is used to construct a TimeSeries object in which the load factor i
 
    .. code-block:: python
 
-      timSeries('Triangle',  1, 0.0, 10.0, 1.0, '-factor', 2.0)
+      model.timeSeries('Triangle',  1, 0.0, 10.0, 1.0, factor= 2.0)
 
 
 Code Developed by: |andreas|

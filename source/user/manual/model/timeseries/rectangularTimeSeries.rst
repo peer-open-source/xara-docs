@@ -40,7 +40,7 @@ This command is used to construct a TimeSeries object in which the load factor i
 
    .. code-block:: python
 
-      timSeries('Rectangular',  1, 0.0, 10.0, '-factor', 2.0)
+      timSeries('Rectangular',  1, 0.0, 10.0, factor= 2.0)
 
 
 Code Developed by: |fmk|

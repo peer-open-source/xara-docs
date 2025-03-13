@@ -11,8 +11,7 @@ Some of these SinglePoint constraints may be associated with GroundMotions.
 
 The command has the following form:
 
-.. function:: pattern type? arg1? arg2? ...
-
+.. function:: pattern type args ...
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
@@ -27,11 +26,12 @@ The following contain information about ``type`` and the additional args require
 
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    pattern/plainPattern
    pattern/uniformExcitationPattern
    pattern/multiSupportPattern
    pattern/DRM
    pattern/H5DRM
+   timeSeries
 

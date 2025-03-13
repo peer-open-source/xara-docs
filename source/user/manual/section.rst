@@ -3,7 +3,7 @@
 Section
 ^^^^^^^
 
-This command is used to construct a Section, which represents a constitutive model between stress and strain *resultants*.
+This command configures a Section, which represents a constitutive model between stress and strain *resultants*.
 
 .. tabs::
 

@@ -3,7 +3,8 @@
 Relative Norm Unbalance
 -----------------------
 
-This command is used to construct a convergence test which uses the norms of the right hand side of the matrix equation, i.e. :math:`b` vector in :math:`Ax=b`, to determine if convergence has been reached. It uses the ratio of the current norm to the first norm, i.e. :math:`\frac{\sqrt({b_i}^T{b_i})}{\sqrt({b_1}^T{b_1})}. What the right-hand-side of the matrix equation is depends on integrator and constraint handler chosen. Usually, though not always, it is equal to the unbalanced forces in the system. The command to create a RelativeNormUnbalance test is the following:
+This command is used to construct a convergence test which uses the norms of the right hand side of the matrix equation, i.e. :math:`b` vector in :math:`Ax=b`, to determine if convergence has been reached. 
+It uses the ratio of the current norm to the first norm, i.e. :math:`\frac{\sqrt({b_i}^T{b_i})}{\sqrt({b_1}^T{b_1})}. What the right-hand-side of the matrix equation is depends on integrator and constraint handler chosen. Usually, though not always, it is equal to the unbalanced forces in the system. The command to create a RelativeNormUnbalance test is the following:
 
 .. function:: test RelativeNormUnbalance $tol $iter <$pFlag> <$nType>
 
@@ -20,6 +21,7 @@ This command is used to construct a convergence test which uses the norms of the
     | 4 at each step it will print the norms and also the <math>\Delta U</math> and <math>R(U)</math> vectors.
     | 5 if it fails to converge at end of $numIter it will print an error message BUT RETURN A SUCCESSFUL test."
     $nType, |integer|, "type of norm (optional: default is 2 (0 = max-norm 1 = 1-norm 2 = 2-norm ...))"
+
 
 .. note::
 

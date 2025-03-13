@@ -23,9 +23,10 @@ Available frame elements include
 Loads include
 
 .. toctree::
-   maxdepth: 1
+   :maxdepth: 1
 
    FrameLoad
+
 
 Theory
 ------

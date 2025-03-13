@@ -1,9 +1,10 @@
 .. _SmearedSteelDoubleLayer:
 
-SmearedSteelDoubleLayer Material
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SmearedSteelDoubleLayer
+^^^^^^^^^^^^^^^^^^^^^^^
 
-This command is used to construct a SmearedSteelDoubleLayer material object. It is the abstract representation of a double perpendicular smeared steel layer (plane stress) 2D material with a tangent formulation. Each layer works only in the direction of the bars, so a uniaxial constitutive model is used to represent the behavior of reinforcing steel bars in each direction. The angle that defines the orientation
+This command is used to construct a SmearedSteelDoubleLayer material. 
+It is the abstract representation of a double perpendicular smeared steel layer (plane stress) 2D material with a tangent formulation. Each layer works only in the direction of the bars, so a uniaxial constitutive model is used to represent the behavior of reinforcing steel bars in each direction. The angle that defines the orientation
 of the steel layers with respect to the local coordinate system **x-y** is denoted as :math:`\theta_{s}`, represented by the argument ``$OrientationEmbeddedSteel`` (based on the work of Rojas et al., 2016).
 
 .. figure:: SmearedSteelDoubleLayer_figure.png
@@ -14,9 +15,9 @@ of the steel layers with respect to the local coordinate system **x-y** is denot
 	
 	SmearedSteelDoubleLayer Material: (a) Distributed reinforcement; (b) Rebar layers; (c) Steel layers orientation; (d) Steel behavior in the local coordinate system; (e) Uniaxial steel behavior.
 
-.. admonition:: Command
-   
-   nDMaterial SmearedSteelDoubleLayer $matTag $s1 $s2 $ratioSteelLayer1 $ratioSteelLayer2 $OrientationEmbeddedSteel
+
+.. function:: nDMaterial SmearedSteelDoubleLayer $matTag $s1 $s2 $ratioSteelLayer1 $ratioSteelLayer2 $OrientationEmbeddedSteel
+
 
 .. csv-table:: 
    :header: "Parameter", "Type", "Description"
@@ -63,7 +64,8 @@ The following recorders are available with the SmearedSteelDoubleLayer material.
    
 
    
-**REFERENCES:**
+References
+----------
 
 #. Rojas, F., Anderson, J. C., Massone, L. M. (2016). A nonlinear quadrilateral layered membrane element with drilling degrees of freedom for the modeling of reinforced concrete walls. Engineering Structures, 124, 521-538. (`link <https://www.sciencedirect.com/science/article/pii/S0141029616302954>`_).
 #. Belarbi, A., & Hsu, T. C. (1995). Constitutive  laws   of   softened   concrete   in   biaxial   tension-compression.  ACI  Structural  Journal, 92(5), 562–573. (`link <https://www.scopus.com/record/display.uri?eid=2-s2.0-0029361065&origin=inward>`_)

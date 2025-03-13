@@ -3,7 +3,7 @@
 Plain Pattern
 ^^^^^^^^^^^^^
 
-This command allows the user to construct a LoadPattern object. Each plain load pattern is associated with a TimeSeries object and can contain multiple NodalLoads, ElementalLoads and SP_Constraint objects.
+Each *plain* load pattern is associated with a TimeSeries and can contain multiple NodalLoads, ElementalLoads and SP_Constraints.
 
 .. tabs::
 

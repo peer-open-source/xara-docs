@@ -1,4 +1,4 @@
-.. _SFI_MVLEM_3D::
+.. _SFI_MVLEM_3D:
 
 SFI-MVLEM-3D Element
 ^^^^^^^^^^^^^^^^^^^^
@@ -27,9 +27,7 @@ This element shall be used in Domain defined with **-ndm 3 -ndf 6**.
 Input Parameters
 ################
 
-.. admonition:: Command
-
-   element SFI_MVLEM_3D eleTag iNode jNode kNode lNode m  -thick {Thicknesses} -width {Widths} -mat {Material_tags} <-CoR c> <-ThickMod tMod> <-Poisson Nu>  <-Density Dens>
+.. function:: element SFI_MVLEM_3D eleTag iNode jNode kNode lNode m  -thick {Thicknesses} -width {Widths} -mat {Material_tags} <-CoR c> <-ThickMod tMod> <-Poisson Nu>  <-Density Dens>
 
 .. csv-table:: 
    :header: "Parameter", "Type", "Description"
@@ -95,6 +93,6 @@ Side-by-side comparison of the analytically-obtained vertical strains (Figure 4a
 References
 ##########
 
-K. Kolozvari, K. Kalbasi, K. Orakcal & J. W. Wallace (2021), "Three-dimensional shear-flexure interaction model for analysis of non-planar reinforced concrete walls", Journal of Building Engineering, Vol. 44, 102946. (`link <https://www.sciencedirect.com/science/article/pii/S2352710221008044>`_).
+* K. Kolozvari, K. Kalbasi, K. Orakcal & J. W. Wallace (2021), "Three-dimensional shear-flexure interaction model for analysis of non-planar reinforced concrete walls", Journal of Building Engineering, Vol. 44, 102946. (`link <https://www.sciencedirect.com/science/article/pii/S2352710221008044>`_).
 
-K. Kolozvari, K. Kalbasi, K. Orakcal, L. M. Massone & J. W. Wallace (2019), "Shear–flexure-interaction models for planar and flanged reinforced concrete walls", Bulletin of Eathquake Engineering, Vol. 17, pages 6391–6417. (`link <https://link.springer.com/article/10.1007/s10518-019-00658-5>`_).
+* K. Kolozvari, K. Kalbasi, K. Orakcal, L. M. Massone & J. W. Wallace (2019), "Shear–flexure-interaction models for planar and flanged reinforced concrete walls", Bulletin of Eathquake Engineering, Vol. 17, pages 6391–6417. (`link <https://link.springer.com/article/10.1007/s10518-019-00658-5>`_).

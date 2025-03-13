@@ -8,31 +8,40 @@ MinUnbalDispNorm
    .. tab:: Python 
 
       .. py:function:: model.integrator("MinUnbalDispNorm", dlam0 [, jd, min, max])
+         :no-index:
+         
+         :param dlam0: First load increment (pseudo-time step) at the first iteration in the next invocation of the analysis command.
+         :type dlam0: |float|
+         :param jd: Factor relating first load increment at subsequent time steps. (optional, default: 1.0)
+         :type jd: |float|
+         :param min: arguments used to bound the load increment (optional, default: dlam0)
+         :type min: |float|
+         :param max: arguments used to bound the load increment (optional, default: dlam0)
+         :type max: |float|
 
    .. tab:: Tcl
 
       .. function:: integrator MinUnbalDispNorm $dlambda11 <$Jd $minLambda $maxLambda>
 
+      .. list-table:: 
+         :widths: 10 10 40
+         :header-rows: 1
 
-.. list-table:: 
-   :widths: 10 10 40
-   :header-rows: 1
-
-   * - Argument
-     - Type
-     - Description
-   * - $dlambda11
-     - |float|
-     - First load increment (pseudo-time step) at the first iteration in the next invocation of the analysis command.
-   * - $Jd
-     - |float|
-     - Factor relating first load increment at subsequent time steps. (optional, default: 1.0)
-   * - $minLambda
-     - |float| 
-     - arguments used to bound the load increment (optional, default: $dLambda11)
-   * - $maxLambda
-     - |float| 
-     - arguments used to bound the load increment (optional, default: $dLambda11)
+         * - Argument
+           - Type
+           - Description
+         * - $dlambda11
+           - |float|
+           - First load increment (pseudo-time step) at the first iteration in the next invocation of the analysis command.
+         * - $Jd
+           - |float|
+           - Factor relating first load increment at subsequent time steps. (optional, default: 1.0)
+         * - $minLambda
+           - |float| 
+           - arguments used to bound the load increment (optional, default: $dLambda11)
+         * - $maxLambda
+           - |float| 
+           - arguments used to bound the load increment (optional, default: $dLambda11)
 
 Theory
 ------

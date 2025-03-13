@@ -7,7 +7,7 @@ This command is used to construct a TimeSeries object in which the load factor i
 	:align: center
 	:figclass: align-center
 
-	Pulse Time Series
+	Pulse time series
 
 
 .. function:: timeSeries Pulse $tag $tStart $tFinish $period <-width $pulseWidth> <-shift $shift> <-factor $cFactor>
@@ -39,7 +39,7 @@ This command is used to construct a TimeSeries object in which the load factor i
 
    .. code-block:: python
 
-      timSeries('Pulse',  1, 0.0, 10.0, 1.0, '-factor', 2.0)
+      model.timeSeries('Pulse',  1, 0.0, 10.0, 1.0, factor= 2.0)
 
 
 Code Developed by: |andreas|

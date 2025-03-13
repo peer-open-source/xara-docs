@@ -39,14 +39,16 @@ The GMSH recorder type is a *whole model* recorder, that is it is meant to recor
       | FAILURE: **-1** recorder command failed (read the log)
    
 
-.. admonition:: Example:
+Examples
+--------
 
-   The following examples demonstrate the use of the gmsh recorder command to store displacement results
+The following example demonstrates the use of the gmsh recorder to store displacement results
 
    .. code:: tcl
    
-     recorder gmsh results disp
+      recorder gmsh results disp
 
-   Execution results in the files ``results.mesh.0.msh`` (where mesh info is stored) and ``results.disp.0.msh`` (where displacement response at each node are stored). In gmsh, open first the `mesh` file and then merge the `disp` file into the current model to generate a post-processing view. 
+Execution results in the files ``results.mesh.0.msh`` (where mesh info is stored) and ``results.disp.0.msh`` (where displacement response at each node are stored). In gmsh, open first the `mesh` file and then merge the `disp` file into the current model to generate a post-processing view. 
 
-Code developed by: |jaabell| based on code by |mhscott|, |zhuminjie| and |fmk|.
+Code developed by: *jaabell* based on code by |mhs|, *zhuminjie* and |fmk|.
+

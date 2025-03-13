@@ -1,9 +1,9 @@
-fixZ Command
-************
+fixZ
+^^^^
 
-This command is used to construct multiple homogeneous single-point boundary constraints for all nodes whose z-coordinate lies within a specified distance from a specified coordinate.
+This command imposes multiple homogeneous single-point boundary constraints for all nodes whose z-coordinate lies within a specified distance from a specified coordinate.
 
-.. function: fixZ $xCoordinate (ndf $ConstrValues) <-tol $tol>
+.. function:: fixZ $xCoordinate (ndf $ConstrValues) <-tol $tol>
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
@@ -16,9 +16,11 @@ This command is used to construct multiple homogeneous single-point boundary con
    | 1 constrained (or fixed) "
    $tol, |float|, user-defined tolerance (optional: default = 1e-10)
 
-.. admonition:: Example:
 
-   The following example demonstrate the command to fix the first 3 degrees-of-freedom at all nodes in the model at z location **30.0**.
+Example
+-------
+
+The following example demonstrate the command to fix the first 3 degrees-of-freedom at all nodes in the model at z location **30.0**.
 
    1. **Tcl Code**
 
@@ -30,6 +32,6 @@ This command is used to construct multiple homogeneous single-point boundary con
 
    .. code-block:: none
 
-      fixZ(30.0, 1, 1, 1, 0, 0, 0)
+      model.fixZ(30.0, 1, 1, 1, 0, 0, 0)
 
 Code Developed by: **fmk**

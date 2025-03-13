@@ -1,24 +1,6 @@
 Other
 =====
 
-
-.. toctree::
-   :hidden:
-   :maxdepth: 1   
-
-   elasticBeamColumn
-   ModElasticBeam
-   gradientInelasticBeamColumn   
-   FlexureShearInteractionDisplacementBasedBeamColumnElement
-   dispBeamColumnAsym
-   mixedBeamColumnAsym
-   MVLEM
-   MVLEM_3D
-   SFI_MVLEM_3D
-   E_SFI
-   E_SFI_MVLEM_3D
-
-
 ..
    elements/ForceBasedBeamColumnElement
    elements/DisplacementBasedBeamColumnElement
@@ -27,39 +9,30 @@ Other
 
 
 
-1. Zero-Length Elements
+#. Zero-Length Elements
 
-.. toctree::
-   :maxdepth: 4
+   .. toctree::
+      :maxdepth: 1
 
-   zeroLength
-   zeroLengthSection
-   zeroLengthND
-   CoupledZeroLength
-   zeroLengthContact
-   zeroLengthContactNTS2D
-   zeroLengthInterface2D
-   zeroLengthImpact3D 
-   zeroLengthContactASDimplex
+      zeroLength
+      zeroLengthSection
+      zeroLengthND
+      zeroLengthContactASDimplex
 
 ..
-   9. Link Elements
-   
-      .. toctree::
-         :maxdepth: 1
-      
-         elements/TwoNodeLink
+   zeroLengthInterface2D
+   zeroLengthImpact3D 
+   zeroLengthContact
+   zeroLengthContactNTS2D
 
+#. Bearing Elements
 
-10. Bearing Elements
+   .. toctree::
+      :maxdepth: 1
+    
+      TripleFrictionPendulumX
 
-    .. toctree::
-       :maxdepth: 1
-    
-       TripleFrictionPendulumX
-    
-    
-    ..
+..
        ElastomericBearingBouc-Wen
        FlatSliderBearingElement
        SingleFrictionPendulumBearing
@@ -74,7 +47,31 @@ Other
        FPBearingPTV
        ElastomericBearingPlasticity
 
+
+
+#. Misc.
+
+   .. toctree::
+      :maxdepth: 1   
+
+      ASDEmbeddedNodeElement
+      ASDAbsorbingBoundary
+      RockingBC
+      FSIFluidBoundaryElement2D
+      FSIFluidElement2D
+      FSIInterfaceElement2D
+      PML
+
+
+
+
 ..
+   9. Link Elements
+   
+      .. toctree::
+         :maxdepth: 1
+      
+         elements/TwoNodeLink
    11. U-P Elements (saturated soil)
    
        .. toctree::
@@ -110,32 +107,3 @@ Other
          :maxdepth: 1   
       
          elements/CatenaryCableElement
-
-
-14. Absorbing Elements
-
-.. toctree::
-   :maxdepth: 1   
-
-   PML
-
-15. Misc.
-
-.. toctree::
-   :maxdepth: 1   
-
-   ShallowFoundationGen
-   SurfaceLoad
-   VS3D4
-   AC3D8
-   ASI3D8
-   AV3D4
-   ASDEmbeddedNodeElement
-   ASDAbsorbingBoundary
-   RockingBC
-   FSIFluidBoundaryElement2D
-   FSIFluidElement2D
-   FSIInterfaceElement2D
-
-
-

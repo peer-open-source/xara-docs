@@ -1,8 +1,23 @@
 .. _RelativeEnergyIncr:
 
-Relative Energy Increment Test
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Relative Energy Increment
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-This page is under construction. 
+This command is used to construct a convergence test which uses the
+dot product of the solution vector and norm of the right hand side of
+the matrix equation to determine if convergence has been reached. 
+The physical meaning of this quantity depends on the integrator and
+constraint handler chosen. Usually, though not always, it is equal to
+the energy unbalance in the system. The test is relatively to the first
+dot product computed for each step. 
+The command to create a EnergyIncr test is the following:
 
+.. function:: test RelativeEnergyIncr $tol $iter < $pFlag > < $nType >
+
+
+* When using the :ref:`Penalty` method additional large forces to enforce the
+  penalty functions exist on the right had side, making convergence using this test usually impossible (even though solution
+  might have converged).
+
+* When Lagrange multipliers are used, the solution vector contains the Lagrange multiplies.

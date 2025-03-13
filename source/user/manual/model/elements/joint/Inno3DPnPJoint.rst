@@ -13,6 +13,7 @@ TCL:
 Python:
 
 .. function:: model.element('Inno3DPnPJoint', eleTag, Node1, Node2, Node3, Node4, Node5, SprMatTag01, SprMatTag02, SprMatTag03, SprMatTag04, SprMatTag05, SprMatTag06, SprMatTag07, SprMatTag08, SprMatTag09, SprMatTag10, SprMatTag11, SprMatTag12, SprMatTag13, SprMatTag14, SprMatTag15, SprMatTag16, SprMatTag17, SprMatTag18, SprMatTag19, SprMatTag20, SprMatTag21, SprMatTag22, SprMatTag23, SprMatTag24, SprMatTag25, SprMatTag26, SprMatTag27, SprMatTag28, SprMatTag29, SprMatTag30, SprMatTag31, SprMatTag32)
+   :no-index:
 
 where:
 
@@ -26,11 +27,10 @@ where:
 
 
 .. figure:: figures/Inno3DPnPJoint/I3DJ_allSprings_001.png
-	:align: center
-	:figclass: align-center
-	:name: Inno3DPnPJoint
-	
-	Inno3DPnPJoint Element: 32 components.
+   :align: center
+   :figclass: align-center
+   
+   Inno3DPnPJoint Element: 32 components.
 
 	
 Output Recorders
@@ -86,17 +86,13 @@ When citing this notebook, please use the following format: "Cristian V. Micula�
 References
 """"""""""
 
-.. seealso::
-
-	More information available in the following reference:
-	
-	#. C.V. Miculaş, Innovative plug and play joints for hybrid tubular constructions (Ph.D. thesis), University of Coimbra, Portugal, 2023, https://estudogeral.uc.pt/handle/10316/110990
+#. C.V. Miculaş, Innovative plug and play joints for hybrid tubular constructions (Ph.D. thesis), University of Coimbra, Portugal, 2023, https://estudogeral.uc.pt/handle/10316/110990
 
 
-	#. C.V. Miculaş, R. J. Costa, L. S. da Silva, R. Simões, H. Craveiro, T. Tankova, 3D macro-element for innovative plug-and-play joints, J. Constructional Steel Research 214 (2024), https://doi.org/10.1016/j.jcsr.2023.108436
+#. C.V. Miculaş, R. J. Costa, L. S. da Silva, R. Simões, H. Craveiro, T. Tankova, 3D macro-element for innovative plug-and-play joints, J. Constructional Steel Research 214 (2024), https://doi.org/10.1016/j.jcsr.2023.108436
 
 
-	#. C.V. Miculaş, R.J. Costa, L. Simões da Silva, R. Simões, H. Craveiro, T. Tankova, Macro-modelling of the three-dimensional interaction between the faces of a steel tubular column joint, in: F. Di Trapani, C. Demartino, G.C. Marano, G. Monti (Eds.), Proceedings of the 2022 Eurasian OpenSees Days, Springer Nature Switzerland, Cham, 2023, pp. 408–422, http://dx.doi.org/10.1007/978-3-031-30125-4_37
+#. C.V. Miculaş, R.J. Costa, L. Simões da Silva, R. Simões, H. Craveiro, T. Tankova, Macro-modelling of the three-dimensional interaction between the faces of a steel tubular column joint, in: F. Di Trapani, C. Demartino, G.C. Marano, G. Monti (Eds.), Proceedings of the 2022 Eurasian OpenSees Days, Springer Nature Switzerland, Cham, 2023, pp. 408–422, http://dx.doi.org/10.1007/978-3-031-30125-4_37
 
 
 .. note::
@@ -110,4 +106,4 @@ References
 	Acknowledgements: This work has been supported in part by national funds through Foundation for Science and Technology (FCT), Portugal, under grant agreement SFRH/BD/138151/2018 awarded to Cristian V. Miculaş.
 	
 	
-Code developed by: |cvmiculas|
+Code developed by: *cvmiculas*

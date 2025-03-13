@@ -3,7 +3,7 @@
 InertiaTruss
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This command is used to construct an InertiaTruss element object. 
+This command is used to construct an InertiaTruss element. 
 
 
 .. function:: element InertiaTruss $tag $iNode $jNode $mr
@@ -12,12 +12,12 @@ This command is used to construct an InertiaTruss element object.
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $tag, |integer|,	unique element object tag
+   $tag, |integer|,	unique element tag
    $iNode $jNode, |integer|,  end nodes
    $mr, |float|,     the inertance or inertial mass of an Inertia Truss
 
 
-The valid queries to an InertiaTruss element when creating an ElementRecorder object are 
+The valid queries to an InertiaTruss when creating an ElementRecorder are 
 
 #. ``"force"`` and 
 #. ``"relAccel"``, 

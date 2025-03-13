@@ -1,4 +1,4 @@
-.. _E_SFI::
+.. _E_SFI:
 
 E-SFI Element
 ^^^^^^^^^^^^^^^^^^^^
@@ -19,7 +19,7 @@ To complete the strain field of a panel element, a calibrated expression for the
 	E-SFI Element: (a) Element idealization; (b) Wall model.
 	
 	
-This command is used to construct an E-SFI element object.
+This command is used to construct an E-SFI element.
 
 .. admonition:: Command
 

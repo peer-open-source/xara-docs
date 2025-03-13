@@ -9,10 +9,11 @@ The section is defined by a collection of fibers that are discretized in the cro
 
    .. tab:: Python (RT)
     
-      .. function:: model.section("ShearFiber", tag, **kwds)
+      .. py:function:: model.section("ShearFiber", tag, **kwds)
+         :no-index:
          
          :param tag: unique section tag
-         :type tag: int
+         :type tag: |integer|
 
 
    .. tab:: Tcl

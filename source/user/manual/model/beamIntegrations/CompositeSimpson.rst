@@ -2,7 +2,7 @@
 CompositeSimpson
 ^^^^^^^^^^^^^^^^
 
-To create a CompositeSimpson beamIntegration object.
+Create a CompositeSimpson beamIntegration.
 
 .. function:: beamIntegration 'CompositeSimpson' tag secTag N
 
@@ -15,22 +15,23 @@ To create a CompositeSimpson beamIntegration object.
    "$N",         "|integer|",    "Number of Integration Points along the elementa"
    
 
-.. admonition:: Example:
+Example
+-------
 
-   The following examples demonstrate the command in Tcl and Python script to add a CompositeSimpson beam integration with tag 2 and 6 integration points that uses the previously defined section whose tag is 1.
+The following examples demonstrate the command in Tcl and Python script to add a CompositeSimpson beam integration with tag 2 and 6 integration points that uses the previously defined section whose tag is 1.
 
    1. **Tcl Code**
 
    .. code-block:: tcl
 
-      beamIntegration 'CompositeSimpson' 2 1 6
+      beamIntegration "CompositeSimpson" 2 1 6
 
 
    2. **Python Code**
 
    .. code-block:: python
 
-      beamIntegration('CompositeSimpson',2,1,6)
+      model.beamIntegration("CompositeSimpson",2,1,6)
 
 
 

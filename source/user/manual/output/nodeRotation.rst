@@ -17,7 +17,7 @@ nodeRotation
    
    .. tab:: Tcl
       
-      .. tcl:function:: nodeRotation tag
+      .. function:: nodeRotation tag
    
          :param int tag: The tag of the :ref:`node`
 

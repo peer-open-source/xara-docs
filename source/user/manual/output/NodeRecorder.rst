@@ -47,7 +47,8 @@ The Node recorder type records the response of a number of nodes at every conver
    4. | The function returns a value:   
       | SUCCESS: **>0** an integer tag that can be used as a handle on the recorder for the remove a recorder in the :ref:`remove`.
       | FAILURE: **-1** recorder command failed (read the log)
-   To remove a recorder using the :ref:`remove` you need to save this tag in a variable for use later in the script.
+
+      To remove a recorder using the :ref:`remove` you need to save this tag in a variable for use later in the script.
 
    5. $deltaT specifies a time interval for recording. will record when next step is $deltaT greater than last recorder step. It is useful if user script subdivides time step and user is not interested in the responses at each time step due to memory or file size constraints.
 
@@ -56,9 +57,10 @@ The Node recorder type records the response of a number of nodes at every conver
    7. The -closeOnWrite option will slow the program down. It is useful if you want to see just exactly where the application is, as files are only written to disk when the operating system feels like it under typical operation.
 
 
-.. admonition:: Example:
+Examples
+--------
 
-   The following examples demonstrate the use of the recorder Node command.
+The following examples demonstrate the use of the recorder Node command.
 
    1. The first recorder will output to a file ``nodesD.out`` the displacements in **x** and **y** (**1** and **2**) directions at nodes **1**, **2**, **3**, and **4**. The output file will contain **9** columns (time, displacement in x and y at node 1, disp. in x and y at node 2, ... , disp. x and y at node 4))
 
@@ -70,6 +72,5 @@ The Node recorder type records the response of a number of nodes at every conver
 
      recorder Node -file nodesA.out -timeSeries 1 2 -time -node 1 2 3 4 -dof 1 2 accel;
 
-   .. code:: python
 
 Code developed by: |fmk|

@@ -10,6 +10,7 @@ This command is used to construct a linear coordinate transformation, which perf
    .. tab:: Python
 
       .. py:function:: model.geomTransf("Linear", tag, vecxz, [offi, offj])
+         :no-index:
 
          :param integer tag: integer tag identifying transformation
          :type tag: int
@@ -49,24 +50,11 @@ The x-axis along with the **vecxz** Vector define the xz plane. The local y-axis
 The local z-axis is then found simply by taking the cross product of the y-axis and x-axis vectors (:math:`\mathbf{i}_z = \mathbf{i} \times \mathbf{i}_y`). 
 The section is attached to the element such that the y-z coordinate system used to specify the section corresponds to the y-z axes of the element.
 
-.. figure:: figures/ElementOrentation.gif
-	:align: center
-	:width: 600px
-	:figclass: align-center
-
-	Element Orentation
-
-.. figure:: figures/RigidElementOffsets.gif
-	:align: center
-	:width: 600px
-	:figclass: align-center
-
-	Rigid Element Offsets
 
 
 .. note::
 
-	When in 2D, local x and y axes are in the X-Y plane, where X and Y are global axes. Local x axis is the axis connecting the two element nodes, and local y and z axes follow the right-hand rule (e.g., if the element is aligned with the positive Y axis, the local y axis is aligned with the negative X axis, and if the element is aligned with the positive X axis, the local y axis is aligned with the positive Y axis). Orientation of local y and z axes is important for definition of the fiber section.
+   When in 2D, local x and y axes are in the X-Y plane, where X and Y are global axes. Local x axis is the axis connecting the two element nodes, and local y and z axes follow the right-hand rule (e.g., if the element is aligned with the positive Y axis, the local y axis is aligned with the negative X axis, and if the element is aligned with the positive X axis, the local y axis is aligned with the positive Y axis). Orientation of local y and z axes is important for definition of the fiber section.
 
 
 Example
@@ -74,26 +62,6 @@ Example
 
 In the following, the linear transformtion commands are provided for the elements shown in the figures.
 
-.. figure:: figures/ElementCrossSection.png
-	:align: center
-	:width: 400px
-	:figclass: align-center
-
-	Elements Cross Section
-
-.. figure:: figures/ElementOrientation.png
-	:align: center
-	:width: 400px
-	:figclass: align-center
-
-	Elements Orientation
-
-.. figure:: figures/ElementVectors.png
-	:align: center
-	:width: 400px
-	:figclass: align-center
-
-	Elements Vectors		
 
 1. **Tcl Code**
 
@@ -114,14 +82,14 @@ In the following, the linear transformtion commands are provided for the element
    .. code-block:: python
    
 	# Element 1, vecxZ = zaxis
-	geomTransf('Linear', 1, (0, 0, -1))
+	model.geomTransf("Linear", 1, (0, 0, -1))
 
 	# Element 2, vecxZ = y axis
-	geomTransf('Linear', 2, (0, 1,  0))
+	model.geomTransf("Linear", 2, (0, 1,  0))
 
 	#If there was a rigid offset at the top of element 1: (offset is a variable that the offset value has been stored in)
-	geomTransf('Linear', 3, 0, 0, -1,'-jntOffset',0.0, 0.0, 0.0, 0.0, offset, 0.0)	
+	model.geomTransf("Linear", 3, 0, 0, -1,"-jntOffset",0.0, 0.0, 0.0, 0.0, offset, 0.0)
 
 
-| Code Developed by: Remo Magalhaes de Souza 
-| Images Developed by: |silvia|
+Code Developed by: |rms| 
+

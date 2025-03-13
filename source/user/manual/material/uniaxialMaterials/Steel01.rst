@@ -1,23 +1,24 @@
 .. _steel01:
 
-Steel01 Material
-^^^^^^^^^^^^^^^^
+Steel01
+^^^^^^^
 
-This command is used to construct a uniaxial bilinear steel material object with kinematic hardening and optional isotropic hardening described by a non-linear evolution equation (REF: Fedeas).
+This model implements a uniaxial bilinear steel material object with kinematic hardening and optional isotropic hardening described by a non-linear evolution equation (REF: Fedeas).
 
 .. tabs::
 
    .. tab:: Python 
 
       .. function:: model.uniaxialMaterial("Steel01", tag, fy, E0, b, [a1, a2, a3, a4])
+         :no-index:
 
          :param int tag: integer tag identifying material
-         :param float fy: yield strength
-         :param float E0: initial elastic tangent
-         :param float b: strain-hardening ratio (ratio between post-yield tangent and initial elastic tangent)
-         :param float a1: optional: isotropic hardening parameter: increase of compression yield envelope as proportion of yield strength after a plastic strain of ``a2*(fy/E0)``.
-         :param float a2: optional: isotropic hardening parameter (see explanation under ``a1``)
-         :param float a3: optional: isotropic hardening parameter: increase of tension yield envelope as proportion of yield strength after a plastic strain of ``a4*(Fy/E0)``
+         :param |float| fy: yield strength
+         :param |float| E0: initial elastic tangent
+         :param |float| b: strain-hardening ratio (ratio between post-yield tangent and initial elastic tangent)
+         :param |float| a1: optional: isotropic hardening parameter: increase of compression yield envelope as proportion of yield strength after a plastic strain of ``a2*(fy/E0)``.
+         :param |float| a2: optional: isotropic hardening parameter (see explanation under ``a1``)
+         :param |float| a3: optional: isotropic hardening parameter: increase of tension yield envelope as proportion of yield strength after a plastic strain of ``a4*(Fy/E0)``
          :param float a4: optional: isotropic hardening parameter (see explanation under ``a3``)
 
    .. tab:: Tcl
@@ -68,9 +69,10 @@ This command is used to construct a uniaxial bilinear steel material object with
 
 	Steel01 Material -- Hysteretic Behavior of Model with Isotropic Hardening in Tension
 
-.. admonition:: Example 
+Examples
+--------
 
-   The following is used to construct a Steel01 mataerial with a tag of **1**, a yield strength of $60.0** and an initial tangent stiffness of **30000,0**.
+The following is used to construct a Steel01 mataerial with a tag of **1**, a yield strength of $60.0** and an initial tangent stiffness of **30000,0**.
 
    1. **Tcl Code**
 
@@ -82,6 +84,7 @@ This command is used to construct a uniaxial bilinear steel material object with
 
    .. code-block:: python
 
-      model.uniaxialMaterial('Steel01',60.0,30000.0)
+      model.uniaxialMaterial("Steel01",60.0,30000.0)
 
-Code Developed by: |fcf|, |mhs|
+Code Developed by: |fcf|, |mhs|, |fcf|
+

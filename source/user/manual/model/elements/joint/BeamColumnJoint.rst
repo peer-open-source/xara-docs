@@ -14,6 +14,7 @@ TCL:
 Python:
 
 .. function:: model.element("beamColumnJoint", tag, Node1, Node2, Node3, Node4, Mat1, Mat2, Mat3, Mat4, Mat5, Mat6, Mat7, Mat8, Mat9, Mat10, Mat11, Mat12, Mat13, <eleHeightFac, eleWidthFac>)
+   :no-index:
 
 where:
 
@@ -92,8 +93,6 @@ The following example constructs constructs a beamColumnJoint joint element with
 
 References
 ----------
-
-More information available in the following reference:
 
 #. Lowes, Laura N.; Mitra, Nilanjan; Altoontash, Arash A beam-column joint model for simulating the earthquake response of reinforced concrete frames PEER-2003/10 Pacific Earthquake Engineering Research Center, University of California, Berkeley 2003 59 pages (400/P33/2003-10). [`URL <https://peer.berkeley.edu/sites/default/files/0310_l._lowes_n._mitra_a._altoontash.pdf>`_].
 

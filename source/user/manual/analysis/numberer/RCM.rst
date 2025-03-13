@@ -8,6 +8,7 @@ This command is used to construct an RCM degree-of-freedom numbering object to p
    .. tab:: Python
 
       .. function:: model.numberer("RCM")
+         :no-index:
 
    .. tab:: Tcl
 
@@ -36,9 +37,9 @@ The following example shows how to construct a reverse Cuthill-McKee numberer.
 References 
 ----------
 
-E. Cuthill and J. McKee. Reducing the bandwidth of sparse symmetric matrices In Proc. 24th Nat. Conf. ACM, pages 157–172, 1969.
+* E. Cuthill and J. McKee. Reducing the bandwidth of sparse symmetric matrices In Proc. 24th Nat. Conf. ACM, pages 157–172, 1969.
 
-J. A. George and J. W-H. Liu, Computer Solution of Large Sparse Positive Definite Systems, Prentice-Hall, 1981
+* J. A. George and J. W-H. Liu, Computer Solution of Large Sparse Positive Definite Systems, Prentice-Hall, 1981
 
 
 Code Developed by: |fmk|

@@ -5,11 +5,9 @@ Bounding Cam Clay
 
 Code Developed by: |chris| and |pedro| U.Washington
 
-This command is used to construct a multi-dimensional bounding surface Cam Clay material object after Borja et al. ([Borja2001]_).
+This command is used to construct a multi-dimensional bounding surface Cam Clay material after Borja et al. ([Borja2001]_).
 
-.. function::
-
-   nDMaterial BoundingCamClay $matTag $massDensity $C $bulkMod $OCR $mu_o $alpha $lambda $h $m
+.. function:: nDMaterial BoundingCamClay $matTag $massDensity $C $bulkMod $OCR $mu_o $alpha $lambda $h $m
 
 
 
@@ -28,17 +26,23 @@ This command is used to construct a multi-dimensional bounding surface Cam Clay 
    $h, |float|, hardening parameter for plastic response inside of bounding surface 
    $m, |float|,	hardening parameter (exponent) for plastic response inside of bounding surface 
 
+
 .. note::
    
-   The material formulations for the BoundingCamClay object are "ThreeDimensional" and "PlaneStrain"
+   The material formulations for the BoundingCamClay object are ``"ThreeDimensional"`` and ``"PlaneStrain"``
 
-   If h = 0, no hardening
+   * If h = 0, no hardening
 
-   If m = 0, only linear hardening
+   * If m = 0, only linear hardening
 
-* General Information
 
-This nDMaterial object provides the bounding surface plasticity model of Borja et al. (2001) in which the bounding surface model is represented using modified Cam-Clay theory (Schofield and Wroth 1968). In addition to the standard capabilities of the Cam-Clay family of models (e.g., pressure dependence, hardening with plastic volumetric contraction, softening with plastic dilation, and coupled deviatoric and volumetric plastic deformation), the Borja et al. (2001) model has been enhanced to include an anisotropic bounding surface formulation that allows for consideration of hysteretic behaviour under cyclic loading. This bounding surface Cam-Clay model is coupled with a nonlinear hyperelastic model that considered pressure-dependency in the bulk and shear modulus. The full theory of this model is discussed in great detail in Borja et al. (2001).
+General Information
+-------------------
+
+This material provides the bounding surface plasticity model of Borja et al. (2001) in which the bounding surface model is represented using modified Cam-Clay theory (Schofield and Wroth 1968, [Schofied-Wroth1968]_). 
+In addition to the standard capabilities of the Cam-Clay family of models (e.g., pressure dependence, hardening with plastic volumetric contraction, softening with plastic dilation, and coupled deviatoric and volumetric plastic deformation), the Borja et al. (2001) model has been enhanced to include an anisotropic bounding surface formulation that allows for consideration of hysteretic behaviour under cyclic loading. 
+This bounding surface Cam-Clay model is coupled with a nonlinear hyperelastic model that considered pressure-dependency in the bulk and shear modulus. 
+The full theory of this model is discussed in great detail in Borja et al. (2001).
 
 .. note::
 
@@ -50,9 +54,12 @@ This nDMaterial object provides the bounding surface plasticity model of Borja e
 
    * The virgin compressibility parameter (input parameter $lambda) describes the relationship between the specific volume v = 1 + e and the logarithm of the mean effective stress (where e is the void ratio). This is is related to the compression index C_c that describes the relationship between the void ratio and the logarithm of the mean effective stress in consolidation testing.
 
-.. admonition:: Example
+Examples
+--------
 
-   The following usage example provides the input parameters used in the single element examples of Borja et al. (2001). The initial bulk modulus is determined from the initial mean stress desired in the test (in this case p = 100 kPa) divided by the recompressibilty index kappa = 0.018. The units of this analysis are kN and m, thus the prescribed initial shear modulus of 5.4 MPa is input as 5400 kPa. The hardening parameter $h has the same units as the moduli.
+The following usage example provides the input parameters used in the single element examples of Borja et al. (2001). 
+The initial bulk modulus is determined from the initial mean stress desired in the test (in this case p = 100 kPa) divided by the recompressibilty index kappa = 0.018. 
+The units of this analysis are kN and m, thus the prescribed initial shear modulus of 5.4 MPa is input as 5400 kPa. The hardening parameter $h has the same units as the moduli.
 
    .. code:: tcl
 
@@ -68,6 +75,11 @@ This nDMaterial object provides the bounding surface plasticity model of Borja e
       set m      1.5
       nDMaterial BoundingCamClay 1  $rho $c $bulk $OCR $mu_o $alpha $lambda $h $m
 
+
+References
+----------
+
 .. [Borja2001] Borja, R.I., Lin, C.-H., and Montans, F.J. (2001) 'Cam-Clay plasticity, Part IV: Implicit integration of anisotropic bounding surface model with nonlinear hyperelasticity and ellipsoidal loading function,' Computer Methods in Applied Mechanics and Engineering, 190(26), 3293-3323, doi: 10.1016/S0045-7825(00)00301-7.
 
 .. [Schofied-Wroth1968] Schofield, A. and Wroth, P. (1968) Critical State Soil Mechanics, McGraw Hill, New York.
+

@@ -1,15 +1,15 @@
-========
-Triangle
-========
 
-This command is used to construct a constant strain triangular element (``Tri31``) which uses three nodes and one integration points.
+Triangle
+^^^^^^^^
+
+``Tri31`` is a constant strain triangular element which uses three nodes and one integration points.
 
 .. function:: model.element("Tri31", tag, nodes, section, [pressure, rho, b1, b2])
-   :noindex:
+   :no-index:
 
    :param tag: unique element object tag
    :param nodes: a list of three element nodes in counter-clockwise order
-   :param section: tuple or int. If int, it is the tag of a previously defined section object. If tuple, it is a tuple of the form (``thick``, ``type``, ``material``) where 
+   :param section: tuple or int. If int, it is the tag of a previously defined :ref:`Section`. If tuple, it is a tuple of the form (``thick``, ``type``, ``material``) where 
      
          ===================================   ==============================================================================================================
          ``thick`` |float|                     element thickness
@@ -28,3 +28,4 @@ The valid queries to a Tri31 element through :ref:`eleResponse` are
 #. ``"forces"``, 
 #. ``"stresses"``, and 
 #. ``"material $mat args..."`` Where ``$mat`` refers to the material object at the integration point corresponding to the node numbers in the domain.
+

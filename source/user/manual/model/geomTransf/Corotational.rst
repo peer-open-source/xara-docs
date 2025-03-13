@@ -3,13 +3,14 @@
 Corotational
 ^^^^^^^^^^^^
 
-This command is used to construct the Corotational coordinate transformation, which performs an exact geometric transformation of beam stiffness and resisting force from the basic system to the global coordinate system.
+The corotational coordinate transformation performs a geometric transformation of beam stiffness and resisting force from a *basic* system [1]_ to the global coordinate system. [2]_
 
 .. tabs::
 
    .. tab:: Python
 
       .. py:function:: model.geomTransf("Corotational", tag, vecxz, [offi, offj])
+         :no-index:
 
          :param integer tag: integer tag identifying transformation
          :type tag: int
@@ -47,4 +48,5 @@ References
 
 .. [2] De Souza, R. M. "Force-based finite element for large displacement inelastic analysis of frames" University of California, Berkeley (2000)
 
-Code Developed by: Remo Magalhaes de Souza 
+Code Developed by: |rms|, |cmp|
+

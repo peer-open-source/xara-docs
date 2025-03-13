@@ -1,7 +1,8 @@
 ShellFiber 
 ^^^^^^^^^^
 
-.. function:: model.section('ShellFiber', tag, secArgs)
+.. py:function:: model.section("ShellFiber", tag, secArgs)
+   :no-index:
 
    :param tag: unique section tag
    :type tag: integer 

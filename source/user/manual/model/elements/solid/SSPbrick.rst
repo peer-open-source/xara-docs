@@ -1,4 +1,4 @@
-.. _SSPbrick::
+.. _SSPbrick:
 
 SSPbrick
 ^^^^^^^^
@@ -35,7 +35,7 @@ This element can only be defined after a :class:`Model` with **-ndm 3 -ndf 3**
 Example
 -------
 
-The following example constructs a brick element with tag **1** between nodes **1, 2, 3, 4, 5, 6, 7, 8** with an nDMaterial of tag **1** and x- and y-directed body forces of zero, and z-directed body force of -10.0. After element has been constructed two recoder commands, :numref:`recorder`, are given to record stress and strain when using the SSPbrick element (note the difference from the stdBrick Element)
+The following example constructs a brick element with tag **1** between nodes **1, 2, 3, 4, 5, 6, 7, 8** with an nDMaterial of tag **1** and x- and y-directed body forces of zero, and z-directed body force of -10.0. After element has been constructed two recoder commands, :ref:`recorder`, are given to record stress and strain when using the SSPbrick element (note the difference from the stdBrick Element)
 
 1. **Tcl Code**
 

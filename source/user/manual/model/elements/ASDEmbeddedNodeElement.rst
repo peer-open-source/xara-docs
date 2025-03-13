@@ -1,9 +1,7 @@
 .. _ASDEmbeddedNodeElement:
 
-ASDEmbeddedNode Element
-^^^^^^^^^^^^^^^^^^^^^^^
-
-This command is used to construct an ASDEmbeddedNodeElement object.
+ASDEmbeddedNode
+^^^^^^^^^^^^^^^
 
 The ASDEmbeddedNodeElement is a constraint between **one constrained** node and **many retained** nodes.
 Since in OpenSees a Multi-Point constraint can have only one retained node, this constraint was implemented as an Element, thus imposing the constraint using the Penalty approach.
@@ -18,7 +16,7 @@ The constrained node should be inside (or on the boundary of) the domain defined
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $tag, |integer|, unique integer tag identifying element object.
+   $tag, |integer|, unique integer tag identifying :ref:`Element`.
    $Cnode, |integer|, the constrained node
    $Rnode1 $Rnode2 $Rnode3 <$Rnode4>, 3 or 4 |integer|, the 3 (or 4) retained nodes defining the surrounding triangle (or tetrahedron) domain.
    -rot, |string|, "optional flag. if provided, and if the constrained node has rotational DOFs, its rotation will be constrained as well."
@@ -72,7 +70,9 @@ The constraint equations, imposed by this element, are the following for the 2D 
 
    * Even though the support domain can be only a triangle or a tetrahedron, it does not mean that you cannot embed a node in a quadrilateral or hexaedron. You just need to find the sub-triangle (for the quadrilateral) or the sub-tetrahedron (for the hexaedron) that contains the constrained node.
 
-.. admonition:: Example 
+
+Examples
+--------
 
    1. **Tcl Code**
 
@@ -143,21 +143,21 @@ The constraint equations, imposed by this element, are the following for the 2D 
       # Here we apply a random displacement on each retained node,
       # and the displacement of the constrained node should be the weighted average 
       # of the displacements at the 3 retained nodes, with an equal weight = 1/3.
-      from opensees import *
+      import xara as xa
       from random import random as rand
       
-      model('basic', '-ndm', 2, '-ndf', 2)
+      model = xa.Model(ndm=2, ndf=2)
       
       # define the embedding domain (a piece of a soild domain)
-      node(1, 0.0, 0.0)
-      node(2, 1.0, 0.0)
-      node(3, 0.0, 1.0)
+      model.node(1, 0.0, 0.0)
+      model.node(2, 1.0, 0.0)
+      model.node(3, 0.0, 1.0)
       
       # define the embedded node
-      node(4, 1.0/3.0, 1.0/3.0)
+      model.node(4, 1.0/3.0, 1.0/3.0)
       
       # define constraint element
-      element('ASDEmbeddedNodeElement', 1,   4,   1, 2, 3,   '-K', 1.0e6)
+      model.element('ASDEmbeddedNodeElement', 1,  4,  (1, 2, 3), K=1.0e6)
       
       # apply random imposed displacement in range 0.1-1.0
       U1 = [0.1 + 0.9*rand(), 0.1 + 0.9*rand()]
@@ -173,14 +173,14 @@ The constraint equations, imposed by this element, are the following for the 2D 
       
       
       # run analysis
-      constraints('Transformation')
-      numberer('Plain')
-      system('FullGeneral')
-      test('NormUnbalance', 1e-08, 10, 1)
-      algorithm('Linear')
-      integrator('LoadControl', 1.0)
-      analysis('Static')
-      analyze(1)
+      model.constraints('Transformation')
+      model.numberer('Plain')
+      model.system('FullGeneral')
+      model.test('NormUnbalance', 1e-08, 10, 1)
+      model.algorithm('Linear')
+      model.integrator('LoadControl', 1.0)
+      model.analysis('Static')
+      model.analyze(1)
       
       # compute expected solution
       UCref = [
@@ -190,7 +190,7 @@ The constraint equations, imposed by this element, are the following for the 2D 
       print('Expected displacement at constrained node is (U1+U2+U3)/3:\n{}\n\n'.format(UCref))
       
       # read results
-      UC = nodeDisp(4)
+      UC = model.nodeDisp(4)
       print('Obtained displacement at constrained node is UC:\n{}\n\n'.format(UC))
       
       # check error

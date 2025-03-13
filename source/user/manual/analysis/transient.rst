@@ -1,16 +1,17 @@
+.. _TransientAnalysis:
+
 Transient
 ^^^^^^^^^
 
-In nonlinear transient finite element problems we seek a solution
+In a nonlinear transient finite element analysis we seek a solution
 (:math:`\boldsymbol{u}`, :math:`\dot{\boldsymbol{u}}`,
 :math:`\ddot{\boldsymbol{u}}`) to the nonlinear vector equation
 
 .. math:: \boldsymbol{R}({\boldsymbol{u}},\dot{\boldsymbol{u}}, \ddot{\boldsymbol{u}}) = \boldsymbol{p}_f(t) - \boldsymbol{p}_{\mathrm{i}}(\ddot{\boldsymbol{u}}) - \boldsymbol{p}_{\sigma}({\boldsymbol{u}}, \dot{\boldsymbol{u}}) = \boldsymbol{0}
 
 The most widely used technique for solving the transient non-linear
-finite element equation, equation `[femGenForm <#femGenForm>`__, is to
-use an incremental direct integration scheme. In the incremental
-formulation, a solution to the equation is sought at successive time
+finite element equation is to use an incremental direct integration scheme. 
+In the incremental formulation, a solution to the equation is sought at successive time
 steps :math:`\Delta t` apart.
 
 .. math::

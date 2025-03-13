@@ -1,13 +1,16 @@
 .. _Broyden:
 
 Broyden
--------
+^^^^^^^
+
+The Broyden algorithm object for general unsymmetric systems which performs successive rank-one updates of the tangent at the first iteration of the current time step.
 
 .. tabs::
 
    .. tab:: Python
 
       .. function:: model.algorithm("Broyden" [, count])
+         :no-index:
    
    .. tab:: Tcl
 
@@ -25,4 +28,3 @@ Broyden
           - number of iterations within a time step until a new tangent is formed
     
 
-This command is used to construct a Broyden algorithm object for general unsymmetric systems which performs successive rank-one updates of the tangent at the first iteration of the current time step.

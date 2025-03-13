@@ -1,14 +1,14 @@
 .. _ASDConcrete3D:
 
-ASDConcrete3D Material
-^^^^^^^^^^^^^^^^^^^^^^
+ASDConcrete3D
+^^^^^^^^^^^^^
 
 .. image:: ASDConcrete3D.gif
    :width: 20%
    :align: center
 
 
-| This command is used to construct an ASDConcrete3D material object, a plastic-damage model for concrete and masonry like materials.
+| This command is used to construct an ASDConcrete3D material, a plastic-damage model for concrete and masonry like materials. [Petracca2022]_, [Oliver2008]_
 | It is based on continuum-damage theory, were the stress tensor can be explicitly obtained from the total strain tensor, without internal iterations at the constitutive level. This makes it fast and robust, suitable for the simulation of large-scale structures. Plasticity is added in a simplified way, in order to have the overall effect of inelastic deformation, but keeping the simplicity of continuum-damage models.
 | To improve robustness and convergence of the simulation in case of strain-softening, this model optionally allows to use the IMPL-EX integration scheme (a mixed IMPLicit EXplicit integration scheme).
 
@@ -56,7 +56,7 @@ ASDConcrete3D Material
    -cdf $cdf, |string| + |float|, "Optional (default = 0). The Cross-Damage-Factor (cdf) control the dilatancy of the material. cdf should be >= 0. The larger cdf, the smaller the dilatancy. 0 is the optimal value for concrete."
 
 Theory
-""""""
+------
 
 | In the following description, all variables without subscripts refer to the current time-step, while those with the :math:`n` and :math:`n-1` subscripts refer to the same variables at the two previous (known) time steps.
 | The trial effective stress tensor is computed from the previous effective stress :math:`\bar{\sigma}_{n}` and the trial elastic stress increment :math:`C_{0}:\left (\varepsilon - \varepsilon_{n}\right )`:
@@ -103,8 +103,8 @@ Theory
 
    A schematic representation of the elastic predictor followed by the plastic and damage correctors in a representative uniaxial case.
 
-Usage Notes
-"""""""""""
+Notes
+-----
 
 .. admonition:: Responses
 
@@ -120,12 +120,16 @@ Usage Notes
    * **crackInfo $Nx $Ny $Nz** or **CrackInfo $Nx $Ny $Nz**: 2 components (:math:`ID`, :math:`X`). Gives the 0-based index (ID) and the tensile equivalent total strain (X) of the crack-plane with the normal vector closest to (Nx, Ny, Nz).
    * **crushInfo $Nx $Ny $Nz** or **CrushInfo $Nx $Ny $Nz**: 2 components (:math:`ID`, :math:`X`). Same as above, but for the compressive response.
 
+Examples
+--------
+
 .. admonition:: Example 1 - Drawing the Damage Surface
 
    A Python example to draw the damage surface in the plane-stress case: :download:`ASDConcrete3D_Ex_Surface.py <ASDConcrete3D_Ex_Surface.py>`
    
    .. image:: ASDConcrete3D_Ex_Surface_Output.gif
       :width: 30%
+
 
 .. admonition:: Example 2 - Understanding the Hardening/Softening Laws
 
@@ -140,11 +144,12 @@ Usage Notes
    
    |asd_conc_pic_1| |asd_conc_pic_2|
 
+
 References
-""""""""""
+----------
 
-.. [Petracca2022] Petracca, M., Camata, G., Spacone, E., & Pelà, L. (2022). "Efficient Constitutive Model for Continuous Micro-Modeling of Masonry Structures" International Journal of Architectural Heritage, 1-13 (`Link to article <https://www.researchgate.net/profile/Luca-Pela/publication/363656245_Efficient_Constitutive_Model_for_Continuous_Micro-Modeling_of_Masonry_Structures/links/6332e7f1165ca22787785134/Efficient-Constitutive-Model-for-Continuous-Micro-Modeling-of-Masonry-Structures.pdf>`_)
+.. [Petracca2022] Petracca, M., Camata, G., Spacone, E., & Pelà, L. (2022). "Efficient Constitutive Model for Continuous Micro-Modeling of Masonry Structures" International Journal of Architectural Heritage, 1-13 (`Link to article <https://www.researchgate.net/profile/Luca-Pela/publication/363656245_Efficient_Constitutive_Model_for_Continuous_Micro-Modeling_of_Masonry_Structures/links/6332e7f1165ca22787785134/Efficient-Constitutive-Model-for-Continuous-Micro-Modeling-of-Masonry-Structures.pdf>`__)
 
-.. [Oliver2008] Oliver, J., Huespe, A. E., & Cante, J. C. (2008). "An implicit/explicit integration scheme to increase computability of non-linear material and contact/friction problems" Computer Methods in Applied Mechanics and Engineering, 197(21-24), 1865-1889 (`Link to article <https://core.ac.uk/download/pdf/325948712.pdf>`_)
+.. [Oliver2008] Oliver, J., Huespe, A. E., & Cante, J. C. (2008). "An implicit/explicit integration scheme to increase computability of non-linear material and contact/friction problems" Computer Methods in Applied Mechanics and Engineering, 197(21-24), 1865-1889 (`Link to article <https://core.ac.uk/download/pdf/325948712.pdf>`__)
 
 Code Developed by: **Massimo Petracca** at ASDEA Software, Italy.

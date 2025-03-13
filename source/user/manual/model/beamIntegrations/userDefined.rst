@@ -4,21 +4,19 @@
 UserDefined
 ^^^^^^^^^^^
 
-Create a UserDefined beamIntegration object. This option allows the user to specified locations and weights of the integration points.
+This class allows the user to specified locations and weights of the integration points.
 
 .. function:: beamIntegration 'UserDefined' tag N secTags locs wts
 
 .. csv-table::
    :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40.. csv-table::
-   :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
-	    
+
    ``tag``, |integer|,              tag of the beam integration
    ``N``, |integer|,             number of integration points along the element.
-   ``secTags``, |listi|,        A list previous-defined section objects.
-   ``locs``, |listf|,           Locations of integration points along the element.
-	    ``wts``, |listf|,            weights of integration points.
+   ``secTags``, |integerList|,        A list previous-defined section objects.
+   ``locs``, |floatList|,           Locations of integration points along the element.
+   ``wts``, |floatList|,            weights of integration points.
 
 
    Places ``N`` integration points along the element, which are defined in ``locs``

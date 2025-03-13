@@ -1,7 +1,7 @@
 .. _DruckerPrager:
 
-Drucker Prager Material
-^^^^^^^^^^^^^^^^^^^^^^^
+Drucker Prager
+^^^^^^^^^^^^^^
 
 Code Developed by: |peter| and |pedro| at U.Washington.
 
@@ -32,24 +32,25 @@ This command is used to construct an multi dimensional material object that has 
 
    The material formulations for the Drucker-Prager object are ``"ThreeDimensional"`` and ``"PlaneStrain"``
 
+
 The yield condition for the Drucker-Prager model can be expressed as ([Drucker-Prager1952]_ and [Chen-Saleeb1994]_)
 
 .. math:: 
 
-   f\left(\mathbf{\sigma}, q^{iso}, \mathbf{q}^{kin}\right) = \left\| \mathbf{s} + \mathbf{q}^{kin} \right\| + \rho I_1 + \sqrt{\frac{2}{3}} q^{iso} - \sqrt{\frac{2}{3}} \sigma_Y^{} \leq 0
+   f\left(\boldsymbol{\sigma}, q^{iso}, \mathbf{q}^{kin}\right) = \left\| \mathbf{s} + \mathbf{q}^{kin} \right\| + \rho I_1 + \sqrt{\frac{2}{3}} q^{iso} - \sqrt{\frac{2}{3}} \sigma_Y^{} \leq 0
 
 
 in which
 
 .. math:: 
 
-   \mathbf{s} = \mathrm{dev} (\mathbf{\sigma}) = \mathbf{\sigma} - \frac{1}{3} I_1 \mathbf{1}
+   \mathbf{s} = \mathrm{dev} \boldsymbol{\sigma} \triangleq \boldsymbol{\sigma} - \frac{1}{3} I_1 \mathbf{1}
 
 is the deviatoric stress tensor,
 
 .. math:: 
 
-   I_1 = \mathrm{tr}(\mathbf{\sigma})
+   I_1 = \mathrm{tr} \boldsymbol{\sigma}
 
 
 is the first invariant of the stress tensor, and the parameters :math:`\rho_{}^{}` and :math:`\sigma_Y^{}` are positive material constants.
@@ -65,14 +66,14 @@ The kinematic hardening stress (or back-stress) is defined as
 
 .. math:: 
 
-   \mathbf{q}^{kin} = -(1 - \theta) \frac{2}{3} H \mathbb{I}^{dev} : \mathbf{\alpha}^{kin}
+   \mathbf{q}^{kin} = -(1 - \theta) \frac{2}{3} H \mathbb{I}^{dev} : \boldsymbol{\alpha}^{kin}
 
 
 The yield condition for the tension cutoff yield surface is defined as
 
 .. math:: 
 
-   f_2(\mathbf{\sigma}, q^{ten}) = I_1 + q^{ten} \leq 0
+   f_2(\boldsymbol{\sigma}, q^{ten}) = I_1 + q^{ten} \leq 0
 
 where
 
@@ -92,27 +93,29 @@ Further, general, information on theory for the Drucker-Prager yield criterion c
 
 .. note::
 
-   The valid queries to the Drucker-Prager material when creating an ElementRecorder are 'strain' and 'stress' (as with all nDmaterial) as well as 'state'. The query 'state' records a vector of state variables during a particular analysis. The columns of this vector are as follows. (Note: If the option ``-time`` is included in the creation of the recorder, the first column will be the time variable for each recorded point and the columns below are shifted accordingly.)
+   The valid queries to the Drucker-Prager material when creating an ElementRecorder are 'strain' and 'stress' as well as 'state'. The query 'state' records a vector of state variables during a particular analysis. The columns of this vector are as follows. (Note: If the option ``-time`` is included in the creation of the recorder, the first column will be the time variable for each recorded point and the columns below are shifted accordingly.)
 
-   Column 1 - First invariant of the stress tensor, :math:`I_1 = \mathrm{tr}(\mathbf{\sigma})`.
-   Column 2 - The following tensor norm, :math:`\left\| \mathbf{s} + \mathbf{q}^{kin} \right\| `, where .. math::\mathbf{s}` is the deviatoric stress tensor and :math:`\mathbf{q}^{kin}` is the back-stress tensor.
-   Column 3 - First invariant of the plastic strain tensor, :math:`\mathrm{tr}(\mathbf{\varepsilon}^p) `.
-   Column 4 - Norm of the deviatoric plastic strain tensor, :math:`\left\| \mathbf{e}^p \right\| `.
+   * Column 1 - First invariant of the stress tensor, :math:`I_1 = \mathrm{tr}(\boldsymbol{\sigma})`.
+   * Column 2 - The following tensor norm, :math:`\left\| \mathbf{s} + \mathbf{q}^{kin} \right\|`, where :math:`\mathbf{s}` is the deviatoric stress tensor and :math:`\mathbf{q}^{\mathrm{kin}}` is the back-stress tensor.
+   * Column 3 - First invariant of the plastic strain tensor, :math:`\mathrm{tr}(\boldsymbol{\varepsilon}^p)`.
+   * Column 4 - Norm of the deviatoric plastic strain tensor, :math:`\left\| \mathbf{e}^p \right\|`.
 
-   The Drucker-Prager strength parameters :math:`\rho ` and :math:`\sigma_Y ` can be related to the Mohr-Coulomb friction angle, :math:`\phi `, and cohesive intercept, :math:`c`, by evaluating the yield surfaces in a deviatoric plane as described by Chen and Saleeb (1994). By relating the two yield surfaces in triaxial compression, the following expressions are determined
+   The Drucker-Prager strength parameters :math:`\rho` and :math:`\sigma_Y` can be related to the Mohr-Coulomb friction angle, :math:`\phi`, and cohesive intercept, :math:`c`, by evaluating the yield surfaces in a deviatoric plane as described by Chen and Saleeb (1994). By relating the two yield surfaces in triaxial compression, the following expressions are determined
 
    .. math:: 
 
       \rho = \frac{2 \sqrt{2} \sin \phi}{\sqrt{3} (3 - \sin \phi)}
 
+
    .. math::
-   
+
 	\sigma_Y = \frac{6 c \cos \phi}{\sqrt{2} (3 - \sin \phi)}
 
 
-.. admonition:: Example
+Example
+-------
 
-   This example provides the input file and corresponding results for a confined triaxial compression (CTC) test using a single 8-node brick element and the Drucker-Prager constitutive model. A schematic representation of this test is shown below, (a) depicts the application of hydrostatic pressure, and (b) depicts the application of the deviator stress. Also shown is the stress path resulting from this test plotted on the meridian plane. As shown, the element is loaded until failure, at which point the model can no longer converge, as this is a stress-controlled analysis.
+This example provides the input file and corresponding results for a confined triaxial compression (CTC) test using a single 8-node brick element and the Drucker-Prager constitutive model. A schematic representation of this test is shown below, (a) depicts the application of hydrostatic pressure, and (b) depicts the application of the deviator stress. Also shown is the stress path resulting from this test plotted on the meridian plane. As shown, the element is loaded until failure, at which point the model can no longer converge, as this is a stress-controlled analysis.
 
    .. figure:: DruckerPrager.png
 	:align: center
@@ -126,8 +129,9 @@ Further, general, information on theory for the Drucker-Prager yield criterion c
 
 
 References
-^^^^^^^^^^
+----------
 
 .. [Drucker-Prager1952] Drucker, D. C. and Prager, W., "Soil mechanics and plastic analysis for limit design." Quarterly of Applied Mathematics, vol. 10, no. 2, pp. 157–165, 1952.
 
 .. [Chen-Saleeb1994] Chen, W. F. and Saleeb, A. F., Constitutive Equations for Engineering Materials Volume I: Elasticity and Modeling. Elsevier Science B.V., Amsterdam, 1994.
+

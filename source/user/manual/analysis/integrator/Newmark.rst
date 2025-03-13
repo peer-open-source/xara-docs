@@ -10,6 +10,7 @@ This command is used to construct a Newmark integrator, based on  [Newmark1959]_
    .. tab:: Python
 
       .. function:: model.integrator("Newmark", gamma, beta)
+         :no-index:
 
          :param gamma: float, :math:`\gamma` factor
          :param beta: float, :math:`\beta` factor

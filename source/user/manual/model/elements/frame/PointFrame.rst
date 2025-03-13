@@ -10,6 +10,7 @@ The nodes are connected by a single section object to represent the force-deform
    .. tab:: Python
 
       .. py:function:: model.element("PointFrame", tag, nodes, section, *args, **kwargs)
+         :no-index:
 
          :param tag: integer tag identifying the element
          :type tag: int

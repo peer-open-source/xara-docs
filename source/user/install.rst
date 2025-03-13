@@ -2,26 +2,13 @@
 Installation
 ************
 
-There are several distributions available for installing OpenSees. 
-This site documents the OpenSeesRT distribution, which is developed and maintained at UC Berkeley. 
-
-* To install
+xara is built on the OpenSeesRT distribution of OpenSees, which is developed and maintained at UC Berkeley. 
+To install it, run the following command from your shell:
 
    ::
 
-      python -m pip install opensees
+      python -m pip install xara
 
 
-* To upgrade
 
-   ::
-
-      python -m pip install --upgrade opensees
-
-
-* To import
-
-  ::
-
-     import opensees.openseespy as ops
 

@@ -8,26 +8,37 @@
    .. tab:: Python
 
       .. function:: model.integrator("LoadControl", dlambda, numIter=1, minLambda=None, maxLambda=None)
+         :no-index:
+
+         :param dlambda: the load factor increment :math:`\lambda`
+         :type dlambda: |float|
+         :param numIter: the number of iterations the user would like to occur in the solution algorithm. Optional: optional default = 1
+         :type numIter: |integer|
+         :param minLambda: the min stepsize the user will allow. optional: defualt :math:`= \lambda_{min} = \lambda`
+         :type minLambda: |float|
+         :param maxLambda: the max stepsize the user will allow. optional: default :math:`= \lambda_{max} = \lambda`
+         :type maxLambda: |float|
 
    .. tab:: Tcl
 
       .. function:: integrator LoadControl $lamda <$numIter $minLambda $maxLambda>
 
 
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
 
-   lamda, |float|,the load factor increment :math:`\lambda`
-   numIter, |integer|,   the number of iterations the user would like to occur in the solution algorithm. Optional: optional default = 1
-   minLambda, |float|, the min stepsize the user will allow. optional: defualt :math:`= \lambda_{min} = \lambda`
-   maxLambda, |float|, the max stepsize the user will allow. optional: default :math:`= \lambda_{max} = \lambda`
+         lamda, |float|,the load factor increment :math:`\lambda`
+         numIter, |integer|,   the number of iterations the user would like to occur in the solution algorithm. Optional: optional default = 1
+         minLambda, |float|, the min stepsize the user will allow. optional: defualt :math:`= \lambda_{min} = \lambda`
+         maxLambda, |float|, the max stepsize the user will allow. optional: default :math:`= \lambda_{max} = \lambda`
 
 .. note::
 
    The change in applied loads that this causes depends on the active load patterns (those load patterns not set constant) and the loads in the load patterns. If the only active loads acting on the domain are in load patterns with a Linear time series with a factor of 1.0, this integrator is the same as the classical load control method.
 
    The optional arguments are supplied to speed up the step size in cases where convergence is too fast and slow down the step size in cases where convergence is too slow.
+
 
 Theory
 ------

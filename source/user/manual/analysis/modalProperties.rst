@@ -198,7 +198,7 @@ Theory
    LM = \bigwedge_{i=1}^{n}diag\left(m_e\right)
 
 |  :math:`diag\left(m_e\right)` cannot be computed just by summing the summing the components of each row (in beams or solid with higher order interpolation, this would produces negative terms on the diagonal mass matrix that would be unphysical).
-|  Instead we use the **HRZ** algorithm [HintonEtAl1976]_, named after the authors Hinton, Rock and Zienkiewicz: *“The procedure of lumping recommended in view of the infinite possibilities offered by condition (5) is to compute the diagonal terms of the consistent mass matrix and then scale these terms so as to preserve the total mass of the element”*.
+|  Instead we use the **HRZ** algorithm [HintonEtAl1976]_, named after the authors Hinton, Rock and Zienkiewicz: *"The procedure of lumping recommended in view of the infinite possibilities offered by condition (5) is to compute the diagonal terms of the consistent mass matrix and then scale these terms so as to preserve the total mass of the element”*.
 |  The procedure is as follows:
    
    *  compute :math:`DM`, a vector containing the sum of each row of :math:`m_e`.
@@ -256,7 +256,7 @@ Theory
    
 |  If the modal participation masses for each mode in a particular DOF are summed, it should give the total mass of the structure for that DOF, exlcluding the masses at fixed DOFs.
 
-.. [HintonEtAl1976] Hinton, E., Rock, T. & Zienkiewicz, O. (1976). “A note on mass lumping and related processes in the Finite element method.” Earthquake Engineering and Structural Dynamics, 13, 9, p. A112.
+.. [HintonEtAl1976] Hinton, E., Rock, T. & Zienkiewicz, O. (1976). "A note on mass lumping and related processes in the Finite element method.” Earthquake Engineering and Structural Dynamics, 13, 9, p. A112.
 
 .. admonition:: Example
    

@@ -1,10 +1,10 @@
 .. _Orthotropic:
 
-Orthotropic Material Wrapper
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Orthotropic Wrapper
+^^^^^^^^^^^^^^^^^^^
 
 This command is used to construct an Orthotropic material. 
-It is a wrapper that can convert any 3D (Linear or Nonlinear) constitutive model to an orthotropic one.
+It is a wrapper that can convert any 3D (Linear or Nonlinear) constitutive model to an orthotropic one. [Oller2003]_
 
 .. function:: nDMaterial Orthotropic $matTag $theIsoMatTag $Ex $Ey $Ez $Gxy $Gyz $Gzx $vxy $vyz $vzx $Asigmaxx $Asigmayy $Asigmazz $Asigmaxyxy $Asigmayzyz $Asigmaxzxz
 
@@ -24,8 +24,9 @@ It is a wrapper that can convert any 3D (Linear or Nonlinear) constitutive model
    $Asigmayzyz, |float|, Ratio of the isotropic to the orthotropic shear strength in the YZ plane (Fyz_iso / Fyz_ortho)
    $Asigmaxzxz, |float|, Ratio of the isotropic to the orthotropic shear strength in the XZ plane (Fxz_iso / Fxz_ortho)
 
-Usage Notes
-"""""""""""
+
+Notes
+-----
 
 .. admonition:: Note 1
 
@@ -296,6 +297,10 @@ Usage Notes
           puts [format "%12.3f %12.3f %12.3f %12.3f" [lindex $SX $i] [lindex $SY $i] [lindex $SXortho $i] [lindex $SYortho $i]]
       }
 
-.. [Oller2003] | Oller, S., Car, E., & Lubliner, J. (2003). Definition of a general implicit orthotropic yield criterion. Computer methods in applied mechanics and engineering, 192(7-8), 895-912. (`Link to article <https://core.ac.uk/download/pdf/296535134.pdf>`_)
+References
+----------
+
+.. [Oller2003] | Oller, S., Car, E., & Lubliner, J. (2003). Definition of a general implicit orthotropic yield criterion. Computer methods in applied mechanics and engineering, 192(7-8), 895-912. (`Link to article <https://core.ac.uk/download/pdf/296535134.pdf>`__)
 
 Code Developed by: **Massimo Petracca** at ASDEA Software, Italy.
+

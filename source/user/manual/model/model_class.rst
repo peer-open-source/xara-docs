@@ -64,4 +64,5 @@ Note that ``opensees`` must come before ``openseespy`` in the ``import`` stateme
 
 For more examples, visit the STAIRlab example `gallery <https://gallery.stairlab.io>`_.
 
-Code Developed by: *cmp*
+Code Developed by: |cmp|
+

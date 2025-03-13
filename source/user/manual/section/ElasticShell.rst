@@ -11,7 +11,8 @@ is homogeneous with an :ref:`ElasticIsotropic` material.
 
    .. tab:: Python (RT)
 
-      .. function:: model.section("ElasticShell", tag, E, nu, thickness)
+      .. py:function:: model.section("ElasticShell", tag, E, nu, thickness)
+         :no-index:
       
          :param tag: integer tag identifying the section
          :type tag: int

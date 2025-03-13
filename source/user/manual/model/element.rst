@@ -51,7 +51,5 @@ The following subsections contain information about ``type`` and the number of n
    :maxdepth: 1
 
    elements/Truss
-   elements/CorotationalTruss
-
 
 

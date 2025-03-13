@@ -1,15 +1,16 @@
 .. _ExpressNewton:
 
 ExpressNewton
--------------
+^^^^^^^^^^^^^
 
-This command is used to construct an ExpressNewton algorithm for nonlinear structural dynamics. It accepts the solution after a constant number of Newton-Raphson iterations using a constant system Jacobian matrix. It is advised to be combined with transient integrators only. The command is of the following form:
+This command is used to configure an ExpressNewton algorithm for nonlinear structural dynamics. It accepts the solution after a constant number of Newton-Raphson iterations using a constant system Jacobian matrix. It is advised to be combined with transient integrators only. The command is of the following form:
 
 .. tabs::
 
    .. tab:: Python 
       
       .. function:: model.algorithm("ExpressNewton" [, iter, kMultiplier, initialTangent, currentTangent, factorOnce])
+         :no-index:
    
    .. tab:: Tcl
 

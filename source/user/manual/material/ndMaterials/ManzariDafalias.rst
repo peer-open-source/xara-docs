@@ -7,9 +7,7 @@ Code Developed by: **Alborz Ghofrani**, |pedro|, U. Washington
 
 This command is used to construct a multi-dimensional [Manzari-Dafalias2004]_ material.
 
-.. admonition:: function
-
-   nDmaterial ManzariDafalias $matTag $G0 $nu $e_init $Mc $c $lambda_c $e0 $ksi $P_atm $m $h0 $ch $nb $A0 $nd $z_max $cz $Den
+.. function:: nDmaterial ManzariDafalias $matTag $G0 $nu $e_init $Mc $c $lambda_c $e0 $ksi $P_atm $m $h0 $ch $nb $A0 $nd $z_max $cz $Den
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
@@ -49,25 +47,30 @@ This command is used to construct a multi-dimensional [Manzari-Dafalias2004]_ ma
 
    For example,
 
-   .. code:: tcl
+   .. code-block:: tcl
 
       recorder Element -eleRange 1 $numElem -time -file stress.out  stress
 
 #. Elastic or Elastoplastic response could be enforced by
-   .. code:: tcl
+
+   .. code-block:: tcl
+
       updateMaterialStage -material $matTag -stage 0; # Elastic
       updateMaterialStage -material $matTag -stage 1; # Elastoplastic
+
 
 Theory
 ------
 
 .. math::
-	 p = \frac{1}{3} \mathrm{tr}(\mathbf{\sigma}) 
+
+   p = \frac{1}{3} \mathrm{tr}(\mathbf{\sigma}) 
 
 
 .. math::
    
     \mathbf{s} = \mathrm{dev} (\mathbf{\sigma}) = \mathbf{\sigma} - \frac{1}{3} p \mathbf{1} 
+
 
 Elasticity
 """"""""""
@@ -93,6 +96,7 @@ The elastic stress-strain relationship is:
 
    d\varepsilon^\mathrm{e}_v = \frac{dp}{K}
 
+
 Critical State Line
 """""""""""""""""""
 A power relationship is assumed for the critical state line:
@@ -102,6 +106,7 @@ A power relationship is assumed for the critical state line:
    e_c = e_0 - \lambda_c\left(\frac{p_c}{p_{atm}}\right)^\xi
 
 where :math:`e_0` is the void ratio at :math:`p_c = 0` and :math:`\lambda_c` and :math:`\xi` constants.
+
 
 Yield Surface
 """""""""""""
@@ -194,4 +199,8 @@ This example, provides an undrained confined triaxial compression test using one
    :language: tcl
 
 
+References
+----------
+
 .. [Manzari-Dafalias2004] Dafalias YF, Manzari MT. "Simple plasticity sand model accounting for fabric change effects". Journal of Engineering Mechanics 2004
+

@@ -1,17 +1,29 @@
 Transformation
 ^^^^^^^^^^^^^^
 
-This command is used to construct a ``TransformationMethod`` constraint handler, which enforces the constraints by using the transformation method,  also known as static condensation method. The following is the command to construct such a constraint handler:
+A ``Transformation`` constraint handler enforces the constraints in a model by using the transformation method, also known as *static condensation*. 
 
-.. function:: constraints Transformation
+.. tabs::
+
+   .. tab:: Python
+
+      .. function:: model.constraints("Transformation")
+         :no-index:
+
+   .. tab:: Tcl
+      
+      .. function:: constraints Transformation
+
+
+The single-point constraints when using the transformation method are done directly. 
+The matrix equation is not manipulated to enforce them, rather the trial displacements are set directly at the nodes at the start of each analysis step.
 
 .. note::
 
-   The single-point constraints when using the transformation method are done directly. The matrix equation is not manipulated to enforce them, rather the trial displacements are set directly at the nodes at the start of each analysis step.
-Great care must be taken when multiple constraints are being enforced as the transformation method does not follow constraints:
-      1. If a node is fixed, constrain it with the fix command and not equalDOF or other type of constraint.
+   Great care must be taken when multiple constraints are being enforced as the transformation method does not follow constraints:
+      * If a node is fixed, constrain it with the fix command and not equalDOF or other type of constraint.
 
-      2. If multiple nodes are constrained, make sure that the retained node is not constrained in any other constraint.
+      * If multiple nodes are constrained, make sure that the retained node is not constrained in any other constraint.
 
 Example
 -------

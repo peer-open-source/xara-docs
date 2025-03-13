@@ -1,7 +1,7 @@
 .. _NewtonLineSearch:
 
 Newton Line Search
-------------------
+^^^^^^^^^^^^^^^^^^
 
 This command is used to select a NewtonLineSearch algorithm which introduces line search to the Newton-Raphson algorithm to solve the nonlinear residual equation. 
 Line search increases the effectiveness of the Newton method when convergence is slow due to roughness of the residual. 
@@ -21,7 +21,7 @@ Line search increases the effectiveness of the Newton method when convergence is
 
 
 Theory
-^^^^^^
+------
 
 The rationale behind line search is that:
 
@@ -33,11 +33,10 @@ In NewtonLineSearch, the regular Newton-Raphson method is used to compute the :m
 :math:`U_{n+1} = U_n + \eta \delta_U`
 
 
-The different line search algorithms use different root finding methods to obtain <math>\eta\,\!</math>, a root to the function <math>s(\eta)</math> defined as: 
+The different line search algorithms use different root finding methods to obtain :math:`\eta`, a root to the function :math:`s(\eta)` defined as: 
 
 :math:`s_\eta = \delta_U R(U_{n} + \eta \delta_U)`
 
-with
-:math:`s_0 = \delta-U R(U_n)`
+with :math:`s_0 \triangleq \delta-U R(U_n)`
 
 Code Developed by: |fmk|

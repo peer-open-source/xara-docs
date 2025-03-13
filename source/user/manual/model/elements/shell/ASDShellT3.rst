@@ -3,17 +3,18 @@
 ASDShellT3
 ^^^^^^^^^^
 
-This command is used to construct an ASDShellT3 element object. 
+This command is used to construct an ASDShellT3 :ref:`Element`. 
 
 .. tabs::
    
    .. tab:: Python
 
       .. function:: model.element("ASDShellT3", tag, nodes, section,  **kwargs)
+         :no-index:
 
-         :param tag: integer tag identifying the element
+         :param tag: integer tag identifying the :ref:`Element`
          :type tag: int
-         :param nodes: tuple of three integer tags identifying the nodes that form the element
+         :param nodes: tuple of three integer tags identifying the :ref:`nodes <Node>` that form the element
          :type nodes: tuple
          :param section: integer tag associated with previously-defined shell :ref:`section`
          :param kwargs: optional keyword arguments
@@ -32,7 +33,6 @@ This command is used to construct an ASDShellT3 element object.
          -corotational, |string|, "optional flag, if provided, the element uses non-linear kinematics, suitable for large displacement/rotation problems."
          -reducedIntegration, |string|, "optional flag, if provided, the element uses 1-point integration rule."
          -drillingNL, |string|, "optional flag, if provided, the Hughes-Brezzi drilling DOF formulation considers the non-linear behavior of the section. Used only when -reducedIntegration is used."
-         -damp $dampTag, |string| + |integer|, "optional, to activate elemental damping as per :ref:`elementalDamping <elementalDamping>`"
          -local $x1 $x2 $x3, |string| + 3 |float|, "optional, if provided it will be used as the local-x axis of the element (otherwise the default local X will be the direction of the 1-2 side). Note: it will be automatically normalized and projected onto the element plane. It must not be zero or parallel to the shell's normal vector."
 
 
@@ -74,11 +74,13 @@ A Cantilever beam is subjected to a total end-moment about the Y axis :math:`M_y
    :width: 30%
 
 
+References 
+----------
+
+.. [Felippa2003] Felippa, Carlos A. "A study of optimal membrane triangles with drilling freedoms." Computer Methods in Applied Mechanics and Engineering 192.16-18 (2003): 2125-2168. (`Link to article <https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=3bb24e4412df212dabb5183f0a8e9890143b9d7d>`__)
+.. [PSLee2004] Lee, Phill-Seung, and Klaus-Jürgen Bathe. "Development of MITC isotropic triangular shell finite elements." Computers & Structures 82.11-12 (2004): 945-962. (`Link to article <https://web.mit.edu/kjb/www/Principal_Publications/Development_of_MITC_Isotropic_Triangular_Shell_Finite_Elements.pdf>`__)
+.. [Felippa2000] Felippa, Carlos A. "A systematic approach to the element-independent corotational dynamics of finite elements". Technical Report CU-CAS-00-03, Center for Aerospace Structures, 2000. (`Link to article <https://d1wqtxts1xzle7.cloudfront.net/40660892/A_Systematic_Approach_to_the_Element-Ind20151205-15144-36jazx.pdf?1449356169=&response-content-disposition=inline%3B+filename%3DA_Systematic_Approach_to_the_Element_Ind.pdf&Expires=1611329637&Signature=DTV4RrGLOp4AWynE4kpUPHDNDuazgbqhI6KU1LR7jMBG6sqtx8McLgll918M3CeyBsjBjb7bUTz4ZVGJaoaq0B9Orhr4FVy0AMxrHlSbaTk8lnAXduaOPt~hsbJbiC5PXjSeKzYuT-8-chgyQvaB1gPlUwZ4zTBVJZocbr~Jh0zpTNF2b846iHBu9NQ2qfD5yTciVxMFjoRvOrb4H4AtVgtU~kM9TsiszQa6Vq8Amf~DivjfyB9~v7zgwiwm65PCcErFM8llNev~F1btwqNbSNJ62It7eWgMbkFe92xs6FmOkAIE8tmXnhb1tpUsCjW4kwmVCYcSAsYO4YAyj~6wig__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA>`__)
+.. [FelippaEtAl2005] Felippa, Carlos A., and Bjorn Haugen. "A unified formulation of small-strain corotational finite elements: I. Theory." Computer Methods in Applied Mechanics and Engineering 194.21-24 (2005): 2285-2335. (`Link to article <http://www.cntech.com.cn/down/h000/h21/attach200903311026030.pdf>`__)
+.. [HughesEtAl1989] Hughes, Thomas JR, and F. Brezzi. "On drilling degrees of freedom." Computer methods in applied mechanics and engineering 72.1 (1989): 105-121. (`Link to article <https://www.sciencedirect.com/science/article/pii/0045782589901242>`__)
+
 Code Developed by: **Massimo Petracca** at ASDEA Software, Italy.
-
-
-.. [Felippa2003] Felippa, Carlos A. "A study of optimal membrane triangles with drilling freedoms." Computer Methods in Applied Mechanics and Engineering 192.16-18 (2003): 2125-2168. (`Link to article <https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=3bb24e4412df212dabb5183f0a8e9890143b9d7d>`_)
-.. [PSLee2004] Lee, Phill-Seung, and Klaus-Jürgen Bathe. "Development of MITC isotropic triangular shell finite elements." Computers & Structures 82.11-12 (2004): 945-962. (`Link to article <https://web.mit.edu/kjb/www/Principal_Publications/Development_of_MITC_Isotropic_Triangular_Shell_Finite_Elements.pdf>`_)
-.. [Felippa2000] Felippa, Carlos A. "A systematic approach to the element-independent corotational dynamics of finite elements". Technical Report CU-CAS-00-03, Center for Aerospace Structures, 2000. (`Link to article <https://d1wqtxts1xzle7.cloudfront.net/40660892/A_Systematic_Approach_to_the_Element-Ind20151205-15144-36jazx.pdf?1449356169=&response-content-disposition=inline%3B+filename%3DA_Systematic_Approach_to_the_Element_Ind.pdf&Expires=1611329637&Signature=DTV4RrGLOp4AWynE4kpUPHDNDuazgbqhI6KU1LR7jMBG6sqtx8McLgll918M3CeyBsjBjb7bUTz4ZVGJaoaq0B9Orhr4FVy0AMxrHlSbaTk8lnAXduaOPt~hsbJbiC5PXjSeKzYuT-8-chgyQvaB1gPlUwZ4zTBVJZocbr~Jh0zpTNF2b846iHBu9NQ2qfD5yTciVxMFjoRvOrb4H4AtVgtU~kM9TsiszQa6Vq8Amf~DivjfyB9~v7zgwiwm65PCcErFM8llNev~F1btwqNbSNJ62It7eWgMbkFe92xs6FmOkAIE8tmXnhb1tpUsCjW4kwmVCYcSAsYO4YAyj~6wig__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA>`_)
-.. [FelippaEtAl2005] Felippa, Carlos A., and Bjorn Haugen. "A unified formulation of small-strain corotational finite elements: I. Theory." Computer Methods in Applied Mechanics and Engineering 194.21-24 (2005): 2285-2335. (`Link to article <http://www.cntech.com.cn/down/h000/h21/attach200903311026030.pdf>`_)
-.. [HughesEtAl1989] Hughes, Thomas JR, and F. Brezzi. "On drilling degrees of freedom." Computer methods in applied mechanics and engineering 72.1 (1989): 105-121. (`Link to article <https://www.sciencedirect.com/science/article/pii/0045782589901242>`_)

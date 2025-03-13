@@ -9,9 +9,10 @@ This command is used to construct a sparse system of equations which uses the `M
 
    It is presently limited to the parallel **OpenSeesSP** and **OpenSeesMP** applications.
 
-.. admonition:: Example 
+Example
+-------
 
-   The following example shows how to construct a sparse system solved using the Mumps solver.
+The following example shows how to construct a sparse system solved using the Mumps solver.
 
    1. **Tcl Code**
 
@@ -23,7 +24,7 @@ This command is used to construct a sparse system of equations which uses the `M
 
    .. code-block:: python
 
-      system('Mumps')
+      model.system('Mumps')
 
 Code developed by: |fmk|
 

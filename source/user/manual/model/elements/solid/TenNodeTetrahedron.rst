@@ -10,6 +10,7 @@ This command is used to construct an ten-node tetrahedron, which uses the standa
    .. tab:: Python (RT)
 
       .. function:: Model.element("TenNodeTetrahedron", tag, nodes, material, *args)
+         :no-index:
 
          :param tag: integer tag identifying the element
          :param nodes: tuple of integer tags identifying the nodes that form the element
@@ -36,32 +37,38 @@ This element is based on second-order interpolation of nodal quantities, this me
 
 
 .. figure:: figures/TenNodeTetrahedron/TenNodeTetrahedron.png
-	:align: center
-	:figclass: align-center
+   :align: center
+   :figclass: align-center
 
-	TenNodeTetrahedron Element Node Numbering
+   TenNodeTetrahedron element node numbering
+
+
+The valid :ref:`eleResponse` queries to a ``TenNodeTetrahedron`` element are ``"forces"``, ``"stresses"``, and ``"material $tag $args..."`` 
+
 
 .. note::
 
-   The valid queries to a `TenNodeTetrahedron` element when creating an ElementRecorder object are 'forces', 'stresses,' ('strains' version > 2.2.0) and 'material $matNum matArg1 matArg2 ...' Where $matNum refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
+   This element can only be defined with a :class:`Model` where ``ndm=3`` and ``ndf=3``
 
-   This element can only be defined after a :ref:`model` with **-ndm 3 -ndf 3**
+Examples
+--------
 
-.. admonition:: Example 
+The following example constructs a TenNodeTetrahedron element with tag ``1`` between nodes **1, 2, 3, 4, 5, 6, 7, 8, 9, 10** with an nDMaterial of tag **1** and body forces given by varaiables **b1, b2, b3**.
 
-   The following example constructs a TenNodeTetrahedron element with tag **1** between nodes **1, 2, 3, 4, 5, 6, 7, 8, 9, 10** with an nDMaterial of tag **1** and body forces given by varaiables **b1, b2, b3**.
+1. **Tcl Code**
 
-   1. **Tcl Code**
+.. code-block:: tcl
 
-   .. code-block:: tcl
+  element TenNodeTetrahedron 1 1 2 3 4 5 6 7 8 9 10 1 $b1 $b2 $b3
 
-      element TenNodeTetrahedron 1 1 2 3 4 5 6 7 8 9 10 1 $b1 $b2 $b3
+2. **Python Code**
 
-   2. **Python Code**
+.. code-block:: python
 
-   .. code-block:: python
-
-      model.element('TenNodeTetrahedron',1, (1,2,3,4,5,6,7,8,9,10), 1, (b1, b2, b3))
+  model.element('TenNodeTetrahedron',1, (1,2,3,4,5,6,7,8,9,10), 1, (b1, b2, b3))
 
 
-Code Developed by: `José Antonio Abell <www.joseabell.com>`_ and José Luis Larenas (UANDES). For bugs and features, start a new issue on the `OpenSees github repo <https://github.com/OpenSees/OpenSees>`_ and tag me (@jaabell). 
+Code Developed by: `José Antonio Abell <www.joseabell.com>`_ and José Luis Larenas (UANDES). 
+For bugs and features, start a new issue on the `GitHub repo <https://github.com/OpenSees/OpenSees>`_ and tag me (@jaabell). 
+
+

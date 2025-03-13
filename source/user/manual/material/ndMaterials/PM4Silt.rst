@@ -5,11 +5,9 @@ PM4Silt Material
 
 Code Developed by: **Long Chen** and |pedro| at U.Washington.
 
-This command is used to construct a 2-dimensional PM4Silt material ([Boulanger-Ziotopoulou2017]_).
+This command is used to construct a 2-dimensional PM4Silt material ([Boulanger-Ziotopoulou2018]_).
 
-.. admonition:: Function
-
-   nDMaterial PM4Silt $matTag $S_u $Su_Rat $G_o $h_po $Den <$Su_factor $Patm $nu $nG $h0 $eInit $lambda $phicv $nb_wet $nb_dry $nd $Ado $ru_max $zmax $cz $ce $Cgd $ckaf $m_m $CG_consol>
+.. function:: nDMaterial PM4Silt $matTag $S_u $Su_Rat $G_o $h_po $Den <$Su_factor $Patm $nu $nG $h0 $eInit $lambda $phicv $nb_wet $nb_dry $nd $Ado $ru_max $zmax $cz $ce $Cgd $ckaf $m_m $CG_consol>
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
@@ -77,6 +75,9 @@ This command is used to construct a 2-dimensional PM4Silt material ([Boulanger-Z
       The user should check that the results are not sensitive to time step size.
 
    Refer to :ref:`PM4Sand` for examples.
+
+References
+----------
 
 .. [Boulanger-Ziotopoulou2018] R.W.Boulanger, K.Ziotopoulou. "PM4Silt(Version 1): A Silt Plasticity Model for Earthquake Engineering Applications". Report No. UCD/CGM-18/01 2018
 

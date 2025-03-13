@@ -3,7 +3,7 @@
 Material Testing Methods
 ************************
 
-The material testing environment is separate from the OpenSees domain, and allows for simple tests to be performed on OpenSees materials, including uniaxial materials, n-dimensional materials, and section force-deformation relationships.
+The material testing environment is separate from the domain, and allows for simple tests to be performed on |OpenSees| materials, including uniaxial materials, n-dimensional materials, and section force-deformation relationships.
 In order to use the material testing commands, the test material/section must first be specified with testUniaxialMaterial, testNDMaterial, or testSection.
 
 .. function:: testUniaxialMaterial $tag
@@ -75,7 +75,7 @@ The command getDampTangent returns the damping tangent (for uniaxial materials o
 
 The command getResponse returns material or section specific information.
 
-.. function:: getResponse $arg1 $arg2 ....
+.. function:: getResponse $args ...
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"

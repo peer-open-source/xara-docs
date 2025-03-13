@@ -3,25 +3,56 @@
 Series3D Material Wrapper
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This command is used to construct a Series3D material object. It is a wrapper that imposes an iso-stress condition to an arbitrary number of previously-defined 3D nDMaterial objects
+This command is used to construct a Series3D material. It is a wrapper that imposes an iso-stress condition to an arbitrary number of previously-defined 3D nDMaterial objects
+
+.. function:: nDMaterial Series3D $matTag    $tag1 $tag2 ... $tagN   <-weights $w1 $w2 ... $wN> <-maxIter $maxIter> <-relTol $relTol> <-absTol $absTol> <-verbose>
+
+.. csv-table:: 
+   :header: "Argument", "Type", "Description"
+   :widths: 10, 10, 40
+
+   $matTag, |integer|, "unique tag identifying this series material wrapper"
+   $tag1 $tag2 ... $tagN, N |integer|, "unique tags identifying previously defined nD materials"
+   $w1 $w2 ... $wN, N |float|, "weight factors, optional. If not defined, they will be assumed all equal to 1"
+   -maxIter, |string|, "string keyword to specify a user-defined maximum number of iterations"
+   $maxIter, |integer|, "maximum number of iterations to impose the iso-stress condition, optional, default = 10"
+   -relTol, |string|, "string keyword to specify a user-defined relative stress tolerance for the iso-stress condition"
+   $relTol, |float|, "relative stress tolerance for the iso-stress condition, optional, default = 1.0e-4"
+   -absTol, |string|, "string keyword to specify a user-defined absolute stress tolerance for the iso-stress condition"
+   $absTol, |float|, "absolute stress tolerance for the iso-stress condition, optional, default = 1.0e-8"
+   -verbose, |string|, "string keyword to activate print of debug information"
+
+
+Usage Notes
+-----------
+
+.. admonition:: Limitations
+
+   * The only material formulation for the Series3D material object is "ThreeDimensional".
+   * The only material formulation allowed for the sub-material objects is "ThreeDimensional".
+
+.. admonition:: Responses
+
+   * All responses available for the nDMaterial object: **stress**, **strain**, **tangent**, **TempAndElong**.
+   * **material** **$matId** ... : use the **material** keyword followed by the 1-based index of the sub-material (and followed by the desired response) to forward the request to the matId sub-material.
+   * **homogenized** ... : use the **homogenized** keyword followed by the desired response to forward the request to all sub-materials, and to compute its weighted average.
 
 Theory
-""""""
+------
 
-This model imposes a minimal kinematic constraint on the sub-materials such that the macro-scopic strain tensor :math:`\varepsilon_{m}` (i.e. the strain tensor of the wrapper Series3D material) is equal to the volumetric average of the micro-scopic strain tensors :math:`\varepsilon_{i}` (i.e. the strain tensors of each sub-material)
+This model imposes a minimal kinematic constraint on the sub-materials such that the macro-scopic strain tensor :math:`\boldsymbol{\varepsilon}_{m}` (i.e. the strain tensor of the wrapper Series3D material) is equal to the volumetric average of the micro-scopic strain tensors :math:`\boldsymbol{\varepsilon}_{i}` (i.e. the strain tensors of each sub-material)
 
 .. math::
    \varepsilon_{m} = \frac{1}{V} \int_{V} \varepsilon_{i} \,dV
-   :label: eq_1
 
-The above equation can be rewritten as a weighted sum
+This equation can be rewritten as a weighted sum
 
 .. math::
-   \varepsilon_{m} = \sum_{i=1}^{n} \varepsilon_{i}w_{i}
-   :label: eq_2
+   \varepsilon_{m} = \sum_{i=1}^{n} \boldsymbol{\varepsilon}_{i} w_{i}
+   :label: series-3d-constraint
 
 where the weight :math:`w_{i}` is the volume fraction of the i\ :sup:`th`\  sub-material.
-Imposing the constraint in :eq:`eq_2` is equivalent to impose forces on each sub-material proportional to each material's volume fraction:
+Imposing the constraint in :eq:`series-3d-constraint` is equivalent to impose forces on each sub-material proportional to each material's volume fraction:
 
 .. math::
    F = C\begin{bmatrix} w_1 & w_2 & ... & w_n \end{bmatrix}
@@ -39,55 +70,21 @@ therefore, the following equality can be written
    F = C\begin{bmatrix} w_1 & w_2 & ... & w_n \end{bmatrix} = V\begin{bmatrix} \sigma_1w_1 & \sigma_2w_2 & ... & \sigma_nw_n \end{bmatrix}
    :label: eq_5
 
-which shows that :eq:`eq_2` actually imposes an iso-stress condition on each sum-material
+which shows that :eq:`series-3d-constraint` actually imposes an iso-stress condition on each sum-material
 
 .. math::
    \frac{C}{V} = \sigma_m = \sigma_1 = \sigma_2 = ... = \sigma_n
    :label: eq_6
 
 
-.. function:: nDMaterial Series3D $matTag    $tag1 $tag2 ... $tagN   <-weights $w1 $w2 ... $wN> <-maxIter $maxIter> <-relTol $relTol> <-absTol $absTol> <-verbose>
-
-
-
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
-
-   $matTag, |integer|, "unique tag identifying this series material wrapper"
-   $tag1 $tag2 ... $tagN, N |integer|, "unique tags identifying previously defined nD materials"
-   $w1 $w2 ... $wN, N |float|, "weight factors, optional. If not defined, they will be assumed all equal to 1"
-   -maxIter, |string|, "string keyword to specify a user-defined maximum number of iterations"
-   $maxIter, |integer|, "maximum number of iterations to impose the iso-stress condition, optional, default = 10"
-   -relTol, |string|, "string keyword to specify a user-defined relative stress tolerance for the iso-stress condition"
-   $relTol, |float|, "relative stress tolerance for the iso-stress condition, optional, default = 1.0e-4"
-   -absTol, |string|, "string keyword to specify a user-defined absolute stress tolerance for the iso-stress condition"
-   $absTol, |float|, "absolute stress tolerance for the iso-stress condition, optional, default = 1.0e-8"
-   -verbose, |string|, "string keyword to activate print of debug information"
-
-Usage Notes
-"""""""""""
-
-.. admonition:: Limitations
-
-   * The only material formulation for the Series3D material object is "ThreeDimensional".
-   * The only material formulation allowed for the sub-material objects is "ThreeDimensional".
-
-.. admonition:: Responses
-
-   * All responses available for the nDMaterial object: **stress** (or **stresses**), **strain** (or **strains**), **tangent** (or **Tangent**), **TempAndElong**.
-   * **material** **$matId** ... : use the **material** keyword followed by the 1-based index of the sub-material (and followed by the desired response) to forward the request to the matId sub-material.
-   * **homogenized** ... : use the **homogenized** keyword followed by the desired response to forward the request to all sub-materials, and to compute its weighted average.
-
-.. admonition:: Example 1 - Simple Linear Validation
+Examples
+--------
 
    | A simple example to validate the Series3D material. First material is twice as stiff as the second one. All weights are assumed equal to 1.
    | The expected results are:
    * equal stress 
    * additive strain
    * strain in the soft material twice as large as the strain in the stiff material
-
-   1. **Tcl Code**
 
    .. code-block:: tcl
 

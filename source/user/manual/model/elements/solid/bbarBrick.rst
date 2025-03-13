@@ -1,13 +1,11 @@
-.. _bbarBrick::
+.. _bbarBrick:
 
 MixedBrick
 ^^^^^^^^^^
 
 This command is used to construct an eight-node mixed volume/pressure brick element object, which uses a trilinear isoparametric formulation.
 
-.. admonition:: Command
-
-   **element bbarBrick $tag $node1 $node2 $node3 $node4 $node5 $node6 $node7 $node8 $matTag <$b1 $b2 $b3>**
+.. function:: element bbarBrick $tag $node1 $node2 $node3 $node4 $node5 $node6 $node7 $node8 $matTag <$b1 $b2 $b3>
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
@@ -27,9 +25,10 @@ This command is used to construct an eight-node mixed volume/pressure brick elem
 
 .. note::
 
-   The valid queries to a Brick element when creating an ElementRecorder object are 'forces', 'stresses,' ('strains' version > 2.2.0) and 'material $matNum matArg1 matArg2 ...' Where $matNum refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
+   The valid queries to a Brick element when creating an ElementRecorder object are ``"forces"``, ``"stresses"``, ``"strains"``, and "material $matNum matArg1 matArg2 ..." Where $matNum refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
 
-   This element can only be defined after a :numref:`model` with **-ndm 3 -ndf 3**
+   This element can only be defined from a :class:`Model` with ``ndm=3`` and ``ndf=3``
+
 
 Example
 -------
@@ -48,4 +47,6 @@ The following example constructs a bbar brick element with tag **1** between nod
 
       model.element('bbarBrick',1, (1,2,3,4,5,6,7,8), 1, (b1, b2, b3))
 
+
 Code Developed by: **Edward Love, Sandia National Laboratories**
+

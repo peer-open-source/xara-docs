@@ -1,7 +1,7 @@
 Lagrange
 ^^^^^^^^
 
-This command is used to construct a LagrangeMultiplier constraint handler, which enforces the constraints by introducing Lagrange multipliers to the system of equation. The following is the command to construct a plain constraint handler:
+A *Lagrange* constraint handler enforces the constraints in a model by introducing Lagrange multipliers to the system of equation. 
 
 .. function:: constraints Lagrange <$alphaS $alphaM >
 
@@ -37,9 +37,3 @@ The following example shows how to construct a Lagrange constraint handler
 
 Code Developed by: |fmk|
 
-
-
-
-
-
-Code Developed by: |fmk|

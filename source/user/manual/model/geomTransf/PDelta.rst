@@ -10,6 +10,7 @@ This command is used to construct the P-Delta coordinate transformation, which p
    .. tab:: Python
 
       .. py:function:: model.geomTransf("PDelta", tag, vecxz, [offi, offj])
+         :no-index:
 
          :param integer tag: integer tag identifying transformation
          :type tag: int

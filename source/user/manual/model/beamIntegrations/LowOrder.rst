@@ -1,4 +1,3 @@
-.. include:: sub.txt
 
 ==========
  LowOrder
@@ -7,7 +6,6 @@
 .. function:: beamIntegration('LowOrder',tag,N,*secTags,*locs,*wts)
    :noindex:
 
-   Create a LowOrder beamIntegration object.
    This option is a generalization of the :ref:`FixedLocation-BeamIntegration` and :ref:`UserDefined-BeamIntegration` integration approaches and is useful for moving load analysis (`Kidarsa, Scott and Higgins 2008`_). The locations of the integration points are user defined,
    while a selected number of weights are specified and the remaining weights are
    computed by the method of undetermined coefficients.
@@ -19,11 +17,11 @@
    Note that :ref:`FixedLocation-BeamIntegration` integration is recovered when ``Nc`` is zero.
 
    ========================   =============================================================
-   ``tag`` |int|              tag of the beam integration
-   ``N`` |int|                number of integration points along the element.
-   ``secTags`` |listi|        A list previous-defined section objects.
-   ``locs`` |listf|           Locations of integration points along the element.
-   ``wts`` |listf|            weights of integration points.
+   ``tag`` |integer|              tag of the beam integration
+   ``N`` |integer|                number of integration points along the element.
+   ``secTags`` |integerList|        A list previous-defined section objects.
+   ``locs`` |floatList|           Locations of integration points along the element.
+   ``wts`` |floatList|            weights of integration points.
    ========================   =============================================================
 
 
@@ -51,7 +49,6 @@
       integration is recovered when ``wts`` is an empty list and
       :ref:`UserDefined-BeamIntegration` integration is
       recovered when the ``wts`` and ``locs`` lists are of equal length.
-
 
 
 

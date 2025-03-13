@@ -19,7 +19,7 @@ Shells
 
 
 Theory
-======
+------
 
 A shell element is representative of a 2D solid domain :math:`\Omega` 
 embedded in a 3D ambient Euclidean space.

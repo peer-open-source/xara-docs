@@ -1,9 +1,9 @@
 .. _beamIntegration:
 
-Beam integration Command
-************************
+Beam integration
+****************
 
-This command is used to construct an element and add it to the Domain. 
+This command is used to construct a beam integration for :ref:`Frame` elements. 
 
 .. function:: beamIntegration $integtaionType $tag $arg1 ...
 
@@ -15,14 +15,11 @@ This command is used to construct an element and add it to the Domain.
    $tag,  |integer|, unique beam integration tag.
    $args, |list|,  a list of arguments with number dependent on integration type
 
-Following are beamIntegration types available in the OpenSees:
-
-1. Integration Methods for Distributed Plasticity. Distributed plasticity methods permit yielding at any integration point along the element length.
-
-1. Zero-Length Elements
+The following types are available:
 
 .. toctree::
-   :maxdepth: 4
+   :caption: Distributed Inelasticity.
+   :maxdepth: 1
 
    beamIntegrations/Lobatto
    beamIntegrations/Legendre
@@ -35,10 +32,13 @@ Following are beamIntegration types available in the OpenSees:
    beamIntegrations/LowOrder
    beamIntegrations/MidDistance
    
-2. Plastic Hinge Integration Methods. Plastic hinge integration methods confine material yielding to regions of the element of specified length while the remainder of the element is linear elastic. A summary of plastic hinge integration methods is found in (Scott and Fenves 2006).
+2. Concentrated Inelasticity.
+   Plastic hinge integration methods confine material inelasticity to regions of the element of specified length while the remainder of the element is linear elastic. 
+   A summary of plastic hinge integration methods is provided in (Scott and Fenves 2006).
 
 .. toctree::
-   :maxdepth: 4
+   :caption: Concentrated Inelasticity.
+   :maxdepth: 1
 
    beamIntegrations/ConcentratedPlasticity	      
    beamIntegrations/ConcentratedCurvature

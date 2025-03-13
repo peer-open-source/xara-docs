@@ -40,8 +40,8 @@ The following subsections contain information about ``type``
    .. toctree::
       :maxdepth: 1
 
-      uniaxialMaterials/Steel01
-      uniaxialMaterials/Steel02
+      Steel01
+      Steel02
 
 
 ..

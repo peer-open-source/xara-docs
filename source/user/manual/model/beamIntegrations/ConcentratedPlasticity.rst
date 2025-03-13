@@ -3,11 +3,12 @@
 ConcentratedPlasticity
 ^^^^^^^^^^^^^^^^^^^^^^
 
-This command creates a Concentrated-Plasticity beamIntegration object. This integration places one plastic-rotation integration point at each element end and three elastic-curvature integration points along the length.
+This integration places one plastic-rotation integration point at each element end and three elastic-curvature integration points along the length.
 
 .. function:: beamIntegration ConcentratedPlasticity $integrationTag $secTagI $secTagJ $secTagE
 
-.. function:: beamIntegration('ConcentratedPlasticity',integrationTag,secTagI,secTagJ,secTagE)
+.. function:: model.beamIntegration('ConcentratedPlasticity',integrationTag,secTagI,secTagJ,secTagE)
+   :no-index:
 
 .. list-table:: 
    :widths: 10 10 40
@@ -30,8 +31,13 @@ This command creates a Concentrated-Plasticity beamIntegration object. This inte
      - Tag of previously-defined Elastic section object elastic behavior along element length. (see note 2 below)
    
 
-Note 1: The plastic-deformations behavior at the element ends represents finite plastic deformations. E.g. Bending must be defined in terms of bending moment vs plastic rotation, Axial must be defined in terms of axial force vs plastic axial deformations, etc. Because this integration defines flexibilities, you do not need to add rigid behavior for elastic deformation components, as they are already taken care of by the elastic segment.
+Notes
+-----
 
-Note 2: Use an elastic section which defines elastic moment-curvature, force-strain deformations
+* The plastic-deformations behavior at the element ends represents finite plastic deformations. E.g. Bending must be defined in terms of bending moment vs plastic rotation, Axial must be defined in terms of axial force vs plastic axial deformations, etc. Because this integration defines flexibilities, you do not need to add rigid behavior for elastic deformation components, as they are already taken care of by the elastic segment.
 
-Code Developed (2023) by: |Silvia Mazzoni (Silvia's Brainery) & Michael Scott (Oregon State University)|
+* Use an elastic section which defines elastic moment-curvature, force-strain deformations
+
+Code Developed by: *Silvia Mazzoni (Silvia's Brainery)* and |mhs|
+
+

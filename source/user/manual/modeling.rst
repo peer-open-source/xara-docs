@@ -1,12 +1,13 @@
 .. _modeling:
 
 Modeling
---------
+^^^^^^^^
 
 A finite element model consists of **Nodes**, **Elements**, **Constraints**, and **Loads**. 
-In OpenSees the Constraints are divided into two types: single-point constraints (**SP_Constraints)** for specifying the boundary condition for a specific degree-of-freedom at a node and multiple-point constraints (**MP_Constraints**) for specifying the relationship between the responses between the degrees-of-freedom at two separate nodes. The loads in OpenSees are assigned to **LoadPatterns**. Also associated with load patterns are **TimeSeries** objects ans sometime **SP_Constraints** when the user wants to specify time-varying **SP_Constraints**. 
+Constraints are divided into two types: *single-point constraints* for specifying the boundary condition for a specific degree-of-freedom at a node and *multiple-point constraints* for specifying the relationship between the responses between the degrees-of-freedom at two separate nodes. 
+Loads in are assigned to **LoadPatterns**. 
+Also associated with load patterns are **TimeSeries** objects and sometimes constraints when specifying time-varying single-point constraints. 
 
-In OpenSees there are commands to add each of these types of objects to a domain:
 
 
 .. toctree::
@@ -18,11 +19,20 @@ In OpenSees there are commands to add each of these types of objects to a domain
    section
    model/element
    model/geomTransf
-   model/beamIntegrations
+   model/beamIntegration
    model/mpConstraints
    model/pattern
    model/damping
    model/mass
+
+
+Misc.
+-----
+
+.. toctree::
+   :maxdepth: 1
+
    model/region
-   model/block
+   model/remove
+
 

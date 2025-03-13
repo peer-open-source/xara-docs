@@ -1,3 +1,5 @@
+.. include:: sub.txt
+
 .. _ExactFrame:
 
 ``ExactFrame``: Geometrically Exact Frame
@@ -22,7 +24,8 @@ The implementation closely follows the treatment by Perez and Filippou (2024) [3
 
    .. tab:: Python (RT)
 
-      .. function:: model.element("ExactFrame", tag, nodes, section, transform)
+      .. py:function:: model.element("ExactFrame", tag, nodes, section, transform)
+         :no-index:
 
          :param tag: unique element tag
          :type tag: int
@@ -101,5 +104,5 @@ References
 .. [3] Perez, C.M. and Filippou, F.C. (2024) ‘On nonlinear geometric transformations of finite elements’, International Journal for Numerical Methods in Engineering, p. e7506. Available at: https://doi.org/10.1002/nme.7506.
 
 
-Code developed by: `Claudio M. Perez <https://github.com/claudioperez>`_ (University of California, Berkeley).
+Code developed by: |cmp|
 

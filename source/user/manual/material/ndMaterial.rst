@@ -3,7 +3,7 @@
 General Materials
 *****************
 
-This command is used to construct an NDMaterial object which represents the stress-strain relationship at the gauss-point of a continuum element. 
+This command is used to configure an NDMaterial which represents the stress-strain relationship at the gauss-point of a continuum element. 
 
 .. tabs::
    
@@ -12,9 +12,9 @@ This command is used to construct an NDMaterial object which represents the stre
       .. function:: model.material(type, tag, *args)
 
          :param type: material type
-         :type type: string
+         :type type: |string|
          :param tag: unique material tag.
-         :type tag: integer
+         :type tag: |integer|
          :param args: additional arguments dependent on material ``type``
 
 
@@ -46,6 +46,8 @@ The following contain information about ``type`` and the ``args`` required for e
    ndMaterials/J2Plasticity
    ndMaterials/DruckerPrager
    ndMaterials/ManzariDafalias
+
+..
    ndMaterials/BoundingCamClay
    ndMaterials/PM4Sand
    ndMaterials/PM4Silt
@@ -54,10 +56,12 @@ The following contain information about ``type`` and the ``args`` required for e
    ndMaterials/PressureDependentMultiYield02
    ndMaterials/J2CyclicBoundingSurface
    ndMaterials/SAniSandMS
+
    ndMaterials/Orthotropic
    ndMaterials/Series3D
    ndMaterials/Parallel3D
    ndMaterials/InitStrain
+
    ndMaterials/ASDConcrete3D
    ndMaterials/ASDPlasticMaterial
    ndMaterials/OrthotropicRAConcrete
@@ -75,7 +79,6 @@ The following contain information about ``type`` and the ``args`` required for e
     Tsinghua Sand Models
     CycLiqCP Material (Cyclic ElasticPlasticity)
     CycLiqCPSP Material
-    Manzari Dafalias Material
     Stress Density Material
     Materials for Modeling Concrete Walls
     PlaneStressUserMaterial
