@@ -3,20 +3,18 @@
  HingeEndpoint
 ===============
 
-.. function:: beamIntegration('HingeEndpoint',tag,secI,lpI,secJ,lpJ,secE)
+.. function:: Model.beamIntegration("HingeEndpoint",tag,secI,lpI,secJ,lpJ,secE)
    :noindex:
+
+   :param |integer| tag: Unique object tag.
+   :param |integer| secI: A previous-defined :ref:`Section` for hinge at I.
+   :param |float| lpI: The plastic hinge length at I.
+   :param |integer| secJ: A previous-defined :ref:`Section` for hinge at J.
+   :param |float| lpJ: The plastic hinge length at J.
+   :param |integer| secE: A previous-defined :ref:`Section` for the element interior.
 
    Endpoint integration over each hinge region moves the integration points to the element ends;
    however, there is a large integration error for linear curvature distributions along the element.
-
-   ========================   ============================================================================
-   ``tag`` |integer|              tag of the beam integration.
-   ``secI`` |integer|             A previous-defined section object for hinge at I.
-   ``lpI`` |float|            The plastic hinge length at I.
-   ``secJ`` |integer|             A previous-defined section object for hinge at J.
-   ``lpJ`` |float|            The plastic hinge length at J.
-   ``secE`` |integer|             A previous-defined section object for the element interior.
-   ========================   ============================================================================
 
    Arguments and examples see :ref:`HingeMidPoint-BeamIntegration`.
 

@@ -5,32 +5,34 @@
  HingeMidpoint
 ===============
 
-.. function:: beamIntegration('HingeMidpoint',tag,secI,lpI,secJ,lpJ,secE)
+.. py:method:: Model.beamIntegration('HingeMidpoint',tag,secI,lpI,secJ,lpJ,secE)
    :noindex:
+
+   :param |integer| tag: Unique object tag.
+   :param |integer| secI: A previous-defined :ref:`Section` for hinge at I.
+   :param |float| lpI: The plastic hinge length at I.
+   :param |integer| secJ: A previous-defined :ref:`Section` for hinge at J.
+   :param |float| lpJ: The plastic hinge length at J.
+   :param |integer| secE: A previous-defined :ref:`Section` for the element interior.
 
    Midpoint integration over each hinge region is the most accurate one-point integration rule;
    however, it does not place integration points at the element ends and there is a small integration
    error for linear curvature distributions along the element.
-
-   ========================   ============================================================================
-   ``tag`` |integer|              tag of the beam integration.
-   ``secI`` |integer|             A previous-defined section object for hinge at I.
-   ``lpI`` |float|            The plastic hinge length at I.
-   ``secJ`` |integer|             A previous-defined section object for hinge at J.
-   ``lpJ`` |float|            The plastic hinge length at J.
-   ``secE`` |integer|             A previous-defined section object for the element interior.
-   ========================   ============================================================================
 
    The plastic hinge length at end I (J) is equal to ``lpI`` (``lpJ``) and the associated force deformation response is defined by the ``secI`` (``secJ``). The force deformation
    response of the element interior is defined by the ``secE``.
    Typically, the interior section is linear-elastic, but this is not necessary.
 
 
-   ::
+Example 
+-------
 
-      lpI = 0.1
-      lpJ = 0.2
-      beamIntegration('HingeMidpoint',tag,secI,lpI,secJ,lpJ,secE)
+
+.. code-block:: python
+
+   lpI = 0.1
+   lpJ = 0.2
+   model.beamIntegration('HingeMidpoint',tag,secI,lpI,secJ,lpJ,secE)
 
 
 

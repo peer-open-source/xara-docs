@@ -24,7 +24,7 @@
 .keyfeatures-box-title {
   margin: 15px;
   font-size: 16px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .keyfeatures-box-text > a {
