@@ -52,4 +52,5 @@ Documentation of these methods is organized as follows:
    about/compatibility/index
    about/license
    about/references
+   cite
 
