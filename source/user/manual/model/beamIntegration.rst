@@ -1,9 +1,8 @@
 .. _beamIntegration:
 
-Beam integration
-****************
+Quadrature
+^^^^^^^^^^
 
-This command is used to construct a beam integration for :ref:`Frame <Frame>` elements. 
 
 .. tabs::
 
