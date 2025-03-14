@@ -68,4 +68,4 @@ to nodes **1** and **2** for a model with **ndf** of 6. Node **1** is specified 
          fix 1 1 1 1 1 1 1 
          fix 2 0 1 0 0 1 0 
 
-Code developed by: |fmk|
+Code developed by: |fmk|, |cmp|
