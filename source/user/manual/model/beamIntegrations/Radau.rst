@@ -24,17 +24,19 @@ Examples
 
 The following examples demonstrate the command in Tcl and Python script to add a Radau beam integration with tag 2 and 6 integration points that uses the previously defined section whose tag is 1.
 
-   1. **Tcl Code**
+.. tabs::
+   
+   .. tab:: Tcl
 
-   .. code-block:: tcl
+      .. code-block:: tcl
 
-      beamIntegration "Radau" 2 1 6
+         beamIntegration "Radau" 2 1 6
 
 
-   2. **Python Code**
+   .. tab:: Python
 
-   .. code-block:: python
+      .. code-block:: python
 
-      model.beamIntegration("Radau",2,1,6)
+         model.beamIntegration("Radau",2,1,6)
 
 

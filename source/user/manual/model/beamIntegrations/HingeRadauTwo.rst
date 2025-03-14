@@ -1,8 +1,8 @@
 ===============
- HingeRadauTwo
+HingeRadauTwo
 ===============
 
-.. function:: beamIntegration('HingeRadauTwo',tag,secI,lpI,secJ,lpJ,secE)
+.. py:method:: Model.beamIntegration('HingeRadauTwo',tag,secI,lpI,secJ,lpJ,secE)
    :noindex:
 
    Two-point Gauss-Radau integration over each hinge region places an integration
