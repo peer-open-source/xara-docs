@@ -1,8 +1,8 @@
 
 .. _printA:
 
-``getTangent`` (``printA``)
-***************************
+getTangent (``printA``)
+***********************
 
 The ``getTangent`` function, or ``printA`` in Tcl, is used to return system matrices like the stiffness or mass.
 
@@ -12,30 +12,34 @@ The ``getTangent`` function, or ``printA`` in Tcl, is used to return system matr
 
       .. py:method:: Model.getTangent(m=0, c=0, k=1)
 
+         Return the current tangent to the equilibrium residual.
+
+         :param |float| m: factor with which to scale the inertial part of the tangent (default is ``0.0``).
+         :param |float| c: factor with which to scale the damped part of the tangent (default is ``0.0``).
+         :param |float| k: factor with which to scale the static part of the tangent (default is ``1.0``).
+         :returns: A *numpy.array* representing the tangent matrix.
+
    .. tab:: Tcl
 
       .. function:: printA <-file $fileName> <-m $m> <-c $c> <-k $k>
 
+      .. list-table:: 
+         :widths: 10 10 40
 
-   
-.. list-table:: 
-   :widths: 10 10 40
-
-   * - ``$fileName``
-     - *string*
-     - file name to write tangent to.
-   * - ``m``
-     - |float|
-     - factor with which to scale the inertial part of the tangent (default is ``0.0``; OpenSeesRT only).
-   * - ``c``
-     - |float|
-     - factor with which to scale the damped part of the tangent (default is ``0.0``; OpenSeesRT only).
-   * - ``k``
-     - |float|
-     - factor with which to scale the static part of the tangent (default is ``1.0``; OpenSeesRT only).
+         * - ``$fileName``
+         - *string*
+         - file name to write tangent to.
+         * - ``m``
+         - |float|
+         - factor with which to scale the inertial part of the tangent (default is ``0.0``; OpenSeesRT only).
+         * - ``c``
+         - |float|
+         - factor with which to scale the damped part of the tangent (default is ``0.0``; OpenSeesRT only).
+         * - ``k``
+         - |float|
+         - factor with which to scale the static part of the tangent (default is ``1.0``; OpenSeesRT only).
 
 
-Return the current tangent to the equilibrium residual. 
 If using a static integrator, the resulting matrix is the *stiffness* matrix. If a
 transient integrator, it will be some combination of mass and stiffness
 matrices.

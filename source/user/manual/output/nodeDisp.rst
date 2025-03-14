@@ -13,7 +13,7 @@ nodeDisp
          Return the displacement at a specified node.
 
          :param |integer| tag: The tag of the :ref:`node` whose displacements are sought.
-         :param |integer| dof: Optional: specific degree of freedom at the node (1 through ``ndf``).
+         :param |integer| dof: Optional: specific degree of freedom at the node (between 1 and :py:attr:`Model.ndf`, inclusive).
          :returns: A |list| of the displacement components at the node when ``dof=None``, otherwise a |float|.
 
    .. tab:: Tcl

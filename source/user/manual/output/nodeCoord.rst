@@ -12,7 +12,7 @@ nodeCoord
          Return the coordinate at a specified node.
 
          :param |integer| tag: The tag of the :ref:`node` whose coordinates are sought.
-         :param |integer| dim: Optional: specific coordinate dimension at the node (1 through ``ndm``).
+         :param |integer| dim: Optional: specific coordinate dimension at the node (between 1 and :py:attr:`Model.ndm`).
          :returns: A |list| of the coordinate components at the node.
 
    .. tab:: Tcl

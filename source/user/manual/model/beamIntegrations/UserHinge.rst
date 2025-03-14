@@ -5,7 +5,7 @@ UserHinge
 .. py:method:: Model.beamIntegration("UserHinge",tag,secETag,npL, secsLTags, locsL, wtsL,npR, secsRTags, locsR, wtsR)
    :no-index:
 
-   Create a UserHinge beamIntegration.
+   Create a *UserHinge* beamIntegration.
 
    ========================   ============================================================================
    ``tag`` |integer|              tag of the beam integration

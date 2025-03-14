@@ -13,7 +13,7 @@ nodeVel
          Return the velocity at a specified node.
 
          :param |integer| tag: The tag of the :ref:`node` whose velocities are sought.
-         :param |integer| dof: Optional: specific degree of freedom at the node (1 through ``ndf``).
+         :param |integer| dof: Optional: specific degree of freedom at the node (between 1 and :py:attr:`Model.ndf`, inclusive).
 
    .. tab:: Tcl
 
@@ -31,19 +31,19 @@ If optional ``dof`` is not provided, an array containing all velocity components
 Example
 -------
 
-The following example is used to set the variable **vel1** to the nodal velocity at node given by the variable **nodeTag** in the **1** degree-of-freedom direction.
+The following example is used to set the variable **vel** to the nodal velocity at node given by the variable **nodeTag** in the **1** degree-of-freedom direction.
 
 1. **Tcl Code**
 
    .. code-block:: tcl
 
-      set vel1 [nodeVel $nodeTag 1]
+      set vel [nodeVel $nodeTag 1]
 
 2. **Python Code**
 
    .. code-block:: python
 
-      vel1 = model.nodeVel(nodeTag,1)
+      vel = model.nodeVel(nodeTag,1)
 
 
 Code developed by: |fmk|

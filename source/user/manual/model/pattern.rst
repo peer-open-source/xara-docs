@@ -8,9 +8,6 @@ Each LoadPattern has a TimeSeries associated with it.
 In addition it may contain ElementLoads, NodalLoads and SinglePointConstraints. 
 Some of these SinglePoint constraints may be associated with GroundMotions.
 
-
-The command has the following form:
-
 .. function:: pattern type args ...
 
 .. csv-table:: 

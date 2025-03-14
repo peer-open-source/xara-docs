@@ -33,9 +33,6 @@ Element
          ``nodes``,   |integerlist|, a list of element nodes with number dependent on ele type
          ``args``, |list|,        a list of element arguments with number dependent on ele type
 
-
-The type of element created and the additional arguments required depends on the **$type** provided.
-
 The following subsections contain information about ``type`` and the number of nodes and args required for each of the available element types:
 
 .. toctree::

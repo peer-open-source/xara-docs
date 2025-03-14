@@ -8,6 +8,7 @@ Output
 
    print
    printA
+   printB
    getTime
    eleResponse
    getCrdTransfTags

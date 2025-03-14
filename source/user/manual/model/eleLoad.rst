@@ -1,7 +1,7 @@
 .. _eleLoad:
 
-eleLoad Command
-"""""""""""""""
+eleLoad
+"""""""
 
 The eleLoad command is used to construct an ElementalLoad object and add it to the enclosing LoadPattern.
 
@@ -49,9 +49,10 @@ When NDM=3, the beam column elements all accept eleLoad commands of the followin
 
    At the moment, eleLoads do not work with 3D beam-column elements if Corotational geometric transformation is used.
 
-.. admonition: Example
+Example
+-------
 
-.. code:: tcl
+.. code-block:: tcl
 
    set width 20.0
    set W 4000.0;
@@ -60,12 +61,12 @@ When NDM=3, the beam column elements all accept eleLoad commands of the followin
        eleLoad -ele 3 -type -beamUniform [expr -$W/$width]
    }
 
-.. code:: tcl
+.. code-block:: python
 
-   width = 20.0;
-   W = 4000.0;
-   timeSeries('Linear', 1)
-   pattern('Plain',1,1)
-   eleLoad('-ele',3, '-type', -beamUniform', W/width)
+   width = 20.0
+   W = 4000.0
+   model.timeSeries("Linear", 1)
+   model.pattern('Plain',1,1)
+   model.eleLoad('-ele',3, '-type', -beamUniform', W/width)
 
 Code Developed by: |fmk|
