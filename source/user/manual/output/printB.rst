@@ -23,6 +23,13 @@ getResidual
        
          $residual, |list|,  the residual vector
 
+
+.. note::
+
+   The specific form of the residual is documented in the pages for :ref:`Static <StaticAnalysis>` and
+   :ref:`Transient <TransientAnalysis>`, respectively.
+
+
 Example
 -------
 
