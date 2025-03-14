@@ -138,7 +138,6 @@ exclude_patterns = [
     "user/manual/section/ReinforcedConcreteLayeredMembraneSection.rst",
 
     "user/manual/model/nodes/sp.rst",
-    "user/manual/model/pattern/uniformPattern.rst",
     "user/examples/basicExamples/basicTruss.rst",
     "user/manual/material/matTestCommands.rst",
 #   "user/manual/model/beamIntegration.rst",
