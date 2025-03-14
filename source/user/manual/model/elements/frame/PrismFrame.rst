@@ -12,7 +12,7 @@ The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
       .. py:method:: Model.element("PrismFrame", tag, nodes, section=None, transform=None, *args)
          :no-index:
          
-         :param tag: unique element tag
+         :param tag: unique :ref:`element` tag
          :type tag: int
          :param nodes: tuple of *two* integer node tags
          :type nodes: tuple
@@ -31,7 +31,7 @@ The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
 
-         ``tag``, |integer|,	       unique element object tag
+         ``tag``, |integer|,	       unique :ref:`element` tag
          ``iNode`` ``jNode`` , |integer|,  end nodes
          ``sect``, |integer|,         section tag
          ``tran``, |integer|,      identifier for previously-defined coordinate-transformation

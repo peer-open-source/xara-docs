@@ -1,7 +1,7 @@
 .. _wipeAnalysis:
 
 wipeAnalysis
-************
+^^^^^^^^^^^^
 
 
 .. tabs::
@@ -9,13 +9,13 @@ wipeAnalysis
    .. tab:: Python
 
       .. py:method:: Model.wipeAnalysis()
-         
+
          Remove all the analysis objects. 
 
    .. tab:: Tcl
 
       .. function:: wipeAnalsyis;
-         
+
          Remove all the analysis objects. 
 
 

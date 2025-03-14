@@ -11,6 +11,11 @@ This is the command issued to configure an analysis.
 
       .. py:method:: Model.analysis(type, *args)
 
+         Set the analysis type to be performed on the next call to :py:meth:`Model.analyze`.
+
+         :param string type: The analysis type.
+         :param args: A list of arguments for that type.
+
    .. tab:: Tcl
 
       .. function:: analysis type? <-numSublevels $x -numSubSteps $y>

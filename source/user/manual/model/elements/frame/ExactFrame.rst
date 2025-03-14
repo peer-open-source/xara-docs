@@ -46,7 +46,7 @@ The implementation closely follows the treatment by Perez and Filippou (2024) [3
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
 
-         ``tag``, |integer|,	       unique element object tag
+         ``tag``, |integer|,	       unique :ref:`Element` tag
          ``iNode`` ``jNode`` , |integer|,  end nodes
          ``sect``, |integer|,         section tag
          ``tran``, |integer|,      identifier for previously-defined coordinate-transformation

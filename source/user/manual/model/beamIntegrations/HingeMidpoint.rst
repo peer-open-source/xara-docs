@@ -8,7 +8,7 @@
 .. py:method:: Model.beamIntegration('HingeMidpoint',tag,secI,lpI,secJ,lpJ,secE)
    :no-index:
 
-   :param |integer| tag: Unique object tag.
+   :param |integer| tag: Unique tag.
    :param |integer| secI: A previous-defined :ref:`Section` for hinge at I.
    :param |float| lpI: The plastic hinge length at I.
    :param |integer| secJ: A previous-defined :ref:`Section` for hinge at J.
@@ -19,7 +19,7 @@
    however, it does not place integration points at the element ends and there is a small integration
    error for linear curvature distributions along the element.
 
-   The plastic hinge length at end I (J) is equal to ``lpI`` (``lpJ``) and the associated force deformation response is defined by the ``secI`` (``secJ``). The force deformation
+   The plastic hinge length at end :math:`I` (:math:`J`) is equal to ``lpI`` (``lpJ``) and the associated force deformation response is defined by the ``secI`` (``secJ``). The force deformation
    response of the element interior is defined by the ``secE``.
    Typically, the interior section is linear-elastic, but this is not necessary.
 

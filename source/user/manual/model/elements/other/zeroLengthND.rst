@@ -11,7 +11,7 @@ This command is used to construct a zeroLengthND element object, which is define
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $eleTag, |integer|,	unique element object tag
+   $eleTag, |integer|,	unique :ref:`Element` tag
    $nodes, | intList|, tags of two end nodes
    $matTag,|integer|, tag associated with previously-defined ndMaterial object
    $uniTag, |integer|, tag associated with previously-defined UniaxialMaterial object which may be used to represent uncoupled behavior orthogonal to the plane of the NDmaterial response. SEE NOTES 2 and 3.

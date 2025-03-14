@@ -9,19 +9,18 @@ system
 
       .. py:method:: Model.system(type, *args)
 
-         Set the system type to be used by the :class:`Model`.
+         Set the system to be used by the :class:`Model`.
 
          :param |string| type: The system type.
-         :param args: A sequence of arguments for that type.
+         :param args: A sequence of arguments specific to *type*.
    
    .. tab:: Tcl
 
-      .. function:: system type? arg1? ...
+      .. function:: system type? args? ...
 
-This command configures the ``LinearSOE`` and ``LinearSolver`` which store and solve the linearized system of equations, :math:`\boldsymbol{A}\boldsymbol{x}=\boldsymbol{b}` during each step.
+This command configures the linear system of equations and solver which store and solve the linearized residual, :math:`\boldsymbol{A}\boldsymbol{x}=\boldsymbol{b}`.
 
-
-The following systems are available:
+The following types are available:
 
 .. toctree::
    :maxdepth: 1

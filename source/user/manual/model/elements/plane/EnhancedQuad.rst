@@ -6,7 +6,7 @@ EnhancedQuad
 
    .. tab:: Python 
 
-      .. py:method:: Model.element("EnhancedQuad", tag, nodes, section, [pressure, rho, b1, b2])
+      .. py:method:: Model.element("EnhancedQuad", tag, nodes, section [, pressure, rho, b1, b2])
          :no-index:
 
          :param |integer| tag: unique :ref:`Element` tag
@@ -33,7 +33,7 @@ EnhancedQuad
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
 
-         $eleTag, |integer|, unique element object tag
+         $eleTag, |integer|, unique :ref:`Element` tag
          $iNode $jNode $kNode $lNode, |integer|   four nodes defining element boundaries, input in counter-clockwise order around the element.
          $thick, |float|,  element thickness
          $type, |string|,  string representing material behavior. The type parameter can be either "PlaneStrain" or "PlaneStress."

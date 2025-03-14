@@ -33,7 +33,7 @@ Input Parameters
    :header: "Parameter", "Type", "Description"
    :widths: 10, 10, 40
 
-   eleTag, integer, unique element object tag
+   eleTag, integer, unique :ref:`Element` tag
    iNode jNode kNode lNode, 4 integer, tags of element nodes defined in counterclockwise direction|
    m, integer, number of element fibers
    {Thicknesses}, *m* float, array of *m* fiber thicknesses

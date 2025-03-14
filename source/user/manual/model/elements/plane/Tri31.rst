@@ -7,7 +7,7 @@ Triangle
 .. py:method:: Model.element("Tri31", tag, nodes, section, [pressure, rho, b1, b2])
    :no-index:
 
-   :param tag: unique element object tag
+   :param tag: unique :ref:`Element` tag
    :param nodes: a list of three element nodes in counter-clockwise order
    :param section: tuple or int. If int, it is the tag of a previously defined :ref:`Section`. If tuple, it is a tuple of the form (``thick``, ``type``, ``material``) where 
      

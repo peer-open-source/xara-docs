@@ -6,10 +6,11 @@
 Modeling
 ^^^^^^^^
 
-A finite element model consists of **Nodes**, **Elements**, **Constraints**, and **Loads**. 
-Constraints are divided into two types: *single-point constraints* for specifying the boundary condition for a specific degree-of-freedom at a node and *multiple-point constraints* for specifying the relationship between the responses between the degrees-of-freedom at two separate nodes. 
-Loads in are assigned to **LoadPatterns**. 
-Also associated with load patterns are **TimeSeries** objects and sometimes constraints when specifying time-varying single-point constraints. 
+..
+  A finite element model consists of **Nodes**, **Elements**, **Constraints**, and **Loads**. 
+  Constraints are divided into two types: *single-point constraints* for specifying the boundary condition for a specific degree-of-freedom at a node and *multiple-point constraints* for specifying the relationship between the responses between the degrees-of-freedom at two separate nodes. 
+  Loads in are assigned to **LoadPatterns**. 
+  Also associated with load patterns are **TimeSeries** objects and sometimes constraints when specifying time-varying single-point constraints. 
 
 
 

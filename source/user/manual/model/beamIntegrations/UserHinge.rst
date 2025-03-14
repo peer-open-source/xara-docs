@@ -4,19 +4,19 @@
 ===========
 
 .. py:method:: Model.beamIntegration("UserHinge",tag,secETag,npL, secsLTags, locsL, wtsL,npR, secsRTags, locsR, wtsR)
-   :noindex:
+   :no-index:
 
    Create a UserHinge beamIntegration.
 
    ========================   ============================================================================
    ``tag`` |integer|              tag of the beam integration
-   ``secE`` |integer|             A previous-defined section tags for element interior
+   ``secE`` |integer|             A previouly-defined section tags for element interior
    ``npI`` |integer|              number of integration points along the hinge at end I
-   ``secsI`` |integerList|          A list of previous-defined section tags for hinge at end I
+   ``secsI`` |integerList|          A tuple of previously-defined section tags for hinge at end I
    ``locsI`` |floatList|          A list of locations of integration points for hinge at end I
    ``wtsI`` |floatList|           A list of weights of integration points for hinge at end I
    ``npJ`` |integer|              number of integration points along the hinge at end J
-   ``secsJ`` |integerList|          A list of previous-defined section tags for hinge at end J
+   ``secsJ`` |integerList|          A tuple of previously-defined section tags for hinge at end J
    ``locsJ`` |floatList|          A list of locations of integration points for hinge at end J
    ``wtsJ`` |floatList|           A list of weights of integration points for hinge at end J
    ========================   ============================================================================

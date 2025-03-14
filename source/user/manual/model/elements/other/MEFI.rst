@@ -24,7 +24,7 @@ This command is used to construct a MEFI element.
    :header: "Parameter", "Type", "Description"
    :widths: 10, 10, 40
 
-   $eleTag, integer, unique element object tag
+   $eleTag, integer, unique :ref:`Element` tag
    $iNode $jNode $kNode $lNode, 4 integer, tags of element nodes defined in counterclockwise direction
    $numFib, integer, number of element macro-fibers
    $widths, list float, a list of *numFib* macro-fiber widths

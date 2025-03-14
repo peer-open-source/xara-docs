@@ -10,7 +10,7 @@ This command is used to construct a zero length element object, which is defined
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $tag, |integer|, unique element object tag
+   $tag, |integer|, unique :ref:`Element` tag
    $endNodes, |integerList|, 2 end nodes
    $secTag, |integer|, tag associated with previously-defined Section object
    $x, |floatList|,  (optional) 3 components in global coordinates defining local x-axis 

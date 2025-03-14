@@ -3,12 +3,12 @@
  LowOrder
 ==========
 
-.. py:method:: Model.beamIntegration("LowOrder",tag, N, secTags, locs, wts)
-   :noindex:
+.. py:method:: Model.beamIntegration("LowOrder", tag, N, sections, locs, wts)
+   :no-index:
 
    :param |integer| tag: tag of the beam integration.
    :param |integer| N: number of integration points along the element.
-   :param |integerList| secTags: A list previous-defined :ref:`Sections <Section>`.
+   :param |integerList| sections: A tuple previously defined :ref:`Sections <Section>` tags.
    :param |floatTuple| locs: Locations of integration points along the element.
    :param |floatTuple| wts: weights of integration points.
 

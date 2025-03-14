@@ -20,7 +20,7 @@ The required arguments are:
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $eleTag, |integer|,	unique element object tag
+   $eleTag, |integer|,	unique :ref:`Element` tag
    $iNode  $jNode, |integer|,  end nodes
    $numIntgrPts, |integer|,     total number of integration points - recommended to exceed (1.5L ⁄ lc + 1) when default integration method is used (L = beam length and lc = characteristic length)
    $endSecTag1, |integer|,      near-end part’s section tag (Fig. 1)
@@ -64,7 +64,7 @@ The required arguments are:
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $eleTag, |integer|,	unique element object tag
+   $eleTag, |integer|,	unique :ref:`Element` tag
    $iNode  $jNode, |integer|,  end nodes
    $transfTag, |integer|,    identifier for previously-defined coordinate-transformation (CrdTransf) object
    $integrTag, |integer|,    identifier for previously-defined beam integration object

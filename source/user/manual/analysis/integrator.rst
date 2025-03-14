@@ -18,6 +18,11 @@ More specifically, the integrator performs the following:
 
       .. py:method:: Model.integrator(type, *args)
 
+         Set the integrator type to be used by the :class:`Model`.
+
+         :param string type: The integrator type.
+         :param args: A list of arguments for that type.
+
    .. tab:: tcl
 
       .. code-block:: tcl

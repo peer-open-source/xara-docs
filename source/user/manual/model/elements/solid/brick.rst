@@ -27,7 +27,7 @@ This command is used to construct an eight-node brick, which uses the standard i
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
 
-         $tag, |integer|,	unique element object tag
+         $tag, |integer|,	unique :ref:`Element` tag
          $nodes, 8 |integer|, nodes of brick (ordered as shown in fig below)
          $matTag, |integer|, tag of nDMaterial
          $b1 $b2 $b3, |listFloat|, optional: body forces in global x y z directions

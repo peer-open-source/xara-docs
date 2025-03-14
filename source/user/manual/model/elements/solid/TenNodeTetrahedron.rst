@@ -26,7 +26,7 @@ This command is used to construct an ten-node tetrahedron, which uses the standa
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
 
-         $tag, |integer|,	unique element object tag
+         $tag, |integer|,	unique :ref:`Element` tag
          $node1 .. $node10, 10 |integer|, nodes of tet (ordered as shown in fig below)
          $matTag, |integer|, tag of nDMaterial
          $b1 $b2 $b3, |listFloat|, optional: body forces in global x y z directions

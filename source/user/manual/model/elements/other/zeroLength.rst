@@ -11,7 +11,7 @@ This command is used to construct a zeroLength element object, which is defined 
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $eleTag, |integer|, unique element object tag
+   $eleTag, |integer|, unique :ref:`Element` tag
    $endNodes, |integerList|, 2 end nodes
    $matTags, |integerList|, list of **n** material tags
    $dirIDs, |integerList|, "| list of **n** degree-of-freedom directions

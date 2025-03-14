@@ -3,7 +3,7 @@
 FourNodeTetrahedron
 ^^^^^^^^^^^^^^^^^^^
 
-This command is used to construct an four-node tetrahedron element object, which uses the standard isoparametric formulation.
+This command is used to construct an four-node tetrahedron, which uses the standard isoparametric formulation.
 
 .. function:: element FourNodeTetrahedron $tag $node1 $node2 $node3 $node4 $matTag <$b1 $b2 $b3> <doInitDisp?>
 
@@ -11,7 +11,7 @@ This command is used to construct an four-node tetrahedron element object, which
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $tag, |integer|,	unique element object tag
+   $tag, |integer|,	unique :ref:`Element` tag
    $node1 .. $node4, 4 |integer|, nodes of tet (ordered as shown in fig below)
    $matTag, |integer|, tag of nDMaterial
    $b1 $b2 $b3, |listFloat|, optional: body forces in global x y z directions

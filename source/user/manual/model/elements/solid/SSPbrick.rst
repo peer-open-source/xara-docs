@@ -11,7 +11,7 @@ This command is used to construct an eight-node SSP brick element. The SSPbrick 
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $eleTag, |integer|,	unique element object tag
+   $eleTag, |integer|,	unique :ref:`Element` tag
    $node1 .. $node8, 8 |integer|, nodes of brick (ordered as shown in fig below)
    $matTag, |integer|, tag of nDMaterial
    $b1 $b2 $b3, |listFloat|, optional: body forces in global x y z directions

@@ -11,7 +11,7 @@ This command is used to construct an four-node tetrahedron element object, which
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $eleTag, |integer|,	unique element object tag
+   $eleTag, |integer|,	unique :ref:`Element` tag
    $node1 .. $node4, 4 |integer|, nodes of tet (ordered as shown in fig below)
    $matTag, |integer|, tag of nDMaterial
    $b1 $b2 $b3, |listFloat|, optional: body forces in global x y z directions

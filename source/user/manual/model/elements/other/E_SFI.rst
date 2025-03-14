@@ -29,7 +29,7 @@ This command is used to construct an E-SFI element.
    :header: "Parameter", "Type", "Description"
    :widths: 10, 10, 40
 
-   $eleTag, integer, unique element object tag
+   $eleTag, integer, unique :ref:`Element` tag
    $iNode $jNode, 2 integer, tags of element nodes defined in upward direction
    $m, integer, number of element macro-fibers
    $c, float, location of center of rotation from the base (c = 0.4 - recommended)

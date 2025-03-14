@@ -32,7 +32,7 @@ This command is used to construct a four-node quadrilateral element, which uses 
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
 
-         $tag, |integer|,	unique element object tag
+         $tag, |integer|,	unique :ref:`Element` tag
          $iNode $jNode $kNode $lNode, |integer|,  "four nodes defining element boundaries, input in counter-clockwise order around the element."
          $thick, |float|, element thickness
          $matTag, |integer|, tag of nDMaterial

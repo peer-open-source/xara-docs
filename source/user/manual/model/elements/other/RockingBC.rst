@@ -20,7 +20,7 @@ Furthermore, the element is able to account for constraints along the length of 
    :header: "Argument", "Type", "Description"
    :widths: 5, 5, 40
    
-   $eleTag, |integer|, "unique element object tag"
+   $eleTag, |integer|, "unique :ref:`Element` tag"
    $iNode, |integer|, "the node of the element with conventional behavior, fixed with the other member"
    $jNode, |integer|, "the node of the element corresponding to the rocking end (Note that the dofs of this node correspond to the motion of the rocking base and not to the end of the rocking member)"
    $Nw, |integer|, "number of control points used for the discretization of the rocking interface"

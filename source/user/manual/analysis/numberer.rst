@@ -26,7 +26,7 @@ Although this has no effect on the solution, it can have a significant effect on
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
       
-         $numbererType, |string|,  the numberer type
+         $type, |string|,  the numberer type
          $args, |list|,   a sequence of arguments for that type
 
 The following numberers are available:

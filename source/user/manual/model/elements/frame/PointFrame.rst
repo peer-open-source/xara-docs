@@ -1,9 +1,8 @@
 ZeroLength Section Element
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This command is used to construct a zero length element object, which is defined by two nodes at the same location. 
+This command is used to construct a zero length element, which is defined by two nodes at the same location. 
 The nodes are connected by a single section object to represent the force-deformation relationship for the element.
-
 
 .. tabs::
    
@@ -29,7 +28,7 @@ The nodes are connected by a single section object to represent the force-deform
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
 
-         $tag, |integer|, unique element object tag
+         $tag, |integer|, unique :ref:`Element` tag
          $nodes, |integerList|, 2 end nodes
          $secTag, |integer|, tag associated with previously-defined Section object
          $x,  |floatList|,  (optional) 3 components in global coordinates defining local x-axis 
@@ -57,7 +56,7 @@ Recorders
 
 The valid queries to a zero-length element when creating an ElementRecorder object are 
 
-#. 'force,' 'deformation,' 'stiff,' and ``"section $secArg1 secArg2 ..."``.
+#. ``"force"``, ``"deformation"``, ``"stiff"``, and ``"section $args ..."``.
 
 
 Example
@@ -65,7 +64,7 @@ Example
 
 The following examples demonstrate the commands in a script to add three zeroLength elements to domain. The three to be added have element tags **1**, **2**, and **3**. Element **1** has nodes **2** and **3** as its end ndes, has two materials **5** and **6** acting in directions **1** and **2**. Element **2** has as its end nodes **4** and **5**, has only one material **1** acting in direction **1**, the element has a global orientation.
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: none
 

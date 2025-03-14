@@ -1,7 +1,7 @@
 .. _getCrdTransfTags:
 
-``getCrdTransfTags``
-********************
+getCrdTransfTags
+****************
 
 This command returns a list of all defined coordinate transformation object tags
 
@@ -21,11 +21,11 @@ The following example is used to set the variable **currentTime** to current sta
 
       model BasicBuilder -ndm 3 -ndf 6
       
-      geomTransf Linear 1        0                -1               0                -jntOffset 100              0                0                -0               -0               -0              
-      geomTransf Linear 2        0                -1               0                -jntOffset 0                0                0                -0               -0               -0              
-      geomTransf Linear 3        0                -1               0                -jntOffset 0                0                0                -0               -0               -0              
-      geomTransf Linear 4        0                -1               0                -jntOffset 0                0                0                -0               -0               -0              
-      geomTransf Linear 5        0                -1               0                -jntOffset 0                0                0                -0               -0               -0              
+      geomTransf Linear 1  0 -1 0    -jntOffset 100  0   0      0  0  0              
+      geomTransf Linear 2  0 -1 0    -jntOffset 0    0   0      0  0  0              
+      geomTransf Linear 3  0 -1 0    -jntOffset 0    0   0      0  0  0              
+      geomTransf Linear 4  0 -1 0    -jntOffset 0    0   0      0  0  0              
+      geomTransf Linear 5  0 -1 0    -jntOffset 0    0   0      0  0  0              
       
       set allCrdTransfTags [getCrdTransfTags]
       

@@ -12,9 +12,9 @@ This command configures a Section, which represents a constitutive model between
       .. py:method:: Model.section(type, tag, *args)
 
          :param type: section type
-         :type type: string
+         :type type: |string|
          :param tag: unique section tag
-         :type tag: integer
+         :type tag: |integer|
          :param args: additional arguments dependent on section ``type``
 
    .. tab:: Tcl

@@ -4,7 +4,6 @@
 analyze
 ^^^^^^^
 
-This command is used to perform the analysis. 
 It returns a value indicating success or failure of the analysis. 
 
 .. tabs::
@@ -12,6 +11,8 @@ It returns a value indicating success or failure of the analysis.
    .. tab:: Python
 
       .. py:method:: Model.analyze(n, **options)
+
+         Perform an analysis on the model. The analysis type is determined by the last call to :meth:`Model.analysis`.
 
          :param n: number of analysis steps to perform.
          :type n: |integer|
