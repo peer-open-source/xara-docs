@@ -3,7 +3,7 @@
 BasicQuad
 ^^^^^^^^^
 
-This command is used to construct a BasicQuad element which uses the standard Lagrange isoparametric formulation.
+A *BasicQuad* element uses the standard Lagrange isoparametric formulation.
 
 .. tabs::
 
@@ -11,6 +11,8 @@ This command is used to construct a BasicQuad element which uses the standard La
 
       .. py:method:: Model.element("Quad", tag, nodes, section, [pressure, rho, b1, b2])
          :no-index:
+
+         Construct a *BasicQuad* and add it to the :class:`Model`.
 
          :param tag: integer, unique :ref:`Element` tag
          :param nodes: tuple, a tuple of four element nodes in counter-clockwise order
@@ -63,18 +65,20 @@ Example
 
 The following example constructs a quad element for use in a plane stress problem with tag **1** between nodes **1, 2, 3, 4** with an nDMaterial of tag **1**.
 
-1. **Tcl Code**
+.. tabs::
 
-   .. code-block:: tcl
+   .. tab:: Python
 
-      element quad 1 1 2 3 4 "PlaneStress" 1 
+      .. code-block:: Python
 
-2. **Python Code**
+         model.element("quad", 1, (1,2,3,4), (1.0, "PlaneStress", 1), (b1, b2, b3))
 
-   .. code-block:: python
+   .. tab:: Tcl
 
-      model.element("quad", 1, (1,2,3,4), (1.0, "PlaneStress", 1), (b1, b2, b3))
+      .. code-block:: tcl
+
+         element quad 1 1 2 3 4 "PlaneStress" 1 
 
 
-Code Developed by: |mhs|
+Code Developed by: |mhs|, |cmp|
 
