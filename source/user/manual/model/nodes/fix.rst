@@ -1,7 +1,7 @@
 .. _fix:
 
-fix Command
-^^^^^^^^^^^
+fix
+^^^
 
 This command is used to construct a number of single-point homogeneous boundary constraints.
 
