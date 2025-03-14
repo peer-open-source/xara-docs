@@ -78,6 +78,7 @@ extensions = [
 #   'sphinx_rtd_theme',
     'sphinx_copybutton',
     'sphinx_tabs.tabs',
+    "sphinx.ext.autosummary",
     'sphinxcontrib.bibtex',
     'sphinx_sitemap'
 ]

@@ -1,11 +1,20 @@
 # User-agent: SiteAuditBot
 # Allow: /
 # 
-# User-agent: *
-# Allow: /user/manual/model/elements/ExactFrame.html
-# Allow: /user/manual/model/element.html
-# Allow: /user/manual/model/model_class.html
-# Disallow: /
 User-agent: *
-Allow: /
+Allow: /$
+Allow: /genindex.html
+Allow: /launch.html
+Allow: /user/manual/modeling.html
+Allow: /user/manual/model/model_class.html
+Allow: /user/manual/model/element.html
+Allow: /user/manual/model/elements/frame/ExactFrame.html
+Allow: /user/manual/model/geomTransf/Corotational.html
+Allow: /user/manual/output/print.html
+Allow: /user/manual/output/printA.html
+Allow: /user/manual/output/nodeRotation.html
+Allow: /user/manual/meshing/index.html
+Allow: /user/manual/analysis/index.html
+Allow: /user/manual/analysis/integrator.html
+Disallow: /
 
