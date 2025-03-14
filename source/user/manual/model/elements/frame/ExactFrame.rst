@@ -53,7 +53,7 @@ The implementation closely follows the treatment by Perez and Filippou (2024) [3
 
 
 
-The valid :ref:`eleResponse` queries to this element are ``'force'``.
+The valid :ref:`eleResponse` queries to this element are ``"force"``.
 
 Geometrically exact elements often exhibit undesirable features. These are rectified
 as follows:

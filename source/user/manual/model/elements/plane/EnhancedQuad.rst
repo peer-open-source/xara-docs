@@ -15,7 +15,7 @@ EnhancedQuad
            
              ===================================   ==============================================================================================================
              ``thick`` |float|                     element thickness
-             ``type`` |str|                        string representing material behavior. The type parameter can be either ``'PlaneStrain'`` or ``'PlaneStress'``
+             ``type`` |str|                        string representing material behavior. The type parameter can be either ``"PlaneStrain"`` or ``"PlaneStress"``
              ``material`` |integer|                tag of an :ref:`nDMaterial`
              ===================================   ==============================================================================================================
            

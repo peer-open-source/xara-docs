@@ -3,7 +3,7 @@
 PDelta
 ^^^^^^
 
-This command is used to construct the P-Delta coordinate transformation, which performs a linear geometric transformation of beam stiffness and resisting force from the basic system to the global coordinate system, considering second-order :math:`P-\Delta` effects.
+This command is used to construct the *PDelta* coordinate transformation, which performs a geometric transformation of a :ref:`Frame <Frame>` element's response considering second-order :math:`P-\Delta` effects.
 
 .. tabs::
 
@@ -45,4 +45,4 @@ This command is used to construct the P-Delta coordinate transformation, which p
 The element coordinate system and joint offset values are specified as in the :ref:`linearTR`.
 
 
-Code Developed by: Remo Magalhaes de Souza, University of California, Berkeley
+Code Developed by: |rms|

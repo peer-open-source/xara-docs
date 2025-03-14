@@ -19,7 +19,7 @@ This command is used to construct a four-node quadrilateral element, which uses 
            
              ===================================   ==============================================================================================================
              ``thick`` |float|                     element thickness
-             ``type`` |str|                        string representing material behavior. The type parameter can be either ``'PlaneStrain'`` or ``'PlaneStress'``
+             ``type`` |str|                        string representing material behavior. The type parameter can be either ``"PlaneStrain"`` or ``"PlaneStress"``
              ``material`` |integer|                tag of an :ref:`nDMaterial`
              ===================================   ==============================================================================================================
    
@@ -52,9 +52,9 @@ This command is used to construct a four-node quadrilateral element, which uses 
 
 The valid :ref:`eleResponse` queries to this element are 
 
-* ``'forces'``, 
-* ``'stresses'`` and 
-* ``'material $matNum matArg1 matArg2 ...'`` Where $matNum refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
+* ``"forces"``, 
+* ``"stresses"`` and 
+* ``"material $matNum matArg1 matArg2 ..."`` Where $matNum refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
 
 Theory 
 ------

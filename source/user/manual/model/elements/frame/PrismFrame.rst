@@ -37,7 +37,7 @@ The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
          ``tran``, |integer|,      identifier for previously-defined coordinate-transformation
 
 
-The valid :ref:`eleResponse` queries to this element are ``'force'``.
+The valid :ref:`eleResponse` queries to this element are ``"force"``.
 
 
 Example 

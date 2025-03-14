@@ -41,6 +41,7 @@ The corotational coordinate transformation performs a geometric transformation o
 	
 	The element coordinate system and joint offset values are specified as in the :ref:`linearTR`.
 
+
 References
 ----------
 

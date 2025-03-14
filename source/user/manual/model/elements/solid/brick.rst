@@ -51,10 +51,10 @@ Recorders
 
 The valid queries to a Brick element when creating an ElementRecorder are 
 
-#. ``'forces'``, 
-#. ``'stresses,'``,
-#. ``'strains'`` and 
-#. ``'material $mat args...'`` Where ``$mat`` refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
+#. ``"forces"``, 
+#. ``"stresses,"``,
+#. ``"strains"`` and 
+#. ``"material $mat args..."`` Where ``$mat`` refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
 
 
 Example

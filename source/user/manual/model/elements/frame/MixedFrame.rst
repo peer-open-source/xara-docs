@@ -24,7 +24,7 @@ Mixed finite element formulation for 3D frame elements. [1]_ [2]_.
 
 This formulation supports higher order strain measures and shear deformations.
 
-The valid :ref:`eleResponse` queries to this element are ``'force'``.
+The valid :ref:`eleResponse` queries to this element are ``"force"``.
 
 References
 ----------

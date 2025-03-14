@@ -31,7 +31,7 @@ The formulation for this element is identical to the solid phase portion of the 
 	SSPquad element node numbering
 
 
-Valid :ref:`eleResponse` queries to the SSPquad element correspond to those for the nDMaterial object assigned to the element (e.g., ``'stress'``, ``'strain'``). 
+Valid :ref:`eleResponse` queries to the SSPquad element correspond to those for the nDMaterial object assigned to the element (e.g., ``"stress"``, ``"strain"``). 
 Material response is recorded at the single integration point located in the center of the element.
 
 The SSPquad element was designed with intentions of duplicating the functionality of the Quad Element. 

@@ -5,9 +5,11 @@ Transient
 
 In a nonlinear transient finite element analysis we seek a solution
 (:math:`\boldsymbol{u}`, :math:`\dot{\boldsymbol{u}}`,
-:math:`\ddot{\boldsymbol{u}}`) to the nonlinear vector equation
+:math:`\ddot{\boldsymbol{u}}`) to the nonlinear residual equation
 
-.. math:: \boldsymbol{R}({\boldsymbol{u}},\dot{\boldsymbol{u}}, \ddot{\boldsymbol{u}}) = \boldsymbol{p}_f(t) - \boldsymbol{p}_{\mathrm{i}}(\ddot{\boldsymbol{u}}) - \boldsymbol{p}_{\sigma}({\boldsymbol{u}}, \dot{\boldsymbol{u}}) = \boldsymbol{0}
+.. math:: 
+   
+   \boldsymbol{r}({\boldsymbol{u}},\dot{\boldsymbol{u}}, \ddot{\boldsymbol{u}}) = \boldsymbol{p}_f(t) - \boldsymbol{p}_{\mathrm{i}}(\ddot{\boldsymbol{u}}) - \boldsymbol{p}_{\sigma}({\boldsymbol{u}}, \dot{\boldsymbol{u}}) = \boldsymbol{0}
 
 The most widely used technique for solving the transient non-linear
 finite element equation is to use an incremental direct integration scheme. 
@@ -16,7 +18,7 @@ steps :math:`\Delta t` apart.
 
 .. math::
 
-   \boldsymbol{R}({\boldsymbol{u}}_{n \Delta t},\dot{\boldsymbol{u}}_{n \Delta t}, \ddot{\boldsymbol{u}}_{n \Delta t}) = \boldsymbol{p}_f(n \Delta t) -
+   \boldsymbol{r}({\boldsymbol{u}}_{n \Delta t},\dot{\boldsymbol{u}}_{n \Delta t}, \ddot{\boldsymbol{u}}_{n \Delta t}) = \boldsymbol{p}_f(n \Delta t) -
    \boldsymbol{p}_{\mathrm{i}}(\ddot{\boldsymbol{u}}_{n \Delta t}) - \boldsymbol{p}_{\sigma}({\boldsymbol{u}}_{n \Delta t}, \dot{\boldsymbol{u}}_{n \Delta t})
 
 

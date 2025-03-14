@@ -3,17 +3,27 @@
 Beam integration
 ****************
 
-This command is used to construct a beam integration for :ref:`Frame` elements. 
+This command is used to construct a beam integration for :ref:`Frame <Frame>` elements. 
 
-.. function:: beamIntegration $integtaionType $tag $arg1 ...
+.. tabs::
 
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+   .. tab:: Python
+      .. py:method:: Model.beamIntegration(name, tag, *args)
+         :no-index:
 
-   $integrationType, |string|, integration type
-   $tag,  |integer|, unique beam integration tag.
-   $args, |list|,  a list of arguments with number dependent on integration type
+         Construct a beam integration for :ref:`Frame <Frame>` elements.
+
+   .. tab:: Tcl
+      .. function:: beamIntegration $name $tag $args ...
+
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
+
+         $name, |string|, integration type
+         $tag,  |integer|, unique beam integration tag.
+         $args, |list|,  a list of arguments with number dependent on integration type
+
 
 The following types are available:
 

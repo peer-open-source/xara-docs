@@ -3,15 +3,15 @@
 Newton
 ^^^^^^
 
-This method is used to define a Newton-Raphson algorithm to solve the nonlinear residual equation. 
 The Newton-Raphson method is the most widely used and most robust method for solving nonlinear algebraic equations. 
-The command is of the following form:
 
 .. tabs::
    .. tab:: Python
 
       .. py:method:: Model.algorithm("Newton" [, initial=False, initialThenCurrent=False])
          :no-index: 
+
+         Configure a Newton-Raphson algorithm to solve the current residual equation.
 
          :param initial: optional flag to indicate to use initial stiffness
          :param initialThenCurrent: optional flag to indicate to use initial stiffness on first step and then current on subsequent steps

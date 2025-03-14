@@ -1,13 +1,14 @@
 SparseSYM
 ^^^^^^^^^
 
-This command is used to construct a sparse symmetric system of equations which uses a row-oriented solution method in the solution phase. 
+This command is used to construct a sparse symmetric system of equations which uses a row-oriented solution method. 
 
 .. function:: system SparseSYM
 
 .. note:: 
 
    This solver works for negative definite system as well as positive definite.
+
 
 Example 
 -------

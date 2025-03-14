@@ -17,17 +17,17 @@ Example
 
 The following example shows how to construct a FullGeneral system
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: tcl
 
       system FullGeneral
 
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 
-      system('FullGeneral')
+      model.system('FullGeneral')
 
 Code Developed by: |fmk|

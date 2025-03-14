@@ -208,6 +208,7 @@ References
 
 .. [1] Clarke, M.J. and Hancock, G.J. (1990) ‘A study of incremental‐iterative strategies for non‐linear analyses’, International Journal for Numerical Methods in Engineering, 29(7), pp. 1365–1391. Available at: https://doi.org/10.1002/nme.1620290702 .
 .. [2] Riks E, 'An incremental approach to the solution of snapping and buckling problems', Int. J. Solids Struct. (1979)
-.. [3] Wempner, GA (1971) 'Discrete approximations related to nonlinear theories of solids'
-.. [4] Crisfield, MA (1981) 'A fast incremental/iterative solution procedure that handles "snap-through"'
-.. [5] Ramm E 'Strategies for tracing nonlinear response near limit points'
+
+* Wempner, GA (1971) 'Discrete approximations related to nonlinear theories of solids'
+* Crisfield, MA (1981) 'A fast incremental/iterative solution procedure that handles "snap-through"'
+* Ramm E 'Strategies for tracing nonlinear response near limit points'

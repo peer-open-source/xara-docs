@@ -32,11 +32,11 @@ This command is used to configure an NDMaterial which represents the stress-stra
 
 .. note::
 
-   The valid queries to any material when creating an ElementRecorder are ``'strain'``, and ``'stress'``. 
-   Some materials have additional queries to which they will respond. These are documented in the NOTES section for those materials.
+   All materials will respond to ``"strain"``, and ``"stress"`` through :ref:`eleResponse`. 
+   Some materials have additional queries to which they will respond. These are documented in the *notes* section for those materials.
 
 
-The following contain information about ``type`` and the ``args`` required for each of the available material types:
+The following materials are available:
 
 .. toctree::
    :maxdepth: 1

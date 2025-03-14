@@ -18,7 +18,7 @@ This command is used to construct a BasicQuad element object which uses the stan
            
              ===================================   ==============================================================================================================
              ``thick`` |float|                     element thickness
-             ``type`` |str|                        string representing material behavior. The type parameter can be either ``'PlaneStrain'`` or ``'PlaneStress'``
+             ``type`` |str|                        string representing material behavior. The type parameter can be either ``"PlaneStrain"`` or ``"PlaneStress"``
              ``material`` |integer|                tag of an :ref:`nDMaterial`
              ===================================   ==============================================================================================================
            
@@ -47,7 +47,7 @@ This command is used to construct a BasicQuad element object which uses the stan
 
 
 
-The valid :ref:`eleResponse` queries to this element are ``'forces'``, ``'stresses'``, and ``'material $matNum matArg1 matArg2 ...'`` where ``$matNum`` refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
+The valid :ref:`eleResponse` queries to this element are ``"forces"``, ``"stresses"``, and ``"material $matNum matArg1 matArg2 ..."`` where ``$matNum`` refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
 
 Consistent nodal loads are computed from the pressure and body forces.
 

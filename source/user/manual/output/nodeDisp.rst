@@ -1,9 +1,8 @@
 .. _nodeDisp:
 
-``nodeDisp``
-************
+nodeDisp
+********
 
-This command returns the current displacement at a specified node.
 
 .. tabs::
 
@@ -11,17 +10,23 @@ This command returns the current displacement at a specified node.
 
       .. py:method:: Model.nodeDisp(tag, dof=None)
 
+         Return the displacement at a specified node.
+
+         :param |integer| tag: The tag of the :ref:`node` whose displacements are sought.
+         :param |integer| dof: Optional: specific degree of freedom at the node (1 through ``ndf``).
+         :returns: A |list| of the displacement components at the node when ``dof=None``, otherwise a |float|.
+
    .. tab:: Tcl
 
       .. function:: nodeDisp $tag <$dof>
 
 
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
 
-   tag, |integer|, tag identifying node whose displacements are sought
-   dof, |integer|, optional: specific dof at the node (1 through ndf)
+         tag, |integer|, tag identifying node whose displacements are sought
+         dof, |integer|, optional: specific dof at the node (1 through ndf)
 
 
 
@@ -33,17 +38,17 @@ Example
 
 The following example is used to set the variable ``disp1`` to the nodal displacement at node given by the variable **tag** in the **1** degree-of-freedom direction.
 
-1. **Tcl Code** (note use of **set** and **[ ]**)
+1. **Tcl Code**
 
-.. code-block:: tcl
+   .. code-block:: tcl
 
-   set disp1 [nodeDisp $tag 1]
+      set disp1 [nodeDisp $tag 1]
 
 2. **Python Code**
 
-.. code-block:: python
+   .. code-block:: python
 
-   u1 = model.nodeDisp(tag,1)
+      u1 = model.nodeDisp(tag,1)
 
 
 Code developed by: |fmk|

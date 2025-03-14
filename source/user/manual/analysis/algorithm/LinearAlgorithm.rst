@@ -32,18 +32,18 @@ This command is used to set a Linear algorithm which takes one iteration to solv
 
 .. note:: 
    
-   As the tangent matrix typically will not change during the analysis in case of an elastic system it is highly advantageous to use the ``factorOnce`` option. 
+   In the case of an elastic system, the tangent matrix will not change during the analysis, and it is highly advantageous to use the ``factorOnce`` option. 
    Do not use this option if you have a nonlinear system and you want the tangent used to be actual tangent at time of the analysis step.
 
-   The Linear algorithm requires no :ref:`test` and will complain if one is provided. This means that convergence is not checked.
+   The Linear algorithm requires no :ref:`test` and will issue a warning if one is provided. This means that convergence is *not* checked.
 
-   Certain transient explicit :ref:`integrators <integrator>` require a Linear algorithm.
+   Certain transient explicit :ref:`integrators <integrator>` require a *Linear* algorithm.
 
 
 Example
 -------
 
-The following examples demonstrate the command to create a Linear solution algorithm.
+The following examples demonstrate the command to create a *Linear* solution algorithm.
 
 .. tabs::
 

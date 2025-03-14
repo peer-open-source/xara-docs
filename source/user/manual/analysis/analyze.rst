@@ -23,27 +23,24 @@ It returns a value indicating success or failure of the analysis.
          :type dtMax: |float|
          :param Jd: number of iterations user would like performed at each step. The variable transient analysis will change current time step if last analysis step took more or less iterations than this to converge. Required if a variable time step transient analysis was specified.
          :type Jd: |integer|
+         :returns: An integer value indicating the success or failure of the analysis:
+         
+            * ``0`` if successful
+            * ``< 0`` if not successful
 
    .. tab:: Tcl
 
       .. function:: analyze $n <$dt> <$dtMin $dtMax $Jd>
 
 
-.. csv-table::
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+      .. csv-table::
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
 
-   ``n``, |integer|,	number of analysis steps to perform.
-   ``dt``, |float|, time-step increment. Required if transient or variable transient analysis
-   ``dtMin`` ``dtMax``, |float|, minimum and maximum time steps. Required if a variable time step transient analysis was specified.
-   ``Jd``, |integer|, number of iterations user would like performed at each step. The variable transient analysis will change current time step if last analysis step took more or less iterations than this to converge. Required if a variable time step transient analysis was specified.
-
-
-The function returns an integer value indicating the success or failure of the analysis:
-
-* ``0`` if successful
-
-* ``< 0`` if not successful
+         ``n``, |integer|,	number of analysis steps to perform.
+         ``dt``, |float|, time-step increment. Required if transient or variable transient analysis
+         ``dtMin`` ``dtMax``, |float|, minimum and maximum time steps. Required if a variable time step transient analysis was specified.
+         ``Jd``, |integer|, number of iterations user would like performed at each step. The variable transient analysis will change current time step if last analysis step took more or less iterations than this to converge. Required if a variable time step transient analysis was specified.
 
 
 Examples

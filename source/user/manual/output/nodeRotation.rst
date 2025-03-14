@@ -38,3 +38,9 @@ frame elements, as demonstrated with `this <https://gallery.stairlab.io/examples
 
 
 
+References 
+----------
+
+* Perez, C.M. and Filippou, F.C. (2024) ‘On nonlinear geometric transformations of finite elements’, International Journal for Numerical Methods in Engineering, p. e7506. Available at: https://doi.org/10.1002/nme.7506.
+
+Code Developed by: |cmp|

@@ -1,18 +1,33 @@
 .. _nodeAccel:
 
-``nodeAccel``
-*************
+nodeAccel
+*********
 
 This command returns the current acceleration at a specified node.
 
-.. function:: nodeAccel $nodeTag <$dof>
 
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+.. tabs::
 
-   $nodeTag, |integer|, tag identifying node whose accelerations are sought
-   $dof, |integer|, optional: specific dof at the node (1 through ndf)
+   .. tab:: Python
+
+      .. py:method:: Model.nodeAccel(tag, dof=None)
+
+         Return the acceleration at a specified node.
+
+         :param |integer| tag: The tag of the :ref:`node` whose accelerations are sought.
+         :param |integer| dof: Optional: specific degree of freedom at the node (1 through ``ndf``).
+         :returns: A |list| of the acceleration components at the node when ``dof=None``, otherwise a |float|.
+
+   .. tab:: Tcl
+
+      .. function:: nodeAccel $tag <$dof>
+
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
+
+         $tag, |integer|, tag identifying node whose accelerations are sought
+         $dof, |integer|, optional: specific dof at the node (1 through ndf)
 
 .. note::
 
@@ -22,7 +37,7 @@ This command returns the current acceleration at a specified node.
 
    The following example is used to set the array/list **accel1** equal to the nodal accelerations at the node given by the variable **nodeTag**.
 
-   1. **Tcl Code** (note use of **set** and **[ ]**)
+   1. **Tcl Code**
 
    .. code-block:: tcl
 

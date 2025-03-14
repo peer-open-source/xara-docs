@@ -1,4 +1,4 @@
-Alternative Min Degree
+AMD
 ^^^^^^^^^^^^^^^^^^^^^^
 
 An *AMD* numberer uses the *approximate minimum degree* [1]_ scheme to order the matrix equations. 

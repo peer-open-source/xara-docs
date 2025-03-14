@@ -3,8 +3,8 @@
 numberer
 ^^^^^^^^
 
-This command configures a **DOF_Numberer**. 
-This determines the mapping between equation numbers in the system of equations and the degrees-of-freedom at the nodes, basically how degrees-of-freedom are numbered.
+The *numberer* determines the mapping between equation numbers in the system of equations and the degrees-of-freedom at the nodes.
+Although this has no effect on the solution, it can have a significant effect on the efficiency of the solution process.
 
 
 .. tabs::
@@ -12,10 +12,15 @@ This determines the mapping between equation numbers in the system of equations 
    .. tab:: Python
       
       .. py:method:: Model.numberer(type, *args)
+
+         Set the numberer type to be used by the :class:`Model`.
+
+         :param string type: The numberer type.
+         :param args: A sequence of arguments for that type.
    
    .. tab:: Tcl
 
-      .. function:: numberer type arg1? ...
+      .. function:: numberer type? args? ...
 
       .. csv-table:: 
          :header: "Argument", "Type", "Description"
@@ -24,14 +29,13 @@ This determines the mapping between equation numbers in the system of equations 
          $numbererType, |string|,  the numberer type
          $args, |list|,   a sequence of arguments for that type
 
-
-The following contain information about ``type`` and the args required for each of the available numberers:
+The following numberers are available:
 
 .. toctree::
    :maxdepth: 1
 
-   numberer/PlainNumberer
-   numberer/RCM
-   numberer/AMD
+   Plain <numberer/PlainNumberer>
+   RCM (Reverse Cuthill McKee) <numberer/RCM>
+   AMD (Alternative Min Degree) <numberer/AMD>
 
 Code developed by: |fmk|

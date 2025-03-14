@@ -29,7 +29,7 @@ This is the simplest possible continuum finite element for 3-D analysis. It's ba
 
 .. note::
 
-   The valid :ref:`eleResponse` queries to a `FourNodeTetrahedron` element are ``'forces'``, ``'stresses'``, ``'strains'``, and ``'material $matNum matArg1 matArg2 ...'`` Where $matNum refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
+   The valid :ref:`eleResponse` queries to a `FourNodeTetrahedron` element are ``"forces"``, ``"stresses"``, ``"strains"``, and ``"material $matNum matArg1 matArg2 ..."`` Where $matNum refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
 
    This element can only be defined in a :class:`Model` with ``ndm=3`` and ``ndf=3``
 

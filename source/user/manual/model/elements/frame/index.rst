@@ -1,7 +1,7 @@
 .. _Frame:
 
-Frames
-======
+Frame
+^^^^^
 
 
 Frame elements are used to model slender structural members like beams and columns.
@@ -9,6 +9,8 @@ All frame elements are constructed with the form
 
 .. py:method:: Model.element(name, tag, nodes, section, transform)
    :noindex:
+
+   Add a frame element to the model.
 
 
 Available frame elements include

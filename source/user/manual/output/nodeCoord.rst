@@ -1,34 +1,45 @@
 .. _nodeCoord:
 
-``nodeCoord``
-*************
+nodeCoord
+*********
 
-This command returns the current coordinate at a specified node.
+.. tabs::
 
-.. function:: nodeCoord $nodeTag <$dim>
+   .. tab:: Python
 
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+      .. py:method:: Model.nodeCoord(tag [, dim])
 
-   $nodeTag, |integer|, tag identifying node whose velocities are sought
-   $dim, |integer|, optional: specific crd dimension at the node (1 through ndm)
+         Return the coordinate at a specified node.
 
-.. note::
+         :param |integer| tag: The tag of the :ref:`node` whose coordinates are sought.
+         :param |integer| dim: Optional: specific coordinate dimension at the node (1 through ``ndm``).
+         :returns: A |list| of the coordinate components at the node.
 
-   If optional $ddim is not provided, an array containing all coordinate components is returned.
+   .. tab:: Tcl
 
-.. admonition:: Example:
+      .. function:: nodeCoord $tag <$dim>
 
-   The following example is used to set the variable **crdNode** to the nodal coordinates for the node given by the variable **nodeTag**.
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
 
-   1. **Tcl Code** (note use of **set** and **[ ]**)
+         $tag, |integer|, tag identifying node whose velocities are sought
+         $dim, |integer|, optional: specific crd dimension at the node (1 through ndm)
+
+If optional ``dim`` is not provided, an array containing all coordinate components is returned.
+
+Example
+-------
+
+The following example is used to set the variable **crdNode** to the nodal coordinates for the node given by the variable **nodeTag**.
+
+1. **Tcl Code**
 
    .. code-block:: tcl
 
       set crdNode [nodeCoord $nodeTag]
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 

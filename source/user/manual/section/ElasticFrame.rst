@@ -33,5 +33,5 @@ The **ElasticFrame** section implements a general linear elastic frame section.
 
 The valid :ref:`eleResponse` queries are 
 
-* ``'force'``, and 
-* ``'deformation'``. 
+* ``"force"``, and 
+* ``"deformation"``. 

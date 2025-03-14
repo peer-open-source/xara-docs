@@ -11,7 +11,7 @@ This command returns the current time in the **Domain**.
 
    The following example is used to set the variable **currentTime** to current state of **time** in the **Domain**
 
-   1. **Tcl Code** (note use of **set** and **[ ]**)
+   1. **Tcl Code**
 
    .. code-block:: tcl
 

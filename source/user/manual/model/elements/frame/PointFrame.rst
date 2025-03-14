@@ -57,7 +57,7 @@ Recorders
 
 The valid queries to a zero-length element when creating an ElementRecorder object are 
 
-#. 'force,' 'deformation,' 'stiff,' and ``'section $secArg1 secArg2 ...'``.
+#. 'force,' 'deformation,' 'stiff,' and ``"section $secArg1 secArg2 ..."``.
 
 
 Example
