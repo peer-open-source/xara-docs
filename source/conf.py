@@ -216,7 +216,7 @@ html_context = {
     "root_doc": root_doc,
     "description": description,
     "github_user": "STAIRLab",
-    "github_repo": "xara",
+    "github_repo": "OpenSeesRT",
 #   "github_version": "<your-branch>",
 #   "doc_path": "<path-from-root-to-your-docs>",
 
