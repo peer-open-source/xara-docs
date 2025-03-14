@@ -3,7 +3,8 @@
 Node
 ****
 
-This method is used to construct a ``Node`` which stores information about coordinates and mass at a single point. The assignment of mass is optional.
+This method is used to construct a ``Node`` which stores information about coordinates and mass at a single point. 
+The assignment of mass is optional.
 
 .. tabs::
 
@@ -15,7 +16,6 @@ This method is used to construct a ``Node`` which stores information about coord
          :param coords: tuple of :py:attr:`Model.ndm` |float| coordinates
          :param mass: tuple of :py:attr:`Model.ndf` nodal mass values
 
-         :return: None
 
    .. tab:: Tcl 
 
@@ -33,7 +33,10 @@ This method is used to construct a ``Node`` which stores information about coord
 Example
 -------
 
-The following examples demonstrate the commands in a script to add two nodes to domain in which the last model command specified an ``ndm`` of ``2`` and a ``ndf`` of 3. The two nodes to be added have node tags ``3`` and ``4``. Node ``3`` is located at coordinates (168.0, 144.0) and node ``4`` at location ``(168.0,144.0)``. Node ``4`` is assigned a mass of ``(10.0, 10.0, 0.)``.
+The following example adds two nodes to a :class:`Model` with an ``ndm`` of ``2`` and a ``ndf`` of 3. 
+The two nodes to be added have node tags ``3`` and ``4``. 
+Node ``3`` is located at coordinates (168.0, 144.0) and node ``4`` at location ``(168.0,144.0)``. 
+Node ``4`` is assigned a mass of ``(10.0, 10.0, 0.)``.
 
 
 .. tabs::

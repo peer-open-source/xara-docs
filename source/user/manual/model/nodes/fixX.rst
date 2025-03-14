@@ -3,7 +3,7 @@
 fixX
 ^^^^
 
-This command is used to construct multiple homogeneous single-point boundary constraints for all nodes whose x-coordinate lies within a specified distance from a specified coordinate.
+This command is used to construct multiple homogeneous single-point boundary constraints for all nodes whose :math:`x`-coordinate lies within a specified distance from a specified coordinate.
 
 .. function:: fixX $x (ndf $ConstrValues) <-tol $tol>
 
@@ -22,7 +22,7 @@ This command is used to construct multiple homogeneous single-point boundary con
 Example
 -------
 
-The following example demonstrate the command to fix the first 3 degrees-of-freedom at all nodes in the model at x location **0.0**.
+The following example demonstrate the command to fix the first 3 degrees-of-freedom at all nodes in the model at :math:`x=0`.
 
 .. tabs::
 
