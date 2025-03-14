@@ -12,7 +12,7 @@ project = "xara"
 copyright = 'Berkeley, CA'
 description = "Finite element analysis"
 author = "PEER"
-html_logo = "_static/images/xara.png"
+#html_logo = "_static/images/xara.png"
 html_title = "xara: Nonlinear fintie element analysis" # "xara: An OpenSees application"
 html_short_title = "xara"
 
@@ -198,10 +198,11 @@ else:
     #   "body_max_width": None,
         "show_prev_next": False,
         "logo": {
-          "image_light": html_logo,
-          "image_dark": "_static/logo-dark.png",
+#         "image_light": html_logo,
+#         "image_dark": "_static/logo-dark.png",
           "link": html_baseurl, # "index.html",
-          "alt_text": "xara docs - Home",
+          "text": '<span class="lead display-3">xara</span>',
+#         "alt_text": "xara docs - Home",
         }
     }
 if "book" in html_theme:

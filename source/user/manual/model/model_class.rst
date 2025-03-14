@@ -24,43 +24,41 @@ exposed as methods.
 .. note:: 
 
    The ``Model`` class is currently only available in the experimental 
-   `opensees <http://pypi.org/project/opensees>`_ Python package, but may
-   eventually be added to ``openseespy``.
-   To install ``opensees``, just run:
+   `xara <http://pypi.org/project/xara>`_ Python package.
+   To install ``xara``, just run:
 
    .. code-block:: bash
 
-      pip install opensees
-   
+      pip install xara
+
+..
    This experimental package exposes an identical interface to ``openseespy``, but must
    be imported as ``opensees.openseespy`` as opposed to ``openseespy.opensees``. 
    For more information, visit `GitHub <https://github.com/STAIRLab/OpenSeesRT>`_.
 
 
 The ``Model`` class prevents inadvertent corruption of global state that may be caused when using
-the ``model`` command of OpenSeesPy.
+the ``model`` command that was implemented by older finite element interpreters.
 Each instance of a ``Model`` owns a unique instance of an interpreter which can only be manipulated
-through the instance itself. This interpreter can be be used from
-Python to invoke either Tcl or Python commands to create Nodes, Masses, Materials, Sections, Elements, LoadPatterns, TimeSeries, Transformations, Blocks and Constraints. 
+through the instance itself. 
+This interpreter can be be used from Python to invoke either Tcl or Python commands. 
 These additional commands are described in the subsequent sections.
 
 
 Example
-=======
+-------
 
 The following examples demonstrate the creation of a ``Basic`` model builder that will 
-create nodes with an ``ndm`` of ``2`` and with ``3`` degrees-of-freedom at each node.
+create nodes with in 2D space (``ndm`` of ``2``) and with ``ndf=3`` degrees-of-freedom at each node.
 
 
-.. code-block:: python
+.. code-block:: Python
 
-   import opensees.openseespy as ops
-   model = ops.Model(ndm=2, ndf=3)
+   import xara
+   model = xara.Model(ndm=2, ndf=3)
 
    model.node(1, 2.0, 3.0)
    ...
-
-Note that ``opensees`` must come before ``openseespy`` in the ``import`` statement.
 
 For more examples, visit the STAIRlab example `gallery <https://gallery.stairlab.io>`_.
 
