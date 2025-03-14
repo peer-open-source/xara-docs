@@ -130,7 +130,8 @@
       {% for feature in features %}
         <div class="keyfeatures-box-content keyfeatures-underline">
           <p>
-          <div class="keyfeatures-box-title">{{ feature.title }}</div>
+          <div class="keyfeatures-box-title lead">{{ feature.title }}</div>
+          <!-- keyfeatures-box-title -->
           <div class="keyfeatures-box-text">
             {{ feature.body }}
           </div>
@@ -171,20 +172,20 @@
         <div class="row g-3">
           <div class="col-sm-6 mb-2">
             <a class="d-block pe-lg-4 text-decoration-none lh-sm" href="https://pypi.org/project/irie">
-              <h4 class="mb-0 fs-5 fw-semibold">irie</h4>
-              <small class="text-body-secondary">An infrastructure resilience engine powering the <a href="https://structures.live">https://structures.live</a> platform for structural health monitoring.</small>
-            </a>
-          </div>
-          <div class="col-sm-6 mb-2">
-            <a class="d-block pe-lg-4 text-decoration-none lh-sm" href="https://mdof.chrystalchern.com/">
-              <h4 class="mb-0 fs-5 fw-semibold">mdof</h4>
-              <small class="text-body-secondary">Fast and friendly system identification.</small>
+              <h4 class="mb-0 fs-5">irie</h4>
+              <small class="text-body-secondary">An infrastructure resilience engine powering the <em><a href="https://structures.live">https://structures.live</a></em> platform for structural health monitoring.</small>
             </a>
           </div>
           <div class="col-sm-6 mb-2">
             <a class="d-block pe-lg-4 text-decoration-none lh-sm" href="https://veux.io">
-              <h4 class="mb-0 fs-5 fw-semibold">veux</h4>
-              <small class="text-body-secondary">Web-first visualization framework.</small>
+              <h4 class="mb-0 fs-5">veux</h4>
+              <small class="text-body-secondary">Web-first visualization framework for finite element analysis.</small>
+            </a>
+          </div>
+          <div class="col-sm-6 mb-2">
+            <a class="d-block pe-lg-4 text-decoration-none lh-sm" href="https://mdof.chrystalchern.com/">
+              <h4 class="mb-0 fs-5">mdof</h4>
+              <small class="text-body-secondary">Fast and friendly system identification.</small>
             </a>
           </div>
         </div>
@@ -248,8 +249,8 @@
         <div class="col-6 col-lg-2 mb-3">
           <h5>Community</h5>
           <ul class="list-unstyled">
-            <li class="mb-2"><a href="https://github.com/STAIRLab/xara/issues" target="_blank" rel="noopener">Issues</a></li>
-            <li class="mb-2"><a href="https://github.com/STAIRLab/xara/discussions" target="_blank" rel="noopener">Discussions</a></li>
+            <li class="mb-2"><a href="https://github.com/{{ github_user }}/{{ github_repo }}/issues" target="_blank" rel="noopener">Issues</a></li>
+            <li class="mb-2"><a href="https://github.com/{{ github_user }}/{{ github_repo }}/discussions" target="_blank" rel="noopener">Discussions</a></li>
           </ul>
         </div>
         <div class="col-6 col-lg-2 mb-3">
@@ -260,8 +261,8 @@
         </div>
         <div class="xara-footer col-6 col-lg-2 mb-3">
           <div class="social-media-icons">
-            <a class=level-item href=https://github.com/STAIRLab/{{ project }}
-              aria-label=https://github.com/STAIRLab/{{ project }}><svg class="icon github-icon" viewBox="0 0 24 24"
+            <a class=level-item href=https://github.com/{{ github_user }}/{{ github_repo }}
+               aria-label=https://github.com/{{ github_user }}/{{ github_repo }}><svg class="icon github-icon" viewBox="0 0 24 24"
               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path
                  d="M12 .297c-6.63.0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577.0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93.0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176.0.0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22.0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22.0 1.606-.015 2.896-.015 3.286.0.315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
