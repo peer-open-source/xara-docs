@@ -12,9 +12,9 @@ equalDOF
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $rNodeTag, |integer|,	   integer tag identifying the retained node (rNode)
-   $cNodeTag, |integer|,	   integer tag identifying the constrained node (cNode)
-   $dof1 $dof2 ..., |integerList|, "list of nodal degrees-of-freedom that are constrained at the cNode (optional)"
+   $rNodeTag, |integer|,	   integer tag identifying the retained node (*rNode*)
+   $cNodeTag, |integer|,	   integer tag identifying the constrained node (*cNode*)
+   $dof1 $dof2 ..., |integerList|, "list of nodal degrees-of-freedom that are constrained at the *cNode* (optional)"
 
 
 .. note::
@@ -32,17 +32,17 @@ Examples
 
 The following command will impose the displacenents at dof's **1, 3, and 5** at node **2** to be the same as those of node **33**.
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: none
 
       equalDOF 2 33 1 3 5;
 
-   1. **Python Code**
+1. **Python Code**
 
    .. code-block:: python
 
-      model.equalDOF(2,33,1,3,5);
+      model.equalDOF(2,33,1,3,5)
 
 
 

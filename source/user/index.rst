@@ -32,7 +32,6 @@ These are organized as follows:
    manual/meshing/index
    manual/analysis/index
    manual/output/index
-   manual/miscCommands
-   manual/guides/index
+   manual/misc/index
 
 

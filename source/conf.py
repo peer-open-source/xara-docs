@@ -13,7 +13,7 @@ copyright = 'Berkeley, CA'
 description = "Finite element analysis"
 author = "PEER"
 html_logo = "_static/images/xara.png"
-html_title = "xara: an OpenSees application"
+html_title = "xara: Nonlinear fintie element analysis" # "xara: An OpenSees application"
 html_short_title = "xara"
 
 root_doc = "launch" #"user/index"
@@ -35,6 +35,8 @@ rst_prolog = """
 .. |float| replace:: *float*
 .. |integer| replace:: *integer*
 .. |OPS| replace:: xara
+.. |OpenSeesRT| replace:: `OpenSeesRT`_
+.. _OpenSeesRT: https://stairlab.berkeley.edu/software/opensees/
 .. |OpenSees| replace:: OpenSees
 .. |OPS link| replace:: `OpenSees app`_
 .. _OpenSees app: https://stairlab.berkeley.edu/software/OpenSeesRT/

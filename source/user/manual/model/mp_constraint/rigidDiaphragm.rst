@@ -16,7 +16,7 @@ These objects will constraint certain degrees-of-freedom at the listed constrain
 
 .. note::
 
-   1. The constraint object is constructed assuming small rotations in 3D.
+   1. The constraint object is constructed assuming *small* rotations.
 
    2. The rigidDiaphragm command works for problems in three dimensions with six-degrees-of-freedom at the nodes (ndf=6) and in two dimensions with ndf=3.
 
@@ -39,13 +39,13 @@ where :math:`\Delta X` is **x** (or **1**) coordinate of constrained node minus 
 
 1. **Tcl Code**
 
-.. code-block:: none
+   .. code-block:: none
 
-   rigidDiaphragm 3 22 4 5 6
+      rigidDiaphragm 3 22 4 5 6
 
 2. **Python Code**
 
-.. code-block:: none
+   .. code-block:: none
 
-   model.rigidDiaphragm(3,22,4,5,6)
+      model.rigidDiaphragm(3,22,4,5,6)
 

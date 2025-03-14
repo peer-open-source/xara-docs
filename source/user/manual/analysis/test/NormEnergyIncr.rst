@@ -3,7 +3,7 @@
 Energy Increment
 ^^^^^^^^^^^^^^^^
 
-This command is used to construct a convergence test which uses the energy increment, :math:`0.5 (x^T b)`, where the two vector come from the matrix equation :math:`Ax=b`, to determine if convergence has been reached. What the right-hand-side of the matrix equation is depends on integrator and constraint handler chosen. Usually, though not always, :math:`x` is equal to the incremental displacement and the residual :math:`b`. 
+This command is used to construct a convergence test which uses the energy increment, :math:`0.5 (x \cdot \boldsymbol{b})`, where the two vector come from the matrix equation :math:`Ax=b`, to determine if convergence has been reached. What the right-hand-side of the matrix equation is depends on integrator and constraint handler chosen. Usually, though not always, :math:`x` is equal to the incremental displacement and the residual :math:`b`. 
 
 .. function:: test EnergyIncr $tol $iter <$pFlag>
 

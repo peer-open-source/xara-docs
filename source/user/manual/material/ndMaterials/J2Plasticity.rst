@@ -34,13 +34,13 @@ Elastic Model
 
    \boldsymbol{S} = K \operatorname{tr}(\boldsymbol{E}_e) + 2 G \operatorname{dev}(\boldsymbol{E}_e)
 
-Yield Function
+The yield function :math:`\phi` is 
 
 .. math::
 
    \phi (\boldsymbol{S},q) = || \operatorname{dev} \boldsymbol{S} || - \sqrt{\tfrac{2}{3}} q(\boldsymbol{\xi})
 
-Saturation Isotropic Hardening with linear term is given by:
+where :math:`q` is the *saturation isotropic hardening* given by:
 
 .. math::
    
@@ -50,14 +50,17 @@ Flow Rules
 
 .. math::
 
-   \dot {\epsilon_p} = \gamma * \frac{\partial \phi}{\partial \sigma}
+   \dot{\boldsymbol{E}}_{\mathrm{p}} = \gamma  \frac{\partial \phi}{\partial \sigma}
 
-   \dot \xi = -\gamma * \frac{\partial \phi}{\partial q}
+   \dot \xi = -\gamma  \frac{\partial \phi}{\partial q}
 
 Linear Viscosity: :math:`\gamma = \frac{\phi}{\eta}` ( if :math:`\phi > 0` )
 
 Backward Euler integration is employed.
 
 For rate independent cases, set :math:`\eta = 0`.
+
+References
+----------
 
 Code Developed by: **Ed Love**

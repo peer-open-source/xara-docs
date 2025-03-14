@@ -1,16 +1,17 @@
-.. _constraints:
+.. _ConstraintHandler:
 
 constraints
 ^^^^^^^^^^^
 
-This command is used to configure the ConstraintHandler. 
-The ConstraintHandler determines how the constraint equations are enforced in the analysis. 
+The *ConstraintHandler* determines how the constraint equations are enforced in the analysis. 
 Constraint equations define a specified value for a DOF, or a relationship between DOFs.
 
 .. tabs::
    
    .. tab:: Python
       .. py:method:: Model.constraints(type, *args)
+
+         Configure the *ConstraintHandler* for a :class:`Model`. 
 
    .. tab:: Tcl
       .. function:: constraints type? arg1? ...

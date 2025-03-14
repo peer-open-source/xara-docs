@@ -24,14 +24,14 @@ Example
 
 The following example shows how to construct a Penalty Method constraint handler
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: tcl
 
       numberer Penalty 1.0e10 1.0e10
 
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 

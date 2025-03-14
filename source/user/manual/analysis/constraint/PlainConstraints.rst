@@ -14,14 +14,14 @@ Plain Constraints
 Examples
 --------
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: tcl
 
       constraints Plain
 
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 

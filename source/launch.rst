@@ -9,22 +9,21 @@ The design of the interface is distinguished by its emphasis on (1) performance 
 
 .. toctree::
    :caption: Documentation
-   :maxdepth: 1   
+   :maxdepth: 1
 
    user/manual/modeling
    user/manual/meshing/index
    user/manual/analysis/index
    user/manual/output/index
-   user/manual/miscCommands
+   user/manual/misc/index
 
 
 .. toctree::
    :caption: About
    :maxdepth: 1
 
-   user/install
+   user/guides/index
    about/compatibility/index
    about/license
    about/references
-   user/examples/index
 

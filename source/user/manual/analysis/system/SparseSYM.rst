@@ -12,19 +12,19 @@ This command is used to construct a sparse symmetric system of equations which u
 Example 
 -------
 
-The following example shows how to construct a SparseSYM system:
+The following example shows how to construct a *SparseSYM* system:
 
 1. **Tcl Code**
 
- .. code-block:: tcl
+   .. code-block:: tcl
 
-    system SparseSYM
+      system SparseSYM
 
 2. **Python Code**
 
- .. code-block:: python
+   .. code-block:: python
 
-    model.system('SparseSYM')
+      model.system('SparseSYM')
 
 
 References

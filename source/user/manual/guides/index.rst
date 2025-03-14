@@ -1,6 +1,0 @@
-Guides
-^^^^^^
-
-.. toctree::
-
-   signatures

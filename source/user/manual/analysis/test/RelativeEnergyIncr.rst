@@ -19,4 +19,4 @@ dot product computed for each step.
   penalty functions exist on the right had side, making convergence using this test usually impossible (even though solution
   might have converged).
 
-* When Lagrange multipliers are used, the solution vector contains the Lagrange multiplies.
+* When the :ref:`Lagrange <lagrangeHandler>` constraint handler is used, the solution vector :math:`\boldsymbol{x}` contains the Lagrange multipliers.

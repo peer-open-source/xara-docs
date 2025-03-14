@@ -3,7 +3,6 @@ Umfpack
 
 This command is used to construct a sparse system of equations which uses the `UmfPack <https://people.sc.fsu.edu/~jburkardt/cpp_src/umfpack/umfpack.html>`_  solver. 
 
-
 .. function:: system Umfpack <-lvalueFact $LVALUE>
 
 ``LVALUE*Nnz`` is the amount of additional memory set aside for fill in during the matrix solution where ``Nnz`` is the number of nonzero entries. 
@@ -22,6 +21,7 @@ The following example shows how to construct a Umfpack system
       .. code-block:: tcl
 
          system Umfpack
+
 
    .. tab:: Python
 

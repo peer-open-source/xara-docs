@@ -17,7 +17,8 @@ This command is used to define a *multi-point constraint*.
 
 .. note::
    
-   1. By retained node, we mean the node who's degrees-of-freedom are retained in the system of equations. The constrained nodes degrees-of-freedom need not appear in the system (depending on the constraint handler). 
+   1. By *retained node*, we mean the node who's degrees-of-freedom are retained in the system of equations. 
+      The constrained nodes degrees-of-freedom need not appear in the system (depending on the constraint :ref:`handler <ConstraintHandler>`). 
 
 
 Theory
@@ -26,10 +27,10 @@ Theory
 Beam
 ~~~~
 
-For 2d and 3d problems with a **beam** type link, the constraint matrix (that matrix relating the responses at constrained node, :math:`U_c`, to responses at retained node, :math:`U_r`, i.e. :math:`U_c = C_{cr} U_r`, is constructed assuming small rotations. For 3d problems this results in the following constraint matrix:
+For 2d and 3d problems with a **beam** type link, the constraint matrix (that matrix relating the responses at constrained node, :math:`u_c`, to responses at retained node, :math:`u_r`, i.e. :math:`u_c = C_{cr} u_r`, is constructed assuming small rotations. 
+For 3d problems this results in the following constraint matrix:
 
 .. math::
-  :label: rigidConstraintBeam3D
 
   \begin{bmatrix}
           1 & 0 & 0 & 0 & \Delta Z & -\Delta Y \\
@@ -41,10 +42,9 @@ For 2d and 3d problems with a **beam** type link, the constraint matrix (that ma
   \end{bmatrix}
 
 
-For 2d problems, the constraint matrix is the following:
+For 2d problems, the constraint matrix is:
 
 .. math::
-  :label: rigidConstraintBeam2D
 
   \begin{bmatrix}
           1 & 0 & -\Delta Y \\
@@ -68,7 +68,7 @@ For 2d and 3d problems with a **rod** type link the constraint matrix, that whic
     \end{bmatrix}
  
 
-For 2d problems, the constraint matrix is the following:
+For 2d problems, the constraint matrix is:
 
 .. math::
 
@@ -77,7 +77,7 @@ For 2d problems, the constraint matrix is the following:
           0 & 1 \\
   \end{bmatrix}   
 
-The rod constraint can also be generated using :ref:`equalDOF`.
+Note that the rod constraint can also be generated using :ref:`equalDOF`.
 
 
 Example
@@ -85,15 +85,15 @@ Example
 
 The following command will constrain node **3** to move rigidly following rules for small rotations to displacements and rotations at node **2** is
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: none
-
+   
       rigidLink beam 2 3
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
-
-      model.rigidLink('beam',2,3)
+   
+      model.rigidLink('beam', 2, 3)
 

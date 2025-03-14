@@ -21,26 +21,26 @@ The matrix equation is not manipulated to enforce them, rather the trial displac
 .. note::
 
    Great care must be taken when multiple constraints are being enforced as the transformation method does not follow constraints:
-      * If a node is fixed, constrain it with the fix command and not equalDOF or other type of constraint.
+   * If a node is fixed, constrain it with the :ref:`fix` command and not :ref:`equalDOF` or any other type of constraint.
+   * If multiple nodes are constrained, make sure that the retained node is not constrained in any other constraint.
 
-      * If multiple nodes are constrained, make sure that the retained node is not constrained in any other constraint.
 
 Example
 -------
 
 The following example shows how to construct a transformation constraint handler
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: tcl
 
       numberer Transformation
 
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 
-      numberer('Transformation')
+      model.numberer('Transformation')
 
 Code Developed by: |fmk|

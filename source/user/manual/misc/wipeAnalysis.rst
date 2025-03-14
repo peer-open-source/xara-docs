@@ -32,15 +32,15 @@ This method is needed when the user wishes to switch from a static analysis to a
 Examples
 --------
 
-The following demonstrates the use of the wipeAnalysis command.
+The following demonstrates the use of the *wipeAnalysis* command.
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: Tcl
 
       wipeAnalysis
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 

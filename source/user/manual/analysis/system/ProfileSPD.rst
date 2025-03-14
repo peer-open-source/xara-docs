@@ -2,7 +2,8 @@ ProfileSPD
 ^^^^^^^^^^
 
 This class is used for symmetric positive definite matrix systems. 
-The matrix is stored as shown below in a 1 dimensional array with only those values below the first non-zero row in any column being stored. This is sometimes also referred to as a skyline storage scheme. The following command is used to construct such a system:
+The matrix is stored as shown below in a 1 dimensional array with only those values below the first non-zero row in any column being stored. 
+This is sometimes also referred to as a *skyline* storage scheme. 
 
 .. function:: system ProfileSPD
 
@@ -46,14 +47,14 @@ Examples
 
 The following example shows how to construct a ProfileSPD system
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: tcl
 
       system ProfileSPD
 
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 

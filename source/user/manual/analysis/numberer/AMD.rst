@@ -1,5 +1,5 @@
-Alternative Min Degree Numberer
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Alternative Min Degree
+^^^^^^^^^^^^^^^^^^^^^^
 
 An *AMD* numberer uses the *approximate minimum degree* [1]_ scheme to order the matrix equations. 
 
@@ -20,14 +20,14 @@ Example
 
 The following example shows how to define an alternative min-degree numberer.
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: tcl
 
       numberer AMD
 
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 

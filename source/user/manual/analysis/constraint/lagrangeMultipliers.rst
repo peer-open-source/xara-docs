@@ -1,3 +1,5 @@
+.. _lagrangeHandler:
+
 Lagrange
 ^^^^^^^^
 
@@ -22,14 +24,14 @@ Example
 
 The following example shows how to construct a Lagrange constraint handler
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: tcl
 
       numberer Lagrange
 
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 

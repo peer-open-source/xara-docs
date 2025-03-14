@@ -7,11 +7,11 @@ When a solution is required, the Lapack routines ``DPBSV`` and ``DPBTRS`` are us
 
 .. function:: system BandSPD
 
-An :math:`n\times n` matrix is a symmetric positive definite banded matrix if:
+An :math:`n\times n` matrix :math:`\boldsymbol{A}` is a *symmetric positive definite banded* matrix if:
 
-1. :math:`A_{i,j}=0 \quad\mbox{if}\quad j<i-k \quad\mbox{ or }\quad j>i+k; \quad k \ge 0.`
-2. :math:`A_{i,j} = A_{j,i}`
-3. :math:`y^T A y != 0` for all non-zero vectors y with real entries (:math:`y \in \mathbb{R}^n`),
+1. :math:`A_{ij}=0 \quad\mbox{if}\quad j<i-k \quad\mbox{ or }\quad j>i+k; \quad k \ge 0.`
+2. :math:`A_{ij} = A_{ji}`
+3. :math:`y \cdot A y \ne 0` for all non-zero vectors y with real entries (:math:`y \in \mathbb{R}^n`),
 
 The bandwidth of the matrix is :math:`k + k + 1`.
 For example, a symmetric 6-by-6 matrix with a right bandwidth of 2:
@@ -41,15 +41,15 @@ is stored as follows:
 Example
 -------
 
-The following example shows how to construct a BandSPD system
+The following example shows how to construct a *BandSPD* system
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: tcl
 
       system BandSPD
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 
