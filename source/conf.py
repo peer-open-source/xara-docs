@@ -37,6 +37,8 @@ rst_prolog = """
 .. |float| replace:: *float*
 .. |integer| replace:: *integer*
 .. |OPS| replace:: xara
+.. |BRACE2| replace:: `BRACE2`_
+.. _BRACE2: https://structures.live
 .. |OpenSeesRT| replace:: `OpenSeesRT`_
 .. _OpenSeesRT: https://stairlab.berkeley.edu/software/opensees/
 .. |OpenSees| replace:: OpenSees
