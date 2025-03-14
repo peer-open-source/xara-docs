@@ -3,7 +3,6 @@
 Element
 *******
 
-This method is used to construct an element and add it to the :class:`Model`. 
 
 .. tabs::
 
@@ -11,8 +10,10 @@ This method is used to construct an element and add it to the :class:`Model`.
 
       .. py:method:: Model.element(type, tag, nodes, *args, **kwds)
 
-         :param type: string defining the type of element
-         :param tag: integer tag identifying the element
+         Construct an element and add it to the :class:`Model`. 
+
+         :param |string| type: name of the element type to be added
+         :param |integer| tag: tag identifying the element
          :param nodes: tuple of integer tags identifying the nodes that form the element
          :param args, kwds: arguments particular to the element ``type``
 
@@ -20,6 +21,8 @@ This method is used to construct an element and add it to the :class:`Model`.
    .. tab:: Tcl
 
       .. function:: element $type $tag (num $nodes) $args ...
+
+         Construct an element and add it to the :class:`Model`. 
 
       .. csv-table:: 
          :header: "Argument", "Type", "Description"

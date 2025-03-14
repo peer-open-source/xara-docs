@@ -23,10 +23,12 @@ html_extra_path = ["robots.txt"]
 rst_prolog = """
 .. |floatList| replace:: *list float*
 .. |integerList| replace:: *list integer*
+.. |integerTuple| replace:: *tuple integer*
 .. |intList| replace:: *list integer*
 .. |listFloat| replace:: *list float*
 .. |listInteger| replace:: *list integer*
 .. |listInt| replace:: *list integer*
+.. |floatTuple| replace:: *tuple of float*
 .. |list| replace:: *list*
 .. |kwds| replace:: `kwds <kwds>`__
 .. |bool| replace:: *bool*

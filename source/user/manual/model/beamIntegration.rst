@@ -8,12 +8,14 @@ This command is used to construct a beam integration for :ref:`Frame <Frame>` el
 .. tabs::
 
    .. tab:: Python
+
       .. py:method:: Model.beamIntegration(name, tag, *args)
          :no-index:
 
          Construct a beam integration for :ref:`Frame <Frame>` elements.
 
    .. tab:: Tcl
+
       .. function:: beamIntegration $name $tag $args ...
 
       .. csv-table:: 
