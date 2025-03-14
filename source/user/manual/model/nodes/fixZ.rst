@@ -10,7 +10,7 @@ fixZ
          Fix the degrees-of-freedom at all nodes in the model whose :math:`z`-coordinate lies within a specified distance from a specified coordinate.
 
          :param float z: z-coordinate of nodes to be constrained
-         :param list constr: ndf constraint values (0 or 1) corresponding to the :ref:`Model.ndf` degrees-of-freedom.
+         :param list constr: ndf constraint values (0 or 1) corresponding to the :py:attr:`Model.ndf` degrees-of-freedom.
             0 unconstrained (or free)
             1 constrained (or fixed)
          :param float tol: user-defined tolerance (optional: default = 1e-10)
@@ -24,7 +24,7 @@ fixZ
          :widths: 10, 10, 40
 
          $zCoordinate, |float|, z-coordinate of nodes to be constrained
-         $constrValues, |intList|, "| ndf constraint values (0 or 1) corresponding to the :ref:`Model.ndf` 
+         $constrValues, |intList|, "| ndf constraint values (0 or 1) corresponding to the :py:attr:`Model.ndf` 
          | degrees-of-freedom.
          | 0 unconstrained (or free)
          | 1 constrained (or fixed) "
