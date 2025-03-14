@@ -63,69 +63,69 @@ additionally define linearly independent director fields
 
 
    \left.\begin{aligned}
-   \mathbf{d}_k &\triangleq \bm{\Lambda}\mathbf{D}_k \\
-   \bar{\mathbf{d}}_k &\triangleq \bm{R}\mathbf{D}_k \\
-   \bar{\mathbf{D}}_k &\triangleq \bar{\bm{\Lambda}}\mathbf{D}_k \\
+   \mathbf{d}_k &\triangleq \boldsymbol{\Lambda}\mathbf{D}_k \\
+   \bar{\mathbf{d}}_k &\triangleq \boldsymbol{R}\mathbf{D}_k \\
+   \bar{\mathbf{D}}_k &\triangleq \bar{\boldsymbol{\Lambda}}\mathbf{D}_k \\
    \end{aligned}\right.,
    \quad\text{ implying }\qquad 
    \begin{aligned}
-   \bm{\Lambda} &= \mathbf{d}_k\otimes\mathbf{D}_k \\
-   \bm{R}       &= \bar{\mathbf{d}}_k\otimes\mathbf{D}_k \\
-   \bar{\bm{\Lambda}} &= \bar{\mathbf{D}}_k\otimes\mathbf{D}_k \\
+   \boldsymbol{\Lambda} &= \mathbf{d}_k\otimes\mathbf{D}_k \\
+   \boldsymbol{R}       &= \bar{\mathbf{d}}_k\otimes\mathbf{D}_k \\
+   \bar{\boldsymbol{\Lambda}} &= \bar{\mathbf{D}}_k\otimes\mathbf{D}_k \\
    \end{aligned}
 
 
 .. note::
 
-   This works for :math:`\bm{\Lambda}` here because we stipulated
+   This works for :math:`\boldsymbol{\Lambda}` here because we stipulated
    :math:`\mathscr{C}_\Lambda \subset \mathrm{GL}(n)` in **A3**. It may
-   be better to only treat :math:`\bm{R}` here, and ease the restriction
+   be better to only treat :math:`\boldsymbol{R}` here, and ease the restriction
    in **A3**.
 
 where summation is implied on doubled indices and :math:`\otimes`
 denotes the bun product defined by
-:math:`(\mathbf{a}\otimes\bm{b})\bm{c} = \mathbf{a} \, (\bm{b}\cdot\bm{c})`.
+:math:`(\mathbf{a}\otimes\boldsymbol{b})\boldsymbol{c} = \mathbf{a} \, (\boldsymbol{b}\cdot\boldsymbol{c})`.
 Figure @fig:directors illustrates this for an example embedding where a
 single representative director from each of these fields, say
 :math:`k=1`, is shown and :math:`\mathbf{D}_1` is taken to be aligned
 with the reference configuration of an initially straight plane frame
 (note that the subscript 1 will be dropped for clarity). Because
 :math:`\mathbf{D}` was taken in a straight line for this example and
-:math:`\bm{R}` is necessarily homogeneous, it follows from @eq:directors
+:math:`\boldsymbol{R}` is necessarily homogeneous, it follows from @eq:directors
 that :math:`\bar{\mathbf{d}}` traces a similar straight line. It is also
 useful to observe that @eq:tether implies the following alternative
-representation for :math:`\bm{R}`, and :math:`\bar{\bm{\Lambda}}` which
+representation for :math:`\boldsymbol{R}`, and :math:`\bar{\boldsymbol{\Lambda}}` which
 is also apparent from the figure above:
 
 .. math::
 
 
    \begin{aligned}
-   \bm{R} &= \bm{\Lambda}\bar{\bm{\Lambda}}^{\mathrm{t}} \\
+   \boldsymbol{R} &= \boldsymbol{\Lambda}\bar{\boldsymbol{\Lambda}}^{\mathrm{t}} \\
    &= (\mathbf{d}_k\otimes\mathbf{D}_k)(\mathbf{D}_k\otimes \bar{\mathbf{D}}_k) \\
    &= \mathbf{d}_k \otimes \bar{\mathbf{D}}_k
    \end{aligned}
    \quad\text{ and }\quad
    \begin{aligned}
-   \bar{\bm{\Lambda}} 
-   &= \bm{R}^{\mathrm{t}}\bm{\Lambda} \\
+   \bar{\boldsymbol{\Lambda}} 
+   &= \boldsymbol{R}^{\mathrm{t}}\boldsymbol{\Lambda} \\
    &=\left(\mathbf{D}_k\otimes \bar{\mathbf{d}}_k\right)\left(\mathbf{d}_\ell\otimes\mathbf{D}_\ell\right) \\
    &= (\bar{\mathbf{d}}_k\cdot \mathbf{d}_\ell) \, \mathbf{D}_k \otimes \mathbf{D}_\ell
    \end{aligned}
 
 
 where we use the identities
-:math:`\left(\bm{a}\otimes\bm{b}\right)\left(\bm{c}\otimes\bm{d}\right) = \bm{b}\cdot\bm{c}\, \left(\bm{a}\otimes\bm{d}\right)`
-and :math:`(\bm{a}\otimes\bm{b})^{\mathrm{t}} = \bm{b}\otimes\bm{a}` and
+:math:`\left(\boldsymbol{a}\otimes\boldsymbol{b}\right)\left(\boldsymbol{c}\otimes\boldsymbol{d}\right) = \boldsymbol{b}\cdot\boldsymbol{c}\, \left(\boldsymbol{a}\otimes\boldsymbol{d}\right)`
+and :math:`(\boldsymbol{a}\otimes\boldsymbol{b})^{\mathrm{t}} = \boldsymbol{b}\otimes\boldsymbol{a}` and
 summation is again implied.
 
 .. math::
 
 
    \begin{aligned}
-   \bm{\omega}_R &= \delta \bar{\mathbf{d}} \otimes \bar{\mathbf{d}} \\
-   \bm{\omega} &= \delta \mathbf{d} \otimes \mathbf{d} \\
-   \bar{\bm{\omega}} &= \delta \bar{\mathbf{D}} \otimes \bar{\mathbf{D}}
+   \boldsymbol{\omega}_R &= \delta \bar{\mathbf{d}} \otimes \bar{\mathbf{d}} \\
+   \boldsymbol{\omega} &= \delta \mathbf{d} \otimes \mathbf{d} \\
+   \bar{\boldsymbol{\omega}} &= \delta \bar{\mathbf{D}} \otimes \bar{\mathbf{D}}
    \end{aligned}
 
 
