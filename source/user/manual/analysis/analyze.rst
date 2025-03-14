@@ -24,6 +24,8 @@ It returns a value indicating success or failure of the analysis.
          :type dtMax: |float|
          :param Jd: number of iterations user would like performed at each step. The variable transient analysis will change current time step if last analysis step took more or less iterations than this to converge. Required if a variable time step transient analysis was specified.
          :type Jd: |integer|
+         :param operation: A flag identifying specific operations to perform. Default is ``"increment|iterate"``
+         :type operation: |string|
          :returns: An integer value indicating the success or failure of the analysis:
          
             * ``0`` if successful

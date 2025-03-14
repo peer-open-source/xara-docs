@@ -3,12 +3,6 @@
 Corotational
 ^^^^^^^^^^^^
 
-.. figure:: figures/directors.png
-   :align: center
-   :figclass: align-center
-
-   Corotational transformation of a two-node frame.
-
 
 The corotational coordinate transformation performs a geometric transformation of beam stiffness and resisting force from a *basic* system [1]_ to the global coordinate system. [2]_
 
@@ -48,6 +42,92 @@ The corotational coordinate transformation performs a geometric transformation o
 	
 	The element coordinate system and joint offset values are specified as in the :ref:`linearTR`.
 
+Theory
+------
+
+
+.. figure:: figures/directors.png
+   :align: center
+   :figclass: align-center
+
+   Corotational transformation of a two-node frame.
+
+Consider a field of three directors that are orthonormal everywhere in :math:`\mathcal{B}`
+denoted by :math:`\{\mathbf{D}_k\}` which will be considered stationary
+in all subsequent developments. For the present discussion, we
+additionally define linearly independent director fields
+:math:`\{\mathbf{d}_k\}`, :math:`\left\{\bar{\mathbf{d}}_k\right\}`, and
+:math:`\left\{\bar{\mathbf{D}}_k\right\}` as follows:
+
+.. math::
+
+
+   \left.\begin{aligned}
+   \mathbf{d}_k &\triangleq \bm{\Lambda}\mathbf{D}_k \\
+   \bar{\mathbf{d}}_k &\triangleq \bm{R}\mathbf{D}_k \\
+   \bar{\mathbf{D}}_k &\triangleq \bar{\bm{\Lambda}}\mathbf{D}_k \\
+   \end{aligned}\right.,
+   \quad\text{ implying }\qquad 
+   \begin{aligned}
+   \bm{\Lambda} &= \mathbf{d}_k\otimes\mathbf{D}_k \\
+   \bm{R}       &= \bar{\mathbf{d}}_k\otimes\mathbf{D}_k \\
+   \bar{\bm{\Lambda}} &= \bar{\mathbf{D}}_k\otimes\mathbf{D}_k \\
+   \end{aligned}
+
+
+.. note::
+
+   This works for :math:`\bm{\Lambda}` here because we stipulated
+   :math:`\mathscr{C}_\Lambda \subset \mathrm{GL}(n)` in **A3**. It may
+   be better to only treat :math:`\bm{R}` here, and ease the restriction
+   in **A3**.
+
+where summation is implied on doubled indices and :math:`\otimes`
+denotes the bun product defined by
+:math:`(\mathbf{a}\otimes\bm{b})\bm{c} = \mathbf{a} \, (\bm{b}\cdot\bm{c})`.
+Figure @fig:directors illustrates this for an example embedding where a
+single representative director from each of these fields, say
+:math:`k=1`, is shown and :math:`\mathbf{D}_1` is taken to be aligned
+with the reference configuration of an initially straight plane frame
+(note that the subscript 1 will be dropped for clarity). Because
+:math:`\mathbf{D}` was taken in a straight line for this example and
+:math:`\bm{R}` is necessarily homogeneous, it follows from @eq:directors
+that :math:`\bar{\mathbf{d}}` traces a similar straight line. It is also
+useful to observe that @eq:tether implies the following alternative
+representation for :math:`\bm{R}`, and :math:`\bar{\bm{\Lambda}}` which
+is also apparent from the figure above:
+
+.. math::
+
+
+   \begin{aligned}
+   \bm{R} &= \bm{\Lambda}\bar{\bm{\Lambda}}^{\mathrm{t}} \\
+   &= (\mathbf{d}_k\otimes\mathbf{D}_k)(\mathbf{D}_k\otimes \bar{\mathbf{D}}_k) \\
+   &= \mathbf{d}_k \otimes \bar{\mathbf{D}}_k
+   \end{aligned}
+   \quad\text{ and }\quad
+   \begin{aligned}
+   \bar{\bm{\Lambda}} 
+   &= \bm{R}^{\mathrm{t}}\bm{\Lambda} \\
+   &=\left(\mathbf{D}_k\otimes \bar{\mathbf{d}}_k\right)\left(\mathbf{d}_\ell\otimes\mathbf{D}_\ell\right) \\
+   &= (\bar{\mathbf{d}}_k\cdot \mathbf{d}_\ell) \, \mathbf{D}_k \otimes \mathbf{D}_\ell
+   \end{aligned}
+
+
+where we use the identities
+:math:`\left(\bm{a}\otimes\bm{b}\right)\left(\bm{c}\otimes\bm{d}\right) = \bm{b}\cdot\bm{c}\, \left(\bm{a}\otimes\bm{d}\right)`
+and :math:`(\bm{a}\otimes\bm{b})^{\mathrm{t}} = \bm{b}\otimes\bm{a}` and
+summation is again implied.
+
+.. math::
+
+
+   \begin{aligned}
+   \bm{\omega}_R &= \delta \bar{\mathbf{d}} \otimes \bar{\mathbf{d}} \\
+   \bm{\omega} &= \delta \mathbf{d} \otimes \mathbf{d} \\
+   \bar{\bm{\omega}} &= \delta \bar{\mathbf{D}} \otimes \bar{\mathbf{D}}
+   \end{aligned}
+
 
 References
 ----------
@@ -57,4 +137,5 @@ References
 .. [2] De Souza, R. M. "Force-based finite element for large displacement inelastic analysis of frames" University of California, Berkeley (2000)
 
 Code Developed by: |rms|, |cmp|
+
 
