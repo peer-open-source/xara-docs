@@ -10,6 +10,7 @@ This command is used to construct an *ElasticIsotropic* material.
    .. tab:: Python
 
       .. py:method:: Model.material("ElasticIsotropic", tag, E, v, rho=0.0)
+         :no-index:
 
          :param tag: integer tag identifying material
          :param E: Young's elastic modulus

@@ -45,7 +45,6 @@ Python:
 .. figure:: figures/LehighJoint2D/LehighJoint2D_def_modes.png
    :align: center
    :figclass: align-center
-   :name: LehighJoint2D
    :scale: 70%
    
    The deformation modes in the LehighJoint2D element panel zone.

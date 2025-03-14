@@ -84,7 +84,7 @@ extensions = [
     'sphinx_tabs.tabs',
     "sphinx.ext.autosummary",
     'sphinxcontrib.bibtex',
-    'sphinx_sitemap'
+#   'sphinx_sitemap'
 ]
 
 bibtex_bibfiles = ["references.bib"]

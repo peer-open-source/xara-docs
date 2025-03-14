@@ -8,10 +8,11 @@ Central Difference
    .. tab:: Python (RT)
 
       .. py:method:: Model.integrator("CentralDifference")
+         :no-index:
 
    .. tab:: Tcl
 
-      .. function:: integrator CentralDifference 
+      .. function:: integrator CentralDifference
 
 
 .. note::

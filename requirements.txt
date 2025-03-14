@@ -1,4 +1,4 @@
-Sphinx>=8.0
+Sphinx>=7.0
 #sphinx_rtd_theme>=3.0.0
 #pydata-sphinx-theme
 sphinx-book-theme
