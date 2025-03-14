@@ -1,7 +1,7 @@
 .. _modelClass:
 
-Model Class
-***********
+Model
+^^^^^
 
 The ``Model`` class is an alternative to the ``model`` command in Python 
 that creates an isolated model that is safe from global state corruption. 

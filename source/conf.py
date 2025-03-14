@@ -61,7 +61,7 @@ rst_prolog = """
 
 .. |fmk| replace:: *fmk*
 .. |fcf| replace:: *fcf*
-.. |rms| replace:: Remo Magalhaes de Souza
+.. |rms| replace:: *Remo Magalhaes de Souza*
 .. |cmp| replace:: `Claudio M. Perez`_
 .. _Claudio M. Perez: https://stairlab.berkeley.edu/people/claudioperez
 .. |pedro| replace:: `Pedro Arduino`_
@@ -84,7 +84,7 @@ extensions = [
     'sphinx_tabs.tabs',
     "sphinx.ext.autosummary",
     'sphinxcontrib.bibtex',
-#   'sphinx_sitemap'
+    'sphinx_sitemap'
 ]
 
 bibtex_bibfiles = ["references.bib"]
@@ -163,10 +163,6 @@ exclude_patterns = [
     "user/manual/model/damping/elementalDamping/SecStifDamping.rst",
     "user/manual/model/damping/elementalDamping/URDDamping.rst",
     "user/manual/model/damping/elementalDamping/UniformDamping.rst",
-#   "user/manual/model/timeSeries.rst",
-#   "user/manual/model/timeseries/linearTimeSeries.rst",
-#   "user/manual/model/timeseries/constantTimeSeries.rst",
-#   "user/manual/model/timeseries/pathTimeSeries.rst",
 
     "user/manual/model/timeseries/MPAccTimeSeries.rst",
     "user/manual/model/timeseries/PeerNGAMotion.rst",
