@@ -3,7 +3,7 @@ fixY
 
 This command is used to construct multiple homogeneous single-point boundary constraints for all nodes whose y-coordinate lies within a specified distance from a specified coordinate.
 
-.. function:: fixY $xCoordinate (ndf $ConstrValues) <-tol $tol>
+.. function:: fixY $y (ndf $ConstrValues) <-tol $tol>
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
@@ -19,18 +19,18 @@ This command is used to construct multiple homogeneous single-point boundary con
 Example
 -------
 
-   The following example demonstrate the command to fix the first 3 degrees-of-freedom at all nodes in the model at y location **20.0**.
+The following example demonstrate the command to fix the first 3 degrees-of-freedom at all nodes in the model at y location **20.0**.
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: none
 
       fixY 20.0 1 1 1 0 0 0 
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: none
 
-      fixY(20.0, 1, 1, 1, 0, 0, 0)
+      model.fixY(20.0, 1, 1, 1, 0, 0, 0)
 
 Code Developed by: **fmk**

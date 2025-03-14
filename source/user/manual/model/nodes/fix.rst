@@ -12,7 +12,7 @@ This command is used to construct a number of single-point homogeneous boundary 
       .. py:method:: Model.fix(node, [flags, dof])
 
          :param node: integer tag identifying the node to be constrained
-         :param flags: tuple of ``ndf`` constraint flags (``0`` or ``1``) corresponding to the ``ndf`` degrees-of-freedom.
+         :param flags: tuple of :py:attr:`Model.ndf` constraint flags (``0`` or ``1``) corresponding to the ``ndf`` degrees-of-freedom.
             ``0`` unconstrained (or free)
             ``1`` constrained (or fixed)
          :param dofs: An alternative to the ``flags`` argument, the ``dofs`` argument allows specific degrees of freedom to be fixed.

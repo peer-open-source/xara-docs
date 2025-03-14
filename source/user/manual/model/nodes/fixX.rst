@@ -5,7 +5,7 @@ fixX Command
 
 This command is used to construct multiple homogeneous single-point boundary constraints for all nodes whose x-coordinate lies within a specified distance from a specified coordinate.
 
-.. function:: fixX $xCoordinate (ndf $ConstrValues) <-tol $tol>
+.. function:: fixX $x (ndf $ConstrValues) <-tol $tol>
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
