@@ -6,7 +6,7 @@
 ===============
 
 .. py:method:: Model.beamIntegration('HingeMidpoint',tag,secI,lpI,secJ,lpJ,secE)
-   :noindex:
+   :no-index:
 
    :param |integer| tag: Unique object tag.
    :param |integer| secI: A previous-defined :ref:`Section` for hinge at I.

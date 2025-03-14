@@ -7,9 +7,9 @@ EnhancedQuad
    .. tab:: Python 
 
       .. py:method:: Model.element("EnhancedQuad", tag, nodes, section, [pressure, rho, b1, b2])
-         :noindex:
+         :no-index:
 
-         :param tag: integer, unique element object tag
+         :param |integer| tag: unique :ref:`Element` tag
          :param nodes: tuple, a tuple of four element nodes in counter-clockwise order
          :param section: tuple or int. If int, it is the tag of a previously defined :ref:`PlaneSection <PlaneSection>`. If tuple, it is a tuple of the form (``thick``, ``type``, ``material``) where 
            
@@ -21,8 +21,8 @@ EnhancedQuad
            
          :param pressure: |float|, surface pressure (optional, default = 0.0)
          :param rho: |float|, element mass density (per unit volume) from which a lumped element mass matrix is computed (optional, default=0.0)
-         :param b1: |float|, constant body forces defined in the domain (optional, default=0.0)
-         :param b2: |float|, constant body forces defined in the domain (optional, default=0.0)
+         :param |float| b1: constant body forces defined in the domain (optional, default=0.0)
+         :param |float| b2: constant body forces defined in the domain (optional, default=0.0)
 
 
    .. tab:: Tcl
@@ -50,7 +50,7 @@ Theory
    :align: center
    :figclass: align-center
 
-   EnhancedQuad element node numbering
+   *EnhancedQuad* element node numbering
 
 This element implements the Q1/E4 assumed strain interpolation [4]_. The formulation 
 is generally credited to Taylor, Beresford, and Wilson (1976) [1]_. A variational basis 

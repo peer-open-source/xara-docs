@@ -6,7 +6,7 @@ FixedLocation
 ^^^^^^^^^^^^^
 
 .. py:method:: Model.beamIntegration("FixedLocation", tag, N, secTags, locs)
-   :noindex:
+   :no-index:
 
    :param |integer| tag: tag of the beam integration.
    :param |integer| N: number of integration points along the element.
