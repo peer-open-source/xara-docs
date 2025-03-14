@@ -12,8 +12,8 @@ This method is used to construct a ``Node`` which stores information about coord
       .. py:method:: Model.node(tag, coords, [mass])
 
          :param tag: integer tag identifying node
-         :param coords: tuple of **ndm** nodal coordinates
-         :param mass: tuple of **ndf** nodal mass values
+         :param coords: tuple of :py:attr:`Model.ndm` |float| coordinates
+         :param mass: tuple of :py:attr:`Model.ndf` nodal mass values
 
          :return: None
 

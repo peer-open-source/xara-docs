@@ -13,10 +13,10 @@ print
          Print information about a :class:`Model` to *stdout*, or a file.
 
          :param file: The name of the file to which data will be sent. Overwrites existing file. Default is to print to *stdout*.
-         :param node: A list of node tags to print. Default is to print all nodes.
-         :type node: |list|
-         :param ele: A list of element tags to print. Default is to print all elements.
-         :type ele: |list|
+         :param node: :ref:`Node` tags to print. Default is to print all nodes.
+         :type node: |integerTuple|
+         :param ele: :ref:`Element` tags to print. Default is to print all elements.
+         :type ele: |integerTuple|
 
    
    .. tab:: Tcl

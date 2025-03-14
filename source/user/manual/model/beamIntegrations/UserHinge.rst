@@ -1,7 +1,6 @@
 
-===========
- UserHinge
-===========
+UserHinge
+^^^^^^^^^
 
 .. py:method:: Model.beamIntegration("UserHinge",tag,secETag,npL, secsLTags, locsL, wtsL,npR, secsRTags, locsR, wtsR)
    :no-index:

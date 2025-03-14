@@ -7,7 +7,7 @@ This integration places one plastic-rotation integration point at each element e
 
 .. function:: beamIntegration ConcentratedPlasticity $integrationTag $secTagI $secTagJ $secTagE
 
-.. py:method:: Model.beamIntegration('ConcentratedPlasticity',integrationTag,secTagI,secTagJ,secTagE)
+.. py:method:: Model.beamIntegration('ConcentratedPlasticity',tag,secTagI,secTagJ,secTagE)
    :no-index:
 
 .. list-table:: 
@@ -39,5 +39,3 @@ Notes
 * Use an elastic section which defines elastic moment-curvature, force-strain deformations
 
 Code Developed by: *Silvia Mazzoni (Silvia's Brainery)* and |mhs|
-
-

@@ -10,16 +10,23 @@ exposed as methods.
 
 .. The command is also used to define the spatial dimension of the subsequent nodes to be added and the number of degrees-of-freedom at each node. 
 
-.. py:class:: Model(ndm, ndf=None, echo=None)
+.. py:class:: Model(ndm, ndf=None, echo_file=None)
 
    Create an isolated model for given number of dimensions and number of DOFs.
 
-   ========================   ===========================================================================
-   ``ndm`` |integer|          number of dimensions (1,2, or 3)
-   ``ndf`` |integer|          number of dofs (optional, default ``ndm*(ndm+1)/2``)
-   ``echo`` *FileLike*        Optional file handle to write command history to.
-   ========================   ===========================================================================
+   :param |integer| ndm: number of dimensions
+   :param |integer| ndf: number of dofs (optional, default ``ndm*(ndm+1)/2``)
+   :param *FileLike* echo_file: Optional file handle to write command history to.
 
+   .. py:attribute:: ndm
+      :type: int
+
+      The number of dimensions in the model.
+
+   .. py:attribute:: ndf
+      :type: int
+
+      The number of degrees-of-freedom at each node.
 
 .. note:: 
 

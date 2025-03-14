@@ -1,9 +1,9 @@
 
-===============
- HingeEndpoint
-===============
 
-.. function:: Model.beamIntegration("HingeEndpoint",tag,secI,lpI,secJ,lpJ,secE)
+HingeEndpoint
+^^^^^^^^^^^^^
+
+.. py:method:: Model.beamIntegration("HingeEndpoint",tag,secI,lpI,secJ,lpJ,secE)
    :noindex:
 
    :param |integer| tag: Unique object tag.

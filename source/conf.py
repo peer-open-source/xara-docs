@@ -226,7 +226,7 @@ html_context = {
         {"title": "Free", "body": "All source code contributed to xara is licensed under a <em>pure</em> BSD."},
         {"title": "Robust", "body": '<em>xara</em> is designed from the ground up for use in production environments like <a href="https://structures.live">structures.live</a>'},
     ],
-    "home_image": "_static/images/girder-light.png"
+    "home_image": "_static/images/CableStayed02.png"
 }
 
 #  'style_nav_header_background': '#F2F2F2' #64B5F6 #607D8B,

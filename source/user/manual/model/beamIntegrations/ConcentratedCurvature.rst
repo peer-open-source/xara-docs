@@ -43,5 +43,5 @@ This integration places one integration point at each element end, representing 
 
 * Use an elastic section which defines elastic moment-curvature, force-strain deformations
 
-Code Developed (2023) by: *Silvia Mazzoni (Silvia's Brainery) & Michael Scott (Oregon State University)*
+Code Developed by: *Silvia Mazzoni (Silvia's Brainery)* and |mhs|
 
