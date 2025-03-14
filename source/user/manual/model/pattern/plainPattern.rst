@@ -63,6 +63,15 @@ Because the series is ``"Linear"``, at each analysis step the actual load applie
             4: [50.0, -100.0, 0.0]
          })
 
+   .. tab:: Python (Alternative)
+
+      .. code-block:: python
+
+         model.pattern("Plain", 1, "Linear")
+         model.load(3, ( 0.0,  -50.0, 0.0), pattern=1)
+         model.load(4, (50.0, -100.0, 0.0), pattern=1)
+
+
    .. tab:: Tcl
 
       .. code-block:: tcl

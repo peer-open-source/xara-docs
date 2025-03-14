@@ -1,26 +1,39 @@
 .. _pattern:
 
 Pattern
-*******
+^^^^^^^
 
-The pattern command is used to construct a LoadPattern and add it to the Domain. 
+.. tabs::
+
+   .. tab:: Python 
+
+      .. py:method:: Model.pattern(type, tag, *args)
+
+         Create a pattern of a given type and add it to the :class:`Model`.
+
+         :param |string| type: pattern type
+         :param |integer| tag: unique pattern tag.
+         :param |list| args: a sequence of args
+   
+   .. tab:: Tcl
+
+      .. function:: pattern type args ...
+
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
+
+         $type, |string|, pattern type
+         $eleTag,  |integer|,  unique epattern tag.
+         $args, |list|,  a list of args
+
+
 Each LoadPattern has a TimeSeries associated with it. 
-In addition it may contain ElementLoads, NodalLoads and SinglePointConstraints. 
-Some of these SinglePoint constraints may be associated with GroundMotions.
+The TimeSeries is used to determine the load factor applied to the loads in the pattern. 
+The load factor is a function of time in the domain. 
+The load factor is obtained from the associated TimeSeries as a function of the time in the domain.
 
-.. function:: pattern type args ...
-
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
-
-   $type, |string|, pattern type
-   $eleTag,  |integer|,  unique epattern tag.
-   $args, |list|,  a list of args
-
-The type of pattern created and the additional arguments required depends on the ``type`` provided in the command. 
-The following contain information about ``type`` and the additional args required for each of the available pattern types:
-
+The following pattern types are available:
 
 .. toctree::
    :maxdepth: 2

@@ -6,7 +6,7 @@ Multisupport Excitation
 The Multi-Support pattern allows similar or different prescribed ground motions to be input at various supports in the structure. 
 The prescribed motion is applied using single-point constraints, the single-point constraints taking their constraint value from user created ground motions.
 
-The command Tcl to generate a multi-support excitation contains in brackets the commands to generate all the ground motions and the single-point constraints in the pattern. 
+The Tcl command to generate a multi-support excitation contains in brackets the commands to generate all the ground motions and the single-point constraints in the pattern. 
 
 
 .. function:: pattern MultipleSupport $patternTag {ground motion & imposed motion commands}
@@ -34,6 +34,7 @@ As will be demonstrated in the example, the actual support conditions that are a
    When using MultiSupport pattern, the ground motions are applied by specifying for each constrained node a ground motion. This is done using the :ref:`imposedMotion` command. The ground motions at each of the supports is specified using a :ref:`groundMotion`. When enforcing the constraint at the node, the imposedMotion constraint will obtain the **displacement** from the ground motion. 
    If the groundMotion was built by user specifying the acceleration, the **trapezoidal** rule is used for integration to obtain the **displacements**.
 
+
 Examples
 --------
 
@@ -58,7 +59,7 @@ The following example shows how to construct a *Multi-Support Excitation* patter
 
       .. code:: Python
 
-         model.timeSeries("Path", 3, "-dt", 0.02, "-filePath", "elCentroDisp.dat")
+         model.timeSeries("Path", 3, dt=0.02, filePath="elCentroDisp.dat")
          model.pattern("MultiSupport", 1)
          model.groundMotion(101, "Series", disp=3)
          model.imposedSupportMotion(1,1,101)

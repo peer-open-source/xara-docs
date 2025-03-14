@@ -4,7 +4,7 @@ wipe
 ^^^^
 
 This command is used to clear the domain objects, the recorders, and any analysis objects. 
-It resets the time in the :class:`Model` to **0.0**.
+It resets the :ref:`time <getTime>` in the :class:`Model` to *0.0*.
 
 .. tabs::
 

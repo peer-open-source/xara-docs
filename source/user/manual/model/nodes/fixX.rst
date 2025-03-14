@@ -1,7 +1,7 @@
 .. _fixX:
 
-fixX Command
-************
+fixX
+^^^^
 
 This command is used to construct multiple homogeneous single-point boundary constraints for all nodes whose x-coordinate lies within a specified distance from a specified coordinate.
 
@@ -18,21 +18,25 @@ This command is used to construct multiple homogeneous single-point boundary con
    | 1 constrained (or fixed)"
    $tol, |float|, user-defined tolerance (optional: default = 1e-10)
 
-.. admonition:: Example:
 
-   The following example demonstrate the command to fix the first 3 degrees-of-freedom at all nodes in the model at x location **0.0**.
+Example
+-------
 
-   1. **Tcl Code**
+The following example demonstrate the command to fix the first 3 degrees-of-freedom at all nodes in the model at x location **0.0**.
 
-   .. code-block:: none
+.. tabs::
 
-      fixX 0.0 1 1 1 0 0 0 
+   .. tab:: Python
 
-   2. **Python Code**
+      .. code-block:: python
 
-   .. code-block:: python
+         model.fixX(0.0, 1, 1, 1, 0, 0, 0)
 
-      fixX(0.0, 1, 1, 1, 0, 0, 0)
+   .. tab:: Tcl
+
+      .. code-block:: none
+
+         fixX 0.0 1 1 1 0 0 0 
 
 
 Code Developed by: **fmk**
