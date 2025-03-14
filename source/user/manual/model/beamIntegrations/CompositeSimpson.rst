@@ -4,7 +4,7 @@ CompositeSimpson
 
 Create a CompositeSimpson beamIntegration.
 
-.. function:: beamIntegration 'CompositeSimpson' tag secTag N
+.. function:: beamIntegration "CompositeSimpson" tag secTag N
 
 .. csv-table::
    :header: "Argument", "Type", "Description"

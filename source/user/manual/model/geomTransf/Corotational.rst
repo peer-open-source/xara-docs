@@ -9,7 +9,7 @@ The corotational coordinate transformation performs a geometric transformation o
 
    .. tab:: Python
 
-      .. py:function:: model.geomTransf("Corotational", tag, vecxz, [offi, offj])
+      .. py:method:: Model.geomTransf("Corotational", tag, vecxz, [offi, offj])
          :no-index:
 
          :param integer tag: integer tag identifying transformation

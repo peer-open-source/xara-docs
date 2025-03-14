@@ -7,7 +7,7 @@ Central Difference
 
    .. tab:: Python (RT)
 
-      .. function:: model.integrator("CentralDifference")
+      .. py:method:: Model.integrator("CentralDifference")
 
    .. tab:: Tcl
 

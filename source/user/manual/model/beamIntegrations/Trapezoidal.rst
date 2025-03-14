@@ -3,7 +3,7 @@
 Trapezoidal
 ^^^^^^^^^^^
 
-.. function:: beamIntegration 'Trapezoidal' tag secTag N
+.. function:: beamIntegration "Trapezoidal" tag secTag N
 
 .. csv-table::
    :header: "Argument", "Type", "Description"
@@ -30,7 +30,7 @@ The following examples demonstrate the command in Tcl and Python script to add a
 
    .. code-block:: python
 
-      model.beamIntegration('Trapezoidal',2,1,6)
+      model.beamIntegration("Trapezoidal",2,1,6)
 
 
 

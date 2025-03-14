@@ -1,7 +1,7 @@
 .. _DowelType:
 
-DowelType Timber Joint Material
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+DowelType Timber Joint
+^^^^^^^^^^^^^^^^^^^^^^
 
 This command is used to construct a uniaxial force-displacement or moment-rotation model which simulates the hysteresis of a dowel-type timber joint, including nails, screws, and bolts, etc. The model has the following features:
 

@@ -7,7 +7,7 @@ ModifiedNewton
 
    .. tab:: Python
 
-      .. function:: model.algorithm("ModifiedNewton" [, initial=False])
+      .. py:method:: Model.algorithm("ModifiedNewton" [, initial=False])
          :no-index:
 
          :param initial: optional flag to indicate to use initial stiffness iterations

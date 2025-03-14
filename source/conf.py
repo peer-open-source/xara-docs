@@ -195,6 +195,12 @@ else:
     #   'analytics_id': 'UA-2431545-1',
     #   "body_max_width": None,
         "show_prev_next": False,
+        "logo": {
+          "image_light": html_logo,
+          "image_dark": "_static/logo-dark.png",
+#         "link": html_baseurl, # "index.html",
+          "alt_text": "xara docs - Home",
+        }
     }
 if "book" in html_theme:
     html_theme_options.update({

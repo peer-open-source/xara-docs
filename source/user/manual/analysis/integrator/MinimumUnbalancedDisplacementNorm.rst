@@ -7,7 +7,7 @@ MinUnbalDispNorm
    
    .. tab:: Python 
 
-      .. py:function:: model.integrator("MinUnbalDispNorm", dlam0 [, jd, min, max])
+      .. py:method:: Model.integrator("MinUnbalDispNorm", dlam0 [, jd, min, max])
          :no-index:
          
          :param dlam0: First load increment (pseudo-time step) at the first iteration in the next invocation of the analysis command.

@@ -10,7 +10,7 @@ This is particularly useful for modeling large-displacement effects in constrain
 
    .. tab:: Python
 
-      .. function:: model.geomTransf(type, tag, *args)
+      .. py:method:: Model.geomTransf(type, tag, *args)
 
          :param type: string, transformation type
          :param tag: integer, unique transformation tag.

@@ -9,7 +9,7 @@ Each *plain* load pattern is associated with a TimeSeries and can contain multip
 
    .. tab:: Python 
 
-      .. function:: model.pattern("Plain", tag, series, loads={})
+      .. py:method:: Model.pattern("Plain", tag, series, loads={})
 
          :param tag: integer tag identifying the load pattern
          :param series: a string indicating a type, or an integer tag identifying a time series. This time series is used to determine the load factor applied to the loads in the pattern. Two common values for ``series`` are:  ``"Linear"`` and ``"Constant"``.

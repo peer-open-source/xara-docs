@@ -10,7 +10,7 @@ This command is used to construct a four-node quadrilateral element, which uses 
 
    .. tab:: Python
 
-      .. function:: model.element("MixedQuad", tag, nodes, section)
+      .. py:method:: Model.element("MixedQuad", tag, nodes, section)
          :no-index:
 
          :param tag: integer tag identifying the element

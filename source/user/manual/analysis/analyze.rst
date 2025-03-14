@@ -11,7 +11,7 @@ It returns a value indicating success or failure of the analysis.
    
    .. tab:: Python
 
-      .. function:: model.analyze(n, **options)
+      .. py:method:: Model.analyze(n, **options)
 
          :param n: number of analysis steps to perform.
          :type n: |integer|

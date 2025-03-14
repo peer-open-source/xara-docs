@@ -9,7 +9,7 @@ This command is used to construct a linear coordinate transformation, which perf
 
    .. tab:: Python
 
-      .. py:function:: model.geomTransf("Linear", tag, vecxz, [offi, offj])
+      .. py:method:: Model.geomTransf("Linear", tag, vecxz, [offi, offj])
          :no-index:
 
          :param integer tag: integer tag identifying transformation

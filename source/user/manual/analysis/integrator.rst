@@ -8,7 +8,7 @@ In the context of dynamic analysis, the integrator implements a time-stepping al
 In the context of static analysis, the integrator implements a *numerical continuation* method.
 More specifically, the integrator performs the following:
 
-#. determine the predictive step for time :math:`t+\Delta t`, :math:`\Delta \boldsymbol{u}` in static analysis, :math:`\Delta \boldsymbol{u}`, :math:`\Delta \dot U`, and :math:`\Delta \ddot U` in a transient analysis.
+#. determine the predictive step for time :math:`t+\Delta t`, :math:`\Delta \boldsymbol{u}` in static analysis, :math:`\Delta \boldsymbol{u}`, :math:`\Delta \dot{\boldsymbol{u}}`, and :math:`\Delta \ddot{\boldsymbol{u}}` in a transient analysis.
 #. specify the residual and tangent at any iteration, i.e. what constitutes the :math:`\boldsymbol{A}` matrix and :math:`\boldsymbol{b}` vector in :math:`Ax=b`.
 #. determine the corrective step based on the x vector, i.e. given :math:`x` what is :math:`\Delta \boldsymbol{u}` in :ref:`StaticAnalysis` analysis, :math:`\Delta \boldsymbol{u}`, :math:`\Delta \dot{\boldsymbol{u}}`, and :math:`\Delta \ddot{\boldsymbol{u}}` in a transient analysis.
 
@@ -16,7 +16,7 @@ More specifically, the integrator performs the following:
    
    .. tab:: python
 
-      .. function:: model.integrator(type, *args)
+      .. py:method:: Model.integrator(type, *args)
 
    .. tab:: tcl
 
@@ -36,9 +36,9 @@ More specifically, the integrator performs the following:
 The type of integrator used in the analysis is dependent on whether it is a static analysis or transient analysis. 
 The following contain information about ``type`` and the args required for each of the available integrator types:
 
-Static Integrators:
 
 .. toctree::
+   :caption: Static Integrators
    :maxdepth: 1
 
    integrator/LoadControl
@@ -47,9 +47,9 @@ Static Integrators:
    integrator/ArcLength
 
 
-Transient Integrators:
 
 .. toctree::
+   :caption: Transient Integrators
    :maxdepth: 1
 
    integrator/CentralDifference
@@ -61,6 +61,8 @@ Transient Integrators:
 
 
 
+References
+----------
 
 .. [1] Clarke, M.J. and Hancock, G.J. (1990) ‘A study of incremental‐iterative strategies for non‐linear analyses’, International Journal for Numerical Methods in Engineering, 29(7), pp. 1365–1391. Available at: https://doi.org/10.1002/nme.1620290702 .
 

@@ -6,7 +6,7 @@ UserDefined
 
 This class allows the user to specified locations and weights of the integration points.
 
-.. function:: beamIntegration 'UserDefined' tag N secTags locs wts
+.. function:: beamIntegration "UserDefined" tag N secTags locs wts
 
 .. csv-table::
    :header: "Argument", "Type", "Description"

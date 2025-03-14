@@ -1,17 +1,17 @@
 .. _numberer:
 
 numberer
-********
+^^^^^^^^
 
-This command configures the **DOF_Numberer**. 
-The **DOF_Numberer** determines the mapping between equation numbers in the system of equations and the degrees-of-freedom at the nodes, basically how degrees-of-freedom are numbered.
+This command configures a **DOF_Numberer**. 
+This determines the mapping between equation numbers in the system of equations and the degrees-of-freedom at the nodes, basically how degrees-of-freedom are numbered.
 
 
 .. tabs::
    
    .. tab:: Python
       
-      .. py:function:: model.numberer(type, *args)
+      .. py:method:: Model.numberer(type, *args)
    
    .. tab:: Tcl
 
@@ -28,9 +28,10 @@ The **DOF_Numberer** determines the mapping between equation numbers in the syst
 The following contain information about ``type`` and the args required for each of the available numberers:
 
 .. toctree::
+   :maxdepth: 1
 
-    numberer/PlainNumberer
-    numberer/RCM
-    numberer/AMD
+   numberer/PlainNumberer
+   numberer/RCM
+   numberer/AMD
 
 Code developed by: |fmk|

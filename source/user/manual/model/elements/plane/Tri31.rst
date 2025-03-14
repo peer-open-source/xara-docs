@@ -4,7 +4,7 @@ Triangle
 
 ``Tri31`` is a constant strain triangular element which uses three nodes and one integration points.
 
-.. function:: model.element("Tri31", tag, nodes, section, [pressure, rho, b1, b2])
+.. py:method:: Model.element("Tri31", tag, nodes, section, [pressure, rho, b1, b2])
    :no-index:
 
    :param tag: unique element object tag

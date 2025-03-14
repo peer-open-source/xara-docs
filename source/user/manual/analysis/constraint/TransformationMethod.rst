@@ -7,7 +7,7 @@ A ``Transformation`` constraint handler enforces the constraints in a model by u
 
    .. tab:: Python
 
-      .. function:: model.constraints("Transformation")
+      .. py:method:: Model.constraints("Transformation")
          :no-index:
 
    .. tab:: Tcl

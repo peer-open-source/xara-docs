@@ -9,7 +9,7 @@ This command is used to construct a BasicQuad element object which uses the stan
 
    .. tab:: Python 
 
-      .. function:: model.element("Quad", tag, nodes, section, [pressure, rho, b1, b2])
+      .. py:method:: Model.element("Quad", tag, nodes, section, [pressure, rho, b1, b2])
          :noindex:
 
          :param tag: integer, unique element object tag

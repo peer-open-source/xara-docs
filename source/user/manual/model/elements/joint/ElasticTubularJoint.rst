@@ -9,7 +9,7 @@ This command is used to construct an ElasticTubularJoint element object, which m
 
 Python:
 
-.. function:: model.element('ElasticTubularJoint', tag, (iNode, jNode), Brace_Diameter, Brace_Angle, E, Chord_Diameter, Chord_Thickness, Chord_Angle)
+.. py:method:: Model.element('ElasticTubularJoint', tag, (iNode, jNode), Brace_Diameter, Brace_Angle, E, Chord_Diameter, Chord_Thickness, Chord_Angle)
    :no-index:
 
 where:

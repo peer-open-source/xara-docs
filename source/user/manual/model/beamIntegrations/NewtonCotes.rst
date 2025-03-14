@@ -9,7 +9,7 @@ The weights for the uniformly  spaced integration points are tabulated in refere
 The force deformation response at each integration point is defined by the section.
 The order of accuracy for Gauss-Radau integration is :math:`N-1`.
 
-.. function:: beamIntegration 'NewtonCotes' tag secTag N
+.. function:: beamIntegration "NewtonCotes" tag secTag N
 
 .. csv-table::
    :header: "Argument", "Type", "Description"

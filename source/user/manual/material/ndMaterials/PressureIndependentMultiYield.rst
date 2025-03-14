@@ -10,8 +10,6 @@ Code Developed by: UC San Diego (**Dr. Zhaohui Yang**):
 During the application of gravity load (and static loads if any), material behavior is linear elastic. In the subsequent dynamic (fast) loading phase(s), the stress-strain response is elastic-plastic (see MATERIAL STAGE UPDATE below). Plasticity is formulated based on the multi-surface (nested surfaces) concept, with an associative flow rule. The yield surfaces are of the Von Mises type.
 
 
-The command to create the material object is:
-
 .. admonition:: function
 
    nDmaterial PressureIndependMultiYield $tag $nd $rho $refShearModul $refBulkModul $cohesi $peakShearStra <$frictionAng=0. $refPress=100. $pressDependCoe=0. $noYieldSurf=20 <$r1 $Gs1 …> >

@@ -9,7 +9,7 @@ The **ElasticFrame** section implements a general linear elastic frame section.
 
    .. tab:: Python (RT)
 
-      .. py:function:: model.section("ElasticFrame", tag, **kwds)
+      .. py:method:: Model.section("ElasticFrame", tag, **kwds)
          :no-index:
 
          :param E: Young's modulus

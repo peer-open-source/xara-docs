@@ -7,7 +7,7 @@ This command is used to construct an RCM degree-of-freedom numbering object to p
 
    .. tab:: Python
 
-      .. function:: model.numberer("RCM")
+      .. py:method:: Model.numberer("RCM")
          :no-index:
 
    .. tab:: Tcl

@@ -10,7 +10,7 @@ exposed as methods.
 
 .. The command is also used to define the spatial dimension of the subsequent nodes to be added and the number of degrees-of-freedom at each node. 
 
-.. class:: Model(ndm, ndf=None, echo=None)
+.. py:class:: Model(ndm, ndf=None, echo=None)
 
    Create an isolated model for given number of dimensions and number of DOFs.
 

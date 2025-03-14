@@ -9,7 +9,7 @@ The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
 
    .. tab:: Python (RT)
 
-      .. py:function:: Model.element("PrismFrame", tag, nodes, section=None, transform=None, *args)
+      .. py:method:: Model.element("PrismFrame", tag, nodes, section=None, transform=None, *args)
          :no-index:
          
          :param tag: unique element tag

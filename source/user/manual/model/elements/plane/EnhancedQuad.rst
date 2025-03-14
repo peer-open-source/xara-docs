@@ -6,7 +6,7 @@ EnhancedQuad
 
    .. tab:: Python 
 
-      .. function:: model.element("EnhancedQuad", tag, nodes, section, [pressure, rho, b1, b2])
+      .. py:method:: Model.element("EnhancedQuad", tag, nodes, section, [pressure, rho, b1, b2])
          :noindex:
 
          :param tag: integer, unique element object tag

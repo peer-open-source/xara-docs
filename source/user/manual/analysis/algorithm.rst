@@ -9,7 +9,7 @@ This method is used to define a ``SolutionAlgorithm``, which determines the sequ
 
    .. tab:: Python
 
-      .. function:: model.algorithm(name, *args)
+      .. py:method:: Model.algorithm(name, *args)
 
    .. tab:: Tcl
 

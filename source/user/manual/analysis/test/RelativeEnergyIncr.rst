@@ -11,7 +11,6 @@ The physical meaning of this quantity depends on the integrator and
 constraint handler chosen. Usually, though not always, it is equal to
 the energy unbalance in the system. The test is relatively to the first
 dot product computed for each step. 
-The command to create a EnergyIncr test is the following:
 
 .. function:: test RelativeEnergyIncr $tol $iter < $pFlag > < $nType >
 

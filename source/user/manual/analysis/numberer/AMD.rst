@@ -7,7 +7,7 @@ An *AMD* numberer uses the *approximate minimum degree* [1]_ scheme to order the
 
    .. tab:: Python
 
-      .. function:: model.numberer("AMD")
+      .. py:method:: Model.numberer("AMD")
          :no-index:
 
    .. tab:: Tcl

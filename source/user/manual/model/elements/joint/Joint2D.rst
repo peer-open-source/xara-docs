@@ -11,7 +11,7 @@ The midpoints of the parallelogram are referred to as external nodes. These node
 
   .. tab:: Python
 
-    .. function:: model.element("Joint2D", eleTag, Node1, Node2, Node3, Node4, NodeC, [Mat1, Mat2, Mat3, Mat4], MatC, LrgDspTag, <'-damage', DmgTag>, <'-damage', Dmg1 Dmg2 Dmg3 Dmg4 DmgC>)
+    .. py:method:: Model.element("Joint2D", eleTag, Node1, Node2, Node3, Node4, NodeC, [Mat1, Mat2, Mat3, Mat4], MatC, LrgDspTag, <'-damage', DmgTag>, <'-damage', Dmg1 Dmg2 Dmg3 Dmg4 DmgC>)
        :no-index:
 
   .. tab:: Tcl

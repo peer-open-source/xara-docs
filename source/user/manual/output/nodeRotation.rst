@@ -7,13 +7,12 @@ nodeRotation
    
    .. tab:: Python
       
-      .. py:function:: model.nodeRotation(tag)
-      
-         :param model: A Model object
-         :type model: :class:`Model`
-         :param int tag: The tag of the :ref:`node`
+      .. py:method:: Model.nodeRotation(tag)
 
-         :return: A list of four float components of a normalized quaternion representing the rotation of the node.
+         Return the current rotation at a node.
+
+         :param int tag: The tag of the :ref:`node` from which to obtain the rotation.
+         :return: A |list| of four float components of a normalized quaternion representing the rotation of the node.
    
    .. tab:: Tcl
       
@@ -38,5 +37,4 @@ frame elements, as demonstrated with `this <https://gallery.stairlab.io/examples
    this is not valid for 3D rotational degrees of freedom.
 
 
-This method is available in ``sees`` version ``0.1.15``.
 

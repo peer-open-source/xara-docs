@@ -9,7 +9,7 @@ The *ArcLength* static integrator is particularly useful for tracing the respons
    
    .. tab:: Python 
       
-      .. py:function:: model.integrator("ArcLength", s, alpha, det=False, exp=0.0, iterScale=1.0)
+      .. py:method:: Model.integrator("ArcLength", s, alpha, det=False, exp=0.0, iterScale=1.0)
          :no-index:
 
          :param |float| s: the initial arc-Length

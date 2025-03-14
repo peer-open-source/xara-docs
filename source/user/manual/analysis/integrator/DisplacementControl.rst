@@ -10,7 +10,7 @@ a particular degree-of-freedom at a node to be a prescribed value.
 
    .. tab:: Python
 
-      .. py:function:: model.integrator("DisplacementControl", node, dof, incr [, numIter, dUmin, dUmax])
+      .. py:method:: Model.integrator("DisplacementControl", node, dof, incr [, numIter, dUmin, dUmax])
          :no-index: 
 
          :param node: tag identifying the node whose response controls solution

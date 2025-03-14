@@ -11,6 +11,7 @@ This command is used to construct the **Convergence Test**. The convergence test
 The following contain information about ``type`` and the ``args`` required for each of the available system types:
 
 .. toctree::
+   :maxdepth: 1
 
    test/NormUnbalance
    test/NormDispIncr

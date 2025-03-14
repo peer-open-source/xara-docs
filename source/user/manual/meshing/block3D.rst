@@ -8,7 +8,7 @@ The block3D command generates three-dimensional meshes of :ref:`solid` elements.
 
    .. tab:: Python 
       
-      .. py:function:: model.block3D(div, start, element, args, block)
+      .. py:method:: Model.block3D(div, start, element, args, block)
       
          :param div: tuple of three integers specifying the number of divisions in each direction
          :type div: tuple

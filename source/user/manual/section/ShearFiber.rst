@@ -9,7 +9,7 @@ The section is defined by a collection of fibers that are discretized in the cro
 
    .. tab:: Python (RT)
     
-      .. py:function:: model.section("ShearFiber", tag, **kwds)
+      .. py:method:: Model.section("ShearFiber", tag, **kwds)
          :no-index:
          
          :param tag: unique section tag
@@ -29,7 +29,7 @@ The ``fiber`` method is used to populate the section with fibers. The required a
 
    .. tab:: Python
     
-      .. function:: model.fiber((y, z), A, tag, warp, section)
+      .. py:method:: Model.fiber((y, z), A, tag, warp, section)
 
          :param y: :math:`y`-coordinate of the fiber
          :type y: float

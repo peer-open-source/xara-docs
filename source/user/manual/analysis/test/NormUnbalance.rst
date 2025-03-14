@@ -1,18 +1,16 @@
 .. _NormUnbalance:
 
-Norm Unbalance
-^^^^^^^^^^^^^^
+NormUnbalance
+^^^^^^^^^^^^^
 
 This command is used to construct a convergence test which uses the norm of the right hand side of the matrix equation, i.e. :math:`b` vector in :math:`Ax=b`, to determine if convergence has been reached. 
 What the right-hand-side of the matrix equation is depends on integrator and constraint handler chosen. 
 Usually, though not always, it is equal to the unbalanced forces in the system. 
-The command to create a NormUnbalance test is the following:
-
 
 .. tabs::
 
    .. tab:: Python
-      .. py:function:: model.test("NormUnbalance", tol, iter, pFlag=0, nType=2)
+      .. py:method:: Model.test("NormUnbalance", tol, iter, pFlag=0, nType=2)
          :no-index:
 
          :param tol: the tolerance criteria used to check for convergence

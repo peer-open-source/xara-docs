@@ -10,7 +10,7 @@ These quantities are typically stress and strain, but can also be force and defo
  
    .. tab:: Python
 
-      .. function:: model.uniaxialMaterial(type, tag, *args)
+      .. py:method:: Model.uniaxialMaterial(type, tag, *args)
 
          :param type: material type
          :type type: string

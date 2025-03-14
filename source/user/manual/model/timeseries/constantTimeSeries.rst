@@ -9,7 +9,7 @@ This command is used to construct a TimeSeries in which the load factor applied 
 
    .. tab:: Python 
 
-      .. py:function:: model.timeSeries("Constant", tag, factor=1.0)
+      .. py:method:: Model.timeSeries("Constant", tag, factor=1.0)
          :no-index:
 
          :param |integer| tag: unique tag among TimeSeries objects.

@@ -3,7 +3,7 @@
  MidDistance
 =============
 
-.. py:function:: model.beamIntegration('MidDistance',tag,N,*secTags,*locs)
+.. py:method:: Model.beamIntegration('MidDistance',tag,N,*secTags,*locs)
    :noindex:
 
    This option allows user-specified locations of the integration points. The associated integration weights are determined from the midpoints between adjacent integration point locations.

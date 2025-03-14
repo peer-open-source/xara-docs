@@ -13,7 +13,7 @@ TCL:
 
 Python:
 
-.. function:: model.element("beamColumnJoint", tag, Node1, Node2, Node3, Node4, Mat1, Mat2, Mat3, Mat4, Mat5, Mat6, Mat7, Mat8, Mat9, Mat10, Mat11, Mat12, Mat13, <eleHeightFac, eleWidthFac>)
+.. py:method:: Model.element("beamColumnJoint", tag, Node1, Node2, Node3, Node4, Mat1, Mat2, Mat3, Mat4, Mat5, Mat6, Mat7, Mat8, Mat9, Mat10, Mat11, Mat12, Mat13, <eleHeightFac, eleWidthFac>)
    :no-index:
 
 where:

@@ -10,7 +10,7 @@ The ``getTangent`` function, or ``printA`` in Tcl, is used to return system matr
 
    .. tab:: Python
 
-      .. function:: Model.getTangent(m=0, c=0, k=1)
+      .. py:method:: Model.getTangent(m=0, c=0, k=1)
 
    .. tab:: Tcl
 

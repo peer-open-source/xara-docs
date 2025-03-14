@@ -9,7 +9,7 @@ This command is used to construct a number of single-point homogeneous boundary 
 
    .. tab:: Python
 
-      .. py:function:: model.fix(node, [flags, dof])
+      .. py:method:: Model.fix(node, [flags, dof])
 
          :param node: integer tag identifying the node to be constrained
          :param flags: tuple of ``ndf`` constraint flags (``0`` or ``1``) corresponding to the ``ndf`` degrees-of-freedom.

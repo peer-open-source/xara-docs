@@ -1,16 +1,19 @@
 .. _steel02:
 
-Steel02 Material
-^^^^^^^^^^^^^^^^
+Steel02
+^^^^^^^
 
-This command is used to construct a uniaxial Giuffre-Menegotto-Pinto steel material with isotropic strain hardening.
+*Steel02* is a uniaxial material based on the Giuffre-Menegotto-Pinto formulation with added isotropic strain hardening by [FilippouEtAl1983]_.
 
 .. tabs::
    
    .. tab:: Python 
 
-      .. function:: model.uniaxialMaterial("Steel02", tag, fy, E0, b, R0, cR1, cR2, [a1, a2, a3, a4, sigInit])
+      .. py:method:: Model.uniaxialMaterial("Steel02", tag, fy, E0, b, R0, cR1, cR2, [a1, a2, a3, a4, sigInit])
          :no-index:
+
+         Add a *Steel02* material to *model* identified by *tag*.
+
 
    .. tab:: Tcl
 
@@ -32,23 +35,22 @@ This command is used to construct a uniaxial Giuffre-Menegotto-Pinto steel mater
    sigInit, |float|, Initial Stress Value (optional: default = 0.0) 
 
 
-.. note::
 
-   The hardening formulation was developed by [FilippouEtAl1983]_.
-   $a1 and $a2: increase of compression yield envelope as proportion of yield strength after a plastic strain of $a2*($Fy/E0). 
+The hardening formulation was developed by [FilippouEtAl1983]_.
+The parameters ``a1`` and ``a2`` increase of compression yield envelope as proportion of yield strength after a plastic strain of :math:`a_2 f_y/E_0`. 
 
-   $a3 and $a4: increase of tension yield envelope as proportion of yield strength after a plastic strain of $a4*($Fy/E0). 
+The parameters ``a3`` and ``a4`` increase of tension yield envelope as proportion of yield strength after a plastic strain of $a4*($Fy/E0). 
 
-   Recommended values: ``R0`` between 10 and 20, ``cR1=0.925``, ``cR2=0.15``
+Recommended values: ``R0`` between 10 and 20, ``cR1=0.925``, ``cR2=0.15``
 
-   If ``siginit`` is specified, strain is calculated from epsP=$sigInit/$E
+If ``siginit`` is specified, strain is calculated from epsP=$sigInit/$E
 
-   .. code:: c++
+.. code:: c++
 
-      if (sigInit!= 0.0)
-         this->eps = trialStrain + sigInit/E; 
-      else
-         this->eps = trialStrain;
+  if (sigInit!= 0.0)
+     this->eps = trialStrain + sigInit/E; 
+  else
+     this->eps = trialStrain;
 
 
 .. _fig-steel02:

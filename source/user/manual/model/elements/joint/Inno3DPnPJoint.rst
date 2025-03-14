@@ -12,7 +12,7 @@ TCL:
 
 Python:
 
-.. function:: model.element('Inno3DPnPJoint', eleTag, Node1, Node2, Node3, Node4, Node5, SprMatTag01, SprMatTag02, SprMatTag03, SprMatTag04, SprMatTag05, SprMatTag06, SprMatTag07, SprMatTag08, SprMatTag09, SprMatTag10, SprMatTag11, SprMatTag12, SprMatTag13, SprMatTag14, SprMatTag15, SprMatTag16, SprMatTag17, SprMatTag18, SprMatTag19, SprMatTag20, SprMatTag21, SprMatTag22, SprMatTag23, SprMatTag24, SprMatTag25, SprMatTag26, SprMatTag27, SprMatTag28, SprMatTag29, SprMatTag30, SprMatTag31, SprMatTag32)
+.. py:method:: Model.element('Inno3DPnPJoint', eleTag, Node1, Node2, Node3, Node4, Node5, SprMatTag01, SprMatTag02, SprMatTag03, SprMatTag04, SprMatTag05, SprMatTag06, SprMatTag07, SprMatTag08, SprMatTag09, SprMatTag10, SprMatTag11, SprMatTag12, SprMatTag13, SprMatTag14, SprMatTag15, SprMatTag16, SprMatTag17, SprMatTag18, SprMatTag19, SprMatTag20, SprMatTag21, SprMatTag22, SprMatTag23, SprMatTag24, SprMatTag25, SprMatTag26, SprMatTag27, SprMatTag28, SprMatTag29, SprMatTag30, SprMatTag31, SprMatTag32)
    :no-index:
 
 where:

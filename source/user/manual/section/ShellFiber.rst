@@ -1,7 +1,7 @@
 ShellFiber 
 ^^^^^^^^^^
 
-.. py:function:: model.section("ShellFiber", tag, secArgs)
+.. py:method:: Model.section("ShellFiber", tag, secArgs)
    :no-index:
 
    :param tag: unique section tag
@@ -22,9 +22,9 @@ The linearized three dimensional displacement field :math:`u_i` has the represen
 
 
    \left.\begin{array}{rl}
-   u_1 & :=-z \theta_1\left(x_1, x_2\right)+\bar{u}_1\left(x_1, x_2\right) \\
-   u_2 & :=-z \theta_2\left(x_1, x_2\right)+\bar{u}_2\left(x_1, x_2\right) \\
-   u_3 & :=\bar{u}_3\left(x_1, x_2\right)
+   u_1 & \triangleq -z \theta_1\left(x_1, x_2\right)+\bar{u}_1\left(x_1, x_2\right) \\
+   u_2 & \triangleq -z \theta_2\left(x_1, x_2\right)+\bar{u}_2\left(x_1, x_2\right) \\
+   u_3 & \triangleq \bar{u}_3\left(x_1, x_2\right)
    \end{array}\right\}
 
 where :math:`\bar{u}_i` is the translation of the plate mid-surface and
@@ -57,20 +57,20 @@ Definte the membrane stress resultant as
 
 .. math::
 
-   p_{\alpha \beta}:=\int_{-\frac{h}{2}}^{\frac{h}{2}} \sigma_{\alpha \beta} \mathrm{d} z
+   p_{\alpha \beta}\triangleq \int_{-\frac{h}{2}}^{\frac{h}{2}} \sigma_{\alpha \beta} \mathrm{d} z
 
 Define the *moment tensor* as
 
 .. math::
 
-   m_{\alpha \beta}:=\int_{-\frac{\hbar}{2}}^{\frac{h}{2}} z \sigma_{\alpha \beta} \mathrm{d} z
+   m_{\alpha \beta}\triangleq \int_{-\frac{\hbar}{2}}^{\frac{h}{2}} z \sigma_{\alpha \beta} \mathrm{d} z
 
 
 Define the transverse shear forces as
 
 .. math::
 
-   q_\alpha:=\int_{-\frac{h}{2}}^{\frac{h}{2}} \sigma_{\alpha 3} \mathrm{~d} z
+   q_\alpha\triangleq \int_{-\frac{h}{2}}^{\frac{h}{2}} \sigma_{\alpha 3} \mathrm{~d} z
 
 
 Material

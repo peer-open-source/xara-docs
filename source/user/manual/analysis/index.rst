@@ -31,9 +31,9 @@ These include:
    :hidden:
    :maxdepth: 1
 
-   algorithm
-   integrator
    analysis
+   integrator
+   algorithm
    analyze
    constraints
    numberer

@@ -9,7 +9,7 @@ The Broyden algorithm object for general unsymmetric systems which performs succ
 
    .. tab:: Python
 
-      .. function:: model.algorithm("Broyden" [, count])
+      .. py:method:: Model.algorithm("Broyden" [, count])
          :no-index:
    
    .. tab:: Tcl

@@ -1,6 +1,7 @@
-Sphinx>=6.0
-sphinx_rtd_theme>=3.0.0
-pydata-sphinx-theme
+Sphinx>=8.2
+#sphinx_rtd_theme>=3.0.0
+#pydata-sphinx-theme
+sphinx-book-theme
 sphinx-tabs
 sphinx-sitemap
 sphinx-copybutton

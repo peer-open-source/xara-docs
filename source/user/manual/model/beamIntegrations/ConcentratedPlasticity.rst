@@ -7,7 +7,7 @@ This integration places one plastic-rotation integration point at each element e
 
 .. function:: beamIntegration ConcentratedPlasticity $integrationTag $secTagI $secTagJ $secTagE
 
-.. function:: model.beamIntegration('ConcentratedPlasticity',integrationTag,secTagI,secTagJ,secTagE)
+.. py:method:: Model.beamIntegration('ConcentratedPlasticity',integrationTag,secTagI,secTagJ,secTagE)
    :no-index:
 
 .. list-table:: 

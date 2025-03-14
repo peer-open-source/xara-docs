@@ -7,7 +7,7 @@ ASDShellQ4
 
    .. tab:: Python 
 
-      .. py:function:: model.element("ASDShellQ4", tag, nodes, section)
+      .. py:method:: Model.element("ASDShellQ4", tag, nodes, section)
          :no-index:
 
          :param tag: integer tag identifying element object
@@ -37,12 +37,12 @@ ASDShellQ4
 
 The ASDShellQ4 element is a 4-node general purpose thick shell element with the following features:
 
-#. The membrane behavior is enhanced with the *AGQ6-I* [ChenEtAl2004]_ formulation, which makes the element almost insensitive to geometry distortion, as opposed to standard iso-parametric elements.
-#. The drilling DOF is treated with the **Hughes-Brezzi** [HughesEtAl1989]_ formulation, with special care to avoid membrane locking, using a 1 point quadrature plus stabilization. This formulation constrains the drilling DOFs to the rigid body rotation via a penalty parameter as a function of the initial in-plane shear modulus. However, when using strain-softening materials, this (elastic) constraint may overstiffen the element as the in-plane shear modulus degrades. As a remedy in such a situation, the user can choose to make this constraint non-linear.
-#. The plate bending part is treated using the **MITC4** [DvorkinEtAl1984]_ [BatheEtAl1985]_ formulation, to avoid the well known transverse shear locking behavior of thick plate elements.
-#. It can be used to model both **flat** and **warped** geometries.
-#. Kinematics can be either **linear** or **corotational**. The corotational kinematics is based on the work of Felippa et al., i.e. the **EICR** [Felippa2000]_ [FelippaEtAl2005]_ (Element Independent Corotational formulation). Finite rotations are treated with Quaternions.
-#. It uses a full 2x2 Gauss quadrature, so it has a total of 4 integration points.
+* The membrane behavior is enhanced with the *AGQ6-I* [ChenEtAl2004]_ formulation, which makes the element almost insensitive to geometry distortion, as opposed to standard iso-parametric elements.
+* The drilling DOF is treated with the *Hughes-Brezzi* [HughesEtAl1989]_ formulation, with special care to avoid membrane locking, using a 1 point quadrature plus stabilization. This formulation constrains the drilling DOFs to the rigid body rotation via a penalty parameter as a function of the initial in-plane shear modulus. However, when using strain-softening materials, this (elastic) constraint may overstiffen the element as the in-plane shear modulus degrades. As a remedy in such a situation, the user can choose to make this constraint non-linear.
+* The plate bending part is treated using the *MITC4* [DvorkinEtAl1984]_ [BatheEtAl1985]_ formulation, to avoid the well known transverse shear locking behavior of thick plate elements.
+* It can be used to model both *flat* and *warped* geometries.
+* Kinematics can be either **linear** or **corotational**. The corotational kinematics is based on the work of Felippa et al. [Felippa2000]_ [FelippaEtAl2005]_ .
+* It uses a full :math:`2 \times 2` Gauss quadrature, so it has a total of 4 integration points.
 
 
 .. figure:: figures/ASDShellQ4/ASDShellQ4_geometry.png

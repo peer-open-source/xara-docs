@@ -9,7 +9,7 @@ This model implements a uniaxial bilinear steel material object with kinematic h
 
    .. tab:: Python 
 
-      .. function:: model.uniaxialMaterial("Steel01", tag, fy, E0, b, [a1, a2, a3, a4])
+      .. py:method:: Model.uniaxialMaterial("Steel01", tag, fy, E0, b, [a1, a2, a3, a4])
          :no-index:
 
          :param int tag: integer tag identifying material
@@ -72,7 +72,7 @@ This model implements a uniaxial bilinear steel material object with kinematic h
 Examples
 --------
 
-The following is used to construct a Steel01 mataerial with a tag of **1**, a yield strength of $60.0** and an initial tangent stiffness of **30000,0**.
+The following is used to construct a *Steel01* material with a tag of **1**, a yield strength of **60.0** and an initial tangent stiffness of **30000,0**.
 
    1. **Tcl Code**
 

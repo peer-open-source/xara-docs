@@ -9,7 +9,7 @@ This method is used to construct a ``Node`` which stores information about coord
 
    .. tab:: Python 
 
-      .. function:: model.node(tag, coords, [mass])
+      .. py:method:: Model.node(tag, coords, [mass])
 
          :param tag: integer tag identifying node
          :param coords: tuple of **ndm** nodal coordinates

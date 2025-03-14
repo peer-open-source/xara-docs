@@ -1,9 +1,9 @@
 .. _NormDispIncr:
 
 Norm Displacement Increment
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This command is used to construct a convergence test which uses the norm of the solution, :math:`x` vector, of the matrix equation, :math:`Ax=b` to determine if convergence has been reached. What the right-hand-side of the matrix equation is depends on integrator and constraint handler chosen. Usually, though not always, it is equal to the change in nodal displacements in the system due to the current unbalance. The command to create a NormUnbalance test is the following:
+This command is used to construct a convergence test which uses the norm of the solution, :math:`x` vector, of the matrix equation, :math:`Ax=b` to determine if convergence has been reached. What the right-hand-side of the matrix equation is depends on integrator and constraint handler chosen. Usually, though not always, it is equal to the change in nodal displacements in the system due to the current unbalance. 
 
 .. function:: test NormDispIncr $tol $iter <$pFlag> <$nType>
 
@@ -44,4 +44,4 @@ The following examples demonstrate the command to create a NormDispIncr test whi
       model.test("NormDispIncr", 1.0e-2, 10, 2)
 
 
-Code Developed by: **fmk**
+Code Developed by: |fmk|

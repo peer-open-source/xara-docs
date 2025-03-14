@@ -1,7 +1,7 @@
 FrameLoad
 ^^^^^^^^^
 
-.. function:: model.eleLoad("FrameLoad", distr, n, [r, m], /, basis, shape)
+.. py:method:: Model.eleLoad("FrameLoad", distr, n, [r, m], /, basis, shape)
    :no-index:
 
    :param distr: key defining the distribution of the load. Options are ``"Dirac"`` and ``"Heaviside"``

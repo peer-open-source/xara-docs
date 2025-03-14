@@ -7,7 +7,7 @@ Fixed Number Iterations
 
    .. tab:: Python
       
-      .. py:function:: model.test("FixedNumIter", niter)
+      .. py:method:: Model.test("FixedNumIter", niter)
          :no-index:
 
          :param niter: number of iterations to perform

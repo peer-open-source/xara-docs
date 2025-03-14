@@ -9,7 +9,7 @@ This command is used to construct an ASDShellT3 :ref:`Element`.
    
    .. tab:: Python
 
-      .. function:: model.element("ASDShellT3", tag, nodes, section,  **kwargs)
+      .. py:method:: Model.element("ASDShellT3", tag, nodes, section,  **kwargs)
          :no-index:
 
          :param tag: integer tag identifying the :ref:`Element`

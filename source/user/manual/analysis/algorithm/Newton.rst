@@ -10,7 +10,8 @@ The command is of the following form:
 .. tabs::
    .. tab:: Python
 
-      .. function:: Model.algorithm("Newton", [initial=False, initialThenCurrent=False])
+      .. py:method:: Model.algorithm("Newton" [, initial=False, initialThenCurrent=False])
+         :no-index: 
 
          :param initial: optional flag to indicate to use initial stiffness
          :param initialThenCurrent: optional flag to indicate to use initial stiffness on first step and then current on subsequent steps

@@ -8,7 +8,7 @@ This integration places one integration point at each element end, representing 
 
 .. function:: beamIntegration ConcentratedCurvature $integrationTag $secTagI $LpI $secTagJ $LpJ $secTagE
 
-.. function:: model.beamIntegration('ConcentratedCurvature',tag,secTagI,LpI,secTagJ,LpJ,secTagE)
+.. py:method:: Model.beamIntegration('ConcentratedCurvature',tag,secTagI,LpI,secTagJ,LpJ,secTagE)
 
 .. list-table:: 
    :widths: 10 10 40

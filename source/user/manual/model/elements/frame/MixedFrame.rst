@@ -8,7 +8,7 @@ Mixed finite element formulation for 3D frame elements. [1]_ [2]_.
 
    .. tab:: Python (RT)
 
-      .. py:function:: Model.element("MixedFrame", tag, nodes, section=None, transform=None, integration=None, *args)
+      .. py:method:: Model.element("MixedFrame", tag, nodes, section=None, transform=None, integration=None, *args)
          :no-index:
 
          :param tag: unique element tag

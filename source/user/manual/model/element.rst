@@ -9,7 +9,7 @@ This method is used to construct an element and add it to the :class:`Model`.
 
    .. tab:: Python
 
-      .. function:: model.element(type, tag, nodes, *args, **kwds)
+      .. py:method:: Model.element(type, tag, nodes, *args, **kwds)
 
          :param type: string defining the type of element
          :param tag: integer tag identifying the element
@@ -39,17 +39,12 @@ The following subsections contain information about ``type`` and the number of n
    :maxdepth: 2
 
    elements/frame/index
+   elements/Truss
    elements/plane/index
    elements/shell/index
    elements/solid/index
    elements/joint/index
    elements/other/index
 
-2. Truss Elements
-
-.. toctree::
-   :maxdepth: 1
-
-   elements/Truss
 
 

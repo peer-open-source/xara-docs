@@ -9,7 +9,7 @@ This command is used to define a nodal load.
 
    .. tab:: Python 
 
-      .. py:function:: Model.load(tag, load, pattern=None)
+      .. py:method:: Model.load(tag, load, pattern=None)
 
          :param tag: integer tag identifying the node on which the load acts
          :param load: tuple of **ndf** load values that are to be applied to the node.

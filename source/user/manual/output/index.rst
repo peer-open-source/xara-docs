@@ -24,4 +24,5 @@ Output
    nodeAccel
    nodeCoord   
    nodeRotation
+   nodeEigenvector
 

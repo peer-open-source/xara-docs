@@ -24,7 +24,7 @@ The implementation closely follows the treatment by Perez and Filippou (2024) [3
 
    .. tab:: Python (RT)
 
-      .. py:function:: model.element("ExactFrame", tag, nodes, section, transform)
+      .. py:method:: Model.element("ExactFrame", tag, nodes, section, transform)
          :no-index:
 
          :param tag: unique element tag

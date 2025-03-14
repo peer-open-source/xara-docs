@@ -1,5 +1,8 @@
 .. _modeling:
 
+.. py:currentmodule:: xara
+
+
 Modeling
 ^^^^^^^^
 

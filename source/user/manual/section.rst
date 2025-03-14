@@ -9,7 +9,7 @@ This command configures a Section, which represents a constitutive model between
 
    .. tab:: Python (RT)
 
-      .. function:: model.section(type, tag, *args)
+      .. py:method:: Model.section(type, tag, *args)
 
          :param type: section type
          :type type: string

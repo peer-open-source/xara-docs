@@ -15,7 +15,7 @@ This command is used to construct a TimeSeries object in which the load factor a
 
    .. tab:: Python 
 
-      .. function:: model.timeSeries("Linear", tag, factor=1.0)
+      .. py:method:: Model.timeSeries("Linear", tag, factor=1.0)
          :no-index:
 
          :param |integer| tag: unique tag among TimeSeries objects

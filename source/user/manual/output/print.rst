@@ -3,13 +3,14 @@
 ``print``
 ^^^^^^^^^
 
-This command is used to print information about a :class:`Model`.
 
 .. tabs::
 
    .. tab:: Python
       
-      .. py:function:: model.print([node, ele])
+      .. py:method:: Model.print([node, ele])
+         
+         Print information about a :class:`Model` to *stdout*, or a file.
    
    .. tab:: Tcl
       

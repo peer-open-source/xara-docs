@@ -9,7 +9,7 @@ This is the command issued to configure an analysis.
 
    .. tab:: Python
 
-      .. function:: model.analysis(type, *args)
+      .. py:method:: Model.analysis(type, *args)
 
    .. tab:: Tcl
 

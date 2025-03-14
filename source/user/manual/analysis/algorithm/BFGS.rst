@@ -7,7 +7,7 @@ BFGS
 
    .. tab:: Python
       
-      .. function:: model.algorithm("BFGS" [, count])
+      .. py:method:: Model.algorithm("BFGS" [, count])
          :no-index:
    
    .. tab:: Tcl 

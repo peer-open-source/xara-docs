@@ -9,7 +9,7 @@ This command returns the current displacement at a specified node.
 
    .. tab:: Python 
 
-      .. function:: model.nodeDisp(tag, dof=None)
+      .. py:method:: Model.nodeDisp(tag, dof=None)
 
    .. tab:: Tcl
 

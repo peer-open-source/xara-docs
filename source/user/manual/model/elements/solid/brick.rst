@@ -9,7 +9,7 @@ This command is used to construct an eight-node brick, which uses the standard i
 
    .. tab:: Python
 
-      .. py:function:: Model.element("Brick", tag, nodes, material, *args, **kwargs)
+      .. py:method:: Model.element("Brick", tag, nodes, material, *args, **kwargs)
          :no-index:
 
          :param tag: integer tag identifying the element

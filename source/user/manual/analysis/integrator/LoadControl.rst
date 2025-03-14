@@ -7,7 +7,7 @@
 
    .. tab:: Python
 
-      .. function:: model.integrator("LoadControl", dlambda, numIter=1, minLambda=None, maxLambda=None)
+      .. py:method:: Model.integrator("LoadControl", dlambda, numIter=1, minLambda=None, maxLambda=None)
          :no-index:
 
          :param dlambda: the load factor increment :math:`\lambda`

@@ -9,7 +9,7 @@ This command is used to configure an NDMaterial which represents the stress-stra
    
    .. tab:: Python 
 
-      .. function:: model.material(type, tag, *args)
+      .. py:method:: Model.material(type, tag, *args)
 
          :param type: material type
          :type type: |string|

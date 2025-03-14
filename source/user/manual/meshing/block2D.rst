@@ -8,7 +8,7 @@ block2D
    
    .. tab:: Python 
       
-      .. py:function:: model.block2D(div, *args)
+      .. py:method:: Model.block2D(div, *args)
       
          :param div: tuple of two integers specifying the number of divisions in each direction
          :type div: tuple

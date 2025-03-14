@@ -9,7 +9,7 @@ This command is used to configure an ExpressNewton algorithm for nonlinear struc
 
    .. tab:: Python 
       
-      .. function:: model.algorithm("ExpressNewton" [, iter, kMultiplier, initialTangent, currentTangent, factorOnce])
+      .. py:method:: Model.algorithm("ExpressNewton" [, iter, kMultiplier, initialTangent, currentTangent, factorOnce])
          :no-index:
    
    .. tab:: Tcl

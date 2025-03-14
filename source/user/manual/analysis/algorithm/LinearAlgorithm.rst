@@ -9,7 +9,7 @@ This command is used to set a Linear algorithm which takes one iteration to solv
 
    .. tab:: Python
 
-      .. function:: model.algorithm("Linear", [initial=False, factorOnce=False])
+      .. py:method:: Model.algorithm("Linear", [initial=False, factorOnce=False])
          :no-index:
          
          :param initial: optional flag to indicate to use initial stiffness

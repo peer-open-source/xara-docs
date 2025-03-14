@@ -9,7 +9,7 @@ A *PlaneStrain* section maintains a condition of plane strain in a 2D solid elem
 
    .. tab:: Python 
 
-      .. function:: Model.section("PlaneStrain", tag, material, thickness)
+      .. py:method:: Model.section("PlaneStrain", tag, material, thickness)
          :no-index:
 
          :param tag: integer tag identifying the section

@@ -12,7 +12,7 @@ TCL:
 
 Python:
 
-.. function:: model.element('LehighJoint2D', eleTag, iNode, jNode, kNode, lNode, matTag1, matTag2, matTag3, matTag4, matTag5, matTag6, matTag7, matTag8, matTag9)
+.. py:method:: Model.element('LehighJoint2D', eleTag, iNode, jNode, kNode, lNode, matTag1, matTag2, matTag3, matTag4, matTag5, matTag6, matTag7, matTag8, matTag9)
    :no-index:
 
 

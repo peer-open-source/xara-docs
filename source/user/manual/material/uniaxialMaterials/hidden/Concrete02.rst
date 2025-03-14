@@ -9,7 +9,7 @@ This command is used to construct a uniaxial concrete material Material with lin
 
    .. tab:: Python
 
-      .. function:: model.uniaxialMaterial("Concrete02", tag, fpc, epsc0, fpcu, epsU, lambda, ft, Ets)
+      .. py:method:: Model.uniaxialMaterial("Concrete02", tag, fpc, epsc0, fpcu, epsU, lambda, ft, Ets)
 
    .. tab:: Tcl
 

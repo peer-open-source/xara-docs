@@ -10,7 +10,7 @@ Constraint equations define a specified value for a DOF, or a relationship betwe
 .. tabs::
    
    .. tab:: Python
-      .. py:function:: model.constraints(type, *args)
+      .. py:method:: Model.constraints(type, *args)
 
    .. tab:: Tcl
       .. function:: constraints type? arg1? ...

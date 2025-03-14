@@ -3,7 +3,7 @@
 Node Recorder
 ^^^^^^^^^^^^^
 
-The Node recorder type records the response of a number of nodes at every converged step. The command to create a node recorder is:
+The Node recorder type records the response of a number of nodes at every converged step. 
 
 .. function:: recorder(Node, <-file $filename>,<-xml $filename>,<-binary $filename>,<-tcp $inetAddress $port>, <-precision  $nSD>, <-timeSeries $tsTag>,<-time>,<-dT $deltaT>, <-closeOnWrite>, <-node  $nodeTags>,< -nodeRange $startNode $endNode>,<-region $regionTag> -dof $dofs $respType)
    :noindex:

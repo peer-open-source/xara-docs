@@ -7,7 +7,7 @@ This command configures a *Plain* degree-of-freedom numbering object to provide 
 
    .. tab:: Python
 
-      .. function:: model.numberer("Plain")
+      .. py:method:: Model.numberer("Plain")
          :no-index:
 
    .. tab:: Tcl

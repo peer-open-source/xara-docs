@@ -9,7 +9,7 @@ This command is used to construct an ten-node tetrahedron, which uses the standa
 
    .. tab:: Python (RT)
 
-      .. function:: Model.element("TenNodeTetrahedron", tag, nodes, material, *args)
+      .. py:method:: Model.element("TenNodeTetrahedron", tag, nodes, material, *args)
          :no-index:
 
          :param tag: integer tag identifying the element

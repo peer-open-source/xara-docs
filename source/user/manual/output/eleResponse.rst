@@ -9,7 +9,7 @@ This command is used to obtain state information from an element.
 
    .. tab:: Python 
 
-      .. function:: model.eleResponse(tag, *args)
+      .. py:method:: Model.eleResponse(tag, *args)
                
    .. tab:: Tcl 
 

@@ -9,7 +9,7 @@ A TimeSeries represents the relationship between the time in the domain, :math:`
 
    .. tab:: Python
 
-      .. function:: model.timeSeries(type, tag, *args)
+      .. py:method:: Model.timeSeries(type, tag, *args)
          
          :param type: type of time series
          :type type: |string|
