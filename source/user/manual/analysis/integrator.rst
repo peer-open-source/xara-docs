@@ -33,9 +33,7 @@ More specifically, the integrator performs the following:
 	``args``, |list|,   a list of arguments for that type
 
 
-The type of integrator used in the analysis is dependent on whether it is a static analysis or transient analysis. 
-The following contain information about ``type`` and the args required for each of the available integrator types:
-
+The type of integrator used in the analysis is dependent on whether it is a :ref:`static <StaticAnalysis>` analysis or :ref:`transient <TransientAnalysis>` analysis. 
 
 .. toctree::
    :caption: Static Integrators
