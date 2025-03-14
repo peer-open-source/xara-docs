@@ -3,6 +3,13 @@
 Corotational
 ^^^^^^^^^^^^
 
+.. figure:: figures/directors.png
+   :align: center
+   :figclass: align-center
+
+   Corotational transformation of a two-node frame.
+
+
 The corotational coordinate transformation performs a geometric transformation of beam stiffness and resisting force from a *basic* system [1]_ to the global coordinate system. [2]_
 
 .. tabs::
