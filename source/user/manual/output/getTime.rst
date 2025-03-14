@@ -1,23 +1,35 @@
 .. _getTime:
 
-``getTime``
-***********
+getTime
+^^^^^^^
 
-This command returns the current time in the **Domain**.
 
-.. function:: getTime
+.. tabs::
 
-.. admonition:: Example:
+   .. tab:: Python
 
-   The following example is used to set the variable **currentTime** to current state of **time** in the **Domain**
+      .. py:method:: Model.getTime()
 
-   1. **Tcl Code**
+         Return the current time in the :class:`Model`.
+
+         :returns: |float| -- Current time.
+
+   .. tab:: Tcl
+
+      .. function:: getTime;
+
+Example 
+-------
+
+The following example is used to set the variable **currentTime** to current state of **time** in the **Domain**
+
+1. **Tcl Code**
 
    .. code-block:: tcl
 
 	set currentTime [getTime]
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 

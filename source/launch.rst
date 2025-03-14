@@ -1,9 +1,15 @@
-Getting Started
+Overview
 ===============
 
 *xara* is a free and open source tool for simulating the nonlinear response of structural and geotechnical systems. 
 *xara* is developed by PEER as an alternative front-end to the simulation framework proposed by `McKenna (1997) <https://opensees.stairlab.io/developer/references.html>`_.
 The design of the interface was guided by the demands of the *BRACE2* project, for which a suitably *reliable* and *performant* solution was not available.
+
+
+.. toctree::
+   :hidden:
+
+   self
 
 .. _user-manual:
 
@@ -16,6 +22,7 @@ The design of the interface was guided by the demands of the *BRACE2* project, f
    user/manual/analysis/index
    user/manual/output/index
    user/manual/misc/index
+   Examples <https://gallery.stairlab.io>
 
 
 .. toctree::

@@ -1,7 +1,7 @@
-Other
-^^^^^
+Control
+^^^^^^^
 
-These methods generally consist of those that directly alter the *state* of a :class:`Model`.
+These methods generally consist of those that directly control the *state* of a :class:`Model`.
 
 .. toctree::
    :maxdepth: 1

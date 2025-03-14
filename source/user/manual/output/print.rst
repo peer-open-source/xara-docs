@@ -1,25 +1,31 @@
-.. print_
+.. _print:
 
-``print``
-^^^^^^^^^
+print
+^^^^^
 
 
 .. tabs::
 
    .. tab:: Python
       
-      .. py:method:: Model.print([node, ele])
+      .. py:method:: Model.print([file, node, ele])
          
          Print information about a :class:`Model` to *stdout*, or a file.
+
+         :param file: The name of the file to which data will be sent. Overwrites existing file. Default is to print to *stdout*.
+         :param node: A list of node tags to print. Default is to print all nodes.
+         :type node: |list|
+         :param ele: A list of element tags to print. Default is to print all elements.
+         :type ele: |list|
+
    
    .. tab:: Tcl
       
       .. function:: print <-file $fileName> [-node|-ele] <-flag $flag > {*}$tags
   
-         $fileName    (optional) name of file to which data will be sent. overwrites existing file. default is to print to stderr)
-         $flag	     integer flag to be sent to the print() method, depending on the node and element type (optional)
-         $node1 $node2 ..     (optional) integer tags of nodes to be printed. default is to print all.
-         $ele1 $ele2 ..	     (optional) integer tags of elements to be printed. default is to print all.
+         fileName    (optional) name of file to which data will be sent. overwrites existing file. default is to print to stderr)
+         flag	     integer flag to be sent to the print() method, depending on the node and element type (optional)
+         tags  (optional) integer tags of nodes or elements to be printed. default is to print all.
 
 
 

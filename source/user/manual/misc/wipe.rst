@@ -1,14 +1,15 @@
 .. _wipe:
 
-``wipe``
-^^^^^^^^
+wipe
+^^^^
 
 This command is used to clear the domain objects, the recorders, and any analysis objects. 
-It resets the time in the **Domain** to **0.0**.
+It resets the time in the :class:`Model` to **0.0**.
 
 .. tabs::
 
    .. tab:: Python 
+
       .. py:method:: Model.wipe()
 
          Remove all objects in the model.
@@ -19,11 +20,14 @@ It resets the time in the **Domain** to **0.0**.
 
          Remove all objects in the model.
 
-This command is used to start over without having to exit and restart the interpreter. This is useful for example if you want to subject the model to multiple ground motions or subject different models to the same ground motion! It causes all elements, nodes, constraints, loads to be removed from the domain. In addition it deletes all recorders, analysis objects and all material objects created by the model builder. 
+It causes all elements, nodes, constraints, loads to be removed from the domain. 
+In addition it deletes all recorders, analysis objects and all material objects created by the model builder. 
 
-.. deprecated:: 3.0.3
+.. note::
 
-   The `wipe` method is deprecated for Python and may be removed in future versions.
+   Unlike older OpenSees distributions, |OpenSeesRT| does not maintain model state with a global varible.
+   Consequently, the wipe command is no longer necessary when multiple models are created from a single process.
+   In general it is more convenient (and preferable) to create a new :class:`Model` object rather than using the wipe method.
 
 
 Examples
@@ -31,13 +35,13 @@ Examples
 
 The following example demonstrates the use of the wipe command.
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: none
 
       wipe
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 

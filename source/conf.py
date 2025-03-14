@@ -200,7 +200,7 @@ else:
         "logo": {
           "image_light": html_logo,
           "image_dark": "_static/logo-dark.png",
-#         "link": html_baseurl, # "index.html",
+          "link": html_baseurl, # "index.html",
           "alt_text": "xara docs - Home",
         }
     }
@@ -208,6 +208,7 @@ if "book" in html_theme:
     html_theme_options.update({
         "use_download_button":  False,
         "use_edit_page_button": False,
+        "article_header_start": ["breadcrumbs"]
     })
 
 html_context = {

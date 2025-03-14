@@ -14,3 +14,9 @@ block2D
          :type div: tuple
          :param args: list of arguments
          :type args: list
+
+
+.. deprecated:: 4.0.0
+
+   This method is deprecated for Python and may be removed in future versions. 
+   Use the :py:meth:`Model.surface` method instead.

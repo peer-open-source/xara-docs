@@ -3,25 +3,26 @@
 eigen
 ^^^^^
 
-This command is used to perform the eigenvalue analysis.
 
 .. tabs::
 
    .. tab:: Python 
 
       .. py:method:: Model.eigen(n, solver="-genBandArpack")
-      
+         
+         Perform an eigenvalue analysis and return a list of eigenvalues.
+
          :param n: number of eigenvalues required.
          :type n: |integer|
          :param solver: optional string detailing type of solver: -genBandArpack, -symmBandLapack, -fullGenLapack (default: -genBandArpack).
          :type solver: |string|
-         :returns: A list containing the eigenvalues
+         :returns: A |list| containing the eigenvalues
    
    .. tab:: Tcl
 
       .. function:: eigen <$solver> $numEigenvalues
 
-      .. csv-table:: 
+      .. csv-table::
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
          
