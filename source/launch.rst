@@ -39,7 +39,7 @@ Documentation of these methods is organized as follows:
    user/manual/analysis/index
    user/manual/output/index
    user/manual/misc/index
-   Examples <https://gallery.stairlab.io>
+   Examples <https://gallery.stairlab.io/examples/>
 
 
 
