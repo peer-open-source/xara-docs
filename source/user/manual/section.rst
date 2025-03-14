@@ -19,7 +19,7 @@ This command configures a Section, which represents a constitutive model between
 
    .. tab:: Tcl
 
-      .. function:: section type? tag? arg1? ...
+      .. function:: section type? tag? args? ...
 
       .. csv-table:: 
          :header: "Argument", "Type", "Description"
@@ -27,7 +27,7 @@ This command configures a Section, which represents a constitutive model between
 
          $type,    |string|,      section type
          $tag,     |integer|,     unique section tag.
-         $secArgs, |list|,        a list of material arguments with number dependent on section type
+         $args, |list|,        a list of material arguments with number dependent on section type
 
 
 Library

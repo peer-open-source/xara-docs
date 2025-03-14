@@ -10,6 +10,8 @@ Allow: /user/manual/model/element.html
 Allow: /user/manual/model/elements/frame/ExactFrame.html
 Allow: /user/manual/model/geomTransf/Corotational.html
 Allow: /user/manual/section.html
+Allow: /user/manual/section/ShearFiber.html
+Allow: /user/manual/section/ShellFiber.html
 Allow: /user/manual/output/print.html
 Allow: /user/manual/output/nodeRotation.html
 Allow: /user/manual/meshing/index.html

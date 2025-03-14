@@ -3,18 +3,18 @@
 modalProperties
 ***************
 
-|  This command is used to compute the modal properties of a model after an :ref:`eigen`.
-|  This command computes the following modal properties:
+This command is used to compute the modal properties of a model after an :ref:`eigen`.
+This command computes the following modal properties:
 
-   *  :math:`m_t` : A vector with the total mass of the structure for each DOF, considering both free and fixed DOFs.
-   *  :math:`m_f` : The total mass of the structure, but considering only the masses at free DOFs.
-   *  :math:`CoM` : The center of mass.
-   *  :math:`gm` : The generalized mass matrix.
-   *  :math:`MPF` : The modal participation factors.
-   *  :math:`MPM` : The modal participation masses.
-   *  :math:`MPMc` : The cumulative modal participation masses.
-   *  :math:`MPM\left(\%\right)` : The modal participation masse ratios.
-   *  :math:`MPMc\left(\%\right)` : The cumulative modal participation masse ratios.
+*  :math:`m_t` : A vector with the total mass of the structure for each DOF, considering both free and fixed DOFs.
+*  :math:`m_f` : The total mass of the structure, but considering only the masses at free DOFs.
+*  :math:`CoM` : The center of mass.
+*  :math:`gm` : The generalized mass matrix.
+*  :math:`MPF` : The modal participation factors.
+*  :math:`MPM` : The modal participation masses.
+*  :math:`MPMc` : The cumulative modal participation masses.
+*  :math:`MPM\left(\%\right)` : The modal participation masse ratios.
+*  :math:`MPMc\left(\%\right)` : The cumulative modal participation masse ratios.
 
 .. function:: modalProperties <-print> <-return> <-file $reportFileName> <-unorm>
 
@@ -182,17 +182,17 @@ modalProperties
 
 Theory
 ^^^^^^
-|  The eigenvalues :math:`\lambda` and the eigenvectors :math:`\Phi` can be obtained after solving the *generalized eigenvalue problem* for two symmetric matrices :math:`K` (stiffness) and :math:`M` (mass) given by:
+The eigenvalues :math:`\lambda` and the eigenvectors :math:`\Phi` can be obtained after solving the *generalized eigenvalue problem* for two symmetric matrices :math:`K` (stiffness) and :math:`M` (mass) given by:
 
 .. math::
    \left (K - \lambda M \right ) \Phi = 0
 
-|  The global mass matrix :math:`M` is given by the assembly of :math:`n` elemental and nodal mass matrices :math:`m_e`:
+The global mass matrix :math:`M` is given by the assembly of :math:`n` elemental and nodal mass matrices :math:`m_e`:
 
 .. math::
-   M = \bigwedge_{i=1}^{n}m_e
+   M = \bigwedge_{i=1}^{n} m_e
 
-|  :math:`M` is not necessarily diagonal, because some elemental matrices :math:`m_e` may be consistent. However, the computation of :math:`CoM`, :math:`m_t` and :math:`m_f` requires a lumped version of :math:`M`. The global lumped mass matrix :math:`LM` can be computed by the assembly of a diagonalized version of the elemental mass matrices :math:`m_e`:
+:math:`M` is not necessarily diagonal, because some elemental matrices :math:`m_e` may be consistent. However, the computation of :math:`CoM`, :math:`m_t` and :math:`m_f` requires a lumped version of :math:`M`. The global lumped mass matrix :math:`LM` can be computed by the assembly of a diagonalized version of the elemental mass matrices :math:`m_e`:
 
 .. math::
    LM = \bigwedge_{i=1}^{n}diag\left(m_e\right)

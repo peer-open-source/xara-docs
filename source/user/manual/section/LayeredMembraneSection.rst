@@ -1,10 +1,9 @@
 .. _LayeredMembraneSection:
 
-ShellFiber 
-^^^^^^^^^^
+LayeredMembraneSection 
+^^^^^^^^^^^^^^^^^^^^^^
 
-This command is used to construct a LayeredMembraneSection. 
-It is the abstract representation for the stress-strain behavior for a layered membrane element (based on the work of Rojas et al., 2016). The LayeredMembraneSection is similar to the **RCLMS** class, except that this class  allows the use of nd materials available in OpenSees.
+*LayeredMembraneSection* is the abstract representation for the stress-strain behavior for a layered membrane element (based on the work of Rojas et al., 2016). The LayeredMembraneSection is similar to the **RCLMS** class, except that this class  allows the use of nd materials available in OpenSees.
 
 .. function:: section LayeredMembraneSection $secTag $total_thickness $nLayers -mat{$Material_tags} -thick{$Thicknesses} <-Eout $OutofPlaneModulus>
 
@@ -45,11 +44,12 @@ The following recorders are available with the LayeredMembraneSection.
    | 1. The **LayeredMembraneSection** can be used in a ``MEFI`` element. 
    | 2. The section can also be referred to as **LMS**.
 
-.. admonition:: Examples
-   
-   For the development of this example, the RW-A20-P10-S38 wall specimen was employed (Tran, 2012). Uniaxial concrete and steel materials are defined, along with FSAM nDMaterials used within LMS sections to represent sections of types **a** and **b**, as illustrated in Fig. 3.1.7.1(a) for the RCLMS example.
+Examples
+--------
 
-   1. **Tcl Code**
+For the development of this example, the RW-A20-P10-S38 wall specimen was employed (Tran, 2012). Uniaxial concrete and steel materials are defined, along with FSAM nDMaterials used within LMS sections to represent sections of types **a** and **b**, as illustrated in Fig. 3.1.7.1(a) for the RCLMS example.
+
+1. **Tcl Code**
 
    .. code-block:: tcl
 
@@ -131,7 +131,7 @@ The following recorders are available with the LayeredMembraneSection.
       section LMS 10 $tw 1 -mat 6 -thick $tw;     # Section type b (wall web)
       section LMS 11 $tw 1 -mat 7 -thick $tw;     # Section type a (wall boundary)
 		
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 
@@ -213,7 +213,8 @@ The following recorders are available with the LayeredMembraneSection.
 
 
 
-**REFERENCES:**
+References
+----------
 
 #. Rojas, F., Anderson, J. C., Massone, L. M. (2016). A nonlinear quadrilateral layered membrane element with drilling degrees of freedom for the modeling of reinforced concrete walls. Engineering Structures, 124, 521-538. (`link <https://www.sciencedirect.com/science/article/pii/S0141029616302954>`_).
 #. Tran, T. A. (2012). Experimental and Analytical Studies of Moderate Aspect Ratio Reinforced Concrete Structural Walls. Ph.D. Dissertation, Department of Civil and Environmental Engineering, University of California, Los Angeles. (`link <https://escholarship.org/uc/item/1538q2p8>`_).

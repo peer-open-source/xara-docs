@@ -52,16 +52,17 @@ The ASDShellQ4 element is a 4-node general purpose thick shell element with the 
 	Nodes, Gauss points, local coordinate system, warped and flat geometry
 
 
-Valid :ref:`eleResponse` queries to the ASDShellQ4 element are:
+Valid :ref:`eleResponse` queries to this element are:
  
  *  ``"force"``, ``"forces"``, ``"globalForce"``, or ``"globalForces"``:
      *  Internal forces at the element's nodes.
      *  Orientation: global coordinate system.
      *  Size: 24 columns of data, 6 components for each one of the 4 nodes.
- *  ``"material $secTag $secArg1 ... $secArgN"``:
-     *  Section response at section **$secTag**
-     *  **$secTag** is the 1-based index of the integration point (1 to 4).
-     *  '**$secArg1 ... $secArgN**' are the arguments required by the SectionDeformationObject at the requested integration point.
+ *  ``"material $tag $args ..."``:
+     *  Section response at section **$tag**
+     *  **$tag** is the 1-based index of the integration point (1 to 4).
+     *  **$args ...** are the arguments required by the :ref:`Section` at the requested integration point.
+
 
 Examples
 --------

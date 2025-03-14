@@ -1,11 +1,12 @@
 ShellFiber 
 ^^^^^^^^^^
 
-.. py:method:: Model.section("ShellFiber", tag, secArgs)
+.. py:method:: Model.section("ShellFiber", tag, *args)
    :no-index:
 
    :param tag: unique section tag
    :type tag: integer 
+
 
 Formulation
 ===========
