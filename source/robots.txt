@@ -5,6 +5,7 @@ User-agent: *
 Allow: /$
 Allow: /genindex.html
 Allow: /launch.html
+Allow: /sitemap.xml
 Allow: /user/manual/model/model_class.html
 Allow: /user/manual/model/element.html
 Allow: /user/manual/model/elements/frame/ExactFrame.html
