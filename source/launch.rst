@@ -22,13 +22,12 @@ The simplest way to create a model is by using its constructor:
 
 
 Once a Model has been created, its `methods` are used to perform various operations. 
-These are organized as follows:
+Documentation of these methods is organized as follows:
 
-#. :ref:`Modeling <modeling>` methods are used to add components to the finite element model.
+* :ref:`Modeling <modeling>` methods are used to add components to the finite element model.
+* :ref:`Analysis <lblAnalysisCommands>` methods are used to move the state of the model from one converged state to another via a number of trial steps.
+* :ref:`Output <output>` methods allow one to obtain output from a finite element analysis, e.g. to record the node displacement history.
 
-#. :ref:`Analysis <lblAnalysisCommands>` methods are used to move the state of the model from one converged state to another via a number of trial steps.
-
-#. :ref:`Output <output>` methods allow the user to obtain output from a finite element analysis, e.g. to record the node displacement history.
 
 .. toctree::
    :caption: Documentation
@@ -43,9 +42,11 @@ These are organized as follows:
    Examples <https://gallery.stairlab.io>
 
 
+
 .. toctree::
    :caption: About
    :maxdepth: 1
+   :hidden:
 
    user/guides/index
    about/compatibility/index
