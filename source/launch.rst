@@ -13,7 +13,7 @@ The design of the interface was guided by the demands of the *BRACE2* project, f
 
 .. _user-manual:
 
-The :ref:`Model <modelClass>` class encapsulates a finite element analysis in *xara*. 
+The :ref:`Model <modelClass>` class encapsulates a finite element analysis with *xara*. 
 The simplest way to create a model is by using its constructor:
 
 .. code:: Python
