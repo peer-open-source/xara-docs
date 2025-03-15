@@ -38,3 +38,17 @@ The valid :ref:`eleResponse` queries are
 * ``"force"``, and 
 * ``"deformation"``. 
 
+.. note::
+
+   This section is appropriate for *any* homogeneous section. It is capable of
+   representing asymmetric sections, shear warping and torsional warping.
+
+
+Coupling
+--------
+
+
+References
+----------
+
+
