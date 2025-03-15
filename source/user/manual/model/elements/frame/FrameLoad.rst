@@ -13,6 +13,10 @@ FrameLoad
 Theory
 ------
 
+
+Distributions 
+~~~~~~~~~~~~~
+
 .. math::
 
    \boldsymbol{p}_{In} = - \int  N_I(x) \boldsymbol{p}_{n}(x) \, d x
@@ -31,11 +35,47 @@ where
 
 
 ``Dirac``
----------
+*********
 
 :math:`P_i = \delta(x - x_i)` so that :math:`\boldsymbol{p}_I = N_I(x_i) \boldsymbol{p}_i`
 
 
 ``Heaviside``
--------------
+*************
 
+
+
+Tangents
+~~~~~~~~
+
+- Follower, Concentric
+
+  .. math::
+     -\begin{bmatrix}
+     \boldsymbol{0} & N_I N_J \boldsymbol{p}^{\times} \\
+     \boldsymbol{0} & \boldsymbol{0}
+     \end{bmatrix}
+
+- Reference, Eccentric
+
+  .. math::
+     \begin{bmatrix}
+     \boldsymbol{0} &  \boldsymbol{0} \\
+     \boldsymbol{0} & \boldsymbol{r}^{\times} \boldsymbol{p}^{\times}
+     \end{bmatrix}
+
+- Follower, Eccentric
+
+  .. math::
+     \begin{bmatrix}
+     \boldsymbol{0} & N_I N_J \boldsymbol{p}^{\times} \\
+     \boldsymbol{0} & \boldsymbol{r}^{\times} \boldsymbol{p}^{\times}
+     \end{bmatrix}
+
+- Reference, Concentric
+
+  .. math::
+      \begin{bmatrix}
+      \boldsymbol{0} &  \boldsymbol{0} \\
+      \boldsymbol{0} & \boldsymbol{0}
+      \end{bmatrix}

@@ -15,7 +15,7 @@ is homogeneous with an :ref:`ElasticIsotropic` material.
          :no-index:
       
          :param tag: integer tag identifying the section
-         :type tag: int
+         :type tag: |integer|
          :param E: Young's modulus
          :type E: float
          :param nu: Poisson's ratio

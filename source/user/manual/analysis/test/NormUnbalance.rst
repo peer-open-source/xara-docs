@@ -10,17 +10,17 @@ Usually, though not always, it is equal to the unbalanced forces in the system.
 .. tabs::
 
    .. tab:: Python
-      .. py:method:: Model.test("NormUnbalance", tol, iter, pFlag=0, nType=2)
+      .. py:method:: Model.test("NormUnbalance", tol, iter, verb=0, norm=2)
          :no-index:
 
          :param tol: the tolerance criteria used to check for convergence
          :type tol: |float|
          :param iter: the max number of iterations to check before returning failure condition
          :type iter: |integer|
-         :param pFlag: print flag (optional: default is 0) valid options:
-         :type pFlag: |integer|
-         :param nType: type of norm (optional: default is 2 (0 = max-norm 1 = 1-norm 2 = 2-norm ...))
-         :type nType: |integer|
+         :param verb: print flag (optional: default is 0) valid options:
+         :type verb: |integer|
+         :param norm: type of norm (optional: default is 2 (0 = max-norm 1 = 1-norm 2 = 2-norm ...))
+         :type norm: |integer|
 
    .. tab:: Tcl
 

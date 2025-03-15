@@ -11,14 +11,14 @@ Mixed finite element formulation for 3D frame elements. [1]_ [2]_.
       .. py:method:: Model.element("MixedFrame", tag, nodes, section=None, transform=None, integration=None, *args)
          :no-index:
 
-         :param tag: unique element tag
-         :type tag: int
-         :param nodes: tuple of *two* integer node tags (see :ref:`node`)
+         :param tag: unique :ref:`element` tag
+         :type tag: |integer|
+         :param nodes: tuple of *two* :ref:`node` tags (see :ref:`node`)
          :type nodes: tuple
          :param section: integer tag identifying a :ref:`section`.
-         :type section: int
-         :param transform: identifier for previously-defined :ref:`geomTransf`
-         :type transform: int
+         :type section: |integer|
+         :param transform: identifier for previously-defined :ref:`frame transformation <geomTransf>`
+         :type transform: |integer|
          :param integration: identifier for previously-defined integration rule.
 
 

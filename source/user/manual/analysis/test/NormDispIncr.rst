@@ -5,7 +5,7 @@ Norm Displacement Increment
 
 This command is used to construct a convergence test which uses the norm of the solution, :math:`x` vector, of the matrix equation, :math:`Ax=b` to determine if convergence has been reached. What the right-hand-side of the matrix equation is depends on integrator and constraint handler chosen. Usually, though not always, it is equal to the change in nodal displacements in the system due to the current unbalance. 
 
-.. function:: test NormDispIncr $tol $iter <$pFlag> <$nType>
+.. function:: test NormDispIncr $tol $iter <$verb> <$nType>
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
@@ -13,7 +13,7 @@ This command is used to construct a convergence test which uses the norm of the 
 
    $tol, |float|, the tolerance criteria used to check for convergence
    $iter, |integer|, the max number of iterations to check before returning failure condition
-   $pFlag, |integer|, " | print flag (optional: default is 0) valid options:
+   $verb, |integer|, " | print flag (optional: default is 0) valid options:
     | 0 print nothing
     | 1 print information on norms each time test() is invoked
     | 2 print information on norms and number of iterations at end of successful test

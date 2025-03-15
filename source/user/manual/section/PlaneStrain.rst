@@ -13,9 +13,9 @@ A *PlaneStrain* section maintains a condition of plane strain in a 2D solid elem
          :no-index:
 
          :param tag: integer tag identifying the section
-         :type tag: int
+         :type tag: |integer|
          :param material: integer tag identifying a :ref:`nDMaterial`
-         :type material: int
+         :type material: |integer|
          :param thickness: section thickness
          :type thickness: float
 

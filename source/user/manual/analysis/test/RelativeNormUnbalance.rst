@@ -8,7 +8,7 @@ It uses the ratio of the current norm to the first norm, i.e. :math:`\frac{\sqrt
 What the right-hand-side of the matrix equation is depends on integrator and constraint handler chosen. 
 Usually, though not always, it is equal to the unbalanced forces in the system. 
 
-.. function:: test RelativeNormUnbalance $tol $iter <$pFlag> <$nType>
+.. function:: test RelativeNormUnbalance $tol $iter <$verb> <$norm>
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
@@ -16,13 +16,13 @@ Usually, though not always, it is equal to the unbalanced forces in the system.
 
    $tol, |float|, the tolerance criteria used to check for convergence
    $iter, |integer|, the max number of iterations to check before returning failure condition
-   $pFlag, |integer|, " | print flag (optional: default is 0) valid options:
+   $verb, |integer|, " | print flag (optional: default is 0) valid options:
     | 0 print nothing
     | 1 print information on norms each time test() is invoked
     | 2 print information on norms and number of iterations at end of successful test
     | 4 at each step it will print the norms and also the <math>\Delta U</math> and <math>R(U)</math> vectors.
     | 5 if it fails to converge at end of $numIter it will print an error message BUT RETURN A SUCCESSFUL test."
-    $nType, |integer|, "type of norm (optional: default is 2 (0 = max-norm 1 = 1-norm 2 = 2-norm ...))"
+    $norm, |integer|, "type of norm (optional: default is 2 (0 = max-norm 1 = 1-norm 2 = 2-norm ...))"
 
 
 .. note::

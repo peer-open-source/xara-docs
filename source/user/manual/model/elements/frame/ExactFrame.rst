@@ -27,14 +27,14 @@ The implementation closely follows the treatment by Perez and Filippou (2024) [3
       .. py:method:: Model.element("ExactFrame", tag, nodes, section, transform)
          :no-index:
 
-         :param tag: unique element tag
-         :type tag: int
+         :param tag: unique :ref:`element` tag
+         :type tag: |integer|
          :param nodes: tuple of integer node tags (see :ref:`node`)
          :type nodes: tuple 
          :param section: section tag (see :ref:`section`)
-         :type section: int
+         :type section: |integer|
          :param transform: identifier for previously-defined coordinate-transformation (see :ref:`geomTransf`)
-         :type transform: int
+         :type transform: |integer|
 
    .. tab:: Tcl
 

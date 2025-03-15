@@ -12,11 +12,11 @@ The nodes are connected by a single section object to represent the force-deform
          :no-index:
 
          :param tag: integer tag identifying the element
-         :type tag: int
+         :type tag: |integer|
          :param nodes: tuple of integer tags identifying the nodes that form the element (see :ref:`node`)
          :type nodes: tuple
          :param section: integer tag identifying a :ref:`section`.
-         :type section: int
+         :type section: |integer|
          :param args: optional arguments
          :param kwargs: optional keyword arguments
 

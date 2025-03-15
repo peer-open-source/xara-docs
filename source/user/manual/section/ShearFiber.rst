@@ -39,11 +39,11 @@ The ``fiber`` method is used to populate the section with fibers. The required a
          :param A: area of the fiber
          :type A: float
          :param tag: tag of a preexisting material created with the :ref:`material` method.
-         :type tag: int
+         :type tag: |integer|
          :param warp: tuple of up to three warping modes
          :type warp: tuple
          :param section: tag of the section to which the fiber belongs. This argument must be passed by keyword.
-         :type section: int
+         :type section: |integer|
 
 
 In general, the ``warp`` modes are scaled by independent amplitude fields which introduce additional degrees of freedom.

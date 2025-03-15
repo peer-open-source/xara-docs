@@ -13,13 +13,13 @@ The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
          :no-index:
          
          :param tag: unique :ref:`element` tag
-         :type tag: int
-         :param nodes: tuple of *two* integer node tags
+         :type tag: |integer|
+         :param nodes: tuple of *two* integer :ref:`node` tags
          :type nodes: tuple
-         :param section: section tag
-         :type section: int
+         :param section: tag of a previously-defined :ref:`section`
+         :type section: |integer|
          :param transform: identifier for previously-defined coordinate-transformation
-         :type transform: int
+         :type transform: |integer|
 
    .. tab:: Tcl
 

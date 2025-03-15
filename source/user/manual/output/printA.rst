@@ -21,23 +21,23 @@ The ``getTangent`` function, or ``printA`` in Tcl, is used to return system matr
 
    .. tab:: Tcl
 
-      .. function:: printA <-file $fileName> <-m $m> <-c $c> <-k $k>
+      .. function:: printA <-file $file> <-m $m> <-c $c> <-k $k>
 
       .. list-table:: 
          :widths: 10 10 40
 
-         * - ``$fileName``
-         - *string*
-         - file name to write tangent to.
+         * - ``file``
+           - *string*
+           - file name to write tangent to.
          * - ``m``
-         - |float|
-         - factor with which to scale the inertial part of the tangent (default is ``0.0``; OpenSeesRT only).
+           - |float|
+           - factor with which to scale the inertial part of the tangent (default is ``0.0``; OpenSeesRT only).
          * - ``c``
-         - |float|
-         - factor with which to scale the damped part of the tangent (default is ``0.0``; OpenSeesRT only).
+           - |float|
+           - factor with which to scale the damped part of the tangent (default is ``0.0``; OpenSeesRT only).
          * - ``k``
-         - |float|
-         - factor with which to scale the static part of the tangent (default is ``1.0``; OpenSeesRT only).
+           - |float|
+           - factor with which to scale the static part of the tangent (default is ``1.0``; OpenSeesRT only).
 
 
 If using a static integrator, the resulting matrix is the *stiffness* matrix. If a
@@ -60,13 +60,13 @@ In Tcl:
 
 .. code-block:: tcl
 
-    printA -m 0.5 -k 0.1
+   printA -m 0.5 -k 0.1
 
 and in Python with OpenSeesRT:
 
 .. code-block:: python
 
-    A = model.getTangent(m=0.5, k=0.1)
+   A = model.getTangent(m=0.5, k=0.1)
 
 
 
