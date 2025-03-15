@@ -30,12 +30,12 @@ More specifically, the integrator performs the following:
          integrator $type < $args > 
 
 
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
-   
-	``type``, |string|,  the integrator type
-	``args``, |list|,   a list of arguments for that type
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
+         
+         ``type``, |string|,  the integrator type
+         ``args``, |list|,   a list of arguments for that type
 
 
 The type of integrator used in the analysis is dependent on whether it is a :ref:`static <StaticAnalysis>` analysis or :ref:`transient <TransientAnalysis>` analysis. 
@@ -67,7 +67,7 @@ The type of integrator used in the analysis is dependent on whether it is a :ref
 References
 ----------
 
-.. [1] Clarke, M.J. and Hancock, G.J. (1990) ‘A study of incremental‐iterative strategies for non‐linear analyses’, International Journal for Numerical Methods in Engineering, 29(7), pp. 1365–1391. Available at: https://doi.org/10.1002/nme.1620290702 .
+* Clarke, M.J. and Hancock, G.J. (1990) ‘A study of incremental‐iterative strategies for non‐linear analyses’, International Journal for Numerical Methods in Engineering, 29(7), pp. 1365–1391. Available at: https://doi.org/10.1002/nme.1620290702 .
 
 Code developed by: |fmk|
 

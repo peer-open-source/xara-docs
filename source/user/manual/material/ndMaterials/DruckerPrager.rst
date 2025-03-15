@@ -125,7 +125,7 @@ This example provides the input file and corresponding results for a confined tr
 	Drucker Prager Example
 
    .. literalinclude:: DruckerPragerExample.tcl
-      :language: tcl
+      :language: bash
 
 
 References

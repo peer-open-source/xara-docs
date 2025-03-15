@@ -14,7 +14,7 @@ The corotational coordinate transformation performs a geometric transformation o
          :no-index:
 
          :param integer tag: integer tag identifying transformation
-         :type tag: int
+         :type tag: |integer|
          :param vecxz: X, Y, and Z components of vecxz, the vector used to define the local x-z plane of the local-coordinate system, **required in 3D**. The local y-axis is defined by taking the cross product of the vecxz vector and the x-axis.
          :type vecxz: tuple of floats
          :param offi: joint offset values -- offsets specified with respect to the global coordinate system for element-end node i (optional, the number of arguments depends on the dimensions of the current model).

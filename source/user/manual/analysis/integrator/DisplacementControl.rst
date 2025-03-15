@@ -1,7 +1,6 @@
-``DisplacementControl``
-^^^^^^^^^^^^^^^^^^^^^^^
+DisplacementControl
+^^^^^^^^^^^^^^^^^^^
 
-This command is used to define a *DisplacementControl* integrator. 
 In an analysis step with Displacement Control we seek to
 determine the time step :math:`\Delta \lambda` that will result in a displacement increment for
 a particular degree-of-freedom at a node to be a prescribed value.
@@ -12,6 +11,8 @@ a particular degree-of-freedom at a node to be a prescribed value.
 
       .. py:method:: Model.integrator("DisplacementControl", node, dof, incr [, numIter, dUmin, dUmax])
          :no-index: 
+
+         Configure the *DisplacementControl* integrator.
 
          :param node: tag identifying the node whose response controls solution
          :type node: |integer|
@@ -42,7 +43,7 @@ Example
 =======
 
 
-.. code:: Tcl
+.. code-block:: Tcl
 
    # displacement control algorithm seeking constant increment of 0.1 at node 1 at 2'nd dof.
    integrator DisplacementControl 1 2 0.1; 

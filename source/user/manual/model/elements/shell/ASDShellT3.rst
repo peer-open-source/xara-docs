@@ -13,7 +13,7 @@ This command is used to construct an ASDShellT3 :ref:`Element`.
          :no-index:
 
          :param tag: integer tag identifying the :ref:`Element`
-         :type tag: int
+         :type tag: |integer|
          :param nodes: tuple of three integer tags identifying the :ref:`nodes <Node>` that form the element
          :type nodes: tuple
          :param section: integer tag associated with previously-defined shell :ref:`section`

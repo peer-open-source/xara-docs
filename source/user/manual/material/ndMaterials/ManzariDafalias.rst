@@ -196,7 +196,7 @@ Example
 This example, provides an undrained confined triaxial compression test using one 8-node SSPBrickUP element and ManzariDafalias material model.
 
 .. literalinclude:: ManzariDafaliasExample.tcl
-   :language: tcl
+   :language: bash
 
 
 References

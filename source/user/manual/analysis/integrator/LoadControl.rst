@@ -1,7 +1,7 @@
 .. _LoadControl:
 
-``LoadControl``
-^^^^^^^^^^^^^^^
+LoadControl
+^^^^^^^^^^^
 
 .. tabs::
 
@@ -50,12 +50,14 @@ In Load Control the time in the domain is set to :math:`t + \lambda_{t+1}` where
    \lambda_{t+1} = \max \left ( \lambda_{min}, \min \left ( \lambda_{max}, \frac{\text{numIter}}{\text{lastNumIter}} \lambda_{t} \right ) \right )
 
 
-where *lastNumIter* is number of steps required to achieve convergence in the previous step. Changing the step size based on number of iterations in previous step, allows user to reduce the step size when the analysis struggles to converge.
+where *lastNumIter* is number of steps required to achieve convergence in the previous step. 
+Changing the step size based on number of iterations in previous step, allows user to reduce the step size when the analysis struggles to converge.
 
 Example 
 -------
 
-The following example shows how to construct a Load Control Integrator with a step size of **0.1**, which in a static analysis would increment the pseudo time by the **0.1** factor at each analysis step, thus requiring **10** analysis steps if the full load is considered to be applied when the pseudo domain time is **1.0**.
+The following example shows how to use a *LoadControl* Integrator with a step size of **0.1**.
+In a static analysis this will increment the pseudo time by **0.1** at each analysis step, thus requiring **10** analysis steps if the full load is considered to be applied when the pseudo domain time is **1.0**.
 
 1. **Tcl Code**
 

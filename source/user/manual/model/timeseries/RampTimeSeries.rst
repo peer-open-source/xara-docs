@@ -23,7 +23,7 @@ With: :math:`S = smoothness \rightarrow 0<=S<=1.0`
    :align: center
    :figclass: align-center
 
-| 
+
 
 .. function:: timeSeries Ramp $tag? $tStart? $tRamp? <-smooth $smoothness?> <-offset $offset?> <-factor $cFactor?> 
 
@@ -42,25 +42,26 @@ With: :math:`S = smoothness \rightarrow 0<=S<=1.0`
      factor= |string|, optional flag to provide scale factor
       $cFactor, |float|,  the load factor scale factor (optional: default = 1.0)
 
-| 
-
-.. admonition:: Example 1:
 
 
-   .. figure:: figures/RampTimeSeries_2.png
-      :align: right
-      :figclass: align-right
+Example 1
+---------
 
-   The following code demonstrates how a user would create a ramp time series with a tag of **1**, has a start time of $tStart = **5.0**, a ramp time of $tRamp = **30.0**, a $smoothness value of **0.25**, an $offset of **-1.0**, and a scale factor of $cFactor = **2.0**. 
-   
-   1. **Tcl Code**
+
+.. figure:: figures/RampTimeSeries_2.png
+   :align: right
+   :figclass: align-right
+
+The following code demonstrates how a user would create a ramp time series with a tag of **1**, has a start time of $tStart = **5.0**, a ramp time of $tRamp = **30.0**, a $smoothness value of **0.25**, an $offset of **-1.0**, and a scale factor of $cFactor = **2.0**. 
+
+1. **Tcl Code**
 
    .. code-block:: none
 
       timeSeries Ramp 1 5.0 30.0 -smooth 0.25 -offset -1.0 -factor 2.0 
 
 
-   1. **Python Code**
+1. **Python Code**
 
    .. code-block:: python
 
@@ -91,7 +92,7 @@ With: :math:`S = smoothness \rightarrow 0<=S<=1.0`
 
       timeSeries('Ramp', 2, 10.0, 30.0, '-smooth', 0.1, '-offset', 2.0, factor= -2.0)
     
-   |
+
 
 Code Developed by: `Codi McKee <mailto:cmckee@tamu.edu/>`_ (Texas A&M University)
 
