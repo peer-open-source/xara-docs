@@ -23,7 +23,7 @@ a particular degree-of-freedom at a node to be a prescribed value.
          :param dUmin: float value of the min step size the user will allow. Optional; default :math:`\Delta U_{min} = \Delta U_0`
          :param dUmax: float value of the max step size the user will allow. Optional; default :math:`\Delta U_{max} = \Delta U_0`
    
-   .. tab:: Tcl
+   .. tab:: OpenSees
 
       .. function:: integrator DisplacementControl $node $dof $incr <$numIter $dUmin $dUmax >
 
