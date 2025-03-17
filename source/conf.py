@@ -13,7 +13,7 @@ copyright = 'Berkeley, CA'
 description = "Finite element analysis"
 author = "PEER"
 #html_logo = "_static/images/xara.png"
-html_title = "xara: Nonlinear fintie element analysis" # "xara: An OpenSees application"
+html_title = "xara: Nonlinear finite element analysis" # "xara: An OpenSees application"
 html_short_title = "xara"
 
 root_doc = "launch" #"user/index"
