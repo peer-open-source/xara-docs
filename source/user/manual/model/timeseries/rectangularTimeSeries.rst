@@ -25,22 +25,23 @@ This command is used to construct a TimeSeries object in which the load factor i
       $tFinish, |float|, ending time of non-zero load factor
       $cFactor, |float|, the load factor applied (optional: default=1.0)
 
-.. admonition:: Example:
+Example
+-------
 
-   The following code demonstrates how user would create a trigonometric time series with a tag of **1**, has a start time of **0.0**, an end time of **10.0**, and a max load factor of **2.0**.
+The following code demonstrates how user would create a trigonometric time series with a tag of **1**, has a start time of **0.0**, an end time of **10.0**, and a max load factor of **2.0**.
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
-   .. code-block:: none
+   .. code-block:: tcl
 
       timeSeries Rectangular 1 0.0 10.0 -factor 2.0
 
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 
-      timSeries('Rectangular',  1, 0.0, 10.0, factor= 2.0)
+      model.timeSeries('Rectangular',  1, 0.0, 10.0, factor=2.0)
 
 
 Code Developed by: |fmk|

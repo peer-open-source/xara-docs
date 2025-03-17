@@ -9,6 +9,8 @@ MinUnbalDispNorm
 
       .. py:method:: Model.integrator("MinUnbalDispNorm", dlam0 [, jd, min, max])
          :no-index:
+
+         Use the *minimum unbalanced displacement norm* continuation method [1]_
          
          :param dlam0: First load increment (pseudo-time step) at the first iteration in the next invocation of the analysis command.
          :type dlam0: |float|

@@ -74,13 +74,13 @@ Examples
 
 The following is used to construct a *Steel01* material with a tag of **1**, a yield strength of **60.0** and an initial tangent stiffness of **30000,0**.
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: tcl
 
       uniaxialMaterial Steel01 60.0 30000.0
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 

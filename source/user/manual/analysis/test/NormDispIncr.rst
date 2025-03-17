@@ -31,13 +31,13 @@ Example
 
 The following examples demonstrate the command to create a NormDispIncr test which allows 10 iterations till failure with a 2-norm in the :math:`x` vector, i.e. :math:`\sqrt(x^T x)` of **1.0e-2**.
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: tcl
 
       test NormDispIncr 1.0e-2  10 2
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 

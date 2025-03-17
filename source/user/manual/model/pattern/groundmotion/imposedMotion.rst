@@ -18,7 +18,7 @@ Examples
 
 The following example shows how to construct a **Multi-Suppert Excitation** pattern with a tag of **1** that will constrain the nodes **1**, **4**, and **7** to move in the **1** dof direcection with the ground Motion supplied by the **groundMotion** with tag **101**, whose displacement is given by **timeSeries** with a tag of 3.
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code:: tcl
 
@@ -31,7 +31,7 @@ The following example shows how to construct a **Multi-Suppert Excitation** patt
    	   imposedSupportMotion 7 1 101
       }
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code:: python
 

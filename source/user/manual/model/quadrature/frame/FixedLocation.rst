@@ -1,4 +1,3 @@
-
 .. _FixedLocation-BeamIntegration:
 
 
@@ -24,7 +23,8 @@ weights are computed by the method of undetermined coefficients (Vandermonde sys
 Note that :ref:`NewtonCotes-BeamIntegration` integration is recovered when the integration point locations are equally spaced.
 
 Places ``N`` integration points along the element, whose locations are defined in ``locs``.
-on the natural domain [0, 1]. The force-deformation response at each integration point is defined by the ``secs``. 
+on the natural domain :math:`[0, 1]`. 
+The force-deformation response at each integration point is defined by the ``secs``. 
 Both the ``locs`` and ``secs`` should be of length ``N``. 
 The order of accuracy for Fixed Location integration is :math:`N-1`.
 

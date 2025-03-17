@@ -59,16 +59,16 @@ Examples
    
 For the development of this example, the RW-A20-P10-S38 wall specimen was used (Tran, 2012). Uniaxial concrete and steel materials are defined, along with orthotropic layers for confined/unconfined concrete and distributed steel for the core and boundaries. Sections of types **a** and **b** are defined, composed of the layers created earlier.
 
-   .. figure:: ReinforcedConcreteLayerMembraneSection_figure3.png
-	   :align: center
-	   :figclass: align-center
-	   :width: 90%
-	   :name: RCLMS01_FIG
-	
-	   RW-A20-P10-S38 wall specimen: (a) Cross-sectional view ; (b) Layered view of the model.
-   
-   
-   1. **Tcl Code**
+.. figure:: ReinforcedConcreteLayerMembraneSection_figure3.png
+   :align: center
+   :figclass: align-center
+   :width: 90%
+   :name: RCLMS01_FIG
+
+   RW-A20-P10-S38 wall specimen: (a) Cross-sectional view ; (b) Layered view of the model.
+
+
+1. **Tcl Code**
 
    .. code-block:: tcl
 
@@ -155,7 +155,7 @@ For the development of this example, the RW-A20-P10-S38 wall specimen was used (
       section RCLMS 11 1 2 -reinfSteel 9   -conc 6 7 -concThick $tnc $tc;        # Section type a (wall boundary)
 
 		
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 

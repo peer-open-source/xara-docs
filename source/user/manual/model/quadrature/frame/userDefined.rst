@@ -35,12 +35,12 @@ This class allows the user to specified locations and weights of the integration
 
 
    Places ``N`` integration points along the element, which are defined in ``locs``
-   on the natural domain [0, 1]. The weight of each integration point is
-   defined in the ``wts`` also on the [0, 1] domain.
+   on the natural domain :math:`[0, 1]`. The weight of each integration point is
+   defined in the ``wts`` also on the :math:`[0, 1]` domain.
    The force-deformation response at each integration point
    is defined by the ``secs``. The ``locs``, ``wts``, and ``secs``
-   should be of length ``N``. In general, there is no accuracy for this approach
-   to numerical integration.
+   should be of length ``N``. 
+   In general, there is no accuracy for this approach to numerical integration.
 
 
       

@@ -57,22 +57,22 @@ The following example shows how to use the *eigen* method to obtain a list of ei
 
 1. **Tcl Code**
 
-.. code:: tcl
+   .. code:: tcl
 
-   # obtain 10 eigenvalues using the default solver (-genBandArpack)
-   set eigenvalues [eigen 10]
-   
-   # or, obtain 10 eigenvalues explicitly specifying the solver
-   set eigenvalues [eigen -fullGenLapack 10]
+      # obtain 10 eigenvalues using the default solver (-genBandArpack)
+      set eigenvalues [eigen 10]
+      
+      # or, obtain 10 eigenvalues explicitly specifying the solver
+      set eigenvalues [eigen -fullGenLapack 10]
 
 2. **Python Code**
 
-.. code:: python
+   .. code:: python
 
-   # obtain 10 eigenvalues using the default solver (-genBandArpack)
-   eigenvalues = model.eigen(10)
-   
-   # or, obtain 10 eigenvalues explicitly specifying the solver
-   eigenvalues = model.eigen("-fullGenLapack", 10)
+      # obtain 10 eigenvalues using the default solver (-genBandArpack)
+      eigenvalues = model.eigen(10)
+      
+      # or, obtain 10 eigenvalues explicitly specifying the solver
+      eigenvalues = model.eigen("-fullGenLapack", 10)
 
 Code Developed by: |fmk|

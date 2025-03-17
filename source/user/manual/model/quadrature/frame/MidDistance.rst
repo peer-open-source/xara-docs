@@ -17,7 +17,7 @@
 
 
 Places ``N`` integration points along the element, whose locations are defined
-in ``locs`` on the natural domain [0, 1].
+in ``locs`` on the natural domain :math:`[0, 1]`.
 The force-deformation response at each integration
 point is defined by the ``secs``.
 Both the ``locs`` and ``secs`` should be of length N.
@@ -31,9 +31,9 @@ Examples
 For the ``locs`` shown below, the associated integration weights
 will be ``[0.15, 0.2, 0.3, 0.2, 0.15]``.
 
-.. code-block:: python
+.. code-block:: Python
 
    locs = (0.0, 0.2, 0.5, 0.8, 1.0)
    secs = (1,2,2,2,1)
-   model.beamIntegration('MidDistance',1,len(secs), secs, locs)
+   model.beamIntegration("MidDistance", 1, len(secs), secs, locs)
 

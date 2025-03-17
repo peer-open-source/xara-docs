@@ -258,28 +258,29 @@ The global mass matrix :math:`M` is given by the assembly of :math:`n` elemental
 
 .. [HintonEtAl1976] Hinton, E., Rock, T. & Zienkiewicz, O. (1976). "A note on mass lumping and related processes in the Finite element method.” Earthquake Engineering and Structural Dynamics, 13, 9, p. A112.
 
-.. admonition:: Example
+Example
+-------
    
-   The following example shows how to:
-   
-   *  Use the modalProperties command
-   *  Print the results on the console (-print)
-   *  Generate a report file in the current directory (-file 'ModalReport.txt')
-   *  Use a displacement-normalization for the eigenvectors
+The following example shows how to:
 
-   1. **Tcl Code**
+*  Use the modalProperties command
+*  Print the results on the console (-print)
+*  Generate a report file in the current directory (-file 'ModalReport.txt')
+*  Use a displacement-normalization for the eigenvectors
+
+1. **Tcl Code**
    
    .. code:: tcl
 
       modalProperties -print -file "ModalReport.txt" -unorm
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code:: python
 
-      modalProperties('-print', '-file', 'ModalReport.txt', '-unorm')
+      model.modalProperties('-print', '-file', 'ModalReport.txt', '-unorm')
    
-   For a complete example that runs an **eigenvalue analysis**, extracts the **modal properties** and runs a **response spectrum analysis**, see the documentation of the :ref:`responseSpectrumAnalysis`
+For a complete example that runs an **eigenvalue analysis**, extracts the **modal properties** and runs a **response spectrum analysis**, see the documentation of the :ref:`responseSpectrumAnalysis`
 
 .. admonition:: ReportFile
    

@@ -88,13 +88,13 @@ The linear equations are used to solve for :math:`\boldsymbol{u}_{t+\alpha F \De
 Examples
 --------
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: tcl
 
       integrator GeneralizedAlpha 1.0 1.0
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 

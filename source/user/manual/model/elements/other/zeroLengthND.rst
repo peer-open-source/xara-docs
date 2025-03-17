@@ -35,19 +35,19 @@ Example
 
 The following examples demonstrate the commands in a script to add three zeroLength elements to domain. The three to be added have element tags **1**, **2**, and **3**. Element **1** has nodes **2** and **3** as its end ndes, has two materials **5** and **6** acting in directions **1** and **2**. Element **2** has as its end nodes **4** and **5**, has only one material **1** acting in direction **1**, the element has a global orientation.
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: tcl
 
       element zeroLengthND 1 2 4 5 
       element zeroLengthND 2 4 5 5 1 -orient 1 1 0 -1 1 0
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 
-      element('zeroLength',1,2,4,5)
-      element('zeroLength',2,4,5,5, 1,'-orient',1,1,0,-1,1,0)
+      model.element('zeroLength', 1,2,4,5)
+      model.element('zeroLength', 2,4,5,5, 1, '-orient',1,1,0,-1,1,0)
 
 Code Developed by: |mhs|
 

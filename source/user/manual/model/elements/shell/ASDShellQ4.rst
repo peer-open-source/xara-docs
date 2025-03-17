@@ -46,10 +46,10 @@ The ASDShellQ4 element is a 4-node general purpose thick shell element with the 
 
 
 .. figure:: figures/ASDShellQ4/ASDShellQ4_geometry.png
-	:align: center
-	:figclass: align-center
+   :align: center
+   :figclass: align-center
 
-	Nodes, Gauss points, local coordinate system, warped and flat geometry
+   Nodes, Gauss points, local coordinate system, warped and flat geometry
 
 
 Valid :ref:`eleResponse` queries to this element are:

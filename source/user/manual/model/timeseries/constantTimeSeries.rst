@@ -40,20 +40,22 @@ Examples
 
 The following code demonstrates how user would create two constant time series, the first with tag **1** has a **1.0** factor, the second **2** has a constant load factr of **10.0**.
 
-   1. **Tcl Code**
+.. tabs::
 
-   .. code-block:: none
+   .. tab:: Python
 
-      timeSeries Constant 1
-      timeSeries Constant 2 -factor 10.0
+      .. code-block:: python
 
+         model.timeSeries("Constant",  1)
+         model.timeSeries("Constant",  2, factor=10.0)
 
-   2. **Python Code**
+   .. tab:: Tcl
 
-   .. code-block:: python
+      .. code-block:: none
 
-      model.timeSeries('Constant',  1)
-      model.timeSeries('Constant',  2, factor=10.0)
+         timeSeries Constant 1
+         timeSeries Constant 2 -factor 10.0
+
 
 
 Code Developed by: |fmk|
