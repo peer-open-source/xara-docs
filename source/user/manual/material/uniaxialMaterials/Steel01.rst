@@ -39,35 +39,13 @@ This model implements a uniaxial bilinear steel material object with kinematic h
          $a4, |float|, optional: isotropic hardening parameter (see explanation under $a3)
 
 
-.. note::
-   By default there is no isotropic hardening.
-
-
-.. _fig-mdof:
 
 .. figure:: figures/Steel01/Steel01.png
 	:align: center
 	:figclass: align-center
 
-	Steel01
+	Steel01 behaviour under cyclic loading.
 
-.. figure:: figures/Steel01/Steel01HystereticA.jpg
-	:align: center
-	:figclass: align-center
-
-	Steel01 Material -- Default Hysteretic Behavior (NO isotropic hardening)
-
-.. figure:: figures/Steel01/Steel01HystereticB.jpg
-	:align: center
-	:figclass: align-center
-
-	Steel01 Material -- Hysteretic Behavior of Model with Isotropic Hardening in Compression
-
-.. figure:: figures/Steel01/Steel01HystereticC.jpg
-	:align: center
-	:figclass: align-center
-
-	Steel01 Material -- Hysteretic Behavior of Model with Isotropic Hardening in Tension
 
 Examples
 --------
