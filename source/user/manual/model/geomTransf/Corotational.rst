@@ -74,6 +74,7 @@ is oriented so as to resist bending *outside* the plane of the portal, but the s
 Theory
 ------
 
+.. _corot-directors:
 
 .. figure:: figures/directors.png
    :align: center
@@ -81,15 +82,17 @@ Theory
 
    Corotational transformation of a two-node frame.
 
-Consider a field of three directors that are orthonormal everywhere in :math:`\mathcal{B}`
-denoted by :math:`\{\mathbf{D}_k\}` which will be considered stationary
-in all subsequent developments. For the present discussion, we
-additionally define linearly independent director fields
-:math:`\{\mathbf{d}_k\}`, :math:`\left\{\bar{\mathbf{d}}_k\right\}`, and
-:math:`\left\{\bar{\mathbf{D}}_k\right\}` as follows:
+The undeformed cross sections of a beam can be represented by a stationary field of 
+three *reference* directors :math:`\mathbf{D}_k` that are orthonormal everywhere 
+in :math:`\mathcal{B}`. 
+As the beam deforms, these directors are transformed into the *deformed* directors :math:`\mathbf{d}_k`
+
+Under a corotational transformation, an element's *state determination* is performed
+in a transformed configuration space represented by director fields
+:math:`\left\{\bar{\mathbf{d}}_k\right\}`, and
+:math:`\left\{\bar{\mathbf{D}}_k\right\}` with the expressions:
 
 .. math::
-
 
    \left.\begin{aligned}
    \mathbf{d}_k &\triangleq \boldsymbol{\Lambda}\mathbf{D}_k \\
@@ -103,18 +106,10 @@ additionally define linearly independent director fields
    \bar{\boldsymbol{\Lambda}} &= \bar{\mathbf{D}}_k\otimes\mathbf{D}_k \\
    \end{aligned}
 
-
 .. note::
+   It is more appropriate to think of the corotational transformation as a *family* of transformations.
 
-   This works for :math:`\boldsymbol{\Lambda}` here because we stipulated
-   :math:`\mathscr{C}_\Lambda \subset \mathrm{GL}(n)` in **A3**. It may
-   be better to only treat :math:`\boldsymbol{R}` here, and ease the restriction
-   in **A3**.
-
-where summation is implied on doubled indices and :math:`\otimes`
-denotes the bun product defined by
-:math:`(\mathbf{a}\otimes\boldsymbol{b})\boldsymbol{c} = \mathbf{a} \, (\boldsymbol{b}\cdot\boldsymbol{c})`.
-Figure @fig:directors illustrates this for an example embedding where a
+Figure :numref:`corot-directors` illustrates this for an example embedding where a
 single representative director from each of these fields, say
 :math:`k=1`, is shown and :math:`\mathbf{D}_1` is taken to be aligned
 with the reference configuration of an initially straight plane frame
@@ -147,6 +142,12 @@ where we use the identities
 :math:`\left(\boldsymbol{a}\otimes\boldsymbol{b}\right)\left(\boldsymbol{c}\otimes\boldsymbol{d}\right) = \boldsymbol{b}\cdot\boldsymbol{c}\, \left(\boldsymbol{a}\otimes\boldsymbol{d}\right)`
 and :math:`(\boldsymbol{a}\otimes\boldsymbol{b})^{\mathrm{t}} = \boldsymbol{b}\otimes\boldsymbol{a}` and
 summation is again implied.
+
+If a finite element implements an ideal strain measure that is exactly objective, then such 
+a transformation will by definition be unobservable in the analysis results. 
+However, due to the complexity 
+in the configuration manifold of beams, such a strain measure is almost never used, and consequenty
+the effect of the corotational transformation is *very* apparent.
 
 .. math::
 
