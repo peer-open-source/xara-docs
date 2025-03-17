@@ -4,6 +4,8 @@ ShellFiber
 .. py:method:: Model.section("ShellFiber", tag, *args)
    :no-index:
 
+   Create a fiber-discretized shell cross-section that integrates a material response through the shell thickness.
+
    :param tag: unique section tag
    :type tag: integer 
 
