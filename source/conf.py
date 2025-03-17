@@ -208,16 +208,14 @@ if "book" in html_theme:
     html_theme_options.update({
         "use_download_button":  False,
         "use_edit_page_button": False,
-        "article_header_start": ["breadcrumbs"]
+        "article_header_start": ["toggle-primary-sidebar.html", "breadcrumbs"]
     })
 
 html_context = {
-    # "github_url": "https://github.com", # or your GitHub Enterprise site
     "root_doc": root_doc,
     "description": description,
     "github_user": "STAIRLab",
     "github_repo": "OpenSeesRT",
-#   "github_version": "<your-branch>",
 #   "doc_path": "<path-from-root-to-your-docs>",
 
     # HOME
