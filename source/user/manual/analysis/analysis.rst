@@ -9,27 +9,32 @@ This is the command issued to configure an analysis.
 
    .. tab:: Python
 
-      .. py:method:: Model.analysis(type, *args)
+      .. py:method:: Model.analysis(type, *opts)
 
          Set the analysis type to be performed on the next call to :py:meth:`Model.analyze`.
 
-         :param string type: The analysis type.
-         :param args: A list of arguments for that type.
+         :param |string| type: The analysis type. Three variants are supported:
+
+             - :ref:`"Static" <StaticAnalysis>` : for static analysis
+             - :ref:`"Transient" <TransientAnalysis>` : for standard dynamic analysis with constant time step
+             - **VariableTransient** : for transient analysis with variable time step
+
+         :param opts: Additional optional arguments for the analysis type.
 
    .. tab:: Tcl
 
       .. function:: analysis type? <-numSublevels $x -numSubSteps $y>
 
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+         .. csv-table:: 
+            :header: "Argument", "Type", "Description"
+            :widths: 10, 10, 40
 
-   ``type``, |string|, type of analysis to be configured. Three variants are supported:
-   , ,  :ref:`"Static" <StaticAnalysis>` - for static analysis
-   , ,  :ref:`"Transient" <TransientAnalysis>` - for standard dynamic analysis with constant time step
-   , ,  **VariableTransient** - for transient analysis with variable time step
-   ``x``, |integer|, number of sublevels transient analysis should try if failure
-   ``y``, |integer|, number of subdivisions to be tried at each sublevel
+            ``type``, |string|, type of analysis to be configured. Three variants are supported:
+            , ,  :ref:`"Static" <StaticAnalysis>` - for static analysis
+            , ,  :ref:`"Transient" <TransientAnalysis>` - for standard dynamic analysis with constant time step
+            , ,  **VariableTransient** - for transient analysis with variable time step
+            ``x``, |integer|, number of sublevels transient analysis should try if failure
+            ``y``, |integer|, number of subdivisions to be tried at each sublevel
 
 
 .. toctree::

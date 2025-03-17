@@ -74,6 +74,7 @@ rst_prolog = """
 .. _Chris McGann: https://www.canterbury.ac.nz/engineering/contact-us/people/chris-mcgann.html
 .. |andreas| replace:: *Andreas Schellenberg*
 .. |csasj| replace:: *csasj*
+
 """
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -100,6 +101,8 @@ html_static_path = ['_static']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = [
     "_build", "Thumbs.db", ".DS_Store", "**/hidden",
+    "user/index.rst",
+    "user/manual/model/geomTransf/frame/index.rst",
     "user/manual/analysis/integrator/gimmeMCK.rst",
     "user/manual/analysis/modalProperties.rst",
     "user/manual/analysis/responseSpectrumAnalysis.rst",
@@ -116,6 +119,16 @@ exclude_patterns = [
     "user/manual/model/elements/other/SFI_MVLEM_3D.rst",
     "user/manual/model/elements/other/E_SFI.rst",
     "user/manual/model/elements/other/E_SFI_MVLEM_3D.rst",
+    "user/manual/model/elements/fluid/7045-BbarBrickUP.rst",
+    "user/manual/model/elements/fluid/7046-BbarQuadUP.rst",
+    "user/manual/model/elements/fluid/7066-BrickUP.rst",
+    "user/manual/model/elements/fluid/7264-FourNodeQuadUP.rst",
+    "user/manual/model/elements/fluid/7266-Four Node QuadUP.rst",
+    "user/manual/model/elements/fluid/7419-NineFourNodeQuadUP.rst",
+    "user/manual/model/elements/fluid/7612-SSPbrickUP.rst",
+    "user/manual/model/elements/fluid/7614-SSPquadUP.rst",
+    "user/manual/model/elements/fluid/7720-TwentyEightNodeBrickUP.rst",
+    "user/manual/model/elements/fluid/index.rst",
     "user/manual/materialCommands.rst",
     "user/manual/material/ndMaterials/BoundingCamClay.rst",
     "user/manual/material/ndMaterials/PM4Sand.rst",
