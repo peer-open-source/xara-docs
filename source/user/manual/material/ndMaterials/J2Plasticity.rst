@@ -5,19 +5,36 @@ J2 Plasticity
 
 *J2Plasticity* is a multi dimensional material model that employs the von Mises :math:`J_2` yield criterion and isotropic hardening.
 
-.. function:: nDMaterial J2Plasticity $matTag $K $G $sig0 $sigInf $delta $H
+.. tabs::
 
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+   .. tab:: Python
+      
+      .. py:method:: nDMaterial('J2Plasticity', tag, K, G, sig0, sigInf, delta, H)
+         :no-index:
 
-   $matTag, |integer|, unique tag identifying material
-   $K, |float|,	   bulk modulus
-   $G, |float|,	   shear modulus
-   $sig0, |float|,	   initial yield stress
-   $sigInf, |float|,	   final saturation yield stress
-   $delta, |float|,	   exponential hardening parameter
-   $H, |float|,linear hardening parameter
+         :param int tag: unique tag identifying material
+         :param |float| K: bulk modulus
+         :param |float| G: shear modulus
+         :param |float| sig0: initial yield stress
+         :param |float| sigInf: final saturation yield stress
+         :param |float| delta: exponential hardening parameter
+         :param |float| H: linear hardening parameter
+   
+   .. tab:: Tcl
+
+      .. function:: nDMaterial J2Plasticity $matTag $K $G $sig0 $sigInf $delta $H
+
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
+
+         $matTag, |integer|, unique tag identifying material
+         $K, |float|,	   bulk modulus
+         $G, |float|,	   shear modulus
+         $sig0, |float|,	   initial yield stress
+         $sigInf, |float|,	   final saturation yield stress
+         $delta, |float|,	   exponential hardening parameter
+         $H, |float|,linear hardening parameter
 
 
 
