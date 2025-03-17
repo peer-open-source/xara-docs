@@ -1,13 +1,13 @@
 .. _PM4Sand:
 
 J2CyclicBoundingSurface Material
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Code Developed by: **Alborz Ghofrani** and |pedro| at U.Washington.
 
 This command is used to construct a J2CyclicBoundingSurface material ([Borja-Amies1994]_).
 
-   J2CyclicBoundingSurface $matTag $G $K $Su $Den $h $m $h0 $chi $beta
+.. function:: nDmaterial J2CyclicBoundingSurface $matTag $G $K $Su $Den $h $m $h0 $chi $beta
 
 .. csv-table::
    :header: "Argument", "Type", "Description"
@@ -30,24 +30,26 @@ This command is used to construct a J2CyclicBoundingSurface material ([Borja-Ami
 
    Valid Element Recorder queries are **stress**, **strain**
 
-   Elastic response could be enforced by
 
-   .. code::
+Elastic response can be enforced by
 
-       updateMaterialStage -material $matTag -stage 0
+.. code::
 
-   Elastoplastic by
+      updateMaterialStage -material $matTag -stage 0
 
-   .. code::
+Elastoplastic by
 
-      updateMaterialStage -material $matTag -stage 1
+.. code::
+
+   updateMaterialStage -material $matTag -stage 1
 
 .. [Borja-Amies1994] Borja R., Amies A., "Multiaxial Cyclic Plasticity Model for Clays". Journal of Geotech. Engrg., 1994, 120(6):1051-1070
 
 
-.. admonition:: Example 1
+Examples
+--------
 
-   This example, provides an conventional triaxial compression test using one 8-node SSPBrick element and J2CyclicBoundingSurface material model.
+This example, provides an conventional triaxial compression test using one 8-node :ref:`SSPBrick` element and *J2CyclicBoundingSurface* material model.
 
-   .. literalinclude:: J2CyclicBoundingSurfaceExample1.tcl
-      :language: tcl
+.. literalinclude:: J2CyclicBoundingSurfaceExample1.tcl
+   :language: tcl

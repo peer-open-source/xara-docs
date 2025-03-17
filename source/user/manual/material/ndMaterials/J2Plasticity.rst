@@ -9,10 +9,10 @@ J2 Plasticity
 
    .. tab:: Python
       
-      .. py:method:: nDMaterial('J2Plasticity', tag, K, G, sig0, sigInf, delta, H)
+      .. py:method:: Model.nDMaterial('J2Plasticity', tag, K, G, sig0, sigInf, delta, H)
          :no-index:
 
-         :param int tag: unique tag identifying material
+         :param |integer| tag: unique tag identifying material
          :param |float| K: bulk modulus
          :param |float| G: shear modulus
          :param |float| sig0: initial yield stress
@@ -22,20 +22,19 @@ J2 Plasticity
    
    .. tab:: OpenSees
 
-      .. function:: nDMaterial J2Plasticity $matTag $K $G $sig0 $sigInf $delta $H
+      .. function:: nDMaterial J2Plasticity $tag $K $G $sig0 $sigInf $delta $H;
 
       .. csv-table:: 
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
 
-         $matTag, |integer|, unique tag identifying material
-         $K, |float|,	   bulk modulus
-         $G, |float|,	   shear modulus
-         $sig0, |float|,	   initial yield stress
-         $sigInf, |float|,	   final saturation yield stress
-         $delta, |float|,	   exponential hardening parameter
-         $H, |float|,linear hardening parameter
-
+         tag, |integer|, unique tag identifying material
+         K, |float|,	   bulk modulus
+         G, |float|,	   shear modulus
+         sig0, |float|,	   initial yield stress
+         sigInf, |float|,	   final saturation yield stress
+         delta, |float|,	   exponential hardening parameter
+         H, |float|,linear hardening parameter
 
 
 Theory 

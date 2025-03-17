@@ -13,25 +13,25 @@ This command is used to construct a multi-dimensional [Manzari-Dafalias2004]_ ma
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $matTag, |integer|,	   unique tag identifying material
-   $G0, |float|, 	   shear modulus constant
-   $nu, |float|, 	   poisson ratio
-   $e_init, |float|, 	   initial void ratio
-   $Mc, |float|, 	   critical state stress ratio
-   $c, |float|, 	   ratio of critical state stress ratio in extension and compression
-   $lambda_c, |float|, critical state line constant
-   $e0, |float|, critical void ratio at p = 0
-   $ksi, |float|, critical state line constant
-   $P_atc, |float|, atmospheric pressure
-   $m, |float|, yield surface constant (radius of yield surface in stress ratio space)
-   $h0, |float|, constant parameter
-   $ch, |float|, constant parameter
-   $nb, |float|, bounding surface parameter  $nb ≥ 0
-   $A0, |float|, dilatancy parameter
-   $nd, |float|, dilatancy surface parameter $nd ≥ 0
-   $z_max, |float|, fabric-dilatancy tensor parameter
-   $cz, |float|, fabric-dilatancy tensor parameter
-   $Den, |float|, mass density of the material
+   tag, |integer|,	unique tag identifying material
+   G0, |float|, 	   shear modulus constant
+   nu, |float|, 	   poisson ratio
+   e_init, |float|, initial void ratio
+   Mc, |float|, 	   critical state stress ratio
+   c, |float|, 	   ratio of critical state stress ratio in extension and compression
+   lambda_c, |float|, critical state line constant
+   e0, |float|, critical void ratio at p = 0
+   ksi, |float|, critical state line constant
+   P_atc, |float|, atmospheric pressure
+   m, |float|, yield surface constant (radius of yield surface in stress ratio space)
+   h0, |float|, constant parameter
+   ch, |float|, constant parameter
+   nb, |float|, bounding surface parameter  $nb ≥ 0
+   A0, |float|, dilatancy parameter
+   nd, |float|, dilatancy surface parameter $nd ≥ 0
+   z_max, |float|, fabric-dilatancy tensor parameter
+   cz, |float|, fabric-dilatancy tensor parameter
+   Den, |float|, mass density of the material
 
 .. note::
 

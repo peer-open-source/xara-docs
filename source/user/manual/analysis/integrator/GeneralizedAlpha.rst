@@ -38,17 +38,17 @@ The Generalized :math:`\alpha` method (sometimes called the :math:`\alpha` metho
 
 .. math::
 
-    \boldsymbol{u}_{t+\Delta t} = \boldsymbol{u}_t + \Delta t \dot \boldsymbol{u}_t + [(0.5 - \beta) \Delta t^2] \ddot \boldsymbol{u}_t + [\beta \Delta t^2] \ddot \boldsymbol{u}_{t+\Delta t}
+    \boldsymbol{u}_{t+\Delta t} = \boldsymbol{u}_t + \Delta t \dot{\boldsymbol{u}}_t + [(0.5 - \beta) \Delta t^2] \ddot{\boldsymbol{u}}_t + [\beta \Delta t^2] \ddot{\boldsymbol{u}}_{t+\Delta t}
 
 .. math::
 
-     \dot \boldsymbol{u}_{t+\Delta t} = \dot \boldsymbol{u}_t + (1-\gamma)\Delta t \ddot \boldsymbol{u}_t + [\gamma \Delta t ] \ddot \boldsymbol{u}_{t+\Delta t} 
+     \dot{\boldsymbol{u}}_{t+\Delta t} = \dot{\boldsymbol{u}}_t + (1-\gamma) \Delta t \ddot{\boldsymbol{u}}_t + (\gamma \Delta t ) \ddot{\boldsymbol{u}}_{t+\Delta t} 
 
 but the time-discrete momentum equation is modified:
 
 .. math::
 
-    R_{t + \alpha_M \Delta t} = F_{t+\Delta t}^{ext} - M \ddot \boldsymbol{u}_{t + \alpha_M \Delta t} - C \dot \boldsymbol{u}_{t+\alpha_F \Delta t} - F^{int}(\boldsymbol{u}_{t + \alpha_F \Delta t})
+    R_{t + \alpha_M \Delta t} = F_{t+\Delta t}^{ext} - M \ddot{\boldsymbol{u}}_{t + \alpha_M \Delta t} - C \dot{\boldsymbol{u}}_{t+\alpha_F \Delta t} - F^{int}(\boldsymbol{u}_{t + \alpha_F \Delta t})
 
 
 where the displacements and velocities at the intermediate point are given by:
@@ -59,16 +59,16 @@ where the displacements and velocities at the intermediate point are given by:
 
 .. math::
 
-    \dot \boldsymbol{u}_{t+\alpha_F \Delta t} = (1-\alpha_F) \dot{\boldsymbol{u}}_t + \alpha_F \dot \boldsymbol{u}_{t + \Delta t}
+    \dot{\boldsymbol{u}}_{t+\alpha_F \Delta t} = (1-\alpha_F) \dot{\boldsymbol{u}}_t + \alpha_F \dot{\boldsymbol{u}}_{t + \Delta t}
 
 .. math::
 
-    \ddot \boldsymbol{u}_{t+\alpha_M \Delta t} = (1-\alpha_M) \ddot{\boldsymbol{u}}_t + \alpha_M \ddot{\boldsymbol{u}}_{t + \Delta t}
+    \ddot{\boldsymbol{u}}_{t+\alpha_M \Delta t} = (1-\alpha_M) \ddot{\boldsymbol{u}}_t + \alpha_M \ddot{\boldsymbol{u}}_{t + \Delta t}
 
 Following the methods outlined for Newmark method, linearization of the nonlinear momentum equation results in the following linear equations:
 
 .. math::
-    K_{t+\Delta t}^{*i} d \boldsymbol{u}_{t+\Delta t}^{i+1} = R_{t+\Delta t}^i
+    K_{t+\Delta t}^{*i} d \boldsymbol{u}_{t+\Delta t}^{i+1} = r_{t+\Delta t}^i
 
 where
 
@@ -79,7 +79,7 @@ where
 and
 
 .. math::
-    R_{t+\Delta t}^i = F_{t + \Delta t}^{ext} - F(\boldsymbol{u}_{t + \alpha F \Delta t}^{i-1})^{int} - C \dot \boldsymbol{u}_{t+\alpha F \Delta t}^{i-1} - M \ddot \boldsymbol{u}_{t+ \alpha M \Delta t}^{i-1}
+    r_{t+\Delta t}^i = F_{t + \Delta t}^{ext} - F(\boldsymbol{u}_{t + \alpha_F \Delta t}^{i-1})^{int} - C \dot{\boldsymbol{u}}_{t+\alpha_F \Delta t}^{i-1} - M \ddot{\boldsymbol{u}}_{t+ \alpha_M \Delta t}^{i-1}
 
 
 The linear equations are used to solve for :math:`\boldsymbol{u}_{t+\alpha F \Delta t}, \dot \boldsymbol{u}_{t + \alpha F \Delta t} \ddot \boldsymbol{u}_{t+ \alpha M \Delta t}`. Once convergence has been achieved the displacements, velocities and accelerations at time :math:`t + \Delta t` can be computed. 

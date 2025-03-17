@@ -12,12 +12,12 @@ This command is used to construct an *ElasticIsotropic* material.
       .. py:method:: Model.material("ElasticIsotropic", tag, E, v, rho=0.0)
          :no-index:
 
-         :param tag: integer tag identifying material
-         :param E: Young's elastic modulus
-         :param v: Poisson's ratio
-         :param rho: mass density. optional default = 0.0.
+         :param |integer| tag: integer tag identifying material
+         :param |float| E: Young's elastic modulus
+         :param |float| v: Poisson's ratio
+         :param |float| rho: mass density. optional default = 0.0.
 
-   .. tab:: Tcl
+   .. tab:: OpenSees
 
       .. function:: nDMaterial ElasticIsotropic $tag $E $v <$rho>
 
