@@ -20,7 +20,7 @@ J2 Plasticity
          :param |float| delta: exponential hardening parameter
          :param |float| H: linear hardening parameter
    
-   .. tab:: Tcl
+   .. tab:: OpenSees
 
       .. function:: nDMaterial J2Plasticity $matTag $K $G $sig0 $sigInf $delta $H
 
