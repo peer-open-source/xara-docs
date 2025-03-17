@@ -3,7 +3,7 @@
 J2 Plasticity
 ^^^^^^^^^^^^^
 
-This command is used to construct a multi dimensional material that has a von Mises (J2) yield criterion and isotropic hardening.
+*J2Plasticity* is a multi dimensional material model that employs the von Mises :math:`J_2` yield criterion and isotropic hardening.
 
 .. function:: nDMaterial J2Plasticity $matTag $K $G $sig0 $sigInf $delta $H
 
@@ -24,11 +24,8 @@ This command is used to construct a multi dimensional material that has a von Mi
 Theory 
 ------
 
-The theory for the non hardening case can be found [[1]]
-
-J2 isotropic hardening material class
-
-Elastic Model
+The theory for the non hardening case can be found in [[1]].
+The elastic model is an :ref:`ElasticIsotropic` formulation:
 
 .. math::
 
@@ -46,7 +43,7 @@ where :math:`q` is the *saturation isotropic hardening* given by:
    
    q(\boldsymbol{\xi}) = \sigma_0 + (\sigma_\inf - \sigma_0) \exp (-\delta\boldsymbol{\xi}) + H \boldsymbol{\xi}
 
-Flow Rules
+Flow rules are
 
 .. math::
 
@@ -54,9 +51,9 @@ Flow Rules
 
    \dot \xi = -\gamma  \frac{\partial \phi}{\partial q}
 
-Linear Viscosity: :math:`\gamma = \frac{\phi}{\eta}` ( if :math:`\phi > 0` )
+linear viscosity is exhibited with :math:`\gamma = \frac{\phi}{\eta}` ( if :math:`\phi > 0` )
 
-Backward Euler integration is employed.
+Backward Euler integration is employed in the implementation.
 
 For rate independent cases, set :math:`\eta = 0`.
 

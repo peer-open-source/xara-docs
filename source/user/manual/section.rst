@@ -39,6 +39,7 @@ The following section types are valid for :ref:`frame` elements:
    :maxdepth: 1
 
    section/ElasticFrame
+   section/axial/index
    section/ShearFiber
 
 .. _PlaneSection:

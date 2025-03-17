@@ -1,13 +1,18 @@
+.. _Legendre-BeamIntegration:
+
 Legendre  
 ^^^^^^^^
 
-Gauss-Legendre quadrature is more accurate than Gauss-Lobatto; however, it is not common in force-based elements because there are no integration points at the element ends. The command places ``N`` Gauss-Legendre integration points along the element. The location and weight of each integration point are tabulated in references on numerical analysis.  The force deformation response at each integration point is defined by the section. The order of accuracy for Gauss-Legendre integration is 2N-1.
+Gauss-Legendre quadrature is more accurate than :ref:`Gauss-Lobatto <Lobatto-BeamIntegration>`; however, it is not common in force-based elements because there are no integration points at the element ends. 
+The formulation places ``N`` integration points along the element. 
+The order of accuracy for Gauss-Legendre integration is :math:`2N-1`.
 
 .. tabs::
 
    .. tab:: Python
 
       .. py:method:: Model.beamIntegration("Legendre", tag, section, N)
+         :no-index:
 
          :param |string| name: The integration type.
          :param |integer| tag: Unique object tag.

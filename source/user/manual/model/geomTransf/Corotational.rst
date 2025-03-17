@@ -38,9 +38,38 @@ The corotational coordinate transformation performs a geometric transformation o
          $dXi $dYi $dZi, |float|, "joint offset values -- offsets specified with respect to the global coordinate system for element-end node i (optional, the number of arguments depends on the dimensions of the current model)."
          $dXj $dYj $dZj, |float|, "joint offset values -- offsets specified with respect to the global coordinate system for element-end node j (optional, the number of arguments depends on the dimensions of the current model)."
 
+
 .. note::
 	
-	The element coordinate system and joint offset values are specified as in the :ref:`linearTR`.
+   The element coordinate system and joint offsets are the same as that documented for the :ref:`Linear <linearTR>` transformation.
+
+
+Examples
+--------
+
+This example is developed in detail on the examples `site <https://gallery.stairlab.io/examples/framevecxz/>`__.
+In order to cover a wide range of cases, the strong axis of the first column, element `1`, 
+is oriented so as to resist bending *outside* the plane of the portal, but the strong axis of the second column, element `3`, will resist bending *inside* the portal plane.
+
+.. figure:: figures/vecxz.png
+   :align: center
+   :width: 50%
+
+   A portal frame with :math:`X_3` vertical.
+
+
+.. code-block:: Python
+
+   model.node(1, (    0, 0,      0))
+   model.node(2, (width, 0,      0))
+   model.node(3, (width, 0, height))
+   model.node(4, (    0, 0, height))
+
+   model.geomTransf("Corotational", 1, (1, 0, 0)) # Column
+   model.geomTransf("Corotational", 2, (0, 0, 1)) # Girder
+   model.geomTransf("Corotational", 3, (0,-1, 0)) # Column
+
+
 
 Theory
 ------

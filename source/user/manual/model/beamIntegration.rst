@@ -3,7 +3,6 @@
 Quadrature
 ^^^^^^^^^^
 
-
 .. tabs::
 
    .. tab:: Python
@@ -32,16 +31,16 @@ The following types are available:
    :caption: Distributed Inelasticity.
    :maxdepth: 1
 
-   beamIntegrations/Lobatto
-   beamIntegrations/Legendre
-   beamIntegrations/NewtonCotes
-   beamIntegrations/Radau
-   beamIntegrations/Trapezoidal
-   beamIntegrations/CompositeSimpson
-   beamIntegrations/userDefined
-   beamIntegrations/FixedLocation
-   beamIntegrations/LowOrder
-   beamIntegrations/MidDistance
+   quadrature/frame/Lobatto
+   quadrature/frame/Legendre
+   quadrature/frame/NewtonCotes
+   quadrature/frame/Radau
+   quadrature/frame/Trapezoidal
+   quadrature/frame/CompositeSimpson
+   quadrature/frame/userDefined
+   quadrature/frame/FixedLocation
+   quadrature/frame/LowOrder
+   quadrature/frame/MidDistance
    
 2. Concentrated Inelasticity.
    Plastic hinge integration methods confine material inelasticity to regions of the element of specified length while the remainder of the element is linear elastic. 
@@ -51,11 +50,11 @@ The following types are available:
    :caption: Concentrated Inelasticity.
    :maxdepth: 1
 
-   beamIntegrations/ConcentratedPlasticity	      
-   beamIntegrations/ConcentratedCurvature
-   beamIntegrations/UserHinge
-   beamIntegrations/HingeMidpoint
-   beamIntegrations/HingeRadau
-   beamIntegrations/HingeRadauTwo
-   beamIntegrations/HingeEndpoint   
+   quadrature/frame/ConcentratedPlasticity	      
+   quadrature/frame/ConcentratedCurvature
+   quadrature/frame/UserHinge
+   quadrature/frame/HingeMidpoint
+   quadrature/frame/HingeRadau
+   quadrature/frame/HingeRadauTwo
+   quadrature/frame/HingeEndpoint   
    

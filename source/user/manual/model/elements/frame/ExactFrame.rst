@@ -10,7 +10,7 @@
 	:figclass: align-center
 	:scale: 55
 
-	Fig. 1: Torsional instability captured by the **ExactFrame** formulation and rendered with `veux <https://veux.io>`_.
+	Fig. 1: Torsional instability captured by the **ExactFrame** formulation and rendered with `veux <https://veux.io>`__.
 
 
 The **ExactFrame** element is a geometrically exact beam element based on Simo's
@@ -65,12 +65,12 @@ as follows:
 
 The ``ExactFrame`` formulation is appropriate for a wide variety of structural members including thin-walled sections, asymmetric sections, and inelasticity.
 
-As of ``sees`` version ``0.1.15``, the ``ExactFrame`` element can be used to model cross-sectional warping through an additional seventh degree of freedom.
+As of ``xara`` version ``0.1.15``, the ``ExactFrame`` element can be used to model cross-sectional warping through an additional seventh degree of freedom.
 This feature is implemented through template metaprogramming and consequently incurs absolutely no overhead on standard six-degree-of-freedom simulations.
 
 .. note::
 
-   This element always employs a Gauss-Legendre quadrature of order ``nen-1`` for an element with ``nen`` nodes, and does not accept user-defined quadrature schemes.
+   This element always employs a :ref:`Gauss-Legendre <Legendre-BeamIntegration>` quadrature of order ``nen-1`` for an element with ``nen`` nodes, and does not accept user-defined quadrature schemes.
 
 
 Example 
