@@ -8,3 +8,5 @@ OpenSeesRT includes a basic set of meshing utilities.
    
    block2D
    block3D
+   mesh
+

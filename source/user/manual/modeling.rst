@@ -28,6 +28,7 @@ Modeling
    model/pattern
    model/damping
    model/mass
+   parameter/index
 
 
 Misc.

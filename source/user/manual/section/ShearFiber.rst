@@ -59,3 +59,9 @@ The valid :ref:`eleResponse` queries are
 
 * ``"force"``, and 
 * ``"deformation"``. 
+
+
+Valid :ref:`setParameter` targets are
+
+- ``"warp"``
+
