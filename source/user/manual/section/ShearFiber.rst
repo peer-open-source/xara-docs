@@ -63,5 +63,5 @@ The valid :ref:`eleResponse` queries are
 
 Valid :ref:`setParameter` targets are
 
-- ``"warp"``
+- ``"warp", fiber, field`` where ``fiber`` is an |integer| identifying a fiber and ``field`` is an |integer| identifying the warping field.
 
