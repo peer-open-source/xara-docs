@@ -45,6 +45,7 @@ Usually, though not always, it is equal to the unbalanced forces in the system.
 
    When using a :ref:`penalty` constraint handler, large forces (those necessary to enforce the constraint) are included in the :math:`b` vector. Even for very small changes in the displacement, if user has selected overly large penalty factor, large forces can appear in the :math:`b` vector.
 
+
 Examples
 --------
 
@@ -58,6 +59,7 @@ The following examples demonstrate the command to create a ``NormUnbalance`` tes
 
          test NormUnbalance 1.0e-2  10 2
 
+
    .. tab:: Python
 
       .. code-block:: python
@@ -66,3 +68,4 @@ The following examples demonstrate the command to create a ``NormUnbalance`` tes
 
 
 Code Developed by: |fmk|
+
