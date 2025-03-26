@@ -3,7 +3,7 @@ import os
 import sys
 from pathlib import Path
 # import sphinx_rtd_theme
-sys.path.append(os.path.abspath('./sphinx_ext/'))
+#sys.path.append(os.path.abspath('./sphinx_ext/'))
 
 #
 # -- Project information -----------------------------------------------------
@@ -81,7 +81,7 @@ rst_prolog = """
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'toctree_filter',
+#   'toctree_filter',
 #   'sphinx_rtd_theme',
     'sphinx_copybutton',
     'sphinx_tabs.tabs',
@@ -213,7 +213,7 @@ else:
 #         "image_light": html_logo,
 #         "image_dark": "_static/logo-dark.png",
           "link": html_baseurl, # "index.html",
-          "text": '<span class="lead display-3">xara</span>',
+          "text": f'<span class="lead display-3">{project}</span>',
 #         "alt_text": "xara docs - Home",
         }
     }

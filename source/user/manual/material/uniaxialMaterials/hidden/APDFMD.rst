@@ -1,7 +1,7 @@
-.. _APDFMD :
+.. _APDFMD:
 
 APDFMD Material
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 
 This command is used to construct an APDFMD material that simulates the hysteretic response of an asynchronous parallel double-stage friction-metallic damper. 
 A typical parallel double-stage friction-metallic damper is composed of a frictional sub-damper, a metallic sub-damper and an asynchronously activation system. In the first stage only the first frictional sub-damper works and when the deformation reaches to $ad2, the second metallic sub-damper actives, exhibiting the double-stage working mechanism.

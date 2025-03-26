@@ -47,9 +47,8 @@ A *Linear* coordinate transformation performs a linear geometric transformation 
 Theory
 ------
 
-Recall that two non-parallel vectors :math:`\mathbf{i}_1` and :math:`\mathbf{i}_2` define a plane that is parallel to them both. 
-The cross-product :math:`\mathbf{i}_1 \times \mathbf{i}_2` of these vectors defines a third vector :math:`\mathbf{i}` that is perpendicular to both :math:`\mathbf{i}_1` and :math:`\mathbf{i}_2` and hence normal to the plane.
-
+Orientation 
+===========
 
 The longitudinal basis vector :math:`\mathbf{i}` is derived from the two element end nodes. 
 The vector **vecxz** is a vector the user specifies that must not be parallel to this axis. 
@@ -65,6 +64,10 @@ The section is attached to the element such that the y-z coordinate system used 
    Local x axis is the axis connecting the two element nodes, and local y and z axes follow the right-hand rule (e.g., if the element is aligned with the positive Y axis, the local y axis is aligned with the negative X axis, and if the element is aligned with the positive X axis, the local y axis is aligned with the positive Y axis). 
    Orientation of local y and z axes is important for the definition of the :ref:`ShearFiber` section.
 
+Joint Offsets
+=============
+
+Joint offsets are specified with respect to the global coordinate system.
 
 Example
 -------
