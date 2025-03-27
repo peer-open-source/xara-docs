@@ -1,6 +1,7 @@
 Cite
 ^^^^
 
+*xara* is developed by the `STAIRLab <https://stairlab.berkeley.edu>`_ at UC Berkeley. 
 If you use *xara*, please cite the following reference:
 
 .. code-block:: bibtex
