@@ -6,6 +6,7 @@ Allow: /$
 Allow: /genindex.html
 Allow: /launch.html
 Allow: /sitemap.xml
+Allow: /cite.html
 Allow: /robots.txt
 Allow: /_images/Q9.svg
 Allow: /user/manual/model/model_class.html
