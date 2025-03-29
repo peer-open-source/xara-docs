@@ -11,7 +11,6 @@ Output
    printB
    getTime
    eleResponse
-   getCrdTransfTags
    recorder
 
 

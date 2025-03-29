@@ -10,7 +10,6 @@ This command returns a list of all defined coordinate transformation object tags
 Examples
 --------
 
-The following example is used to set the variable **currentTime** to current state of **time** in the **Domain**
 
 1. **Tcl Code**
 
