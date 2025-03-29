@@ -23,6 +23,7 @@ Allow: /user/manual/section/ShearFiber.html
 Allow: /user/manual/section/ShellFiber.html
 Allow: /user/manual/output/print.html
 Allow: /user/manual/output/printB.html
+Allow: /user/manual/output/getTime.html
 Allow: /user/manual/output/nodeDisp.html
 Allow: /user/manual/output/nodeEigenvector.html
 Allow: /user/manual/output/nodeRotation.html

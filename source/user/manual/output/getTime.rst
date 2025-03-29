@@ -18,10 +18,11 @@ getTime
 
       .. function:: getTime;
 
+
 Example 
 -------
 
-The following example is used to set the variable **currentTime** to current state of **time** in the **Domain**
+The following example is used to set a variable named ``currentTime`` to current value of **time** in the :class:`Model`
 
 1. **Tcl Code**
 
