@@ -1,7 +1,7 @@
 .. _load:
 
-load Command
-""""""""""""
+load
+^^^^
 
 This command is used to define a nodal load.
 
@@ -53,6 +53,5 @@ The following example demonstrates how to create a **Linear** time series, and a
       model.load(3, ( 0.0,  -50.0), pattern=1)
       model.load(4, (50.0, -100.0), pattern=1)
 
-
-
 Code Developed by: |fmk|
+

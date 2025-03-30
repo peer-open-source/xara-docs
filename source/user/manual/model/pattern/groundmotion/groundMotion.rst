@@ -25,7 +25,8 @@ There are presently two type of groundMotions that can be created: 1) :ref:`plai
 Plain Ground Motion
 """""""""""""""""""
 
-Each GroundMotion object is associated with a number of TimeSeries objects, which define the acceleration, velocity and displacement records for that ground motion. The particular form of the command is as follows:
+Each GroundMotion is associated with a number of TimeSeries objects, which define the acceleration, velocity and displacement records for that ground motion. 
+The particular form of the command is as follows:
 
 .. function:: groundMotion $gmTag Plain <-accel $tsTag> <-vel $tsTag> <-disp $tsTag> <-int (IntegratorType intArgs)> <-fact $cFactor>)
 
@@ -46,7 +47,8 @@ where
 
    Any combination of the acceleration, velocity and displacement time-series can be specified.
 
-   If only the acceleration TimeSeries is provided, numerical integration will be used to determine the velocities and displacements. If only velocity are provided, numerical integration is used to obtain the displacements.
+   If only the acceleration TimeSeries is provided, numerical integration will be used to determine the velocities and displacements. 
+   If only velocity are provided, numerical integration is used to obtain the displacements.
 
    For earthquake excitations it is important that the user provide the displacement time history, as the one generated using the trapezoidal method will not provide good results.
 
@@ -70,11 +72,12 @@ This command is used to construct an interpolated GroundMotion object, where the
 
 
 
-.. admonition:: Example:
+Example
+"""""""
 
-   The following example shows how to construct a **Multi-Suppert Excitation** pattern with a tag of **1* that will constrain the nodes **1**, **4**, and **7** to move in the **1** dof direcection with the ground Motion supplied by the **groundMotion** with tag **101**, whose displacement is given by **timeSeries** with a tag of 3.
+The following example shows how to construct a **Multi-Suppert Excitation** pattern with a tag of **1** that will constrain the nodes **1**, **4**, and **7** to move in the **1** dof direcection with the ground Motion supplied by the **groundMotion** with tag **101**, whose displacement is given by **timeSeries** with a tag of 3.
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code:: tcl
 
@@ -87,16 +90,16 @@ This command is used to construct an interpolated GroundMotion object, where the
    	   imposedSupportMotion 7 1 101
       }
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code:: python
 
       model.timeSeries("Path", 3, "-dt", 0.02, "-filePath", "elCentroDisp.dat")
-      model.pattern("MultiSupport", 1)	 
-      model.groundMotion(101, "Series", "-disp", 3)
-      model.imposedSupportMotion(1,1,101)
-      model.imposedSupportMotion(4,1,101)
-      model.imposedSupportMotion(7,1,101)
+      model.pattern("MultiSupport", 1)
+      model.groundMotion(101, "Series", disp=3)
+      model.imposedSupportMotion(1, 1, 101)
+      model.imposedSupportMotion(4, 1, 101)
+      model.imposedSupportMotion(7, 1, 101)
 
 Code Developed by: |fmk|
 

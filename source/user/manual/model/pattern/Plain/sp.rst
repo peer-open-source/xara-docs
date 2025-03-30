@@ -14,7 +14,7 @@ This command is used to define a single-point constraint that scales under a loa
          Constrain the ``dof`` component of the solution at ``node`` to ``value`` in ``pattern``.
 
          :param integer node: tag of node to which constraint is applied
-         :param integer dof: the degree-of-freedom at the node to which constraint is applied (1 through ndf)
+         :param integer dof: the degree-of-freedom at the node to which constraint is applied (1 through :attr:`Model.ndf`)
          :param integer value: reference constraint value
          :param integer pattern: tag of the :ref:`Plain <plainPattern>` load pattern.
 
