@@ -1,14 +1,14 @@
 
-``MixedFrame``: Frame with force-interpolation
+``CubicFrame``: Frame with cubic-interpolation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Mixed finite element formulation for 3D frame elements.
+Frame finite element with cubic displacement formulation.
 
 .. tabs::
 
    .. tab:: Python (RT)
 
-      .. py:method:: Model.element("MixedFrame", tag, nodes, section=None, transform=None, integration=None, *args)
+      .. py:method:: Model.element("CubicFrame", tag, nodes, section=None, transform=None, integration=None, *args)
          :no-index:
 
          :param tag: unique :ref:`element` tag

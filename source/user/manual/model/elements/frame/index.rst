@@ -19,7 +19,8 @@ Available frame elements include
    :maxdepth: 1
 
    PrismFrame
-   MixedFrame
+   ForceFrame
+   CubicFrame
    ExactFrame
 
 Loads include

@@ -5,8 +5,17 @@ Node Recorder
 
 The Node recorder type records the response of a number of nodes at every converged step. 
 
-.. function:: recorder(Node, <-file $filename>, <-xml $filename>, <-binary $filename>, <-tcp $inetAddress $port>, <-precision  $nSD>, <-timeSeries $tsTag>,<-time>,<-dT $deltaT>, <-closeOnWrite>, <-node  $nodeTags>,< -nodeRange $startNode $endNode>,<-region $regionTag> -dof $dofs $respType)
-   :noindex:
+.. tabs::
+
+   .. tab:: Python
+
+      .. py:method:: recorder("Node", response [, file|xml|binary, precision: int, <-timeSeries $tsTag>, <-dT $deltaT>, <-closeOnWrite>, <-node  $nodeTags>,< -nodeRange $startNode $endNode>,<-region $regionTag> -dof $dofs)
+         :noindex:
+
+   .. tab:: Tcll
+
+      .. function:: recorder Node  $response <-file $filename>, <-xml $filename>, <-binary $filename>, <-tcp $inetAddress $port>, <-precision  $nSD>, <-timeSeries $tsTag>,<-time>,<-dT $deltaT>, <-closeOnWrite>, <-node  $nodeTags>,< -nodeRange $startNode $endNode>,<-region $regionTag> -dof $dofs
+         :noindex:
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
@@ -25,24 +34,25 @@ The Node recorder type records the response of a number of nodes at every conver
    $startNode, |integer|, optional: tag for end node 
    $regionTag, |integer|, optional: tag of previously defined region.
    $dofs, |integerList|, list of dof at nodes whose response is requested.
-   $respType, |string|,  a string indicating response required.
+   $response, |string|,  a string indicating response required.
 
 .. note::
+
    1. Only one of the options **-file**, **-xml**, **-binary**, or **-tcp** may be used. The option specifies where the data is going to be sent.
 
-   2. Similarly only one of the options: **-node**, **-nodeRange**, or **-region** may be used. This option specifies the node tags.
+   2. Only one of the options: **-node**, **-nodeRange**, or **-region** may be used. This option specifies the node tags.
 
-   3. The valid strings for respType are:
+   3. The valid strings for ``response`` are:
 
-   .. code:: none
+      .. code:: none
 
-      disp
-      vel
-      accel
-      incrDisp
-      eigen $mode
-      reaction
-      rayleighForces!
+         disp
+         vel
+         accel
+         incrDisp
+         eigen $mode
+         reaction
+         rayleighForces!
 
    4. | The function returns a value:   
       | SUCCESS: **>0** an integer tag that can be used as a handle on the recorder for the remove a recorder in the :ref:`remove`.
@@ -50,11 +60,11 @@ The Node recorder type records the response of a number of nodes at every conver
 
       To remove a recorder using the :ref:`remove` you need to save this tag in a variable for use later in the script.
 
-   5. $deltaT specifies a time interval for recording. will record when next step is $deltaT greater than last recorder step. It is useful if user script subdivides time step and user is not interested in the responses at each time step due to memory or file size constraints.
+   5. ``deltaT`` specifies a time interval for recording. will record when next step is $deltaT greater than last recorder step. It is useful if user script subdivides time step and user is not interested in the responses at each time step due to memory or file size constraints.
 
-   6. If the **-timeSeries** option is being used, the recorded results are those obtained from the time series for the current time added to the response quantity measures. Need as many time series tags as dof specified. Useful for obtaining for example total acceleration as opposed to relative if user using UniformAcceleration to impose a ground motion.
+   6. If the ``timeSeries`` option is being used, the recorded results are those obtained from the time series for the current time added to the response quantity measures. Need as many time series tags as dof specified. Useful for obtaining for example total acceleration as opposed to relative if user using UniformAcceleration to impose a ground motion.
 
-   7. The -closeOnWrite option will slow the program down. It is useful if you want to see just exactly where the application is, as files are only written to disk when the operating system feels like it under typical operation.
+   7. The ``closeOnWrite`` option will slow the program down. It is useful if you want to see just exactly where the application is, as files are only written to disk when the operating system feels like it under typical operation.
 
 
 Examples
@@ -62,15 +72,16 @@ Examples
 
 The following examples demonstrate the use of the recorder Node command.
 
-   1. The first recorder will output to a file ``nodesD.out`` the displacements in **x** and **y** (**1** and **2**) directions at nodes **1**, **2**, **3**, and **4**. The output file will contain **9** columns (time, displacement in x and y at node 1, disp. in x and y at node 2, ... , disp. x and y at node 4))
+1. The first recorder will output to a file ``nodesD.out`` the displacements in **x** and **y** (**1** and **2**) directions at nodes **1**, **2**, **3**, and **4**. The output file will contain **9** columns (time, displacement in x and y at node 1, disp. in x and y at node 2, ... , disp. x and y at node 4))
 
-   2. The second recorder will output to a file ``nodesA.out`` the total accelerations in **x** and **y** (**1** and **2**) directions at nodes **1**, **2**, **3**, and **4**. The output file will contain **9** columns (time, accel. in x and y at node 1, accel. in x and y at node 2, ... , accel. in x and y at node 4)). The accelerations output will be the accelerations stored at the nodes added to the values obtained from the time series. The **x** values are the accelerations in **x** direction at node plus values from timeSeries **1**, the **y** values are the accelerations in **y** direction at nodes plus the values from timeSries **2**.
+2. The second recorder will output to a file ``nodesA.out`` the total accelerations in **x** and **y** (**1** and **2**) directions at nodes **1**, **2**, **3**, and **4**. The output file will contain **9** columns (time, accel. in x and y at node 1, accel. in x and y at node 2, ... , accel. in x and y at node 4)). The accelerations output will be the accelerations stored at the nodes added to the values obtained from the time series. The **x** values are the accelerations in **x** direction at node plus values from timeSeries **1**, the **y** values are the accelerations in **y** direction at nodes plus the values from timeSries **2**.
 
-   .. code:: tcl
-   
-     recorder Node -file nodesD.out -time -node 1 2 3 4 -dof 1 2 disp;
+.. code:: tcl
 
-     recorder Node -file nodesA.out -timeSeries 1 2 -time -node 1 2 3 4 -dof 1 2 accel;
+   recorder Node disp -file nodesD.out -time -node 1 2 3 4 -dof 1 2;
+
+   recorder Node accel -file nodesA.out -timeSeries 1 2 -time -node 1 2 3 4 -dof 1 2;
 
 
 Code developed by: |fmk|
+
