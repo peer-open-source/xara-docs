@@ -35,7 +35,8 @@ This command is used to define a single-point constraint that scales under a loa
    
    The ``value`` is a reference value, it is the time series that provides the load factor. 
    The load factor times the reference value is the constraint that is actually applied to the node.
-   
+
+
 Examples
 --------
 

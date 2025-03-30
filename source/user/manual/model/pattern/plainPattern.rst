@@ -50,7 +50,8 @@ Similarly, ``series="Constant"`` results in a constant load factor.
 Example
 -------
 
-The following example defines a ``Plain`` load pattern which contains reference loads at nodes **3** and **4** with magnitudes **(0,-50)** and **(50.0, -100)** respectively. 
+The following example defines a ``Plain`` load pattern which contains reference loads at nodes **3** and **4** with reference values
+of **(0,-50)** and **(50.0, -100)** respectively. 
 Because the series is ``"Linear"``, at each analysis step the actual load applied to the nodes is the product of the reference load and the current time in the domain.
 
 .. tabs::

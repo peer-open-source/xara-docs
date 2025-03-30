@@ -3,7 +3,7 @@
 Uniform Excitation
 ^^^^^^^^^^^^^^^^^^
 
-The UniformExcitation pattern allows the user to apply a uniform excitation to a model acting in a certain direction. 
+The UniformExcitation pattern applies a uniform excitation to a model acting in specified directions. 
 
 
 .. tabs::
@@ -14,12 +14,12 @@ The UniformExcitation pattern allows the user to apply a uniform excitation to a
          :no-index:
 
          :param |integer| tag: unique tag among load patterns
-         :param |integer| dof: dof direction the ground motion acts
+         :param |integer| dof: degree of freedom in the direction the ground motion acts
          :param |integer| accel: tag of the TimeSeries series defining the acceleration history.
          :param |float| vel0: the initial velocity (optional: default=0.0)
          :param |float| fact: constant factor (optional: default=1.0)
    
-   .. tab:: Tcl 
+   .. tab:: Tcl
 
       .. function:: pattern UniformExcitation $tag $dof -accel $tsTag <-vel0 $vel0> <-fact $cFact>
 
@@ -40,7 +40,7 @@ The UniformExcitation pattern allows the user to apply a uniform excitation to a
 
    .. math::
    
-	M\ddot{\boldsymbol{u}} + C\dot{\boldsymbol{u}} + K \boldsymbol{u} = p(t)
+	   M\ddot{\boldsymbol{u}} + C\dot{\boldsymbol{u}} + K \boldsymbol{u} = p(t)
 
    and how the loads are applied with this load pattern.
 

@@ -1,7 +1,7 @@
 .. _DRM:
 
 DRM Load Pattern
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 There is no documentation available yet.
 

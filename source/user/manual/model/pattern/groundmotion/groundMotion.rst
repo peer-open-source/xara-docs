@@ -3,12 +3,9 @@
 Ground Motion
 ^^^^^^^^^^^^^
 
-The groundMotion command is used to construct a GroundMotion object used by the ImposedMotionSP constraints in a *MultipleSupportExcitation*. This command is of the following form:
+A *GroundMotion* is used by the *ImposedMotionSP* constraints in a *MultipleSupportExcitation*. 
 
 .. function:: groundMotion $tag $type arg1? ...
-
-The type of GroundMotion created and the additional arguments required depends on the type? provided in the command. The following contain information about type? and the args required for each of the available ground motion types:
-
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
@@ -17,6 +14,8 @@ The type of GroundMotion created and the additional arguments required depends o
    $tag, |integer|, unique tag among ground motions in load pattern
    $type, |string|, the type of ground motion
    $args, |floatList|, args specific to the type of motion
+
+The type of GroundMotion created and the additional arguments required depends on the ``type`` argument. 
 
 There are presently two type of groundMotions that can be created: 1) :ref:`plainGroundMotion` and 2) :ref:`interpolatedGroundMotion`
 
@@ -58,7 +57,8 @@ where
 Interpolated Ground Motion
 """"""""""""""""""""""""""
 
-This command is used to construct an interpolated GroundMotion object, where the motion is determined by combining several previously defined ground motions in the load pattern. The command is as follows:
+This command is used to construct an interpolated GroundMotion object, where the motion is determined by combining several previously defined ground motions in the load pattern. 
+The command is as follows:
 
 .. function:: groundMotion $tag Interpolated $gmTag1 $gmTag2 ... -fact $fact1 $fact2 ...
 
@@ -90,11 +90,12 @@ The following example shows how to construct a **Multi-Suppert Excitation** patt
    	   imposedSupportMotion 7 1 101
       }
 
+
 2. **Python Code**
 
    .. code:: python
 
-      model.timeSeries("Path", 3, "-dt", 0.02, "-filePath", "elCentroDisp.dat")
+      model.timeSeries("Path", 3, dt=0.02, filePath="elCentroDisp.dat")
       model.pattern("MultiSupport", 1)
       model.groundMotion(101, "Series", disp=3)
       model.imposedSupportMotion(1, 1, 101)

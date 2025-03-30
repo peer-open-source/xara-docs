@@ -3,18 +3,19 @@
 getCrdTransfTags
 ****************
 
-This command returns a list of all defined coordinate transformation object tags
+This command returns a list of all defined coordinate transformation tags
 
-.. function:: getCrdTransfTags
+.. py:method:: Model.getCrdTransfTags()
+
 
 Examples
 --------
 
+This example creates a set of **geomTransf** objects and the asks for a list of all the created objects using the 
+method ``getCrdTransfTags`` and assigning the list to the variable called ``tags``.
+
 
 1. **Tcl Code**
-
-   This example creates a set of **geomTransf** objects and the asks for a list of all the created objects using the 
-   command **getCrdTransfTags** and assigning the list to the variable called **allCrdTransfTags**, then prints them.
 
    .. code-block:: tcl
 
@@ -34,7 +35,16 @@ Examples
 
    .. code-block:: python
 
-      # missing
+      model xara.Model(ndm=3, ndf=6)
+
+      model.geomTransf("Linear", 1,  (0, -1, 0), jntOffset=(100, 0,  0,     0, 0, 0))
+      model.geomTransf("Linear", 2,  (0, -1, 0), jntOffset=(0  , 0,  0,     0, 0, 0))
+      model.geomTransf("Linear", 3,  (0, -1, 0), jntOffset=(0  , 0,  0,     0, 0, 0))
+      model.geomTransf("Linear", 4,  (0, -1, 0), jntOffset=(0  , 0,  0,     0, 0, 0))
+      model.geomTransf("Linear", 5,  (0, -1, 0), jntOffset=(0  , 0,  0,     0, 0, 0))
+
+      tags = model.getCrdTransfTags()
 
 
 Code developed by: |fmk|
+
