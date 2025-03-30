@@ -3,7 +3,7 @@
 Plain Pattern
 ^^^^^^^^^^^^^
 
-Each *plain* load pattern is associated with a TimeSeries and can contain multiple NodalLoads, ElementalLoads and SP_Constraints.
+Each *plain* load pattern is associated with a :ref:`timeSeries` and can contain multiple :ref:`nodal loads <load>`, :ref:`element loads <eleLoad>` and :ref:`SP constraints <Spload>`.
 
 .. tabs::
 
