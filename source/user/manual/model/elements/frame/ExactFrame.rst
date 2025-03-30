@@ -1,9 +1,8 @@
-.. include:: sub.txt
 
 .. _ExactFrame:
 
-``ExactFrame``: Geometrically exact displacement formulation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``ExactFrame``
+^^^^^^^^^^^^^^
 
 .. figure:: ExactFrame_Fig1.png
 	:align: center

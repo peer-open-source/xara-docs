@@ -1,6 +1,7 @@
+.. _CubicFrame:
 
-``CubicFrame``: cubic displacment formulation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``CubicFrame``
+^^^^^^^^^^^^^^
 
 Frame finite element with cubic displacement formulation.
 

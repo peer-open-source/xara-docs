@@ -1,7 +1,7 @@
 .. _elasticBeamColumn:
 
-``PrismFrame``: Prismatic linear-elastic frame
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``PrismFrame``
+^^^^^^^^^^^^^^^
 
 The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
 

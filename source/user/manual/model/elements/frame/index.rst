@@ -15,8 +15,18 @@ All frame elements are constructed with the form
 
 Available frame elements include
 
+.. csv-table:: 
+    :header: "Name", "Description"
+    :widths: 10, 40
+
+    :ref:`elasticBeamColumn`, "Prismatic linear-elastic frame"
+    :ref:`ForceFrame`, "*Force* formulation"
+    :ref:`CubicFrame`, "cubic displacment formulation"
+    :ref:`ExactFrame`, "geometrically exact displacement formulation"
+
 .. toctree::
    :maxdepth: 1
+   :hidden:
 
    PrismFrame
    ForceFrame

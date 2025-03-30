@@ -1,5 +1,6 @@
+.. _ForceFrame:
 
-``ForceFrame``: *Force* mixed formulation
+``ForceFrame``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Mixed finite element formulation for 3D frame elements. [1]_ [2]_.
