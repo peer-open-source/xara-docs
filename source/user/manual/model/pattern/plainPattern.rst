@@ -34,9 +34,9 @@ Each *plain* load pattern is associated with a TimeSeries and can contain multip
    :maxdepth: 1
    :caption: load commands:
 
-   PlainPatternloadcommands/load
-   PlainPatternloadcommands/eleLoad
-   PlainPatternloadcommands/sp
+   Plain/load
+   Plain/eleLoad
+   Plain/sp
 
 
 The loads (element, nodal, constraints) in a ``Plain`` Load pattern are **reference** loads. 

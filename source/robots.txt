@@ -18,6 +18,7 @@ Allow: /user/manual/model/elements/plane/Quad.html
 Allow: /user/manual/model/elements/plane/EnhancedQuad.html
 Allow: /user/manual/material/ndMaterials/ElasticOrthotropic.html
 Allow: /user/manual/model/geomTransf/Corotational.html
+Allow: /user/manual/model/pattern/Plain/sp.html
 Allow: /user/manual/section.html
 Allow: /user/manual/section/ShearFiber.html
 Allow: /user/manual/section/ShellFiber.html
