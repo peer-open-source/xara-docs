@@ -7,17 +7,49 @@ This command is used to construct a Path TimeSeries. The relationship between lo
 
 For a load path where the factors are specified in a tcl list with a constant time interval between points:
 
-.. function:: timeSeries Path $tag -dt $dt -values {list_of_values} <-factor $cFactor> <-useLast> <-prependZero> <-startTime $tStart>
+.. tabs::
+   .. tab:: Python
+      .. py:method:: Model.timeSeries("Path", tag, dt=dt, values=values, ["-factor", cFactor], ["-useLast"], ["-prependZero"], ["-startTime", tStart])
+         :no-index:
 
-For a load path where the factors are specified in a file for a constant time interval between points:
+         :param integer tag: integer tag identifying time series.
+         :param float dt: time interval between specified points.
+         :param list values: list of load factors.
+         :param float cFactor: optional, a factor to multiply load factors by (default = 1.0).
+         :param bool useLast: optional, to use last value after the end of the series (default = 0.0).
+         :param bool prependZero: optional, to prepend a zero value to the series of load factors (default = false).
+         :param float tStart: optional, to provide a start time for provided load factors (default = 0.0).
+   
+   .. tab:: Tcl
+      .. function:: timeSeries Path $tag -dt $dt -values {list_of_values} <-factor $cFactor> <-useLast> <-prependZero> <-startTime $tStart>
 
-.. function:: timeSeries Path $tag -dt $dt -filePath $filePath <-factor $cFactor> <-useLast> <-prependZero> <-startTime $tStart>
 
 For a load path where the values are specified at non-constant time intervals:
 
 .. function:: timeSeries Path $tag -time {list_of_times} -values {list_of_values} <-factor $cFactor> <-useLast>
 
-For a load path where both time and values are specified in a list included in the command
+For a load path where the factors are specified in a file for a constant time interval between points:
+
+.. tabs::
+
+   .. tab:: Python 
+
+      .. py:method:: timeSeries("Path", tag, "-dt", dt, "-filePath", filePath, ["-factor", cFactor], ["-useLast"], ["-prependZero"], ["-startTime", tStart])
+         :no-index:
+
+         :param integer tag: integer tag identifying time series.
+         :param float dt: time interval between specified points.
+         :param string filePath: file containing the load factors values.
+         :param float cFactor: optional, a factor to multiply load factors by (default = 1.0).
+         :param bool useLast: optional, to use last value after the end of the series (default = 0.0).
+         :param bool prependZero: optional, to prepend a zero value to the series of load factors (default = false).
+         :param float tStart: optional, to provide a start time for provided load factors (default = 0.0).
+
+   .. tab:: Tcl
+
+      .. function:: timeSeries Path $tag -dt $dt -filePath $filePath <-factor $cFactor> <-useLast> <-prependZero> <-startTime $tStart>
+
+For a load path where both time and values are specified in files
 
 
 .. function:: timeSeries Path $tag -fileTime $fileTime -filePath $filePath <-factor $cFactor> <-useLast>
@@ -48,11 +80,32 @@ For a load path where both time and values are specified in a list included in t
 Examples
 --------
 
-   .. code-block:: Tcl
+.. tabs::
 
-      timeSeries Path 1 -dt 0.02 -filePath A-ELC270.AT2 -factor $G  
-      timeSeries Path 2 -time {0.0 0.2 0.4 1.0} -values {0.0 1.0 2.0 0.0}
+   .. tab:: Python
 
+      .. code-block:: Python
+
+         model.timeSeries("Path", 2, time=[0.0, 0.2, 0.4, 1.0], values=[0.0, 1.0, 2.0, 0.0])
+
+   .. tab:: Tcl
+      .. code-block:: Tcl
+
+         timeSeries Path 2 -time {0.0 0.2 0.4 1.0} -values {0.0 1.0 2.0 0.0}
+
+
+.. tabs::
+
+   .. tab:: Python
+
+      .. code-block:: Python
+
+         model.timeSeries("Path", 1, dt=0.02, filePath="A-ELC270.AT2", factor=G)
+
+   .. tab:: Tcl
+      .. code-block:: Tcl
+
+         timeSeries Path 1 -dt 0.02 -filePath A-ELC270.AT2 -factor $G
 
 Code developed by: |fmk|
 
