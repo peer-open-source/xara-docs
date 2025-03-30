@@ -1,6 +1,6 @@
 
-``ForceFrame``: Frame with force-interpolation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``ForceFrame``: *Force* mixed formulation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Mixed finite element formulation for 3D frame elements. [1]_ [2]_.
 

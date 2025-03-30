@@ -2,8 +2,8 @@
 
 .. _ExactFrame:
 
-``ExactFrame``: Geometrically Exact Frame
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``ExactFrame``: Geometrically exact displacement formulation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ExactFrame_Fig1.png
 	:align: center

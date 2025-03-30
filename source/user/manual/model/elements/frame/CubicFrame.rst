@@ -1,5 +1,5 @@
 
-``CubicFrame``: Frame with cubic-interpolation
+``CubicFrame``: cubic displacment formulation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Frame finite element with cubic displacement formulation.
