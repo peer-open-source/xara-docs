@@ -3,7 +3,7 @@
 ShearFiber
 ^^^^^^^^^^
 
-A ``ShearFiber`` section is used to model a :ref:`Frame <Frame>` section with shear deformation. 
+A ``ShearFiber`` section is used to model a :ref:`Frame <frame>` section with shear deformation. 
 The section is defined by a collection of fibers that discretize the cross-section. 
 
 .. tabs::

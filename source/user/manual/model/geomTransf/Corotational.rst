@@ -4,7 +4,7 @@ Corotational
 ^^^^^^^^^^^^
 
 
-The corotational coordinate transformation performs a geometric transformation of beam stiffness and resisting force from a *basic* system [1]_ to the global coordinate system. [2]_
+The corotational coordinate transformation performs a geometric transformation from a *basic* system [1]_ to the global coordinate system. [2]_
 
 .. tabs::
 
@@ -12,6 +12,8 @@ The corotational coordinate transformation performs a geometric transformation o
 
       .. py:method:: Model.geomTransf("Corotational", tag, vecxz, [offi, offj])
          :no-index:
+
+         Define a corotational geometric transformation for frame elements.
 
          :param integer tag: integer tag identifying transformation
          :type tag: |integer|
@@ -167,5 +169,4 @@ References
 .. [2] De Souza, R. M. "Force-based finite element for large displacement inelastic analysis of frames" University of California, Berkeley (2000)
 
 Code Developed by: |rms|, |cmp|
-
 

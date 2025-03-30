@@ -15,7 +15,7 @@ that are associated with an enclosing Plain load pattern.
 
 .. warning::
 
-   At the moment, eleLoads do not work with 3D beam-column elements if Corotational geometric transformation is used.
+   At the moment, eleLoads do not work with 3D :ref:`Frame <frame>` elements if the :ref:`Corotational <CorotTR>` geometric transformation is used.
 
 
 Examples

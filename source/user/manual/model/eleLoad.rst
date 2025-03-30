@@ -3,7 +3,7 @@
 eleLoad
 """""""
 
-The eleLoad command is used to construct an ElementalLoad object and add it to the enclosing LoadPattern.
+The eleLoad command is used to define element loads to a *Plain* load pattern.
 
 .. function:: eleLoad $eleLoad $arg1 $arg2 $arg3 ....
 
@@ -47,7 +47,7 @@ When NDM=3, the beam column elements all accept eleLoad commands of the followin
 
 .. warning::
 
-   At the moment, eleLoads do not work with 3D beam-column elements if Corotational geometric transformation is used.
+   At the moment, eleLoads do not work with 3D :ref:`Frame <frame>` elements if the :ref:`Corotational <CorotTR>` geometric transformation is used.
 
 Example
 -------
