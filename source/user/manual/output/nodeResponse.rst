@@ -3,6 +3,15 @@
 nodeResponse
 ^^^^^^^^^^^^
 
+.. tabs::
+
+   .. tab:: Python
+
+      .. py:method:: Model.nodeResponse(node, dof, response)
+
+   .. tab:: Tcl
+
+      .. function:: nodeResponse node dof response
 
 .. csv-table:: 
     :header: "Name", "Description"
@@ -27,3 +36,4 @@ nodeResponse
     **pressure**, "Pore pressure field"
     **modesOfVibration**, "Translational part of the eigenvector fields (all modes are recorded)"
     **modesOfVibrationRotational**, "Rotational part of the eigenvector fields (all modes are recorded)"
+
