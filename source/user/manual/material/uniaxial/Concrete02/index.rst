@@ -10,6 +10,7 @@ Concrete02
    .. tab:: Python
 
       .. py:method:: Model.uniaxialMaterial("Concrete02", tag, fpc, epsc0, fpcu, epsU, lambda, ft, Ets)
+         :no-index:
 
    .. tab:: Tcl
 
@@ -35,29 +36,29 @@ Concrete02
 
 Typical Hysteretic Stress-Strain Relation for material 
 
-.. figure:: figures/Concrete02/Concrete02.jpg
+.. figure:: figures/Concrete02.jpg
    :align: center
    :figclass: align-center
 
 
 Comparison with Concrete01
 
-.. figure:: figures/Concrete02/Concrete02Hysteretic.jpg
+.. figure:: figures/Concrete02Hysteretic.jpg
    :align: center
    :figclass: align-center
 
 Hognestad's (\citet{hognestad1951study}, \citet{kent1973cyclic}, \textcite{scott1982stressstrain}) monotonic
 compression envelope is simply the piecewise union of an initially parabolic response, followed by a linear loss of strength: 
-\begin{equation}
-%\boxed{
-\sigma(\varepsilon)=\left\{\begin{aligned}
-K f_{cp}\left[2\left(\frac{\varepsilon}{\varepsilon_{cp}}\right)-\left(\frac{\varepsilon}{\varepsilon_{cp}}\right)^{2}\right], &\quad \varepsilon \leq \varepsilon_{cp} \\
-K f_{cp}\left[1-Z\left(\varepsilon-\varepsilon_{cp}\right)\right], &\quad \varepsilon_{cp}<\varepsilon \leq \varepsilon_{cu} \\
-0.2 K f_{cu}, &\quad \varepsilon > \varepsilon_{cu}
-\end{aligned}\right.
-%}
-\label{eq:hognestad}
-\end{equation}
+
+.. math::
+   :label: eq:hognestad
+
+   \sigma(\varepsilon)=\left\{\begin{aligned}
+   K f_{cp}\left[2\left(\frac{\varepsilon}{\varepsilon_{cp}}\right)-\left(\frac{\varepsilon}{\varepsilon_{cp}}\right)^{2}\right], &\quad \varepsilon \leq \varepsilon_{cp} \\
+   K f_{cp}\left[1-Z\left(\varepsilon-\varepsilon_{cp}\right)\right], &\quad \varepsilon_{cp}<\varepsilon \leq \varepsilon_{cu} \\
+   0.2 K f_{cu}, &\quad \varepsilon > \varepsilon_{cu}
+   \end{aligned}\right.
+
 where $K$ (a scaling for strength) and $Z$ (strain softening slope) are model parameters. 
 A hysteretic loading-reloading algorithm for this curve was proposed by \citet{yassin1994nonlinear}
 

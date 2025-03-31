@@ -1,7 +1,7 @@
 .. _Concrete01 :
 
-Concrete01 Material
-^^^^^^^^^^^^^^^^^^^
+Concrete01
+^^^^^^^^^^
 
 This command is used to construct a uniaxial Kent-Scott-Park concrete material with degraded linear unloading/reloading stiffness according to the work of Karsan-Jirsa and no tensile strength. (REF: Fedeas). 
 
@@ -9,7 +9,8 @@ This command is used to construct a uniaxial Kent-Scott-Park concrete material w
 
    .. tab:: Python
 
-      .. function:: uniaxialMaterial("Concrete01", tag, fpc, epsc0, fpcu, epsU)
+      .. py:method:: uniaxialMaterial("Concrete01", tag, fpc, epsc0, fpcu, epsU)
+         :no-index:
 
          :param int tag: integer tag identifying material.
          :param float fpc: concrete compressive strength at 28 days (compression is negative)* .
@@ -38,7 +39,7 @@ This command is used to construct a uniaxial Kent-Scott-Park concrete material w
 
 Typical Hysteretic Stress-Strain Relation for material 
 
-.. figure:: figures/Concrete01/Concrete01.gif
+.. figure:: figures/Concrete01.gif
   :align: center
   :figclass: align-center
 

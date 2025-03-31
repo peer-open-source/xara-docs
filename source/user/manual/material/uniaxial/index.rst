@@ -40,7 +40,7 @@ The following subsections contain information about ``type``
    .. toctree::
       :maxdepth: 1
 
-      Steel01
+      Steel01/index
       Steel02/index
 
 
@@ -53,4 +53,12 @@ The following subsections contain information about ``type``
       uniaxialMaterials/SteelFractureDI
       uniaxialMaterials/DuctileFracture
       uniaxialMaterials/UVCuniaxial
+
+#. Concrete
+
+   .. toctree::
+      :maxdepth: 1
+
+      Concrete01/index
+      Concrete02/index
 
