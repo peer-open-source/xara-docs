@@ -40,7 +40,7 @@ This model implements a uniaxial bilinear steel material object with kinematic h
 
 
 
-.. figure:: figures/Steel01/Steel01.png
+.. figure:: figures/Steel01.png
 	:align: center
 	:figclass: align-center
 
