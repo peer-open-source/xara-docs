@@ -2,7 +2,7 @@
 ``MixedFrame``: Frame with force-interpolation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Mixed finite element formulation for 3D frame elements.
+Two-node mixed finite element formulation for 3D frames.
 
 .. tabs::
 
@@ -13,7 +13,7 @@ Mixed finite element formulation for 3D frame elements.
 
          :param tag: unique :ref:`element` tag
          :type tag: |integer|
-         :param nodes: tuple of *two* :ref:`node` tags (see :ref:`node`)
+         :param nodes: tuple of *two* :ref:`node` tags
          :type nodes: tuple
          :param section: integer tag identifying a :ref:`section`.
          :type section: |integer|

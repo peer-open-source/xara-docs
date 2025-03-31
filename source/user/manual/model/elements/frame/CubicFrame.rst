@@ -3,7 +3,7 @@
 ``CubicFrame``
 ^^^^^^^^^^^^^^
 
-Frame finite element with cubic displacement formulation.
+Two-node frame finite element with cubic displacement formulation.
 
 .. tabs::
 
@@ -14,7 +14,7 @@ Frame finite element with cubic displacement formulation.
 
          :param tag: unique :ref:`element` tag
          :type tag: |integer|
-         :param nodes: tuple of *two* :ref:`node` tags (see :ref:`node`)
+         :param nodes: tuple of *two* :ref:`node` tags
          :type nodes: tuple
          :param section: integer tag identifying a :ref:`section`.
          :type section: |integer|
