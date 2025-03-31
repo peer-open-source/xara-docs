@@ -50,7 +50,7 @@ This model implements a uniaxial bilinear steel material object with kinematic h
 Examples
 --------
 
-The following is used to construct a *Steel01* material with a tag of **1**, a yield strength of **60.0** and an initial tangent stiffness of **30000,0**.
+The following is used to construct a *Steel01* material with a tag of **1**, a yield strength of **60** and an initial tangent stiffness of **30,000**.
 
 1. **Tcl Code**
 
@@ -64,5 +64,5 @@ The following is used to construct a *Steel01* material with a tag of **1**, a y
 
       model.uniaxialMaterial("Steel01",60.0,30000.0)
 
-Code Developed by: |fcf|, |mhs|, |fcf|
+Code Developed by: |fcf|, |mhs|
 

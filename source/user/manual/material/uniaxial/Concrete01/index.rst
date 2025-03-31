@@ -53,5 +53,5 @@ Example
 
 The code above would create a Concrete01 uniaxial material with tag ``1``, compression strength of 4.0 at strain 0.002 and reaches ultimate strength of 0.0 at strain of 0.005
 
-Code Developed by: Filip Filippou, UC Berkeley
+Code Developed by: |fcf|
 
