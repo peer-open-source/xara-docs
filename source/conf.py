@@ -151,6 +151,7 @@ exclude_patterns = [
     "user/manual/section/ASDCoupledHinge3D.rst",
     "user/manual/section/LayeredMembraneSection.rst",
     "user/manual/section/ReinforcedConcreteLayeredMembraneSection.rst",
+    "user/manual/output/getCrdTransfTags.rst",
 
     "user/manual/model/nodes/sp.rst",
     "user/examples/basicExamples/basicTruss.rst",

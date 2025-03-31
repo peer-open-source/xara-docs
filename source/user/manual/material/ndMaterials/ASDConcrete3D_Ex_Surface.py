@@ -43,7 +43,7 @@ def analyze_dir (dX, dY):
 	ops.fix(3,   1, 0)
 	
 	# a simple ramp
-	ops.timeSeries('Linear', 1, '-factor', 2.0*sig0)
+	ops.timeSeries('Linear', 1, factor= 2.0*sig0)
 	
 	# imposed stresses in the current direction
 	ops.pattern('Plain', 1, 1)

@@ -1,6 +1,5 @@
-set test_type "drained_triaxial_cyc" ;# Used in recorders.tcl
+set test_type "drained_triaxial_cyc" ; # Used in recorders.tcl
 
-wipe
  
 # Create a 3D model with 4 Degrees of Freedom
 model BasicBuilder -ndm 3 -ndf 3
@@ -44,7 +43,7 @@ set JacoType  1     ; # Not used in explicit methods
 set TolF      1.0e-6; # Tolerances, not used in explicit
 set TolR      1.0e-6; # Tolerances, not used in explicit
 
-#Reference atmospheric pressure
+# Reference atmospheric pressure
 set P_ref $P_atm
  
 # Create material   
@@ -167,10 +166,9 @@ for {set i 1} {$i <= $Ncyc} {incr i} {
    lappend timelist [expr 2*$i + 1] [expr 2*$i + 2]
 }
 
-set tsq "{Series      -time {$timelist} -values {$qlist} }" ;#-factor 1}"
+set tsq "{Series      -time {$timelist} -values {$qlist} }" ;
 puts $tsq
 
-# return
 
 
 eval "pattern Plain 4 $tsq { load 5  0 0 1.0;  }"
@@ -237,7 +235,3 @@ set endT [clock seconds]
 puts "loading analysis execution time: [expr $endT-$startT] seconds."
 
 
-
-
-
-wipe

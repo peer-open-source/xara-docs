@@ -1,4 +1,0 @@
-.. _ReinforcingSteel:
-
-Reinforcing Steel
-^^^^^^^^^^^^^^^^^

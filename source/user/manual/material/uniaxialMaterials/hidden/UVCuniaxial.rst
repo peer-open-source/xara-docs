@@ -1,4 +1,0 @@
-.. _UVCUniaxial:
-
-UVCUniaxial Material
-^^^^^^^^^^^^^^^^
