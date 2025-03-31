@@ -62,7 +62,8 @@ rst_prolog = """
        .. _Michael H. Scott: https://cce.oregonstate.edu/scott
 
 .. |fmk| replace:: *fmk*
-.. |fcf| replace:: *fcf*
+.. |fcf| replace:: `fcf`_
+.. _fcf: https://fedeas.net
 .. |rms| replace:: *Remo Magalhaes de Souza*
 .. |cmp| replace:: `Claudio M. Perez`_
 .. _Claudio M. Perez: https://stairlab.berkeley.edu/people/claudioperez
