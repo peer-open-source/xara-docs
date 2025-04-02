@@ -18,7 +18,8 @@ The simplest way to create a model is by using its constructor:
 
 .. code:: Python
    
-   model = ops.Model(ndm=2, ndf=3)
+   import xara
+   model = xara.Model(ndm=2, ndf=3)
 
 
 Once a Model has been created, its `methods` are used to perform various operations. 

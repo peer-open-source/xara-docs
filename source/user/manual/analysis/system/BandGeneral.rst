@@ -4,11 +4,21 @@ BandGeneral
 This command is used to construct a BandGeneral linear system of equation. 
 This class is used for matrix systems which have a banded profile. 
 The matrix is stored as shown below in a 1-dimensional array of size equal to the bandwidth times the number of unknowns. 
-When a solution is required, the Lapack routines *DGBSV* and *SGBTRS* are used. 
+When a solution is required, the `Lapack <https://en.wikipedia.org/wiki/LAPACK>`__ routines *DGBSV* and *SGBTRS* are used. 
 
-.. function:: system BandGeneral
+.. tabs::
+   .. tab:: Python
 
-   Configure the system to use the BandGeneral solver.
+      .. py:method:: Model.system("BandGeneral")
+         :no-index:
+
+         Configure the system to use the BandGeneral solver.
+
+   .. tab:: Tcl
+
+      .. function:: system BandGeneral
+
+         Configure the system to use the BandGeneral solver.
 
 
 An :math:`n \times n` matrix A=(ai,j) is a band matrix if all matrix elements are zero outside a diagonally bordered band whose range is determined by constants :math:`k_1` and :math:`k_2`:
@@ -17,7 +27,7 @@ An :math:`n \times n` matrix A=(ai,j) is a band matrix if all matrix elements ar
    
    A_{ij}=0 \quad \mbox{if}\quad j<i-k_1 \quad\mbox{ or }\quad j>i+k_2; \quad k_1, k_2 \ge 0.
 
-The quantities k1 and k2 are the left and right half-bandwidth, respectively. 
+The quantities :math:`k_1` and :math:`k_2` are the left and right half-bandwidth, respectively. 
 The bandwidth of the matrix is :math:`k_1 + k_2 + 1` and only the entries in the band are stored; the rest being implicitly zero.
 
 For example, 6-by-6 a matrix with bandwidth 3:
@@ -65,3 +75,4 @@ The following example shows how to construct a *BandGeneral* system
       model.system('BandGeneral')
 
 Code Developed by: |fmk|
+
