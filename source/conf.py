@@ -45,7 +45,7 @@ rst_prolog = """
 .. |OPS link| replace:: `OpenSees app`_
 .. _OpenSees app: https://stairlab.berkeley.edu/software/OpenSeesRT/
 .. |githubLink| replace:: `OpenSees Github link`_
-.. _OpenSees Github link: https://github.com/STAIRLab/OpenSeesRT
+.. _OpenSees Github link: https://github.com/peer-open-source/xara
 .. |messageBoard| replace:: `OpenSees Message Board`_
 .. _OpenSees Message Board: https://github.com/claudioperez/OpenSeesRT/discussions
 .. |glf| replace:: `Gregory L. Fenves`_
@@ -229,8 +229,8 @@ if "book" in html_theme:
 html_context = {
     "root_doc": root_doc,
     "description": description,
-    "github_user": "STAIRLab",
-    "github_repo": "OpenSeesRT",
+    "github_user": "peer-open-source",
+    "github_repo": "xara",
 #   "doc_path": "<path-from-root-to-your-docs>",
 
     # HOME
