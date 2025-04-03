@@ -13,16 +13,26 @@ The design of the interface was guided by the demands of the |BRACE2| project, f
 
 .. _user-manual:
 
-The :ref:`Model <modelClass>` class encapsulates a finite element analysis with *xara*. 
-The simplest way to create a model is by using its constructor:
+With *xara*, nearly everything is done through an instance of the :ref:`Model <modelClass>` class.
+Rather than invoking functions directly from the *xara* module, one instead typically creates
+an *instance* of a model, 
 
 .. code:: Python
    
    import xara
-   model = xara.Model(ndm=2, ndf=3)
+   model = xara.Model(ndm=2, ndf=2)
 
+then constructs and analyzes a finite element simulation by invoking its *methods*:
 
-Once a Model has been created, its `methods` are used to perform various operations. 
+.. code:: Python
+   
+   model.node(1, (0.0, 0.0))
+   model.node(2, (1.0, 0.0))
+   model.material("Elastic", 1, 29e3, 0.3)
+   model.element("Truss", 1, (1, 2), 1, 20.0)
+   model.analysis("Static")
+   model.analyze(1)
+
 Documentation of these methods is organized as follows:
 
 * :ref:`Modeling <modeling>` methods are used to add components to the finite element model.
