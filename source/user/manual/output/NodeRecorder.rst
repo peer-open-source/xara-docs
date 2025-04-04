@@ -9,10 +9,10 @@ The Node recorder type records the response of a number of nodes at every conver
 
    .. tab:: Python
 
-      .. py:method:: recorder("Node", response [, file|xml|binary, precision: int, <-timeSeries $tsTag>, <-dT $deltaT>, <-closeOnWrite>, <-node  $nodeTags>,< -nodeRange $startNode $endNode>,<-region $regionTag> -dof $dofs)
+      .. py:method:: Model.recorder("Node", response [, file|xml|binary, precision: int, <-timeSeries $tsTag>, <-dT $deltaT>, <-closeOnWrite>, <-node  $nodeTags>,< -nodeRange $startNode $endNode>, region, dof)
          :noindex:
 
-   .. tab:: Tcll
+   .. tab:: Tcl
 
       .. function:: recorder Node  $response <-file $filename>, <-xml $filename>, <-binary $filename>, <-tcp $inetAddress $port>, <-precision  $nSD>, <-timeSeries $tsTag>,<-time>,<-dT $deltaT>, <-closeOnWrite>, <-node  $nodeTags>,< -nodeRange $startNode $endNode>,<-region $regionTag> -dof $dofs
          :noindex:
