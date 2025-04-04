@@ -31,7 +31,7 @@ The following example shows how to construct a *SparseSYM* system:
 References
 ----------
 
-* Kincho H. Law and David R. McKay, “A Parallel Row-Oriented Sparse Solution Method for Finite Element Structural Analysis,” International Journal for Numerical Methods in Engineering, 36:2895-2919, 1993.
+* Kincho H. Law and David R. McKay, “A Parallel Row-Oriented Sparse Solution Method for Finite Element Structural Analysis,” International Journal for Numerical Methods in Engineering, 36:2895-2919, 1993. DOI: `10.1002/nme.1620361704 <https://doi.org/10.1002/nme.1620361704>`__
 
 Code developed by: `J. Peng <https://www.linkedin.com/in/james-peng-a6194b13/>`_
 
