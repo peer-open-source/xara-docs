@@ -11,10 +11,11 @@ Xara offers several advanced features that make it a powerful tool for nonlinear
 - **Performance Optimization**: Built on the OpenSeesRT framework, Xara delivers substantial performance improvements over traditional interpreters.
 
 .. toctree::
+   :maxdepth: 1
 
+   compatibility
    improvements
    deprecated
    suspended
    dropped
-   compatibility
 

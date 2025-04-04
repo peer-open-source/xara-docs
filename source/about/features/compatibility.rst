@@ -7,6 +7,7 @@ Compatibility
 Python
 ------
 
+The *xara* package provides the ``opensees.openseespy`` module which is designed to be a drop-in replacement for the OpenSeesPy package. 
 In order to execute an OpenSeesPy script with *xara*, just change the import from 
 
 .. code-block:: Python
