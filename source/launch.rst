@@ -61,7 +61,7 @@ Documentation of these methods is organized as follows:
    :hidden:
 
    user/guides/index
-   about/compatibility/index
+   about/features/index
    about/license
    about/references
    cite
