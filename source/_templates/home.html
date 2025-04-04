@@ -29,6 +29,7 @@
     document.documentElement.dataset.mode  = "light"; // localStorage.getItem("mode") || "{{ default_mode }}";
     document.documentElement.dataset.theme = "light"; // localStorage.getItem("theme") || "light";
   </script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 
   <link rel="canonical" href="https://xara.so" >
   <link rel="icon" type="image/x-icon" href="_static/images/favicon.ico">
@@ -115,8 +116,20 @@
           </div>
         </div>
           <div class="flex-column">
+            <!--
             <img class="header-image only-light my-auto mx-auto justify-content-center" src="{{ pathto('_static/images/CableStayed02.png', 1) }}" width="80%" alt="{{ project }} logo. ">
             <img class="header-image only-dark" src="{{ pathto('_static/images/girder-dark.png', 1) }}" alt="{{ project }} logo. ">
+            -->
+            <model-viewer 
+              class="header-image my-auto mx-auto justify-content-center"
+              alt="Finite element model rendering." 
+              src="painter.glb" 
+              ar 
+              style="width: 100%; height: 300px;"
+              shadow-intensity="1" 
+              interaction-prompt="none"
+              camera-controls 
+              touch-action="pan-y"></model-viewer>
           </div>
         </div>
       </div>

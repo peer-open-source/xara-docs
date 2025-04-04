@@ -39,6 +39,18 @@ rst_prolog = """
 .. |OPS| replace:: xara
 .. |BRACE2| replace:: `BRACE2`_
 .. _BRACE2: https://structures.live
+.. only:: html
+
+    .. |xara| raw:: html
+
+       <span style="font-family: 'Inconsolata', sans-serif;">𝜒ara</span>
+
+.. only:: not html
+
+    .. |xara| raw:: html
+
+       xara
+
 .. |OpenSeesRT| replace:: `OpenSeesRT`_
 .. _OpenSeesRT: https://stairlab.berkeley.edu/software/opensees/
 .. |OpenSees| replace:: OpenSees
