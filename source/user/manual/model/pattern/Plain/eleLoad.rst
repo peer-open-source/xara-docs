@@ -3,8 +3,7 @@
 eleLoad
 ^^^^^^^
 
-The eleLoad command is used to define distributed loads within elements
-that are associated with an enclosing Plain load pattern.
+The eleLoad command is used to define distributed loads within elements.
 
 .. function:: eleLoad {*}$args ...
 
@@ -34,8 +33,8 @@ Examples
 
    width = 20.0;
    W = 4000.0;
-   model.pattern("Plain",1,"Linear")
-   model.eleLoad("-ele",3, "-type", "-beamUniform", W/width)
+   model.pattern("Plain", 1, "Linear")
+   model.eleLoad("-ele",3, "-type", "-beamUniform", W/width, pattern=1)
 
 Code Developed by: |fmk|
 
