@@ -45,12 +45,6 @@ rst_prolog = """
 
        <span style="font-family: 'Inconsolata', sans-serif;">𝜒ara</span>
 
-.. only:: not html
-
-    .. |xara| raw:: html
-
-       xara
-
 .. |OpenSeesRT| replace:: `OpenSeesRT`_
 .. _OpenSeesRT: https://stairlab.berkeley.edu/software/opensees/
 .. |OpenSees| replace:: OpenSees
