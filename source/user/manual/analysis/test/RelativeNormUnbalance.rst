@@ -4,7 +4,7 @@ Relative Norm Unbalance
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 This command is used to construct a convergence test which uses the norms of the right hand side of the matrix equation, i.e. :math:`b` vector in :math:`Ax=b`, to determine if convergence has been reached. 
-It uses the ratio of the current norm to the first norm, i.e. :math:`\frac{\sqrt({b_i} \cdot {b_i})}{\sqrt({b_1} \cdot {b_1})}`. 
+It uses the ratio of the current norm to the first norm, i.e. :math:`\frac{\sqrt(\boldsymbol{b}_i \cdot \boldsymbol{b}_i)}{\sqrt({b_1} \cdot {b_1})}`. 
 What the right-hand-side of the matrix equation is depends on integrator and constraint handler chosen. 
 Usually, though not always, it is equal to the unbalanced forces in the system. 
 
@@ -35,7 +35,7 @@ Usually, though not always, it is equal to the unbalanced forces in the system.
 Example
 -------
 
-The following examples demonstrate the command to create a RelativeNormUnbalance test which allows 10 iterations till failure with a 2-norm in the :math:`b` vector, i.e. :math:`\sqrt(b^T b)` of **1.0e-2**.
+The following examples demonstrate the command to create a RelativeNormUnbalance test which allows 10 iterations till failure with a 2-norm in the :math:`b` vector, i.e. :math:`\sqrt(b \cdot b)` of **1.0e-2**.
 
 1. **Tcl Code**
 
