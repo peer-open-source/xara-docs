@@ -129,7 +129,7 @@ The plastic increment comes from:
 Where the vector :math:`\mathbf{m} (\state)` is the plastic flow direction defined with the ``$PlasticFlowType`` option and :math:`\Delta \lambda\` is the plastic multiplier defined as:
 
 .. math::
-    \Delta \lambda\ = \dfrac{ \vec{n}^T E \Delta \vec{\epsilon} }{ \vec{n}^T E \Delta \vec{m} - H }
+    \Delta \lambda\ = \dfrac{ \boldsymbol{n} \cdot E \Delta \vec{\epsilon} }{ \vec{n}^T E \Delta \vec{m} - H }
 
 Where :math:`\mathbf{n} (\state)` is the outward normal to the yield surface, and :math:`H` is the hardening term due to internal variable evolution. For example, if the model has two internal variables :math:`s` a scalar internal variable and  :math:`\vec{T}` a tensor internal variable (e.g. :math:`\left\lbrace iv \right\rbrace = \left\lbrace s,\, \vec{T} \right\rbrace`), the hardening term is computed with:
 

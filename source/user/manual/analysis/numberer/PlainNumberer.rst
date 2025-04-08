@@ -1,7 +1,8 @@
 Plain Numberer
 ^^^^^^^^^^^^^^
 
-This command configures a *Plain* degree-of-freedom numbering object to provide the mapping between the degrees-of-freedom at the nodes and the equation numbers. A Plain numberer just takes whatever order the domain gives it nodes and numbers them, this ordering is both dependent on node numbering and size of the model. The command to construct a Plain numberer is a follows:
+This command configures a *Plain* degree-of-freedom numbering object to provide the mapping between the degrees-of-freedom at the nodes and the equation numbers. 
+A *Plain* numberer just takes whatever order the domain gives it nodes and numbers them, this ordering is both dependent on node numbering and size of the model. 
 
 .. tabs::
 
