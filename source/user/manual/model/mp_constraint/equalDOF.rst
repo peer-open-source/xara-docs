@@ -3,7 +3,7 @@
 equalDOF
 ^^^^^^^^
 
-``equalDOF`` imposes a multi-point constraint between nodes where the degrees-of-freedom at the constrained node move exactly the same as the degrees-of-freedom at the other node, the retained node.
+``equalDOF`` imposes a constraint between nodes where the degrees-of-freedom at the constrained node move exactly the same as the degrees-of-freedom at the other node, the retained node.
 
 .. tabs::
 
@@ -33,10 +33,6 @@ equalDOF
 
 .. note::
 
-   retained (primary) node 
-
-   constrained (secondary) node
-
    The valid range of ``dof`` is 1 through **ndf** of the **constrained** node
 
    If no dofs are specified, *all* DOFs of the constrained node are used
@@ -44,7 +40,7 @@ equalDOF
 Examples
 --------
 
-The following command will impose the displacenents at dof's **1, 3, and 5** at node **2** to be the same as those of node **33**.
+The following example will constrain the displacenents at DOFs **1, 3, and 5** at node **2** to be the same as those of node **33**.
 
 1. **Tcl Code**
 

@@ -25,6 +25,7 @@ The corotational coordinate transformation performs a geometric transformation f
          :type offj: tuple of floats
 
    .. tab:: Tcl
+   
       .. function:: geomTransf Corotational $transfTag < $vecxzX $vecxzY $vecxzZ > <-jntOffset $dXi $dYi $dZi $dXj $dYj $dZj>
 
       .. csv-table:: 

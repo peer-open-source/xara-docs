@@ -3,7 +3,7 @@ Rigid Link
 
 This command is used to define a *multi-point constraint*.
 
-.. function:: rigidLink $type $retainedNodeTag $constrainedNodeTag
+.. function:: rigidLink $type $retained_node $constrained_node
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"

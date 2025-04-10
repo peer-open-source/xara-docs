@@ -74,7 +74,6 @@ Example
 
 In the following example *Linear* transformations are defined
 
-
 1. **Tcl Code**
 
    .. code-block:: tcl
@@ -102,6 +101,11 @@ In the following example *Linear* transformations are defined
 	# If there was a rigid offset at the top of element 1: (offset is a variable that the offset value has been stored in)
 	model.geomTransf("Linear", 3, (0, 0, -1), "-jntOffset",0.0, 0.0, 0.0, 0.0, offset, 0.0)
 
+
+A detailed example including joint offsets is provided [here](https://gallery.stairlab.io/examples/frameoffsets/)
+
+References
+----------
 
 Code Developed by: |rms| 
 
