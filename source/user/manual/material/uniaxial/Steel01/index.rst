@@ -9,7 +9,7 @@ This model implements a uniaxial bilinear steel material object with kinematic h
 
    .. tab:: Python 
 
-      .. py:method:: Model.uniaxialMaterial("Steel01", tag, fy, E0, b, [a1, a2, a3, a4])
+      .. py:method:: Model.uniaxialMaterial("Steel01", tag, fy, E, b, [a1, a2, a3, a4])
          :no-index:
 
          :param int tag: integer tag identifying material
@@ -34,9 +34,9 @@ This model implements a uniaxial bilinear steel material object with kinematic h
          $E0, |float|, initial elastic tangent
          $b, |float|, strain-hardening ratio (ratio between post-yield tangent and initial elastic tangent)
          $a1, |float|, optional: isotropic hardening parameter: increase of compression yield envelope as proportion of yield strength after a plastic strain of $a2*($Fy/E0).
-         $a2, |float|, optional:isotropic hardening parameter (see explanation under $a1)
+         $a2, |float|, optional:isotropic hardening parameter (see explanation under ``a1``)
          $a3, |float|, optional: isotropic hardening parameter: increase of tension yield envelope as proportion of yield strength after a plastic strain of $a4*($Fy/E0)
-         $a4, |float|, optional: isotropic hardening parameter (see explanation under $a3)
+         $a4, |float|, optional: isotropic hardening parameter (see explanation under ``a3``)
 
 
 
@@ -50,19 +50,24 @@ This model implements a uniaxial bilinear steel material object with kinematic h
 Examples
 --------
 
-The following is used to construct a *Steel01* material with a tag of **1**, a yield strength of **60** and an initial tangent stiffness of **30,000**.
+The following example defines a *Steel01* material with the tag **1**, a yield strength of **60** and an initial Young's modulus of **29,000**.
 
-1. **Tcl Code**
+.. tabs::
 
-   .. code-block:: tcl
+   .. tab:: Tcl
 
-      uniaxialMaterial Steel01 60.0 30000.0
+      .. code-block:: tcl
+         
+         model BasicBuilder -ndm 3
+         uniaxialMaterial Steel01 60.0 20e3
 
-2. **Python Code**
+   .. tab:: Python
 
-   .. code-block:: python
+      .. code-block:: python
+         
+         import xara 
+         model = xara.Model(ndm=3)
+         model.uniaxialMaterial("Steel01", 60.0, 29e3)
 
-      model.uniaxialMaterial("Steel01",60.0,30000.0)
-
-Code Developed by: |fcf|, |mhs|
+Code Developed by: |fcf|, |mhs|, |cmp|
 

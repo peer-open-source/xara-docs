@@ -1,7 +1,7 @@
 .. _PM4Sand:
 
-J2CyclicBoundingSurface Material
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+J2CyclicBoundingSurface
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Code Developed by: **Alborz Ghofrani** and |pedro| at U.Washington.
 

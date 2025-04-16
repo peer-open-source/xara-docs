@@ -13,28 +13,11 @@ h1 {
 
 # patch
 
-
-
 A patch is used to generate a number of fibers over a cross-sectional area. 
 Currently there are three types of patches that fibers can be generated over: 
 quadrilateral, rectangular and circular.
 
 All patches have the following attributes:
-
-<dl>
- <dt><code>area</code></dt>
- <dd>Total area of the patch.</dd>
-
- <dt><code>moic</code></dt>
- <dd>Second moment of area matrix of the patch about its centroidal axis</dd>
-
- <dt><code>ixc</code></dt>
- <dd>Second moment of inertia of the patch about its $x$ axis</dd>
-
- <dt><code>iyc</code></dt>
- <dd>Second moment of inertia of the patch about its $y$ axis</dd>
-
-</dl>
 
 
 <div style="width: 95%; padding-left: 5%">
@@ -62,10 +45,8 @@ All patches have the following attributes:
 
 </tbody>
 </table>
-<!-- </blockquote> -->
 
 
-<!-- <blockquote> -->
 <span style="font-feature-settings: kern; color: var(--md-code-fg-color) !important; font-family: var(--md-code-font-family);">
     <span style="color:#900">rect</span>(material, divs, corners, **kwds)
 </span>
@@ -109,7 +90,7 @@ All patches have the following attributes:
 </span>
 
 
-![](/figures/quadPatch.svg)
+![](figures/quadPatch.svg)
 
 <table>
 <colgroup>
@@ -193,7 +174,7 @@ All patches have the following attributes:
 </span>
 
 
-![](/figures/straightLayer.svg)
+![](figures/straightLayer.svg)
 
 <table>
 <colgroup>
@@ -220,6 +201,5 @@ All patches have the following attributes:
 
 </tbody>
 </table>
-<!-- </blockquote> -->
 
 </div>

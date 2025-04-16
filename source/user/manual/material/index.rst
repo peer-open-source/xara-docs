@@ -11,4 +11,4 @@ Uniaxial materials are used to define the material behavior in one direction.
     :maxdepth: 1
 
     uniaxial/index
-    ndMaterials/index
+    nd

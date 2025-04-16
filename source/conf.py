@@ -94,7 +94,8 @@ extensions = [
     'sphinx_tabs.tabs',
     "sphinx.ext.autosummary",
     'sphinxcontrib.bibtex',
-    'sphinx_sitemap'
+    'sphinx_sitemap',
+    "myst_parser"
 ]
 
 bibtex_bibfiles = ["references.bib"]
@@ -263,4 +264,10 @@ html_css_files = [
 
 html_secnum_suffix = " "
 
-
+mathjax3_config = {
+  "loader": {"load": ['[tex]/color']},
+  "tex": {
+      "packages": {'[+]': ['color']},
+      "inlineMath": [['$', '$'], ['\\(', '\\)']]
+  }
+};

@@ -40,6 +40,7 @@ The following subsections contain information about ``type``
    .. toctree::
       :maxdepth: 1
 
+      Steel/index
       Steel01/index
       Steel02/index
 

@@ -41,11 +41,11 @@ The following materials are available:
 .. toctree::
    :maxdepth: 1
 
-   ElasticIsotropic
-   ElasticOrthotropic
-   J2Plasticity
-   DruckerPrager
-   ManzariDafalias
+   ndMaterials/ElasticIsotropic
+   ndMaterials/ElasticOrthotropic
+   plastic/J2Plasticity
+   ndMaterials/DruckerPrager
+   ndMaterials/ManzariDafalias
 
 ..
    BoundingCamClay

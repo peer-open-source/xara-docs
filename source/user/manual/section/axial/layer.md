@@ -14,10 +14,8 @@ h1 {
 # layer
 
 
-
 <div style="width: 95%; padding-left: 5%">
 
-<!-- <blockquote> -->
 <span style="font-feature-settings: kern; color: var(--md-code-fg-color) !important; font-family: var(--md-code-font-family);">
     <span style="color:#900">circ</span>(material, divs, fiber_area, center, radius, arc, **kwds)
 </span>
@@ -56,7 +54,7 @@ h1 {
 </span>
 
 
-![](/figures/straightLayer.svg)
+![](figures/straightLayer.svg)
 
 <table>
 <colgroup>
@@ -80,9 +78,9 @@ h1 {
 </tr>
 </table>
 </tr>
-
 </tbody>
 </table>
-<!-- </blockquote> -->
+
+
 
 </div>
