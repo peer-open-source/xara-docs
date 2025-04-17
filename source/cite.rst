@@ -1,8 +1,8 @@
 Cite
 ^^^^
 
-*xara* is developed by the `STAIRLab <https://stairlab.berkeley.edu>`_ at UC Berkeley. 
-If you use *xara*, please cite the following reference:
+*xara* is developed by the `Pacific Earthquake Engineering Research Center <https://peer.berkeley.edu>`__ at UC Berkeley. 
+If you use *xara*, please cite the following references:
 
 .. code-block:: bibtex
 
