@@ -1,16 +1,15 @@
 
-========================
- addToParameter command
-========================
+addToParameter
+^^^^^^^^^^^^^^
 
-.. py:method:: Model.addToParameter(tag, <specific parameter args>)
+.. py:method:: Model.addToParameter(tag, *args)
 
    In case that more objects (e.g., element, section) are mapped to an existing parameter,
-   the  command can be used to relate these additional objects to the specific parameter.
+   this command relates these additional objects to the specific parameter.
 
    ==============================   ===========================================================================
    ``tag`` |int|                    integer tag identifying the parameter.
-   ``<specific parameter args>``    depend on the object in the FE model encapsulating the desired parameters.
+   ``*args``                        arguments that depend on the object in the FE model encapsulating the desired parameters.
    ==============================   ===========================================================================
 
 

@@ -19,6 +19,10 @@ parameter
    Each parameter must be unique in the FE domain, and all parameter tags must be numbered sequentially starting from 1.
 
 
+
+The format of the *<specific object arguments>* is different for each considered element/section/material. 
+
+
 Examples
 ---------
 
@@ -35,7 +39,4 @@ Examples
      model.parameter(1, 'element', 4, 'material', 1, 'E')
 
 
-.. note::
-
-   Notice that the format of the <specific object arguments> is different for each considered element/section/material. The specific set of parameters and the relative <specific object arguments> format will be added in the future.
 
