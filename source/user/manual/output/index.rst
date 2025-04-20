@@ -25,4 +25,5 @@ Output
    nodeCoord   
    nodeRotation
    nodeEigenvector
+   getNodeTags
 

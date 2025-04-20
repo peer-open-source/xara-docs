@@ -47,6 +47,9 @@ Response of the JankowskiImpact  material during impact:
 
 Note that the flat displacement from 0 to roughly minus 0.01 inch displacement is caused by the gap parameter.
 
+References
+----------
+
 Code Developed by: Patrick J. Hughes, UC San Diego
 
 
@@ -57,3 +60,4 @@ Code Developed by: Patrick J. Hughes, UC San Diego
 .. [Jankowski2007] Jankowski R. Theoretical and experimental assessment of parameters for the non-linear viscoelastic model of structural pounding. Journal of Theoretical and Applied Mechanics (Poland) 2007.
 
 .. [Hughes2020]  Hughes PJ, Mosqueda G. Evaluation of uniaxial contact models for moat wall pounding simulations. Earthquake Engineering and Structural Dynamics 2020(March): 12–14. DOI: 10.1002/eqe.3285.
+
