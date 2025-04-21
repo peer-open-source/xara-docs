@@ -28,7 +28,7 @@ This command is used to construct a J2CyclicBoundingSurface material ([Borja-Ami
 
    The material formulations for the J2CyclicBoundingSurface object are "ThreeDimensional" and "PlaneStrain".
 
-   Valid Element Recorder queries are **stress**, **strain**
+   Valid element recorder queries are **stress**, **strain**
 
 
 Elastic response can be enforced by
@@ -43,8 +43,6 @@ Elastoplastic by
 
    updateMaterialStage -material $matTag -stage 1
 
-.. [Borja-Amies1994] Borja R., Amies A., "Multiaxial Cyclic Plasticity Model for Clays". Journal of Geotech. Engrg., 1994, 120(6):1051-1070
-
 
 Examples
 --------
@@ -53,3 +51,8 @@ This example, provides an conventional triaxial compression test using one 8-nod
 
 .. literalinclude:: J2CyclicBoundingSurfaceExample1.tcl
    :language: tcl
+
+References
+----------
+
+.. [Borja-Amies1994] Borja R., Amies A., "Multiaxial Cyclic Plasticity Model for Clays". Journal of Geotech. Engrg., 1994, 120(6):1051-1070
