@@ -5,7 +5,7 @@ SmearedSteelDoubleLayer
 
 This command is used to construct a SmearedSteelDoubleLayer material. 
 It is the abstract representation of a double perpendicular smeared steel layer (plane stress) 2D material with a tangent formulation. Each layer works only in the direction of the bars, so a uniaxial constitutive model is used to represent the behavior of reinforcing steel bars in each direction. The angle that defines the orientation
-of the steel layers with respect to the local coordinate system **x-y** is denoted as :math:`\theta_{s}`, represented by the argument ``$OrientationEmbeddedSteel`` (based on the work of Rojas et al., 2016).
+of the steel layers with respect to the local coordinate system **x-y** is denoted as :math:`\theta_{s}`, represented by the argument ``OrientationEmbeddedSteel`` (based on the work of Rojas et al., 2016).
 
 .. figure:: SmearedSteelDoubleLayer_figure.png
 	:align: center
@@ -42,26 +42,27 @@ The following recorders are available with the SmearedSteelDoubleLayer material.
    strain_stress_steel2, "Uniaxial strain and stress of steel 2 :math:`\varepsilon_{s2}`, :math:`\sigma_{s2}`"
 
 
-.. admonition:: Notes
+.. note::
 
-   | 1. The implementation of this material does not include the reductions in yield strength and strain-hardening ratio for embedded steel bars in concrete (Belarbi and Hsu, 1995).
+   1. The implementation of this material does not include the reductions in yield strength and strain-hardening ratio for embedded steel bars in concrete (Belarbi and Hsu, 1995).
 
-.. admonition:: Examples
+Examples
+--------
 
-   The following example constructs a SmearedSteelDoubleLayer material with tag **2** , composed of a horizontal and vertical uniaxial steel material (e.g. `Steel02 <https://opensees.berkeley.edu/wiki/index.php/Steel02_Material_--_Giuffr%C3%A9-Menegotto-Pinto_Model_with_Isotropic_Strain_Hardening>`_, `SteelMPF <https://opensees.berkeley.edu/wiki/index.php/SteelMPF_-_Menegotto_and_Pinto_(1973)_Model_Extended_by_Filippou_et_al._(1983)>`_) of tag **1**, reinforcing ratio in horizontal and vertical direction of **1%** and an orientation of the double smeared steel layer of **0.0** radians.   
+The following example constructs a SmearedSteelDoubleLayer material with tag **2** , composed of a horizontal and vertical uniaxial steel material (e.g. `Steel02 <https://opensees.berkeley.edu/wiki/index.php/Steel02_Material_--_Giuffr%C3%A9-Menegotto-Pinto_Model_with_Isotropic_Strain_Hardening>`_, `SteelMPF <https://opensees.berkeley.edu/wiki/index.php/SteelMPF_-_Menegotto_and_Pinto_(1973)_Model_Extended_by_Filippou_et_al._(1983)>`_) of tag **1**, reinforcing ratio in horizontal and vertical direction of **1%** and an orientation of the double smeared steel layer of **0.0** radians.   
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
-   .. code-block:: tcl
-	  
-	  nDMaterial SmearedSteelDoubleLayer 2 1 1 0.01 0.01 0.0;
-		
-   2. **Python Code**
-
-   .. code-block:: python
-
-      nDMaterial('SmearedSteelDoubleLayer', 2, 1, 1, 0.01, 0.01, 0.0)	  
+.. code-block:: tcl
    
+   nDMaterial SmearedSteelDoubleLayer 2 1 1 0.01 0.01 0.0;
+   
+2. **Python Code**
+
+.. code-block:: python
+
+   model.nDMaterial('SmearedSteelDoubleLayer', 2, 1, 1, 0.01, 0.01, 0.0)	  
+
 
    
 References

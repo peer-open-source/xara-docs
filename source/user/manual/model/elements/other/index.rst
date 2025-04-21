@@ -25,12 +25,12 @@ Other
    zeroLengthContact
    zeroLengthContactNTS2D
 
-#. Bearing Elements
+.. #. Bearing Elements
 
-   .. toctree::
-      :maxdepth: 1
+..    .. toctree::
+..       :maxdepth: 1
     
-      TripleFrictionPendulumX
+..       TripleFrictionPendulumX
 
 ..
        ElastomericBearingBouc-Wen

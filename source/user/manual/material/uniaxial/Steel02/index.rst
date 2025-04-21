@@ -9,14 +9,14 @@ Steel02
    
    .. tab:: Python 
 
-      .. py:method:: Model.uniaxialMaterial("Steel02", tag, fy, E0, b, R0, cR1, cR2, [a1, a2, a3, a4, sigInit])
+      .. py:method:: Model.uniaxialMaterial("Steel02", tag, Fy, E, b, R0, cR1, cR2, [a1, a2, a3, a4, sigInit])
          :no-index:
 
          Add a *Steel02* material to *model* identified by *tag*.
 
          :param int tag: integer tag identifying material
-         :param float fy: yield stress, :math:`\sigma_y`
-         :param float E0: initial elastic tangent, :math:`E_0`
+         :param float Fy: yield stress, :math:`F_y`
+         :param float E: initial elastic tangent, :math:`E`
          :param float b: strain-hardening ratio, :math:`b`
          :param float R0: parameter to control the transition from elastic to plastic branches, :math:`R_0`
          :param float cR1: parameter to control the transition from elastic to plastic branches, :math:`cR1`
@@ -37,8 +37,8 @@ Steel02
          :widths: 10, 10, 40
 
          tag, |integer|,	    integer tag identifying material
-         fy, |float|, yield strength
-         E0, |float|, initial elastic tangent
+         Fy, |float|, yield strength
+         E, |float|, initial elastic tangent
          b, |float|, strain-hardening ratio (ratio between post-yield tangent and initial elastic tangent)
          R0 CR1 CR2, 3 |float|, parameters to control the transition from elastic to plastic branches.
          a1, |float|, isotropic hardening parameter. (optional: default = 0.0). see note. 
@@ -50,20 +50,11 @@ Steel02
 
 
 The hardening formulation was developed by [FilippouEtAl1983]_.
-The parameters ``a1`` and ``a2`` increase of compression yield envelope as proportion of yield strength after a plastic strain of :math:`a_2 f_y/E_0`. 
+The parameters ``a1`` and ``a2`` increase of compression yield envelope as proportion of yield strength after a plastic strain of :math:`a_2 F_y/E`. 
 
-The parameters ``a3`` and ``a4`` increase of tension yield envelope as proportion of yield strength after a plastic strain of $a4*($Fy/E0). 
+The parameters ``a3`` and ``a4`` increase of tension yield envelope as proportion of yield strength after a plastic strain of :math:`a_4 F_y/E`. 
 
 Typical values are ``R0`` between 10 and 20, ``cR1=0.925``, ``cR2=0.15``
-
-If ``siginit`` is specified, strain is calculated from epsP=$sigInit/$E
-
-.. code:: c++
-
-  if (sigInit!= 0.0)
-     this->eps = trialStrain + sigInit/E; 
-  else
-     this->eps = trialStrain;
 
 
 .. _fig-steel02:
@@ -86,8 +77,18 @@ If ``siginit`` is specified, strain is calculated from epsP=$sigInit/$E
 .. math::
    \bar{\sigma}(\bar{\varepsilon}) = b{\bar{\varepsilon}} + \frac{(1-b){\bar{\varepsilon}}}{\left(1 + |{\bar{\varepsilon}}|^r\right)^\frac{1}{r}},
 
-where :math:`\bar{\sigma}=\sigma/\sigma_y`, :math:`\bar{\varepsilon}=\varepsilon/\varepsilon_y`, :math:`(\sigma_y, \varepsilon_y)` is the yield point, :math:`b` is the strain hardening parameter, and the parameter :math:`r` influences the shape of the transition curve and takes account of the Bauschinger effect. 
+where :math:`\bar{\sigma}=\sigma/F_y`, :math:`\bar{\varepsilon}=\varepsilon/\varepsilon_y`, :math:`(F_y, \varepsilon_y)` is the yield point, :math:`b` is the strain hardening parameter, and the parameter :math:`r` influences the shape of the transition curve and takes account of the Bauschinger effect. 
 A hysteretic loading-reloading algorithm for this curve was proposed by \cite{giuffre1970comportamento}, which was extended by \cite{filippou1983effects} to include isotropic hardening.
+
+If ``siginit`` is specified, strain is calculated from epsP=$sigInit/$E
+
+.. code:: c++
+
+  if (sigInit!= 0.0)
+     this->eps = trialStrain + sigInit/E; 
+  else
+     this->eps = trialStrain;
+
 
 Example 
 -------

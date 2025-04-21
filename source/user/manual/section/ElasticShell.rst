@@ -16,11 +16,11 @@ is homogeneous with an :ref:`ElasticIsotropic` material.
       
          :param tag: integer tag identifying the section
          :type tag: |integer|
-         :param E: Young's modulus
+         :param E: Young's modulus, :math:`E`
          :type E: float
-         :param nu: Poisson's ratio
+         :param nu: Poisson's ratio, :math:`\nu`
          :type nu: float
-         :param thickness: section thickness
+         :param thickness: section thickness, :math:`h`
          :type thickness: float
 
 

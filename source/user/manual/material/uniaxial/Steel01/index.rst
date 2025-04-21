@@ -9,12 +9,12 @@ This model implements a uniaxial bilinear steel material object with kinematic h
 
    .. tab:: Python 
 
-      .. py:method:: Model.uniaxialMaterial("Steel01", tag, fy, E, b, [a1, a2, a3, a4])
+      .. py:method:: Model.uniaxialMaterial("Steel01", tag, Fy, E, b, [a1, a2, a3, a4])
          :no-index:
 
          :param int tag: integer tag identifying material
-         :param |float| fy: yield strength
-         :param |float| E0: initial elastic tangent
+         :param |float| Fy: yield strength
+         :param |float| E: initial elastic tangent
          :param |float| b: strain-hardening ratio (ratio between post-yield tangent and initial elastic tangent)
          :param |float| a1: optional: isotropic hardening parameter: increase of compression yield envelope as proportion of yield strength after a plastic strain of ``a2*(fy/E0)``.
          :param |float| a2: optional: isotropic hardening parameter (see explanation under ``a1``)
@@ -23,7 +23,7 @@ This model implements a uniaxial bilinear steel material object with kinematic h
 
    .. tab:: Tcl
 
-      .. function:: uniaxialMaterial Steel01 $tag $Fy $E0 $b <$a1 $a2 $a3 $a4>
+      .. function:: uniaxialMaterial Steel01 $tag $Fy $E $b <$a1 $a2 $a3 $a4>
 
       .. csv-table:: 
          :header: "Argument", "Type", "Description"
@@ -31,7 +31,7 @@ This model implements a uniaxial bilinear steel material object with kinematic h
 
          $tag, |integer|, integer tag identifying material
          $Fy, |float|, yield strength
-         $E0, |float|, initial elastic tangent
+         $E, |float|, initial elastic tangent
          $b, |float|, strain-hardening ratio (ratio between post-yield tangent and initial elastic tangent)
          $a1, |float|, optional: isotropic hardening parameter: increase of compression yield envelope as proportion of yield strength after a plastic strain of $a2*($Fy/E0).
          $a2, |float|, optional:isotropic hardening parameter (see explanation under ``a1``)

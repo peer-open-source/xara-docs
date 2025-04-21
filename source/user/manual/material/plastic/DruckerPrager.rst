@@ -9,7 +9,7 @@ This command is used to construct an inelastic material that has a Drucker-Prage
 
 .. tabs::
    .. tab:: Python
-      .. py:method:: Model.nDMaterial("DruckerPrager", tag, K, G, Fy, rho, rhoBar, Fs, Fo, Hsat, delta2, Hmix, theta, density, atm=101.0)
+      .. py:method:: Model.nDMaterial("DruckerPrager", tag, K, G, Fy, Rvol, Rbar, Fs, Fo, Hsat, Hten, Hmix, theta, density, atm=101.0)
          :no-index:
 
          Construct a Drucker-Prager material.
@@ -18,8 +18,8 @@ This command is used to construct an inelastic material that has a Drucker-Prage
          :param K: bulk modulus, :math:`\kappa`
          :param G: shear modulus, :math:`\mu`
          :param Fy: Initial yield stress, :math:`F_y \geq 0`
-         :param rho: frictional strength parameter, :math:`\rho \gt 0`
-         :param rhoBar: controls evolution of plastic volume change: :math:`0 \leq \bar{\rho} \leq \rho`
+         :param Rvol: frictional strength parameter, :math:`\rho \gt 0`
+         :param Rbar: controls evolution of plastic volume change: :math:`0 \leq \bar{\rho} \leq \rho`
          :param Fs: Saturation stress for nonlinear isotropic strain hardening: :math:`F_{s} \geq 0`
          :param Fo: nonlinear isotropic strain hardening parameter: :math:`F_o \geq 0`
          :param Hsat: nonlinear isotropic strain hardening parameter: :math:`\delta_1 \geq 0`

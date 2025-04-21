@@ -26,8 +26,8 @@ For additional information please visit `E-SFI-MVLEM-3D GitHub Page <https://kko
    eleTag, integer, unique :ref:`Element` tag
    iNode jNode kNode lNode, 4 integer, tags of element nodes defined in counterclockwise direction|
    m, integer, number of element fibers
-   {Thicknesses}, *m* float, array of *m* fiber thicknesses
-   {Widths}, *m* float, array of *m* macro-fiber widths
+   {Thicknesses}, *m* float, array of *m* fiber thicknesses
+   {Widths}, *m* float, array of *m* macro-fiber widths
    {Material_tags}, *m* float, array of *m* macro-fiber nDMaterial (`FSAM <https://opensees.berkeley.edu/wiki/index.php/FSAM_-_2D_RC_Panel_Constitutive_Behavior>`_) tags
    c, float, location of center of rotation from the base (optional; default = 0.4 (recommended))
    tMod, float, thickness multiplier (optional; default = 0.63 equivalent to 0.25Ig for out-of-plane bending)

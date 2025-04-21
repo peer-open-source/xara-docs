@@ -97,6 +97,9 @@ extensions = [
     'sphinx_sitemap',
     "myst_parser"
 ]
+myst_enable_extensions = [
+    "dollarmath"
+]
 
 bibtex_bibfiles = ["references.bib"]
 
