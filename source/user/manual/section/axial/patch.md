@@ -1,4 +1,3 @@
-
 ---
 title: patch
 ...
@@ -17,41 +16,12 @@ A patch is used to generate a number of fibers over a cross-sectional area.
 Currently there are three types of patches that fibers can be generated over: 
 quadrilateral, rectangular and circular.
 
-All patches have the following attributes:
 
+```{eval-rst}
+.. py:method:: Model.patch("rect", material, divs, corners)
+   :no-index:
 
-<div style="width: 95%; padding-left: 5%">
-
-<!-- <blockquote> -->
-<span style="font-feature-settings: kern; color: var(--md-code-fg-color) !important; font-family: var(--md-code-font-family);">
-    <span style="color:#900">Fiber</span>(coord, area, material, **kwds)
-</span>
-
-
-
-<table>
-<colgroup>
-  <col style="width: 10%" ><col style="width: 30%" ><col style="width: 60%" >
-</colgroup>
-<tbody>
-
-<tr><td>coord</td><td><code>[x,y]</code></td><td>$x$ and $y$ coordinate of the fiber in the section (local coordinate system)<table>
-<tr><td>x</td><td><code>Num</code></td><td></tr>
-<tr><td>y</td><td><code>Num</code></td><td></tr>
-</table>
-</tr>
-<tr><td>area</td><td><code>Num</code></td><td>area of the fiber.</tr>
-<tr><td>material</td><td><code>Ref(Material)</code></td><td>material tag associated with this fiber (UniaxialMaterial tagfor a FiberSection and NDMaterial tag for use in an NDFiberSection).</tr>
-
-</tbody>
-</table>
-
-
-<span style="font-feature-settings: kern; color: var(--md-code-fg-color) !important; font-family: var(--md-code-font-family);">
-    <span style="color:#900">rect</span>(material, divs, corners, **kwds)
-</span>
-
-
+```
 
 <table>
 <colgroup>
@@ -133,13 +103,18 @@ All patches have the following attributes:
 <!-- </blockquote> -->
 
 
-<!-- <blockquote> -->
+```{eval-rst}
+.. py:method:: Model.patch("circ", material, divs, center, radius [, extrad])
+   :no-index:
+
+```
+
 <span style="font-feature-settings: kern; color: var(--md-code-fg-color) !important; font-family: var(--md-code-font-family);">
     <span style="color:#900">circ</span>(material,<br>&emsp;&emsp;&emsp;divs,<br>&emsp;&emsp;&emsp;center,<br>&emsp;&emsp;&emsp;intRad,<br>&emsp;&emsp;&emsp;extRad,<br>&emsp;&emsp;&emsp;startAng,<br>&emsp;&emsp;&emsp;endAng,<br>&emsp;&emsp;&emsp;**kwds)
 </span>
 
 
-![](/figures/circPatch.svg)
+![](figures/circPatch.svg)
 
 <table>
 <colgroup>
@@ -165,10 +140,13 @@ All patches have the following attributes:
 
 </tbody>
 </table>
-<!-- </blockquote> -->
 
 
-<!-- <blockquote> -->
+```{eval-rst}
+.. py:method:: Model.layer("line", ...)
+   :no-index:
+
+```
 <span style="font-feature-settings: kern; color: var(--md-code-fg-color) !important; font-family: var(--md-code-font-family);">
     <span style="color:#900">line</span>(material, divs, fiber_area, vertices, **kwds)
 </span>
@@ -202,4 +180,3 @@ All patches have the following attributes:
 </tbody>
 </table>
 
-</div>
