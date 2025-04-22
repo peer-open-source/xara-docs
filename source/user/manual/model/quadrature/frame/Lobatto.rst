@@ -43,7 +43,7 @@ The following examples demonstrate the command in Tcl and Python script to add a
 
       .. code-block:: tcl
 
-         section "ElasticFrame" 2, -E 29e3 -A 1e4 -I 60
+         section "ElasticFrame" 1  -E 29e3  -A 1e4  -I 60
          beamIntegration "Lobatto" 2 1 6
 
 
@@ -51,6 +51,6 @@ The following examples demonstrate the command in Tcl and Python script to add a
 
       .. code-block:: python
 
-         model.section("ElasticFrame", 2, E=29e3, A=1e4, I=60)
+         model.section("ElasticFrame", 1, E=29e3, A=1e4, I=60)
          model.beamIntegration("Lobatto", 2, 1, 6)
 

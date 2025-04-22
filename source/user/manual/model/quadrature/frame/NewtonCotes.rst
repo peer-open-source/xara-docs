@@ -9,15 +9,15 @@ The weights for the uniformly  spaced integration points are tabulated in refere
 The force deformation response at each integration point is defined by the section.
 The order of accuracy for Gauss-Radau integration is :math:`N-1`.
 
-.. function:: beamIntegration "NewtonCotes" tag secTag N
+.. function:: beamIntegration "NewtonCotes" tag section N
 
 .. csv-table::
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   "$tag",       "|integer|",    "Unique object tag"
-   "$sectTag",   "|integer|",    "A previous-defined section"
-   "$N",         "|integer|",    "Number of Integration Points along the elementa"
+   "tag",       "|integer|",    "Unique object tag"
+   "section",   "|integer|",    "Previously defined section tag"
+   "N",         "|integer|",    "Number of integration points along the elementa"
    
 
 Examples
@@ -38,6 +38,6 @@ The following examples demonstrate the command in Tcl and Python script to add a
 
       .. code-block:: python
 
-         model.beamIntegration("NewtonCotes",2,1,6)
+         model.beamIntegration("NewtonCotes", 2, 1, 6)
 
 

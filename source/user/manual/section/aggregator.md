@@ -1,4 +1,3 @@
-
 ---
 title: section
 ...
@@ -52,7 +51,7 @@ relationships at beam-column and plate sample points.
 </span>
 
 
-![](/figures/SectionAggregator.gif)
+![](figures/SectionAggregator.gif)
 
 <table>
 <colgroup>
@@ -70,6 +69,7 @@ relationships at beam-column and plate sample points.
 
 </tbody>
 </table>
+
 <!-- </blockquote> -->
 
 </div>
