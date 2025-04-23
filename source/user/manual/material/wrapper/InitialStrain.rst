@@ -3,10 +3,6 @@
 InitStrain
 ^^^^^^^^^^
 
-This command is used to construct a InitStrain material wrapper. 
-It is a wrapper that imposes an inital-strain to another nDMaterial such that :math:`\sigma = f\left (\varepsilon + \varepsilon_{0}\right )`.
-
-
 .. function:: nDMaterial InitStrain $matTag $otherTag $eps0_11 <$eps0_22 $eps0_33 $eps0_12 $eps0_23 $eps0_13>
 
 
@@ -18,8 +14,12 @@ It is a wrapper that imposes an inital-strain to another nDMaterial such that :m
    $otherTag, |integer|, "unique tag identifying the previously defined nD material"
    $eps0_11 <$eps0_22 $eps0_33 $eps0_12 $eps0_23 $eps0_13>, 1 or 6 |float|, "initial strain values. If only one is given, a volumetric strain = eps0_11 is imposed."
 
+
 Notes
 -----
+
+It is a wrapper that imposes an inital-strain to another material such that :math:`\sigma = f\left (\varepsilon + \varepsilon_{0}\right )`.
+
 
 Parameters
 """"""""""

@@ -1,9 +1,11 @@
 .. _Parallel3D:
 
-Parallel3D Material Wrapper
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Parallel3D Wrapper
+^^^^^^^^^^^^^^^^^^
 
-This command is used to construct a Parallel3D material. It is a wrapper that imposes an iso-strain condition to an arbitrary number of previously-defined 3D nDMaterial objects. Therefore, in each sub-material the strains are equal, the parallel stress and tangent are equal to the (weighted) sum of those of the sub-materials.
+This command is used to construct a Parallel3D material. 
+It is a wrapper that imposes an iso-strain condition to an arbitrary number of previously-defined 3D nDMaterial objects. 
+Therefore, in each sub-material the strains are equal, the parallel stress and tangent are equal to the (weighted) sum of those of the sub-materials.
 
 
 .. function:: nDMaterial Parallel3D $matTag    $tag1 $tag2 ... $tagN   <-weights $w1 $w2 ... $wN>
@@ -17,13 +19,8 @@ This command is used to construct a Parallel3D material. It is a wrapper that im
    $tag1 $tag2 ... $tagN, N |integer|, "unique tags identifying previously defined nD materials"
    $w1 $w2 ... $wN, N |float|, "weight factors, optional. If not defined, they will be assumed all equal to 1"
 
-Usage Notes
-"""""""""""
-
-.. admonition:: Limitations
-
-   * The only material formulation for the Parallel3D material object is "ThreeDimensional".
-   * The only material formulation allowed for the sub-material objects is "ThreeDimensional".
+Notes
+"""""
 
 .. admonition:: Responses
 
@@ -31,8 +28,9 @@ Usage Notes
    * **material** **$matId** ... : use the **material** keyword followed by the 1-based index of the sub-material (and followed by the desired response) to forward the request to the matId sub-material.
    * **homogenized** ... : use the **homogenized** keyword followed by the desired response to forward the request to all sub-materials, and to compute its weighted average.
 
-.. admonition:: Example 1 - Simple Linear Validation
+Examples
+""""""""
 
-   | :download:`Parallel3DExample1.py`
+| :download:`Parallel3DExample1.py`
 
 Code Developed by: **Massimo Petracca** at ASDEA Software, Italy.

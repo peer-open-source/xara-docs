@@ -1,7 +1,7 @@
 .. _Series3D:
 
-Series3D Material Wrapper
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Series3D Wrapper
+^^^^^^^^^^^^^^^^
 
 This command is used to construct a Series3D material. It is a wrapper that imposes an iso-stress condition to an arbitrary number of previously-defined 3D nDMaterial objects
 
@@ -80,70 +80,68 @@ which shows that :eq:`series-3d-constraint` actually imposes an iso-stress condi
 Examples
 --------
 
-   | A simple example to validate the Series3D material. First material is twice as stiff as the second one. All weights are assumed equal to 1.
-   | The expected results are:
-   * equal stress 
-   * additive strain
-   * strain in the soft material twice as large as the strain in the stiff material
+| A simple example to validate the Series3D material. First material is twice as stiff as the second one. All weights are assumed equal to 1.
+| The expected results are:
+* equal stress 
+* additive strain
+* strain in the soft material twice as large as the strain in the stiff material
 
-   .. code-block:: tcl
+.. code-block:: Tcl
 
-      # the 2D model
-      wipe
-      model basic -ndm 2 -ndf 2
-      
-      # 2 young's moduli
-      set E1 30000.0
-      set E2 [expr $E1*0.5]
-      
-      # 2 elastic materials
-      nDMaterial ElasticIsotropic 1 $E1 0.2
-      nDMaterial ElasticIsotropic 2 $E2 0.2
-      
-      # the Series3D wrapper using all weights = 1
-      nDMaterial Series3D 3   1 2
-      
-      # a triangle
-      node 1 0 0
-      node 2 1 0
-      node 3 0 1
-      nDMaterial PlaneStress 100 3
-      element tri31 1   1 2 3   1.0 "PlaneStress" 100
-      
-      # fixity
-      fix 1   1 1
-      fix 2   0 1
-      fix 3   1 0
-      
-      # a simple ramp
-      timeSeries Linear 1
-      
-      # imposed macroscopic strain in XX component
-      set em 0.01
-      pattern Plain 1 1 {
-      	sp 2 1   $em
-      }
-      
-      # solve
-      constraints Transformation
-      numberer Plain
-      system FullGeneral
-      test NormDispIncr 1.0e-6 10 0
-      algorithm Newton
-      integrator LoadControl 1.0
-      analysis Static
-      analyze 1
-      
-      # check responses
-      puts "Checking responses"
-      set Sm [expr [lindex [eleResponse 1 material 1 stress] 0]]
-      set S1 [expr [lindex [eleResponse 1 material 1 material 1 stress] 0]]
-      set S2 [expr [lindex [eleResponse 1 material 1 material 2 stress] 0]]
-      set SmHom [expr [lindex [eleResponse 1 material 1 homogenized stress] 0]]
-      puts "Sm = S1 = S2 = SmHom -> [format {%6.3f = %6.3f = %6.3f = %6.3f} $Sm $S1 $S2 $SmHom] (stresses are equal)"
-      set Em [expr [lindex [eleResponse 1 material 1 strain] 0]]
-      set E1 [expr [lindex [eleResponse 1 material 1 material 1 strain] 0]]
-      set E2 [expr [lindex [eleResponse 1 material 1 material 2 strain] 0]]
-      puts "Em = E1 + E2 -> [format {%6.5f = %6.5f + %6.5f} $Em $E1 $E2] (strains are additive since w1=w2=1)"
+   model basic -ndm 2 -ndf 2
+   
+   # 2 young's moduli
+   set E1 30000.0
+   set E2 [expr $E1*0.5]
+   
+   # 2 elastic materials
+   nDMaterial ElasticIsotropic 1 $E1 0.2
+   nDMaterial ElasticIsotropic 2 $E2 0.2
+   
+   # the Series3D wrapper using all weights = 1
+   nDMaterial Series3D 3   1 2
+   
+   # a triangle
+   node 1 0 0
+   node 2 1 0
+   node 3 0 1
+   nDMaterial PlaneStress 100 3
+   element tri31 1   1 2 3   1.0 "PlaneStress" 100
+   
+   # fixity
+   fix 1   1 1
+   fix 2   0 1
+   fix 3   1 0
+   
+   # a simple ramp
+   timeSeries Linear 1
+   
+   # imposed macroscopic strain in XX component
+   set em 0.01
+   pattern Plain 1 1 {
+      sp 2 1   $em
+   }
+   
+   # solve
+   constraints Transformation
+   numberer Plain
+   system FullGeneral
+   test NormDispIncr 1.0e-6 10 0
+   algorithm Newton
+   integrator LoadControl 1.0
+   analysis Static
+   analyze 1
+   
+   # check responses
+   puts "Checking responses"
+   set Sm [expr [lindex [eleResponse 1 material 1 stress] 0]]
+   set S1 [expr [lindex [eleResponse 1 material 1 material 1 stress] 0]]
+   set S2 [expr [lindex [eleResponse 1 material 1 material 2 stress] 0]]
+   set SmHom [expr [lindex [eleResponse 1 material 1 homogenized stress] 0]]
+   puts "Sm = S1 = S2 = SmHom -> [format {%6.3f = %6.3f = %6.3f = %6.3f} $Sm $S1 $S2 $SmHom] (stresses are equal)"
+   set Em [expr [lindex [eleResponse 1 material 1 strain] 0]]
+   set E1 [expr [lindex [eleResponse 1 material 1 material 1 strain] 0]]
+   set E2 [expr [lindex [eleResponse 1 material 1 material 2 strain] 0]]
+   puts "Em = E1 + E2 -> [format {%6.5f = %6.5f + %6.5f} $Em $E1 $E2] (strains are additive since w1=w2=1)"
 
 Code Developed by: **Massimo Petracca** at ASDEA Software, Italy.
