@@ -6,9 +6,6 @@ Other
    elements/DisplacementBasedBeamColumnElement
    elements/ElasticBeamColumnElementWithStiffnessModifiers
 
-
-
-
 #. Zero-Length Elements
 
    .. toctree::
@@ -27,10 +24,6 @@ Other
 
 .. #. Bearing Elements
 
-..    .. toctree::
-..       :maxdepth: 1
-    
-..       TripleFrictionPendulumX
 
 ..
        ElastomericBearingBouc-Wen

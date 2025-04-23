@@ -47,6 +47,14 @@ The following materials are available:
    plastic/DruckerPrager
    ndMaterials/ManzariDafalias
 
+.. toctree::
+   :maxdepth: 1
+
+   wrapper/Series3D
+   wrapper/Parallel3D
+   wrapper/InitialStrain
+   wrapper/Orthotropic
+
 ..
    BoundingCamClay
    PM4Sand
@@ -56,11 +64,6 @@ The following materials are available:
    PressureDependentMultiYield02
    J2CyclicBoundingSurface
    SAniSandMS
-
-   Orthotropic
-   Series3D
-   Parallel3D
-   InitStrain
 
    ndMaterials/ASDConcrete3D
    ndMaterials/ASDPlasticMaterial

@@ -36,6 +36,20 @@ J2 Plasticity
          delta, |float|,	   exponential hardening parameter
          H, |float|,linear hardening parameter
 
+Notes
+-----
+
+Parameters
+""""""""""
+
+* :math:`K` - Bulk modulus
+* :math:`G` - Shear modulus
+* :math:`E` - Young's modulus
+  .. note::
+
+     Updates to :math:`E` are performed at constant Poisson ratio :math:`\nu`.
+
+* :math:`Fy` - Initial yield stress
 
 Theory 
 ------

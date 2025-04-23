@@ -39,6 +39,8 @@ This model implements a uniaxial bilinear steel material object with kinematic h
          $a4, |float|, optional: isotropic hardening parameter (see explanation under ``a3``)
 
 
+Notes 
+-----
 
 .. figure:: figures/Steel01.png
 	:align: center
@@ -46,11 +48,16 @@ This model implements a uniaxial bilinear steel material object with kinematic h
 
 	Steel01 behaviour under cyclic loading.
 
+Parameters
+""""""""""
+
+Parameters include ``"Fy"``, ``"E"``, ``"b"``, ``"a1"``, ``"a2"``, ``"a3"``, and ``"a4"``.
+
 
 Examples
 --------
 
-The following example defines a *Steel01* material with the tag **1**, a yield strength of **60** and an initial Young's modulus of **29,000**.
+The following example defines a *Steel01* material with the tag **1**, a yield strength of **60** and a Young's modulus of **29,000**.
 
 .. tabs::
 
