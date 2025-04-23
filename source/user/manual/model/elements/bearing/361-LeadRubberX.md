@@ -1,15 +1,18 @@
 # LeadRubberX
 
-This command is used to construct a LeadRubberX bearing element
+This command is used to construct a *LeadRubberX* bearing element
 object in three-dimension. 
 The 3D continuum geometry of a lead rubber
-bearing is modeled as a 2-node, 12 DOF discrete element. It extends the
+bearing is modeled as a 2-node, 12 DOF discrete element. 
+It extends the
 formulation of <a href="ElastomericX" title="wikilink">ElastomericX</a>
 by including strength degradation in lead rubber bearing due to heating
-of the lead-core. The LeadRubberX element requires only the geometric
+of the lead-core. 
+The *LeadRubberX* element requires only the geometric
 and material properties of an elastomeric bearing as arguments. The
 material models in six direction are formulated within the element from
-input arguments. The time-dependent values of mechanical properties
+input arguments. 
+The time-dependent values of mechanical properties
 (e.g., shear stiffness, buckling load capacity, temperature in the
 lead-core, yield strength) can also be recorded using the "parameters"
 <a href="#Recorders" title="wikilink">recorder</a>.

@@ -5,37 +5,12 @@ ElasticFrame
 
 The **ElasticFrame** section implements a general linear elastic :ref:`Frame <Frame>` cross-section.
 
-.. tabs::
+.. figure:: figures/section-axes.png
+   :width: 30%
+   :align: center
 
-   .. tab:: Python (RT)
+   Local axes of a 3D cross section
 
-      .. py:method:: Model.section("ElasticFrame", tag, **kwds)
-         :no-index:
-
-         :param E: Young's modulus
-         :param G: Shear modulus (see :ref:`ElasticIsotropic`)
-         :param A: cross sectional area
-         :param I1: Moment of inertia about the :math:`\color{green}{1}` axis
-         :param I2: Moment of inertia about the :math:`\color{blue}{2}` axis
-         :param J: Torsion constant
-         :param Qy,Qz: First moments of area
-         :param Am: density times area
-         :param Im: density weighted polar moment of inertia
-
-
-   .. tab:: Tcl
-
-      .. function:: section ElasticFrame $tag $E $A $I2 $I1 $G $J
-
-      The required arguments are:
-
-      .. csv-table:: 
-         :header: "Argument", "Type", "Description"
-         :widths: 10, 10, 40
-
-         $tag, |integer|,	  unique section tag
-
-In 2D:
 
 .. tabs::
 
@@ -47,17 +22,15 @@ In 2D:
          :param E: Young's modulus
          :param G: Shear modulus (see :ref:`ElasticIsotropic`)
          :param A: cross sectional area
-         :param I: Moment of inertia
-         :param Iy: Moment of inertia about the :math:`\color{blue}{y}` axis
+         :param Iy: Moment of inertia about the :math:`\color{green}{y}` axis
+         :param Iz: Moment of inertia about the :math:`\color{blue}{z}` axis
          :param J: Torsion constant
-         :param Qy,Qz: First moments of area
-         :param Am: density times area
-         :param Im: density weighted polar moment of inertia
+         :param kwds: additional keyword arguments
 
 
    .. tab:: Tcl
 
-      .. function:: section ElasticFrame $tag $E $A $I
+      .. function:: section ElasticFrame $tag $E $A $Iz $Iy $G $J
 
       The required arguments are:
 
@@ -85,6 +58,19 @@ Formulation
 
 Examples
 --------
+
+The following is an excerpt from a Python script that creates a 3D model with an elastic frame section:
+
+.. code-block:: Python
+
+   model.section("ElasticFrame", 1,
+                 E=29e3*ksi,
+                 G=11.2e3*ksi,
+                 A=A,
+                 Iy=Iy,
+                 Iz=Iz,
+                 J=J
+   )
 
 
 The following syntax is supported in 2D models for backwards compatibility:

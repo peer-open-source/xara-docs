@@ -9,5 +9,5 @@ Mesh
 
 .. deprecated:: 0.0.0
 
-   This command should not be used.
+   This command should not be used. It is superceded by :py:meth:`Model.surface`.
 

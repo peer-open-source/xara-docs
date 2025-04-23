@@ -66,7 +66,7 @@ The following example defines a *Steel01* material with the tag **1**, a yield s
       .. code-block:: tcl
          
          model BasicBuilder -ndm 3
-         uniaxialMaterial Steel01 60.0 20e3
+         uniaxialMaterial Steel01 1 60.0 20e3
 
    .. tab:: Python
 
@@ -74,7 +74,7 @@ The following example defines a *Steel01* material with the tag **1**, a yield s
          
          import xara 
          model = xara.Model(ndm=3)
-         model.uniaxialMaterial("Steel01", 60.0, 29e3)
+         model.uniaxialMaterial("Steel01", 1, 60.0, 29e3)
 
 Code Developed by: |fcf|, |mhs|, |cmp|
 

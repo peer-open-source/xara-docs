@@ -1,7 +1,3 @@
----
-title: section
-...
-
 <style>
 h1 {
     font-family: var(--md-code-font-family);
@@ -9,14 +5,6 @@ h1 {
     font-feature-settings: "kern";
 }
 </style>
-
-# section
-
-
-
-This module provides constructors for `SectionForceDeformation` objects
-which represent force-deformation (or resultant stress-strain) 
-relationships at beam-column and plate sample points.
 
 
 <div style="width: 95%; padding-left: 5%">
@@ -42,10 +30,8 @@ relationships at beam-column and plate sample points.
 
 </tbody>
 </table>
-<!-- </blockquote> -->
 
 
-<!-- <blockquote> -->
 <span style="font-feature-settings: kern; color: var(--md-code-fg-color) !important; font-family: var(--md-code-font-family);">
     <span style="color:#900">SectionAggregator</span>(name, materials, section, **kwds)
 </span>

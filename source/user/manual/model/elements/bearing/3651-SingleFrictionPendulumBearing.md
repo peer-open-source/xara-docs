@@ -127,7 +127,9 @@ width="600" alt="SingleFPBearingFig01.png" />
 <figcaption aria-hidden="true">SingleFPBearingFig01.png</figcaption>
 </figure>
 <hr />
-<p>NOTE:</p>
+
+
+## Notes
 
 1. If the element has zero length and optional orientation vectors
   are not specified, the local element axes coincide with the global axes.

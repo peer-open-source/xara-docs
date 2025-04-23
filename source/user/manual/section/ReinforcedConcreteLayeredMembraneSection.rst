@@ -11,7 +11,7 @@ This class is the abstract representation for the stress-strain behavior for a r
 	:width: 60%
 	:name: RCLMS_FIG1
 	
-	ReinforcedConcreteLayeredMembraneSection: (a) Reinforced concrete wall; (b) Layer discretization.
+	(a) Reinforced concrete wall; (b) Layer discretization.
 
 .. function:: section ReinforcedConcreteLayeredMembraneSection $secTag $nSteelLayers $nConcLayers -reinfSteel{$RSteelAtEachLayer} –conc{$concAtEachLayer} -concThick{$Thicknesses}
 
@@ -49,7 +49,7 @@ The following recorders are available with the ReinforcedConcreteLayeredMembrane
 	
 	ReinforcedConcreteLayeredMembraneSection: (a) Strain field; (b.1) Resultant stress field; (b.2) Concrete stresses; (b.3) Steel stresses.	
 	
-.. admonition:: Notes
+.. note::
 
    | 1. The **ReinforcedConcreteLayeredMembraneSection** should be used in conjunction with ``OrthotropicRAConcrete`` and ``SmearedSteelDoubleLayer`` NDMaterials. It can also be used in a ``MEFI`` element. 
    | 2. The section can also be referred to as **RCLayeredMembraneSection** or **RCLMS**.

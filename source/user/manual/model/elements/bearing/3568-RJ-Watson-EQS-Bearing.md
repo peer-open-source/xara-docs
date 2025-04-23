@@ -138,7 +138,7 @@ alt="RJWatsonEQSBearingFig01.png" />
 </figure>
 <hr />
 
-<p>NOTE:</p>
+## Notes
 
 1. If the element has zero length and optional orientation vectors
 are not specified, the local element axes coincide with the global axes.

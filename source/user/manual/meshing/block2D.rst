@@ -21,5 +21,4 @@ block2D
    This method is deprecated for Python and may be removed in future versions. 
    Use the :py:meth:`Model.surface` method instead.
 
-This method is analogous to the `Create_Block <https://fedeas.net/Functions/latest/Utilities/PreProcessing/Structure/Create_Block/>`__ utility of FEDEASLab.
 

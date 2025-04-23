@@ -1,11 +1,10 @@
 # TripleFrictionPendulum
 
 This command is used to construct a Triple Friction Pendulum Bearing
-(TPB) (Figure 1) element object. The element is a 3-dimensional element
-with variable <a
-href="http://opensees.berkeley.edu/wiki/index.php/FrictionModel_Command">friction
-coefficient models</a> [1] [2]. The element accounts for the
-vertical-horizontal coupling and the bidirectional coupling in
+(TPB) (Figure 1) element object. 
+The element is a 3-dimensional element with variable <a href="http://opensees.berkeley.edu/wiki/index.php/FrictionModel_Command">friction
+coefficient models</a> [1] [2]. 
+The element accounts for the vertical-horizontal coupling and the bidirectional coupling in
 horizontal behavior. The friction coefficient model is a general model
 that accounts for the variation of friction coefficient on velocity and
 vertical force. Other simplified friction coefficient models such as
@@ -145,7 +144,8 @@ is uplifted.
 </dd>
 </dl>
 
-<p><strong>NOTES:</strong></p>
+## Notes 
+
 - The current element requires 6 degree of freedoms at each node and
   defines the local coordinate system to be the same as the global
   coordinate system, where the vertical axis must be 3.

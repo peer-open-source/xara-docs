@@ -108,7 +108,7 @@ default = 1E-8)</p></td>
 </tbody>
 </table>
 
-<p>NOTE:</p>
+## Notes
 
 - If the element has zero length and optional orientation vectors are
   not specified, the local element axes coincide with the global axes.

@@ -174,22 +174,27 @@ velocity, temperature at the sliding surface and axial pressure. The
 following definition of the coefficient of friction is implemented in
 the element.
 
-$$Kv=1-0.5e^{-av} \quad(1)$$
-$$kp = 0.70^{(p-p_0)/50} \quad(2)$$
+$$Kv=1-0.5e^{-av} \quad (1)$$
+$$kp = 0.70^{(p-p_0)/50} \quad (2)$$
 
 $$kt = 0.79(0.70^{T/50} + 0.40) \qquad (3)$$
-<p>where kv,kp and kt and are the factors to account for the effects of
+
+where $k_v$, $k_p$ and $k_t$ and are the factors to account for the effects of
 sliding velocity, axial pressure and temperature at the sliding surface,
-respectively, v,p and T are velocity of sliding, axial pressure and
+respectively, $v$,$p$ and $T$ are velocity of sliding, axial pressure and
 temperature at the sliding surface, respectively, controls the shape of
-the kv vs. v curve, and p0 is the reference axial pressure.</p>
-<p>The reference coefficient of friction, Uref , is defined as the
+the $k_v$ vs. v curve, and p0 is the reference axial pressure.
+
+The reference coefficient of friction, Uref , is defined as the
 coefficient of friction at a reference axial pressure on the bearing p0,
 measured at 20˚C at a high velocity of sliding (e.g., 1000 mm/s). The
 coefficient of friction, adjusted for the effects of sliding velocity,
-axial pressure</p>
-<p>and temperature, U(p,T,v), is obtained as follows.</p>
-<p>U(p,T,v) = Uref(kpktkv)(4)</p>
+axial pressure
+
+and temperature, $U(p,T,v)$, is obtained as follows.
+
+$$U(p,T,v) = U_{ref}(kp,kt,kv) \qquad (4)$$
+
 <p>where all parameters were defined previously. More details on this
 definition of the coefficient of friction are presented in Kumar et al.
 (2015a, 2015b).</p>

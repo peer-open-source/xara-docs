@@ -16,6 +16,7 @@ Allow: /user/manual/model/elements/frame/index.html
 Allow: /user/manual/model/elements/frame/ExactFrame.html
 Allow: /user/manual/model/elements/plane/Quad.html
 Allow: /user/manual/model/elements/plane/EnhancedQuad.html
+Allow: /user/manual/meshing/surface.html
 Allow: /user/manual/material/ndMaterials/ElasticOrthotropic.html
 Allow: /user/manual/material/uniaxial/Steel02/index.html
 Allow: /user/manual/model/geomTransf/Corotational.html

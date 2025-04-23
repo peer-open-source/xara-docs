@@ -67,22 +67,28 @@ lies in the local x-y plane for the element</p></td>
 </tr>
 </tbody>
 </table>
-<p>NOTES:</p>
-<p>1) The valid queries to a YamamotoBiaxialHDR element when creating an
+
+
+## Notes
+
+1. The valid queries to a YamamotoBiaxialHDR element when creating an
 ElementRecorder object are 'globalForce', 'localForce', 'basicForce',
-'localDisplacement' and 'basicDeformation'.</p>
+'localDisplacement' and 'basicDeformation'.
+
 <figure>
 <img src="/OpenSeesRT/contrib/static/YamamotoBiaxialHDR_Model.png"
 title="YamamotoBiaxialHDR_Model.png" width="150"
 alt="YamamotoBiaxialHDR_Model.png" />
 <figcaption aria-hidden="true">YamamotoBiaxialHDR_Model.png</figcaption>
 </figure>
-<hr />
+
 
 ## Examples
 
-<p>element YamamotoBiaxialHDR 1 1 2 1 1.300 0.030 0.261 -orient 0 0 1 1
-0 0</p>
+```tcl
+element YamamotoBiaxialHDR 1 1 2 1 1.300 0.030 0.261 -orient 0 0 1 1 0 0
+```
+
 <p><a href="Media:YamamotoBiaxialHDR_Sample.tcl"
 title="wikilink">YamamotoBiaxialHDR_Sample.tcl</a>, <a
 href="Media:YamamotoBiaxialHDR_input_X.tcl"

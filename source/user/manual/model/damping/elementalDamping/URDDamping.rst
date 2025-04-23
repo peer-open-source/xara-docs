@@ -27,7 +27,7 @@ Two ways to define URD damping are provided.
    -print, |string|, argument to print the calculated optimal parameters for the URD damping
    
 
-.. admonition:: NOTE    
+.. note::  
 
    The loss factor can be set to twice the viscous damping ratio. For example, if a viscous damping ratio of 0.05 is to be used, then the loss factor would be 2 * 0.05 = 0.1.
    
@@ -56,7 +56,7 @@ Two ways to define URD damping are provided.
    $Td, |float|, time when the damping is deactivated
    $tsTagScaleFactorVsTime, |integer|, time series tag identifying the scale factor of the damping versus time
    
-.. admonition:: NOTE    
+.. note:: 
     
 	The loss factor at frequency `f` is:
 	

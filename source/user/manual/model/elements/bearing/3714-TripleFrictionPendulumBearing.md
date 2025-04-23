@@ -18,8 +18,7 @@ case the nodal geometry is ignored and the user-defined orientation is
 utilized.
 
 <figure>
-<img src="/OpenSeesRT/contrib/static/TFP_backbone.gif" title="TFP_backbone.gif"
-alt="TFP_backbone.gif" />
+<img src="/OpenSeesRT/contrib/static/TFP_backbone.gif" alt="TFP backbone curve" />
 </figure>
 
 ```tcl
@@ -147,7 +146,9 @@ dof 3 if ndm = 3) (default=1.0e15)</p></td>
 alt="TFP_displaced.gif" />
 <figcaption aria-hidden="true">TFP_displaced.gif</figcaption>
 </figure>
-<p>NOTE:</p>
+
+## Notes
+
 <ol>
 <li>If the element has zero length and optional orientation vectors are
 not specified, the local element axes coincide with the global axes.
