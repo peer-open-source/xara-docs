@@ -1,7 +1,7 @@
 .. _NewtonLineSearch:
 
-Newton Line Search
-^^^^^^^^^^^^^^^^^^
+Line Search
+^^^^^^^^^^^
 
 This command is used to select a NewtonLineSearch algorithm which introduces line search to the Newton-Raphson algorithm to solve the nonlinear residual equation. 
 Line search increases the effectiveness of the Newton method when convergence is slow due to roughness of the residual. 
@@ -12,12 +12,12 @@ Line search increases the effectiveness of the Newton method when convergence is
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $typeSearch, |string|,  Line Search Algorithm. Optional Default is InitialInterpolated. Valid Types are: Bisection Secant RegulaFalsi
-   InitialInterpolated.
-   $tol, |float|,  tolerance for search. optional. The default is 0.8.
-   $maxIter, |integer|, maximum number of iteration to try. The default is 10.
-   $minEta, |float|, a minimum :math:`\eta` value. Optional; The default is 0.1
-   $maxEta, |float|, a maximum :math:`\eta` value. Optional; The default is 10.0
+   typeSearch, |string|,  Line Search algorithm. Optional, default is ``InitialInterpolated``. Valid types are: ``Bisection``, ``Secant``, ``RegulaFalsi``
+   ``InitialInterpolated``.
+   tol, |float|,  tolerance for search. optional. The default is 0.8.
+   maxIter, |integer|, maximum number of iteration to try. The default is 10.
+   minEta, |float|, a minimum :math:`\eta` value. Optional; The default is 0.1
+   maxEta, |float|, a maximum :math:`\eta` value. Optional; The default is 10.0
 
 
 Theory

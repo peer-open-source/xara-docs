@@ -19,8 +19,7 @@ The **ElasticFrame** section implements a general linear elastic :ref:`Frame <Fr
       .. py:method:: Model.section("ElasticFrame", tag, **kwds)
          :no-index:
 
-         :param E: Young's modulus
-         :param G: Shear modulus (see :ref:`ElasticIsotropic`)
+         :param E,G: Young's modulus :math:`E` and shear modulus :math:`G` (see :ref:`ElasticIsotropic`)
          :param A: cross sectional area
          :param Iy: Moment of inertia about the :math:`\color{green}{y}` axis
          :param Iz: Moment of inertia about the :math:`\color{blue}{z}` axis
@@ -30,7 +29,7 @@ The **ElasticFrame** section implements a general linear elastic :ref:`Frame <Fr
 
    .. tab:: Tcl
 
-      .. function:: section ElasticFrame $tag $E $A $Iz $Iy $G $J
+      .. function:: section ElasticFrame tag?  E?  A?  Iz?  Iy?  G?  J? 
 
       The required arguments are:
 
