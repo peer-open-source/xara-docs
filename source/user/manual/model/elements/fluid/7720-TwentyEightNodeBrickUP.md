@@ -37,7 +37,7 @@ $bZ=0&gt;</strong></p></td>
 </tbody>
 </table>
 <figure>
-<img src="/OpenSeesRT/contrib/static/Elem20_8.png" title="Elem20_8.png" alt="Elem20_8.png" />
+<img src="/_static/wiki/Elem20_8.png" title="Elem20_8.png" alt="Elem20_8.png" />
 <figcaption aria-hidden="true">Elem20_8.png</figcaption>
 </figure>
 <table>

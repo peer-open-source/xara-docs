@@ -1,23 +1,22 @@
 # Multi-Linear Velocity Dependent Friction
 
-<p>This command is used to construct a VelDepMultiLinear friction model
+This command is used to construct a VelDepMultiLinear friction model
 object. The friction-velocity relationship is given by a multi-linear
 curve that is define by a set of points. The slope given by the last two
 specified points on the positive velocity axis is extrapolated to
 infinite positive velocities. Velocity and friction points need to be
-equal or larger than zero (no negative values should be defined). The
-number of provided velocity points needs to be equal to the number of
-provided friction points.</p>
+equal or larger than zero (no negative values should be defined). 
+The number of provided velocity points needs to be equal to the number of
+provided friction points.
 
 ```tcl
-frictionModel VelDepMultiLinear $frnTag -vel
-        $velocityPoints -frn $frictionPoints
+frictionModel VelDepMultiLinear $tag -vel $velocityPoints -frn $frictionPoints
 ```
 <hr />
 <table>
 <tbody>
 <tr class="odd">
-<td><code class="parameter-table-variable">frnTag</code></td>
+<td><code class="parameter-table-variable">tag</code></td>
 <td><p>unique friction model object tag</p></td>
 </tr>
 <tr class="even">
@@ -31,7 +30,7 @@ frictionModel VelDepMultiLinear $frnTag -vel
 </tbody>
 </table>
 <figure>
-<img src="/OpenSeesRT/contrib/static/VelDepMultiLinear.png" title="VelDepMultiLinear.png"
+<img src="/_static/wiki/VelDepMultiLinear.png" title="VelDepMultiLinear.png"
 width="500" alt="VelDepMultiLinear.png" />
 <figcaption aria-hidden="true">VelDepMultiLinear.png</figcaption>
 </figure>
@@ -39,21 +38,11 @@ width="500" alt="VelDepMultiLinear.png" />
 
 ## Examples
 
-<p>frictionModel VelDepMultiLinear 1 -vel 0.0 0.1 2.0 8.0 10.0 -frn
-0.163 0.085 0.150 0.163 0.163</p>
+```Tcl
+frictionModel VelDepMultiLinear 1 -vel 0.0 0.1 2.0 8.0 10.0 -frn 0.163 0.085 0.150 0.163 0.163
+```
 <hr />
-<p>RELATED TO:</p>
-<ul>
-<li><a
-href="http://opensees.berkeley.edu/wiki/index.php/Flat_Slider_Bearing_Element">Flat
-Slider Bearing Element</a></li>
-<li><a
-href="http://opensees.berkeley.edu/wiki/index.php/Single_Friction_Pendulum_Bearing_Element">Single
-Friction Pendulum Bearing Element</a></li>
-<li><a
-href="http://opensees.berkeley.edu/wiki/index.php/Triple_Friction_Pendulum_Element">Triple
-Friction Pendulum Bearing Element</a></li>
-</ul>
+
 <hr />
 <p>Code Developed by: <span style="color:blue"> Andreas
 Schellenberg, University of California, Berkeley. </span></p>

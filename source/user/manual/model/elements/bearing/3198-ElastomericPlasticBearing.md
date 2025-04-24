@@ -1,13 +1,13 @@
-# Elastomeric Bearing (Plasticity)
+# Elastomeric Bearing (Plasticity, AS2006)
 
-This command is used to construct an elastomericBearing element
-object, which is defined by two nodes. The element can have zero length
-or the appropriate bearing height. The bearing has unidirectional (2D)
+
+The element can have zero length or the appropriate bearing height. 
+The bearing has unidirectional (2D)
 or coupled (3D) plasticity properties for the shear deformations, and
 force-deformation behaviors defined by UniaxialMaterials in the
 remaining two (2D) or four (3D) directions. By default (sDratio = 0.5)
-P-Delta moments are equally distributed to the two end-nodes. To avoid
-the introduction of artificial viscous damping in the isolation system
+$P-\Delta$ moments are equally distributed to the two end-nodes. 
+To avoid the introduction of artificial viscous damping in the isolation system
 (sometimes referred to as "damping leakage in the isolation system"),
 the bearing element does not contribute to the Rayleigh damping by
 default. 
@@ -16,19 +16,19 @@ determined from the nodal geometry unless the optional $x$-axis vector is
 specified in which case the nodal geometry is ignored and the
 user-defined orientation is utilized.
 
-For a two-dimensional problem:
+For a 2D problem:
 
 ```tcl
-element elastomericBearingPlasticity $eleTag $iNode
+element elastomericBearingPlasticity $tag $iNode
         $jNode $kInit $qd $alpha1 $alpha2 $mu -P $matTag -Mz $matTag 
         < -orient $x1 $x2 $x3 $y1 $y2 $y3 > < -shearDist $sDratio >
         < -doRayleigh > < -mass $m >
 ```
 
-For a three-dimensional problem:
+For a 3D problem:
 
 ```tcl
-element elastomericBearingPlasticity $eleTag $iNode $jNode $kInit $qd $alpha1 $alpha2 
+element elastomericBearingPlasticity $tag $iNode $jNode $kInit $qd $alpha1 $alpha2 
         $mu -P $matTag -T $matTag -My $matTag -Mz $matTag 
         < -orient < $x1 $x2 $x3 > $y1 $y2 $y3 >
         < -shearDist $sDratio > < -doRayleigh > < -mass $m >
@@ -38,7 +38,7 @@ element elastomericBearingPlasticity $eleTag $iNode $jNode $kInit $qd $alpha1 $a
 <table>
 <tbody>
 <tr class="odd">
-<td><code class="parameter-table-variable">eleTag</code></td>
+<td><code class="parameter-table-variable">tag</code></td>
 <td><p>unique element object tag</p></td>
 </tr>
 <tr class="even">
@@ -114,7 +114,7 @@ no Rayleigh damping contribution)</p></td>
 </table>
 
 <figure>
-<img src="/OpenSeesRT/contrib/static/ElastomericBearingPlasticityFig01.png"
+<img src="/_static/wiki/ElastomericBearingPlasticityFig01.png"
 title="ElastomericBearingPlasticityFig01.png" width="600"
 alt="ElastomericBearingPlasticityFig01.png" />
 <figcaption

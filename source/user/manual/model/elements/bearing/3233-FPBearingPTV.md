@@ -1,18 +1,18 @@
-# FPBearingPTV
+# FPBearingPTV (MK2014)
 
 The *FPBearingPTV* element represents a single Friction Pendulum bearing, which is capable of accounting for the changes in the
 coefficient of friction at the sliding surface with instantaneous values
 of the sliding velocity, axial pressure and temperature at the sliding
 surface. 
-The constitutive modeling is similar to the existing singleFPBearing element, otherwise. 
-The *FPBearingPTV* element has been verified and validated in accordance with the ASME guidelines, details of which are presented in Chapter 4 of Kumar et al. (2015a).
+The constitutive modeling is similar to the existing *singleFPBearing* element, otherwise. 
+
 
 ```tcl
-element FPBearingPTV $eleTag $iNode $jNode $MuRef
+element FPBearingPTV $tag $iNode $jNode $MuRef
         $IsPressureDependent $pRef $isTemperatureDependent $Diffusivity
         $Conductivity $IsVelocityDependent $rateParameter $ReffectiveFP
-        $Radius_Contact $kInitial $theMaterialA $theMaterialB $theMaterialC
-        $theMaterialD $x1 $x2 $x3 $y1 $y2 $y3 $shearDist $doRayleigh $mass $iter
+        $Radius_Contact $kInitial $matA $matB $matC
+        $matD $x1 $x2 $x3 $y1 $y2 $y3 $shearDist $doRayleigh $mass $iter
         $tol $unit
 ```
 
@@ -20,7 +20,7 @@ element FPBearingPTV $eleTag $iNode $jNode $MuRef
 <table>
 <tbody>
 <tr class="odd">
-<td><code class="parameter-table-variable">eleTag</code></td>
+<td><code class="parameter-table-variable">tag</code></td>
 <td><p>unique element object tag</p></td>
 </tr>
 <tr class="even">
@@ -166,6 +166,10 @@ element</p></td>
 </tbody>
 </table>
 
+
+The *FPBearingPTV* element has been verified and validated in accordance with the ASME guidelines, details of which are presented in Chapter 4 of Kumar et al. (2015a).
+
+
 <p>NOTE: Updating the coefficient of friction during analysis</p>
 
 The coefficient of friction at the sliding surface of a sliding
@@ -174,10 +178,10 @@ velocity, temperature at the sliding surface and axial pressure. The
 following definition of the coefficient of friction is implemented in
 the element.
 
-$$Kv=1-0.5e^{-av} \quad (1)$$
-$$kp = 0.70^{(p-p_0)/50} \quad (2)$$
+$$k_v=1-0.5e^{-av} \quad (1)$$
+$$k_p = 0.70^{(p-p_0)/50} \quad (2)$$
 
-$$kt = 0.79(0.70^{T/50} + 0.40) \qquad (3)$$
+$$k_t = 0.79(0.70^{T/50} + 0.40) \qquad (3)$$
 
 where $k_v$, $k_p$ and $k_t$ and are the factors to account for the effects of
 sliding velocity, axial pressure and temperature at the sliding surface,
@@ -240,9 +244,9 @@ element FPBearingPTV 1 $iNode $jNode $Mu_Ref $kp_Factor $p_Ref $kT_Factor $DF \
     0.0 0 0.0 100 1.0E-8 1 ;
 ```
 
-<p>FPWithUpdate.tcl files models a single concave sliding bearing with
+FPWithUpdate.tcl files models a single concave sliding bearing with
 the mass concentrated on the slider. Download the example file and the
-ground motions.</p>
+ground motions.
 
 <hr />
 

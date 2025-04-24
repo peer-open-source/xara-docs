@@ -12,3 +12,4 @@ Uniaxial materials are used to define the material behavior in one direction.
 
     uniaxial/index
     nd
+    friction/index

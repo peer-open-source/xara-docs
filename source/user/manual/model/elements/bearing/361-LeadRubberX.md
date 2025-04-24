@@ -1,7 +1,6 @@
-# LeadRubberX
+# LeadRubberX (MK2012)
 
-This command is used to construct a *LeadRubberX* bearing element
-object in three-dimension. 
+This command is used to construct a *LeadRubberX* bearing element in three-dimensions. 
 The 3D continuum geometry of a lead rubber
 bearing is modeled as a 2-node, 12 DOF discrete element. 
 It extends the
@@ -9,9 +8,8 @@ formulation of <a href="ElastomericX" title="wikilink">ElastomericX</a>
 by including strength degradation in lead rubber bearing due to heating
 of the lead-core. 
 The *LeadRubberX* element requires only the geometric
-and material properties of an elastomeric bearing as arguments. The
-material models in six direction are formulated within the element from
-input arguments. 
+and material properties of an elastomeric bearing as arguments. 
+The material models in six direction are formulated within the element from input arguments. 
 The time-dependent values of mechanical properties
 (e.g., shear stiffness, buckling load capacity, temperature in the
 lead-core, yield strength) can also be recorded using the "parameters"
@@ -20,7 +18,7 @@ lead-core, yield strength) can also be recorded using the "parameters"
 <p>For a 3D problem:</p>
 
 ```tcl
-element LeadRubberX $eleTag $Nd1 $Nd2 $Fy $alpha $Gr
+element LeadRubberX $tag $Nd1 $Nd2 $Fy $alpha $Gr
         $Kbulk $D1 $D2 $ts $tr $n < < $x1 $x2 $x3 > $y1 $y2 $y3 >
         < $kc > < $PhiM > < $ac > < $sDratio > < $m >
         < $cd > < $tc > < $qL > < $cL > < $kS > < $aS >
@@ -31,7 +29,7 @@ element LeadRubberX $eleTag $Nd1 $Nd2 $Fy $alpha $Gr
 <table>
 <tbody>
 <tr class="odd">
-<td><code class="parameter-table-variable">eleTag</code></td>
+<td><code class="parameter-table-variable">tag</code></td>
 <td><p>unique element object tag</p></td>
 </tr>
 <tr class="even">
@@ -159,66 +157,17 @@ lead core (optional, default = 0)</p></td>
 </tr>
 </tbody>
 </table>
+
 <p><strong>Important note:</strong></p>
-<p>Because default values of heating parameters are in SI units, user
-must override the default heating parameters values if using Imperial
-units &lt;br /&gt; User should distinguish between yield strength of
-elastomeric bearing (Fy) and characteristic strength (Qd):
-Qd=Fy*(1-alpha)</p>
-<h2 id="physical_model_and_mechanical_properties">Physical Model and
-Mechanical Properties</h2>
-<p>The physical model of an elastomeric bearing is considered as a
-two-node, twelve degrees-of-freedom discrete element. The two nodes are
-connected by six springs that represent the mechanical behavior in the
-six basic directions of a bearing. The degrees of freedom and discrete
-spring representation of an elastomeric bearing are shown in the below
-figures.</p>
-<p><img src="/OpenSeesRT/contrib/static/Elastomeric3DModel.png"
-title="inline|Physical continuum model" height="300"
-alt="inline|Physical continuum model" /> <img
-src="/OpenSeesRT/contrib/static/ElastomericDiscreteSpring.png"
-title="inline|Discrete spring representation" height="300"
-alt="inline|Discrete spring representation" /></p>
 
-The general form of element force vector, $f_b$,
-and element stiffness matrix, $K_b$, for element
-representation considered above is given by equation below:
+Because default values of heating parameters are in SI units, user
+must override the default heating parameters values if using Imperial units.  
+User should distinguish between yield strength $F_y$ and characteristic strength 
+$Q_d=F_y (1-\alpha)$
 
-$$=\left[ \begin{matrix} Axial \\ Shear1 \\ Shear2 \\
-Torsion \\ Rotation1 \\ Rotation2 \\ \end{matrix} \right];\ \ \ \ \ \
-=\left[ \begin{matrix} Axial & 0 & 0 & 0 & 0 & 0 \\
-0 & Shear1 & Shear12 & 0 & 0 & 0 \\ 0 & Shear21
-& Shear2 & 0 & 0 & 0 \\ 0 & 0 & 0 & Torsion
-& 0 & 0 \\ 0 & 0 & 0 & 0 & Rotation1 & 0 \\
-0 & 0 & 0 & 0 & 0 & Rotation2 \\ \end{matrix}
-\right]$$
+<h2>Physical Model and Mechanical Properties</h2>
 
-The coupling of the two shear springs is considered directly by using
-a coupled bidirectional model. All other springs are uncoupled. The
-coupling of vertical and horizontal directions are considered indirectly
-by using expressions for mechanical properties in one direction that are
-dependent on the response parameters in the other direction. Linear
-uncoupled springs are considered in the torsion and the two rotational
-springs as they are not expected to significantly affect the response of
-an elastomeric bearing. 
-The off-diagonal terms due to coupling between
-axial and shear, and axial and rotation, are not considered in the
-two-spring model (Koh and Kelly, 1987) used here. An exact model would
-have non-zero values of these off-diagonal terms. A discussion on the
-formulation of the two-spring model and the exact model is presented in
-Ryan et al.(1991). The subscript b refers to the element’s basic
-coordinate system. When the model is implemented in software programs,
-response quantities are transformed between the basic, local and global
-coordinates to perform computations.
-
-The discrete spring model presented here has the advantages of easy
-implementation and being computationally efficient. The mechanical
-properties of the six springs (also referred to as material models in
-OpenSees) are defined using analytical solutions available from the
-analysis of elastomeric bearings. The expression for mechanical
-properties, including stiffness and buckling load capacity, are derived
-using explicit consideration for geometric nonlinearity due to large
-displacement effects. The material models in six directions are:
+The material models in six directions are:
 
 <ul>
 <li>Axial direction: a new mathematical model that captures the behavior
@@ -230,8 +179,9 @@ a strength degradation model of Kalpakidis et al.(2010)</li>
 <li>Torsion: a linear elastic model</li>
 <li>Two rotational directions: linear elastic models</li>
 </ul>
-<p>In addition to the behavior captured by existing bearing elements,
-this element can capture following characteristics:</p>
+
+In addition to the behavior captured by existing bearing elements, this element can capture following characteristics:
+
 <ol>
 <li>Cavitation and post-cavitation behavior in tension (tag1)</li>
 <li>Variation in critical buckling load capacity due to lateral
@@ -271,9 +221,11 @@ capacity. tag2+tag3 provides greater softening. tag 4: Unless you are
 investigating the axial behavior, the effect of the tensile model on
 shear response is insignificant. tag 5: Recommended for long duration
 and low frequency ground motions. Effect is more prominent at beyond
-design basis earthquakes.</p>
-<h2 id="verification_and_validation">Verification and validation</h2>
-<p>This is element has been verified per ASME guidelines. A great deal
+design basis earthquakes.
+
+<h2>Verification and validation</h2>
+
+This is element has been verified per ASME guidelines. A great deal
 of effort has gone into benchmarking performance of this user element
 using experimental data and verification using same element implement in
 LS-DYNA and ABAQUS. Users are referred to the <a
@@ -285,13 +237,13 @@ Paper</a> and chapter 4 of the MCEER Report <a
 href="https://www.researchgate.net/publication/292607987_Seismic_isolation_of_nuclear_power_plants_using_elastomeric_bearings">MCEER
 15-0008</a>.
 
-<p>Update: The LR isolator element is now implemented in the Mastadon
+Update: The LR isolator element is now implemented in the Mastadon
 software <a
 href="https://mooseframework.inl.gov/mastodon/manuals/include/materials/lr_isolator-user.html">LR
 Isolator Element</a> at Idaho National Laboratory by the research group
 working at University at Buffalo and Idaho National Laboratory.
 
-<h2 id="recorders">Recorders</h2>
+<h2>Recorders</h2>
 
 In addition to regular recorders provided by the bearing elements (<a
 href="Element_Recorder" title="wikilink"> Element Recorder</a>), this
@@ -300,7 +252,6 @@ buckling load capacity (Fcrn), vertical stiffness (Kv), horizontal
 stiffness (ke), temperature increase (dT), and yield strength (qYield)
 using the "Parameters" recorder in that order.
 
-Examples:
 
 ```tcl
 # recorder Element < -file $fileName > -time < -ele ($ele1 $ele2 ...) > Parameters 
@@ -311,7 +262,7 @@ To check if bearing has buckled or cavitated, an user can obtain the
 histories of Fcn and Fcrn as described above and divide the axial force
 (obtained from basicForce recorder, qb(2)) by Fcn and Fcrn at each time
 step, which provides demand vs capacity (D/C) ratios at each time step.
-If Fcn/qb(0) &gt; 1.0 : Cavitation, or Fcrn/qb(0)&gt;1.0 : Buckling.
+If $Fcn/qb(0) > 1.0$ : Cavitation, or Fcrn/qb(0)&gt;1.0 : Buckling.
 
 <h2 id="examples">Examples</h2>
 
@@ -328,7 +279,7 @@ alt="LDRgravity.tcl" /> <img src="LDRtest.tcl" title="LDRtest.tcl"
 alt="LDRtest.tcl" /></p>
 
 <figure>
-<img src="/OpenSeesRT/contrib/static/LDRcomparison.png"
+<img src="/_static/wiki/LDRcomparison.png"
   height="600"
   alt="Numerical and experimental response comparison" />
 <figcaption aria-hidden="true">Numerical and experimental response comparison</figcaption>
@@ -367,4 +318,3 @@ University at Buffalo, SUNY </span></p>
 
 <p>Any bugs in this element can be reported to mkumar2 AT buffalo dot
 edu</p>
-

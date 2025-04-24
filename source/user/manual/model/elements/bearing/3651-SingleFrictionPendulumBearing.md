@@ -1,6 +1,5 @@
-# Single Friction Pendulum Bearing
+# Single Friction Pendulum Bearing (AS2006)
 
-This command is used to construct a singleFPBearing element. 
 The iNode represents the concave sliding surface and the jNode represents the articulated slider. 
 The element can have zero length or the appropriate bearing height. 
 The bearing has unidirectional (2D) or coupled (3D) friction properties (with post-yield
@@ -11,7 +10,8 @@ To capture the uplift behavior of the bearing, the user-specified
 UniaxialMaterial in the axial direction is modified for no-tension
 behavior. 
 By default (sDratio = 0.0) P-Delta moments are entirely
-transferred to the concave sliding surface (iNode). It is important to
+transferred to the concave sliding surface (iNode). 
+It is important to
 note that rotations of the concave sliding surface (rotations at the
 iNode) affect the shear behavior of the bearing. To avoid the
 introduction of artificial viscous damping in the isolation system
@@ -122,7 +122,7 @@ default = 1E-8)</p></td>
 </tbody>
 </table>
 <figure>
-<img src="/OpenSeesRT/contrib/static/SingleFPBearingFig01.png" title="SingleFPBearingFig01.png"
+<img src="/_static/wiki/SingleFPBearingFig01.png" title="SingleFPBearingFig01.png"
 width="600" alt="SingleFPBearingFig01.png" />
 <figcaption aria-hidden="true">SingleFPBearingFig01.png</figcaption>
 </figure>

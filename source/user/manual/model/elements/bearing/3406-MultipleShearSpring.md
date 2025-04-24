@@ -64,7 +64,7 @@ lies in the local $x$-$y$ plane for the element</p></td>
   `localDisplacement` and `basicDeformation`.</p>
 
 <figure>
-<img src="/OpenSeesRT/contrib/static/MultipleShearSpring_Model.png"
+<img src="/_static/wiki/MultipleShearSpring_Model.png"
 title="MultipleShearSpring_Model.png" width="300"
 alt="MultipleShearSpring_Model.png" />
 <figcaption
@@ -84,17 +84,17 @@ element multipleShearSpring 1 1 2 16 -mat 1
   title="wikilink">MultipleShearSpring_input_X.tcl</a>, <a
   href="Media:MultipleShearSpring_input_Y.tcl"
   title="wikilink">MultipleShearSpring_input_Y.tcl</a></p>
-<p><img src="/OpenSeesRT/contrib/static/MultipleShearSpring_ForceDeformation_1y.png"
+<p><img src="/_static/wiki/MultipleShearSpring_ForceDeformation_1y.png"
   title="MultipleShearSpring_ForceDeformation_1y.png" width="250"
   alt="MultipleShearSpring_ForceDeformation_1y.png" />
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; <img
-src="/OpenSeesRT/contrib/static/MultipleShearSpring_path.png" title="MultipleShearSpring_path.png"
+src="/_static/wiki/MultipleShearSpring_path.png" title="MultipleShearSpring_path.png"
 width="250" alt="MultipleShearSpring_path.png" /></p>
-<p><img src="/OpenSeesRT/contrib/static/MultipleShearSpring_ForceDeformation_2y.png"
+<p><img src="/_static/wiki/MultipleShearSpring_ForceDeformation_2y.png"
   title="MultipleShearSpring_ForceDeformation_2y.png" width="250"
   alt="MultipleShearSpring_ForceDeformation_2y.png" />
   &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; <img
-  src="/OpenSeesRT/contrib/static/MultipleShearSpring_ForceDeformation_2z.png"
+  src="/_static/wiki/MultipleShearSpring_ForceDeformation_2z.png"
   title="MultipleShearSpring_ForceDeformation_2z.png" width="250"
   alt="MultipleShearSpring_ForceDeformation_2z.png" /></p>
 

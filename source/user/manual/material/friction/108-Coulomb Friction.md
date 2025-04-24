@@ -6,14 +6,14 @@ model object. Coulomb's Law of Friction states that kinetic friction is
 independent of the sliding velocity.</p>
 
 ```tcl
-frictionModel Coulomb $frnTag $mu
+frictionModel Coulomb $tag $mu
 ```
 
 <hr />
 <table>
 <tbody>
 <tr class="odd">
-<td><code class="parameter-table-variable">frnTag</code></td>
+<td><code class="parameter-table-variable">tag</code></td>
 <td><p>unique friction model object tag</p></td>
 </tr>
 <tr class="even">
@@ -23,7 +23,7 @@ frictionModel Coulomb $frnTag $mu
 </tbody>
 </table>
 <figure>
-<img src="/OpenSeesRT/contrib/static/CoulombFriction.png" title="CoulombFriction.png"
+<img src="/_static/wiki/CoulombFriction.png" title="CoulombFriction.png"
 alt="CoulombFriction.png" />
 <figcaption aria-hidden="true">CoulombFriction.png</figcaption>
 </figure>

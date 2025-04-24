@@ -1,4 +1,4 @@
-# FrictionModel Library
+# Friction
 
 The `frictionModel` command is used to construct a friction model
 object, which specifies the behavior of the coefficient of friction in
@@ -15,20 +15,19 @@ The type of friction model created and the additional arguments
 required depend on the <strong>frnMdlType?</strong> provided in the
 command.
 
-<p>The following contain information about frnMdlType? and the args
-required for each of the available friction model types:</p>
-<ul>
-<li><a href="Coulomb_Friction" title="wikilink">Coulomb
-Friction</a></li>
-<li><a href="Velocity_Dependent_Friction" title="wikilink">Velocity
-Dependent Friction</a></li>
-<li><a href="Velocity_and_Normal_Force_Dependent_Friction"
-title="wikilink">Velocity and Normal Force Dependent Friction</a></li>
-<li><a href="Velocity_and_Pressure_Dependent_Friction"
-title="wikilink">Velocity and Pressure Dependent Friction</a></li>
-<li><a href="Multi-Linear_Velocity_Dependent_Friction"
-title="wikilink">Multi-Linear Velocity Dependent Friction</a></li>
-</ul>
+The following contain information about `type` and the args
+required for each of the available friction model types:
+
+```{eval-rst}
+.. toctree::
+   :maxdepth: 1
+
+   108-Coulomb Friction
+   401-Multi-Linear Velocity Dependent Friction
+   744-Velocity Dependent Friction
+   745-Velocity and Normal Force Dependent Friction
+   746-Velocity and Pressure Dependent Friction
+```
 
 <hr />
 
@@ -46,3 +45,18 @@ friction model associated with it:
 ```tcl
 recorder Element -file Elmt.out -time -ele 1 frictionModel normalForce
 ```
+
+
+## Used In
+
+<ul>
+<li><a
+href="http://opensees.berkeley.edu/wiki/index.php/Flat_Slider_Bearing_Element">Flat
+Slider Bearing Element</a></li>
+<li><a
+href="http://opensees.berkeley.edu/wiki/index.php/Single_Friction_Pendulum_Bearing_Element">Single
+Friction Pendulum Bearing Element</a></li>
+<li><a
+href="http://opensees.berkeley.edu/wiki/index.php/Triple_Friction_Pendulum_Element">Triple
+Friction Pendulum Bearing Element</a></li>
+</ul>

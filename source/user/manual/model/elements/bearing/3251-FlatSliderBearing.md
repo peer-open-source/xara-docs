@@ -1,7 +1,6 @@
-# FlatSliderBearing
+# FlatSliderBearing (AS2006)
 
-<p>This command is used to construct a flatSliderBearing element object,
-which is defined by two nodes. The iNode represents the flat sliding
+The iNode represents the flat sliding
 surface and the jNode represents the slider. The element can have zero
 length or the appropriate bearing height. The bearing has unidirectional
 (2D) or coupled (3D) friction properties for the shear deformations, and
@@ -9,7 +8,7 @@ force-deformation behaviors defined by UniaxialMaterials in the
 remaining two (2D) or four (3D) directions. To capture the uplift
 behavior of the bearing, the user-specified UniaxialMaterial in the
 axial direction is modified for no-tension behavior. By default (sDratio
-= 0.0) P-Delta moments are entirely transferred to the flat sliding
+= 0.0) $P-\Delta$ moments are entirely transferred to the flat sliding
 surface (iNode). 
 It is important to note that rotations of the flat
 sliding surface (rotations at the iNode) affect the shear behavior of
@@ -117,7 +116,7 @@ default = 1E-8)</p></td>
 </tbody>
 </table>
 <figure>
-<img src="/OpenSeesRT/contrib/static/FlatSliderBearingFig01.png" title="FlatSliderBearingFig01.png"
+<img src="/_static/wiki/FlatSliderBearingFig01.png" title="FlatSliderBearingFig01.png"
 width="600" alt="FlatSliderBearingFig01.png" />
 <figcaption aria-hidden="true">FlatSliderBearingFig01.png</figcaption>
 </figure>
@@ -125,21 +124,21 @@ width="600" alt="FlatSliderBearingFig01.png" />
 <hr />
 
 <p>NOTE:</p>
-1) If the element has zero length and optional orientation vectors
+1. If the element has zero length and optional orientation vectors
   are not specified, the local element axes coincide with the global axes.
   Otherwise the local z-axis is defined by the cross product between the
   x- and y-vectors specified on the command line.
-2) Because the friction force is affected by both the axial force and
+2. Because the friction force is affected by both the axial force and
   the slip rate, the element can be sensitive numerically. It is
   recommended that for dynamic analysis a smaller time step is being used
   than what would be used for a comparable structure with no
   isolators.
-3) If there is uplift (and therefore impact) in the bearing element,
+3. If there is uplift (and therefore impact) in the bearing element,
   it can be helpful to use an integration method that provides numerical
   damping. Providing some viscous damping for the material that is
   assigned to the axial direction can also be helpful in dissipating
   impact energy.
-4) The valid queries to a flat slider bearing element when creating
+4. The valid queries to a flat slider bearing element when creating
   an ElementRecorder object are `force`, `localForce`, `basicForce`,
   `localDisplacement`, `basicDisplacement` and `material $matNum matArg1 matArg2 ...` 
   Where `matNum` is the number associated with the material
@@ -149,7 +148,8 @@ width="600" alt="FlatSliderBearingFig01.png" />
 
 ## Examples
 
-<p>For a 2D flat slider bearing: 
+For a 2D flat slider bearing:
+
 ```tcl
 element flatSliderBearing 1 1 2 1 250.0 -P 1 -Mz 2 -orient 0 1 0 -1 0 0;
 ```

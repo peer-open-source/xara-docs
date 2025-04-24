@@ -1,4 +1,4 @@
-# ElastomericX
+# ElastomericX (MK2012)
 
 This command is used to construct an ElastomericX bearing element in three-dimensions. 
 The 3D continuum geometry of an elastomeric
@@ -6,7 +6,8 @@ bearing is modeled as a 2-node, 12 DOF discrete element.
 This elements extends the formulation of <a href="Elastomeric_Bearing_(Bouc-Wen)_Element">Elastomeric_Bearing_(Bouc-Wen)_Element</a> element.
 However, instead of the user providing material models as input
 arguments, it only requires geometric and material properties of an
-elastomeric bearing as arguments. The material models in six direction
+elastomeric bearing as arguments. 
+The material models in six direction
 are formulated within the element from input arguments. 
 The time-dependent values of mechanical properties (e.g., shear stiffness,
 buckling load capacity) can also be recorded using the "parameters" <a href="#Recorders" title="wikilink">recorder</a>.
@@ -14,7 +15,7 @@ buckling load capacity) can also be recorded using the "parameters" <a href="#Re
 For a 3D problem:
 
 ```tcl
-element ElastomericX $eleTag $Nd1 $Nd2 $Fy $alpha $Gr
+element ElastomericX $tag $Nd1 $Nd2 $Fy $alpha $Gr
         $Kbulk $D1 $D2 $ts $tr $n < < $x1 $x2 $x3 > $y1 $y2 $y3 >
         < $kc > < $PhiM > < $ac > < $sDratio > < $m >
         < $cd > < $tc > < $tag1 > < $tag2 > < $tag3 >
@@ -25,7 +26,7 @@ element ElastomericX $eleTag $Nd1 $Nd2 $Fy $alpha $Gr
 <table>
 <tbody>
 <tr class="odd">
-<td><code class="parameter-table-variable">eleTag</code></td>
+<td><code class="parameter-table-variable">tag</code></td>
 <td><p>unique element object tag</p></td>
 </tr>
 <tr class="even">
@@ -135,73 +136,11 @@ Because default values of heating parameters are in SI units, user
 must override the default heating parameters values if using Imperial
 units
 User should distinguish between yield strength of
-elastomeric bearing ($F_y$) and characteristic strength $Q_d=Fy*(1-alpha)$
+elastomeric bearing ($F_y$) and characteristic strength $Q_d=F_y*(1-\alpha)$
 
-<h2 id="physical_model_and_mechanical_properties">Physical Model and
-Mechanical Properties</h2>
+<h2>Physical Model and Mechanical Properties</h2>
 
-The physical model of an elastomeric bearing is considered as a
-two-node, twelve degrees-of-freedom discrete element. The two nodes are
-connected by six springs that represent the mechanical behavior in the
-six basic directions of a bearing. The degrees of freedom and discrete
-spring representation of an elastomeric bearing is shown in the below
-figures.
-
-<img src="/OpenSeesRT/contrib/static/Elastomeric3DModel.png"
-title="inline|Physical continuum model" height="300"
-alt="inline|Physical continuum model" /> 
-<img src="/OpenSeesRT/contrib/static/ElastomericDiscreteSpring.png"
-title="inline|Discrete spring representation" height="300"
-alt="inline|Discrete spring representation" />
-
-
-The general form of element force vector, $f_b$,
-and element stiffness matrix, $K_b$ , for element
-representation considered above is given by equation below:
-
-$$
-f_b=\left[ \begin{matrix} 
-Axial \\ Shear1 \\ Shear2 \\
-Torsion \\ Rotation1 \\ Rotation2 \\ 
-\end{matrix}\right]
-$$
-
-$$
-K_b=\left[ \begin{matrix} 
-Axial & 0 & 0 & 0 & 0 & 0 \\
-0 & Shear1 & Shear12 & 0 & 0 & 0 \\ 
-0 & Shear21 & Shear2 & 0 & 0 & 0 \\ 
-0 & 0 & 0 & Torsion & 0 & 0 \\ 
-0 & 0 & 0 & 0 & Rotation1 & 0 \\
-0 & 0 & 0 & 0 & 0 & Rotation2 \\ 
-\end{matrix}
-\right]
-$$
-
-The coupling of the two shear springs is considered directly by using
-a coupled bidirectional model. All other springs are uncoupled. The
-coupling of vertical and horizontal directions are considered indirectly
-by using expressions for mechanical properties in one direction that are
-dependent on the response parameters in the other direction. Linear
-uncoupled springs are considered in the torsion and the two rotational
-springs as they are not expected to significantly affect the response of
-an elastomeric bearing. The off-diagonal terms due to coupling between
-axial and shear, and axial and rotation, are not considered in the
-two-spring model (Koh and Kelly, 1987) used here. An exact model would
-have non-zero values of these off-diagonal terms. A discussion on the
-formulation of the two-spring model and the exact model is presented in
-Ryan et al.(1991). The subscript b refers to the element’s basic
-coordinate system. The response quantities are transformed between the
-basic, local and global coordinates to perform computations.
-
-The discrete spring model presented here has the advantages of easy
-implementation and being computationally efficient. The mechanical
-properties of the six springs (also referred to as material models in
-OpenSees) are defined using analytical solutions available from the
-analysis of elastomeric bearings. The expression for mechanical
-properties, including stiffness and buckling load capacity, are derived
-using explicit consideration for geometric nonlinearity due to large
-displacement effects. The material models in six directions are:
+The material models in six directions are:
 
 <ul>
 <li>Axial direction: a new mathematical model that captures the behavior
@@ -212,8 +151,9 @@ by Nagarajaiah et al.(1991) for seismic isolation bearings</li>
 <li>Torsion: a linear elastic model</li>
 <li>Two rotational directions: linear elastic models</li>
 </ul>
-<p>In addition to the behavior captured by existing bearing elements,
-this element can capture following characteristics:</p>
+
+In addition to the behavior captured by existing bearing elements, this element can capture following characteristics:
+
 <ol>
 <li>Cavitation and post-cavitation behavior in tension (tag1)</li>
 <li>Variation in critical buckling load capacity due to lateral
@@ -229,15 +169,15 @@ analysis.</p>
 <p>For the full capabilities of this element, users are referred to: <a
 href="http://onlinelibrary.wiley.com/doi/10.1002/eqe.2431/abstract">EESD
 Article</a></p>
-<h2
-id="consideration_of_characteristics_to_include_under_extreme_loading">Consideration
-of characteristics to include under extreme loading</h2>
+
+<h2>Characteristics to include under extreme loading</h2>
+
 <p>A recent paper by <a
 href="http://www.sciencedirect.com/science/article/pii/S002954931500254X">Kumar
 et. al (2015)</a> explains which of the four tags should be included in
 the analysis. Although the analysis presented in the paper is for the
 base-isolated NPP, the conclusions are valid for design earthquake and
-maximum considered earthquake for regular building structures as well.
+maximum considered earthquake for regular building structures as well. 
 Following are few thumb rules that can be followed: tag 1: Unless you
 are investigating the tensile behavior, the effect of the tensile model
 on shear response is insignificant. tag 2: It is recommended to use tag
@@ -256,7 +196,8 @@ href="https://www.researchgate.net/publication/280841152_Verification_and_valida
 Paper</a> and chapter 4 of the Manish Kumar's <a
 href="http://www.manishkumar.org/manishkumar/research/Dissertation_Manish_Kumar.pdf">Dissertation</a>
 for complete details.</p>
-<h2 id="recorders">Recorders</h2>
+
+<h2>Recorders</h2>
 <p>In addition to regular recorders provided by the bearing elements (<a
 href="Element_Recorder" title="wikilink"> Element Recorder</a>), this
 element can also record instantaneous values of cavitation force (Fcn),
@@ -277,7 +218,8 @@ If $Fcn/qb(0) > 1.0$ : Cavitation, or Fcrn/qb(0)&gt;1.0 : Buckling.</p>
 
 An example is presented here in which a low damping rubber bearing
 (LDR 5 in Warn(2006)) is subjected to a tensile harmonic loading in
-laboratory (SEESL at UB). The response obtained from ElastomericX
+laboratory (SEESL at UB). 
+The response obtained from ElastomericX
 element in OpenSees is compared with the experimental results. The
 behavior of elastomeric bearing in shear and compression is well
 established, and is not explored here.
@@ -293,7 +235,7 @@ title="Excitation_Warn.zip" /> </p>
 alt="EBgravity.tcl" /> <img src="EBtest.tcl" title="EBtest.tcl"
 alt="EBtest.tcl" /></p>
 <figure>
-<img src="/OpenSeesRT/contrib/static/EBWarnComparison.jpg"
+<img src="/_static/wiki/EBWarnComparison.jpg"
 title="inline|Numerical and experimental response comparison"
 height="400"
 alt="inline|Numerical and experimental response comparison" />

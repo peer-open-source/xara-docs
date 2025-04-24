@@ -1,10 +1,10 @@
 # YamamotoBiaxialHDR
 
-This command is used to construct a YamamotoBiaxialHDR element, which is defined by two nodes. 
+
 This element can be used to represent the isotropic behavior of high-damping rubber bearing in the local y-z plane.
 
 ```tcl
-element YamamotoBiaxialHDR $eleTag $iNode $jNode $Tp $DDo
+element YamamotoBiaxialHDR $tag $iNode $jNode $Tp $DDo
         $DDi Hr? <-coRS cr? cs?> <-orient <x1? x2? x3? > y1? y2?
         y3?> <-mass m? >;
 ```
@@ -13,7 +13,7 @@ element YamamotoBiaxialHDR $eleTag $iNode $jNode $Tp $DDo
 <table>
 <tbody>
 <tr class="odd">
-<td><code class="parameter-table-variable">eleTag</code></td>
+<td><code class="parameter-table-variable">tag</code></td>
 <td><p>unique element object tag</p></td>
 </tr>
 <tr class="even">
@@ -76,7 +76,7 @@ ElementRecorder object are 'globalForce', 'localForce', 'basicForce',
 'localDisplacement' and 'basicDeformation'.
 
 <figure>
-<img src="/OpenSeesRT/contrib/static/YamamotoBiaxialHDR_Model.png"
+<img src="/_static/wiki/YamamotoBiaxialHDR_Model.png"
 title="YamamotoBiaxialHDR_Model.png" width="150"
 alt="YamamotoBiaxialHDR_Model.png" />
 <figcaption aria-hidden="true">YamamotoBiaxialHDR_Model.png</figcaption>
@@ -95,23 +95,26 @@ href="Media:YamamotoBiaxialHDR_input_X.tcl"
 title="wikilink">YamamotoBiaxialHDR_input_X.tcl</a>, <a
 href="Media:YamamotoBiaxialHDR_input_Y.tcl"
 title="wikilink">YamamotoBiaxialHDR_input_Y.tcl</a></p>
-<p><img src="/OpenSeesRT/contrib/static/Bidirectional-Disp_pattern.png"
+<p><img src="/_static/wiki/Bidirectional-Disp_pattern.png"
 title="Bidirectional-Disp_pattern.png" width="250"
 alt="Bidirectional-Disp_pattern.png" />
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; <img
-src="/OpenSeesRT/contrib/static/Unidirectional.png" title="Unidirectional.png" width="250"
+src="/_static/wiki/Unidirectional.png" title="Unidirectional.png" width="250"
 alt="Unidirectional.png" /></p>
-<p><img src="/OpenSeesRT/contrib/static/Bidirectional-X.png" title="Bidirectional-X.png"
+<p><img src="/_static/wiki/Bidirectional-X.png" title="Bidirectional-X.png"
 width="250" alt="Bidirectional-X.png" />
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; <img
-src="/OpenSeesRT/contrib/static/Bidirectional-Y.png" title="Bidirectional-Y.png" width="250"
+src="/_static/wiki/Bidirectional-Y.png" title="Bidirectional-Y.png" width="250"
 alt="Bidirectional-Y.png" /></p>
+
 ## References
+
 <p>Masashi Yamamoto, Shigeo Minewaki, Harumi Yoneda and Masahiko
 Higashino, "Nonlinear behavior of high-damping rubber bearings under
 horizontal bidirectional loading: full-scale tests and analytical
 modeling", <em>Earthquake Engineering and Structural Dynamics</em>,
 <strong>41</strong>, 1845-1860, 2012.</p>
 <hr />
+
 <p>Code Developed by: <span style="color:blue"> mkiku
 </span></p>

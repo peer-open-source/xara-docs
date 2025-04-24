@@ -1,21 +1,19 @@
 # Velocity Dependent Friction
 
-<p>This command is used to construct a VelDependent friction model
-object. It is useful for modeling the behavior of [<a
-href="http://en.wikipedia.org/wiki/Polytetrafluoroethylene%22PTFE">http://en.wikipedia.org/wiki/Polytetrafluoroethylene"PTFE</a>"]
-or PTFE-like materials sliding on a stainless steel surface. For a
-detailed presentation on the velocity dependence of such interfaces
-please refer to Constantinou et al. (1999).</p>
+This command is used to construct a VelDependent friction model. It is useful for modeling the behavior of [<a href="http://en.wikipedia.org/wiki/Polytetrafluoroethylene%22PTFE">PTFE</a>]
+or PTFE-like materials sliding on a stainless steel surface. 
+For a detailed presentation on the velocity dependence of such interfaces
+please refer to Constantinou et al. (1999).
 
 ```tcl
-frictionModel VelDependent $frnTag $muSlow $muFast
-        $transRate
+frictionModel VelDependent $tag $muSlow $muFast $transRate
 ```
+
 <hr />
 <table>
 <tbody>
 <tr class="odd">
-<td><code class="parameter-table-variable">frnTag</code></td>
+<td><code class="parameter-table-variable">tag</code></td>
 <td><p>unique friction model object tag</p></td>
 </tr>
 <tr class="even">
@@ -32,15 +30,17 @@ frictionModel VelDependent $frnTag $muSlow $muFast
 </tr>
 </tbody>
 </table>
-<p>&lt;math&gt;<span
-class="math display"><em>μ</em> = <em>μ</em><sub><em>f</em><em>a</em><em>s</em><em>t</em></sub> − (<em>μ</em><sub><em>f</em><em>a</em><em>s</em><em>t</em></sub>−<em>μ</em><sub><em>s</em><em>l</em><em>o</em><em>w</em></sub>) ⋅ <em>e</em><sup>−<em>t</em><em>r</em><em>a</em><em>n</em><em>s</em><em>R</em><em>a</em><em>t</em><em>e</em> ⋅ |<em>v</em>|</sup></span>&lt;/math&gt;</p>
+
+<span
+class="math display"><em>μ</em> = <em>μ</em><sub><em>f</em><em>a</em><em>s</em><em>t</em></sub> − (<em>μ</em><sub><em>f</em><em>a</em><em>s</em><em>t</em></sub>−<em>μ</em><sub><em>s</em><em>l</em><em>o</em><em>w</em></sub>) ⋅ <em>e</em><sup>−<em>t</em><em>r</em><em>a</em><em>n</em><em>s</em><em>R</em><em>a</em><em>t</em><em>e</em> ⋅ |<em>v</em>|</sup></span>
+
 <figure>
-<img src="/OpenSeesRT/contrib/static/VDependentFriction01.png" title="VDependentFriction01.png"
+<img src="/_static/wiki/VDependentFriction01.png" title="VDependentFriction01.png"
 alt="VDependentFriction01.png" />
 <figcaption aria-hidden="true">VDependentFriction01.png</figcaption>
 </figure>
 <figure>
-<img src="/OpenSeesRT/contrib/static/VDependentFrictionCurveFit.png"
+<img src="/_static/wiki/VDependentFrictionCurveFit.png"
 title="VDependentFrictionCurveFit.png"
 alt="VDependentFrictionCurveFit.png" />
 <figcaption
@@ -50,26 +50,20 @@ aria-hidden="true">VDependentFrictionCurveFit.png</figcaption>
 
 ## Examples
 
-<p>frictionModel VelDependent 1 0.05 0.163 0.615</p>
+```Tcl
+frictionModel VelDependent 1 0.05 0.163 0.615
+```
+
 <hr />
-<p>REFERENCE:</p>
+
+## References
+
 <p>Constantinou, M.C., Tsopelas, P., Kasalanati, A., and Wolff, E.D.
 (1999). “Property modification factors for seismic isolation bearings”.
 Report MCEER-99-0012, Multidisciplinary Center for Earthquake
 Engineering Research, State University of New York.</p>
+
 <hr />
-<p>RELATED TO:</p>
-<ul>
-<li><a
-href="http://opensees.berkeley.edu/wiki/index.php/Flat_Slider_Bearing_Element">Flat
-Slider Bearing Element</a></li>
-<li><a
-href="http://opensees.berkeley.edu/wiki/index.php/Single_Friction_Pendulum_Bearing_Element">Single
-Friction Pendulum Bearing Element</a></li>
-<li><a
-href="http://opensees.berkeley.edu/wiki/index.php/Triple_Friction_Pendulum_Element">Triple
-Friction Pendulum Bearing Element</a></li>
-</ul>
-<hr />
+
 <p>Code Developed by: <span style="color:blue"> Andreas
 Schellenberg, University of California, Berkeley. </span></p>

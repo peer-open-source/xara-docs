@@ -1,8 +1,6 @@
-# RJ-Watson EQS Bearing
+# RJ-Watson EQS Bearing (AS2013)
 
-This command is used to construct a RJWatsonEqsBearing element
-object, which is defined by two nodes. The iNode represents the masonry
-plate and the jNode represents the sliding surface plate. The element
+The iNode represents the masonry plate and the jNode represents the sliding surface plate. The element
 can have zero length or the appropriate bearing height. The bearing has
 unidirectional (2D) or coupled (3D) friction properties (with post-yield
 stiffening due to the mass-energy-regulator (MER) springs) for the shear
@@ -11,13 +9,14 @@ UniaxialMaterials in the remaining two (2D) or four (3D) directions. To
 capture the uplift behavior of the bearing, the user-specified
 UniaxialMaterial in the axial direction is modified for no-tension
 behavior. 
-By default (sDratio = 1.0) P-Delta moments are entirely
-transferred to the sliding surface (jNode). It is important to note that
-rotations of the sliding surface (rotations at the jNode) affect the
-shear behavior of the bearing. To avoid the introduction of artificial
+By default (sDratio = 1.0) $P-\Delta$ moments are entirely
+transferred to the sliding surface (jNode). 
+It is important to note that rotations of the sliding surface (rotations at the jNode) affect the
+shear behavior of the bearing. 
+To avoid the introduction of artificial
 viscous damping in the isolation system (sometimes referred to as
-"damping leakage in the isolation system"), the bearing element does not
-contribute to the Rayleigh damping by default. If the element has
+"damping leakage in the isolation system"), the bearing element does not contribute to the Rayleigh damping by default. 
+If the element has
 non-zero length, the local x-axis is determined from the nodal geometry
 unless the optional x-axis vector is specified in which case the nodal
 geometry is ignored and the user-defined orientation is utilized.
@@ -131,7 +130,7 @@ default = 1E-8)</p></td>
 </tbody>
 </table>
 <figure>
-<img src="/OpenSeesRT/contrib/static/RJWatsonEQSBearingFig01.png"
+<img src="/_static/wiki/RJWatsonEQSBearingFig01.png"
 title="RJWatsonEQSBearingFig01.png" width="600"
 alt="RJWatsonEQSBearingFig01.png" />
 <figcaption aria-hidden="true">RJWatsonEQSBearingFig01.png</figcaption>

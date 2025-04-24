@@ -1,10 +1,9 @@
 # Velocity and Normal Force Dependent Friction
 
-This command is used to construct a VelNormalFrcDep friction model
-object.
+This command is used to construct a *VelNormalFrcDep* friction model.
 
 ```tcl
-frictionModel VelNormalFrcDep $frnTag $aSlow $nSlow
+frictionModel VelNormalFrcDep $tag $aSlow $nSlow
         $aFast $nFast $alpha0 $alpha1 $alpha2 $maxMuFact
 ```
 
@@ -12,7 +11,7 @@ frictionModel VelNormalFrcDep $frnTag $aSlow $nSlow
 <table>
 <tbody>
 <tr class="odd">
-<td><code class="parameter-table-variable">frnTag</code></td>
+<td><code class="parameter-table-variable">tag</code></td>
 <td><p>unique friction model object tag</p></td>
 </tr>
 <tr class="even">
@@ -111,12 +110,14 @@ $maxMuFac*μFast.</p></td>
    Time/Length/Force and Time/Length/Force<sup class="superscript">2</sup> respectively.
 
 <figure>
-<img src="/OpenSeesRT/contrib/static/TPB_Nhan_Fig3.jpg" title="TPB_Nhan_Fig3.jpg" width="300" />
+<img src="/_static/wiki/TPB_Nhan_Fig3.jpg" title="TPB_Nhan_Fig3.jpg" width="300" />
 <figcaption aria-hidden="true">TPB_Nhan_Fig3.jpg</figcaption>
 </figure>
 
 <hr />
-<p>SPECIAL CASES:</p>
+
+## Special Cases
+
 1. Constant friction coefficient:
    <dl>
    <dt></dt>
@@ -179,25 +180,13 @@ frictionModel VelNormalFrcDep 1 [expr $muSlow/pow($W,$nSlow-1.0)] \
 
 
 ## References
+
 <p>[1] Bowden F.P., Tabor D. (1964). "The friction and lubrication of
 solids - part II." Oxford University Press, London, Great Britain,
 1964.</p>
 <p>[2] Constantinou M.C., Mokha A., Reinhorn A. (1990). "Teflon bearings
 in base isolation. II: Modeling." Journal of Structural Engineering
 (ASCE) 1990; 116(2): 455-474</p>
-
-<p>RELATED TO:</p>
-<ul>
-<li><a
-href="http://opensees.berkeley.edu/wiki/index.php/Flat_Slider_Bearing_Element">Flat
-Slider Bearing Element</a></li>
-<li><a
-href="http://opensees.berkeley.edu/wiki/index.php/Single_Friction_Pendulum_Bearing_Element">Single
-Friction Pendulum Bearing Element</a></li>
-<li><a
-href="http://opensees.berkeley.edu/wiki/index.php/Triple_Friction_Pendulum_Element">Triple
-Friction Pendulum Bearing Element</a></li>
-</ul>
 
 <hr />
 <p>Code Developed by: <span style="color:blue"> Nhan D. Dao,

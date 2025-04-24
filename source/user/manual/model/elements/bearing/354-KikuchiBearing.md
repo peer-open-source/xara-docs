@@ -1,11 +1,10 @@
 # KikuchiBearing
 
-<p>This command is used to construct a KikuchiBearing element object,
-which is defined by two nodes. This element consists of multiple shear
-spring model (MSS) and multiple normal spring model (MNS).</p>
+This element consists of multiple shear
+spring model (MSS) and multiple normal spring model (MNS).
 
 ```tcl
-element KikuchiBearing $eleTag $iNode $jNode
+element KikuchiBearing $tag $iNode $jNode
         -shape $shape -size $size $totalRubber
         < -totalHeight $totalHeight >
         -nMSS $nMSS -matMSS $matMSSTag
@@ -24,12 +23,12 @@ element KikuchiBearing $eleTag $iNode $jNode
 <table>
 <tbody>
 <tr class="odd">
-<td><code class="parameter-table-variable">eleTag</code></td>
+<td><code class="parameter-table-variable">tag</code></td>
 <td><p>unique element object tag</p></td>
 </tr>
 <tr class="even">
 <td><p><code class="parameter-table-variable">inode jnode</code></p></td>
-<td><p>end nodes</p></td>
+<td><p>Two integer node tags</p></td>
 </tr>
 <tr class="odd">
 <td><code class="parameter-table-variable">shape</code></td>
@@ -113,7 +112,7 @@ of iterations to get rid of internal unbalanced force
 </tbody>
 </table>
 
-<p>NOTES:</p>
+## Notes
 
 1) If <code class="tcl-variable">limdisp</code> is positive and the shear deformation
    of MSS exceeds <code class="tcl-variable">limdisp</code>, this element calculates
@@ -131,7 +130,7 @@ of iterations to get rid of internal unbalanced force
    `'localDisplacement'` and `'basicDeformation'`.
 
 <figure>
-<img src="/OpenSeesRT/contrib/static/KikuchiBearing_Model.png" title="KikuchiBearing_Model.png"
+<img src="/_static/wiki/KikuchiBearing_Model.png" title="KikuchiBearing_Model.png"
 width="400" alt="KikuchiBearing_Model.png" />
 <figcaption aria-hidden="true">KikuchiBearing_Model.png</figcaption>
 </figure>
@@ -150,6 +149,7 @@ href="Media:KikuchiBearing_input_Z.tcl"
 title="wikilink">KikuchiBearing_input_Z.tcl</a>, <a
 href="Media:KikuchiBearing_input_X.tcl"
 title="wikilink">KikuchiBearing_input_X.tcl</a></p>
+
 <table>
 <tbody>
 <tr class="odd">
@@ -166,24 +166,26 @@ compression modulus</p></td>
 </tbody>
 </table>
 <p><img 
-  src="/OpenSeesRT/contrib/static/KikuchiBearing_ForceDeformation_case1_v2.png"
+  src="/_static/wiki/KikuchiBearing_ForceDeformation_case1_v2.png"
   title="KikuchiBearing_ForceDeformation_case1_v2.png" width="250"
   alt="KikuchiBearing_ForceDeformation_case1_v2.png" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img
-  src="/OpenSeesRT/contrib/static/KikuchiBearing_ForceDeformation_case2_v2.png"
+  src="/_static/wiki/KikuchiBearing_ForceDeformation_case2_v2.png"
   title="KikuchiBearing_ForceDeformation_case2_v2.png" 
   width="250"
   alt="KikuchiBearing_ForceDeformation_case2_v2.png" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img
-  src="/OpenSeesRT/contrib/static/KikuchiBearing_ForceDeformation_case3_v2.png"
+  src="/_static/wiki/KikuchiBearing_ForceDeformation_case3_v2.png"
   title="KikuchiBearing_ForceDeformation_case3_v2.png" width="250"
   alt="KikuchiBearing_ForceDeformation_case3_v2.png" /></p>
 
 ## References
+
 <p>M. Kikuchi , I. D. Aiken and A. Kasalanati , "Simulation analysis for
 the ultimate behavior of full-scale lead-rubber seismic isolation
 bearings", <em>15th World Conference on Earthquake Engineering</em>, No.
 1688, 2012.</p>
+
 <hr />
 
 <p>Code Developed by: <span style="color:blue"> mkiku

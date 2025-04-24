@@ -7,7 +7,7 @@ If you use *xara*, please cite the following references:
 .. code-block:: bibtex
 
    @software{perez2024xara,
-     author = {Perez, Claudio M. and McKenna, Frank and Mosalam, Khalid M.},
+     author = {Perez, Claudio M. and McKenna, Frank and Mosalam, Khalid M., and Filippou, Filip C.},
      doi = {10.5281/zenodo.10456866},
      month = jul,
      title = {{xara}},
