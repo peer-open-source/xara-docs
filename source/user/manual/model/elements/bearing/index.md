@@ -9,6 +9,7 @@
 .. toctree::
     :maxdepth: 1
 
+
     3197-ElastomericBoucWenBearing
     3198-ElastomericPlasticBearing
     3196-ElastomericX
@@ -19,25 +20,24 @@
 ```{eval-rst}
 .. toctree::
     :maxdepth: 1
-    :caption: Single
 
     3651-SingleFrictionPendulumBearing
-    3233-FPBearingPTV
 
 .. toctree::
-    :maxdepth: 1
-    :caption: Triple
+   :maxdepth: 1
+   :hidden:
 
-    3714-TFP
-    3715-TripleFrictionPendulum
-    TripleFrictionPendulumX
+   3233-FPBearingPTV
+   3714-TFP
+   3715-TripleFrictionPendulum
+   TripleFrictionPendulumX
 
 .. toctree::
-    :maxdepth: 1
-    :caption: Other
+   :maxdepth: 1
+   :caption: Other
 
-    3251-FlatSliderBearing
-    3568-RJ-Watson-EQS-Bearing
+   3251-FlatSliderBearing
+   3568-RJ-Watson-EQS-Bearing
 
 ..
     3406-MultipleShearSpring
