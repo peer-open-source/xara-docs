@@ -15,7 +15,7 @@ This command is used to construct a Series3D material. It is a wrapper that impo
    $tag1 $tag2 ... $tagN, N |integer|, "unique tags identifying previously defined nD materials"
    $w1 $w2 ... $wN, N |float|, "weight factors, optional. If not defined, they will be assumed all equal to 1"
    -maxIter, |string|, "string keyword to specify a user-defined maximum number of iterations"
-   $maxIter, |integer|, "maximum number of iterations to impose the iso-stress condition, optional, default = 10"
+   maxIter, |integer|, "maximum number of iterations to impose the iso-stress condition, optional, default = 10"
    -relTol, |string|, "string keyword to specify a user-defined relative stress tolerance for the iso-stress condition"
    $relTol, |float|, "relative stress tolerance for the iso-stress condition, optional, default = 1.0e-4"
    -absTol, |string|, "string keyword to specify a user-defined absolute stress tolerance for the iso-stress condition"

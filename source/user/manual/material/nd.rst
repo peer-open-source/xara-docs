@@ -1,15 +1,16 @@
 .. _nDMaterial:
 
-General Materials
-*****************
+General
+*******
 
-This command is used to configure an NDMaterial which represents the stress-strain relationship at the gauss-point of a continuum element. 
 
 .. tabs::
    
    .. tab:: Python 
 
       .. py:method:: Model.material(type, tag, *args)
+
+         Define a material.
 
          :param type: material type
          :type type: |string|
@@ -29,6 +30,9 @@ This command is used to configure an NDMaterial which represents the stress-stra
          $type, |string|,      material type
          $tag,  |integer|,     unique material tag.
          $args, |list|,        a list of material arguments with number dependent on material type
+
+
+A material represents the constitutive (stress-strain) relationship at a gauss-point of an element. 
 
 .. note::
 
