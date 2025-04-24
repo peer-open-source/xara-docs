@@ -3,6 +3,7 @@ Joints
 
 .. toctree::
    :maxdepth: 1
+   :hidden:
 
    BeamColumnJoint
    ElasticTubularJoint

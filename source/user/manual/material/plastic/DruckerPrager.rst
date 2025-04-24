@@ -3,9 +3,6 @@
 Drucker Prager
 ^^^^^^^^^^^^^^
 
-Code Developed by: |peter| and |pedro| at U.Washington.
-
-This command is used to construct an inelastic material that has a Drucker-Prager yield criterion.
 
 .. tabs::
    .. tab:: Python
@@ -108,7 +105,7 @@ The valid queries to the Drucker-Prager material when creating an ElementRecorde
 * Column 3 - First invariant of the plastic strain tensor, :math:`\mathrm{tr}(\boldsymbol{\varepsilon}^p)`.
 * Column 4 - Norm of the deviatoric plastic strain tensor, :math:`\left\| \mathbf{e}^p \right\|`.
 
-The Drucker-Prager strength parameters :math:`\rho` and :math:`\sigma_Y` can be related to the Mohr-Coulomb friction angle, :math:`\phi`, and cohesive intercept, :math:`c`, by evaluating the yield surfaces in a deviatoric plane as described by Chen and Saleeb (1994). By relating the two yield surfaces in triaxial compression, the following expressions are determined
+The Drucker-Prager strength parameters :math:`\rho` and :math:`F_y` can be related to the Mohr-Coulomb friction angle, :math:`\phi`, and cohesive intercept, :math:`c`, by evaluating the yield surfaces in a deviatoric plane as described by Chen and Saleeb (1994). By relating the two yield surfaces in triaxial compression, the following expressions are determined
 
 .. math:: 
 
@@ -117,7 +114,7 @@ The Drucker-Prager strength parameters :math:`\rho` and :math:`\sigma_Y` can be 
 
 .. math::
 
-   \sigma_Y = \frac{6 c \cos \phi}{\sqrt{2} (3 - \sin \phi)}
+   F_y = \frac{6 c \cos \phi}{\sqrt{2} (3 - \sin \phi)}
 
 
 Example
@@ -133,7 +130,7 @@ As shown, the element is loaded until failure, at which point the model can no l
    :width: 800px
    :figclass: align-center
 
-   Drucker Prager example
+   Triaxial compression test with the Drucker-Prager model.
 
 .. literalinclude:: DruckerPragerExample.tcl
    :language: bash
@@ -148,3 +145,5 @@ References
 
 .. [Chen-Saleeb1994] Chen, W. F. and Saleeb, A. F., Constitutive Equations for Engineering Materials Volume I: Elasticity and Modeling. Elsevier Science B.V., Amsterdam, 1994.
 
+
+Code Developed by: |peter| and |pedro| at U.Washington.

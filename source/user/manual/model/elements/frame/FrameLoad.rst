@@ -9,6 +9,9 @@ FrameLoad
    :param n: force values 
    :param basis: string defining the coordinate basis of the load arguments ``n`` and ``m``. Options are ``"local"``, ``"global"``, and ``"director"``
 
+.. note::
+   
+   This loading is intended to supesede the preexisting beam loads. Currently it is only supported by :ref:`ExactFrame`
 
 Theory
 ------
