@@ -1,25 +1,5 @@
 # FlatSliderBearing (AS2006)
 
-The iNode represents the flat sliding
-surface and the jNode represents the slider. The element can have zero
-length or the appropriate bearing height. The bearing has unidirectional
-(2D) or coupled (3D) friction properties for the shear deformations, and
-force-deformation behaviors defined by UniaxialMaterials in the
-remaining two (2D) or four (3D) directions. To capture the uplift
-behavior of the bearing, the user-specified UniaxialMaterial in the
-axial direction is modified for no-tension behavior. By default (sDratio
-= 0.0) $P-\Delta$ moments are entirely transferred to the flat sliding
-surface (iNode). 
-It is important to note that rotations of the flat
-sliding surface (rotations at the iNode) affect the shear behavior of
-the bearing. To avoid the introduction of artificial viscous damping in
-the isolation system (sometimes referred to as "damping leakage in the
-isolation system"), the bearing element does not contribute to the
-Rayleigh damping by default. If the element has non-zero length, the
-local x-axis is determined from the nodal geometry unless the optional
-x-axis vector is specified in which case the nodal geometry is ignored
-and the user-defined orientation is utilized.
-
 <p>For a two-dimensional problem:</p>
 
 ```tcl
@@ -123,7 +103,8 @@ width="600" alt="FlatSliderBearingFig01.png" />
 
 <hr />
 
-<p>NOTE:</p>
+## Notes
+
 1. If the element has zero length and optional orientation vectors
   are not specified, the local element axes coincide with the global axes.
   Otherwise the local z-axis is defined by the cross product between the
@@ -143,6 +124,27 @@ width="600" alt="FlatSliderBearingFig01.png" />
   `localDisplacement`, `basicDisplacement` and `material $matNum matArg1 matArg2 ...` 
   Where `matNum` is the number associated with the material
   whose data is to be output.
+
+
+The iNode represents the flat sliding
+surface and the jNode represents the slider. The element can have zero
+length or the appropriate bearing height. The bearing has unidirectional
+(2D) or coupled (3D) friction properties for the shear deformations, and
+force-deformation behaviors defined by UniaxialMaterials in the
+remaining two (2D) or four (3D) directions. To capture the uplift
+behavior of the bearing, the user-specified UniaxialMaterial in the
+axial direction is modified for no-tension behavior. By default (sDratio
+= 0.0) $P-\Delta$ moments are entirely transferred to the flat sliding
+surface (iNode). 
+It is important to note that rotations of the flat
+sliding surface (rotations at the iNode) affect the shear behavior of
+the bearing. To avoid the introduction of artificial viscous damping in
+the isolation system (sometimes referred to as "damping leakage in the
+isolation system"), the bearing element does not contribute to the
+Rayleigh damping by default. If the element has non-zero length, the
+local $x$-axis is determined from the nodal geometry unless the optional
+$x$-axis vector is specified in which case the nodal geometry is ignored
+and the user-defined orientation is utilized.
 
 <hr />
 
@@ -200,6 +202,5 @@ title="wikilink">GroundMotions.zip</a> as a compressed file or download
 title="wikilink">AllSliderExamples.zip</a> as a compressed file.</p>
 
 <hr />
-<p>Code developed by: <span style="color:blue"> Andreas
-Schellenberg, University of California, Berkeley. </span></p>
+<p>Code developed by: <span style="color:blue"> Andreas Schellenberg, University of California, Berkeley. </span></p>
 

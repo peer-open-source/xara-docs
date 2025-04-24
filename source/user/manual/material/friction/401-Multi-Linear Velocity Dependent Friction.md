@@ -32,7 +32,7 @@ frictionModel VelDepMultiLinear $tag -vel $velocityPoints -frn $frictionPoints
 <figure>
 <img src="/_static/wiki/VelDepMultiLinear.png" title="VelDepMultiLinear.png"
 width="500" alt="VelDepMultiLinear.png" />
-<figcaption aria-hidden="true">VelDepMultiLinear.png</figcaption>
+<figcaption aria-hidden="true">A multi-linear friction response.</figcaption>
 </figure>
 <hr />
 

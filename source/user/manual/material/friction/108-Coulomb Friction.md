@@ -1,9 +1,7 @@
 # Coulomb Friction
 
-<p>This command is used to construct a <a
-href="http://en.wikipedia.org/wiki/Friction%22Coulomb">friction"</a>
-model object. Coulomb's Law of Friction states that kinetic friction is
-independent of the sliding velocity.</p>
+Coulomb's Law of Friction states that kinetic friction is
+independent of the sliding velocity.
 
 ```tcl
 frictionModel Coulomb $tag $mu
@@ -23,9 +21,8 @@ frictionModel Coulomb $tag $mu
 </tbody>
 </table>
 <figure>
-<img src="/_static/wiki/CoulombFriction.png" title="CoulombFriction.png"
-alt="CoulombFriction.png" />
-<figcaption aria-hidden="true">CoulombFriction.png</figcaption>
+<img src="/_static/wiki/CoulombFriction.png" alt="CoulombFriction.png" />
+<figcaption aria-hidden="true">Constant coefficient of friction.</figcaption>
 </figure>
 <hr />
 
@@ -35,19 +32,7 @@ alt="CoulombFriction.png" />
 frictionModel Coulomb 1 0.163
 ```
 
-<hr />
-<p>RELATED TO:</p>
-<ul>
-<li><a
-href="http://opensees.berkeley.edu/wiki/index.php/Flat_Slider_Bearing_Element">Flat
-Slider Bearing Element</a></li>
-<li><a
-href="http://opensees.berkeley.edu/wiki/index.php/Single_Friction_Pendulum_Bearing_Element">Single
-Friction Pendulum Bearing Element</a></li>
-<li><a
-href="http://opensees.berkeley.edu/wiki/index.php/Triple_Friction_Pendulum_Element">Triple
-Friction Pendulum Bearing Element</a></li>
-</ul>
+
 <hr />
 <p>Code Developed by: <span style="color:blue"> Andreas
 Schellenberg, University of California, Berkeley. </span></p>

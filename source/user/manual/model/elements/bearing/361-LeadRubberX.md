@@ -1,9 +1,6 @@
 # LeadRubberX (MK2012)
 
-This command is used to construct a *LeadRubberX* bearing element in three-dimensions. 
-The 3D continuum geometry of a lead rubber
-bearing is modeled as a 2-node, 12 DOF discrete element. 
-It extends the
+This is a 3D element which extends the
 formulation of <a href="ElastomericX" title="wikilink">ElastomericX</a>
 by including strength degradation in lead rubber bearing due to heating
 of the lead-core. 
@@ -203,10 +200,10 @@ Article</a></p>
 
 <h2 >Consideration of characteristics to include under extreme loading</h2>
 
-A recent paper by <a
-href="http://www.sciencedirect.com/science/article/pii/S002954931500254X">Kumar
+A recent paper by <a href="http://www.sciencedirect.com/science/article/pii/S002954931500254X">Kumar
 et. al (2015)</a> explains which of the five tags should be included in
-the analysis. Although the analysis presented in the paper is for the
+the analysis. 
+Although the analysis presented in the paper is for the
 base-isolated NPP, the conclusions are valid for design earthquake and
 maximum considered earthquake for regular building structures as well.
 Following are few thumb rules that can be followed: tag 1: Unless you
@@ -228,11 +225,10 @@ design basis earthquakes.
 This is element has been verified per ASME guidelines. A great deal
 of effort has gone into benchmarking performance of this user element
 using experimental data and verification using same element implement in
-LS-DYNA and ABAQUS. Users are referred to the <a
-href="https://www.sciencedirect.com/science/article/pii/S0141029617340324">Engineering
-Structures Paper</a> for complete details. Additional information is
-also presented in <a
-href="https://www.researchgate.net/publication/280841152_Verification_and_validation_of_models_of_elastomeric_seismic_isolation_bearings">SMiRT23
+LS-DYNA and ABAQUS. 
+Users are referred to the <a href="https://www.sciencedirect.com/science/article/pii/S0141029617340324">Engineering
+Structures Paper</a> for complete details. 
+Additional information is also presented in <a href="https://www.researchgate.net/publication/280841152_Verification_and_validation_of_models_of_elastomeric_seismic_isolation_bearings">SMiRT23
 Paper</a> and chapter 4 of the MCEER Report <a
 href="https://www.researchgate.net/publication/292607987_Seismic_isolation_of_nuclear_power_plants_using_elastomeric_bearings">MCEER
 15-0008</a>.
@@ -316,5 +312,4 @@ alt="LDRtest.tcl" /></p>
 <p>Code Developed by: <span style="color:blue"> Manish Kumar,
 University at Buffalo, SUNY </span></p>
 
-<p>Any bugs in this element can be reported to mkumar2 AT buffalo dot
-edu</p>
+<p>Any bugs in this element can be reported to mkumar2 AT buffalo dot edu</p>

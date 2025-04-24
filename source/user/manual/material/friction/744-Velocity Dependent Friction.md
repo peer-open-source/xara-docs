@@ -35,16 +35,12 @@ frictionModel VelDependent $tag $muSlow $muFast $transRate
 class="math display"><em>μ</em> = <em>μ</em><sub><em>f</em><em>a</em><em>s</em><em>t</em></sub> − (<em>μ</em><sub><em>f</em><em>a</em><em>s</em><em>t</em></sub>−<em>μ</em><sub><em>s</em><em>l</em><em>o</em><em>w</em></sub>) ⋅ <em>e</em><sup>−<em>t</em><em>r</em><em>a</em><em>n</em><em>s</em><em>R</em><em>a</em><em>t</em><em>e</em> ⋅ |<em>v</em>|</sup></span>
 
 <figure>
-<img src="/_static/wiki/VDependentFriction01.png" title="VDependentFriction01.png"
-alt="VDependentFriction01.png" />
-<figcaption aria-hidden="true">VDependentFriction01.png</figcaption>
+<img src="/_static/wiki/VDependentFriction01.png" alt="VDependentFriction01.png" />
+<figcaption aria-hidden="true">Velocity dependent friction model response.</figcaption>
 </figure>
 <figure>
-<img src="/_static/wiki/VDependentFrictionCurveFit.png"
-title="VDependentFrictionCurveFit.png"
-alt="VDependentFrictionCurveFit.png" />
-<figcaption
-aria-hidden="true">VDependentFrictionCurveFit.png</figcaption>
+<img src="/_static/wiki/VDependentFrictionCurveFit.png" alt="VDependentFrictionCurveFit.png" />
+<figcaption aria-hidden="true">VDependentFrictionCurveFit.png</figcaption>
 </figure>
 <hr />
 

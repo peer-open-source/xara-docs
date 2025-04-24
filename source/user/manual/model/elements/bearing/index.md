@@ -1,6 +1,64 @@
 # Bearings
 
-## Elastomer
+## Library
+
+### Elastomeric
+
+```{eval-rst}
+
+.. toctree::
+    :maxdepth: 1
+
+    3197-ElastomericBoucWenBearing
+    3198-ElastomericPlasticBearing
+    3196-ElastomericX
+```
+
+### Sliding
+
+```{eval-rst}
+.. toctree::
+    :maxdepth: 1
+    :caption: Single
+
+    3651-SingleFrictionPendulumBearing
+    3233-FPBearingPTV
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Triple
+
+    3714-TFP
+    3715-TripleFrictionPendulum
+    TripleFrictionPendulumX
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Other
+
+    3251-FlatSliderBearing
+    3568-RJ-Watson-EQS-Bearing
+
+..
+    3406-MultipleShearSpring
+```
+
+
+## Other 
+
+```{eval-rst}
+
+.. toctree::
+    :maxdepth: 1
+
+    320-HDR
+    361-LeadRubberX
+    3057-YamamotoBiaxialHDR
+    354-KikuchiBearing.
+```
+
+## 6-Spring Model
+
 
 The physical model of an elastomeric bearing is considered as a
 two-node, twelve degrees-of-freedom discrete element. 
@@ -8,19 +66,21 @@ The two nodes are connected by six springs that represent the mechanical behavio
 figures.
 
 <p><img src="/_static/wiki/Elastomeric3DModel.png"
-title="inline|Physical continuum model" height="300"
-alt="inline|Physical continuum model" /> <img
+title="Physical continuum model" height="300"
+alt="Physical continuum model" /> <img
 src="/_static/wiki/ElastomericDiscreteSpring.png"
-title="inline|Discrete spring representation" height="300"
-alt="inline|Discrete spring representation" /></p>
+title="Discrete spring representation" height="300"
+alt="Discrete spring representation" /></p>
 
 The general form of element force vector, $f_b$,
 and element stiffness matrix, $K_b$, for element
 representation considered above is given by equation below:
 
 $$
-f_b=\left[ \begin{matrix} Axial \\ Shear1 \\ Shear2 \\
-Torsion \\ Rotation1 \\ Rotation2 \\ \end{matrix} \right]
+f_b=\left[ \begin{matrix} 
+\mathrm{Axial} \\ \mathrm{Shear1} \\ \mathrm{Shear2} \\
+\mathrm{Torsion} \\ \mathrm{Rotation1} \\ \mathrm{Rotation2} \\ 
+\end{matrix} \right]
 $$
 $$
 K_b=\left[ \begin{matrix} Axial & 0 & 0 & 0 & 0 & 0 \\
@@ -58,59 +118,6 @@ properties, including stiffness and buckling load capacity, are derived
 using explicit consideration for geometric nonlinearity due to large
 displacement effects. 
 
-
-```{eval-rst}
-
-.. toctree::
-    :maxdepth: 1
-
-    3197-ElastomericBoucWenBearing
-    3198-ElastomericPlasticBearing
-    3196-ElastomericX
-```
-
-## Sliding
-
-```{eval-rst}
-.. toctree::
-    :maxdepth: 1
-    :caption: Single
-
-    3651-SingleFrictionPendulumBearing
-    3233-FPBearingPTV
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Triple
-
-    3714-TripleFrictionPendulumBearing
-    3715-TripleFrictionPendulum
-    TripleFrictionPendulumX
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Other
-
-    3251-FlatSliderBearing
-    3568-RJ-Watson-EQS-Bearing
-
-..
-    3406-MultipleShearSpring
-```
-
-
-## Other 
-
-```{eval-rst}
-
-.. toctree::
-    :maxdepth: 1
-
-    320-HDR
-    361-LeadRubberX
-    3057-YamamotoBiaxialHDR
-    354-KikuchiBearing.
-```
 
 
 ## References
