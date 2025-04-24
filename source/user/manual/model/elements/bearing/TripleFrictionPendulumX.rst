@@ -83,13 +83,13 @@ This command is used to construct the TripleFrictionPendulumX element [KimConsta
    :math:`8`: :math:`kip, ft, sec, 邃チ"
 
 
-Three main modifications in the TripleFrictionPendulumX element include: 
+Three main modifications in the *TripleFrictionPendulumX* element include: 
 
 1. computation of the displacement and velocity histories at each of the four sliding interfaces of the isolator, 
 2. computation of the temperature history at each sliding interface, and 
 3. accounting for the dependency of the coefficient of friction on the instantaneous temperature at each sliding interface.  
 
-The factorized friction model used in OpenSees element FPBearingPTV [KumarEtAl2015]_ is used to account for the effects of pressure, velocity, and temperature on the friction coefficients at each sliding surfaces, with the latter effect expanded to include more possible friction-temperature laws. 
+The factorized friction model used in :ref:`FPBearingPTV` [KumarEtAl2015]_ is used to account for the effects of pressure, velocity, and temperature on the friction coefficients at each sliding surfaces, with the latter effect expanded to include more possible friction-temperature laws. 
 In the FPBearingPTV element, the friction coefficient is given by equations (1) to (4) in which :math:`\mu_{ref}` is the reference high speed coefficient of friction at the initial time :math:`t = 0`, initial temperature :math:`T_{0} = 20邃チ and initial pressure :math:`p_{0}`, :math:`a` is velocity rate parameter :math:`(= 100sec/m)`, :math:`p` is the apparent pressure, and :math:`v` is the amplitude of the velocity.
 
 .. math::
@@ -102,7 +102,7 @@ In the FPBearingPTV element, the friction coefficient is given by equations (1) 
   
       k_{T}=0.79(0.7^{0.02T}+0.40)            \qquad (4)
 
-In the TripleFrictionPendulumX element, the temperature-dependency of the friction coefficient was expanded beyond the single case described by equation (4).  Specifically, two additional cases were added, described by equations (5) and (6).  Figure 1 depicts the coefficient :math:`k_T` as function of temperature for the three cases.  In the three cases, the value of coefficient :math:`k_T` drops from the unity at the normal temperature to 1/3, 1/2 or 2/3 at approximately the temperature of :math:`200邃チ.
+In the *TripleFrictionPendulumX* element, the temperature-dependency of the friction coefficient was expanded beyond the single case described by equation (4).  Specifically, two additional cases were added, described by equations (5) and (6).  Figure 1 depicts the coefficient :math:`k_T` as function of temperature for the three cases.  In the three cases, the value of coefficient :math:`k_T` drops from the unity at the normal temperature to 1/3, 1/2 or 2/3 at approximately the temperature of :math:`200邃チ.
 
 .. math::
 
@@ -116,9 +116,12 @@ In the TripleFrictionPendulumX element, the temperature-dependency of the fricti
    :figclass: align-center
    :width: 700
 
-   **Figure 1. Friction Coefficient-Temperature Relationships in TripleFrictionPendulumX element**
+   Figure 1. Friction Coefficient-Temperature Relationships in *TripleFrictionPendulumX* element
 
-The existing element TripleFrictionPendulumX-version 1 is based on a theory in which the concave plates of the isolator are assumed to be infinite in thickness.  The new version (version 2.0) of the TripleFrictionPendulumX element provides an option for specifying finite thickness (the thicknesses may be the same or may be different) for both concave plates, which are presumed to be bounded by an insulating medium (for example, the case of a steel plate on a concrete foundation).  Finite thickness, and particularly small thickness over an insulated medium, causes an increase in temperature [KimConstantinou2024]_.  Figure 2 illustrates the two options of heat conduction theories for temperature calculations at the sliding surfaces and over the depth of the concave plates.  
+The existing element *TripleFrictionPendulumX*-version 1 is based on a theory in which the concave plates of the isolator are assumed to be infinite in thickness.  
+The new version (version 2.0) of the TripleFrictionPendulumX element provides an option for specifying finite thickness (the thicknesses may be the same or may be different) for both concave plates, which are presumed to be bounded by an insulating medium (for example, the case of a steel plate on a concrete foundation).  
+Finite thickness, and particularly small thickness over an insulated medium, causes an increase in temperature [KimConstantinou2024]_.  
+Figure 2 illustrates the two options of heat conduction theories for temperature calculations at the sliding surfaces and over the depth of the concave plates.  
 
 .. figure:: figures/TripleFrictionPendulumX/FIGURE2.jpg
    :align: center
@@ -142,30 +145,26 @@ For more information about the element formulation, please refer to the referenc
 Recorders
 ---------
 
-Typical recorders for two-node element are available in the TripleFrictionPendulumX element.
+Typical recorders for two-node element are available in the *TripleFrictionPendulumX* element.
 
 .. csv-table:: 
-      :header: "Recorder", "Description"
-      :widths: 5, 5
+   :header: "Recorder", "Description"
+   :widths: 5, 5
 
-      globalForce, global forces
-      localForce, local forces
-      basicForce, basic forces
-      basicDisplacement, basic displacements
+   globalForce, global forces
+   localForce, local forces
+   basicForce, basic forces
+   basicDisplacement, basic displacements
 
 
 Subscript "i" of the response quantities in the following recorders refer to the numbering of the sliding interfaces, starting from bottom to top sliding interfaces. 
 
 .. csv-table:: 
-      :header: "Recorder", "Description"
-      :widths: 5, 20
+   :header: "Recorder", "Description"
+   :widths: 5, 20
 
-      compDisplacement, "Displacements (:math:`u_i`) and velocities (:math:`v_i`) at each sliding surface in the x and y directions :math:`(u_{2x}+u_{3x})/2`, :math:`u_{1x},u_{4x}`,  :math:`(u_{2y}+u_{3y})/2`, :math:`u_{1y}`, :math:`u_{4y}`, :math:`(v_{2x}+v_{3x})/2`, :math:`v_{1x}`, :math:`v_{4x}`,  :math:`(v_{2y}+v_{3y})/2`, :math:`v_{1y}`, :math:`v_{4y}` in accordance with Approach 1 (See Section 3 in [KimConstantinou2022]_.    
-
-      *Example: recorder Element<-file $fileName> -time<-ele ($ele1 $ele2窶ｦ)>compDisplacement*"
-      Parameters, "Temperatures at surface (:math:`T_{2,3}`, :math:`T_1`, :math:`T_4`), Temperatures at depth :math:`t_1`, :math:`t_4` (:math:`T_{1, t1}`, :math:`T_{4, t4}`), coefficients of friction (:math:`\mu_{2,3}`, :math:`\mu_1`, :math:`\mu_4`), heat fluxes (:math:`HeatFlux_{2,3}`, :math:`HeatFlux_{1}`, :math:`HeatFlux_4`), pressure dependency factors (:math:`k_{p2,3}`, :math:`k_{p1}`, :math:`k_{p4}`), temperature dependency factors (:math:`k_{T2,3}`, :math:`k_{T1}`, :math:`k_{T4}`), and velocity dependency factors (:math:`k_{v2,3}`, :math:`k_{v1}`, :math:`k_{v4}`).      
-
-      *Example: recorder Element<-file $fileName> -time<-ele ($ele1 $ele2窶ｦ)>Parameters*"
+   compDisplacement, "Displacements (:math:`u_i`) and velocities (:math:`v_i`) at each sliding surface in the x and y directions :math:`(u_{2x}+u_{3x})/2`, :math:`u_{1x},u_{4x}`,  :math:`(u_{2y}+u_{3y})/2`, :math:`u_{1y}`, :math:`u_{4y}`, :math:`(v_{2x}+v_{3x})/2`, :math:`v_{1x}`, :math:`v_{4x}`,  :math:`(v_{2y}+v_{3y})/2`, :math:`v_{1y}`, :math:`v_{4y}` in accordance with Approach 1 (See Section 3 in [KimConstantinou2022]_."
+   Parameters, "Temperatures at surface (:math:`T_{2,3}`, :math:`T_1`, :math:`T_4`), Temperatures at depth :math:`t_1`, :math:`t_4` (:math:`T_{1, t1}`, :math:`T_{4, t4}`), coefficients of friction (:math:`\mu_{2,3}`, :math:`\mu_1`, :math:`\mu_4`), heat fluxes (:math:`HeatFlux_{2,3}`, :math:`HeatFlux_{1}`, :math:`HeatFlux_4`), pressure dependency factors (:math:`k_{p2,3}`, :math:`k_{p1}`, :math:`k_{p4}`), temperature dependency factors (:math:`k_{T2,3}`, :math:`k_{T1}`, :math:`k_{T4}`), and velocity dependency factors (:math:`k_{v2,3}`, :math:`k_{v1}`, :math:`k_{v4}`)."
 
 
 Examples
@@ -351,7 +350,7 @@ The following code computes results for the triple friction pendulum isolator 窶
       numberer Plain
       integrator Newmark 0.5 0.25
       analysis Transient
-      
+
       # set some variables
       set tFinal [expr 50]
       set tCurrent [getTime]

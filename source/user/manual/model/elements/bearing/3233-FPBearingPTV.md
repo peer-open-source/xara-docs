@@ -1,3 +1,7 @@
+```{eval-rst}
+.. _FPBearingPTV:
+```
+
 # FPBearingPTV (MK2014)
 
 The *FPBearingPTV* element represents a single Friction Pendulum bearing, which is capable of accounting for the changes in the
@@ -93,12 +97,12 @@ axis</p></td>
 </tr>
 <tr class="odd">
 <td><code class="parameter-table-variable">theMaterialD</code></td>
-<td><p>Tag for the uniaxial material for rocking about local Z
-axis</p></td>
+<td>Tag for the uniaxial material for rocking about local Z
+axis</td>
 </tr>
 <tr class="even">
 <td><p><code class="parameter-table-variable">x1 x2 x3</code></p></td>
-<td><p>Vector components to define local X axis</p></td>
+<td>Vector components to define local X axis</td>
 </tr>
 <tr class="odd">
 <td><p><code class="parameter-table-variable">y1 y2 y3</code></p></td>
@@ -187,29 +191,29 @@ where $k_v$, $k_p$ and $k_t$ and are the factors to account for the effects of
 sliding velocity, axial pressure and temperature at the sliding surface,
 respectively, $v$,$p$ and $T$ are velocity of sliding, axial pressure and
 temperature at the sliding surface, respectively, controls the shape of
-the $k_v$ vs. v curve, and p0 is the reference axial pressure.
+the $k_v$ vs. $v$ curve, and $p_0$ is the reference axial pressure.
 
-The reference coefficient of friction, Uref , is defined as the
-coefficient of friction at a reference axial pressure on the bearing p0,
-measured at 20˚C at a high velocity of sliding (e.g., 1000 mm/s). The
-coefficient of friction, adjusted for the effects of sliding velocity,
-axial pressure
+The reference coefficient of friction, $\mu_{\mathrm{ref}}$ , is defined as the
+coefficient of friction at a reference axial pressure on the bearing $p_0$,
+measured at 20˚C at a high velocity of sliding (e.g., 1000 mm/s).
+The coefficient of friction, adjusted for the effects of sliding velocity,
+axial pressure and temperature, $\mu(p,T,v)$, is obtained as follows.
 
-and temperature, $U(p,T,v)$, is obtained as follows.
+$$\mu (p,T,v) = \mu_{\mathrm{ref}}\, k_p k_t k_v \qquad (4)$$
 
-$$U(p,T,v) = U_{ref}(kp,kt,kv) \qquad (4)$$
-
-<p>where all parameters were defined previously. More details on this
+where all parameters were defined previously. More details on this
 definition of the coefficient of friction are presented in Kumar et al.
-(2015a, 2015b).</p>
+(2015a, 2015b).
 
-<p>OUTPUT</p>
-<p>The global and local forces, displacements, velocities and
+## Output
+
+The global and local forces, displacements, velocities and
 accelerations can be output through node and element recorders. In
 addition, temperature, three friction factors ( in sequence), and
 adjusted coefficient of friction can be output using the element
-recorder with tags Temperature, FrictionFactors, MuAdjusted,
-respectively. Examples are given below.</p>
+recorder with tags `Temperature`, `FrictionFactors`, `MuAdjusted`,
+respectively. 
+Examples are given below.
 
 ```tcl
 recorder Element -file Results/Temperature.out -time -ele 1 Temperature;

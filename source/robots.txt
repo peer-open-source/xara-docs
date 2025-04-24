@@ -9,6 +9,11 @@ Allow: /sitemap.xml
 Allow: /cite.html
 Allow: /robots.txt
 Allow: /_images/Q9.svg
+Allow: /_images/directors.png
+Allow: /_images/vecxz.png
+Allow: /_images/ExactFrame_Fig1.png
+Allow: /_images/w8x28.png
+Allow: /_images/section-axes.png
 Allow: /user/manual/model/model_class.html
 Allow: /user/manual/model/nodes/node.html
 Allow: /user/manual/model/element.html
@@ -36,6 +41,7 @@ Allow: /user/manual/analysis/system.html
 Allow: /user/manual/analysis/analysis.html
 Allow: /user/manual/analysis/integrator.html
 Allow: /user/manual/analysis/integrator/ArcLength.html
+Allow: /user/manual/modules/units.html
 Disallow: /
 
 

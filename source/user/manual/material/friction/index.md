@@ -1,3 +1,7 @@
+```{eval-rst}
+.. _Friction:
+```
+
 # Friction
 
 The `frictionModel` command is used to construct a friction model
