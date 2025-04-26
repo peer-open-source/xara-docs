@@ -3,6 +3,13 @@
 ``ForceFrame``
 ^^^^^^^^^^^^^^
 
+.. figure:: ForceFrame.png
+	:align: center
+	:figclass: align-center
+	:scale: 55
+
+	Fig. 1: Representation of the OpenSees *forceBeamColumn* element rendered with `veux <https://veux.io>`__.
+
 Two-node force formulation for 3D frames. [1]_ [2]_.
 
 .. tabs::
