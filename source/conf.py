@@ -98,7 +98,8 @@ extensions = [
     "myst_parser"
 ]
 myst_enable_extensions = [
-    "dollarmath"
+    "dollarmath",
+    "attrs_inline"
 ]
 
 bibtex_bibfiles = ["references.bib"]

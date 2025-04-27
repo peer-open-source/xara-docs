@@ -6,7 +6,7 @@
 .. figure:: ForceFrame.png
 	:align: center
 	:figclass: align-center
-	:scale: 55
+	:width: 60%
 
 	Fig. 1: Representation of the OpenSees *forceBeamColumn* element rendered with `veux <https://veux.io>`__.
 
