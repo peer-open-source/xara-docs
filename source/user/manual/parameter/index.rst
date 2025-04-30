@@ -1,6 +1,9 @@
 Parameters
 ^^^^^^^^^^
 
+OpenSees provides a flexible parameter system for updating model properties during or between analyses. 
+Parameters are identified by tags and can be linked to material, element, or section attributes—enabling sensitivity studies, calibration routines, or simulation of gradual changes such as aging or damage. These parameters can be updated dynamically within analysis loops using commands like updateParameter, allowing time-dependent behavior or repeated simulations with varying properties.
+
 .. toctree::
    :maxdepth: 1
 
