@@ -48,16 +48,30 @@ A *BasicQuad* element uses the standard Lagrange isoparametric formulation.
          $b1 $b2, |float|, constant body forces defined in the isoparametric domain (optional: default=0.0)
 
 
-The valid :ref:`eleResponse` queries to this element are ``"forces"``, ``"stresses"``, and ``"material $matNum matArg1 matArg2 ..."`` where ``$matNum`` refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
-
-Consistent nodal loads are computed from the pressure and body forces.
-
 
 .. figure:: Q9.svg
    :align: center
    :figclass: align-center
 
    Quad element node numbering
+
+
+Output
+------
+
+The valid :ref:`eleResponse` queries to this element are ``"forces"``, ``"stresses"``, and ``"material $matNum matArg1 matArg2 ..."`` where ``matNum`` refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
+
+Furthermore, stresses can be extrapolated from quadrature points to nodes using the ``"stressAtNodes"`` response. 
+The stresses are computed at the four gauss points of the element and then extrapolated to the nodes using the inverse of 
+the interpolation matrix. For a four-node quadrilateral this is given by:
+
+.. math::
+   \left[\begin{array}{cccc}
+   1+\frac{1}{2} \sqrt{3} & -\frac{1}{2} & 1-\frac{1}{2} \sqrt{3} & -\frac{1}{2} \\
+   -\frac{1}{2} & 1+\frac{1}{2} \sqrt{3} & -\frac{1}{2} & 1-\frac{1}{2} \sqrt{3} \\
+   1-\frac{1}{2} \sqrt{3} & -\frac{1}{2} & 1+\frac{1}{2} \sqrt{3} & -\frac{1}{2} \\
+   -\frac{1}{2} & 1-\frac{1}{2} \sqrt{3} & -\frac{1}{2} & 1+\frac{1}{2} \sqrt{3}
+   \end{array}\right]
 
 
 Example
