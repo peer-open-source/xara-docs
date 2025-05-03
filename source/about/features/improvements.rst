@@ -44,16 +44,17 @@ Quality of Life
 * Improved error messages and tracebacks. Error messages have been extensively reworked to allow for colorful and informative error tracebacks. 
   For example, instead of:
 
-  ... code-block::
-
-      Bad
+  .. figure:: figures/upstream-output.png
+     :width: 100%
+     :align: center
 
   one now has:
 
-  ... code-block::
+  .. figure:: figures/xara-output.png
+     :width: 100%
+     :align: center
 
-      Better
-
-* Improved log messages (TODO: Example 5)
+..
+  * Improved log messages (TODO: Example 5)
 
 

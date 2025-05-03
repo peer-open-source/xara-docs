@@ -7,3 +7,4 @@ The following features of OpenSeesPy are currently supported, but are highly dis
 
 * Pattern subcommands (:meth:`Model.load`, :meth:`Model.eleLoad`) without an explicit ``pattern`` argument.
 
+* All thermal elements, materials and elements are deprecated. The implementation introduced unnecessary code duplication. 
