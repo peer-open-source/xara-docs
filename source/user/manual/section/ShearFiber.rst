@@ -65,3 +65,60 @@ Valid :ref:`setParameter` targets are
 
 - ``"warp", fiber, field`` where ``fiber`` is an |integer| identifying a fiber and ``field`` is an |integer| identifying the warping field.
 
+
+Examples 
+--------
+
+The following example demonstrates how to create a ``ShearFiber`` section representing a circle.
+
+.. tabs::
+
+   .. tab:: Python
+
+      .. code-block:: Python 
+
+         import xara
+         from math import pi
+         radius = 0.5
+         center = (0.0, 0.0)
+         area   = pi * radius**2
+
+         model = xara.Model(ndm=3, ndf=6)
+
+         model.material("ElasticIsotropic", 1, E=200e9, nu=0.3)
+
+         model.section("ShearFiber", 1)
+         model.fiber(center, area, material=1, section=1)
+
+   .. tab:: Tcl
+
+      .. code-block:: Tcl
+
+         set radius 0.5
+         set center 0.0 0.0
+         set area   [expr {pi * $radius**2}]
+
+         model create -ndm 3 -ndf 6
+
+         model material ElasticIsotropic 1 E 200e9 nu 0.3
+
+         model section ShearFiber 1
+         model fiber $center $area material 1 section 1
+
+
+The following example uses the ``xsection`` library to create a ``ShearFiber`` section representing an AISC *W8x28* section.
+
+.. code-block:: Python
+
+   import xara
+   from xsection.library import from_aisc
+
+   model = xara.Model(ndm=3, ndf=6)
+
+   model.material("ElasticIsotropic", 1, E=200e9, nu=0.3)
+
+   shape = from_aisc("W8x28", units)
+
+   model.section("ShearFiber", 1)
+   for fiber in shape.fibers:
+       model.fiber(**fiber, material=1, section=1)

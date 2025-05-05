@@ -9,6 +9,8 @@ This command is used to construct a sparse system of equations which uses the `U
 By default the ``LVALUE`` factor is 10. 
 You only need to experiment with this if you get error messages back about LVALUE being too small.
 
+The number of threads used by this system can be altered by setting the `OMP_NUM_THREADS` environment variable.
+
 Example 
 -------
 

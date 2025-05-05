@@ -1,13 +1,34 @@
 ShellFiber 
 ^^^^^^^^^^
 
-.. py:method:: Model.section("ShellFiber", tag, *args)
-   :no-index:
+.. tabs::
 
-   Create a fiber-discretized shell cross-section that integrates a material response through the shell thickness.
+   .. tab:: Python
 
-   :param tag: unique section tag
-   :type tag: integer 
+      .. py:method:: Model.section("LayeredShell", tag, *args)
+         :no-index:
+
+         Create a fiber-discretized shell cross-section that integrates a material response through the shell thickness.
+
+         :param tag: unique section tag
+         :type tag: integer 
+
+   .. tab:: Tcl 
+
+      .. function:: section LayeredShell tag? nLayers? mat1? h1? ... matn? hn?
+         :no-index:
+
+         Create a fiber-discretized shell cross-section that integrates a material response through the shell thickness.
+
+         :param tag: unique section tag
+         :type tag: integer 
+         :param nLayers: number of layers
+         :type nLayers: integer
+         :param mat1: material tag for layer 1
+         :type mat1: integer
+         :param h1: thickness of layer 1
+         :type h1: float
+
 
 
 Formulation
@@ -137,3 +158,10 @@ constitutive response parameters.
    & =\left[\int_{-\frac{h}{2}}^{\frac{h}{2}}-z \mathbb{C}_{\alpha 3 \delta \gamma} \mathrm{~d} z\right] \cdot \kappa_{\delta \gamma}+\left[\int_{-\frac{h}{2}}^{\frac{h}{2}} \mathbb{C}_{\alpha 3 \delta \gamma} \mathrm{~d} z\right] \cdot \bar{\epsilon}_{\delta \gamma}+\left[\int_{-\frac{h}{2}}^{\frac{h}{2}} \mathbb{C}_{\alpha 3 \delta 3} \mathrm{~d} z\right] \cdot \gamma_\delta
    \end{aligned}
 
+References
+==========
+
+* Lu X, Lu XZ, Guan H, Ye LP, Collapse simulation of reinforced concrete high-rise building induced by extreme earthquakes, 
+  Earthquake Engineering & Structural Dynamics, 2013, 42(5): 705-723
+
+Implementation by *Yuli Huang* and *Xinzheng Lu*
