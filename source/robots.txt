@@ -40,6 +40,7 @@ Allow: /user/manual/meshing/index.html
 Allow: /user/manual/analysis/index.html
 Allow: /user/manual/analysis/system.html
 Allow: /user/manual/analysis/system/BandGeneral.html
+Allow: /user/manual/analysis/system/Umfpack.html
 Allow: /user/manual/analysis/analysis.html
 Allow: /user/manual/analysis/integrator.html
 Allow: /user/manual/analysis/integrator/ArcLength.html

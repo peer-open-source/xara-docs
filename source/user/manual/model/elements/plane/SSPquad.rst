@@ -24,11 +24,11 @@ The formulation for this element is identical to the solid phase portion of the 
    $b1 $b2, |float|, constant body forces in global :math:`x`- and :math:`y`-directions respectively (optional: default = 0.0)
 
 
-.. figure:: quad.png
-	:align: center
-	:figclass: align-center
+.. figure:: Q4.svg
+   :align: center
+   :figclass: align-center
 
-	SSPquad element node numbering
+   Numbering of nodes for the SSPquad element
 
 
 Valid :ref:`eleResponse` queries to the SSPquad element correspond to those for the nDMaterial object assigned to the element (e.g., ``"stress"``, ``"strain"``). 

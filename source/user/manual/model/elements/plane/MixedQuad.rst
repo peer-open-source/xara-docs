@@ -49,6 +49,7 @@ This command is used to construct a four-node quadrilateral element, which uses 
 
    MixedQuad element node numbering
 
+Alternative element names that map to this element include ``"bbarQuad"`` and ``"constantPressureVolumeQuad"``.
 
 The valid :ref:`eleResponse` queries to this element are 
 
@@ -59,8 +60,11 @@ The valid :ref:`eleResponse` queries to this element are
 Theory 
 ------
 
-With four nodes, the element is equivalent to the Q1/P0 formulation. 
+With four nodes, the element is equivalent to the *Q1/P0* formulation (Simo, Taylor, Pister 1984), also referred to as the *mean dilation formulation* of Nagtegaal, Parks and Rice (1974). 
+
 This formulation is suitable for nearly-incompressible response, but is not suitable for bending dominated problems.
+
+See also FEAP `elmt11`
 
 Code Developed by: **Edward Love, Sandia National Laboratories**
 
