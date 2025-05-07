@@ -5,8 +5,7 @@ parameter
 
 .. py:method:: Model.parameter(tag, <specific parameter args>)
 
-   In DDM-based FE response sensitivity analysis, the sensitivity parameters can be material,
-   geometry or discrete loading parameters. 
+   define a paramemter in the model.
 
    ==============================   ===========================================================================
    ``tag`` |int|                    integer tag identifying the parameter.
@@ -16,7 +15,7 @@ parameter
 
 .. note::
 
-   Each parameter must be unique in the FE domain, and all parameter tags must be numbered sequentially starting from 1.
+   Each parameter must be unique, and all parameter tags must be numbered sequentially starting from 1.
 
 
 
@@ -37,6 +36,5 @@ Examples
 #. To parameterize E for element 4 with material 1 (no section need to be defined), the <specific object arguments> string simplifies as::
 
      model.parameter(1, 'element', 4, 'material', 1, 'E')
-
 
 
