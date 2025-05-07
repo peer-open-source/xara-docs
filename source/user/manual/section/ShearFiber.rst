@@ -111,14 +111,16 @@ The following example uses the ``xsection`` library to create a ``ShearFiber`` s
 .. code-block:: Python
 
    import xara
+   from xara.units import english
    from xsection.library import from_aisc
 
    model = xara.Model(ndm=3, ndf=6)
 
    model.material("ElasticIsotropic", 1, E=200e9, nu=0.3)
 
-   shape = from_aisc("W8x28", units)
+   shape = from_aisc("W8x28", units=english)
 
    model.section("ShearFiber", 1)
    for fiber in shape.fibers:
        model.fiber(**fiber, material=1, section=1)
+
