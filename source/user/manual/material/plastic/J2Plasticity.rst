@@ -9,7 +9,7 @@ J2 Plasticity
 
    .. tab:: Python
       
-      .. py:method:: Model.nDMaterial("J2Plasticity", tag, K, G, Fy, Fs, Hsat, Hiso)
+      .. py:method:: Model.nDMaterial("J2", tag, K, G, Fy, Fs, Hsat, Hiso)
          :no-index:
 
          :param |integer| tag: unique tag identifying material
@@ -42,14 +42,25 @@ Notes
 Parameters
 """"""""""
 
-* :math:`K` - Bulk modulus
-* :math:`G` - Shear modulus
-* :math:`E` - Young's modulus
+* ``K`` - Bulk modulus :math:`\kappa`
+* ``G`` - Shear modulus :math:`\mu`
+* ``E`` - Young's modulus :math:`E`
+
   .. note::
 
      Updates to :math:`E` are performed at constant Poisson ratio :math:`\nu`.
 
-* :math:`Fy` - Initial yield stress
+* ``Fy`` - Initial yield stress :math:`F_y`
+
+Examples
+--------
+
+
+.. code-block:: Tcl
+
+   nDMaterial J2 [incr i] -E $E -G $G $Fy $Fs $Hsat $Hiso $eta
+   nDMaterial J2 [incr i] -E $E -G $G $Fy $Fs $Hsat $Hiso $eta -density $density
+   nDMaterial J2 [incr i] -E $E -nu $nu $Fy $Fs $Hsat $Hiso $eta -density $density
 
 Theory 
 ------
