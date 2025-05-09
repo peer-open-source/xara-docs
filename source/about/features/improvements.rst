@@ -3,7 +3,7 @@ Additions
 
 Unlike other Python packages which merely wrap the broken OpenSeesPy package, *xara* employs a completely new interface layer that is implemented in C++.
 
-- improved `printA`:
+- Improved :ref:`<printA>` for obtaining structural matrices:
 
   - does not require `FullGen` solver; now all one needs
     to do is call `model.getTangent()`. This is possible due to the
@@ -12,15 +12,15 @@ Unlike other Python packages which merely wrap the broken OpenSeesPy package, *x
   - `-mck` options
 
 
-- improved `print` command
+- Improved `print` command
 
   - new `-registry` option.
   - more reliable JSON printing
   - includes `MP_Constraint` information
 
-- add `-det` option to static integrators:
+- Add `-det` option to static integrators:
 
-  - ArcLength, ...
+  - :ref:`ArcLength`
 
 - add `-det` capability to solvers:
 

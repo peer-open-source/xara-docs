@@ -14,6 +14,8 @@ Allow: /_images/vecxz.png
 Allow: /_images/ExactFrame_Fig1.png
 Allow: /_images/w8x28.png
 Allow: /_images/section-axes.png
+Allow: /about/features/improvements.html
+
 Allow: /user/manual/model/model_class.html
 Allow: /user/manual/model/nodes/node.html
 Allow: /user/manual/model/element.html
