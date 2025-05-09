@@ -3,7 +3,7 @@ Additions
 
 Unlike other Python packages which merely wrap the broken OpenSeesPy package, *xara* employs a completely new interface layer that is implemented in C++.
 
-- Improved :ref:`<printA>` for obtaining structural matrices:
+- Improved :ref:`printA <printA>` for obtaining structural matrices:
 
   - does not require `FullGen` solver; now all one needs
     to do is call `model.getTangent()`. This is possible due to the
@@ -20,11 +20,11 @@ Unlike other Python packages which merely wrap the broken OpenSeesPy package, *x
 
 - Add `-det` option to static integrators:
 
-  - :ref:`ArcLength`
+  - :ref:`ArcLength <ArcLengthControl>`
 
 - add `-det` capability to solvers:
 
-  - `FullGenLapack`, `Umfpack`, `BandGenLapack`
+  - `FullGenLapack`, :ref:`Umfpack`, `BandGenLapack`
 
 - Verbosity control
 
