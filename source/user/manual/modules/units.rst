@@ -43,7 +43,7 @@ Length
    cm           , centimeter   ,  Centimeter
    m            , meter        ,  Meter
    km           , kilometer    ,  Kilometer
-   inch                        , 
+   inch         ,              , 
    ft           , foot         ,  International foot
    yd           , yard         ,  International yard
    mi           , mile         ,  Mile
@@ -70,7 +70,7 @@ Mass
    lbm          , lbm          ,  International avoirdupois pound
    gm           , gram         , 
    kg           , kilogram     ,  Kilogram
-   tonne                       ,  Metric tonne
+   tonne        ,              ,  Metric tonne
    oz           , ounce        ,  International avoirdupois ounce
 
 
@@ -80,16 +80,16 @@ Pressure
 .. csv-table::
 
    Pa           , pascal       ,  Pascal
-   torr                        , 
+   torr         ,              , 
    kPa          , kilopascal   , 
-   bar                         , 
+   bar          ,              , 
    atm          , atmosphere   ,  Standard atmosphere
    MPa          , megapascal   , 
    GPa          , gigapascal   , 
-   psi                         ,  Pound-square-inch
-   ksi                         , 
-   pci                         , 
-   pcf                         ,  Pounds per cubic foot
+   psi          ,              ,  Pound-square-inch
+   ksi          ,              , 
+   pci          ,              , 
+   pcf          ,              ,  Pounds per cubic foot
 
 
 
@@ -159,6 +159,6 @@ Angular Velocity
 
 .. csv-table::
 
-   rpm          , revpm        , 6.283185307         # Revolution per minute
-   radps        ,              , 1.0                 # Radian per second
+   rpm          , revpm        ,  Revolution per minute
+   radps        ,              ,  Radian per second
 
