@@ -1,6 +1,8 @@
 Sphinx>=8.0
 #sphinx_rtd_theme>=3.0.0
 #pydata-sphinx-theme
+opensees
+xara
 sphinx-book-theme
 sphinx-tabs
 sphinx-sitemap
