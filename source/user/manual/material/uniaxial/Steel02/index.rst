@@ -15,8 +15,8 @@ Steel02
          Add a *Steel02* material to *model* identified by *tag*.
 
          :param int tag: integer tag identifying material
-         :param float Fy: yield stress, :math:`F_y`
-         :param float E: initial elastic tangent, :math:`E`
+         :param float Fy: yield stress, :math:`F_y` [1]_
+         :param float E: initial elastic tangent, :math:`E` [1]_
          :param float b: strain-hardening ratio, :math:`b`
          :param float R0: parameter to control the transition from elastic to plastic branches, :math:`R_0`
          :param float cR1: parameter to control the transition from elastic to plastic branches, :math:`cR1`
@@ -47,6 +47,7 @@ Steel02
          a4, |float|, isotropic hardening parameter. (optional: default = 1.0). see note.
          sigInit, |float|, Initial Stress Value (optional: default = 0.0) 
 
+.. [1] These arguments are supported by the :ref:`parameter <parameter>` commands.
 
 
 The hardening formulation was developed by [FilippouEtAl1983]_.

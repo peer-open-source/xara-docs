@@ -3,7 +3,7 @@
 Steel01
 ^^^^^^^
 
-This model implements a uniaxial bilinear steel material object with kinematic hardening and optional isotropic hardening described by a non-linear evolution equation (REF: Fedeas).
+This model implements a uniaxial bilinear steel material object with kinematic hardening and optional isotropic hardening described by a non-linear evolution equation.
 
 .. tabs::
 
@@ -13,13 +13,13 @@ This model implements a uniaxial bilinear steel material object with kinematic h
          :no-index:
 
          :param int tag: integer tag identifying material
-         :param |float| Fy: yield strength
-         :param |float| E: initial elastic tangent
+         :param |float| Fy: yield strength [1]_
+         :param |float| E: initial elastic tangent [1]_
          :param |float| b: strain-hardening ratio (ratio between post-yield tangent and initial elastic tangent)
-         :param |float| a1: optional: isotropic hardening parameter: increase of compression yield envelope as proportion of yield strength after a plastic strain of ``a2*(fy/E0)``.
-         :param |float| a2: optional: isotropic hardening parameter (see explanation under ``a1``)
-         :param |float| a3: optional: isotropic hardening parameter: increase of tension yield envelope as proportion of yield strength after a plastic strain of ``a4*(Fy/E0)``
-         :param float a4: optional: isotropic hardening parameter (see explanation under ``a3``)
+         :param |float| a1: optional: isotropic hardening parameter :math:`a_1`; increase of compression yield envelope as proportion of yield strength after a plastic strain of :math:`a_2 F_y/E`.
+         :param |float| a2: optional: isotropic hardening parameter :math:`a_2` (see explanation under ``a1``)
+         :param |float| a3: optional: isotropic hardening parameter :math:`a_3`; increase of tension yield envelope as proportion of yield strength after a plastic strain of :math:`a_4 F_y/E`
+         :param |float| a4: optional: isotropic hardening parameter (see explanation under ``a3``)
 
    .. tab:: Tcl
 
@@ -38,6 +38,8 @@ This model implements a uniaxial bilinear steel material object with kinematic h
          $a3, |float|, optional: isotropic hardening parameter: increase of tension yield envelope as proportion of yield strength after a plastic strain of $a4*($Fy/E0)
          $a4, |float|, optional: isotropic hardening parameter (see explanation under ``a3``)
 
+
+.. [1] This argument is supported by the :ref:`parameter <parameter>` commands.
 
 Notes 
 -----
@@ -77,4 +79,3 @@ The following example defines a *Steel01* material with the tag **1**, a yield s
          model.uniaxialMaterial("Steel01", 1, 60.0, 29e3)
 
 Code Developed by: |fcf|, |mhs|, |cmp|
-

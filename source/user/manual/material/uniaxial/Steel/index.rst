@@ -9,8 +9,8 @@ Steel
             :no-index:
     
             :param |integer| tag: unique tag identifying material
-            :param |float| E: elastic modulus
-            :param |float| Y: yield stress
+            :param |float| E: elastic modulus, :math:`E`
+            :param |float| Fy: yield stress, :math:`F_y`
             :param |float| Hiso: isotropic hardening modulus
             :param |float| Hkin: kinematic hardening modulus
             :param |float| eta: optional parameter 

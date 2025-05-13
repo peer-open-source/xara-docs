@@ -3,13 +3,13 @@
 Concrete02
 ^^^^^^^^^^
 
-*Concrete02* is a uniaxial concrete material with linear tension softening as described in [Yassin1994]_
+*Concrete02* is a uniaxial concrete material with linear tension softening as described by [Yassin1994]_
 
 .. tabs::
 
    .. tab:: Python
 
-      .. py:method:: Model.uniaxialMaterial("Concrete02", tag, fpc, epsc0, fpcu, epsU, lambda, ft, Ets)
+      .. py:method:: Model.uniaxialMaterial("Concrete02", tag, Fc, epsc0, fpcu, epsU, lambda, ft, Ets)
          :no-index:
 
    .. tab:: Tcl
@@ -31,17 +31,17 @@ Concrete02
    $ets, |float|, tension softening stiffness (absolute value) (slope of the linear tension softening branch) 
 
 .. note::
-  * Compressive concrete parameters should be input as negative values (if input as positive, they will be converted to negative internally).
-  * The initial slope for this model is (``2*fpc/epsc0``)
+   
+   * The initial slope for this model is :math:`E = 2 F_c/\epsilon_{c0}`.
 
-Typical Hysteretic Stress-Strain Relation for material 
+
 
 .. figure:: figures/Concrete02.jpg
    :align: center
    :figclass: align-center
 
 
-Comparison with Concrete01
+Comparison with :ref:`Concrete01`
 
 .. figure:: figures/Concrete02Hysteretic.jpg
    :align: center
@@ -60,7 +60,7 @@ compression envelope is simply the piecewise union of an initially parabolic res
    \end{aligned}\right.
 
 where $K$ (a scaling for strength) and $Z$ (strain softening slope) are model parameters. 
-A hysteretic loading-reloading algorithm for this curve was proposed by \citet{yassin1994nonlinear}
+A hysteretic loading-reloading algorithm for this curve was proposed by [Yassin1994]_
 
 References
 ----------

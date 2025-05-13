@@ -62,6 +62,8 @@ The following subsections contain information about ``type``
 
       Concrete01/index
       Concrete02/index
+      Concrete04
+      ASDConcrete1D
 
 #. Wrappers 
 
