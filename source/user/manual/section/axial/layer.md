@@ -1,25 +1,13 @@
 
----
-title: layer
-...
-
-<style>
-h1 {
-    font-family: var(--md-code-font-family);
-    color: var(--md-code-fg-color) !important;
-    font-feature-settings: "kern";
-}
-</style>
-
 # layer
 
 
-<div style="width: 95%; padding-left: 5%">
+```{eval-rst}
+.. py:method:: Model.layer("circ", material, divs, area, center, radius, arc, **kwds)
 
-<span style="font-feature-settings: kern; color: var(--md-code-fg-color) !important; font-family: var(--md-code-font-family);">
-    <span style="color:#900">circ</span>(material, divs, fiber_area, center, radius, arc, **kwds)
-</span>
-
+   :param int material: material tag of a previously created UniaxialMaterial
+   :param int divs: number of fibers to generate
+```
 
 
 <table>
@@ -45,13 +33,12 @@ h1 {
 
 </tbody>
 </table>
-<!-- </blockquote> -->
 
 
-<!-- <blockquote> -->
-<span style="font-feature-settings: kern; color: var(--md-code-fg-color) !important; font-family: var(--md-code-font-family);">
-    <span style="color:#900">line</span>(material, divs, fiber_area, vertices, **kwds)
-</span>
+```{eval-rst}
+.. py:method:: Model.layer("line", material, divs, area, vertices)
+   :no-index:
+```
 
 
 ![](figures/straightLayer.svg)
@@ -80,7 +67,3 @@ h1 {
 </tr>
 </tbody>
 </table>
-
-
-
-</div>

@@ -20,9 +20,9 @@ J2 Plasticity
          :no-index:
 
          :param |integer| tag: unique tag identifying material
-         :param |float| K: Bulk modulus, :math:`\kappa`
-         :param |float| G: Shear modulus, :math:`\mu`
-         :param |float| Fy: Initial yield stress
+         :param |float| K: Bulk modulus, :math:`\kappa` [1]_
+         :param |float| G: Shear modulus, :math:`\mu` [1]_
+         :param |float| Fy: Initial yield stress, :math:`F_y` [1]_
          :param |float| Fs: Saturation yield stress
          :param |float| Hsat: exponential hardening parameter
          :param |float| Hiso: linear isotropic hardening modulus
@@ -42,6 +42,8 @@ J2 Plasticity
          sigInf, |float|,	   final saturation yield stress
          delta, |float|,	   exponential hardening parameter
          H, |float|,linear hardening parameter
+
+.. [1] These arguments are supported by the :ref:`parameter <parameter>` commands.
 
 Notes
 -----

@@ -35,6 +35,7 @@ Allow: /user/manual/meshing/surface.html
 Allow: /user/manual/material/ndMaterials/ElasticOrthotropic.html
 Allow: /user/manual/material/uniaxial/Steel02/index.html
 Allow: /user/manual/material/plastic/J2Plasticity.html
+Allow: /user/manual/material/uniaxial/Steel/index.html
 Allow: /user/manual/model/geomTransf/Corotational.html
 Allow: /user/manual/model/pattern/Plain/sp.html
 Allow: /user/manual/parameter/index.html

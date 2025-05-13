@@ -7,6 +7,8 @@ Steel
           
         .. py:method:: Model.uniaxialMaterial('Steel', tag, E, Y, Hiso, Hkin, eta=None)
             :no-index:
+
+            Define a plastic material with linear isotropic and kinematic hardening.
     
             :param |integer| tag: unique tag identifying material
             :param |float| E: elastic modulus, :math:`E`
@@ -14,6 +16,13 @@ Steel
             :param |float| Hiso: isotropic hardening modulus
             :param |float| Hkin: kinematic hardening modulus
             :param |float| eta: optional parameter 
+
+
+Theory 
+------
+
+This model implements a 1D specialization of the :ref:`J2Plasticity` material, without the nonlinear exponential hardening option.
+
 
 Examples 
 --------
@@ -28,7 +37,7 @@ Examples
          import xara
          model = xara.Model(ndm=3)
 
-         Y  = 50
+         Fy = 50
          E  = 29e3
          G  = 11.2e3
          K  = 3
@@ -38,17 +47,17 @@ Examples
          Hkin = 10e3
 
          # All positional arguments
-         model.uniaxialMaterial("Steel", 1, E, Y, Hiso, Hkin)
+         model.uniaxialMaterial("Steel", 1, E, Fy, Hiso, Hkin)
 
          # Mix keywords and positional arguments
-         model.uniaxialMaterial("Steel", 2, E, Y, Hiso=Hiso, Hkin=Hkin)
+         model.uniaxialMaterial("Steel", 2, E, Fy, Hiso=Hiso, Hkin=Hkin)
 
          # All keyword arguments
-         model.uniaxialMaterial("Steel", 4, Y=Y, E=E, Hkin=Hkin, Hiso=Hiso)
-         model.uniaxialMaterial("Steel", 5, Y=Y, G=G, nu=nu, Hkin=Hkin, Hiso=Hiso)
+         model.uniaxialMaterial("Steel", 4, Fy=Fy, E=E, Hkin=Hkin, Hiso=Hiso)
+         model.uniaxialMaterial("Steel", 5, Fy=Fy, G=G, nu=nu, Hkin=Hkin, Hiso=Hiso)
 
          # Legacy
-         model.uniaxialMaterial("Hardening", 9, E, Y, Hiso, Hkin)
+         model.uniaxialMaterial("Hardening", 9, E, Fy, Hiso, Hkin)
 
          model.print(json=True)
 
@@ -75,8 +84,8 @@ Examples
         uniaxialMaterial Steel 3 -Hiso $Hiso -Hkin $Hkin $E $Y
 
         # All keyword arguments
-        uniaxialMaterial Steel 4 -Y $Y -E $E -Hkin $Hkin -Hiso $Hiso
-        uniaxialMaterial Steel 5 -Y $Y -G $G -nu $nu -Hkin $Hkin -Hiso $Hiso
+        uniaxialMaterial Steel 4 -Fy $Y -E $E -Hkin $Hkin -Hiso $Hiso
+        uniaxialMaterial Steel 5 -Fy $Y -G $G -nu $nu -Hkin $Hkin -Hiso $Hiso
 
         # Legacy
         uniaxialMaterial Hardening 9 $E $Y $Hiso $Hkin

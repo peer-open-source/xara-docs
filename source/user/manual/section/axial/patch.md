@@ -1,6 +1,3 @@
----
-title: patch
-...
 
 <style>
 h1 {
@@ -20,6 +17,9 @@ quadrilateral, rectangular and circular.
 ```{eval-rst}
 .. py:method:: Model.patch("rect", material, divs, corners)
    :no-index:
+
+   :param int material: material tag of a previously created UniaxialMaterial
+   :param tuple divs: Tuple ``(ny,nz)`` of integers `ny` and `nz` specifying the number of fibers to create in the :math:`y` and :math:`z` directions, respectively.
 
 ```
 
