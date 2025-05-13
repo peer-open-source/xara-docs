@@ -3,7 +3,7 @@
 FourNodeTetrahedron Element
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This command is used to construct an four-node tetrahedron element object, which uses the standard isoparametric formulation.
+This command is used to construct an four-node tetrahedron element, which uses the standard isoparametric formulation.
 
 .. function:: element FourNodeTetrahedron $eleTag $node1 $node2 $node3 $node4 $matTag <$b1 $b2 $b3> <doInitDisp?>
 
@@ -34,6 +34,10 @@ This is the simplest possible continuum finite element for 3-D analysis. It's ba
 
 The valid :ref:`eleResponse` queries to a ``FourNodeTetrahedron`` element are ``"forces"``, ``"stresses"``, ``"strains"`` and ``"material $matNum matArg1 matArg2 ..."`` Where $matNum refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
 
+Theory
+------
+
+The linear tetrahedron was introduced by Gallagher et al. (1962)
 
 Example 
 -------
@@ -44,12 +48,18 @@ The following example constructs a FourNodeTetrahedron element with tag **1** be
 
    .. code-block:: tcl
 
-      element FourNodeTetrahedron 1 1 2 3 4 1 $b1 $b2 $b3
+      element FourNodeTetrahedron 1 1 2 3 4 1
 
 2. **Python Code**
 
    .. code-block:: python
 
-      model.element('FourNodeTetrahedron',1, (1,2,3,4), 1, (b1, b2, b3))
+      model.element("FourNodeTetrahedron", 1, (1,2,3,4), 1)
+
+
+References 
+----------
+
+* R. H. Gallagher, J. Padlog, and P. P. Bijlaard, "Stress analysis of Heated Complex Shapes" American Rocket Society Journal, 32, no. 5 (1962), 700-707 DOI: https://doi.org/10.2514/8.6128
 
 Code Developed by: `José Antonio Abell <www.joseabell.com>`_ (UANDES). For issues, start a new issue on the `OpenSees github repo <https://github.com/OpenSees/OpenSees>`_ and tag me (@jaabell). 

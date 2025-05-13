@@ -21,6 +21,10 @@ Allow: /user/manual/model/nodes/node.html
 Allow: /user/manual/model/element.html
 Allow: /user/manual/model/elements/frame/index.html
 Allow: /user/manual/model/elements/frame/ExactFrame.html
+Allow: /user/manual/model/elements/frame/ForceFrame.html
+Allow: /_images/ForceFrame.png
+Allow: /_images/j2-mises.png
+Allow: /_images/coupon.png
 Allow: /user/manual/model/elements/plane/Quad.html
 Allow: /user/manual/model/elements/plane/EnhancedQuad.html
 Allow: /user/manual/meshing/surface.html
