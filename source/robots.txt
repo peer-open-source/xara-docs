@@ -16,6 +16,7 @@ Allow: /_images/w8x28.png
 Allow: /_images/section-axes.png
 Allow: /_images/Steel02-Backbone.png
 Allow: /_images/Steel02-Cycling.png
+Allow: /_images/wrench.png
 Allow: /about/features/improvements.html
 
 Allow: /user/manual/model/model_class.html

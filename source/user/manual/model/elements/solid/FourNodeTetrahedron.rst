@@ -1,9 +1,9 @@
 .. _FourNodeTetrahedron:
 
-FourNodeTetrahedron Element
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Tetrahedron
+^^^^^^^^^^^
 
-This command is used to construct an four-node tetrahedron element, which uses the standard isoparametric formulation.
+Construct a four-node tetrahedron element, which uses the standard isoparametric formulation.
 
 .. function:: element FourNodeTetrahedron $eleTag $node1 $node2 $node3 $node4 $matTag <$b1 $b2 $b3> <doInitDisp?>
 
@@ -17,14 +17,20 @@ This command is used to construct an four-node tetrahedron element, which uses t
    $b1 $b2 $b3, |listFloat|, optional: body forces in global x y z directions
    <-doInitDisp $value>, |bool|, optional: consider initial displacements if $value is 0
 
-This is the simplest possible continuum finite element for 3-D analysis. It's based on linear interpolation of nodal quantities, this means that the strain and stress field inside the element are constant. The single Gauss point results can be interpreted as constant within the element. Because of this, the element has a tendency to lock up when used for simulating bending. In the incompressible limit (caution for materials with :math:`\nu \rightarrow 0.5` or metal plasticity) this element will also lock up. Therefore, caution is warranted when using this element as un-careful mesh refinement might not guarantee a convergence to the mathematical solution or a fast-enough convergence rate. If possible, use a higher-order element like the :ref:`TenNodeTetrahedron`. 
+
+Theory
+------
+
+The linear tetrahedron was introduced by Gallagher et al. (1962)
+It employs a linear interpolation of nodal quantities. 
+The element has a tendency to lock up both in bending, and in the incompressible limit :math:`\nu \rightarrow 0.5`. 
 
 
 .. figure:: figures/FourNodeTetrahedron/FourNodeTetrahedron.png
-	:align: center
-	:figclass: align-center
+   :align: center
+   :figclass: align-center
 
-	FourNodeTetrahedron element node numbering
+   FourNodeTetrahedron element node numbering
 
 
 .. note::
@@ -34,10 +40,6 @@ This is the simplest possible continuum finite element for 3-D analysis. It's ba
 
 The valid :ref:`eleResponse` queries to a ``FourNodeTetrahedron`` element are ``"forces"``, ``"stresses"``, ``"strains"`` and ``"material $matNum matArg1 matArg2 ..."`` Where $matNum refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
 
-Theory
-------
-
-The linear tetrahedron was introduced by Gallagher et al. (1962)
 
 Example 
 -------
@@ -63,3 +65,4 @@ References
 * R. H. Gallagher, J. Padlog, and P. P. Bijlaard, "Stress analysis of Heated Complex Shapes" American Rocket Society Journal, 32, no. 5 (1962), 700-707 DOI: https://doi.org/10.2514/8.6128
 
 Code Developed by: `José Antonio Abell <www.joseabell.com>`_ (UANDES). For issues, start a new issue on the `OpenSees github repo <https://github.com/OpenSees/OpenSees>`_ and tag me (@jaabell). 
+
