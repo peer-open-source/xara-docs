@@ -64,7 +64,7 @@ and passes a strain tensor to material points with the form:
 .. math::
 
 
-   \epsilon_{\alpha \beta}=\frac{1}{2}\left(u_{\alpha, \beta}+u_{\beta, \alpha}\right)=-z \kappa_{\alpha \beta}+\bar{\epsilon}_{\alpha \beta}
+   \epsilon_{\alpha \beta}=\frac{1}{2}\left(u_{\alpha, \beta}+u_{\beta, \alpha}\right)= \bar{\epsilon}_{\alpha \beta} - z \kappa_{\alpha \beta}
 
 and
 

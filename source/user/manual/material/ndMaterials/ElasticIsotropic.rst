@@ -13,9 +13,9 @@ This command is used to construct an *ElasticIsotropic* material.
          :no-index:
 
          :param |integer| tag: integer tag identifying material
-         :param |float| E: Young's elastic modulus
-         :param |float| v: Poisson's ratio
-         :param |float| rho: mass density. optional default = 0.0.
+         :param |float| E: Young's elastic modulus :math:`E`
+         :param |float| v: Poisson's ratio :math:`\nu`
+         :param |float| rho: mass density :math:`\rho`. optional default = 0.0.
 
    .. tab:: OpenSees
 
