@@ -1,17 +1,18 @@
 .. _NormUnbalance:
 
-NormUnbalance
-^^^^^^^^^^^^^
+Residual
+^^^^^^^^
 
-This command is used to construct a convergence test which uses the norm of the right hand side of the matrix equation, i.e. :math:`b` vector in :math:`Ax=b`, to determine if convergence has been reached. 
 What the right-hand-side of the matrix equation is depends on integrator and constraint handler chosen. 
 Usually, though not always, it is equal to the equilibrium residual. 
 
 .. tabs::
 
    .. tab:: Python
-      .. py:method:: Model.test("NormUnbalance", tol, iter, verb=0, norm=2)
+      .. py:method:: Model.test("Residual", tol, iter, verb=0, norm=2)
          :no-index:
+          
+         Define a convergence test which uses the residual norm :math:`b` vector in :math:`Ax=b`, to determine if convergence has been reached. 
 
          :param tol: the tolerance criteria used to check for convergence
          :type tol: |float|
@@ -24,7 +25,7 @@ Usually, though not always, it is equal to the equilibrium residual.
 
    .. tab:: Tcl
 
-      .. function:: test NormUnbalance $tol $iter <$pFlag> <$nType>
+      .. function:: test NormUnbalance tol? iter? <pFlag?> <nType?>
 
       .. csv-table:: 
          :header: "Argument", "Type", "Description"
@@ -43,7 +44,8 @@ Usually, though not always, it is equal to the equilibrium residual.
 
 .. note::
 
-   When using a :ref:`penalty` constraint handler, large forces (those necessary to enforce the constraint) are included in the :math:`b` vector. Even for very small changes in the displacement, if user has selected overly large penalty factor, large forces can appear in the :math:`b` vector.
+   When using a :ref:`penalty` constraint handler, large forces (those necessary to enforce the constraint) are included in the :math:`b` vector. 
+   Even for very small changes in the displacement, if user has selected overly large penalty factor, large forces can appear in the :math:`b` vector.
 
 
 Examples

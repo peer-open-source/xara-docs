@@ -54,6 +54,11 @@ The following materials are available:
 .. toctree::
    :maxdepth: 1
 
+   damage/FariaPlasticDamage
+
+.. toctree::
+   :maxdepth: 1
+
    wrapper/Series3D
    wrapper/Parallel3D
    wrapper/InitialStrain

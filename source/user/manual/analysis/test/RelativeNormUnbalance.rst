@@ -5,8 +5,6 @@ Relative Norm Unbalance
 
 This command is used to construct a convergence test which uses the norms of the right hand side of the matrix equation, i.e. :math:`b` vector in :math:`Ax=b`, to determine if convergence has been reached. 
 It uses the ratio of the current norm to the first norm, i.e. :math:`\frac{\sqrt(\boldsymbol{b}_i \cdot \boldsymbol{b}_i)}{\sqrt({b_1} \cdot {b_1})}`. 
-What the right-hand-side of the matrix equation is depends on integrator and constraint handler chosen. 
-Usually, though not always, it is equal to the unbalanced forces in the system. 
 
 
 .. tabs::

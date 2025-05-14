@@ -7,7 +7,7 @@ Fixed Iterations
 
    .. tab:: Python
       
-      .. py:method:: Model.test("FixedNumIter", niter [, verbosity=0])
+      .. py:method:: Model.test("Count", niter [, verbosity=0])
          :no-index:
 
          Configure the analysis to perform a fixed number of iterations
