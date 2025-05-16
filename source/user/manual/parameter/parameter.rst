@@ -3,23 +3,19 @@
 parameter
 ^^^^^^^^^
 
-.. py:method:: Model.parameter(tag, <specific parameter args>)
+.. py:method:: Model.parameter(tag, *args)
 
    define a paramemter in the model.
 
-   ==============================   ===========================================================================
-   ``tag`` |int|                    integer tag identifying the parameter.
-   ``<specific parameter args>``    depend on the object in the FE model encapsulating the desired parameters.
-   ==============================   ===========================================================================
+   :param tag: integer tag identifying the parameter.
+   :type tag: |integer|
+   :param args: arguments that idendify objects in the model which should bind to the parameter.
 
 
 .. note::
 
-   Each parameter must be unique, and all parameter tags must be numbered sequentially starting from 1.
+   Each parameter tag must be unique, and all parameter tags must be numbered sequentially starting from 1.
 
-
-
-The format of the *<specific object arguments>* is different for each considered element/section/material. 
 
 
 Examples

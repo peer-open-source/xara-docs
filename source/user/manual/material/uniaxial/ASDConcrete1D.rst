@@ -40,9 +40,16 @@ To improve robustness and convergence of the simulation in case of strain-soften
    -tangent, |string|, "Optional. If defined, the tangent constitutive matrix is used. By default, the secant stiffness is used."
    -autoRegularization $lch_ref, |string| + |float|, "Optional. If defined, and if the tensile and/or the compressive hardening-softening law has strain-softening, the area under the hardening-softening law is assumed to be a real fracture energy (:math:`G_f` with dimension = :math:`F/L`), and the specific fracture energy :math:`g_f` (with dimension = :math:`F/L^2`) is automatically computed as :math:`g_f=G_f/l_{ch}`, where :math:`l_{ch}` is the characteristic length of the Finite Element. In this case $lch_ref is 1. If, instead, the area is a specific fracture energy (:math:`g_{f,ref}` with dimension = :math:`F/L^2`), $lch_ref should be set equal to the experimental size used to obtain the strain from the displacement jump. In this case, the regularization will be performed as :math:`g_f=G_f/l_{ch} = g_{f,ref}*l_{ch,ref}/l_{ch}`"
 
+
 .. note::
 
-  * This is the uniaxial counter-part of the nDMaterial ASDConcrete3D. For the theory, please refer to :ref:`ASDConcrete3D`
+  * This model is the uniaxial specialization of the nDMaterial ASDConcrete3D. For the theory, please refer to :ref:`ASDConcrete3D`
+
+
+The optional parameters allow users to provide the tensile and compressive hardening laws by points (strain, stress and damage).
+For each point of the tensile (or compressive) backbone curve, strain and stress define the actual point on the backbone, while the damage parameter defines the degradation of the intial stiffness at that point.
+The damage parameter can range from 0 to 1.
+Note that the damage parameter should satify several constraints: It should be monotonically increasing, cannot be 1.0 if sigma > 0.0, etc... . 
 
 
 Examples
@@ -51,14 +58,9 @@ Examples
 Hardening/Softening Laws
 ========================
 
-This material accepts either a simple input (-ft and -fc) or a more customizable one, where the user can provide the tensile and compressive hardening laws by points (strain, stress and damage).
-For each point of the tensile (or compressive) backbone curve, strain and stress define the actual point on the backbone, while the damage parameter defines the degradation of the intial stiffness at that point.
-The damage parameter can range from 0 to 1.
-Note that the damage parameter should satify several constraints: It should be monotonically increasing, cannot be 1.0 if sigma > 0.0, etc... . 
-The ASDConcrete1D material takes care of correcting invalid values of damage parameter.
-
 This is a simple Python module to generate typical hardening-softening laws for normal concrete:
 :download:`ASDConcrete1D_MakeLaws.py <examples/ASDConcrete1D_MakeLaws.py>`
+
 
 Plastic-Damage behavior and rate-dependence
 ===========================================
@@ -77,7 +79,8 @@ On the left-side the stress-strain response, while on the right-side the evoluti
    
 
 **Case 2: Mixed plastic-damage behavior in both tension and compression with rate effects.**
-Same as Case 1, but with the viscosity parameter :math:`\eta = 0.001`. If :math:`\eta > 0` the material is allowed to violate the yield/damage domain at high strain rates.
+Same as Case 1, but with the viscosity parameter :math:`\eta = 0.001`. 
+If :math:`\eta > 0` the material is allowed to violate the yield/damage domain at high strain rates.
 
 .. |asd_conc1d_pic_2_a| image:: examples/Mixed-Plastic-Damage(rate-dependent).gif
 .. |asd_conc1d_pic_2_b| image:: examples/Mixed-Plastic-Damage(rate-dependent)-still.png
@@ -85,19 +88,20 @@ Same as Case 1, but with the viscosity parameter :math:`\eta = 0.001`. If :math:
    
 
 **Case 3: Pure-damage behavior in both tension and compression.**
-| Same as Case 1, but without any plastic strain. All nonlinearity comes from cracking, and upon unloading the stress always go to zero at zero strain following the secant stiffness :math:`Ed = (1-d)E`.
-| Note that on the right-side there is no evolution of equivalent plastic strain.
-| To achieve this, all damage variables are set to the maximum value of 1.
+Same as Case 1, but without any plastic strain. All nonlinearity comes from cracking, and upon unloading the stress always go to zero at zero strain following the secant stiffness :math:`Ed = (1-d)E`.
+Note that on the right-side there is no evolution of equivalent plastic strain.
+To achieve this, all damage variables are set to the maximum value of 1.
 
 .. |asd_conc1d_pic_3_a| image:: examples/Pure-Damage.gif
 .. |asd_conc1d_pic_3_b| image:: examples/Pure-Damage-still.png
 |asd_conc1d_pic_3_a| |asd_conc1d_pic_3_b|
 
-|
-| **Case 4: Pure-plastic behavior in both tension and compression.**
-| Same as Case 1, but without any cracking strain (no damage). All nonlinearity comes from plastic deformation, and upon unloading the stress always follows the initial stiffness.
-| Note that on the right-side there is no evolution of damage.
-| To achieve this, all damage variables are set to the minimum value of 10.
+
+**Case 4: Pure-plastic behavior in both tension and compression.**
+Same as Case 1, but without any cracking strain (no damage). 
+All nonlinearity comes from plastic deformation, and upon unloading the stress always follows the initial stiffness.
+Note that on the right-side there is no evolution of damage.
+To achieve this, all damage variables are set to the minimum value of 10.
 
 .. |asd_conc1d_pic_4_a| image:: examples/Pure-Plasticity.gif
 .. |asd_conc1d_pic_4_b| image:: examples/Pure-Plasticity-still.png
