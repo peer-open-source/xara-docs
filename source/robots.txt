@@ -8,15 +8,18 @@ Allow: /launch.html
 Allow: /sitemap.xml
 Allow: /cite.html
 Allow: /robots.txt
-Allow: /_images/Q9.svg
-Allow: /_images/directors.png
-Allow: /_images/vecxz.png
 Allow: /_images/ExactFrame_Fig1.png
-Allow: /_images/w8x28.png
-Allow: /_images/section-axes.png
+Allow: /_images/ForceFrame.png
+Allow: /_images/Q9.svg
 Allow: /_images/Steel01.png
 Allow: /_images/Steel02-Backbone.png
 Allow: /_images/Steel02-Cycling.png
+Allow: /_images/coupon.png
+Allow: /_images/directors.png
+Allow: /_images/j2-mises.png
+Allow: /_images/section-axes.png
+Allow: /_images/vecxz.png
+Allow: /_images/w8x28.png
 Allow: /_images/wrench.png
 Allow: /about/features/improvements.html
 
@@ -26,11 +29,10 @@ Allow: /user/manual/model/element.html
 Allow: /user/manual/model/elements/frame/index.html
 Allow: /user/manual/model/elements/frame/ExactFrame.html
 Allow: /user/manual/model/elements/frame/ForceFrame.html
-Allow: /_images/ForceFrame.png
-Allow: /_images/j2-mises.png
-Allow: /_images/coupon.png
+Allow: /user/manual/model/elements/Truss.html
 Allow: /user/manual/model/elements/plane/Quad.html
 Allow: /user/manual/model/elements/plane/EnhancedQuad.html
+Allow: /user/manual/model/elements/plane/MixedQuad.html
 Allow: /user/manual/meshing/surface.html
 Allow: /user/manual/material/ndMaterials/ElasticOrthotropic.html
 Allow: /user/manual/material/uniaxial/Steel02/index.html
