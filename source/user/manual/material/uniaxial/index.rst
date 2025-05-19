@@ -33,6 +33,12 @@ These quantities are typically stress and strain, but can also be force and defo
 
 The following subsections contain information about ``type`` 
 
+#. Elastic 
+  
+   .. toctree::
+      :maxdepth: 1
+
+      Elastic
 
 
 #. Steel & Metallic Materials
@@ -64,6 +70,17 @@ The following subsections contain information about ``type``
       Concrete02/index
       Concrete04
       ASDConcrete1D
+
+
+#. Viscous 
+
+
+#. Evolution 
+
+   .. toctree::
+      :maxdepth: 1
+
+      ode/bouc-wen
 
 #. Wrappers 
 

@@ -230,6 +230,7 @@ else:
 #         "alt_text": "xara docs - Home",
         }
     }
+
 if "book" in html_theme:
     html_theme_options.update({
         "use_download_button":  False,
@@ -274,4 +275,4 @@ mathjax3_config = {
       "packages": {'[+]': ['color']},
       "inlineMath": [['$', '$'], ['\\(', '\\)']]
   }
-};
+}

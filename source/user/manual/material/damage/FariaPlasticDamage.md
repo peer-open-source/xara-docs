@@ -4,19 +4,29 @@
 ![Failure surface in plane stress](FariaSurface.png)
 
 ```{eval-rst}
-.. function:: nDMaterial PlasticDamageConcrete3d tag? E? nu? Ft? Fc? <beta? Ap? An? Bn?>
+.. py:method:: Model.nDMaterial("FariaPlasticDamage", tag, E, nu, Ft, Fc [, beta, Ap, An, Bn])
+   :no-index:
+
+   :param tag: unique integer tag for the material
+   :type tag: |integer|
+   :param E: Young's modulus
+   :type E: |float|
+   :param nu: Poisson ratio :math:`\nu`
+   :type nu: |float|
+   :param Ft: tensile yield strength :math:`F_t`
+   :type Ft: |float|
+   :param Fc: compressive yield strength :math:`F_c`
+   :type Fc: |float|
+   :param beta: parameter controlling plastic strain rate/post-yield hardening parameter
+   :type beta: |float|
+   :param Ap: parameter controlling tensile fracture energy
+   :type Ap: |float|
+   :param An: parameter controlling ductility of the compressive response
+   :type An: |float|
+   :param Bn: parameter controlling ductility and peak strength of the compressive response
+   :type Bn: |float|
 
 ```
-
-| E | Young's modulus |
-| :--- | :--- |
-| nu | Poisson ratio |
-| Ft | tensile yield strength |
-| Fc | Compressive yield strength |
-| beta | parameter controlling plastic strain rate/post-yield hardening parameter |
-| Ap | parameter controlling tensile fracture energy |
-| An | parameter controlling ductility of the compressive response |
-| Bn | parameter controlling ductility and peak strength of the compressive response |
 
 ## Theory
 
@@ -34,7 +44,7 @@ The following exponential damage evolution rules are adopted to describe the dep
 $$
 \begin{aligned}
 & d^{+}=1-\left(\frac{r_0^{+}}{r^{+}}\right) \exp \left[A_p\left(1-\frac{r^{+}}{r_0^{+}}\right)\right] \\
-& d^{-}=1-\sqrt{\frac{r_0^{-}}{r^{-}}}\left(1-A_n\right)-A_n \exp \left[B_n\left(1-\sqrt{\frac{r^{-}}{r_0^{-}}}\right)\right]
+& d^{-}=1- {\frac{r_0^{-}}{r^{-}}}\left(1-A_n\right)-A_n \exp \left[B_n\left(1- {\frac{r^{-}}{r_0^{-}}}\right)\right]
 \end{aligned}
 $$
 where $A_p, A_n$, and $B_n$ are damage parameters that describe the softening behavior of the stress-strain relation, as reported in *Faria et al. (1998)*.
@@ -44,20 +54,14 @@ where $A_p, A_n$, and $B_n$ are damage parameters that describe the softening be
 Let
 
 $$
-\alpha = \frac{r_{n0}}{r_n},\quad 
-x = B_n\Bigl(1 - \frac{r_n}{r_{n0}}\Bigr)
+\alpha = \frac{r^{-}_{0}}{r^{-}},\quad 
+x = B_n\Bigl(1 - \frac{r^{-}}{r^{-}_{0}}\Bigr)
 $$
 
-Then the original
+Then the expression for $d^{-}$ can be rewritten as
 
 $$
-d_n = 1  - \frac{r_{n0}}{r_n} (1 - A_n) - A_n \exp(B_n (1 - r_n/r_{n0}));
-$$
-
-can be rewritten as
-
-$$
-d_n = (1-\alpha)\,(1 - A_n)\;-\;A_n\bigl(\exp(x)-1\bigr)
+d^{-} = (1-\alpha)\,(1 - A_n)\;-\;A_n\bigl(\exp(x)-1\bigr)
 $$
 
 In this form:
@@ -69,34 +73,31 @@ In this form:
 ------------
 
 
-When $\displaystyle r_p \approx r_{p0}$, directly computing
+When $\displaystyle r^{+} \approx r^{+}_{0}$, directly computing
 
 $$
-d_p = 1  - (r_{p0}/r_p)   \exp\!\bigl(A_p (1 - r_p/r_{p0})\bigr);
+d^{+} = 1  - (r^{+}_{0}/r^{+})   \exp\!\bigl(A_p (1 - r^{+}/r^{+}_{0})\bigr);
 $$
 
-will suffer cancellation. A more accurate form is:
+will suffer cancellation. Introduce:
 
-1. **Introduce**
+$$
+\alpha \triangleq \frac{r^{+}_{0}}{r^{+}}, 
+\quad
+x = A_p\Bigl(1 - \frac{r^{+}}{r^{+}_{0}}\Bigr)
+   = A_p\Bigl(1 - \frac1\alpha\Bigr).
+$$
 
-   $$
-     \alpha \triangleq \frac{r_{p0}}{r_p}, 
-     \quad
-     x = A_p\Bigl(1 - \frac{r_p}{r_{p0}}\Bigr)
-       = A_p\Bigl(1 - \frac1\alpha\Bigr).
-   $$
+Rewrite
 
-2. **Rewrite**
+$$
+   d^{+} = 1 - \alpha\, \exp{x}
+      = \bigl(1-\alpha\bigr)\;-\;\alpha\,(\exp{x}-1)
+$$
 
-   $$
-     d_p = 1 - \alpha\, e^x
-        = \bigl(1-\alpha\bigr)\;-\;\alpha\,(e^x-1)
-   $$
 
-3. **Use**
-
-   * `std::expm1(x)` for $e^x - 1$ when $|x|\ll1$.
-   * `std::fma(a,b,c)` for $a\cdot b + c$ in one rounding step.
+* `std::expm1(x)` for $\exp{x} - 1$ when $|x|\ll1$.
+* `std::fma(a,b,c)` for $a\cdot b + c$ in one rounding step.
 
 
 ## Examples
