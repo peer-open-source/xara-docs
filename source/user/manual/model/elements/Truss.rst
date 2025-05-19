@@ -11,6 +11,7 @@ One way is to specify an area and a ``UniaxialMaterial`` identifier:
 
    .. tab:: Python
       .. py:method:: Model.element("Truss", tag, nodes, section, density=0)
+
          Create a truss element with tag *tag* between the nodes in *nodes* with
          cross-sectional area *section*.
 
