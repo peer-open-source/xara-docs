@@ -1,7 +1,7 @@
-.. _ViscoelasticGap :
+.. _ViscoelasticGap:
 
 Viscoelastic Gap Material
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 .. function:: uniaxialMaterial ViscoelasticGap  $matTag $K $c $gap
