@@ -11,6 +11,7 @@ Steel02
 
       .. py:method:: Model.uniaxialMaterial("Steel02", tag, Fy, E, b, R0, cR1, cR2, [a1, a2, a3, a4, sigInit])
          :no-index:
+         :single-line-parameter-list:
 
          Add a *Steel02* material to *model* identified by *tag*.
 
@@ -49,6 +50,23 @@ Steel02
 
 .. [1] These arguments are supported by the :ref:`parameter <parameter>` commands.
 
+
+.. py:class:: Steel02
+
+   .. py:attribute:: Fy
+      :type: float
+
+      Yield stress :math:`F_y`.
+
+
+   .. py:attribute:: E
+      :type: float
+
+      Initial stiffness :math:`E`. Analogous to :py:attr:`E <Elastic.E>` in the :ref:`Elastic <UniaxialElastic>` material. 
+
+
+Formulation
+-----------
 
 The hardening formulation was developed by [FilippouEtAl1983]_.
 The parameters ``a1`` and ``a2`` increase of compression yield envelope as proportion of yield strength after a plastic strain of :math:`a_2 F_y/E`. 

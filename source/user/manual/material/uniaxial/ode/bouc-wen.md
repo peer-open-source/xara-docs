@@ -42,8 +42,29 @@
    :param lamda: pinching severity, :math:`\lambda`
    :type  lamda: |float|
 
+```
 
+## Extended Parameters
+
+```{eval-rst}
 .. py:class:: BoucWen
+
+   .. py:attribute:: E
+      :type: float
+
+      Initial stiffness :math:`E`
+
+   .. py:attribute:: Fy
+      :type: float
+   
+      Yield stress of the hysteretic curve :math:`F_y`. Analogous to :py:attr:`Steel02.Fy`.
+   
+   .. py:attribute:: beta
+      :type: float
+      :value: 0.5
+   
+      Hysteretic shape parameter :math:`\beta`.
+
 
 
 .. [1] This argument is supported by the :ref:`parameter <parameter>` commands.
@@ -112,7 +133,6 @@ using the BWBN material model</p>
 
 ## Theory
 
-
 This material model is an extension of the
 original Bouc-Wen model that includes pinching (Baber and Noori (1986) and Foliente (1995)).
 
@@ -135,8 +155,7 @@ When parameterized with $F_y$, the additional constraint $\beta+\gamma=1$ is int
 
 - Parameter $\gamma$ is usually in the range
   from -1 to 1 and parameter $\beta$ is usually in
-  the range from 0 to 1. Depending on the values of $\gamma$ and $\beta$
-  softening, hardening or quasi-linearity can be simulated.
+  the range from 0 to 1.
 
 - The hysteresis loop will exhibit *softening* for the following cases:
 
@@ -149,9 +168,16 @@ When parameterized with $F_y$, the additional constraint $\beta+\gamma=1$ is int
 -  *quasi-linearity* is exhibited if $\beta + \gamma = 0$ and $\beta - \gamma \gt 0$.
 
 
+
+```{eval-rst}
+.. figure:: figures/bouc-beta.png
+   :width: 50%
+   :align: center
+```
+
 ### Degradation
 
-The new parameters introduced for degradation are:
+The new parameters that control degradation are:
 
 | Parameter | Description | Bounds |
 | :--- | :--- | :--- |
@@ -171,6 +197,8 @@ The new parameters introduced for degradation are:
 
 ### Pinching
 
+The following parameters control pinching in the model:
+
 | Parameter | Description | Bounds |
 | :--- | :--- | :--- |
 | $\zeta_0$ | Measure of total slip | $0 \leq \zeta_0 \leq 1$ |
@@ -183,9 +211,6 @@ The new parameters introduced for degradation are:
 | $c_h$ | Crack closure coefficient | $0.01 \leq c_h \leq 1.5$ |
 
 
-- $\psi_0$, $\delta_\psi$, $\lambda$, $p$ and $\varsigma$, 
-
-where $\varsigma$, $p$, $q$, $\psi, \delta$ and $\lambda$ are the pinching parameters.
 
 $$
 h(z)=1-\varsigma_1(\varepsilon) \exp \left(-\frac{\left(z(t) \operatorname{sign}(\dot{u})-q z_u\right)^2}{\left(\varsigma_2(\varepsilon)\right)^2}\right)
@@ -197,11 +222,8 @@ $$
 &\zeta_2(\varepsilon)=\left(\psi+\delta_\psi \varepsilon\right)\left(\lambda+\zeta_1(\varepsilon)\right)
 \end{aligned}
 $$
-$$
-z_u=\left[\frac{1}{\beta+\gamma}\right]^{\frac{1}{n}}
-$$
 
-- $\delta_\nu, \delta_\psi$, and $\lambda$ are rather insensitive parameters.
+$\delta_\nu, \delta_\psi$, and $\lambda$ are rather insensitive parameters.
 
 
 ## Examples
