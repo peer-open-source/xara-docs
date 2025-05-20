@@ -41,6 +41,8 @@ The following subsections contain information about ``type``
       Elastic
       Plastic/index
       ode/bouc-wen
+
+..
       viscous/Maxwell
 
 
