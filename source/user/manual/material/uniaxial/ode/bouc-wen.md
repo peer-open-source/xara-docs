@@ -8,43 +8,43 @@
    :width: 50%
    :align: center
 
-.. py:method:: Model.uniaxialMaterial("FullBoucWen", tag, E, Fy, r, **options)
+.. py:method:: Model.uniaxialMaterial("FullBoucWen", tag, E, Fy, alpha, n, **options)
    :no-index:
 
-   Construct a uniaxial Bouc-Wen pinching material
+   Construct a uniaxial Bouc-Wen material with optional pinching and degradation.
 
    :param tag: unique integer tag for the material
-   :type tag: |integer|
+   :type tag: int
    :param E: initial stiffness, :math:`E` [1]_
-   :type  E: |float|
+   :type  E: float
    :param Fy: yield force, :math:`F_y` [1]_
-   :type  Fy: |float|
+   :type  Fy: float
    :param alpha: ratio of post-yield stiffness to the initial elastic stiffenss, :math:`0 \leq \alpha \leq 1` [1]_
    :type  alpha: float
-   :param beta: hysteretic hardening shape parameter :math:`\beta`, defaults to :math:`\beta=0.5` [1]_
-   :type  beta: float, optional
    :param n: sharpness of yield, :math:`n` [1]_
    :type  n: float
+   :param beta: hysteretic hardening shape parameter :math:`\beta`, defaults to :math:`\beta=0.5` [1]_
+   :type  beta: float, optional
    :param strength_rate: strength degradation rate, :math:`\delta_{\nu}` 
-   :type  strength_rate: |float|
+   :type  strength_rate: float
    :param stiffness_rate: stiffness degradation rate, :math:`\delta_{\eta}`
-   :type  stiffness_rate: |float|
+   :type  stiffness_rate: float
    :param pinch_slope: pinching slope, :math:`p`
-   :type  pinch_slope: |float|
+   :type  pinch_slope: float
    :param pinch_start: pinching initiation, :math:`q`
-   :type  pinch_start: |float|
+   :type  pinch_start: float
    :param pinch_slip: measure of total slip, :math:`\zeta`
-   :type  pinch_slip: |float|
+   :type  pinch_slip: float
    :param pinch_rate: pinching rate, :math:`\delta_{\psi}`
-   :type  pinch_rate: |float|
+   :type  pinch_rate: float
    :param pinch_size: pinching magnitude, :math:`\psi_0`
-   :type  pinch_size: |float|
+   :type  pinch_size: float
    :param lamda: pinching severity, :math:`\lambda`
-   :type  lamda: |float|
+   :type  lamda: float
 
 ```
 
-## Extended Parameters
+## Parameters
 
 ```{eval-rst}
 .. py:class:: BoucWen
@@ -65,6 +65,17 @@
    
       Hysteretic shape parameter :math:`\beta`.
 
+   .. py:attribute:: pinch_slope
+      :type: float
+      :value: 0.0
+
+      Optional pinching parameter :math:`p` introduced by Baber and Noori (1986).
+
+   .. py:attribute:: pinch_start
+      :type: float
+      :value: 0.0
+      
+      Optional pinching parameter :math:`q` introduced by Foliente (1995). When :math:`q = 0` the pinching formulation of Baber and Noori (1986) is recovered.
 
 
 .. [1] This argument is supported by the :ref:`parameter <parameter>` commands.
@@ -75,6 +86,8 @@
 
 ```
 
+
+## OpenSees Compatibility
 
 This material superceeds the following materials, which are supported for legacy purposes:
 
@@ -100,9 +113,25 @@ This material superceeds the following materials, which are supported for legacy
 
       .. code-block:: Tcl
 
-         uniaxialMaterial BoucWenOriginal tag E? Fy? alphaL? < alphaNL mu=2.0 n=1.0 beta=0.5 gamma=0.5 >
+         uniaxialMaterial BoucWenOriginal tag E? Fy? alphaL? < alphaNL? mu? n? beta? gamma? >
 
-      In order to capture hardening effects that may occur in various hysteretic systems, the Bouc-Wen model was further modified to include Prager's rule (Bouc 1967; Casciati 1989). 
+      In order to capture hardening effects that may occur in various hysteretic systems, this material appends a Duffing-like nonlinear term to the stress, parameterized by the exponent :math:`\mu`:
+
+      .. math::
+         
+         \sigma = \alpha_L E \varepsilon + \alpha_{NL} E \operatorname{sgn}(\varepsilon)\|\varepsilon\|^{\mu} + \bar{F}_y z
+      
+      where 
+
+      .. math::
+         
+         \bar{F}_y \triangleq F_y - \alpha_{L} F_y - \alpha_{NL}E\, \left( \frac{F_y}{E}\right)^{\mu}
+
+      An example with :math:`\beta = \gamma = 0.5`, :math:`\mu = 2`, :math:`n = 1`:
+
+      .. code-block:: Tcl
+         
+         uniaxialMaterial BoucWenOriginal 1 $E $Fy $alphaL $alphaNL 2.0 1.0 0.5 0.5
 
       References:
 
@@ -111,24 +140,29 @@ This material superceeds the following materials, which are supported for legacy
 
    .. tab:: BWBN
 
-       Bouc-Wen with Foliente pinching, but no degradation. Implemented by Raquib Hossain
+      Bouc-Wen with Foliente pinching, but no degradation. Implemented by Raquib Hossain
 
-        .. code-block:: Tcl
+      .. code-block:: Tcl
 
-           uniaxialMaterial BWBN tag \
-                            alpha E n $gamma $beta $Ao \
-                            $q $zetas $p $Shi $deltaShi $lambda $tol $maxIter
+         uniaxialMaterial BWBN tag \
+                          alpha E n $gamma $beta $Ao \
+                          $q $zetas $p $Shi $deltaShi $lambda $tol $maxIter
+
+      
+      `Raquib Hossain <http://scholar.google.com.au/citations?user=I_li3qkAAAAJ&hl=en&oi=ao>`__, 
+      `The University of Queensland (UQ), Australia <http://www.uq.edu.au/>`__ 
+      and
+      `Bangladesh University of Engineering and Technology (BUET) <http://www.buet.ac.bd/>`__
 ```
 
 
 <hr />
 
 <figure>
-<img src="/_static/wiki/BWBN_YSPD.jpg" title="BWBN_YSPD.jpg" alt="BWBN_YSPD.jpg" />
-<figcaption aria-hidden="true">BWBN_YSPD.jpg</figcaption>
+<img src="/_static/wiki/BWBN_YSPD.jpg" alt="BWBN_YSPD" />
+<figcaption>Cyclic force displacement relationship of the YSPDs generated
+using the BWBN material model</figcaption>
 </figure>
-<p>Fig. Cyclic force displacement relationship of the YSPDs generated
-using the BWBN material model</p>
 <hr />
 
 ## Theory
@@ -138,20 +172,20 @@ original Bouc-Wen model that includes pinching (Baber and Noori (1986) and Folie
 
 $$
 \begin{aligned} 
-& 
-\dot{z}=\frac{h(z, \varepsilon)}{\eta(\varepsilon)} \dot{u}\left[A-|z|^n(\gamma+\beta \operatorname{sgn}(\dot{u} z)) \nu(\varepsilon)\right] \frac{k_0}{F_y} \\ 
-& \dot{\varepsilon}=(1-\alpha) F_y z \dot{u}\end{aligned}
+\dot{z}&=\frac{h}{\eta}\left[A-|z|^n(\gamma+\beta \operatorname{sgn}(\dot{\varepsilon} z)) \nu\right] \frac{k_0}{F_y}  \dot{\varepsilon}\\ 
+\dot{e}&=(1-\alpha) F_y z \dot{\varepsilon}
+\end{aligned}
 $$
 
 When parameterized with $F_y$, the additional constraint $\beta+\gamma=1$ is introduced to assure $F_y$ as the yield strength of the structure.
 
-| Parameter | Description | Bounds |
-| :--- | :--- | :--- |
-| $E \geq 0$ | Initial stiffness |      |
-| $F_y$ | Yield point |     |
-| $\alpha$ | Post-yield stiffness ratio | $0 \leq \alpha \leq 0.5$ |
-| $\beta$ | Basic hysteretic shape control | $0.01 \leq \beta \leq 0.99$ |
-| $n$ | Sharpness of yield | $n \geq 1$ |
+| Parameter | Description |
+| :--- | :--- |
+| $E \geq 0$ | Initial stiffness |
+| $F_y$ | Yield point |
+| $\alpha$ | Post-yield stiffness ratio |
+| $\beta$ | Basic hysteretic shape control |
+| $n$ | Sharpness of yield |
 
 - Parameter $\gamma$ is usually in the range
   from -1 to 1 and parameter $\beta$ is usually in
@@ -177,25 +211,26 @@ When parameterized with $F_y$, the additional constraint $\beta+\gamma=1$ is int
 
 ### Degradation
 
-The new parameters that control degradation are:
+The parameters that control degradation are:
 
 | Parameter | Description | Bounds |
 | :--- | :--- | :--- |
 | $\delta_{\nu} \geq 0$ | Strength degradation rate | $0 \leq \delta_v \leq 0.36$ |
 | $\delta_{\eta} \geq 0$ | Stiffness degradation rate | $0 \leq \delta_\eta \leq 0.39$ |
 
-- $\delta_\nu>0$, 
-- $\delta_A>0$, 
-- $\delta_\eta>0$,
-
-| Parameter | Description | Bounds |
-| :--- | :--- | :--- |
-| $\delta_v$ | Strength degradation rate | $0 \leq \delta_v \leq 0.36$ |
-| $\delta_\eta$ | Stiffness degradation rate | $0 \leq \delta_\eta \leq 0.39$ |
-
-
 
 ### Pinching
+
+$$
+h(z)=1-\varsigma_1(\varepsilon) \exp \left(-\frac{\left(z(t) \operatorname{sign}(\dot{u})-q z_u\right)^2}{\left(\varsigma_2(\varepsilon)\right)^2}\right)
+$$
+
+$$
+\begin{aligned}
+&\zeta_1(\varepsilon)=\zeta_0(1-\exp (-p \varepsilon))\\
+&\zeta_2(\varepsilon)=\left(\psi+\delta_\psi \varepsilon\right)\left(\lambda+\zeta_1(\varepsilon)\right)
+\end{aligned}
+$$
 
 The following parameters control pinching in the model:
 
@@ -211,18 +246,6 @@ The following parameters control pinching in the model:
 | $c_h$ | Crack closure coefficient | $0.01 \leq c_h \leq 1.5$ |
 
 
-
-$$
-h(z)=1-\varsigma_1(\varepsilon) \exp \left(-\frac{\left(z(t) \operatorname{sign}(\dot{u})-q z_u\right)^2}{\left(\varsigma_2(\varepsilon)\right)^2}\right)
-$$
-
-$$
-\begin{aligned}
-&\zeta_1(\varepsilon)=\zeta_0(1-\exp (-p \varepsilon))\\
-&\zeta_2(\varepsilon)=\left(\psi+\delta_\psi \varepsilon\right)\left(\lambda+\zeta_1(\varepsilon)\right)
-\end{aligned}
-$$
-
 $\delta_\nu, \delta_\psi$, and $\lambda$ are rather insensitive parameters.
 
 
@@ -234,40 +257,35 @@ docs/contrib/examples/31-BWBNExample.html
 
 ## References
 
-- Bouc–Wen class models considering hysteresis mechanism of RC columns in nonlinear dynamic analysis [doi: https://doi.org/10.1016/j.ijnonlinmec.2022.104263](https://doi.org/10.1016/j.ijnonlinmec.2022.104263)
+- Kim, Taeyong, Oh‐Sung Kwon, and Junho Song. “Deep Learning Based Seismic Response Prediction of Hysteretic Systems Having Degradation and Pinching.” Earthquake Engineering & Structural Dynamics 52, no. 8 (July 2023): 2384–2406. [doi: 10.1002/eqe.3796](https://doi.org/10.1002/eqe.3796).
+
+- Oh, Sebin, Taeyong Kim, and Junho Song. “Bouc–Wen Class Models Considering Hysteresis Mechanism of RC Columns in Nonlinear Dynamic Analysis.” International Journal of Non-Linear Mechanics 148 (January 2023): 104263. [doi: 10.1016/j.ijnonlinmec.2022.104263](https://doi.org/10.1016/j.ijnonlinmec.2022.104263).
+
+- Bouc–Wen class models considering hysteresis mechanism of RC columns in nonlinear dynamic analysis [doi: 10.1016/j.ijnonlinmec.2022.104263](https://doi.org/10.1016/j.ijnonlinmec.2022.104263)
 
 - Haukaas, T. and Der Kiureghian, A. (2003). "Finite element
   reliability and sensitivity methods for performance-based earthquake
   engineering." REER report, PEER-2003/14 <a href="https://peer.berkeley.edu/sites/default/files/0314_t._haukaas_a._der_kiureghian.pdf">link</a>.
-- Baber, T. T. and Noori, M. N. (1985). "Random vibration of degrading, pinching systems." Journal of Engineering Mechanics, 111(8), 1010-1026.
-<p>Bouc, R. (1971). "Mathematical model for hysteresis." Report to the
-Centre de Recherches Physiques, pp16-25, Marseille, France.</p>
-- Wen, Y.-K. (1976). \Method for random vibration of hysteretic
-systems." Journal of Engineering Mechanics Division, 102(EM2),
-249-263.
 
-- <a href="http://www.sciencedirect.com/science/article/pii/S0141029613003568">Hossain,
-   M. R., Ashraf, M., &amp; Padgett, J. E. (2013). "Risk-based seismic
-   performance assessment of Yielding Shear Panel Device." Engineering
-   Structures, 56, 1570-1579.</a>
-
-- <a href="http://www.sciencedirect.com/science/article/pii/S0263823112001206">Hossain,
-   M. R., &amp; Ashraf, M. (2012). "Mathematical modelling of yielding
-   shear panel device." Thin-Walled Structures, 59, 153-161.</a>
-
+- Baber, T. T. and Noori, M. N. (1985). "Random vibration of degrading, pinching systems." 
+  Journal of Engineering Mechanics, 111(8), 1010-1026.
+- Bouc, R. (1971). "Mathematical model for hysteresis." 
+  Report to the Centre de Recherches Physiques, pp16-25, Marseille, France.
+- Wen, Y.-K. (1976). Method for random vibration of hysteretic systems." 
+  Journal of Engineering Mechanics Division, 102(EM2), 249-263.
 - Baber, T. T., &amp; Noori, M. N. (1986). "Modeling general hysteresis
   behavior and random vibration application." Journal of Vibration
   Acoustics Stress and Reliability in Design, 108, 411.
 - Foliente, G. C. (1995). Hysteresis modeling of wood joints and
   structural systems. Journal of Structural Engineering, 121(6), 1013-1022.
 
+-  Hossain, M. R., Ashraf, M., &amp; Padgett, J. E. (2013). "Risk-based seismic
+   performance assessment of Yielding Shear Panel Device." Engineering
+   Structures, 56, 1570-1579. <a href="http://www.sciencedirect.com/science/article/pii/S0141029613003568">doi</a>
+
+-  Hossain, M. R., &amp; Ashraf, M. (2012). "Mathematical modelling of yielding
+   shear panel device." Thin-Walled Structures, 59, 153-161. <a href="http://www.sciencedirect.com/science/article/pii/S0263823112001206">doi</a>
+
+
 <hr />
 
-## Developers
-
-<p><a
-href="http://scholar.google.com.au/citations?user=I_li3qkAAAAJ&hl=en&oi=ao">Raquib
-Hossain</a>, <a href="http://www.uq.edu.au/">The University of
-Queensland (UQ), Australia</a> &amp; <a
-href="http://www.buet.ac.bd/">Bangladesh University of Engineering and
-Technology (BUET), Bangladesh.</a></p>

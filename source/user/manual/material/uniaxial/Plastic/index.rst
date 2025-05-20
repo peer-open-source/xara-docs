@@ -1,11 +1,11 @@
-Steel
-^^^^^
+Plastic
+^^^^^^^
 
 .. tabs::
 
    .. tab:: Python 
           
-        .. py:method:: Model.uniaxialMaterial('Steel', tag, E, Y, Hiso, Hkin, eta=None)
+        .. py:method:: Model.uniaxialMaterial("Plastic", tag, E, Fy, Hiso, Hkin, eta=None)
             :no-index:
 
             Define a plastic material with linear isotropic and kinematic hardening.

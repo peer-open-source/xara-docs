@@ -33,22 +33,26 @@ These quantities are typically stress and strain, but can also be force and defo
 
 The following subsections contain information about ``type`` 
 
-#. Elastic 
+#. Standard Materials 
   
    .. toctree::
       :maxdepth: 1
 
       Elastic
+      Plastic/index
+      ode/bouc-wen
+      viscous/Maxwell
 
 
-#. Steel & Metallic Materials
+#. Steel & Concrete Materials
 
    .. toctree::
       :maxdepth: 1
 
-      Steel/index
-      Steel01/index
       Steel02/index
+      Concrete02/index
+      Concrete04
+      ASDConcrete1D
 
 
 ..
@@ -61,26 +65,8 @@ The following subsections contain information about ``type``
       uniaxialMaterials/DuctileFracture
       uniaxialMaterials/UVCuniaxial
 
-#. Concrete
-
-   .. toctree::
-      :maxdepth: 1
-
-      Concrete01/index
-      Concrete02/index
-      Concrete04
-      ASDConcrete1D
-
 
 #. Viscous 
-
-
-#. Evolution 
-
-   .. toctree::
-      :maxdepth: 1
-
-      ode/bouc-wen
 
 #. Wrappers 
 

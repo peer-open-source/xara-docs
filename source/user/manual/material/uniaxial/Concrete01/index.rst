@@ -12,11 +12,11 @@ This command is used to construct a uniaxial Kent-Scott-Park concrete material w
       .. py:method:: uniaxialMaterial("Concrete01", tag, fpc, epsc0, fpcu, epsU)
          :no-index:
 
-         :param int tag: integer tag identifying material.
-         :param float Fc: peak compressive stress, typically the concrete strength at 28 days :math:`f'_c`.
-         :param float epsc0: strain at peak stress.
-         :param float Fcu: Ultimate stress, typically the concrete crushing strength :math:`f'_{cu}`.
-         :param float epsU: concrete strain at crushing strength*.
+         :param int   tag: integer tag identifying material.
+         :param float peak_stress: peak compressive stress, typically the concrete strength at 28 days :math:`f'_c` (``Fc``).
+         :param float peak_strain: strain at peak stress, :math:`\varepsilon_{c0}`.
+         :param float final_stress: Ultimate stress, typically the concrete crushing strength :math:`f'_{cu}` (``Fcu``).
+         :param float final_strain: concrete strain at crushing strength.
    
    .. tab:: Tcl
 
