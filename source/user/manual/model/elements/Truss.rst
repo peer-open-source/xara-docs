@@ -1,12 +1,6 @@
 Truss
 ^^^^^
 
-This command is used to construct a truss element. 
-There are two ways to construct a truss element:
-
-
-One way is to specify an area and a ``UniaxialMaterial`` identifier:
-
 .. tabs::
 
    .. tab:: Python
@@ -55,7 +49,8 @@ One way is to specify an area and a ``UniaxialMaterial`` identifier:
 Examples
 --------
 
-Create a truss element with tag 1 added between nodes 2 and 4 with area 5.5 that uses material 9.
+Create a truss element with tag 1 added between nodes 2 and 4 with area 5.5 that uses material 1.
+In the first two variants, a :ref:`Truss <TrussSection>` section is defined.
 
 .. tabs::
 
@@ -73,14 +68,20 @@ Create a truss element with tag 1 added between nodes 2 and 4 with area 5.5 that
         model.element("Truss", 1, (1, 2), section=1)
 
 
-
-
-
-  .. tab:: Tcl
+  .. tab:: OpenSees
 
      .. code-block:: Tcl
 
-        element Truss 1 2 4 5.5 9;
+        uniaxialMaterial Elastic 1 29e3
+        section Truss 1 -material 1 -area 5.5
+        element Truss 1 2 4 -section 1;
+
+
+  .. tab:: Tcl (legacy)
+
+     .. code-block:: Tcl
+
+        element Truss 1 2 4 5.5 1;
 
 Code Developed by: |fmk|
 
