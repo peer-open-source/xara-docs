@@ -1,8 +1,9 @@
 # DegradingPinchedBW
 
-- [User](https://github.com/GiacomoGr) University of Modena and Reggio Emilia
+- [GitHub user `GiacomoGr`](https://github.com/GiacomoGr) University of Modena and Reggio Emilia
 - Matteo Pelliciari, Phd (University of Modena and Reggio Emilia, Dept. of Engineering “Enzo Ferrari”, Modena)
 - Professor Davide Lavorato (Roma Tre University, Dept. of Architecture, Rome).
+
 
 |   Parameter       |  Role  |
 |-------------------|--------------------------------------|
@@ -22,7 +23,7 @@
 | $\epsilon_{p}$ |  Pinching activation energy  |
 
 
-- [https://github.com/OpenSees/OpenSees/pull/335](merge)
+- [GitHub PR #335](https://github.com/OpenSees/OpenSees/pull/335)
 
 $$
 \begin{aligned}

@@ -33,11 +33,13 @@ This command configures a Section, which represents a constitutive model between
 Library
 -------
 
+
 The following section types are valid for :ref:`frame` elements:
 
 .. toctree::
    :maxdepth: 1
 
+   section/Truss
    section/ElasticFrame
    section/axial/index
    section/ShearFiber
