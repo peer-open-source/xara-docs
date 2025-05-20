@@ -99,14 +99,6 @@ Typical values are ``R0`` between 10 and 20, ``cR1=0.925``, ``cR2=0.15``
 where :math:`\bar{\sigma}=\sigma/F_y`, :math:`\bar{\varepsilon}=\varepsilon/\varepsilon_y`, :math:`(F_y, \varepsilon_y)` is the yield point, :math:`b` is the strain hardening parameter, and the parameter :math:`r` influences the shape of the transition curve and takes account of the Bauschinger effect. 
 A hysteretic loading-reloading algorithm for this curve was proposed by \cite{giuffre1970comportamento}, which was extended by \cite{filippou1983effects} to include isotropic hardening.
 
-If ``siginit`` is specified, strain is calculated from epsP=$sigInit/$E
-
-.. code:: c++
-
-  if (sigInit!= 0.0)
-     this->eps = trialStrain + sigInit/E; 
-  else
-     this->eps = trialStrain;
 
 
 Example 
