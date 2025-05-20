@@ -69,14 +69,14 @@ stiffness and strength degradation and in [\[MadanEtAl1997\]](#MadanEtAl1997){.c
 Parameters `deltak`, `deltaf` and `psi` regulate respectively stiffness,
 strength degradation and the rate of stiffness degradation.
 
-![](/OpenSeesRT/contrib/static/BoucWenInfill1.png){.align-centeralign-center}
+![](/_static/wiki/BoucWenInfill1.png){.align-centeralign-center}
 
 Parameters `Zs`, `As` and `epsp` control the amount and activation of
 the pinching effect:
 
-![](/OpenSeesRT/contrib/static/BoucWenInfill2.png){.align-centeralign-center}
+![](/_static/wiki/BoucWenInfill2.png){.align-centeralign-center}
 
-![](/OpenSeesRT/contrib/static/BoucWenInfill3.png){.align-centeralign-center}
+![](/_static/wiki/BoucWenInfill3.png){.align-centeralign-center}
 
 
 ## Examples
@@ -89,7 +89,7 @@ The following instruction builds a *BoucWenInfill* material with tag
 ``` tcl
 uniaxialMaterial BoucWenInfill 1 1 0.06 0.25 0.1 1.2 65 1 0.005 0.005 0.001 0.01 5 10000 10e-6 10e6
 ```
-:::
+
 
 ## References
 

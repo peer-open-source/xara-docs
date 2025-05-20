@@ -153,6 +153,11 @@ This material superceeds the following materials, which are supported for legacy
       `The University of Queensland (UQ), Australia <http://www.uq.edu.au/>`__ 
       and
       `Bangladesh University of Engineering and Technology (BUET) <http://www.buet.ac.bd/>`__
+   
+   .. tab:: BoucWenInfill
+      
+      See `this <./BoucWenInfill.html>`__ page.
+
 ```
 
 
@@ -260,6 +265,7 @@ docs/contrib/examples/31-BWBNExample.html
 - Kim, Taeyong, Oh‐Sung Kwon, and Junho Song. “Deep Learning Based Seismic Response Prediction of Hysteretic Systems Having Degradation and Pinching.” Earthquake Engineering & Structural Dynamics 52, no. 8 (July 2023): 2384–2406. [doi: 10.1002/eqe.3796](https://doi.org/10.1002/eqe.3796).
 
 - Oh, Sebin, Taeyong Kim, and Junho Song. “Bouc–Wen Class Models Considering Hysteresis Mechanism of RC Columns in Nonlinear Dynamic Analysis.” International Journal of Non-Linear Mechanics 148 (January 2023): 104263. [doi: 10.1016/j.ijnonlinmec.2022.104263](https://doi.org/10.1016/j.ijnonlinmec.2022.104263).
+- Oh, Sebin "Hysteresis Modeling Framework Using Bouc-Wen Model Considering Cracking Effects" [link](https://www.google.com/url?sa=i&url=https%3A%2F%2Fs-space.snu.ac.kr%2Fbitstream%2F10371%2F188999%2F1%2FMaster%2527s%2520Thesis_Sebin%2520Oh_submitted.pdf&psig=AOvVaw3cADUJYyciiRK_CJRkU770&ust=1747809408919000&source=images&cd=vfe&opi=89978449&ved=0CAYQrpoMahcKEwjw0crNt7GNAxUAAAAAHQAAAAAQBA)
 
 - Bouc–Wen class models considering hysteresis mechanism of RC columns in nonlinear dynamic analysis [doi: 10.1016/j.ijnonlinmec.2022.104263](https://doi.org/10.1016/j.ijnonlinmec.2022.104263)
 
