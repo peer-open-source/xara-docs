@@ -42,12 +42,13 @@ One way is to specify an area and a ``UniaxialMaterial`` identifier:
 
 * The valid queries to a truss element when creating an ElementRecorder
   object are 
+
   * ``"axialForce"``, 
   * ``"forces"`` 
   * ``"localForce"``, 
   * ``"deformations"``, 
-  * ``"material *$args"`` 
-  * ``"section *$args"``
+  * ``"material $args"`` 
+  * ``"section $args"``
 
 
 
@@ -61,8 +62,19 @@ Create a truss element with tag 1 added between nodes 2 and 4 with area 5.5 that
   .. tab:: Python
 
      .. code-block:: Python
+
+        import xara
+
+        model = xara.Model(ndm=2, ndf=3)
+        model.node(1, (0.0, 0.0))
+        model.node(2, (1.0, 0.0))
+        model.uniaxialMaterial("Elastic", 1, 29e3)
         model.section("Truss", 1, area=5.5, material=1)
-        model.element("Truss", 1, (2, 4), section=1)
+        model.element("Truss", 1, (1, 2), section=1)
+
+
+
+
 
   .. tab:: Tcl
 
