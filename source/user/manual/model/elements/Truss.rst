@@ -49,7 +49,7 @@ Truss
 Examples
 --------
 
-Create a truss element with tag 1 added between nodes 2 and 4 with area 5.5 that uses material 1.
+Create a truss element with tag 1 added between nodes 1 and 2 with area 5.5 that uses material 1.
 In the first two variants, a :ref:`Truss <TrussSection>` section is defined.
 
 .. tabs::
@@ -74,14 +74,14 @@ In the first two variants, a :ref:`Truss <TrussSection>` section is defined.
 
         uniaxialMaterial Elastic 1 29e3
         section Truss 1 -material 1 -area 5.5
-        element Truss 1 2 4 -section 1;
+        element Truss 1 1 2 -section 1;
 
 
   .. tab:: Tcl (legacy)
 
      .. code-block:: Tcl
 
-        element Truss 1 2 4 5.5 1;
+        element Truss 1 1 2 5.5 1;
 
 Code Developed by: |fmk|
 
