@@ -3,7 +3,6 @@
 Elastic 
 ^^^^^^^
 
-
 .. py:method:: Model.uniaxialMaterial("Elastic", 1, E, eta=0)
    :no-index:
 
