@@ -81,6 +81,7 @@ Typical values are ``R0`` between 10 and 20, ``cR1=0.925``, ``cR2=0.15``
 .. figure:: figures/Steel02-Backbone.png
 	:align: center
 	:figclass: align-center
+        :alt: Monotonic envelope curve produced by Steel02
 
 	Steel02 monotonic envelope
 
@@ -88,6 +89,7 @@ Typical values are ``R0`` between 10 and 20, ``cR1=0.925``, ``cR2=0.15``
 .. figure:: figures/Steel02-Cycling.png
 	:align: center
 	:figclass: align-center
+        :alt: Hysteretic curves of Steel02 without isotropic hardening
 
 	Hysteretic behavior without isotropic hardening
 
