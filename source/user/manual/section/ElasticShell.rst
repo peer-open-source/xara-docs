@@ -33,7 +33,7 @@ The constitutive relationship of a linear elastic isotropic shell is
   \boldsymbol{m} \\
   \boldsymbol{q}
   \end{array}\right)
-  =\underbrace{\left[\begin{array}{cccccccc}
+  =\underbrace{\left[\begin{array}{ccc|ccc|cc}
   M & \nu M & 0 & 0 & 0 & 0 & 0 & 0 \\
   \nu M & M & 0 & 0 & 0 & 0 & 0 & 0 \\
   0 & 0 & G & 0 & 0 & 0 & 0 & 0 \\
