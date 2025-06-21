@@ -23,11 +23,13 @@ The section is defined by a collection of fibers that discretize the cross-secti
          
          :param tag: unique section tag
 
+
 .. figure:: figures/w8x28.png
    :align: center
    :width: 50%
 
    Example of an AISC *W8x28* section discretized with fibers and rendered with `veux <https://veux.io>`__.
+
 
 The ``fiber`` method is used to populate the section with fibers. The required arguments are:
 
@@ -35,7 +37,7 @@ The ``fiber`` method is used to populate the section with fibers. The required a
 
    .. tab:: Python
     
-      .. py:method:: Model.fiber((y, z), A, tag, warp, section)
+      .. py:method:: Model.fiber((y, z), A, tag, material, warp, section)
 
          :param y: :math:`y`-coordinate of the fiber
          :type y: float
