@@ -12,6 +12,8 @@ The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
       .. py:method:: Model.element("PrismFrame", tag, nodes, section=None, transform=None, *args)
          :no-index:
          
+         Create a linear elastic prismatic frame element.
+         
          :param tag: unique :ref:`element` tag
          :type tag: |integer|
          :param nodes: tuple of *two* integer :ref:`node` tags
@@ -20,6 +22,8 @@ The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
          :type section: |integer|
          :param transform: identifier for previously-defined coordinate-transformation
          :type transform: |integer|
+         :param shear: flag indicating whether shear deformations are included (default is ``0``)
+         :type shear: |integer|, optional
 
    .. tab:: Tcl
 
@@ -63,10 +67,10 @@ of **5.5**, Young's modulus :math:`E` of **100.0** and an Iz of **1e6** which us
 Theory
 ------
 
-Warping
-=======
+.. Warping
+.. =======
 
-@baigent1982structural
+.. @baigent1982structural
 
 
 Code developed by: |cmp|, |fmk|
