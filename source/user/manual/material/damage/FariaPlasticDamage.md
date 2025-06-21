@@ -13,17 +13,17 @@
    :type E: |float|
    :param nu: Poisson ratio :math:`\nu`
    :type nu: |float|
-   :param Ft: tensile yield strength :math:`F_t`
+   :param Ft: tensile strength :math:`F_t`
    :type Ft: |float|
-   :param Fc: compressive yield strength :math:`F_c`
+   :param Fc: compressive strength :math:`F_c`
    :type Fc: |float|
-   :param beta: parameter controlling plastic strain rate/post-yield hardening parameter
+   :param beta: parameter :math:`\beta` controlling plastic strain rate/post-yield hardening parameter
    :type beta: |float|
-   :param Ap: parameter controlling tensile fracture energy
+   :param Ap: parameter :math:`A_p` controlling tensile fracture energy
    :type Ap: |float|
-   :param An: parameter controlling ductility of the compressive response
+   :param An: parameter :math:`A_n` controlling ductility of the compressive response
    :type An: |float|
-   :param Bn: parameter controlling ductility and peak strength of the compressive response
+   :param Bn: parameter :math:`B_n` controlling ductility and peak strength of the compressive response
    :type Bn: |float|
 
 ```
@@ -49,12 +49,10 @@ $$
 $$
 where $A_p, A_n$, and $B_n$ are damage parameters that describe the softening behavior of the stress-strain relation, as reported in *Faria et al. (1998)*.
 
--------------
-
 Let
 
 $$
-\alpha = \frac{r^{-}_{0}}{r^{-}},\quad 
+\alpha \triangleq \frac{r^{-}_{0}}{r^{-}},\quad 
 x = B_n\Bigl(1 - \frac{r^{-}}{r^{-}_{0}}\Bigr)
 $$
 
@@ -68,9 +66,6 @@ In this form:
 
 * $(1-\alpha)$ is often small but computed in one go.
 * $\mathrm{expm1}(x)$ accurately gives $\exp(x)-1$ even when $x\approx 0$.
-
-
-------------
 
 
 When $\displaystyle r^{+} \approx r^{+}_{0}$, directly computing
@@ -91,10 +86,9 @@ $$
 Rewrite
 
 $$
-   d^{+} = 1 - \alpha\, \exp{x}
+d^{+} = 1 - \alpha\, \exp{x}
       = \bigl(1-\alpha\bigr)\;-\;\alpha\,(\exp{x}-1)
 $$
-
 
 * `std::expm1(x)` for $\exp{x} - 1$ when $|x|\ll1$.
 * `std::fma(a,b,c)` for $a\cdot b + c$ in one rounding step.
@@ -102,8 +96,9 @@ $$
 
 ## Examples
 
-The properties of confined concrete were used for the boundaries, and those of unconfined concrete for the web (with $f^{\prime}_c= 45 \mathrm{Mpa}$ and $E_c=36,900 \mathrm{MPa}$ [45]). 
-For unconfined concrete the following material parameters were adopted: $E_c=36,900 \mathrm{Mpa}, \nu=0.2$ $F_c=25.6$ МPa, $F_t=5 \mathrm{Mpa}, B_n=0.75, \beta=0.5, A_n=5, A_p=0.1$, whereas for confined concrete $F_t$ and $\beta$ were kept the same and the remaining parameters were modified as follows: $F_c=28 \mathrm{Mpa}, B_n=0.7$, $A_n=3, A_p=0.05$. 
+The properties of confined concrete were used for the boundaries, and those of unconfined concrete for the web (with $F_c= 45 \mathrm{Mpa}$ and $E_c=36,900 \mathrm{MPa}$). 
+For unconfined concrete the following material parameters were adopted: $E_c=36,900 \mathrm{Mpa}, \nu=0.2$ $F_c=25.6$ МPa, $F_t=5 \mathrm{Mpa}, B_n=0.75, \beta=0.5, A_n=5, A_p=0.1$.
+For confined concrete $F_t$ and $\beta$ were kept the same and the remaining parameters were modified as follows: $F_c=28 \mathrm{Mpa}, B_n=0.7$, $A_n=3, A_p=0.05$. 
 
 
 
