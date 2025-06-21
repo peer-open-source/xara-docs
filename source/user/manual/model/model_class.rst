@@ -16,7 +16,7 @@ exposed as methods.
 
    :param |integer| ndm: number of dimensions
    :param |integer| ndf: number of dofs (optional, default ``ndm*(ndm+1)/2``)
-   :param *FileLike* echo_file: Optional file handle to write command history to.
+   :param *FileLike* echo_file: Optional file handle to write command history to. This allows OpenSeesPy scripts to be converted *exactly* to Tcl. See :ref:`<serialization>` below.
 
    .. py:attribute:: ndm
       :type: int
@@ -52,8 +52,8 @@ This interpreter can be be used from Python to invoke either Tcl or Python comma
 These additional commands are described in the subsequent sections.
 
 
-Example
--------
+Examples
+--------
 
 The following examples demonstrate the creation of a ``Basic`` model builder that will 
 create nodes with in 2D space (``ndm`` of ``2``) and with ``ndf=3`` degrees-of-freedom at each node.
@@ -67,7 +67,47 @@ create nodes with in 2D space (``ndm`` of ``2``) and with ``ndf=3`` degrees-of-f
    model.node(1, 2.0, 3.0)
    ...
 
-For more examples, visit the STAIRlab example `gallery <https://gallery.stairlab.io>`_.
+
+.. _serialization:
+
+Serializing OpenSeesPy
+======================
+
+This example demonstrates how run OpenSeesPy scripts with xara, and optionally serialize them to faster Tcl files.
+Consider the following OpenSeesPy script which builds a truss model:
+
+.. code-block:: Python
+
+   import openseespy.opensees as ops
+   # remove existing model
+   ops.wipe()
+   
+   # set modelbuilder
+   ops.model('basic', '-ndm', 2, '-ndf', 2)
+   
+   # create nodes
+   ops.node(1,   0.0,  0.0)
+   ops.node(2, 144.0,  0.0)
+   ops.node(3, 168.0,  0.0)
+   ops.node(4,  72.0, 96.0)
+   
+   # set boundary condition
+   ops.fix(1, 1, 1)
+   ops.fix(2, 1, 1)
+   ops.fix(3, 1, 1)
+
+
+All that is required to run this with |xara| is to change the import on the first line to:
+.. code-block:: Python
+
+   import opensees.openseespy as ops
+
+..
+  However, it is also good practices to ...
+  You may also want to remove the ``ops.wipe()`` call, as it is no longer needed. This is because |xara|
+  is implemented safely *without* internal global variables, 
+
+For more examples, visit the STAIRlab example `gallery <https://gallery.stairlab.io>`__.
 
 Code Developed by: |cmp|
 

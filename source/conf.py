@@ -2,8 +2,6 @@
 import os
 import sys
 from pathlib import Path
-# import sphinx_rtd_theme
-#sys.path.append(os.path.abspath('./sphinx_ext/'))
 
 #
 # -- Project information -----------------------------------------------------
