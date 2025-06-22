@@ -12,6 +12,7 @@ Modeling
   Loads in are assigned to **LoadPatterns**. 
   Also associated with load patterns are **TimeSeries** objects and sometimes constraints when specifying time-varying single-point constraints. 
 
+The *Modeling* methods are used to programatically build a finite element model. 
 
 
 .. toctree::

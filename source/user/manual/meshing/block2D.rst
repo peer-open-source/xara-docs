@@ -9,6 +9,8 @@ block2D
    .. tab:: Python 
       
       .. py:method:: Model.block2D(div, *args)
+
+         Generate a structured mesh of planar elements by subdividing an isoparametric quadrilateral.
       
          :param div: tuple of two integers specifying the number of divisions in each direction
          :type div: tuple
