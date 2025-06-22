@@ -48,6 +48,7 @@ Allow: /user/manual/parameter/index.html
 Allow: /user/manual/section.html
 Allow: /user/manual/section/ShearFiber.html
 Allow: /user/manual/section/ShellFiber.html
+Allow: /user/manual/section/ElasticShell.html
 Allow: /user/manual/output/print.html
 Allow: /user/manual/output/printB.html
 Allow: /user/manual/output/getTime.html
@@ -59,6 +60,7 @@ Allow: /user/manual/analysis/index.html
 Allow: /user/manual/analysis/system.html
 Allow: /user/manual/analysis/system/BandGeneral.html
 Allow: /user/manual/analysis/system/Umfpack.html
+Allow: /user/manual/analysis/system/SparseSYM.html
 Allow: /user/manual/analysis/analysis.html
 Allow: /user/manual/analysis/integrator.html
 Allow: /user/manual/analysis/integrator/ArcLength.html
