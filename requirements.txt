@@ -5,7 +5,7 @@ opensees
 xara
 sphinx-book-theme
 sphinx-tabs
-sphinx-sitemap
+sphinx-sitemap<2.7.0
 sphinx-copybutton
 sphinxcontrib-bibtex
 myst-parser
