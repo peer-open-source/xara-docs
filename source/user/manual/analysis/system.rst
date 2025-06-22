@@ -1,7 +1,7 @@
 .. _system:
 
-system (James Stuff)
-********************
+system
+******
 
 .. tabs::
 

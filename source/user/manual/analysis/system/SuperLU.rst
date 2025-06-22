@@ -37,7 +37,7 @@ The following example shows how to construct a *SuperLU* system
 References
 ----------
 
-- James W. Demmel and Stanley C. Eisenstat and John R. Gilbert and Xiaoye S. Li and Joseph W. H. Liu, "A supernodal approach to sparse partial pivoting", SIAM J. Matrix Analysis and Applications, 20(3), 720-755, 1999.
+- James W. Demmel and Stanley C. Eisenstat and John R. Gilbert and Xiaoye S. Li and Joseph W. H. Liu, "A supernodal approach to sparse partial pivoting", SIAM J. Matrix Analysis and Applications, 20(3), 720-755, 1999. `link <https://portal.nersc.gov/project/sparse/xiaoye-web/simax-29176.pdf>`__ doi: `10.1137/S0895479895291765 <https://doi.org/10.1137/S0895479895291765>`__
 
 
 Code developed by: |fmk|

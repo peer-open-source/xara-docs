@@ -8,6 +8,7 @@ Allow: /launch.html
 Allow: /sitemap.xml
 Allow: /cite.html
 Allow: /robots.txt
+Allow: /_images/
 Allow: /_images/ExactFrame_Fig1.png
 Allow: /_images/ForceFrame.png
 Allow: /_images/Q9.svg
@@ -34,6 +35,7 @@ Allow: /user/manual/model/elements/plane/Quad.html
 Allow: /user/manual/model/elements/plane/EnhancedQuad.html
 Allow: /user/manual/model/elements/plane/MixedQuad.html
 Allow: /user/manual/meshing/surface.html
+Allow: /user/manual/material/friction/
 Allow: /user/manual/material/ndMaterials/ElasticOrthotropic.html
 
 Allow: /user/manual/material/plastic/J2Plasticity.html
