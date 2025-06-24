@@ -75,7 +75,7 @@ $Node6 $Node7 $Node8 $Node9 $thick $matTag $bulk $fmass
 </tbody>
 </table>
 <figure>
-<img src="/OpenSeesRT/contrib/static/Elem9_4QuadUp.png" title="Elem9_4QuadUp.png"
+<img src="/_static/wiki/Elem9_4QuadUp.png" title="Elem9_4QuadUp.png"
 alt="Elem9_4QuadUp.png" />
 <figcaption aria-hidden="true">Elem9_4QuadUp.png</figcaption>
 </figure>

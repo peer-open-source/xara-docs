@@ -71,7 +71,7 @@ $Node6 $Node7 $Node8 $matTag $bulk $fmass $PermX $PermY :math:`PermZ
 </tbody>
 </table>
 <figure>
-<img src="/OpenSeesRT/contrib/static/BrickUp.png" title="BrickUp.png" alt="BrickUp.png" />
+<img src="/_static/wiki/BrickUp.png" title="BrickUp.png" alt="BrickUp.png" />
 <figcaption aria-hidden="true">BrickUp.png</figcaption>
 </figure>
 <table>
