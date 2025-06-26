@@ -12,7 +12,7 @@
 	Fig. 1: Torsional instability captured by the **ExactFrame** formulation and rendered with `veux <https://veux.io>`__.
 
 
-The **ExactFrame** element is a geometrically exact beam element based on Simo's
+The **ExactFrame** element is a geometrically exact [4]_ beam element based on Simo's
 parameterization [1]_ of Antman's *Special Cosserat Rod* [2]_. 
 This element is formulated without any geometric simplifications, and consequently,
 is capable of modeling highly nonlinear geometric phenomena with extreme accuracy.
@@ -102,6 +102,7 @@ References
 
 .. [3] Perez, C.M. and Filippou, F.C. (2024) ‘On nonlinear geometric transformations of finite elements’, International Journal for Numerical Methods in Engineering, p. e7506. Available at: https://doi.org/10.1002/nme.7506.
 
+.. [4]  "geometrically exact" in this context refers to a specific class of formulations that are highly accurate in capturing geometric nonlinearities associated with large deformations and rotations, as seen in beam and shell theories. They are still approximations, but they aim for greater fidelity to the underlying physical theory by considering all relevant geometric terms without simplification. 
 
 Code developed by: |cmp|
 
