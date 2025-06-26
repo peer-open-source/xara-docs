@@ -79,17 +79,18 @@ The following example demonstrates the command to create an **ExactFrame** eleme
 
 .. tabs::
 
-   .. tab:: Tcl
-
-      .. code-block:: tcl
-
-         element ExactFrame 1 1 2 -section 1 -transform 1
-
    .. tab:: Python
 
       .. code-block:: python
 
          model.element('ExactFrame', 1, (1, 2), section=1, transform=1)
+
+   .. tab:: OpenSees (Tcl)
+
+      .. code-block:: tcl
+
+         element ExactFrame 1 1 2 -section 1 -transform 1
+
 
 
 
