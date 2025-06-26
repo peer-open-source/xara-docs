@@ -49,6 +49,7 @@ Allow: /user/manual/section.html
 Allow: /user/manual/section/ShearFiber.html
 Allow: /user/manual/section/ShellFiber.html
 Allow: /user/manual/section/ElasticShell.html
+Allow: /user/manual/output/index.html
 Allow: /user/manual/output/print.html
 Allow: /user/manual/output/printB.html
 Allow: /user/manual/output/getTime.html
