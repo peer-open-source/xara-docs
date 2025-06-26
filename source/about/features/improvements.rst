@@ -3,7 +3,7 @@ Additions
 
 Unlike other Python packages which merely wrap the broken OpenSeesPy package, *xara* employs a completely new interface layer that is implemented in C++.
 
-- No global state. It is well know that software should not exhibit global state. [1](https://www.cs.utexas.edu/~EWD/transcriptions/EWD10xx/EWD1036.html), [2](https://testing.googleblog.com/2008/08/root-cause-of-singletons.html), [3](https://embeddedartistry.com/fieldatlas/the-problems-with-global-variables/?utm_source=chatgpt.com), [4](https://betterembsw.blogspot.com/2014/06/minimize-use-of-global-variables.html), [5](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Ri-global), [6](https://isocpp.org/wiki/faq/coding-standards#global-vars)
+- No global state. It is well know that software should not exhibit global state. [1](https://www.cs.utexas.edu/~EWD/transcriptions/EWD10xx/EWD1036.html), [2](https://testing.googleblog.com/2008/08/root-cause-of-singletons.html), [3](https://embeddedartistry.com/fieldatlas/the-problems-with-global-variables/?utm_source=chatgpt.com), [4](https://betterembsw.blogspot.com/2014/06/minimize-use-of-global-variables.html), [5](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Ri-global), [6](https://isocpp.org/wiki/faq/coding-standards#global-vars), [7](https://www.learncpp.com/cpp-tutorial/why-non-const-global-variables-are-evil/)
 
 - Improved :ref:`printA <printA>` for obtaining structural matrices:
 
