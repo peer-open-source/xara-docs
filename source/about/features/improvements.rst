@@ -4,6 +4,7 @@ Additions
 Unlike other Python packages which merely wrap the broken OpenSeesPy package, *xara* employs a completely new interface layer that is implemented in C++.
 
 - No global state. It is well know that software should not exhibit global state. 
+
   - https://www.cs.utexas.edu/~EWD/transcriptions/EWD10xx/EWD1036.html
   - https://testing.googleblog.com/2008/08/root-cause-of-singletons.html
   - https://embeddedartistry.com/fieldatlas/the-problems-with-global-variables/?utm_source=chatgpt.com
