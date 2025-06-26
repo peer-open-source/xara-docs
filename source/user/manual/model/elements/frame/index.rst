@@ -33,6 +33,15 @@ Available frame elements include
    CubicFrame
    ExactFrame
 
+
+To use frame elements in OpenSees models, you'll need to:
+
+#. Define nodes with appropriate coordinates
+#. Create a coordinate transformation with the element orientation
+#. Define section behavior for the element
+#. Create the frame element, connecting it to nodes, sections, and transformation
+#. Apply loads and boundary conditions
+
 Loads include
 
 .. toctree::
@@ -52,3 +61,11 @@ The embedding in space is described by:
 * A vector field :math:`\boldsymbol{\alpha}(\xi)` identifying cross-sectional warping.
 
 
+Some phenomena that can be modeled with frame elements include:
+
+* Distrubuted loads
+* Follower loads 
+* Plastic hinges
+* Arbitrarily large rotations
+* Lateral-torsional buckling of beams,
+* Restrained torsional warping 
