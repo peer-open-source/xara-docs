@@ -98,6 +98,7 @@ Consider the following OpenSeesPy script which builds a truss model:
 
 
 All that is required to run this with |xara| is to change the import on the first line to:
+
 .. code-block:: Python
 
    import opensees.openseespy as ops
