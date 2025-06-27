@@ -28,15 +28,6 @@ exposed as methods.
 
       The number of degrees-of-freedom at each node.
 
-.. note:: 
-
-   The ``Model`` class is currently only available in the experimental 
-   `xara <http://pypi.org/project/xara>`_ Python package.
-   To install ``xara``, just run:
-
-   .. code-block:: bash
-
-      pip install xara
 
 ..
    This experimental package exposes an identical interface to ``openseespy``, but must
