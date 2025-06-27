@@ -5,6 +5,7 @@ Truss
 
    .. tab:: Python
       .. py:method:: Model.element("Truss", tag, nodes, section, density=0)
+         :no-index:
 
          Create a truss element with tag *tag* between the nodes in *nodes* with
          cross-sectional area *section*.
