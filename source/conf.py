@@ -88,6 +88,7 @@ rst_prolog = """
 extensions = [
 #   'toctree_filter',
 #   'sphinx_rtd_theme',
+    'sphinxcontrib.googleanalytics',
     'sphinx_copybutton',
     'sphinx_tabs.tabs',
     "sphinx.ext.autosummary",
@@ -99,6 +100,7 @@ myst_enable_extensions = [
     "dollarmath",
     "attrs_inline"
 ]
+googleanalytics_id = "G-35GQBT0DZP"
 
 bibtex_bibfiles = ["references.bib"]
 

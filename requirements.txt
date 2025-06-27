@@ -8,5 +8,6 @@ sphinx-tabs
 sphinx-sitemap<2.7.0
 sphinx-copybutton
 sphinxcontrib-bibtex
+sphinxcontrib-googleanalytics
 myst-parser
 
