@@ -3,13 +3,13 @@
 algorithm
 ^^^^^^^^^
 
-This method is used to define a ``SolutionAlgorithm``, which determines the sequence of steps taken to solve the non-linear equation.
-
 .. tabs::
 
    .. tab:: Python
 
       .. py:method:: Model.algorithm(name, *args)
+
+         Configure a root-finding algorithm to solve the nonlinear residual equations.
 
    .. tab:: Tcl
 
@@ -18,6 +18,7 @@ This method is used to define a ``SolutionAlgorithm``, which determines the sequ
 
 where ``name`` is a string indentifying one of the following algorithms:
 
+
 .. toctree::
    :maxdepth: 1
 
@@ -25,9 +26,8 @@ where ``name`` is a string indentifying one of the following algorithms:
    algorithm/Newton
    algorithm/NewtonLineSearch
    algorithm/ModifiedNewton
-   algorithm/KrylovNewton
-   algorithm/SecantNewton
-   algorithm/BFGS
+   algorithm/AcceleratedNewton
    algorithm/Broyden
    algorithm/ExpressNewton
+
 

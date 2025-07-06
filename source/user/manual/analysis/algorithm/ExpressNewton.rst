@@ -3,7 +3,8 @@
 ExpressNewton
 ^^^^^^^^^^^^^
 
-*ExpressNewton* accepts the solution after a constant number of Newton-Raphson iterations using a constant system Jacobian matrix. It is advised to be combined with transient integrators only. 
+*ExpressNewton* accepts the solution after a constant number of Newton-Raphson iterations using a constant system Jacobian matrix. 
+It is advised to be combined with transient integrators only. 
 
 .. tabs::
 
@@ -30,6 +31,7 @@ ExpressNewton
 
 
 The strategy of the *ExpressNewton* algorithm is to adopt a typical transient integrator and accept the solution after a constant number of iterations using a constant system Jacobian matrix. The algorithm inherits the advantages of the host transient integrators, such as the unconditional stability, the order of accuracy, and the numerical dissipation that helps suppress the spurious high-frequency oscillation. Using a constant Jacobian matrix is vital to minimizing the computational expense associated with matrix operations. The algorithm helps achieve an exponential efficiency improvement in a response history analysis with any transient integrator.
+
 
 .. warning::
 

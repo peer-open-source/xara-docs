@@ -1,9 +1,12 @@
 DisplacementControl
 ^^^^^^^^^^^^^^^^^^^
 
-In an analysis step with Displacement Control we seek to
-determine the time step :math:`\Delta \lambda` that will result in a displacement increment for
-a particular degree-of-freedom at a node to be a prescribed value.
+In an analysis step with Displacement Control, the objective is to
+control the displacement of a particular degree-of-freedom at a node by a prescribed increment.
+To this end, the Displacement Control integrator will solve for the load multiplier :math:`\Dlambda \lambda` such that the displacement increment at the control DOF is equal to a prescribed value.
+
+.. 
+   determine the time step :math:`\Delta \lambda` that will result in a displacement increment for a particular degree-of-freedom at a node to be a prescribed value.
 
 .. tabs::
 
@@ -42,11 +45,19 @@ a particular degree-of-freedom at a node to be a prescribed value.
 Example
 =======
 
+The following example configures a displacement control algorithm to maintain a constant increment of 0.1 at node 1 in the direction of DOF 2.
 
-.. code-block:: Tcl
+.. tabs::
 
-   # displacement control algorithm seeking constant increment of 0.1 at node 1 at 2'nd dof.
-   integrator DisplacementControl 1 2 0.1; 
+   .. tab:: Python
+
+      model.integrator("DisplacementControl", 1, 2, 0.1)
+   
+   .. tab:: OpenSees
+
+      .. code-block:: Tcl
+
+         integrator DisplacementControl 1 2 0.1; 
 
 
 Theory

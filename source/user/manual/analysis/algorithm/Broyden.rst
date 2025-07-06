@@ -1,15 +1,15 @@
 .. _Broyden:
 
-Broyden
+Broyden/BFGS
 ^^^^^^^
 
-The Broyden algorithm object for general unsymmetric systems which performs successive rank-one updates of the tangent at the first iteration of the current time step.
+The Broyden algorithm for general unsymmetric systems which performs successive rank-one updates of the tangent at the first iteration of the current time step.
 
 .. tabs::
 
    .. tab:: Python
 
-      .. py:method:: Model.algorithm("Broyden" [, count])
+      .. py:method:: Model.algorithm("Broyden" [, count, symmetric=False])
          :no-index:
    
    .. tab:: Tcl
@@ -28,3 +28,9 @@ The Broyden algorithm object for general unsymmetric systems which performs succ
           - number of iterations within a time step until a new tangent is formed
     
 
+BFGS 
+====
+
+
+BFGS implements the `Broyden–Fletcher–Goldfarb–Shanno <https://en.wikipedia.org/wiki/BFGS>`_  (BFGS) algorithm for symmetric systems.
+This performs successive rank-two updates of the tangent at the first iteration of the current time step.
