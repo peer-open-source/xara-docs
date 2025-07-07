@@ -98,14 +98,15 @@ The following example demonstrates how to create a ``ShearFiber`` section repres
 
          set radius 0.5
          set center 0.0 0.0
-         set area   [expr {pi * $radius**2}]
+         set area   [expr {acos(-1) * $radius**2}]
 
          model create -ndm 3 -ndf 6
 
-         model material ElasticIsotropic 1 E 200e9 nu 0.3
+         nDMaterial ElasticIsotropic 1  200e9 0.3
 
-         model section ShearFiber 1
-         model fiber $center $area material 1 section 1
+         section ShearFiber 1 {
+           fiber $center $area -material 1
+         }
 
 
 The following example uses the ``xsection`` library to create a ``ShearFiber`` section representing an AISC *W8x28* section.

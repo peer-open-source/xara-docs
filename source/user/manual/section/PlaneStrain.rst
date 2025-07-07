@@ -28,12 +28,27 @@ The plane strain condition is characterized by the constraints:
 Example
 =======
 
-.. code-block:: Python
+.. tabs::
 
-   model = ops.Model(ndm=2, ndf=2)
+   .. tab:: Python
 
-   model.material("ElasticIsotropic", 1, E=29e3, v=0.3)
-   model.section("PlaneStrain", 1, 1, 2.5)
+      .. code-block:: Python
+
+         import xara
+         model = xara.Model(ndm=2, ndf=2)
+
+         model.material("ElasticIsotropic", 1, E=29e3, nu=0.3)
+         # Create the PlaneStrain section referencing material 1
+         # and with a thickness of 2.5
+         model.section("PlaneStrain", 1, 2.5, material=1)
+
+   .. tab:: OpenSees (Tcl)
+      
+      .. code-block:: Tcl
+         
+         model BasicBuilder -ndm 2 -ndf 2
+         nDMaterial ElasticIsotropic 1 -E 29000 -nu 0.3
+         section PlaneStrain 1 2.5 -material 1
 
 A complete example is available at the STAIRLab `gallery <https://gallery.stairlab.io/examples/example6/>`_.
 
