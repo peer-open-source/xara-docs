@@ -12,7 +12,7 @@ PlaneStress
 
          :param tag: integer tag identifying the section
          :type tag: |integer|
-         :param material: integer tag identifying a :ref:`nDMaterial`
+         :param material: integer tag identifying a :ref:`material <nDMaterial>`
          :type material: |integer|
          :param thickness: section thickness
          :type thickness: float
