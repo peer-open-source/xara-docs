@@ -70,6 +70,7 @@ When used in a :ref:`PlaneStrain` section, the constitutive relation becomes:
 When used in a :ref:`PlaneStress` section, the constitutive relation becomes:
 
 .. math::
+
    \left[\begin{array}{l}
    \sigma_{11} \\
    \sigma_{22} \\
