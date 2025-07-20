@@ -19,15 +19,15 @@ The **ElasticFrame** section implements a general linear elastic :ref:`Frame <Fr
       .. py:method:: Model.section("ElasticFrame", tag, **kwds)
          :no-index:
 
-         :param E,G: Young's modulus :math:`E` and shear modulus :math:`G` (see :ref:`ElasticIsotropic`)
-         :param A: cross sectional area
-         :param Iy: Moment of inertia about the :math:`\color{green}{y}` axis
-         :param Iz: Moment of inertia about the :math:`\color{blue}{z}` axis
+         :param E,G: Young's modulus :math:`E` and shear modulus :math:`G` (see :ref:`ElasticIsotropic`) [1]_
+         :param A: cross sectional area [1]_
+         :param Iy: Moment of inertia about the :math:`\color{green}{y}` axis [1]_
+         :param Iz: Moment of inertia about the :math:`\color{blue}{z}` axis [1]_
          :param J: Torsion constant
          :param kwds: additional keyword arguments
 
 
-   .. tab:: Tcl
+   .. tab:: OpenSees
 
       .. function:: section ElasticFrame tag?  E?  A?  Iz?  Iy?  G?  J? 
 
@@ -38,6 +38,9 @@ The **ElasticFrame** section implements a general linear elastic :ref:`Frame <Fr
          :widths: 10, 10, 40
 
          $tag, |integer|,	  unique section tag
+
+
+.. [1] These arguments are supported by the :ref:`parameter <parameter>` commands.
 
 
 The valid :ref:`eleResponse` queries are 
