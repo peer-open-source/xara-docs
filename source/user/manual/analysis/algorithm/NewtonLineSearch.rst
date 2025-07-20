@@ -10,7 +10,7 @@ Line search increases the effectiveness of the Newton method when convergence is
 
    .. tab:: Python 
 
-      .. py:method:: Model.algorithm("NewtonLineSearch", ratio, maxIter, minEta, maxEta, type="InitialInterpolated")
+      .. py:method:: Model.algorithm("NewtonLineSearch", [ratio, maxIter, minEta, maxEta, type="InitialInterpolated"])
          :no-index: 
 
          Configure the *NewtonLineSearch* algorithm.
