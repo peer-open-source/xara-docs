@@ -32,10 +32,10 @@ Each type is outlined below.
 
 .. toctree::
    :maxdepth: 1
-   
+
    geomTransf/frame/Linear
    geomTransf/frame/PDelta
-   geomTransf/Corotational
+   geomTransf/frame/Corotational02
    geomTransf/frame/Spherical
 
 
