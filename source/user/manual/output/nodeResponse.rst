@@ -9,9 +9,18 @@ nodeResponse
 
       .. py:method:: Model.nodeResponse(node, dof, response)
 
+         Return the response at a specified node and degree of freedom.
+
+         :param |integer| node: The tag of the :ref:`node` whose response is sought.
+         :param |integer| dof: The degree of freedom at the node (between 1 and :py:attr:`Model.ndf`, inclusive).
+         :param str response: The type of response to return, such as "displacement", "velocity", "acceleration", etc.
+         :returns: A |float| representing the requested response at the specified node and degree of freedom.
+
    .. tab:: Tcl
 
-      .. function:: nodeResponse node dof response
+      .. function:: nodeResponse node? dof? response?
+
+The following table lists the available responses that can be requested:
 
 .. csv-table:: 
     :header: "Name", "Description"
