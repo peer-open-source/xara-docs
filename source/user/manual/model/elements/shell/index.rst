@@ -39,3 +39,8 @@ and *shear strains* :math:`\boldsymbol{\gamma}` with expressions:
    \gamma_{\alpha} \triangleq -\theta_\alpha+\tilde{u}_{3, \alpha}
 
 
+References
+----------
+
+* Joshua Stokley, Laura N. Lowes *Evaluation and Calibration of an OpenSees Layered Shell Element Model for Simulating the Earthquake Response of Flexure-Controlled Reinforced Concrete Walls* https://doi.org/10.55461/AMQF4907. Avalable at https://peer.berkeley.edu/publications/2024-11
+
