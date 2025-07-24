@@ -14,7 +14,7 @@ nodeDisp
 
          :param |integer| tag: The tag of the :ref:`node` whose displacements are sought.
          :param |integer| dof: Optional: specific degree of freedom at the node (between 1 and :py:attr:`Model.ndf`, inclusive).
-         :returns: A |list| of the displacement components at the node when ``dof=None``, otherwise a |float|.
+         :returns: A |list| of :py:attr:`Model.ndf`  displacement values at the node when ``dof=None``. When ``dof`` is supplied, the result is a |float|.
 
    .. tab:: Tcl
 
@@ -29,8 +29,17 @@ nodeDisp
          dof, |integer|, optional: specific dof at the node (1 through ndf)
 
 
+The components are ordered as follows for various combinations of dimension (:py:attr:`Model.ndm`) and degrees of freedom (:py:attr:`Model.ndf`):
 
-If optional $dof is not provided, an array containing all displacement components for every dof at the node is returned.
+.. csv-table::
+   :header: "ndm", "ndf", "Order of components"
+   :widths: 10, 10, 40
+
+   1, 1, "u1"
+   2, 2, "u1, u2"
+   3, 3, "u1, u2, u3"
+   2, 3, "u1, u2, r3"
+   3, 6, "u1, u2, u3, r1, r2, r3"
 
 
 Example
