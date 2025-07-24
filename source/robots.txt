@@ -43,6 +43,7 @@ Allow: /user/manual/material/uniaxial/Plastic/index.html
 Allow: /user/manual/material/uniaxial/Steel02/index.html
 
 Allow: /user/manual/model/geomTransf/Corotational.html
+Allow: /user/manual/model/geomTransf/Corotational02.html
 Allow: /user/manual/model/pattern/Plain/sp.html
 Allow: /user/manual/parameter/index.html
 Allow: /user/manual/section.html
