@@ -16,7 +16,7 @@ Two-node mixed finite element formulation for 3D frames.
          :param nodes: tuple of *two* :ref:`node` tags
          :type nodes: tuple
          :param section: Section object to be created at the element Gauss points. 
-         :type section: :py:class:`xara.Section`
+         :type section: :py:class:`xara.FrameSection`
          :param transform: identifier for previously-defined :ref:`frame transformation <geomTransf>`
          :type transform: |integer|
          :param integration: identifier for previously-defined integration rule.

@@ -31,7 +31,7 @@ The implementation closely follows the treatment by Perez and Filippou (2024) [3
          :param nodes: tuple of integer node tags (see :ref:`node`)
          :type nodes: tuple 
          :param section: Section object to be created at the element Gauss points. 
-         :type section: :py:class:`xara.Section`
+         :type section: :py:class:`xara.FrameSection`
          :param transform: identifier for previously-defined coordinate-transformation (see :ref:`geomTransf`)
          :type transform: |integer|
 

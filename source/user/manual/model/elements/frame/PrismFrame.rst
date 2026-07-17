@@ -1,7 +1,7 @@
 .. _elasticBeamColumn:
 
-``PrismFrame``
-^^^^^^^^^^^^^^^
+PrismFrame
+^^^^^^^^^^^
 
 The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
 
@@ -19,7 +19,7 @@ The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
          :param nodes: tuple of *two* integer :ref:`node` tags
          :type nodes: tuple
          :param section: Section object to be created at the element Gauss points. 
-         :type section: :py:class:`xara.Section`
+         :type section: :py:class:`xara.FrameSection`
          :param transform: identifier for previously-defined coordinate-transformation
          :type transform: |integer|
          :param shear: flag indicating whether shear deformations are included (default is ``0``)

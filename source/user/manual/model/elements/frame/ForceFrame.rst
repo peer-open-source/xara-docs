@@ -24,7 +24,7 @@ Two-node force formulation for 3D frames. [1]_ [2]_.
          :param nodes: tuple of *two* :ref:`node` tags
          :type nodes: tuple
          :param section: Section object to be created at the element Gauss points. 
-         :type section: :py:class:`xara.Section`
+         :type section: :py:class:`xara.FrameSection`
          :param transform: identifier for previously-defined :ref:`frame transformation <geomTransf>`
          :type transform: |integer|
          :gparam Optional integration: identifier for previously-defined integration rule.
