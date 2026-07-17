@@ -3,25 +3,49 @@
 Series3D
 ^^^^^^^^
 
-This command is used to construct a Series3D material. 
-It is a wrapper that imposes an iso-stress condition to an arbitrary number of previously-defined 3D nDMaterial objects
+Series3D is a wrapper that imposes an iso-stress condition to an arbitrary number of previously-defined 3D nDMaterial objects
 
-.. function:: nDMaterial Series3D $matTag    $tag1 $tag2 ... $tagN   <-weights $w1 $w2 ... $wN> <-maxIter $maxIter> <-relTol $relTol> <-absTol $absTol> <-verbose>
 
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+.. tabs::
 
-   matTag, |integer|, "unique tag identifying this series material wrapper"
-   tag1 tag2 ... tagN, N |integer|, "unique tags identifying previously defined nD materials"
-   w1 w2 ... wN, N |float|, "weight factors, optional. If not defined, they will be assumed all equal to 1"
-   -maxIter, |string|, "string keyword to specify a user-defined maximum number of iterations"
-   maxIter, |integer|, "maximum number of iterations to impose the iso-stress condition, optional, default = 10"
-   -relTol, |string|, "string keyword to specify a user-defined relative stress tolerance for the iso-stress condition"
-   relTol, |float|, "relative stress tolerance for the iso-stress condition, optional, default = 1.0e-4"
-   -absTol, |string|, "string keyword to specify a user-defined absolute stress tolerance for the iso-stress condition"
-   absTol, |float|, "absolute stress tolerance for the iso-stress condition, optional, default = 1.0e-8"
-   -verbose, |string|, "string keyword to activate print of debug information"
+   .. tab:: Python
+
+      .. py:class:: xara.MultiaxialMaterial("Series3D", tags, weights=(), maxIter=10, relTol=1e-4, absTol=1e-8, verbose=False)
+         :no-index:
+
+         :param matTag: unique tag identifying this series material wrapper
+         :type matTag: |integer|
+         :param tags: tuple of previously created :py:class:`xara.MultiaxialMaterial` objects
+         :type tags: |tuple|
+         :param weights: tuple of weight factors. If not defined, they will be assumed all equal to 1
+         :type weights: |tuple|, optional
+         :param maxIter: maximum number of iterations to impose the iso-stress condition, optional, default = 10
+         :type maxIter: |integer|, optional
+         :param relTol: relative stress tolerance for the iso-stress condition, optional, default = 1.0e-4
+         :type relTol: |float|, optional
+         :param absTol: absolute stress tolerance for the iso-stress condition, optional, default = 1.0e-8
+         :type absTol: |float|, optional
+         :param verbose: activate print of debug information
+         :type verbose: |boolean|, optional
+
+   .. tab:: Tcl
+
+      .. function:: nDMaterial Series3D $matTag    $tag1 $tag2 ... $tagN   <-weights $w1 $w2 ... $wN> <-maxIter $maxIter> <-relTol $relTol> <-absTol $absTol> <-verbose>
+
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
+
+         matTag, |integer|, "unique tag identifying this series material wrapper"
+         tag1 tag2 ... tagN, N |integer|, "unique tags identifying previously defined nD materials"
+         w1 w2 ... wN, N |float|, "weight factors, optional. If not defined, they will be assumed all equal to 1"
+         -maxIter, |string|, "string keyword to specify a user-defined maximum number of iterations"
+         maxIter, |integer|, "maximum number of iterations to impose the iso-stress condition, optional, default = 10"
+         -relTol, |string|, "string keyword to specify a user-defined relative stress tolerance for the iso-stress condition"
+         relTol, |float|, "relative stress tolerance for the iso-stress condition, optional, default = 1.0e-4"
+         -absTol, |string|, "string keyword to specify a user-defined absolute stress tolerance for the iso-stress condition"
+         absTol, |float|, "absolute stress tolerance for the iso-stress condition, optional, default = 1.0e-8"
+         -verbose, |string|, "string keyword to activate print of debug information"
 
 
 Usage Notes

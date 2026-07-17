@@ -3,7 +3,8 @@
 Multiaxial
 ^^^^^^^^^^
 
-.. py:currentmodule:: xara
+.. 
+  .. py:currentmodule:: xara
 
 .. tabs::
    
