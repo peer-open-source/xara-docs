@@ -36,13 +36,28 @@ dl.py-parameter-list .param-type {
 
 /* Home button: 𝜒ara, chi matching the favicon and homepage title */
 .navbar-brand .brand-chi {
-    font-size: 1.5rem;
-    line-height: 1;
     color: var(--pst-color-text-base);
 }
 
 .navbar-brand:hover .brand-chi {
     color: var(--pst-color-link-hover);
+}
+
+/* Enlarge article-header text*/
+ul.bd-breadcrumbs {
+    font-size: 1rem;
+    margin-bottom: 0; 
+}
+
+/* Enlarge ">" dividers for breadcrumbs */
+ul.bd-breadcrumbs li.breadcrumb-item:not(.breadcrumb-home):before {
+    font-size: inherit;
+}
+
+/* "Contents" label: page-toc/tocsection/onthispage are all on the same
+   element, so a descendant selector (.page-toc .onthispage) never matched */
+.bd-sidebar-secondary .onthispage {
+    font-size: 1rem;
 }
 
 /* Dark-mode dark panels for sphinx-tabs */
