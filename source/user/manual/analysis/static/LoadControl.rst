@@ -1,23 +1,25 @@
 .. _LoadControl:
 
-LoadControl
-^^^^^^^^^^^
+Proportional
+^^^^^^^^^^^^
 
 .. tabs::
 
    .. tab:: Python
 
-      .. py:method:: Model.integrator("LoadControl", step, iter=1, min_step=None, max_step=None)
+      .. py:method:: xara.LoadFactorControl("Proportional", step, iter=1, min_step=None, max_step=None)
          :no-index:
 
-         :param step: the load factor increment :math:`\lambda`
+         Advance loads proportionally with time at each step in a static analysis.
+
+         :param step: load factor increment :math:`\lambda`
          :type dlambda: |float|
-         :param iter: the number of iterations the user would like to occur in the solution algorithm. Optional: optional default = 1
-         :type iter: |integer|
-         :param min_step: the min stepsize the user will allow. optional: defualt :math:`= \lambda_{min} = \lambda`
-         :type min_step: |float|
-         :param max_step: the max stepsize the user will allow. optional: default :math:`= \lambda_{max} = \lambda`
-         :type max_step: |float|
+         :param iter: the ideal number of iterations per step used to reduce the step size. Optional: optional default = 1
+         :type iter: |integer|, optional
+         :param min_step: the minimum step size to allow. optional: defualt :math:`= \lambda_{min} = \lambda`
+         :type min_step: |float|, optional
+         :param max_step: the maximum step size to allow. optional: default :math:`= \lambda_{max} = \lambda`
+         :type max_step: |float|, optional
 
    .. tab:: Tcl
 

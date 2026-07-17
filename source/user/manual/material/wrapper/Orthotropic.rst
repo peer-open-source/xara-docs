@@ -12,6 +12,7 @@ It is a wrapper that can convert any 3D (Linear or Nonlinear) constitutive model
     .. tab:: Python
 
         .. py:class:: xara.MultiaxialMaterial("Orthotropic", material, Ex, Ey, Ez, Gxy, Gyz, Gzx, vxy, vyz, vzx, Asigmaxx, Asigmayy, Asigmazz, Asigmaxyxy, Asigmayzyz, Asigmaxzxz)
+          :no-index:
 
           :param material: An instance of a previously defined isotropic :py:class:`xara.MultiaxialMaterial`
           :type material: :py:class:`xara.MultiaxialMaterial`
