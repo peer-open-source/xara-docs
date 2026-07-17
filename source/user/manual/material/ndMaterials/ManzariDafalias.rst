@@ -137,7 +137,7 @@ The hardening modulus in this model is defined as
 
 .. math::
  
- K_p = \frac{2}{3} p h (\mathbf{\alpha}^b_{\theta} - \mathbf{\alpha}): \mathbf{n}
+   K_p = \frac{2}{3} p h (\mathbf{\alpha}^b_{\theta} - \mathbf{\alpha}): \mathbf{n}
 
 where :math:`\mathbf{n}` is the deviatoric part of the gradient to yield surface.
 
@@ -177,8 +177,8 @@ where :math:`\mathbf{z}` is the fabric tensor.
 The evolution of fabric and the back stress-ratio tensors are defined as
 
 .. math:: 
- 
- d\mathbf{z} = - c_z \langle -d\varepsilon^p_v \rangle (z_{max}\mathbf{n}+\mathbf{z})`
+   
+   d\mathbf{z} = - c_z \langle -d\varepsilon^p_v \rangle (z_{max}\mathbf{n}+\mathbf{z})`
 
 .. math::
 

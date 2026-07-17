@@ -20,9 +20,13 @@ PlasticJ2
          :gtype Hiso: |float|
          :gparam "Nonlinear Hardening" Fs: Saturation yield stress
          :gtype Fs: |float|
-         :gparam "Nonlinear Hardening" Hsat: exponential hardening parameter
-         :gtype Hsat: |float|
-   
+         :gparam "Nonlinear Hardening" b: exponential hardening parameter
+         :gtype b: |float|
+         :gparam "Nonlinear Hardening" C: Nonlinear kinematic hardening parameter
+         :gtype C: |float|
+         :gparam "Nonlinear Hardening" gamma: Nonlinear kinematic hardening parameter
+         :gtype gamma: |float|
+
    .. tab:: OpenSees
 
       .. function:: nDMaterial J2Plasticity $tag $K $G $sig0 $sigInf $delta $Hiso <$eta>;
