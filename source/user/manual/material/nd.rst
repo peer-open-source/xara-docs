@@ -82,7 +82,7 @@ A material represents the constitutive (stress-strain) relationship at a gauss-p
    These are documented in the *notes* section for those materials.
 
 
-The following materials are available:
+.. The following materials are available:
 
 .. toctree::
    :maxdepth: 1
@@ -101,14 +101,14 @@ The following materials are available:
 
    damage/FariaPlasticDamage
 
-.. toctree::
-   :maxdepth: 1
+.. .. toctree::
+..    :maxdepth: 1
 
-   wrapper/Series3D
-   wrapper/Parallel3D
-   wrapper/InitialStrain
-   wrapper/InitialStress
-   wrapper/Orthotropic
+..    wrapper/Series3D
+..    wrapper/Parallel3D
+..    wrapper/InitialStrain
+..    wrapper/InitialStress
+..    wrapper/Orthotropic
 
 .. toctree::
    :maxdepth: 1
