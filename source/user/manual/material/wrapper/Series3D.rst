@@ -1,9 +1,10 @@
 .. _Series3D:
 
-Series3D Wrapper
-^^^^^^^^^^^^^^^^
+Series3D
+^^^^^^^^
 
-This command is used to construct a Series3D material. It is a wrapper that imposes an iso-stress condition to an arbitrary number of previously-defined 3D nDMaterial objects
+This command is used to construct a Series3D material. 
+It is a wrapper that imposes an iso-stress condition to an arbitrary number of previously-defined 3D nDMaterial objects
 
 .. function:: nDMaterial Series3D $matTag    $tag1 $tag2 ... $tagN   <-weights $w1 $w2 ... $wN> <-maxIter $maxIter> <-relTol $relTol> <-absTol $absTol> <-verbose>
 
@@ -11,25 +12,21 @@ This command is used to construct a Series3D material. It is a wrapper that impo
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $matTag, |integer|, "unique tag identifying this series material wrapper"
-   $tag1 $tag2 ... $tagN, N |integer|, "unique tags identifying previously defined nD materials"
-   $w1 $w2 ... $wN, N |float|, "weight factors, optional. If not defined, they will be assumed all equal to 1"
+   matTag, |integer|, "unique tag identifying this series material wrapper"
+   tag1 tag2 ... tagN, N |integer|, "unique tags identifying previously defined nD materials"
+   w1 w2 ... wN, N |float|, "weight factors, optional. If not defined, they will be assumed all equal to 1"
    -maxIter, |string|, "string keyword to specify a user-defined maximum number of iterations"
    maxIter, |integer|, "maximum number of iterations to impose the iso-stress condition, optional, default = 10"
    -relTol, |string|, "string keyword to specify a user-defined relative stress tolerance for the iso-stress condition"
-   $relTol, |float|, "relative stress tolerance for the iso-stress condition, optional, default = 1.0e-4"
+   relTol, |float|, "relative stress tolerance for the iso-stress condition, optional, default = 1.0e-4"
    -absTol, |string|, "string keyword to specify a user-defined absolute stress tolerance for the iso-stress condition"
-   $absTol, |float|, "absolute stress tolerance for the iso-stress condition, optional, default = 1.0e-8"
+   absTol, |float|, "absolute stress tolerance for the iso-stress condition, optional, default = 1.0e-8"
    -verbose, |string|, "string keyword to activate print of debug information"
 
 
 Usage Notes
 -----------
 
-.. admonition:: Limitations
-
-   * The only material formulation for the Series3D material object is "ThreeDimensional".
-   * The only material formulation allowed for the sub-material objects is "ThreeDimensional".
 
 .. admonition:: Responses
 
@@ -37,17 +34,20 @@ Usage Notes
    * **material** **$matId** ... : use the **material** keyword followed by the 1-based index of the sub-material (and followed by the desired response) to forward the request to the matId sub-material.
    * **homogenized** ... : use the **homogenized** keyword followed by the desired response to forward the request to all sub-materials, and to compute its weighted average.
 
+
 Theory
 ------
 
 This model imposes a minimal kinematic constraint on the sub-materials such that the macro-scopic strain tensor :math:`\boldsymbol{\varepsilon}_{m}` (i.e. the strain tensor of the wrapper Series3D material) is equal to the volumetric average of the micro-scopic strain tensors :math:`\boldsymbol{\varepsilon}_{i}` (i.e. the strain tensors of each sub-material)
 
 .. math::
+
    \varepsilon_{m} = \frac{1}{V} \int_{V} \varepsilon_{i} \,dV
 
 This equation can be rewritten as a weighted sum
 
 .. math::
+
    \varepsilon_{m} = \sum_{i=1}^{n} \boldsymbol{\varepsilon}_{i} w_{i}
    :label: series-3d-constraint
 

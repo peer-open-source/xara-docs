@@ -1,7 +1,7 @@
 .. _OrthotropicWrapper:
 
-Orthotropic Wrapper
-^^^^^^^^^^^^^^^^^^^
+Orthotropic
+^^^^^^^^^^^
 
 This command is used to construct an Orthotropic material. 
 It is a wrapper that can convert any 3D (Linear or Nonlinear) constitutive model to an orthotropic one. [Oller2003]_
@@ -14,18 +14,31 @@ It is a wrapper that can convert any 3D (Linear or Nonlinear) constitutive model
         .. py:class:: xara.MultiaxialMaterial("Orthotropic", material, Ex, Ey, Ez, Gxy, Gyz, Gzx, vxy, vyz, vzx, Asigmaxx, Asigmayy, Asigmazz, Asigmaxyxy, Asigmayzyz, Asigmaxzxz)
 
           :param material: An instance of a previously defined isotropic :py:class:`xara.MultiaxialMaterial`
+          :type material: :py:class:`xara.MultiaxialMaterial`
           :param Ex: Elastic modulus in x direction
+          :type Ex: |float|
           :param Ey: Elastic modulus in y direction
+          :type Ey: |float|
           :param Ez: Elastic modulus in z direction
+          :type Ez: |float|
           :param Gxy: Shear modulus in xy plane
+          :type Gxy: |float|
           :param Gyz: Shear modulus in yz plane
+          :type Gyz: |float|
           :param Gzx: Shear modulus in zx plane
+          :type Gzx: |float|
           :param vxy: Poisson's ratio in xy plane
+          :type vxy: |float|
           :param vyz: Poisson's ratio in yz plane
+          :type vyz: |float|
           :param vzx: Poisson's ratio in zx plane
+          :type vzx: |float|
           :param Asigmaxx: Ratio of the isotropic to the orthotropic strength along the X direction (Fxx_iso / Fxx_ortho)
           :param Asigmayy: Ratio of the isotropic to the orthotropic strength along the Y direction (Fyy_iso / Fyy_ortho)
           :param Asigmazz: Ratio of the isotropic to the orthotropic strength along the Z direction (Fzz_iso / Fzz_ortho)
+          :param Asigmaxyxy: Ratio of the isotropic to the orthotropic shear strength in the XY plane (Fxy_iso / Fxy_ortho)
+          :param Asigmayzyz: Ratio of the isotropic to the orthotropic shear strength in the YZ plane (Fyz_iso / Fyz_ortho)
+          :param Asigmaxzxz: Ratio of the isotropic to the orthotropic shear strength in the XZ plane (Fxz_iso / Fxz_ortho)
 
 
     .. tab:: Tcl
@@ -36,17 +49,17 @@ It is a wrapper that can convert any 3D (Linear or Nonlinear) constitutive model
             :header: "Argument", "Type", "Description"
             :widths: 10, 10, 40
 
-            $matTag, |integer|, unique tag identifying this orthotropic material wrapper
-            $theIsoMatTag, |integer|, unique tag identifying a previously defined isotropic material
-            $Ex $Ey $Ez, 3 |float|, Elastic moduli in three mutually perpendicular directions
-            $Gxy $Gyz $Gzx, 3 |float|, Shear moduli
-            $vxy $vyz $vzx, 3 |float|, Poisson's ratios
-            $Asigmaxx, |float|, Ratio of the isotropic to the orthotropic strength along the X direction (Fxx_iso / Fxx_ortho)
-            $Asigmayy, |float|, Ratio of the isotropic to the orthotropic strength along the Y direction (Fyy_iso / Fyy_ortho)
-            $Asigmazz, |float|, Ratio of the isotropic to the orthotropic strength along the Z direction (Fzz_iso / Fzz_ortho)
-            $Asigmaxyxy, |float|, Ratio of the isotropic to the orthotropic shear strength in the XY plane (Fxy_iso / Fxy_ortho)
-            $Asigmayzyz, |float|, Ratio of the isotropic to the orthotropic shear strength in the YZ plane (Fyz_iso / Fyz_ortho)
-            $Asigmaxzxz, |float|, Ratio of the isotropic to the orthotropic shear strength in the XZ plane (Fxz_iso / Fxz_ortho)
+            matTag, |integer|, unique tag identifying this orthotropic material wrapper
+            theIsoMatTag, |integer|, unique tag identifying a previously defined isotropic material
+            Ex Ey Ez, 3 |float|, Elastic moduli in three mutually perpendicular directions
+            Gxy Gyz Gzx, 3 |float|, Shear moduli
+            vxy vyz vzx, 3 |float|, Poisson's ratios
+            Asigmaxx, |float|, Ratio of the isotropic to the orthotropic strength along the X direction (Fxx_iso / Fxx_ortho)
+            Asigmayy, |float|, Ratio of the isotropic to the orthotropic strength along the Y direction (Fyy_iso / Fyy_ortho)
+            Asigmazz, |float|, Ratio of the isotropic to the orthotropic strength along the Z direction (Fzz_iso / Fzz_ortho)
+            Asigmaxyxy, |float|, Ratio of the isotropic to the orthotropic shear strength in the XY plane (Fxy_iso / Fxy_ortho)
+            Asigmayzyz, |float|, Ratio of the isotropic to the orthotropic shear strength in the YZ plane (Fyz_iso / Fyz_ortho)
+            Asigmaxzxz, |float|, Ratio of the isotropic to the orthotropic shear strength in the XZ plane (Fxz_iso / Fxz_ortho)
 
 
 Examples

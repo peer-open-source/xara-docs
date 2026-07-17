@@ -5,12 +5,11 @@ InitStrain
 
 .. tabs::
    .. tab:: Python
-      .. py:method:: Model.nDMaterial("InitialStrain", tag, otherTag, eps0_11, eps0_22=0.0, eps0_33=0.0, eps0_12=0.0, eps0_23=0.0, eps0_13=0.0)
+      .. py:method:: xara.MultiaxialMaterial("InitialStrain", otherTag, eps0_11, eps0_22=0.0, eps0_33=0.0, eps0_12=0.0, eps0_23=0.0, eps0_13=0.0)
          :no-index:
 
          Construct an InitialStrain material wrapper.
 
-         :param tag: integer tag identifying this init-strain material wrapper
          :param otherTag: integer tag identifying the previously defined nD material
          :param eps0_11: initial strain value in the 11 direction
          :param eps0_22: initial strain value in the 22 direction (optional, default = 0.0)
@@ -43,6 +42,7 @@ Parameters
 """"""""""
 
 * ``initial_strain``
+
 
 Examples
 --------

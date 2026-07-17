@@ -29,7 +29,6 @@ Multiaxial
                   :widths: 30, 70
 
                   ":ref:`PlasticJ2`",  :math:`J_2` plasticity with nonlinear hardening
-                  ":ref:`GeneralizedJ2`", Generalized :math:`J_2` plasticity 
                   ":ref:`DruckerPrager`", Drucker-Prager plasticity 
             
             - **Concrete**
