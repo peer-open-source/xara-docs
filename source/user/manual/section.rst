@@ -13,8 +13,11 @@ This command configures a Section, which represents a constitutive model between
 
       .. py:method:: Model.section(object)
 
-         :param object: section object
-         :type object: |string|
+         :param object: section object, one of:
+
+            * :py:class:`xara.PlaneSection`
+            * :py:class:`xara.FrameSection`
+            * :py:class:`xara.ShellSection`
 
    .. tab:: Tcl
 
@@ -29,38 +32,48 @@ This command configures a Section, which represents a constitutive model between
          $args, |list|,        a list of material arguments with number dependent on section type
 
 
-Library
--------
-
-
-The following section types are valid for :ref:`frame` elements:
-
 .. toctree::
    :maxdepth: 1
+   :hidden:
 
    section/Truss
-   Frame <section/frame/index>
-   section/ElasticFrame
-   section/axial/index
-   section/ShearFiber
-
-.. _PlaneSection:
-
-For :ref:`PlaneElements` elements, the following section types are available:
-
-.. toctree::
-   :maxdepth: 1
-
+   section/frame/index
    section/plane/index
+   section/shell/index
+
+..
+   Library
+   -------
 
 
-The following section types are valid for :ref:`shells`:
+   The following section types are valid for :ref:`frame` elements:
 
-.. toctree::
-   :maxdepth: 1
+   .. toctree::
+      :maxdepth: 1
 
-   section/ElasticShell
-   section/ShellFiber
+      section/Truss
+      Frame <section/frame/index>
+      section/ElasticFrame
+      section/axial/index
+      section/ShearFiber
+
+   .. _PlaneSection:
+
+   For :ref:`PlaneElements` elements, the following section types are available:
+
+   .. toctree::
+      :maxdepth: 1
+
+      section/plane/index
+
+
+   The following section types are valid for :ref:`shells`:
+
+   .. toctree::
+      :maxdepth: 1
+
+      section/ElasticShell
+      section/ShellFiber
 
 
 ..
