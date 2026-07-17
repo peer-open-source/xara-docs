@@ -33,7 +33,7 @@ Materials
 
    examples/material/material-0002
    examples/material/material-0003
-   examples/material/material-0004
+   examples/material/material-0011
 
 
 
