@@ -4,7 +4,7 @@
 UniaxialFiber
 ^^^^^^^^^^^^^
 
-.. py:class:: xara.Section("UniaxialFiber", shape)
+.. py:class:: xara.FrameSection("UniaxialFiber", shape)
    :noindex:
 
 
