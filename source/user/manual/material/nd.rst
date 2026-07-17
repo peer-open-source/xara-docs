@@ -23,24 +23,38 @@ Multiaxial
                   ":ref:`ElasticIsotropic <ElasticIsotropic>`", Elastic isotropic material
                   ":ref:`ElasticOrthotropic <ElasticOrthotropic>`", 3D elastic orthotropic material
             
-            - **Plastic**
+            - **Plasticity**
 
               .. csv-table::
                   :widths: 30, 70
 
-                  ":ref:`J2Plasticity`", J2 plasticity material
-                  ":ref:`NonlinearJ2`", Nonlinear J2 plasticity material
-                  ":ref:`GeneralizedJ2`", Generalized J2 plasticity material
-                  ":ref:`DruckerPrager`", Drucker-Prager plasticity material
-                  ":ref:`ManzariDafalias`", Manzari-Dafalias sand plasticity material
+                  ":ref:`PlasticJ2`",  :math:`J_2` plasticity with nonlinear hardening
+                  ":ref:`GeneralizedJ2`", Generalized :math:`J_2` plasticity 
+                  ":ref:`DruckerPrager`", Drucker-Prager plasticity 
             
             - **Concrete**
 
               .. csv-table::
                   :widths: 30, 70
 
-                  ":ref:`ASDConcrete3D`", ASD concrete material
+                  ":ref:`ASDConcrete3D`",      ASD concrete material
                   ":ref:`FariaPlasticDamage`", Plastic damage
+
+            - **Pressure-Independent**
+
+              .. csv-table::
+                  :widths: 30, 70
+
+                  ":ref:`PressureIndependentMultiYield`", Pressure-independent multi-yield plasticity
+
+            - **Pressure-Dependent**
+
+              .. csv-table::
+                  :widths: 30, 70
+
+                  ":ref:`PressureDependentMultiYield`", Pressure-dependent multi-yield plasticity
+                  ":ref:`BoundingCamClay`", Bounding surface plasticity with Cam-Clay yield due to Borja.
+                  ":ref:`ManzariDafalias`", Manzari-Dafalias sand plasticity
 
          :type type: |string|
          :param args: additional arguments dependent on material ``type``
@@ -61,10 +75,12 @@ Multiaxial
 
 A material represents the constitutive (stress-strain) relationship at a gauss-point of an element. 
 
+
 .. note::
 
    All materials will respond to ``"strain"``, and ``"stress"`` through :ref:`eleResponse`. 
-   Some materials have additional queries to which they will respond. These are documented in the *notes* section for those materials.
+   Some materials have additional queries to which they will respond. 
+   These are documented in the *notes* section for those materials.
 
 
 The following materials are available:
@@ -76,8 +92,6 @@ The following materials are available:
    ndMaterials/ElasticIsotropic
    ndMaterials/ElasticOrthotropic
    plastic/PlasticJ2
-   plastic/J2Plasticity
-   plastic/NonlinearJ2
    plastic/GeneralizedJ2
    plastic/DruckerPrager
    ndMaterials/ManzariDafalias
@@ -97,13 +111,21 @@ The following materials are available:
    wrapper/InitialStress
    wrapper/Orthotropic
 
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   
+   bounding/BoundingCamClay
+   multiyield/PressureIndependentMultiYield
+   multiyield/PressureDependentMultiYield
+   multiyield/PressureDependentMultiYield02
+
 ..
-   BoundingCamClay
+   plastic/J2Plasticity
+   plastic/NonlinearJ2
+
    PM4Sand
    PM4Silt
-   PressureIndependentMultiYield
-   PressureDependentMultiYield
-   PressureDependentMultiYield02
    J2CyclicBoundingSurface
    SAniSandMS
 
@@ -136,10 +158,6 @@ The following materials are available:
     Wrapper material for Initial State Analysis
     InitialStateAnalysisWrapper
     UC San Diego soil models (Linear/Nonlinear, dry/drained/undrained soil response under general 2D/3D static/cyclic loading conditions (please visit UCSD for examples)
-    PressureIndependMultiYield Material
-    PressureDependMultiYield Material
-    PressureDependMultiYield02 Material
-    PressureDependMultiYield03 Material
     UC San Diego Saturated Undrained soil
     FluidSolidPorousMaterial
     Misc.

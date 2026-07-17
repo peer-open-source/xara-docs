@@ -62,28 +62,6 @@ def _split_field_name(text):
 
     return parts[0], parts[1]
 
-
-# def _parse_gparam_arg(arg):
-#     parts = shlex.split(arg)
-
-#     if len(parts) == 1:
-#         return "Parameters", parts[0]
-
-#     if len(parts) >= 2:
-#         return " ".join(parts[:-1]), parts[-1]
-
-#     return "Parameters", ""
-
-# def _parse_gparam_arg(arg):
-#     parts = shlex.split(arg)
-
-#     if len(parts) == 1:
-#         return "Parameters", parts[0]
-
-#     if len(parts) >= 2:
-#         return " ".join(parts[:-1]), parts[-1]
-
-#     return "Parameters", ""
 def _parse_gparam_arg(arg):
     try:
         parts = shlex.split(arg)
@@ -147,29 +125,6 @@ class DLParameterField(PyTypedField):
                 )
             )
 
-            # fieldtype = types.pop(fieldarg, None)
-            # if fieldtype:
-            #     term += nodes.Text(" ")
-            #     type_span = nodes.inline(classes=["param-type"])
-            #     type_span += nodes.Text("(")
-
-            #     if len(fieldtype) == 1 and isinstance(fieldtype[0], nodes.Text):
-            #         type_span.extend(
-            #             self.make_xrefs(
-            #                 self.typerolename,
-            #                 domain,
-            #                 fieldtype[0].astext(),
-            #                 addnodes.literal_emphasis,
-            #                 env=env,
-            #                 inliner=inliner,
-            #                 location=location,
-            #             )
-            #         )
-            #     else:
-            #         type_span.extend(fieldtype)
-
-            #     type_span += nodes.Text(")")
-            #     term += type_span
             fieldtype = types.pop(fieldarg, None)
             if fieldtype:
                 term += nodes.Text(": ")
@@ -260,26 +215,6 @@ def _replace_builtin_param_field():
     _clear_field_type_cache()
 
 
-# def _ensure_dynamic_group(label):
-#     slug = _slug(label)
-#     field_name = f"gparam_{slug}"
-
-#     if field_name in _DYNAMIC_FIELD_NAMES:
-#         return slug
-
-#     PyObject.doc_field_types.append(
-#         _make_param_field(
-#             name=field_name,
-#             label=label,
-#             names=(field_name,),
-#             typenames=(f"gtype_{slug}",),
-#         )
-#     )
-
-#     _DYNAMIC_FIELD_NAMES.add(field_name)
-#     _clear_field_type_cache()
-
-#     return slug
 def _ensure_dynamic_group(label):
     if label in {"Parameter", "Parameters"}:
         slug = "default"
