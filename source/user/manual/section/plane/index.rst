@@ -1,7 +1,7 @@
 .. _PlaneSection:
 
-PlaneSection
-^^^^^^^^^^^^
+Plane
+^^^^^
 
 .. tabs::
 

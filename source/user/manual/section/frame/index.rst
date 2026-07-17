@@ -4,7 +4,7 @@ Frame
 ^^^^^
 
 
-.. py:class:: xara.Section(type, shape)
+.. py:class:: xara.FrameSection(type, shape)
     
     Construct a frame section object.
 
@@ -20,4 +20,6 @@ Frame
    :hidden:
 
    shapes
+   UniaxialFiber
+   MultiaxialFiber
 

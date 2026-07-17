@@ -23,7 +23,7 @@ Galleries = [
         "examples": [
             "frame-0059/main.ipynb",
             "frame-2007/main.ipynb",
-            "frame-2005/frame-2005.ipynb",
+            # "frame-2005/frame-2005.ipynb",
             # "frame-1010/main.ipynb",
             "frame-1010/frame-1010.ipynb",
             "frame-3056/main.ipynb",
@@ -73,6 +73,7 @@ Galleries = [
         "examples": [
             # "node-0005/a.ipynb",
             "solve-0003/main.ipynb",
+            "solve-0010/main.ipynb",
         ],
     },
     {
