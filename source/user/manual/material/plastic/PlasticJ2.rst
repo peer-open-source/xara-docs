@@ -1,7 +1,7 @@
 .. _PlasticJ2:
 
-Plastic
-^^^^^^^
+PlasticJ2
+^^^^^^^^^
 
 
 .. tabs::
