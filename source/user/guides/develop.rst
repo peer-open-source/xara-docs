@@ -7,8 +7,8 @@ This guide walks through the steps required to set up a development environment 
 that can be used to develop code in C++.
 
 
-Initial Setup
--------------
+Basic Procedure
+---------------
 
 The following steps only need to be performed once to set up the development environment.
 
@@ -28,7 +28,11 @@ The following steps only need to be performed once to set up the development env
 
 3. Install *compile-time* dependencies. These dependencies are only
    needed for the compiling process. This is best done in an Anaconda environment.
-   For alternative package management systems, see the **Advanced** section below.
+
+   .. note::
+
+      For alternative package management systems, see the :ref:`advanced-build-configuration` section below. 
+
    To install the required packages in an Anaconda environment, run:
 
    .. tabs::
@@ -62,12 +66,18 @@ The following steps only need to be performed once to set up the development env
 
       .. code-block:: shell
 
-         python setup.py cmake
+         python setup.py cmake 
 
-      This effectively runs the standard CMake *configure* procedure
+      This step runs the standard CMake *configure* procedure
       (i.e., ``mkdir build && cd build && cmake ..``) but adds flags to ensure
-      the proper libraries and compilers are found. The name of the resulting
-      build directory will depend on factors such as your operating system,
+      the proper libraries and compilers are found. 
+
+      .. note::
+
+         By default this will create a **release** build tree. Alternative configurations (eg, **debug**) can be selected 
+         as described in :ref:`build-types` below.
+      
+      The name of the resulting build directory will depend on factors such as your operating system,
       and the version of Python that is installed in the environment. An example
       might be ``./build/temp.linux-x86_64-cpython-39_local/``, where ``.`` refers
       to the directory that contains ``setup.py``.
@@ -76,7 +86,7 @@ The following steps only need to be performed once to set up the development env
 
       .. code-block:: shell
 
-         -- Build files have been written to: /home/facundo/repositories/xara/build/temp.linux-x86_64-cpython-313_release
+         -- Build files have been written to: /home/fmckenna/xara/build/temp.linux-x86_64-cpython-313_release
 
       This will build the C++ code and place the resulting shared library in the same directory as ``setup.py``. 
       The name of the resulting shared library will depend on your operating system and Python version. 
@@ -112,26 +122,50 @@ The following steps only need to be performed once to set up the development env
    the ``exit`` command.
 
 
+Targets
+-------
 
-Debug Builds
+
+
+.. _build-types:
+
+Build Types
 ------------
 
-The build type can be configured through the file ``setup.py``.
-For example, to change from a ``Release`` to ``Debug`` build, look for the following lines
-in ``setup.py`` and make the appropriate change:
+The build type can be configured by setting an environment variable named ``XARA_BUILD``
+in step 4a above. 
+For example:
 
-.. code-block:: python
+.. tabs::
 
-   cmake_configure_options = [
-       "-G", "Unix Makefiles",
-       *EnvArgs,
-       "-DCMAKE_BUILD_TYPE=DEBUG",
-   #   "-DCMAKE_BUILD_TYPE=RELEASE",
-   ]
+   .. tab:: MacOS / Linux
 
-After this change, rerun the CMake configure and build steps described in
-**Develop → Create a persistent build tree**.
+      .. code-block:: bash
 
+         XARA_BUILD=debug python setup.py cmake
+
+   .. tab:: Windows (Powershell)
+
+      .. code-block:: powershell
+
+         $env:XARA_BUILD="debug"
+         python setup.py cmake
+
+The ``XARA_BUILD`` variable can be set to one of the following values:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 80
+
+   * - Value
+     - Description
+   * - ``release``
+     - Optimized build with no debug symbols. This is the default.
+   * - ``debug``
+     - Build with debug symbols and reduced optimization. This is useful for debugging.
+
+
+.. _advanced-build-configuration:
 
 Advanced
 --------
