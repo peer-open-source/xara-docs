@@ -63,13 +63,14 @@ The following recorders are available with the MVLEM_3D element.
    Fiber_Stress_Concrete, Vertical concrete stresses in m fibers along the cross-section
    Fiber_Stress_Steel, Vertical steel stresses in m fibers along the cross-section
 
-OpenSeesPy Documentation
-########################
-
-OpenSeesPy user documetation for the MVLEM_3D element can be accessed from `HERE <https://openseespydoc.readthedocs.io/en/latest/src/MVLEM_3D.html>`_.
 
 Example
 #######
+
+.. note::
+
+   See also, `this post <https://openseesdigital.com/2024/07/07/minimal-mvlem-example/>`__.
+
 
 Specimen TUB (Beyer et al. 2008) is analyzed using the MVLEM_3D. Figure 2a shows the photo of the test specimen and the multidirectional displacement pattern applied at the top of the wall, while Figure 2b-c show the MVLEM_3D model of specimen TUB. Tcl Input files can be downloaded from `MVLEM-3D GitHub Page <https://github.com/kkolozvari/MVLEM-3D>`_.
 
