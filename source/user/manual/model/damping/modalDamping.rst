@@ -15,7 +15,8 @@ Modal Damping
 .. note::
 
    In Xara the tangent stiffness will always be formed to consistently incorporate modal damping effects, regardless of the matrix storage scheme that was selected. 
-   
+
+
 
 Example
 -------
