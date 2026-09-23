@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import hashlib
-import json
 import re
 import shutil
 from pathlib import Path
@@ -26,7 +25,7 @@ Galleries = [
             # "frame-2005/frame-2005.ipynb",
             # "frame-1010/main.ipynb",
             "frame-1010/frame-1010.ipynb",
-            "frame-3056/main.ipynb",
+            # "frame-3056/main.ipynb",
         ],
     },
     {
@@ -44,8 +43,9 @@ Galleries = [
         "directory": "plane",
         "description": "Plane examples.",
         "examples": [
-            "plane-0002/main.ipynb",
+            # "plane-0002/main.ipynb",
             "plane-0101/main.ipynb",
+            # "plane-2001/mesh.ipynb",
             "plane-2001/main.ipynb",
         ],
     },
@@ -157,41 +157,6 @@ def write_gallery_header(gallery_dir: Path, gallery: dict) -> None:
 
 # Main copy logic
 
-
-# def process_example(
-#     rel_nb_path: str,
-#     examples_root: Path,
-#     gallery_dir: Path,
-#     gallery_img_dir: Path,
-#     used_dest_names: set[str],
-# ) -> None:
-#     src_nb = examples_root / rel_nb_path
-#     if not src_nb.is_file():
-#         raise FileNotFoundError(f"Notebook not found: {src_nb}")
-
-#     example_key = Path(rel_nb_path).parts[0]
-#     if example_key in used_dest_names:
-#         raise ValueError(
-#             f"Duplicate example key '{example_key}' in gallery '{gallery_dir.name}'"
-#         )
-#     used_dest_names.add(example_key)
-
-#     src_example_dir = src_nb.parent
-
-#     rename_map = collect_image_renames(src_example_dir / "img", rel_nb_path)
-#     for old_name, new_name in rename_map.items():
-#         shutil.copy2(src_example_dir / "img" / old_name, gallery_img_dir / new_name)
-
-#     nb = json.loads(src_nb.read_text())
-#     for cell in nb.get("cells", []):
-#         if cell.get("cell_type") in ("markdown", "code"):
-#             cell["source"] = rewrite_image_refs(cell.get("source", []), rename_map)
-
-#     dest_nb = gallery_dir / f"{example_key}.ipynb"
-#     dest_nb.write_text(json.dumps(nb, indent=1, ensure_ascii=False))
-#     print(f"  {rel_nb_path} -> {dest_nb.relative_to(gallery_dir.parent)}")
-
-
 def process_example(
     rel_nb_path: str,
     examples_root: Path,
@@ -203,11 +168,13 @@ def process_example(
     if not src_nb.is_file():
         raise FileNotFoundError(f"Notebook not found: {src_nb}")
 
-    example_key = Path(rel_nb_path).parts[0]
+    path_obj = Path(rel_nb_path)
+    example_key = path_obj.parts[0]
     if example_key in used_dest_names:
-        raise ValueError(
-            f"Duplicate example key '{example_key}' in gallery '{gallery_dir.name}'"
-        )
+        example_key = f"{example_key}-{path_obj.stem}"
+        # raise ValueError(
+        #     f"Duplicate example key '{example_key}' in gallery '{gallery_dir.name}'"
+        # )
     used_dest_names.add(example_key)
 
     src_example_dir = src_nb.parent
