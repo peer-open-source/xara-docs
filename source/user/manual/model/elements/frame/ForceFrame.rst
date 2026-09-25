@@ -48,7 +48,7 @@ Examples
 
 .. ref-gallery::
 
-    examples/frames/frame-3056
+    examples/frames/frame-2007
 
 
 References
