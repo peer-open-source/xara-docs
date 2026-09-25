@@ -18,7 +18,7 @@ A *Quad* element uses the standard Lagrange isoparametric formulation.
          :type tag: |integer|
          :param nodes: a tuple of four element nodes in counter-clockwise order. 
          :type nodes: tuple of four, eight or nine :ref:`Node` tags
-         :param section: tuple or int. If int, it is the tag of a previously defined :ref:`PlaneStress` or :ref:`PlaneStrain` section. If tuple, it is a tuple of the form (``thick``, ``type``, ``material``) where 
+         :param section: tuple or int. If int, it is the tag of a previously defined :py:class:`xara.PlaneSection`. If tuple, it is a tuple of the form (``thick``, ``type``, ``material``) where 
            
              ===================================   ==============================================================================================================
              ``thick`` |float|                     element thickness

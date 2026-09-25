@@ -10,7 +10,7 @@ These quantities are typically stress and strain, but can also be force and defo
 
 .. tabs::
  
-   .. tab:: class
+   .. tab:: Python
 
       .. py:class:: xara.UniaxialMaterial(type, *args)
 
@@ -19,7 +19,7 @@ These quantities are typically stress and strain, but can also be force and defo
          :param args: additional arguments dependent on material ``type``
 
 
-   .. tab:: Python
+   .. tab:: OpenSeesPy
 
       .. py:method:: Model.uniaxialMaterial(type, tag, *args)
 

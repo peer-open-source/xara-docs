@@ -25,4 +25,4 @@ Examples
 .. ref-gallery::
    :tooltip:
 
-   examples/plane/plane-0002
+   examples/plane/plane-2001
