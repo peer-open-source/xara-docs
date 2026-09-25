@@ -13,7 +13,7 @@ The section is defined by a collection of fibers that discretize the cross-secti
       .. py:class:: xara.FrameSection("MultiaxialFiber", shape, *, fibers)
          :noindex:
          
-         Create a frame section that integrates the response of :py:class:`xara.UniaxialMaterial` objects distributed over the section shape.
+         Create a frame section that integrates the response of :py:class:`xara.MultiaxialMaterial` objects distributed over the section shape.
 
 
    .. tab:: OpenSeesPy
@@ -38,11 +38,6 @@ The section is defined by a collection of fibers that discretize the cross-secti
 
    Example of an AISC *W8x28* section discretized with fibers and rendered with `veux <https://veux.io>`__.
 
-
-The valid :ref:`eleResponse` queries are 
-
-* ``"force"``, and 
-* ``"deformation"``. 
 
 
 Valid :ref:`setParameter` targets are
