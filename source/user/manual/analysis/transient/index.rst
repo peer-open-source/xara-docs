@@ -100,3 +100,13 @@ Transient Analysis
    :math:`\ddot {\boldsymbol{u}}_{t}^{(0)}` can then be obtained from the
    operators for the integration scheme.
 
+
+
+Examples
+--------
+
+
+.. ref-gallery::
+
+   examples/plane/plane-0101
+

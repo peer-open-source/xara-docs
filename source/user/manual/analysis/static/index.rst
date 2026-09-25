@@ -26,6 +26,8 @@ Examples
 .. ref-gallery::
 
    examples/general/model-0001
+   examples/plane/plane-2001
+   examples/frames/frame-2007
 
 
 Theory 
