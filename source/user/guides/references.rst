@@ -13,7 +13,7 @@ Selected references describing the design and implementation of OpenSees and Xar
 
 * Petracca, M., Candeloro, F., & Camata, G. (2017). "STKO user manual". ASDEA Software Technology, Pescara Italy.
 
-* `Perez, C.M. "Nonlinear modeling of frame members for rapid infrastructure assessment." PhD Dissertation, UC Berkeley, 2026 <https://claudioperez.com/thesis.pdf>`_
+* `Perez, C.M. "Nonlinear modeling of frame members for rapid infrastructure assessment." PhD Dissertation, UC Berkeley, 2026 <https://escholarship.org/uc/item/3zn367p3>`_
 
 .. 
   * `Perez, C.M. "On nonlinear geometric transformations of finite elements."`_
