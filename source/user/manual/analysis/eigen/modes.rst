@@ -181,7 +181,7 @@ This command computes the following modal properties:
    *  Only the values in :math:`gm` and :math:`MPF` depend on the normalization of the eigenvectors. This normalization depends on the solver used in the :ref:`eigen`. The default -genBandArpack uses a mass-normalization, so that the :math:`gm` is the identity. On the contrary, the -fullGenLapack uses a displacement-normalization, so that the largest component of the eigenvector is 1. If you use the -genBandArpack, but want a displacement-normalization of the eigenvectors, use the **-unorm** option.
 
 Theory
-======
+------
 The eigenvalues :math:`\lambda` and the eigenvectors :math:`\Phi` can be obtained after solving the *generalized eigenvalue problem* for two symmetric matrices :math:`K` (stiffness) and :math:`M` (mass) given by:
 
 .. math::
@@ -254,8 +254,8 @@ The eigenvalues :math:`\lambda` and the eigenvectors :math:`\Phi` can be obtaine
 
 .. [HintonEtAl1976] Hinton, E., Rock, T. & Zienkiewicz, O. (1976). "A note on mass lumping and related processes in the Finite element method.” Earthquake Engineering and Structural Dynamics, 13, 9, p. A112.
 
-Example
--------
+Examples
+--------
    
 The following example shows how to:
 
