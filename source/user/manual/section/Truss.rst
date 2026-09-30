@@ -10,6 +10,7 @@ Truss
 
 
 
+
 .. .. py:method:: Model.section("Truss", tag, material, area, **kwargs)
 ..    :no-index:
 
