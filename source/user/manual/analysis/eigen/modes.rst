@@ -182,13 +182,16 @@ This command computes the following modal properties:
 
 Theory
 ------
+
 The eigenvalues :math:`\lambda` and the eigenvectors :math:`\Phi` can be obtained after solving the *generalized eigenvalue problem* for two symmetric matrices :math:`K` (stiffness) and :math:`M` (mass) given by:
 
 .. math::
    \left (K - \lambda M \right ) \Phi = 0
 
 
-:math:`M` is not necessarily diagonal, because some elemental matrices :math:`m_e` may be consistent. However, the computation of :math:`CoM`, :math:`m_t` and :math:`m_f` requires a lumped version of :math:`M`. The global lumped mass matrix :math:`LM` can be computed by the assembly of a diagonalized version of the elemental mass matrices :math:`m_e`:
+:math:`M` is not necessarily diagonal, because some elemental matrices :math:`m_e` may be consistent. 
+However, the computation of :math:`CoM`, :math:`m_t` and :math:`m_f` requires a lumped version of :math:`M`. 
+The global lumped mass matrix :math:`LM` can be computed by the assembly of a diagonalized version of the elemental mass matrices :math:`m_e`:
 
 .. math::
    LM = \bigwedge_{i=1}^{n}diag\left(m_e\right)
@@ -248,6 +251,7 @@ The eigenvalues :math:`\lambda` and the eigenvectors :math:`\Phi` can be obtaine
 |  The modal participation mass matrix :math:`MPM` is a :math:`n_m \times ndf` matrix (where ndf = 3 in 2D and 6 in 3D), where each row contains the modal participation masses for each DOF. The modal participation mass for a certain mode :math:`i` and DOF :math:`j` is defined as
 
 .. math::
+
    MPM_{ij} = \frac{\left(\Phi_{i}^T M T_j\right)^2}{gm_{ii}}
    
 |  If the modal participation masses for each mode in a particular DOF are summed, it should give the total mass of the structure for that DOF, exlcluding the masses at fixed DOFs.
