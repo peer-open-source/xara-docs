@@ -15,7 +15,7 @@ Truss
 
          :param tag: The element tag.
          :param nodes: A tuple of two node tags.
-         :param section: The cross-sectional area of the truss element.
+         :param section: A :py:class:`xara.TrussSection` object representing the cross-sectional properties of the truss element.
          :param density: The mass density of the element.
 
    .. tab:: Tcl
