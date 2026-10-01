@@ -13,10 +13,10 @@ Truss
          Create a truss element with tag *tag* between the nodes in *nodes* with
          cross-sectional area *section*.
 
-         :param tag: The element tag.
+         :param int tag: The element tag.
          :param nodes: A tuple of two node tags.
          :param section: A :py:class:`xara.TrussSection` object representing the cross-sectional properties of the truss element.
-         :param density: The mass density of the element.
+         :param float density: The mass density of the element.
 
    .. tab:: Tcl
 

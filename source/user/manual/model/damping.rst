@@ -9,8 +9,6 @@ Damping effects are introduced using the following methods:
    :maxdepth: 1
 
    damping/rayleigh
-
-..
    damping/modalDamping
 
 
