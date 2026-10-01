@@ -16,8 +16,8 @@ Two-node frame finite element with cubic displacement formulation.
          :type tag: |integer|
          :param nodes: tuple of *two* :ref:`node` tags
          :type nodes: tuple
-         :param section: integer tag identifying a :ref:`section`.
-         :type section: |integer|
+         :param section: Section object to be created at the element Gauss points. 
+         :type section: :py:class:`xara.FrameSection`
          :param transform: identifier for previously-defined :ref:`frame transformation <geomTransf>`
          :type transform: |integer|
          :param integration: identifier for previously-defined integration rule.
@@ -26,6 +26,7 @@ Two-node frame finite element with cubic displacement formulation.
 This formulation supports higher order strain measures and shear deformations.
 
 The valid :ref:`eleResponse` queries to this element are ``"force"``.
+
 
 References
 ----------

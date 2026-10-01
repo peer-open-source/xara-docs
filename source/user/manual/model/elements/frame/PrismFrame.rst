@@ -18,7 +18,7 @@ The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
          :type tag: |integer|
          :param nodes: tuple of *two* integer :ref:`node` tags
          :type nodes: tuple
-         :param section: Section object to be created at the element Gauss points. 
+         :param section: object from which to define elastic cross-sectional properties. 
          :type section: :py:class:`xara.FrameSection`
          :param transform: identifier for previously-defined coordinate-transformation
          :type transform: |integer|
