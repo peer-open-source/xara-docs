@@ -14,7 +14,7 @@ Two-node force formulation for 3D frames. [1]_ [2]_.
 
 .. tabs::
 
-   .. tab:: Python (RT)
+   .. tab:: Python
 
       .. py:method:: Model.element("ForceFrame", tag, nodes, *, section, transform, **options)
          :no-index:
@@ -48,7 +48,7 @@ Examples
 
 .. ref-gallery::
 
-    examples/frames/frame-2007
+   examples/frames/frame-2007
 
 
 References
@@ -57,6 +57,8 @@ References
 .. [1] Spacone, E., V. Ciampi, and F. C. Filippou (1996).  "Mixed Formulation of Nonlinear Beam Finite Element." Computers and Structures, 58(1):71-83.
 
 .. [2] Lee, C.‐L., and F. C. Filippou. “Frame Elements with Mixed Formulation for Singular Section Response.” International Journal for Numerical Methods in Engineering 78, no. 11 (June 11, 2009): 1320–44. https://doi.org/10.1002/nme.2531.
+
+.. [5] Perez, C. M. "Nonlinear Modeling of Frame Members for Rapid Infrastructure Assessment." Ph.D., University of California, Berkeley, 2026.
 
 Code developed by: |cmp|, |fcf|, |mhs|, |fmk|
 

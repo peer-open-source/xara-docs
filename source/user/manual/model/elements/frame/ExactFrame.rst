@@ -75,7 +75,7 @@ As of ``xara`` version ``0.1.15``, the ``ExactFrame`` element can be used to mod
 Example 
 -------
 
-The following example demonstrates the command to create an **ExactFrame** element.
+The following example demonstrates the command to create an **CosseratFrame** element.
 
 .. tabs::
 
@@ -83,13 +83,13 @@ The following example demonstrates the command to create an **ExactFrame** eleme
 
       .. code-block:: python
 
-         model.element('ExactFrame', 1, (1, 2), section=1, transform=1)
+         model.element("CosseratFrame", 1, (1, 2), section=1, transform=1)
 
    .. tab:: OpenSees (Tcl)
 
       .. code-block:: tcl
 
-         element ExactFrame 1 1 2 -section 1 -transform 1
+         element CosseratFrame 1 1 2 -section 1 -transform 1
 
 
 
@@ -102,6 +102,8 @@ References
 .. [2] Antman, S.S. (2005) Nonlinear problems of elasticity. 2nd ed. New York: Springer (Applied mathematical sciences, v. 107).
 
 .. [3] Perez, C.M. and Filippou, F.C. (2024) ‘On nonlinear geometric transformations of finite elements’, International Journal for Numerical Methods in Engineering, p. e7506. Available at: https://doi.org/10.1002/nme.7506.
+
+.. [5] Perez, C. M. "Nonlinear Modeling of Frame Members for Rapid Infrastructure Assessment." Ph.D., University of California, Berkeley, 2026.
 
 .. [4]  "geometrically exact" in this context refers to a specific class of formulations that are highly accurate in capturing geometric nonlinearities associated with large deformations and rotations, as seen in beam and shell theories. They are still approximations, but they aim for greater fidelity to the underlying physical theory by considering all relevant geometric terms without simplification. 
 
