@@ -1,15 +1,15 @@
 .. _elasticBeamColumn:
 
-PrismFrame
-^^^^^^^^^^^
+ElasticFrame
+^^^^^^^^^^^^
 
-The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
+The ``ElasticFrame`` element represents a linear-elastic prismatic beam element.
 
 .. tabs::
 
    .. tab:: Python (RT)
 
-      .. py:method:: Model.element("PrismFrame", tag, nodes, *, section, transform, shear=0, *args)
+      .. py:method:: Model.element("ElasticFrame", tag, nodes, *, section, transform, shear=0, *args)
          :no-index:
          
          Create a linear elastic prismatic frame element.
@@ -27,7 +27,7 @@ The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
 
    .. tab:: Tcl
 
-      .. function:: element PrismFrame $tag $iNode $jNode $sect $tran
+      .. function:: element ElasticFrame $tag $iNode $jNode $sect $tran
 
       The required arguments are:
 
@@ -54,14 +54,14 @@ of **5.5**, Young's modulus :math:`E` of **100.0** and an Iz of **1e6** which us
 
    .. code-block:: tcl
 
-      element PrismFrame 1 2 4 5.5 100.0 1e6 9; 
+      element ElasticFrame 1 2 4 5.5 100.0 1e6 9; 
 
 
 2. **Python Code**
 
    .. code-block:: python
 
-      model.element("PrismFrame", 1, (2, 4), 5.5, 100.0, 1.0e6, 9)
+      model.element("ElasticFrame", 1, (2, 4), 5.5, 100.0, 1.0e6, 9)
 
 
 Theory

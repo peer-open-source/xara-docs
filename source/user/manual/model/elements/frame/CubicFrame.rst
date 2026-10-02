@@ -7,7 +7,7 @@ Two-node frame finite element with cubic displacement formulation.
 
 .. tabs::
 
-   .. tab:: Python (RT)
+   .. tab:: Python
 
       .. py:method:: Model.element("CubicFrame", tag, nodes, *, section, transform, integration=None, *args)
          :no-index:
