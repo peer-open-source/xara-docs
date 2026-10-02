@@ -14,6 +14,6 @@ Examples
 
 .. ref-gallery::
 
-   examples/frame/frame-2007
+   examples/frames/frame-2007
 
 
