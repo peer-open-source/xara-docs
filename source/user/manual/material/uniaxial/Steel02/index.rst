@@ -15,9 +15,9 @@ Steel02
 
          Create a *Steel02* material.
 
-         :param float Fy: yield stress, :math:`F_y` [1]_
-         :param float E: initial elastic tangent, :math:`E` [1]_
-         :param float b: strain-hardening ratio, :math:`b`
+         :param float Fy: yield stress, :math:`F_y` [1]_. Units of :ref:`stress <UnitStress>`.
+         :param float E: initial elastic tangent, :math:`E` [1]_. Units of :ref:`stress <UnitStress>`.
+         :param float b: strain-hardening ratio, :math:`b`. Dimensionless.
          :param float R0: parameter to control the transition from elastic to plastic branches, :math:`R_0`
          :param float cR1: parameter to control the transition from elastic to plastic branches, :math:`cR1`
          :param float cR2: parameter to control the transition from elastic to plastic branches, :math:`cR2`

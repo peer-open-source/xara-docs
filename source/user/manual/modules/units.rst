@@ -6,9 +6,12 @@ Units
 .. py:module:: xara.units
    :synopsis: Predefined constants for common unit systems.
 
-xara does not assume or enforce any unit system.
+xara does not assume or enforce any unit system internally. 
 All model inputs (coordinates, mass, forces, stiffness, etc.) are numeric values; the user must choose a consistent unit system and apply it throughout the model.
 The *xara.units* submodule contains predefined constants that can help with keeping track of units, ensuring consistency.
+
+
+.. autofunction:: xara.units.create_units
 
 
 .. autoclass:: xara.units.Units
@@ -20,6 +23,7 @@ The *xara.units* submodule contains predefined constants that can help with keep
       ~Units.meter
       ~Units.inch
       ~Units.foot
+      ~Units.yard
 
    .. rubric:: Force
 
@@ -29,27 +33,27 @@ The *xara.units* submodule contains predefined constants that can help with keep
       ~Units.pound_force
       ~Units.kilopound
 
+
    .. rubric:: Stress
+      :name: UnitStress
 
    .. autosummary::
 
       ~Units.pascal
-      ~Units.kilopascal
+      ~Units.gigapascal
+      ~Units.megapascal
       ~Units.psi
+      ~Units.psf
       ~Units.ksi
-
-   .. rubric:: Mass
-
-   .. autosummary::
-
-      ~Units.newton
-      ~Units.pound_force
+      ~Units.ksf
 
    .. rubric:: Mass
 
    .. autosummary::
 
       ~Units.kilogram
+      ~Units.pound_mass
+      ~Units.slug
 
    .. rubric:: Acceleration
 
@@ -166,4 +170,3 @@ Note, however, that this is generally considered bad programming style.
 
 ..    rpm          , revpm        ,  Revolution per minute
 ..    radps        ,              ,  Radian per second
-

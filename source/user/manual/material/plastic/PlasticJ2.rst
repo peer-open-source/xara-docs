@@ -11,11 +11,11 @@ PlasticJ2
       .. py:class:: xara.MultiaxialMaterial("PlasticJ2", E, nu, Fy, ...)
          :no-index:
 
-         :gparam Elastic E: Young's modulus, :math:`E` [1]_
+         :gparam Elastic E: Young's modulus, :math:`E` [1]_. Units of :ref:`stress <UnitStress>`.
          :gtype E: |float|
          :gparam Elastic nu: Poisson's ratio, :math:`\nu` [1]_
          :gtype nu: |float|
-         :gparam Plastic Fy: Initial yield stress, :math:`F_y` [1]_
+         :gparam Plastic Fy: Initial yield stress, :math:`F_y` [1]_. Units of :ref:`stress <UnitStress>`.
          :gparam "Isotropic Hardening" Hiso: linear isotropic hardening modulus
          :gtype Hiso: |float|
          :gparam "Nonlinear Hardening" Fs: Saturation yield stress

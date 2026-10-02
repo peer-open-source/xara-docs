@@ -168,6 +168,7 @@ The ``XARA_BUILD`` variable can be set to one of the following values:
 
 .. _advanced-build-configuration:
 
+
 Advanced
 --------
 
