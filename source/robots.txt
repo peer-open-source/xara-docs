@@ -92,6 +92,10 @@ Allow: /user/manual/loading/StaticPattern/NodalLoad.html
 Allow: /user/manual/loading/StaticPattern/NodalValue.html
 Allow: /user/manual/loading/StaticPattern/FrameLoad.html
 
+Allow: /user/manual/analysis/index.html
+Allow: /user/manual/analysis/static/index.html
+
+
 Allow: /user/manual/output/index.html
 Allow: /user/manual/output/print.html
 Allow: /user/manual/output/printB.html
@@ -105,10 +109,7 @@ Allow: /user/manual/numerics/system/index.html
 Allow: /user/manual/numerics/system/BandGeneral.html
 Allow: /user/manual/numerics/system/Umfpack.html
 Allow: /user/manual/numerics/system/SparseSYM.html
-#Allow: /user/manual/analysis/analysis.html
-Allow: /user/manual/analysis/integrator.html
-Allow: /user/manual/analysis/integrator/ArcLength.html
-Allow: /user/manual/analysis/integrator/MinimumUnbalancedDisplacementNorm.html
+
 Allow: /user/manual/modules/units.html
 Disallow: /
 
