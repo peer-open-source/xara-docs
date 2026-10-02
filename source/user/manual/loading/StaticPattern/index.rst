@@ -25,4 +25,6 @@ StaticPattern
      - Loads applied at :ref:`Nodes <Node>` in the model.
    * - :py:class:`NodalValue <xara.NodalValue>`
      - Imposed displacement at a :ref:`Node <Node>` in the model.
+   * - :py:class:`FrameLoad <xara.FrameLoad>`
+     - Distributed loading on :ref:`Frame <Frame>` elements.
 

@@ -25,6 +25,12 @@ FrameLoad
    This loading is intended to supesede the preexisting beam loads. Currently it is only supported by :ref:`ExactFrame`
 
 
+.. version-note::
+   :version: 0.1.33
+   :type: added
+
+   Support for ForceFrame
+
 
 Examples
 --------
