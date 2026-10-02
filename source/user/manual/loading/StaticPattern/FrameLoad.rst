@@ -22,7 +22,8 @@ FrameLoad
 
 .. note::
    
-   This loading is intended to supesede the preexisting beam loads. Currently it is only supported by :ref:`ExactFrame`
+   This loading is intended to supesede the preexisting beam loads. 
+   Currently it is only supported in 3D by :ref:`ExactFrame`, :ref:`elasticBeamColumn`, and :ref:`ForceFrame`
 
 
 .. version-note::
