@@ -62,9 +62,9 @@ as follows:
   path-dependence.
 * **Rotation parameters** for post-processing purposes, rotations should be obtained using the :ref:`nodeRotation`. Recall that in a finite rotation analysis, "rotational" components of the nodal displacement vector (ie, the vector returned by :ref:`nodeDisp`) is meaningless.
 
-The ``ExactFrame`` formulation is appropriate for a wide variety of structural members including thin-walled sections, asymmetric sections, and inelasticity.
+The ``CosseratFrame`` formulation is appropriate for a wide variety of structural members including thin-walled sections, asymmetric sections, and inelasticity.
 
-As of ``xara`` version ``0.1.15``, the ``ExactFrame`` element can be used to model cross-sectional warping through an additional seventh degree of freedom.
+As of ``xara`` version ``0.1.15``, the ``CosseratFrame`` element can be used to model cross-sectional warping through an additional seventh degree of freedom.
 
 
 .. note::
@@ -106,6 +106,7 @@ References
 .. [5] Perez, C. M. "Nonlinear Modeling of Frame Members for Rapid Infrastructure Assessment." Ph.D., University of California, Berkeley, 2026.
 
 .. [4]  "geometrically exact" in this context refers to a specific class of formulations that are highly accurate in capturing geometric nonlinearities associated with large deformations and rotations, as seen in beam and shell theories. They are still approximations, but they aim for greater fidelity to the underlying physical theory by considering all relevant geometric terms without simplification. 
+
 
 Code developed by: |cmp|
 

@@ -108,8 +108,8 @@ A hysteretic loading-reloading algorithm for this curve was proposed by \cite{gi
 
 
 
-Example 
--------
+Examples
+--------
 
 The following example defines a *Steel02* material with tag ``1``, a yield stress of **60.0** and an initial tangent stiffness of **30000**.
 
@@ -126,6 +126,12 @@ The following example defines a *Steel02* material with tag ``1``, a yield stres
       .. code:: tcl
 
          uniaxialMaterial Steel02 1 60.0 30000.0 0.1 20.0 .925 .15
+
+
+.. ref-gallery::
+
+   examples/material/material-0002
+
 
 
 References

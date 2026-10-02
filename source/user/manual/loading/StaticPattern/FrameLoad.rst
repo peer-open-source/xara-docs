@@ -38,4 +38,4 @@ Examples
 
 .. ref-gallery::
 
-    examples/frames/frame-1020
+   examples/frames/frame-1020
