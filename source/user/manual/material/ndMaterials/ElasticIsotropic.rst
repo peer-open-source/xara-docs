@@ -9,14 +9,14 @@ This command is used to construct an *ElasticIsotropic* material.
 
    .. tab:: Python
 
-      .. py:class:: xara.MultiaxialMaterial("ElasticIsotropic", E, v, rho=0.0)
+      .. py:class:: xara.MultiaxialMaterial("ElasticIsotropic", E, nu, rho=0.0)
          :no-index:
 
-         :param E: Young's elastic modulus :math:`E`
+         :param E: Young's elastic modulus :math:`E`. Units of :ref:`stress <UnitStress>`.
          :type E: |float|
-         :param v: Poisson's ratio :math:`\nu`
-         :type v: |float|
-         :param rho: mass density :math:`\rho`. optional default = 0.
+         :param nu: Poisson's ratio :math:`\nu`. Dimensionless.
+         :type nu: |float|
+         :param rho: mass density :math:`\rho`. optional default = 0. Units of :ref:`mass <UnitMass>`.
          :type rho: |float|
 
    .. tab:: OpenSees

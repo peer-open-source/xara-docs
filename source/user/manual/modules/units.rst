@@ -17,6 +17,7 @@ The *xara.units* submodule contains predefined constants that can help with keep
 .. autoclass:: xara.units.Units
 
    .. rubric:: Length
+      :name: UnitLength
 
    .. autosummary::
 
@@ -26,6 +27,7 @@ The *xara.units* submodule contains predefined constants that can help with keep
       ~Units.yard
 
    .. rubric:: Force
+      :name: UnitForce
 
    .. autosummary::
 
@@ -48,6 +50,7 @@ The *xara.units* submodule contains predefined constants that can help with keep
       ~Units.ksf
 
    .. rubric:: Mass
+      :name: UnitMass
 
    .. autosummary::
 

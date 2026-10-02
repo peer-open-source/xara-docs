@@ -17,7 +17,7 @@ Each node has :py:attr:`Model.ndm` coordinates (position in space) and :py:attr:
       .. py:method:: Model.node(tag, coords, [mass])
 
          :param tag: integer tag identifying node
-         :param coords: tuple of :py:attr:`Model.ndm` |float| coordinates. Coordinates may be retrieved with :py:meth:`Model.nodeCoord` and updated with :py:meth:`Model.setNodeCoord`.
+         :param coords: tuple of :py:attr:`Model.ndm` |float| coordinates. Units of :ref:`length <UnitLength>`. Coordinates may be retrieved with :py:meth:`Model.nodeCoord` and updated with :py:meth:`Model.setNodeCoord`.
          :param mass: tuple of :py:attr:`Model.ndf` lumped mass values per DOF (see Theory for units and interpretation)
 
 
@@ -38,7 +38,7 @@ Theory
 ------
 
 Nodes define discrete locations in a model. 
-The number of coordinates is **ndm** (number of dimensions); the number of degrees of freedom per node is **ndf** (typically ndm for trusses, ndm + rotational DOFs for frames).
+The number of coordinates is :py:attr:`Model.ndm` (number of dimensions); the number of degrees of freedom per node is :py:attr:`Model.ndf` (typically ndm for trusses, ndm + rotational DOFs for frames).
 See :ref:`nodeDisp` for the ordering of displacement components.
 
 **Mass.** When the ``mass`` argument is provided, it is a tuple of **ndf** values: lumped mass (or rotational inertia) per degree of freedom, 
@@ -46,8 +46,8 @@ in the mass units of the chosen system (e.g. kg in SI, slug in fps).
 For a 2D model with ndf=3, the first two values are translational mass for u1 and u2; the third is rotational inertia for r3.
 
 
-Example
--------
+Examples
+--------
 
 The following example adds two nodes to a :class:`Model` with ``ndm=2`` and ``ndf=3``.
 Node ``3`` is at coordinates ``(168.0, 0.0)``, node ``4`` at ``(168.0, 144.0)``.
