@@ -54,6 +54,8 @@ extensions = [
 
     "param_dl",
     "version_notes",
+    # "material_types",
+    "_setup.keyword_only_signatures",
 ]
 
 codeautolink_warn_on_failed_resolve = True
@@ -284,9 +286,9 @@ else:
     ExampleConverter.thumb_file_rel = _thumb_file_rel
 
 
-from gallery import Galleries, OutputDocs, OutputRoot, build
+from gallery import Galleries, OutputDocs, OutputRoot, build as build_gallery
 
-# build(OutputRoot)  # regenerate the source tree
+# build_gallery(OutputRoot)  # regenerate the source tree
 
 
 Here = Path(__file__).parent
