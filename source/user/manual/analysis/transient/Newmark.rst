@@ -89,9 +89,10 @@ which results in the following expressions:
 
 The variables :math:`\beta` and :math:`\gamma` are numerical parameters that control both the stability of the method and the amount of numerical damping introduced into the system by the method. For :math:`\gamma=\frac{1}{2}` there is no numerical damping; for :math:`\gamma>=\frac{1}{2}` numerical damping is introduced. Two well known and commonly used cases are:
 
-   1. Average Acceleration Method (:math:`\gamma=\frac{1}{2}, \beta = \frac{1}{4}`)
+1. Average Acceleration Method (:math:`\gamma=\frac{1}{2}, \beta = \frac{1}{4}`)
 
-   2. Constant Acceleration Method (:math:`\gamma=\frac{1}{2}, \beta = \frac{1}{6}`)
+2. Constant Acceleration Method (:math:`\gamma=\frac{1}{2}, \beta = \frac{1}{6}`)
+
 
 The linearization of the Newmark equations gives:
 
@@ -147,14 +148,15 @@ The following example shows how to construct a *Newmark* Integrator.
 
          model = xara.Model()
 
-         dynam = xara.DynamicAnalysis(integrator=xara.Newmark(0.5, 0.25))
+         analysis = xara.TransientAnalysis(integrator=xara.Newmark(0.5, 0.25))
 
    .. tab:: Python
 
       .. code-block:: python
 
          model.integrator("Newmark", 0.5, 0.25)
-   
+
+
    .. tab:: Tcl
 
       .. code-block:: tcl
