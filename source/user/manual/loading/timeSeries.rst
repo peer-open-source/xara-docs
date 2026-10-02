@@ -37,6 +37,8 @@ A TimeSeries represents the relationship between the time in the domain, :math:`
 
 
 
+
+
 .. A TimeSeries may be one of the following types:
 
 .. .. toctree::
@@ -54,5 +56,14 @@ A TimeSeries represents the relationship between the time in the domain, :math:`
    timeseries/pulseTimeSeries
    timeseries/peerMotion
    timeseries/PeerNGAMotion
+
+
+Examples
+--------
+
+
+.. ref-gallery::
+
+   examples/frames/frame-2007
 
 
