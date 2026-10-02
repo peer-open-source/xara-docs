@@ -8,7 +8,7 @@ Frame
     
     Construct a frame section object.
 
-    :param type: string identifying the section type. Standard options are :ref:`"Elastic" <ElasticSection>`, :ref:`"UniaxialFiber" <UniaxialFiber>`, and ``"MultiaxialFiber"``. Legacy options are ``"Fiber"`` and ``"NDFiber"``.
+    :param type: string identifying the section type. Standard options are :ref:`"Elastic" <ElasticSection>`, :ref:`"UniaxialFiber" <UniaxialFiber>`, and :ref:`"MultiaxialFiber" <MultiaxialFiber>`. Legacy options are ``"Fiber"`` and ``"NDFiber"``.
     :type type: |string|
     :param shape: :ref:`Shape <FrameShape>` object defining the geometry and material composition of the section.
     :type shape: Shape

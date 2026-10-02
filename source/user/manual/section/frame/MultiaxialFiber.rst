@@ -19,6 +19,7 @@ The section is defined by a collection of fibers that discretize the cross-secti
          :param fibers: An *optional* dictionary describing the distribution of fibers over the cross-section. By default fibers will be generated automatically.
          :type fibers: dict, optional
 
+
    .. tab:: OpenSeesPy
     
       .. py:method:: Model.section("MultiaxialFiber", tag, **kwds)

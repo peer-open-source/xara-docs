@@ -21,9 +21,9 @@ The implementation closely follows the treatment by Perez and Filippou (2024) [3
 
 .. tabs::
 
-   .. tab:: Python (RT)
+   .. tab:: Python
 
-      .. py:method:: Model.element("CosseratFrame", tag, nodes, section, transform)
+      .. py:method:: Model.element("CosseratFrame", tag, nodes, *, section, transform)
          :no-index:
 
          :param tag: unique :ref:`element` tag
@@ -34,6 +34,7 @@ The implementation closely follows the treatment by Perez and Filippou (2024) [3
          :type section: :py:class:`xara.FrameSection`
          :param transform: identifier for previously-defined coordinate-transformation (see :ref:`geomTransf`)
          :type transform: |integer|
+
 
    .. tab:: Tcl
 
@@ -64,16 +65,25 @@ as follows:
 
 The ``CosseratFrame`` formulation is appropriate for a wide variety of structural members including thin-walled sections, asymmetric sections, and inelasticity.
 
-As of ``xara`` version ``0.1.15``, the ``CosseratFrame`` element can be used to model cross-sectional warping through an additional seventh degree of freedom.
-
-
 .. note::
 
    This element always employs a :ref:`Gauss-Legendre <Legendre-BeamIntegration>` quadrature of order ``nen-1`` for an element with ``nen`` nodes, and does not accept user-defined quadrature schemes.
 
 
-Example 
--------
+Changelog
+---------
+
+
+.. version-note::
+   :version: 0.1.15
+   :type: added
+
+   The ``CosseratFrame`` element can be used to model cross-sectional warping through an additional seventh degree of freedom.
+
+
+
+Examples
+--------
 
 The following example demonstrates the command to create an **CosseratFrame** element.
 
