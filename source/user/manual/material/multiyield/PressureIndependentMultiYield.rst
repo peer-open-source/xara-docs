@@ -15,34 +15,35 @@ Plasticity is formulated based on the multi-surface (nested surfaces) concept, w
 The yield surfaces are of the Von Mises type.
 
 
-.. admonition:: function
-
-   nDmaterial PressureIndependMultiYield $tag $nd $rho $refShearModul $refBulkModul $cohesi $peakShearStra <$frictionAng=0. $refPress=100. $pressDependCoe=0. $noYieldSurf=20 <$r1 $Gs1 …> >
+.. function:: nDmaterial PressureIndependMultiYield tag nd rho refShearModul refBulkModul cohesi peakShearStra <frictionAng=0. refPress=100. pressDependCoe=0. noYieldSurf=20 <r1 Gs1 …> >
 
 .. csv-table:: Arguments
    :header: "Argument", "Type", "Description"
    :widths: 1, 1, 98
 
-   $tag, |integer|,  A positive integer uniquely identifying the material among all nDMaterials.
-   $nd, |integer|, "Number of dimensions, 2 for plane-strain, and 3 for 3D analysis."
-   $rho, |float|, "Saturated soil mass density."
-   $refShearModul (Gr), |float|,  "Reference low-strain shear modulus, specified at a reference mean effective confining pressure refPress of p’r (see below)."
-   $refBulkModul (Br), |float|, "Reference bulk modulus, specified at a reference mean effective confining pressure refPress of p’r (see below)."
-   $cohesi (c), |float|, "Apparent cohesion at zero effective confinement."
-   $peakShearStra (γmax), |float|, "An octahedral shear strain at which the maximum shear strength is reached, specified at a reference mean effective confining pressure refPress of p’r (see below)."
-   $frictionAng (Φ), |float|, "Friction angle at peak shear strength in degrees. (optional: default is 0.0)."
-   $refPress (p’r), |float|, "Reference mean effective confining pressure at which Gr and Br and γmax are defined, optional (default is 100. kPa)."
-   $pressDependCoe (d), |float|,  "A positive constant defining variations of G and B as a function of instantaneous effective confinement p’(default is 0.0). see notes 4 and 5 below."
-   $noYieldSurf, |integer|, "Number of yield surfaces, optional (must be less than 40: default is 20). The surfaces are generated based on the hyperbolic relation defined in Note 2 below."
-   $r $Gs, |float|, "Instead of automatic surfaces generation (Note 2), you can define yield surfaces directly based on desired shear modulus reduction curve. To do so, add a minus sign in front of noYieldSurf, then provide noYieldSurf pairs of shear strain (γ) and modulus ratio (Gs) values. For example, to define 10 surfaces: … -10γ1Gs1 … γ10Gs10 …"
+   tag, |integer|,  A positive integer uniquely identifying the material among all nDMaterials.
+   nd, |integer|, "Number of dimensions, 2 for plane-strain, and 3 for 3D analysis."
+   rho, |float|, "Saturated soil mass density."
+   refShearModul (Gr), |float|,  "Reference low-strain shear modulus, specified at a reference mean effective confining pressure refPress of p’r (see below)."
+   refBulkModul (Br), |float|, "Reference bulk modulus, specified at a reference mean effective confining pressure refPress of p’r (see below)."
+   cohesi (c), |float|, "Apparent cohesion at zero effective confinement."
+   peakShearStra (γmax), |float|, "An octahedral shear strain at which the maximum shear strength is reached, specified at a reference mean effective confining pressure refPress of p’r (see below)."
+   frictionAng (Φ), |float|, "Friction angle at peak shear strength in degrees. (optional: default is 0.0)."
+   refPress (p’r), |float|, "Reference mean effective confining pressure at which Gr and Br and γmax are defined, optional (default is 100. kPa)."
+   pressDependCoe (d), |float|,  "A positive constant defining variations of G and B as a function of instantaneous effective confinement p’(default is 0.0). see notes 4 and 5 below."
+   noYieldSurf, |integer|, "Number of yield surfaces, optional (must be less than 40: default is 20). The surfaces are generated based on the hyperbolic relation defined in Note 2 below."
+   r Gs, |float|, "Instead of automatic surfaces generation (Note 2), you can define yield surfaces directly based on desired shear modulus reduction curve. To do so, add a minus sign in front of noYieldSurf, then provide noYieldSurf pairs of shear strain (γ) and modulus ratio (Gs) values. For example, to define 10 surfaces: … -10γ1Gs1 … γ10Gs10 …"
 
 
+Notes
+=====
 
-1. The friction angle :math:`\phi` and cohesion c define the variation of peak (octahedral) shear strength :math:`\tau_f` as a function of current effective confinement :math:`{p^t}_i`:
+
+1. The friction angle :math:`\phi` and cohesion :math:`c` define the variation of peak (octahedral) shear strength :math:`\tau_f` as a function of current effective confinement :math:`{p^t}_i`:
 
    .. math::
 
-      \tau_f = \frac{2 \sqrt{2} sin \phi}{3 - sin \phi}{p^t}_i + \frac{2 \sqrt{2}}{3}c
+      \tau_f = \frac{2 \sqrt{2} \sin \phi}{3 - \sin \phi}{p^t}_i + \frac{2 \sqrt{2}}{3}c
 
 
 2. Automatic surface generation: at a constant confinement :math:`p^t`, the shear stress :math:`\tau` (octahedral) - shear strain :math:`\gamma` (octahedral) nonlinearity is defined by a hyperbolic curve (backbone curve):
@@ -55,7 +56,7 @@ The yield surfaces are of the Von Mises type.
 
    .. math::
 
-      \tau_f = \frac{2 \sqrt{2} sin \phi}{3 - sin \phi}{p^t}_r + \frac{2 \sqrt{2}}{3}c = \frac{G_r \gamma_{max}}{1 + \gamma_{max}/\gamma_r}
+      \tau_f = \frac{2 \sqrt{2} \sin \phi}{3 - \sin \phi}{p^t}_r + \frac{2 \sqrt{2}}{3}c = \frac{G_r \gamma_{max}}{1 + \gamma_{max}/\gamma_r}
 
 3. (User defined surfaces) The user specified friction angle :math:`\phi = 0`. cohesion c will be ignored. Instead, c is defined by :math:`c=\sqrt 3 \sigma_m / 2`, where :math:`\sigma_m` is the product of the last modulus and strain pair in the modulus reduction curve. Therefore, it is important to adjust the backbone curve so as to render an appropriate c.
 
@@ -70,7 +71,7 @@ The yield surfaces are of the Von Mises type.
 
    Also remember that improper modulus reduction curves can result in strain softening response (negative tangent shear modulus), which is not allowed in the current model formulation. Finally, note that the backbone curve varies with confinement, although the variation is small within commonly interested confinement ranges. Backbone curves at different confinements can be obtained using the OpenSees element recorder facility
       
-4. **$presDependCoef d** defines variations of G and B as a function of instantaneous effective confinement :math:p^t as follows:
+4. ``presDependCoef``, :math:`d`, defines variations of G and B as a function of instantaneous effective confinement :math:`p^t` as follows:
 
    .. math::
 
@@ -78,27 +79,31 @@ The yield surfaces are of the Von Mises type.
 
       B = B_r \left ( \frac{p^t}{{p^t}_r} \right)^d
 
-5. If :math:`\phi = 0.0`, **d is reset to 0.0**.
+5. If :math:`\phi = 0.0`, :math:`d` **is reset to 0.0**.
 
-6. **OUTPUT** The following information may be extracted for this material at a given integration point, using the OpenSees Element Recorder facility "stress", "strain", "backbone", or "tangent".
 
-   * For 2D problems, the stress output follows this order: :math:`\sigma_{xx}`, :math:`\sigma_{yy}`, :math:`\sigma_{zz}`, :math:`\sigma_{xy}`,:math:`\eta_r`, where :math:`\eta_r` is the ratio between the shear (deviatoric) stress and peak shear strength at the current confinement :math:`(0<=\eta_r<=1.0)`. The strain output follows this order: :math:`\epsilon_{xx}`, :math:`\epsilon_{yy}`, :math:`\epsilon_{xy}`
+Output
+======
 
-   * For 3D problems, the stress output follows this order: :math:`\sigma_{xx}`, :math:`\sigma_{yy}`, :math:`\sigma_{zz}`, :math:`\sigma_{xy}`,:math:`\sigma_{yz}`, :math:`\sigma_{zx}`, :math:`\eta_r` and the strain output follows this order: :math:`\epsilon_{xx}`, :math:`\epsilon_{yy}`, :math:`\epsilon_{zz}`, :math:`\gamma_{xy}`, :math:`\gamma_{yz}`, :math:`\gamma_{zx}`
+The following information may be extracted for this material at a given integration point, using the OpenSees Element Recorder facility "stress", "strain", "backbone", or "tangent".
 
-   *  The "backbone" option records (secant) shear modulus reduction curves at one or more given confinements. The specific recorder command is as follows:
+* For 2D problems, the stress output follows this order: :math:`\sigma_{xx}`, :math:`\sigma_{yy}`, :math:`\sigma_{zz}`, :math:`\sigma_{xy}`, :math:`\eta_r`, where :math:`\eta_r` is the ratio between the shear (deviatoric) stress and peak shear strength at the current confinement :math:`(0<=\eta_r<=1.0)`. The strain output follows this order: :math:`\epsilon_{xx}`, :math:`\epsilon_{yy}`, :math:`\epsilon_{xy}`
 
-   .. code::
+* For 3D problems, the stress output follows this order: :math:`\sigma_{xx}`, :math:`\sigma_{yy}`, :math:`\sigma_{zz}`, :math:`\sigma_{xy}`, :math:`\sigma_{yz}`, :math:`\sigma_{zx}`, :math:`\eta_r` and the strain output follows this order: :math:`\epsilon_{xx}`, :math:`\epsilon_{yy}`, :math:`\epsilon_{zz}`, :math:`\gamma_{xy}`, :math:`\gamma_{yz}`, :math:`\gamma_{zx}`
 
-      recorder Element –ele $eleNum -file $fName -dT $deltaT material $GaussNum backbone $p1 <$p2 …>
+* The "backbone" option records (secant) shear modulus reduction curves at one or more given confinements. The specific recorder command is as follows:
 
-   where p1, p2, … are the confinements at which modulus reduction curves are recorded. In the output file, corresponding to each given confinement there are two columns: shear strain γ and secant modulus Gs. The number of rows equals the number of yield surfaces.
+  .. code::
+
+     recorder Element –ele $eleNum -file $fName -dT $deltaT material $GaussNum backbone $p1 <$p2 …>
+
+  where p1, p2, … are the confinements at which modulus reduction curves are recorded. In the output file, corresponding to each given confinement there are two columns: shear strain γ and secant modulus Gs. The number of rows equals the number of yield surfaces.
 
 
 Parameters
 ==========
 
-.. csv-table:: 
+.. csv-table::
    :header: "Parameters", "Soft Clay", "Medium Clay", "Stiff Clay"
    :widths: 20, 20, 20, 20
 
