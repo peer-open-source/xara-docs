@@ -151,6 +151,7 @@ For example:
          $env:XARA_BUILD="debug"
          python setup.py cmake
 
+
 The ``XARA_BUILD`` variable can be set to one of the following values:
 
 .. list-table::
