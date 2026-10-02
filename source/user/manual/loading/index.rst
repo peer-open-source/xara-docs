@@ -11,4 +11,5 @@ Loading
    :maxdepth: 1
 
    StaticPattern/index
-
+   AmbientAcceleration/index
+   timeSeries

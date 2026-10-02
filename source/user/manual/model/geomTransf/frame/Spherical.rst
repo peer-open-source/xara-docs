@@ -6,21 +6,25 @@ A *Spherical* transformation is used to enforce strain objectivity in the geomet
 
 
 
+.. version-note::
+   :version: 0.1.33
+   :type: added
+
+
+
 Theory
 ------
 
 
-.. note::
 
-   For two nodes, the procedure implements spherical linear interpolation (SLERP):
-   
-   .. math::
-   
-      \operatorname{SLERP}\left(\boldsymbol{\Lambda}_I, \boldsymbol{\Lambda}_J, \xi\right)=\boldsymbol{\Lambda}_I \exp \left(\frac{\xi}{L} \log \left(\boldsymbol{\Lambda}_I^\mathrm{t} \boldsymbol{\Lambda}_J\right)\right)
-   
-   The SLERP construction is a geodesic on :math:`\mathrm{SO}(3)`, i.e. a
-   walk along the shortest path, on the manifold, between the two
-   rotations.
+For two nodes, the procedure implements spherical linear interpolation (SLERP):
+
+.. math::
+
+   \operatorname{SLERP}\left(\boldsymbol{\Lambda}_I, \boldsymbol{\Lambda}_J, \xi\right)=\boldsymbol{\Lambda}_I \exp \left(\frac{\xi}{L} \log \left(\boldsymbol{\Lambda}_I^\mathrm{t} \boldsymbol{\Lambda}_J\right)\right)
+
+The SLERP construction is a geodesic on :math:`\mathrm{SO}(3)`, i.e. a walk along the shortest path, on the manifold, between the two
+rotations.
 
 The procedure begins by selecting two node indices :math:`I` and
 :math:`J` for an :math:`n`-noded element as follows:

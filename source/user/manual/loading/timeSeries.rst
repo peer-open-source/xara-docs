@@ -6,8 +6,13 @@ Time Series
 A TimeSeries represents the relationship between the time in the domain, :math:`t`, and the load factor applied to the loads, :math:`\lambda`, in the load pattern with which the TimeSeries object is associated, i.e. :math:`\lambda = F(t)`.
 
 .. tabs::
-
    .. tab:: Python
+
+      .. autoclass:: xara.TimeSeries
+         :members:
+
+
+   .. tab:: OpenSeesPy
 
       .. py:method:: Model.timeSeries(type, tag, *args)
          
@@ -17,6 +22,7 @@ A TimeSeries represents the relationship between the time in the domain, :math:`
          :type tag: |integer|
          :param args: a sequence of arguments that depend on type
    
+
    .. tab:: Tcl
 
       .. function:: timeSeries $type $tag $args ...
@@ -30,14 +36,15 @@ A TimeSeries represents the relationship between the time in the domain, :math:`
          $args, |list|,        a list of arguments with args depending on type
 
 
-A TimeSeries may be one of the following types:
 
-.. toctree::
-   :maxdepth: 1
+.. A TimeSeries may be one of the following types:
 
-   timeseries/constantTimeSeries
-   timeseries/linearTimeSeries
-   timeseries/pathTimeSeries
+.. .. toctree::
+..    :maxdepth: 1
+
+..    timeseries/constantTimeSeries
+..    timeseries/linearTimeSeries
+..    timeseries/pathTimeSeries
 
 ..
    timeseries/trigTimeSeries
@@ -47,3 +54,5 @@ A TimeSeries may be one of the following types:
    timeseries/pulseTimeSeries
    timeseries/peerMotion
    timeseries/PeerNGAMotion
+
+

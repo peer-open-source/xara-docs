@@ -39,6 +39,14 @@ Line search increases the effectiveness of the Newton method when convergence is
          maxEta, |float|, a maximum :math:`\eta` value. Optional; The default is 10.0
 
 
+
+.. version-note::
+   :version: 0.1.33
+   :type: fixed
+
+   Fixed a bug from the original OpenSees implementation
+
+
 Theory
 ------
 
@@ -78,3 +86,10 @@ Examples
       .. code-block:: tcl
 
          algorithm NewtonLineSearch 0.6
+
+
+
+.. ref-gallery::
+
+   examples/plane/plane-2001
+

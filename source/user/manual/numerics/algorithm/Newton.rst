@@ -72,20 +72,21 @@ The matrix :math:`\frac{\partial g(U_n)}{\partial U}` is called the system Jacob
 
 .. math::
 
-   `\boldsymbol{K} = \frac{\partial g(U_n)}{\partial U}
+   \boldsymbol{K} = \frac{\partial g(U_n)}{\partial U}
 
-resulting in our iterative procedure where starting from a good initial guess we iterate until our convergence criteria is met with the following:
+resulting in an iterative procedure where starting from a good initial guess we iterate until the convergence criteria is met with the following:
 
 .. math::
 
-   \Delta U = - K^{-1}g(U_n)
+   \Delta U = - \boldsymbol{K}^{-1} g(U_n)
 
 .. math::
 
    U_{n+1} = U_n + \Delta U
 
-Example
--------
+
+Examples
+--------
 
 The following examples demonstrate the command to create a Linear solution algorithm.
 

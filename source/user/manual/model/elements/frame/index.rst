@@ -37,11 +37,11 @@ Available frame elements include
 
 To use frame elements, you'll need to:
 
-#. Define nodes with appropriate coordinates
-#. Create a coordinate transformation with the element orientation
-#. Define section behavior for the element
+#. Define :ref:`nodes <Node>` with appropriate coordinates
+#. Create a :ref:`coordinate transformation <geomTransf>` with the element orientation
+#. Define :ref:`section <FrameSection>` behavior for the element
 #. Create the frame element, connecting it to nodes, sections, and transformation
-#. Apply loads and boundary conditions
+#. Apply :ref:`loads <FrameLoad>` and boundary conditions
 
 
 

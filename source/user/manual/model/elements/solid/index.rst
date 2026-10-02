@@ -3,6 +3,21 @@
 Solids
 ^^^^^^
 
+.. py:method:: Model.element(type, tag, nodes, *, material)
+   :noindex:
+
+   Add a solid element to the model.
+
+   :param type: type of the solid element
+   :type type: |string|
+   :param tag: unique :ref:`element` tag
+   :type tag: |integer|
+   :param nodes: tuple of node tags forming the solid element
+   :param material: material assigned to the solid element
+   :type material: :py:class:`xara.MultiaxialMaterial`
+
+
+
 .. toctree::
    :maxdepth: 1
 
