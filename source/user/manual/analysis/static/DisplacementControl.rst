@@ -1,3 +1,5 @@
+.. _DisplacementControl:
+
 DisplacementControl
 ^^^^^^^^^^^^^^^^^^^
 
