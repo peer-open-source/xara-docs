@@ -111,5 +111,13 @@ Allow: /user/manual/numerics/system/Umfpack.html
 Allow: /user/manual/numerics/system/SparseSYM.html
 
 Allow: /user/manual/modules/units.html
+
+Allow: /gallery.html
+Allow: /examples/frames/frame-1020.html
+Allow: /examples/frames/frame-2007.html
+Allow: /examples/plane/index.html
+Allow: /examples/plane/plane-2001.html
+Allow: /examples/sections/
+
 Disallow: /
 
