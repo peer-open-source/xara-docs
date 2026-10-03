@@ -7,7 +7,7 @@ Frame
 Frame elements are used to model slender structural members like beams and columns.
 All frame elements are constructed with the form
 
-.. py:method:: Model.element(name, tag, nodes, section, transform)
+.. py:method:: Model.element(name, tag, nodes, *, section, transform)
    :noindex:
 
    Add a frame element to the model.
@@ -41,7 +41,7 @@ To use frame elements, you'll need to:
 #. Create a :ref:`coordinate transformation <geomTransf>` with the element orientation
 #. Define :ref:`section <FrameSection>` behavior for the element
 #. Create the frame element, connecting it to nodes, sections, and transformation
-#. Apply :ref:`loads <FrameLoad>` and boundary conditions
+#. Optionally apply :ref:`element loads <FrameLoad>`
 
 
 

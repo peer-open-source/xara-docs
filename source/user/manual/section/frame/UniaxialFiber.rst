@@ -14,3 +14,13 @@ UniaxialFiber
    :param shape: A :ref:`Shape <FrameShape>` object defining the cross-sectional geometry.
    :param fibers: An *optional* dictionary describing the distribution of fibers over the cross-section. By default fibers will be generated automatically.
    :type fibers: dict, optional
+
+
+
+
+Examples
+--------
+
+.. ref-gallery::
+
+   examples/sections/fiber-0004

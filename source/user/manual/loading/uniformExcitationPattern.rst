@@ -34,7 +34,7 @@ The UniformExcitation pattern applies a uniform excitation to a model acting in 
          $cFact, |float|, constant factor (optional: default=1.0)
 
 
-.. warning::
+.. note::
 
    The responses obtained from the nodes for this type of excitation are **relative** values, and not the absolute values obtained from a :ref:`multisupportExcitation`. This is a consequence of the equation of motion being solved: 
 
@@ -50,6 +50,8 @@ The UniformExcitation pattern applies a uniform excitation to a model acting in 
 
    where :math:`l` is a vector of **1**'s and **0**'s, with a **1** corresponding to all matrix equations in the **$dof** degree-of-freedom direction and **0** for all other degrees-of-freedom. 
    The :math:`\ddot u_g` is obtained from the time series.
+
+
 
 Examples
 --------
