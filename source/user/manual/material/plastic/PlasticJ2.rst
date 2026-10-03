@@ -26,6 +26,8 @@ PlasticJ2
          :gtype C: |float|
          :gparam "Nonlinear Hardening" gamma: Nonlinear kinematic hardening parameter
          :gtype gamma: |float|
+         :gparam Density density: Mass density. Units of :ref:`density <UnitDensity>`.
+         :gtype density: |float|
 
    .. tab:: OpenSees
 

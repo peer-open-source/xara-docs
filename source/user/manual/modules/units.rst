@@ -59,19 +59,43 @@ The *xara.units* submodule contains predefined constants that can help with keep
       ~Units.slug
 
 
-   .. rubric:: Density
-      :name: UnitDensity
-
-   .. autosummary::
-
-      ~Units.kilogram_per_cubic_meter
-
    .. rubric:: Acceleration
 
    .. autosummary::
 
       ~Units.gravity
+      ~Units.centimeter_per_second_squared
    
+
+   .. rubric:: Mass Density
+      :name: UnitDensity
+
+   A unit of *density* is obtained by dividing a unit of mass by a unit of volume. 
+
+   .. autosummary::
+
+      ~Units.kilogram_per_cubic_meter
+
+   It is often convenient to calculate these manually as a ratio of :ref:`mass <UnitMass>` on :ref:`length <UnitLength>` cubed, eg, 
+
+   .. code-block:: python
+
+      rho = 2643.0 * kg / (meter ** 3)
+
+   In the US customary system, density is often available as a :ref:`unit weight <UnitWeight>`. In this case, an appropriate mass density is obtained by dividing by the acceleration due to gravity,
+
+   .. code-block:: python
+
+      rho = 150.0 * pcf / gravity
+
+
+   .. rubric:: Weight Density
+      :name: UnitWeight
+
+   .. autosummary::
+
+      ~Units.pcf
+
 
 
 Systems

@@ -43,7 +43,7 @@
    :gtype  pinch_size: float
    :gparam Pinching lamda: pinching severity, :math:`\lambda`
    :gtype  lamda: float
-   :gparam General density: density. See :ref:`MassSources`. :version-added:`0.1.29`
+   :gparam General density: density. Units of :ref:`density <UnitDensity>`. See :ref:`MassSources`. :version-added:`0.1.29`
    :gtype density: float
 
 ```

@@ -12,13 +12,13 @@
 .. py:class:: xara.MultiaxialMaterial("FariaPlasticDamage", E, nu, Ft, Fc [, beta, Ap, An, Bn])
    :no-index:
 
-   :param E: Young's modulus
+   :param E: Young's modulus, :math:`E`. Units of :ref:`stress <UnitStress>`.
    :type E: float
-   :param nu: Poisson ratio :math:`\nu`
+   :param nu: Poisson ratio :math:`\nu`. Dimensionless.
    :type nu: float
-   :param Ft: tensile strength :math:`F_t`
+   :param Ft: tensile strength :math:`F_t`. Units of :ref:`stress <UnitStress>`.
    :type Ft: float
-   :param Fc: compressive strength :math:`F_c`
+   :param Fc: compressive strength :math:`F_c`. Units of :ref:`stress <UnitStress>`.
    :type Fc: float
    :param beta: parameter :math:`\beta` controlling plastic strain rate/post-yield hardening parameter
    :type beta: float
@@ -28,7 +28,8 @@
    :type An: float
    :param Bn: parameter :math:`B_n` controlling ductility and peak strength of the compressive response
    :type Bn: float
-
+   :gparam Density density: Mass density. Optional, default = 0. Units of :ref:`density <UnitDensity>`.
+   :gtype density: float
 ```
 
 
