@@ -58,6 +58,14 @@ The *xara.units* submodule contains predefined constants that can help with keep
       ~Units.pound_mass
       ~Units.slug
 
+
+   .. rubric:: Density
+      :name: UnitDensity
+
+   .. autosummary::
+
+      ~Units.kilogram_per_cubic_meter
+
    .. rubric:: Acceleration
 
    .. autosummary::

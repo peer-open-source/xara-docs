@@ -16,7 +16,7 @@ This command is used to construct an *ElasticIsotropic* material.
          :type E: |float|
          :param nu: Poisson's ratio :math:`\nu`. Dimensionless.
          :type nu: |float|
-         :param rho: mass density :math:`\rho`. optional default = 0. Units of :ref:`mass <UnitMass>`.
+         :param rho: mass density :math:`\rho`. optional default = 0. Units of :ref:`density <UnitDensity>`.
          :type rho: |float|
 
    .. tab:: OpenSees
