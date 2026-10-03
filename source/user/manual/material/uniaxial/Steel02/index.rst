@@ -101,6 +101,7 @@ Typical values are ``R0`` between 10 and 20, ``cR1=0.925``, ``cR2=0.15``
 \cite{goldberg1963analysis} proposed a curve which furnishes the stress explicitly in terms of strain, as expressed below:
 
 .. math::
+
    \bar{\sigma}(\bar{\varepsilon}) = b{\bar{\varepsilon}} + \frac{(1-b){\bar{\varepsilon}}}{\left(1 + |{\bar{\varepsilon}}|^r\right)^\frac{1}{r}},
 
 where :math:`\bar{\sigma}=\sigma/F_y`, :math:`\bar{\varepsilon}=\varepsilon/\varepsilon_y`, :math:`(F_y, \varepsilon_y)` is the yield point, :math:`b` is the strain hardening parameter, and the parameter :math:`r` influences the shape of the transition curve and takes account of the Bauschinger effect. 
