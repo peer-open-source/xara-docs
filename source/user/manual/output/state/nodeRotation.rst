@@ -37,6 +37,14 @@ frame elements.
    this is not valid for 3D rotational degrees of freedom.
 
 
+Examples
+--------
+
+.. ref-gallery::
+
+   examples/frames/frame-1020
+
+
 
 References 
 ----------
