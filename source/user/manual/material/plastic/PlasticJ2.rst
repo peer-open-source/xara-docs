@@ -46,3 +46,12 @@ PlasticJ2
          H, |float|,linear hardening parameter
 
 .. [1] These arguments are supported by the :ref:`parameter <parameter>` commands.
+
+
+Examples
+--------
+
+.. ref-gallery::
+
+   examples/material/material-0011
+   examples/frames/frame-2007
