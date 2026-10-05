@@ -97,6 +97,16 @@ The *xara.units* submodule contains predefined constants that can help with keep
 
       ~Units.pcf
 
+   .. rubric:: Area
+      :name: UnitArea
+
+   .. autosummary::
+
+      ~Units.square_meter
+      ~Units.square_inch
+      ~Units.square_foot
+      ~Units.square_yard
+
 
 
 Systems
