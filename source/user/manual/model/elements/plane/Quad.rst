@@ -88,7 +88,7 @@ Examples
 
 .. ref-gallery::
 
-   examples/plane/plane-0002
+   examples/plane/plane-2001
 
 
 References
