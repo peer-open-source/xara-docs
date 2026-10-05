@@ -45,3 +45,12 @@ is formed, and the coordinate rotation is given by:
    \boldsymbol{R} &= \boldsymbol{\Lambda}_I \operatorname{Exp} \left(\frac{1}{2} \mathbf{t}\right). \\
    \end{array}\right.
 
+
+
+
+References
+----------
+
+.. [1] Jelenić G, Crisfield MA (1999) "Geometrically exact 3D beam theory: implementation of a strain-invariant finite element for statics and dynamics." Computer Methods in Applied Mechanics and Engineering,  171(1–2):141–171.  https://doi.org/10/dj37b3
+.. [2] Perez, C.M. and Filippou, F.C. (2024) ‘On nonlinear geometric transformations of finite elements’, International Journal for Numerical Methods in Engineering, p. e7506. Available at: https://doi.org/10.1002/nme.7506.
+
