@@ -35,6 +35,7 @@ The response methods and recorders are inherited from |OpenSees|, while the resp
    nodeAccel
    nodeDisp
    nodeVel
+   nodeReaction
    nodeRotation
    nodeEigenvector
    nodeUnbalance

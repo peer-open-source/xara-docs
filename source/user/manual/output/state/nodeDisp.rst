@@ -1,7 +1,7 @@
 .. _nodeDisp:
 
 nodeDisp
-********
+^^^^^^^^
 
 
 .. tabs::
@@ -62,5 +62,6 @@ The following example is used to set the variable ``disp1`` to the nodal displac
    .. code-block:: python
 
       u1 = model.nodeDisp(tag,1)
+
 
 Code developed by: |fmk|

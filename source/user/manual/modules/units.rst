@@ -124,6 +124,12 @@ Occasionally it is convenient to import all symbols using a *star-import*
 
 Note, however, that this is generally considered bad programming style.
 
+
 Examples
 ========
+
+
+.. ref-gallery::
+
+   examples/plane/plane-2001
 
