@@ -34,6 +34,7 @@ Allow: /genindex.html
 Allow: /launch.html
 Allow: /sitemap.xml
 Allow: /cite.html
+Allow: /changelog.html
 Allow: /robots.txt
 Allow: /_static/favicon.ico
 Allow: /_static/images/favicon.ico

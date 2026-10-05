@@ -6,9 +6,10 @@ Units
 .. py:module:: xara.units
    :synopsis: Predefined constants for common unit systems.
 
-xara does not assume or enforce any unit system internally. 
-All model inputs (coordinates, mass, forces, stiffness, etc.) are numeric values; the user must choose a consistent unit system and apply it throughout the model.
-The *xara.units* submodule contains predefined constants that can help with keeping track of units, ensuring consistency.
+OpenSees/|xara| does not assume or enforce any unit system internally. 
+All model inputs (coordinates, mass, forces, stiffness, etc.) are numeric values, and the user must take care to maintain consistency in the unit system used. 
+
+The *xara.units* submodule contains predefined constants that can help with keeping track of units. 
 
 
 .. autofunction:: xara.units.create_units
@@ -123,85 +124,6 @@ Occasionally it is convenient to import all symbols using a *star-import*
 
 Note, however, that this is generally considered bad programming style.
 
+Examples
+========
 
-.. .. _UnitSymbols:
-
-.. Symbols
-.. =======
-
-.. Each submodule exports the following symbols:
-
-
-.. .. _LengthUnits:
-
-.. Length 
-.. ------
-
-.. .. csv-table::
-..    :header: "Symbols", "Description"
-..    :widths: 20, 40
-
-..    ``mm``    (also ``millimeter``)   ,  Milimeter
-..    ``cm``    (also ``centimeter``)   ,  Centimeter
-..    ``m``     (also ``meter``)        ,  Meter
-..    ``km``    (also ``kilometer``)    ,  Kilometer
-..    ``inch``                          , 
-..    ``ft``    (also ``foot``)         ,  International foot
-..    ``yd``    (also ``yard``)         ,  International yard
-..    ``mi``    (also ``mile``)         ,  Mile
-
-
-.. Force 
-.. -----
-
-.. .. csv-table::
-..    :header: "Symbols", "Description"
-..    :widths: 20, 40
-
-..     ``N``    (also ``newton`` )      , Newton (force)
-..     ``dyn``  (also ``dyne``   )      , Dyne
-..     ``pdl``  (also ``poundal``)      , Poundal
-..     ``lbf``  (also ``poundf`` )      ,
-..     ``kip``  (also ``klbf``   )      ,
-
-
-.. Stress 
-.. -------
-
-.. .. csv-table::
-
-..    Pa           , pascal       ,  "Pascal, N/m:sup:`2`"
-..    torr         ,              , 
-..    kPa          , kilopascal   ,  "Kilopascal, 10:sup:`3` Pa"
-..    MPa          , megapascals  ,  "Megapascal, N/mm:sup:`2` = 10:sup:`6` Pa"
-..    bar          ,              , 
-..    atm          , atmosphere   ,  Standard atmosphere
-..    MPa          , megapascal   , 
-..    GPa          , gigapascal   , 
-..    psi          ,              ,  Pound-square-inch
-..    ksi          ,              , 
-
-
-
-.. Mass 
-.. --------
-
-.. .. csv-table::
-
-..    slug         ,              , 
-..    lbm          , lbm          ,  International avoirdupois pound
-..    gm           , gram         , 
-..    kg           , kilogram     ,  Kilogram
-..    tonne        ,              ,  "Metric tonne, 10 :sup:`3` kg"
-..    oz           , ounce        ,  International avoirdupois ounce
-
-
-
-
-.. Angular Velocity 
-.. ----------------
-
-.. .. csv-table::
-
-..    rpm          , revpm        ,  Revolution per minute
-..    radps        ,              ,  Radian per second
