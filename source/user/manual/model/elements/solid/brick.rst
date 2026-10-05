@@ -50,7 +50,7 @@ Brick
 
 .. note::
 
-   This element can only be defined in a :class:`Model` with ``ndm=3`` and ``ndf=3``.
+   This element can only be defined in a :py:class:`xara.Model` with ``ndm=3`` and ``ndf=3``.
 
 
 Recorders
