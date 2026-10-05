@@ -13,14 +13,24 @@ The **ElasticFrame** section implements a general linear elastic :ref:`Frame <Fr
    Local axes of a 3D cross section
 
 
+.. tabs::
 
-.. py:class:: xara.FrameSection("Elastic", shape)
-   :noindex:
+   .. tab:: Shape
 
-   :param E,G: Young's modulus :math:`E` and shear modulus :math:`G` (see :ref:`ElasticIsotropic`) [1]_
-   :param A: cross sectional area (Units of Length:sup:`2`) [1]_
-   :param Iy: Moment of inertia about the :math:`\color{green}{y}` axis [1]_
-   :param Iz: Moment of inertia about the :math:`\color{blue}{z}` axis [1]_
-   :param J: Torsion constant
-   :param kwds: additional keyword arguments
+      .. py:class:: xara.FrameSection("Elastic", shape)
+         :noindex:
+
+         :param shape: A :ref:`shape <FrameShape>` object representing the cross-sectional geometry.
+
+
+   .. tab:: Properties
+
+      .. py:class:: xara.FrameSection("Elastic", **kwds)
+         :noindex:
+
+         :param E,G: Young's modulus :math:`E` and shear modulus :math:`G` (see :ref:`ElasticIsotropic`) [1]_
+         :param A: cross sectional area (Units of Length:sup:`2`) [1]_
+         :param Iy: Moment of inertia about the :math:`\color{green}{y}` axis [1]_
+         :param Iz: Moment of inertia about the :math:`\color{blue}{z}` axis [1]_
+         :param J: Torsion constant
 
