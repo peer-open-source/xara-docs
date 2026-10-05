@@ -14,11 +14,11 @@ The nodes are connected by multiple UniaxialMaterials, which provide the force-d
       .. py:method:: Model.element("ZeroLength", tag, nodes, mat, dir, **orient)
          :noindex:
 
-         Construct a zero length element object.
+         Construct a zero-length element.
 
-         :param tag: integer tag identifying element
+         :param integer tag: tag identifying element
          :param nodes: tuple of two integers representing the tags of the end nodes
-         :param mat: tuple of integers representing the tags of previously-defined UniaxialMaterial objects
+         :param mat: tuple of integers representing the tags of previously-defined :ref:`UniaxialMaterial <UniaxialMaterial>` objects
          :param dir: tuple of integers representing the degree-of-freedom directions for each material (1, 2, 3 for translation along local x, y, z axes; 4, 5, 6 for rotation about local x, y, z axes)
    
    .. tab:: Tcl
@@ -63,7 +63,7 @@ The three to be added have element tags **1**, **2**, and **3**.
 Element **1** has nodes **2** and **3** as its end ndes, has two materials **5** and **6** acting in directions **1** and **2**. 
 Element **2** has as its end nodes **4** and **5**, has only one material **1** acting in direction **1**, the element has a global orientation.
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: tcl
 
@@ -71,7 +71,7 @@ Element **2** has as its end nodes **4** and **5**, has only one material **1** 
       element zeroLength 2 4 5 -mat 1 -dir 1 -orient 1 1 0 -1 1 0
       element zeroLength 3 5 6 -mat 1 -dir 1 -doRayleigh 1
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 
@@ -83,8 +83,11 @@ Element **2** has as its end nodes **4** and **5**, has only one material **1** 
 
     examples/general/model-0001
 
-.. note::
 
-   The penalty stiffness should be chosen large enough to approximate a rigid constraint, but not so large that it causes numerical conditioning problems. A typical value is 1.0e10 times the characteristic stiffness of the structure. The orientation vectors define the local coordinate system of the zeroLength element, allowing the constraint to be applied in the desired direction (normal to the skewed support).
+..
+   .. note::
+
+      The penalty stiffness should be chosen large enough to approximate a rigid constraint, but not so large that it causes numerical conditioning problems. 
+      A typical value is 1.0e10 times the characteristic stiffness of the structure. The orientation vectors define the local coordinate system of the zeroLength element, allowing the constraint to be applied in the desired direction (normal to the skewed support).
 
 Code Developed by: |glf|

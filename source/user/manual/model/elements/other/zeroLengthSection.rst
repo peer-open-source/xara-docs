@@ -12,9 +12,10 @@ This command is used to construct a zero length element object, which is defined
 
          Construct a zero length element object.
 
-         :param tag: integer tag identifying element
-         :param nodes: tuple of two integers representing the tags of the end nodes
-         :param section: integer tag of previously-defined Section object
+         :param integer tag: tag identifying element
+         :param tuple nodes: tuple of two integers identifying the tags of the end nodes
+         :param section: the section object that defines the force-deformation relationship
+         :type section: :py:class:`xara.FrameSection`
          :param orient: optional tuple of 6 floats defining orientation vectors (x1, x2, x3, yp1, yp2, yp3)
          :param doRayleigh: optional boolean flag to include Rayleigh damping (default False)
          :return: None
@@ -66,7 +67,7 @@ The three to be added have element tags **1**, **2**, and **3**.
 Element **1** has nodes **2** and **3** as its end ndes, has two materials **5** and **6** acting in directions **1** and **2**. 
 Element **2** has as its end nodes **4** and **5**, has only one material **1** acting in direction **1**, the element has a global orientation.
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: none
 
