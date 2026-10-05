@@ -55,3 +55,4 @@ Examples
 
    examples/material/material-0011
    examples/frames/frame-2007
+   examples/plane/plane-2001

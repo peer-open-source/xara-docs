@@ -16,23 +16,23 @@ It is a wrapper that can convert any 3D (Linear or Nonlinear) constitutive model
 
           :param material: An instance of a previously defined isotropic :py:class:`xara.MultiaxialMaterial`
           :type material: :py:class:`xara.MultiaxialMaterial`
-          :param Ex: Elastic modulus in x direction
+          :param Ex: Elastic modulus in x direction. Units of :ref:`stress <UnitStress>`.
           :type Ex: |float|
-          :param Ey: Elastic modulus in y direction
+          :param Ey: Elastic modulus in y direction. Units of :ref:`stress <UnitStress>`.
           :type Ey: |float|
-          :param Ez: Elastic modulus in z direction
+          :param Ez: Elastic modulus in z direction. Units of :ref:`stress <UnitStress>`.
           :type Ez: |float|
-          :param Gxy: Shear modulus in xy plane
+          :param Gxy: Shear modulus in xy plane. Units of :ref:`stress <UnitStress>`.
           :type Gxy: |float|
-          :param Gyz: Shear modulus in yz plane
+          :param Gyz: Shear modulus in yz plane. Units of :ref:`stress <UnitStress>`.
           :type Gyz: |float|
-          :param Gzx: Shear modulus in zx plane
+          :param Gzx: Shear modulus in zx plane. Units of :ref:`stress <UnitStress>`.
           :type Gzx: |float|
-          :param vxy: Poisson's ratio in xy plane
+          :param vxy: Poisson's ratio in xy plane. Dimensionless.
           :type vxy: |float|
-          :param vyz: Poisson's ratio in yz plane
+          :param vyz: Poisson's ratio in yz plane. Dimensionless.
           :type vyz: |float|
-          :param vzx: Poisson's ratio in zx plane
+          :param vzx: Poisson's ratio in zx plane. Dimensionless.
           :type vzx: |float|
           :param Asigmaxx: Ratio of the isotropic to the orthotropic strength along the X direction (Fxx_iso / Fxx_ortho)
           :param Asigmayy: Ratio of the isotropic to the orthotropic strength along the Y direction (Fyy_iso / Fyy_ortho)
