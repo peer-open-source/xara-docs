@@ -37,11 +37,13 @@ frame elements.
    this is not valid for 3D rotational degrees of freedom.
 
 
+
 Examples
 --------
 
 .. ref-gallery::
 
+   examples/frames/frame-1001
    examples/frames/frame-1020
 
 
@@ -49,6 +51,6 @@ Examples
 References 
 ----------
 
-* Perez, C.M. and Filippou, F.C. (2024) ‘On nonlinear geometric transformations of finite elements’, International Journal for Numerical Methods in Engineering, p. e7506. Available at: https://doi.org/10.1002/nme.7506.
+* Perez, C.M. and Filippou, F.C. (2024) "On nonlinear geometric transformations of finite elements", International Journal for Numerical Methods in Engineering, p. e7506. Available at: https://doi.org/10.1002/nme.7506.
 
 Code Developed by: |cmp|

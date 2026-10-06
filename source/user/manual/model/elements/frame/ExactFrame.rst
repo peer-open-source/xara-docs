@@ -104,6 +104,11 @@ The following example demonstrates the command to create an **CosseratFrame** el
 
 
 
+.. ref-gallery::
+
+   examples/frames/frame-1001
+
+
 References
 ----------
 

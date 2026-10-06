@@ -45,6 +45,12 @@ is formed, and the coordinate rotation is given by:
    \end{array}\right.
 
 
+Examples
+--------
+
+.. ref-gallery::
+
+   examples/frames/frame-1001
 
 
 References
