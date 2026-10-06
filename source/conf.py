@@ -56,6 +56,7 @@ extensions = [
     "version_notes",
     # "material_types",
     "_setup.keyword_only_signatures",
+    "_setup.gallery_metadata",
 ]
 
 codeautolink_warn_on_failed_resolve = True
@@ -236,7 +237,8 @@ html_context = {
 #  'style_nav_header_background': '#F2F2F2' #64B5F6 #607D8B,
 
 html_css_files = [
-    'css/custom.css'
+    'css/custom.css',
+    'css/notebooks.css'
 ] + [
     'css/home-css/'+str(file.name) for file in (Path(__file__).parents[0]/"_static/css/home-css/").glob("vars*.css")
 ] + [
@@ -287,8 +289,8 @@ else:
 
 
 from gallery import Galleries, OutputDocs, OutputRoot, build as build_gallery
-
-# build_gallery(OutputRoot)  # regenerate the source tree
+# regenerate the source tree
+# build_gallery(OutputRoot)
 
 
 Here = Path(__file__).parent

@@ -1,0 +1,23 @@
+
+.notebook-heading {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.notebook-heading > h1 {
+  flex: 1 1 20rem;
+  margin-bottom: 0;
+}
+
+.notebook-download {
+  flex-shrink: 0;
+  padding: .55rem .85rem;
+  border: 1px solid currentColor;
+  border-radius: .4rem;
+  font-size: .9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
