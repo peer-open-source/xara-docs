@@ -37,6 +37,7 @@ Each type is outlined below.
    geomTransf/frame/PDelta
    geomTransf/frame/Corotational02
    geomTransf/frame/Spherical
+   geomTransf/frame/Identity
 
 
 Code Developed by: |rms|, |cmp|, |fmk|
