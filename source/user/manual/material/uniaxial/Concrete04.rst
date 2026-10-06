@@ -1,24 +1,42 @@
 .. _Concrete04:
 
-Concrete04 -- (Popovics)
-^^^^^^^^^^^^^^^^^^^^^^^^
+
+Concrete04
+^^^^^^^^^^
 
 This command is used to construct a uniaxial Popovics concrete material with degraded linear unloading/reloading stiffness according to the work of Karsan-Jirsa and tensile strength with exponential decay. 
 
-.. function:: uniaxialMaterial Concrete04 $tag $fc $ec $ecu $Ec <$fct $et> <$beta>  
+.. tabs::
+   .. tab:: Python
 
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+      .. py:class:: xara.UniaxialMaterial("Concrete04", Fc, epsc0, epscu, Ec, Ft, etu, beta)
+         :no-index:
 
-   $tag, |integer|, integer tag identifying material.
-   $fc, |float|,  concrete compressive strength at 28 days (compression is negative)*.
-   $ec, |float|, concrete strain at maximum strength*.
-   $ecu, |float|, concrete crushing strength*.
-   $Ec, |float|, initial stifness**.
-   $fct, |float|, maximum tensile strength of concrete.
-   $et, |float|, ultimate tensile strain of concrete.
-   $beta, |float|, exponential curve parameter to define the residual stress (as a factor of $ft) at $etu. 
+         :param float Fc: Peak compressive strength. Units of :ref:`stress <UnitStress>`.
+         :param float epsc0: Strain at peak stress. Dimensionless.
+         :param float epscu: Strain at crushing stress. Dimensionless.
+         :param float Ec: Initial stiffness. Units of :ref:`stress <UnitStress>`.
+         :param float Ft: Tensile strength. Units of :ref:`stress <UnitStress>`. Optional, default = 0.0.
+         :param float etu: Ultimate tensile strain. Dimensionless. Optional, default = 0.0.
+         :param float beta: Exponential curve parameter to define the residual stress (as a factor of ``Ft``) at ``etu``. Optional, default = 0.1.
+         :param float density: Material mass density. :version-added:`0.1.33`
+
+   .. tab:: Tcl
+
+      .. function:: uniaxialMaterial Concrete04 tag fc ec ecu E <fct et> <beta>  
+
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
+
+         tag, |integer|, integer tag identifying material.
+         fc, |float|,  concrete compressive strength at 28 days (compression is negative)*.
+         ec, |float|, concrete strain at maximum strength*.
+         ecu, |float|, concrete crushing strength*.
+         E, |float|, initial stifness**.
+         fct, |float|, maximum tensile strength of concrete.
+         et, |float|, ultimate tensile strain of concrete.
+         beta, |float|, exponential curve parameter to define the residual stress (as a factor of ``fct``) at ``et``. 
 
 
 
@@ -26,24 +44,25 @@ The envelope of the compressive stress-strain response is defined using the mode
 
 .. math::
 
-   \sigma(\varepsilon) &= f_{cp}\frac{(\varepsilon/\varepsilon_{cp})r}{r-1+(\varepsilon/\varepsilon_{cp})^r},
+   \sigma(\varepsilon) = f_{cp}\frac{(\varepsilon/\varepsilon_{cp})r}{r-1+(\varepsilon/\varepsilon_{cp})^r},
 
 where :math:`r` is a parameter often computed from:
 
 .. math::
    
-   r =\frac{E_{c}}{E_{c}-\left(f_{c p} / \epsilon_{c p}\right)},
+   r =\frac{E}{E-\left(f_{c p} / \epsilon_{c p}\right)},
 
 
-and :math:`E_c` is the Young's modulus of the concrete material. 
+and :math:`E` is the Young's modulus of the concrete material. 
 
 .. math::
    
    f_{c i}=f_c^{\prime}\left(\frac{\varepsilon_{c i}}{\varepsilon_c}\right) \frac{n}{n-1+\left(\frac{\varepsilon_{c i}}{\varepsilon_c}\right)^n}
 
-If the user defines :math:`E_c = 57000 \sqrt(f_{cc})` (in units of *psi*) then the envelope curve is identical to that proposed by [Mander1988]_.
+If one sets :math:`E = 57000 \sqrt(f_{cc})` (in units of *psi*) then the envelope curve is identical to that proposed by [Mander1988]_.
 For loading in compression, the envelope to the stress-strain curve follows the model proposed by [Popovic1973]_ until the concrete crushing strength is achieved and also for strains beyond that corresponding to the crushing strength. 
 For unloading and reloading in compression, the [Karsan1969]_ is used to determine the slope of the curve. 
+
 For tensile loading, an exponential curve is used to define the envelope to the stress-strain curve. 
 
 .. math::
@@ -61,6 +80,17 @@ For unloading and reloading in tensile, the secant stiffness is used to define t
 .. figure:: figures/Concrete04/Concrete04B.png
   :align: center
   :figclass: align-center
+
+
+
+Examples
+--------
+
+
+.. ref-gallery::
+   
+   examples/material/material-0003
+
 
 
 References 
