@@ -13,16 +13,16 @@ This command is used to construct a J2CyclicBoundingSurface material ([Borja-Ami
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $tag, |integer|, tag identifying material
-   $G, |float|,   Shear modulus
-   $K, |float|,   Bulk modulus
-   $Su, |float|,  Undrained shear strength
-   $Den, |float|, Mass density of the material
-   $h, |float|,   Hardening parameter
-   $m, |float|,   Hardening exponent
-   $h0 , |float|, Initial hardening parameter
-   $chi, |float|,    "Initial damping (viscous). chi = 2*dr_o/omega (dr_o = damping ratio at zero strain, omega = angular frequency)"
-   $beta, |float|,   "Integration variable (0 = explicit, 1 = implicit, 0.5 = midpoint rule)"
+   tag, |integer|, tag identifying material
+   G, |float|,   Shear modulus
+   K, |float|,   Bulk modulus
+   Su, |float|,  Undrained shear strength
+   Den, |float|, Mass density of the material
+   h, |float|,   Hardening parameter
+   m, |float|,   Hardening exponent
+   h0 , |float|, Initial hardening parameter
+   chi, |float|,    "Initial damping (viscous). chi = 2*dr_o/omega (dr_o = damping ratio at zero strain, omega = angular frequency)"
+   beta, |float|,   "Integration variable (0 = explicit, 1 = implicit, 0.5 = midpoint rule)"
 
 
 .. note::
@@ -34,7 +34,7 @@ Elastic response can be enforced by
 
 .. code::
 
-      updateMaterialStage -material $matTag -stage 0
+   updateMaterialStage -material $matTag -stage 0
 
 Elastoplastic by
 

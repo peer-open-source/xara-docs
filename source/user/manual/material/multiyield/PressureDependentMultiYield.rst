@@ -88,7 +88,9 @@ Notes
 
    If the resulting :math:`\phi <0`, we set :math:`\phi =0` and :math:`c=\sqrt 3 \sigma_m/2`.
 
-   Also remember that improper modulus reduction curves can result in strain softening response (negative tangent shear modulus), which is not allowed in the current model formulation. Finally, note that the backbone curve varies with confinement, although the variation is small within commonly interested confinement ranges. Backbone curves at different confinements can be obtained using the OpenSees element recorder facility
+   Also remember that improper modulus reduction curves can result in strain softening response (negative tangent shear modulus), which is not allowed in the current model formulation. 
+   Finally, note that the backbone curve varies with confinement, although the variation is small within commonly interested confinement ranges. 
+   Backbone curves at different confinements can be obtained using the OpenSees element recorder facility
 
 4. The last five optional parameters are needed when critical-state response (flow liquefaction) is anticipated. Upon reaching the critical-state line, material dilatancy is set to zero.
 
@@ -121,7 +123,7 @@ The following information may be extracted for this material at a given integrat
 
       recorder Element –ele $eleNum -file $fName -dT $deltaT material $GaussNum backbone $p1 <$p2 …>
 
-   where p1, p2, … are the confinements at which modulus reduction curves are recorded. In the output file, corresponding to each given confinement there are two columns: shear strain γ and secant modulus Gs. The number of rows equals the number of yield surfaces.
+   where ``p1``, ``p2``, ... are the confinements at which modulus reduction curves are recorded. In the output file, corresponding to each given confinement there are two columns: shear strain γ and secant modulus Gs. The number of rows equals the number of yield surfaces.
 
 
 Parameters

@@ -8,31 +8,30 @@ This command is used to construct a multi-dimensional bounding surface Cam Clay 
 
 .. tabs::
 
-   .. tab:: Tcl 
+   .. tab:: Tcl
 
-      .. function:: nDMaterial BoundingCamClay $tag $density $C $K $OCR $mu_o $alpha $lambda $h $m
+      .. function:: nDMaterial BoundingCamClay tag density C K OCR mu_o alpha lambda h m
 
 
       .. csv-table:: 
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
 
-         $tag, |integer|, tag identifying material
-         $density, |float|, mass density
-         $C, |float|,	ellipsoidal axis ratio (defines shape of ellipsoidal loading/bounding surfaces)
-         $K, |float|, initial bulk modulus :math:`\kappa`
-         $OCR, |float|, overconsolidation ratio
-         $mu_o, |float|, initial shear modulus
-         $alpha, |float|, pressure-dependency parameter for moduli (greater than or equal to zero)
-         $lambda, |float|, soil compressibility index for virgin loading
-         $h, |float|, hardening parameter for plastic response inside of bounding surface 
-         $m, |float|,	hardening parameter (exponent) for plastic response inside of bounding surface 
+         tag, |integer|, tag identifying material
+         density, |float|, mass density
+         C, |float|,	ellipsoidal axis ratio (defines shape of ellipsoidal loading/bounding surfaces)
+         K, |float|, initial bulk modulus :math:`\kappa`
+         OCR, |float|, overconsolidation ratio
+         mu_o, |float|, initial shear modulus, :math:`G`. Units of :ref:`stress <UnitStress>`
+         alpha, |float|, pressure-dependency parameter for moduli (greater than or equal to zero)
+         lambda, |float|, soil compressibility index for virgin loading
+         h, |float|, hardening parameter :math:`h` for plastic response inside of bounding surface 
+         m, |float|,	hardening parameter (exponent) for plastic response inside of bounding surface 
 
 
 .. note::
 
    * If $h = 0$, no hardening
-
    * If $m = 0$, only linear hardening
 
 
@@ -49,11 +48,12 @@ The full theory of this model is discussed in great detail in Borja et al. (2001
    * The ellipsoidal axis ratio parameter ``C`` is defined such that the ellipsoidal surfaces are ``C`` times as wide in the deviatoric direction as they are along the hydrostatic axis. 
      When ``C = 1``, the surfaces are spherical.
 
-   * The overconsolidation ratio (input parameter ``OCR``) defines the relationship between the loading surface and bounding surface. The radius of the bounding surface, R, is equal to the product of the OCR and the radius of the loading surface, r. When the soil is normally consolidated and $OCR = 1, the bounding and loading surfaces are coincident and virgin loading will occur.
+   * The overconsolidation ratio (input parameter ``OCR``) defines the relationship between the loading surface and bounding surface. The radius of the bounding surface, :math:`R`, is equal to the product of the ``OCR`` and the radius of the loading surface, :math:`r`. When the soil is normally consolidated and ``OCR = 1``, the bounding and loading surfaces are coincident and virgin loading will occur.
 
-   * When the hyperelastic pressure-dependency parameter (input parameter ``alpha``) is set to zero, the elastic shear modulus will be constant with a value equal to the initial shear modulus (input parameter $mu_o) and the deviatoric and volumetric responses are uncoupled in the elastic regime.
+   * When the hyperelastic pressure-dependency parameter (input parameter ``alpha``) is set to zero, the elastic shear modulus will be constant with a value equal to the initial shear modulus (input parameter ``mu_o``) and the deviatoric and volumetric responses are uncoupled in the elastic regime.
 
-   * The virgin compressibility parameter (input parameter ``lambda``) describes the relationship between the specific volume v = 1 + e and the logarithm of the mean effective stress (where e is the void ratio). This is is related to the compression index C_c that describes the relationship between the void ratio and the logarithm of the mean effective stress in consolidation testing.
+   * The virgin compressibility parameter (input parameter ``lambda``) describes the relationship between the specific volume :math:`v = 1 + e` and the logarithm of the mean effective stress (where :math:`e` is the void ratio). This is is related to the compression index :math:`C_c` that describes the relationship between the void ratio and the logarithm of the mean effective stress in consolidation testing.
+
 
 Examples
 --------

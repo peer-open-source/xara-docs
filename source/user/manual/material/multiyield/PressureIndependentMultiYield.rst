@@ -29,7 +29,7 @@ The yield surfaces are of the Von Mises type.
    cohesi (c), |float|, "Apparent cohesion at zero effective confinement."
    peakShearStra (γmax), |float|, "An octahedral shear strain at which the maximum shear strength is reached, specified at a reference mean effective confining pressure refPress of p’r (see below)."
    frictionAng (Φ), |float|, "Friction angle at peak shear strength in degrees. (optional: default is 0.0)."
-   refPress (p’r), |float|, "Reference mean effective confining pressure at which Gr and Br and γmax are defined, optional (default is 100. kPa)."
+   refPress (p’r), |float|, "Reference mean effective confining pressure at which Gr and Br and γmax are defined. Optional (default is 100. kPa)."
    pressDependCoe (d), |float|,  "A positive constant defining variations of G and B as a function of instantaneous effective confinement p’(default is 0.0). see notes 4 and 5 below."
    noYieldSurf, |integer|, "Number of yield surfaces, optional (must be less than 40: default is 20). The surfaces are generated based on the hyperbolic relation defined in Note 2 below."
    r Gs, |float|, "Instead of automatic surfaces generation (Note 2), you can define yield surfaces directly based on desired shear modulus reduction curve. To do so, add a minus sign in front of noYieldSurf, then provide noYieldSurf pairs of shear strain (γ) and modulus ratio (Gs) values. For example, to define 10 surfaces: … -10γ1Gs1 … γ10Gs10 …"
@@ -97,7 +97,7 @@ The following information may be extracted for this material at a given integrat
 
      recorder Element –ele $eleNum -file $fName -dT $deltaT material $GaussNum backbone $p1 <$p2 …>
 
-  where p1, p2, … are the confinements at which modulus reduction curves are recorded. In the output file, corresponding to each given confinement there are two columns: shear strain γ and secant modulus Gs. The number of rows equals the number of yield surfaces.
+  where p1, p2, ... are the confinements at which modulus reduction curves are recorded. In the output file, corresponding to each given confinement there are two columns: shear strain γ and secant modulus Gs. The number of rows equals the number of yield surfaces.
 
 
 Parameters
