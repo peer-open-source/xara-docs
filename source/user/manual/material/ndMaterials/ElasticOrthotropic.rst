@@ -10,16 +10,16 @@ Elastic Orthotropic
       .. py:class:: xara.MultiaxialMaterial("ElasticOrthotropic", Ex, Ey, Ez, vxy, vyz, vzx, Gxy, Gyz, Gzx, rho=0.0)
          :no-index:
 
-         :param |float| Ex: elastic modulus in x direction
-         :param |float| Ey: elastic modulus in y direction
-         :param |float| Ez: elastic modulus in z direction
-         :param |float| vxy: Poisson's ratio in xy plane
-         :param |float| vyz: Poisson's ratio in yz plane
-         :param |float| vzx: Poisson's ratio in zx plane
-         :param |float| Gxy: shear modulus in xy plane
-         :param |float| Gyz: shear modulus in yz plane
-         :param |float| Gzx: shear modulus in zx plane
-         :param |float| rho: mass density. optional default = 0.0
+         :param |float| Ex: elastic modulus in x direction. Units of :ref:`stress <UnitStress>`.
+         :param |float| Ey: elastic modulus in y direction. Units of :ref:`stress <UnitStress>`.
+         :param |float| Ez: elastic modulus in z direction. Units of :ref:`stress <UnitStress>`.
+         :param |float| vxy: Poisson's ratio in xy plane. Dimensionless.
+         :param |float| vyz: Poisson's ratio in yz plane. Dimensionless.
+         :param |float| vzx: Poisson's ratio in zx plane. Dimensionless.
+         :param |float| Gxy: shear modulus in xy plane. Units of :ref:`stress <UnitStress>`.
+         :param |float| Gyz: shear modulus in yz plane. Units of :ref:`stress <UnitStress>`.
+         :param |float| Gzx: shear modulus in zx plane. Units of :ref:`stress <UnitStress>`.
+         :param |float| rho: mass density. Optional, default = 0.0. Units of :ref:`density <UnitDensity>`.
 
 
    .. tab:: OpenSees
