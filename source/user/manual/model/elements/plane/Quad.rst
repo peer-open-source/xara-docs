@@ -9,21 +9,43 @@ A *Quad* element uses the standard Lagrange isoparametric formulation.
 
    .. tab:: Python 
 
-      .. py:method:: Model.element("Quad", tag, nodes, section, [pressure, rho, b1, b2])
+      .. py:method:: Model.element("Quad", tag, nodes, *, section, [pressure, rho, b1, b2])
          :no-index:
 
          Construct a *BasicQuad* and add it to the :class:`Model`.
 
          :param tag: unique :ref:`Element` tag
          :type tag: |integer|
-         :param nodes: a tuple of four element nodes in counter-clockwise order. 
+         :param nodes: a tuple of element nodes in counter-clockwise order. 
+         :type nodes: tuple of four, eight or nine :ref:`Node` tags
+         :param section: Section object defining element material, thickness, and plane stress/strain conditions.
+         :type section: :py:class:`xara.PlaneSection`
+         :param pressure: surface pressure (optional, default = 0.0)
+         :type pressure: |float|
+         :param rho: element mass density (per unit volume) from which a lumped element mass matrix is computed (optional, default=0.0). See :ref:`MassSources` for more information.
+         :type rho: |float|
+         :param b1: constant body forces defined in the domain (optional, default=0.0)
+         :type b1: |float|, optional
+         :param b2: constant body forces defined in the domain (optional, default=0.0)
+         :type b2: |float|, optional
+
+   .. tab:: OpenSeesPy 
+
+      .. py:method:: Model.element("Quad", tag, nodes, *, section, [pressure, rho, b1, b2])
+         :no-index:
+
+         Construct a *BasicQuad* and add it to the :class:`Model`.
+
+         :param tag: unique :ref:`Element` tag
+         :type tag: |integer|
+         :param nodes: a tuple of element nodes in counter-clockwise order. 
          :type nodes: tuple of four, eight or nine :ref:`Node` tags
          :param section: tuple or int. If int, it is the tag of a previously defined :py:class:`xara.PlaneSection`. If tuple, it is a tuple of the form (``thick``, ``type``, ``material``) where 
            
              ===================================   ==============================================================================================================
              ``thick`` |float|                     element thickness
              ``type`` |str|                        string representing material behavior. The type parameter can be either ``"PlaneStrain"`` or ``"PlaneStress"``
-             ``material`` |integer|                tag of a :ref:`MultiaxialMaterial <nDMaterial>`
+             ``material`` |integer|                tag of a :py:class:`xara.MultiaxialMaterial`
              ===================================   ==============================================================================================================
            
          :param pressure: surface pressure (optional, default = 0.0)

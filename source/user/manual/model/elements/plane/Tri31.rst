@@ -6,21 +6,19 @@ Triangle
 
 ``Tri31`` is a constant strain triangular element which uses three nodes and one integration points.
 
-.. py:method:: Model.element("Triangle", tag, nodes, section, [pressure, rho, b1, b2])
+.. py:method:: Model.element("Triangle", tag, nodes, *, section, [pressure, rho, b1, b2])
    :no-index:
 
    :param tag: unique :ref:`Element` tag
+   :type tag: |integer|
    :param nodes: a list of three element nodes in counter-clockwise order
-   :param section: tuple or int. If int, it is the tag of a previously defined :ref:`Section`. If tuple, it is a tuple of the form (``thick``, ``type``, ``material``) where 
-     
-         ===================================   ==============================================================================================================
-         ``thick`` |float|                     element thickness
-         ``type`` |str|                        string representing material behavior. The type parameter can be either ``"PlaneStrain"`` or ``"PlaneStress"``
-         ``material`` |integer|                tag of a :ref:`MultiaxialMaterial <nDMaterial>`
-         ===================================   ==============================================================================================================
-   
-   :param pressure: surface pressure (optional, default = 0.0)
-   :param rho: element mass density (per unit volume) from which a lumped element mass matrix is computed (optional, default=0.0)
+   :type nodes: tuple of |integer|
+   :param section: Section object defining element material, thickness, and plane stress/strain conditions.
+   :type section: :py:class:`xara.PlaneSection`
+   :param pressure: Surface pressure (optional, default = 0.0)
+   :type pressure: |float|, optional
+   :param rho: Element mass density (per unit volume) from which a lumped element mass matrix is computed (optional, default=0.0)
+   :type rho: |float|, optional
    :param b1: constant body forces defined in the domain (optional, default=0.0)
    :type b1: |float|, optional
    :param b2: constant body forces defined in the domain (optional, default=0.0)

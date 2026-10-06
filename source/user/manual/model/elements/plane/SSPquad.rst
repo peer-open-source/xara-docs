@@ -14,24 +14,30 @@ The formulation for this element is identical to the solid phase portion of the 
 .. tabs::
    .. tab:: Python
 
-      .. py:method:: Model.element("Q4/SSP", tag, nodes, section [, pressure, rho, b1, b2])
+      .. py:method:: Model.element("Q4/SSP", tag, nodes, *, section [, pressure, rho, b1, b2])
          :no-index:
 
-         :param tag: integer tag identifying the element
-         :param nodes: tuple of integer tags identifying the nodes that form the element
-         :param section: tuple or int. If int, it is the tag of a previously defined :ref:`PlaneSection <PlaneSection>`. If tuple, it is a tuple of the form (``thick``, ``type``, ``material``) where 
+         :param tag: tag identifying the element
+         :type tag: |integer|
+         :param nodes: Tags identifying the nodes that form the element
+         :type nodes: tuple of |integer|
+         :param section: If int, it is the tag of a previously defined :ref:`PlaneSection <PlaneSection>`. If tuple, it is a tuple of the form (``thick``, ``type``, ``material``) where 
            
              ===================================   ==============================================================================================================
              ``thick`` |float|                     element thickness
              ``type`` |str|                        string representing material behavior. The type parameter can be either ``"PlaneStrain"`` or ``"PlaneStress"``
-             ``material`` |integer|                tag of an :ref:`nDMaterial`
+             ``material`` |integer|                tag of a :py:class:`xara.MultiaxialMaterial`
              ===================================   ==============================================================================================================
            
-         :param pressure: |float|, surface pressure (optional, default = 0.0)
-         :param rho: |float|, element mass density (per unit volume) from which a lumped element mass matrix is computed (optional, default=0.0)
-         :param b1: |float|, constant body forces defined in the domain (optional, default=0.0)
-         :param b2: |float|, constant body forces defined in the domain (optional, default=0.0)
-   
+         :param pressure: surface pressure (optional, default = 0.0)
+         :type pressure: |float|
+         :param rho: Element mass density (per unit volume) from which a lumped element mass matrix is computed (optional, default=0.0)
+         :type rho: |float|
+         :param b1: Constant body forces defined in the domain (optional, default=0.0)
+         :type b1: |float|
+         :param b2: Constant body forces defined in the domain (optional, default=0.0)
+         :type b2: |float|
+
 
    .. tab:: Tcl
 
@@ -86,13 +92,17 @@ SSPquad element definition with element tag 1, nodes 1, 2, 3, and 4, material ta
 
 .. admonition:: Another Tcl Example 
 
-   The input file shown below creates a cantilever beam subject to a parabolic shear stress distribution at the free end. The beam is modeled with only one element over the height to test the coarse-mesh accuracy of the designated quadrilateral element. Anti-symmetry conditions hold, only the top half of the beam is modeled.
+   The input file shown below creates a cantilever beam subject to a parabolic shear stress distribution at the free end. 
+   The beam is modeled with only one element over the height to test the coarse-mesh accuracy of the designated quadrilateral element. Anti-symmetry conditions hold, only the top half of the beam is modeled.
 
    Try running this with the SSPquad element and the Quad Element. Compare the results to each other and to the beam solution to see shear locking in action. Volumetric locking in the Quad Element can be observed by increasing Poisson's ratio to 0.49.
 
    .. literalinclude:: SSPquadExample.tcl
       :language: tcl
 
+
+References
+----------
 
 Code Developed by: |chris|, |pedro|, |peter| at University of Washington.
 

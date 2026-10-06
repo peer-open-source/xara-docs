@@ -13,14 +13,15 @@ This command is used to construct a four-node quadrilateral element, which uses 
       .. py:method:: Model.element("Q4/P0", tag, nodes, section)
          :no-index:
 
-         :param tag: integer tag identifying the element
+         :param tag: Tag identifying the element
+         :type tag: |integer|
          :param nodes: tuple of integer tags identifying the nodes that form the element
          :param section: tuple or int. If int, it is the tag of a previously defined :ref:`PlaneSection <PlaneSection>`. If tuple, it is a tuple of the form (``thick``, ``type``, ``material``) where 
            
              ===================================   ==============================================================================================================
              ``thick`` |float|                     element thickness
              ``type`` |str|                        string representing material behavior. The type parameter can be either ``"PlaneStrain"`` or ``"PlaneStress"``
-             ``material`` |integer|                tag of an :ref:`nDMaterial`
+             ``material`` |integer|                tag of a :py:class:`xara.MultiaxialMaterial`
              ===================================   ==============================================================================================================
    
 

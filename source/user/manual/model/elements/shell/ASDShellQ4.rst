@@ -7,7 +7,7 @@ ASDShellQ4
 
    .. tab:: Python 
 
-      .. py:method:: Model.element("ASDShellQ4", tag, nodes, section)
+      .. py:method:: Model.element("ASDShellQ4", tag, nodes, *, section)
          :no-index:
 
          :param tag: integer tag identifying element object
@@ -78,6 +78,12 @@ A Cantilever beam is subjected to a total end-moment about the Y axis :math:`M_y
 .. figure:: figures/ASDShellQ4/ASDShellQ4_RollUp.png
    :align: center
    :width: 50%
+
+
+.. ref-gallery::
+
+   examples/shell/shell-1001
+
 
 
 Example 2
