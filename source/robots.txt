@@ -120,6 +120,7 @@ Allow: /examples/frames/frame-1020.html
 Allow: /examples/plane/index.html
 Allow: /examples/plane/plane-2001.html
 Allow: /examples/sections/
+Allow: /examples/general/model-0001.html
 
 Disallow: /
 
