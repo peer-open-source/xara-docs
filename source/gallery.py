@@ -24,8 +24,10 @@ Galleries = [
             "frame-2007/main.ipynb",
             # "frame-2005/frame-2005.ipynb",
             # "frame-1010/main.ipynb",
+            "frame-1001/main.ipynb",
             "frame-1010/frame-1010.ipynb",
             "frame-1020/main.ipynb",
+            "frame-1022/main.ipynb",
             # "frame-3056/main.ipynb",
         ],
     },
@@ -48,6 +50,15 @@ Galleries = [
             "plane-0101/main.ipynb",
             # "plane-2001/mesh.ipynb",
             "plane-2001/main.ipynb",
+        ],
+    },
+    {
+        "name": "Shells",
+        "directory": "shell",
+        "description": "Shell examples.",
+        "examples": [
+            "shell-1001/main.ipynb",
+            "shell-2007/main.ipynb",
         ],
     },
     {
