@@ -8,7 +8,7 @@ PlasticJ2
 
    .. tab:: Python
       
-      .. py:class:: xara.MultiaxialMaterial("PlasticJ2", E, nu, Fy, ...)
+      .. py:class:: xara.MultiaxialMaterial("PlasticJ2", *, E, nu, Fy, ...)
          :no-index:
 
          :gparam Elastic E: Young's modulus, :math:`E` [1]_. Units of :ref:`stress <UnitStress>`.
