@@ -4,8 +4,9 @@ SmearedSteelDoubleLayer
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 This command is used to construct a SmearedSteelDoubleLayer material. 
-It is the abstract representation of a double perpendicular smeared steel layer (plane stress) 2D material with a tangent formulation. Each layer works only in the direction of the bars, so a uniaxial constitutive model is used to represent the behavior of reinforcing steel bars in each direction. The angle that defines the orientation
-of the steel layers with respect to the local coordinate system **x-y** is denoted as :math:`\theta_{s}`, represented by the argument ``OrientationEmbeddedSteel`` (based on the work of Rojas et al., 2016).
+It is the abstract representation of a double perpendicular smeared steel layer (plane stress) 2D material with a tangent formulation. 
+Each layer works only in the direction of the bars, so a uniaxial constitutive model is used to represent the behavior of reinforcing steel bars in each direction. 
+The angle that defines the orientation of the steel layers with respect to the local coordinate system **x-y** is denoted as :math:`\theta_{s}`, represented by the argument ``OrientationEmbeddedSteel`` (based on the work of Rojas et al., 2016).
 
 .. figure:: SmearedSteelDoubleLayer_figure.png
 	:align: center

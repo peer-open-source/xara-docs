@@ -74,7 +74,7 @@ The constraint equations, imposed by this element, are the following for the 2D 
 Examples
 --------
 
-   1. **Tcl Code**
+1. **Tcl Code**
 
    .. code-block:: tcl
 
@@ -134,7 +134,7 @@ Examples
       puts "Relative error is abs(UC-UCref)/UCref:\n$ER\n\n"
       
 
-   2. **Python Code**
+2. **Python Code**
 
    .. code-block:: python
 
@@ -198,5 +198,6 @@ Examples
          abs(UC[1] - UCref[1])/UCref[1]
          ]
       print('Relative error is abs(UC-UCref)/UCref:\n{}\n\n'.format(ER))
+
 
 Code Developed by: **Massimo Petracca** at ASDEA Software, Italy.
