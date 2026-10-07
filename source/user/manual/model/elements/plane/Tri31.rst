@@ -1,4 +1,3 @@
-
 .. _Tri31:
 
 Triangle
@@ -32,3 +31,10 @@ The valid queries to a Tri31 element through :ref:`eleResponse` are
 
 Where ``$mat`` refers to the material object at the integration point corresponding to the node numbers in the domain.
 
+
+Examples
+--------
+
+.. ref-gallery::
+
+   examples/material/material-0012
