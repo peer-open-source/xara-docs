@@ -58,6 +58,7 @@ The following recorders are available with the OrthotropicRAConcrete material.
    
    | 2. If this effect is not to be considered, damage constants can be set equal to **0.0**.
 
+
 .. admonition:: Examples
 
    The following example constructs an OrthotropicRotatingAngleConcrete material with tag **2**, composed of a uniaxial concrete material (e.g. `Concrete02 <https://opensees.berkeley.edu/wiki/index.php/Concrete02_Material_--_Linear_Tension_Softening>`__, `Concrete06 <https://opensees.berkeley.edu/wiki/index.php/Concrete06_Material>`_) of tag **1**, a strain at tension cracking of **0.00008** and a strain at the compression strength of **-0.002** for a density of **0.0**.

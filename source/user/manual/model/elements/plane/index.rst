@@ -17,7 +17,7 @@ Plane
 Quadrilaterals 
 --------------
 
-- :ref:`Quad` implements a standard 4 or 9 node lagrange quadrilateral element.
+- :ref:`Quad` implements a standard 4 or 9 node Lagrange quadrilateral element.
 - :ref:`SSPquad`
 - :ref:`bbarQuad` implements a mean-dilation quadrilateral element. This formulation is suitable for nearly-incompressible response, but is not suitable for bending dominated problems.
 - :ref:`EnhancedQuad`
@@ -26,5 +26,5 @@ Quadrilaterals
 Triangles
 ---------
 
-- :ref:`Tri31` implements a 3 or 6 node lagrange triangle element.
+- :ref:`Tri31` implements a 3 or 6 node Lagrange triangle element.
 
