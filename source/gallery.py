@@ -6,6 +6,7 @@ import hashlib
 import re
 import shutil
 from pathlib import Path
+import textwrap
 import nbformat
 
 # Config
@@ -199,10 +200,21 @@ def process_example(
     # changed: read/write through nbformat instead of raw json
     nb = nbformat.read(src_nb, as_version=4)
     # add download button
-    # download_md = (
-    #     f"{{download}}`Download <{example_key}.ipynb>`"
-    # )
+    download_md = textwrap.dedent(
+        # f"{{download}}`Download <{example_key}.ipynb>`"
+        # f"{{download}} `Download <https://github.com/simpsoba/benchmarks/blob/master/benchmarks/{rel_nb_path}>`"
+        f"""
+        <a class="reference download internal" download="" href="https://github.com/simpsoba/benchmarks/blob/master/benchmarks/{rel_nb_path}">
+          <code class="xref download docutils literal notranslate">
+            <span class="pre">Download</span>
+          </code>
+        </a>
+        """
+    )
     # nb.cells.insert(1, nbformat.v4.new_markdown_cell(download_md))
+    nb.metadata["download_url"] = f"https://github.com/simpsoba/benchmarks/blob/master/benchmarks/{rel_nb_path}"
+
+
     # process images
     for cell in nb.cells:
         if cell.cell_type in ("markdown", "code"):
