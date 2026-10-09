@@ -20,9 +20,10 @@ Available frame elements include
     :widths: 10, 40
 
     :ref:`elasticBeamColumn`, "Prismatic linear-elastic frame"
-    :ref:`ForceFrame`, "*Force* formulation"
-    :ref:`CubicFrame`, "cubic displacment formulation"
-    :ref:`ExactFrame`, "geometrically exact displacement formulation"
+    :ref:`ForceFrame`, "Force formulation"
+    :ref:`HermiteFrame`, "Cubic displacment formulation without shear. :version-added:`0.1.33`"
+    :ref:`LagrangeFrame`, "Lagrange displacment formulation with shear. :version-added:`0.1.33`"
+    :ref:`ExactFrame`, "Geometrically exact displacement formulation"
 
 .. toctree::
    :maxdepth: 1
@@ -31,36 +32,52 @@ Available frame elements include
    PrismFrame
    ForceFrame
    ExactFrame
+   HermiteFrame
+   LagrangeFrame
 
-..
-   CubicFrame
 
-To use frame elements, you'll need to:
+Defining a frame element involves the following steps:
 
 #. Define :ref:`nodes <Node>` with appropriate coordinates
 #. Create a :ref:`coordinate transformation <geomTransf>` with the element orientation
 #. Define :ref:`section <FrameSection>` behavior for the element
-#. Create the frame element, connecting it to nodes, sections, and transformation
+#. Optionally define an :ref:`integration rule <beamIntegration>`, if supported by the element type
+#. Create the frame element, connecting it to nodes, sections, and a transformation
 #. Optionally apply :ref:`element loads <FrameLoad>`
 
+The available frame elements are summarized in the table below:
+
+.. csv-table:: 
+   :header: "Name", "Shear", "Geometry", "Integration", "Interpolation"
+   :widths: 8, 8, 8, 8, 8
+
+   :ref:`elasticBeamColumn`, "Elastic", "Basic",    "None", "None"
+   :ref:`ForceFrame`,    "Optional", "Basic", "User", "Fixed"
+   :ref:`HermiteFrame`,  "No",  "Basic", "User", "Fixed"
+   :ref:`LagrangeFrame`, "Yes", "Basic", "Fixed", "Nodes"
+   :ref:`ExactFrame`,    "Yes", "Exact", "Fixed", "Nodes"
+
+..
+   :ref:`PlasticFrame`,  "Elastic",  "Basic", "None", "None"
+
+..
+   Theory
+   ------
+
+   A frame element represents a directed medium with a scalar characteristic coordinate :math:`\xi`.
+   The embedding in space is described by:
+
+   * A vector field :math:`\boldsymbol{x}(\xi)` identifying positions in space,
+   * A rotation field :math:`\boldsymbol{\Lambda}(\xi)`, and
+   * A vector field :math:`\boldsymbol{\alpha}(\xi)` identifying cross-sectional warping.
 
 
-Theory
-------
+   Some phenomena that can be modeled with frame elements include:
 
-A frame element represents a directed medium with a scalar characteristic coordinate :math:`\xi`.
-The embedding in space is described by:
+   * Distrubuted loads
+   * Follower loads 
+   * Plastic hinges
+   * Arbitrarily large rotations
+   * Lateral-torsional buckling of beams,
+   * Restrained torsional warping 
 
-* A vector field :math:`\boldsymbol{x}(\xi)` identifying positions in space,
-* A rotation field :math:`\boldsymbol{\Lambda}(\xi)`, and
-* A vector field :math:`\boldsymbol{\alpha}(\xi)` identifying cross-sectional warping.
-
-
-Some phenomena that can be modeled with frame elements include:
-
-* Distrubuted loads
-* Follower loads 
-* Plastic hinges
-* Arbitrarily large rotations
-* Lateral-torsional buckling of beams,
-* Restrained torsional warping 
