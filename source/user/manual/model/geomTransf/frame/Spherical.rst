@@ -53,6 +53,7 @@ Examples
 .. ref-gallery::
 
    examples/frames/frame-1001
+   examples/frames/frame-1022
 
 
 References

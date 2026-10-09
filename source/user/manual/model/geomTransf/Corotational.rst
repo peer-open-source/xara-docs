@@ -1,7 +1,7 @@
 .. _CorotTR:
 
-Corotational
-^^^^^^^^^^^^
+Corotational01
+^^^^^^^^^^^^^^
 
 
 .. deprecated:: 0.0.8

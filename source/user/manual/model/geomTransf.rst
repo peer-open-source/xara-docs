@@ -1,7 +1,7 @@
 .. _geomTransf:
 
 Transformations
-***************
+^^^^^^^^^^^^^^^
 
 A geometric-transformation models a configuration-dependent transformation of a finite element's response. 
 This is particularly useful for modeling large-displacement effects in constrained structural members like beams and shells. 
@@ -12,9 +12,11 @@ This is particularly useful for modeling large-displacement effects in constrain
 
       .. py:method:: Model.geomTransf(type, tag, *args)
 
-         :param type: string, transformation type
-         :param tag: integer, unique transformation tag.
-         :param args: list, a list of transformation arguments with number dependent on transformation type
+         :param type: Transformation type
+         :type type: str
+         :param tag: unique transformation tag.
+         :type tag: int
+         :param args: Transformation arguments with number dependent on transformation type
 
    .. tab:: Tcl
 
@@ -39,6 +41,25 @@ Each type is outlined below.
    geomTransf/frame/Spherical
    geomTransf/frame/Identity
 
+
+
+.. _FrameJointOffsets:
+
+
+Joint Offsets
+=============
+
+
+Examples
+========
+
+.. ref-gallery::
+
+   examples/frames/frame-1022
+
+
+References
+==========
 
 Code Developed by: |rms|, |cmp|, |fmk|
 

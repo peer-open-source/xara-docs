@@ -1,7 +1,7 @@
 .. _CorotTR02:
 
-Corotational02
-^^^^^^^^^^^^^^
+Corotational
+^^^^^^^^^^^^
 
 The corotational coordinate transformation allows small-strain frame elements to be employed in a large deformation analysis. [1]_  [2]_
 *Corotational02* superceeds the original :ref:`Corotational <CorotTR>` transformation, which is now deprecated.
@@ -52,7 +52,9 @@ Examples
 
 .. ref-gallery::
 
-   examples/frames/frame-0059
+   examples/frames/frame-1010
+   examples/frames/frame-1020
+   examples/frames/frame-1022
 
 
 

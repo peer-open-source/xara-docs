@@ -10,6 +10,12 @@ An *Identity* transformation can be used with the geometrically exact frame elem
    :type: added
 
 
+Examples
+--------
+
+.. ref-gallery::
+
+   examples/frames/frame-1022
 
 
 References

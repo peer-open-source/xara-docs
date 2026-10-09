@@ -69,8 +69,9 @@ Joint Offsets
 
 Joint offsets are specified with respect to the global coordinate system.
 
-Example
--------
+
+Examples
+--------
 
 .. ref-gallery::
 
