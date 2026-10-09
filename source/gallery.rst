@@ -2,7 +2,7 @@ Gallery
 ^^^^^^^
 
 Frames
----------
+-------
 
 .. toctree::
    :maxdepth: 1
@@ -75,6 +75,28 @@ Plane Elasticity
    examples/plane/index
 
 `More <examples/plane/index.html>`_
+
+
+Shells
+--------
+
+
+.. ref-gallery::
+
+   examples/shell/shell-1001
+   examples/shell/shell-2007
+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :hidden:
+
+   examples/shell/index
+
+`More <examples/shell/index.html>`_
+
+
 
 
 Analysis
