@@ -21,8 +21,8 @@ Available frame elements include
 
     :ref:`elasticBeamColumn`, "Prismatic linear-elastic frame"
     :ref:`ForceFrame`, "Force formulation"
-    :ref:`HermiteFrame`, "Cubic displacment formulation without shear. :version-added:`0.1.33`"
-    :ref:`LagrangeFrame`, "Lagrange displacment formulation with shear. :version-added:`0.1.33`"
+    :ref:`HermiteFrame`, "Cubic displacement formulation without shear. :version-added:`0.1.33`"
+    :ref:`LagrangeFrame`, "Lagrange displacement formulation with shear. :version-added:`0.1.33`"
     :ref:`ExactFrame`, "Geometrically exact displacement formulation"
 
 .. toctree::
