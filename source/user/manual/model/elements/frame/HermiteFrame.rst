@@ -22,3 +22,4 @@ Two-node frame finite element with cubic displacement formulation.
          :type transform: |integer|
          :param integration: identifier for previously-defined integration rule, optional.
          :type integration: |integer|, optional
+

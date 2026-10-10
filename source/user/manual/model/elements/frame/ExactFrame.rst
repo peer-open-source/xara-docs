@@ -52,22 +52,22 @@ The implementation closely follows the treatment by Perez and Filippou (2024) [3
          ``tran``, |integer|,      identifier for previously-defined coordinate-transformation
 
 
-
 The valid :ref:`eleResponse` queries to this element are ``"force"``.
 
-Geometrically exact elements often exhibit undesirable features. These are rectified
-as follows:
+.. Geometrically exact elements often exhibit undesirable features. These are rectified
+.. as follows:
 
-* **Path Dependence** The geometrically exact Cosserat rod theory is posed over a
-  non-vectorial configuration space, and consequently may exhibit minor 
-  path-dependence.
-* **Rotation parameters** for post-processing purposes, rotations should be obtained using the :ref:`nodeRotation`. Recall that in a finite rotation analysis, "rotational" components of the nodal displacement vector (ie, the vector returned by :ref:`nodeDisp`) is meaningless.
+.. * **Path Dependence** The geometrically exact Cosserat rod theory is posed over a
+..   non-vectorial configuration space, and consequently may exhibit minor 
+..   path-dependence.
+.. * **Rotation parameters** for post-processing purposes, rotations should be obtained using the :ref:`nodeRotation`. Recall that in a finite rotation analysis, "rotational" components of the nodal displacement vector (ie, the vector returned by :ref:`nodeDisp`) is meaningless.
 
-The ``CosseratFrame`` formulation is appropriate for a wide variety of structural members including thin-walled sections, asymmetric sections, and inelasticity.
+The ``CosseratFrame`` formulation is appropriate for a variety of structural members including thin-walled sections, asymmetric sections, and inelasticity.
 
 .. note::
 
-   This element always employs a :ref:`Gauss-Legendre <Legendre-BeamIntegration>` quadrature of order ``nen-1`` for an element with ``nen`` nodes, and does not accept user-defined quadrature schemes.
+   This element always employs *fixed* :ref:`Gauss-Legendre <Legendre-BeamIntegration>` quadrature of order ``nen-1`` for an element with ``nen`` nodes, and does not accept user-defined quadrature schemes.
+
 
 
 Changelog
@@ -107,6 +107,7 @@ The following example demonstrates the command to create an **CosseratFrame** el
 .. ref-gallery::
 
    examples/frames/frame-1001
+
 
 
 References

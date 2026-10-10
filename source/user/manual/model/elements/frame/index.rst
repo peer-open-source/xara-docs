@@ -60,6 +60,22 @@ The available frame elements are summarized in the table below:
 ..
    :ref:`PlasticFrame`,  "Elastic",  "Basic", "None", "None"
 
+
+In view of these capabilities:
+
+* :ref:`elasticBeamColumn` is ideal for *elastic* members of any shape that are expected to undergo *small to moderate displacements*.
+* :ref:`ForceFrame` is an ideal general-purpose frame element for inelastic members undergoing *small to moderate displacements*.
+  In this setting the element can achieve exceptional accuracy with minimal mesh subdivisions. 
+  Unlike displacement formulations, shear effects can be conveniently toggled in this element using the ``shear`` option. 
+  However, this element involves local iteration that may fail to converge on occation. 
+* :ref:`ExactFrame` is typically ideal for members undergoing *large displacements* and *rotations*. 
+* :ref:`HermiteFrame` is a suitable fallback when :ref:`ForceFrame` fails to converge in a problem **without** significant shear effects. 
+  However, in order to achieve comparable accuracy with :ref:`ForceFrame`, a finer mesh is typically required.
+* :ref:`LagrangeFrame` is a suitable fallback when :ref:`ForceFrame` fails to converge in a problem **with** shear effects. 
+  However, in order to achieve comparable accuracy with :ref:`ForceFrame`, a finer mesh is typically required.
+
+
+
 ..
    Theory
    ------
