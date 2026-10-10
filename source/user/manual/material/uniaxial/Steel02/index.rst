@@ -3,7 +3,7 @@
 Steel02
 ^^^^^^^
 
-*Steel02* is a uniaxial material based on the Giuffre-Menegotto-Pinto formulation with added isotropic strain hardening by [FilippouEtAl1983]_.
+*Steel02* is a uniaxial material based on the Giuffre-Menegotto-Pinto formulation with added isotropic strain hardening by Filippou et al (1983) [R1]_.
 
 .. tabs::
    
@@ -19,8 +19,8 @@ Steel02
          :param float E: initial elastic tangent, :math:`E` [1]_. Units of :ref:`stress <UnitStress>`.
          :param float b: strain-hardening ratio, :math:`b`. Dimensionless.
          :param float R0: parameter to control the transition from elastic to plastic branches, :math:`R_0`
-         :param float cR1: parameter to control the transition from elastic to plastic branches, :math:`cR1`
-         :param float cR2: parameter to control the transition from elastic to plastic branches, :math:`cR2`
+         :param float cR1: parameter to control the transition from elastic to plastic branches, :math:`c_{R1}`
+         :param float cR2: parameter to control the transition from elastic to plastic branches, :math:`c_{R2}`
          :gparam Hardening a1: isotropic hardening parameter (optional: default = 0.0).
          :gtype a1: |float|
          :gparam Hardening a2: isotropic hardening parameter (optional: default = 1.0).
@@ -73,7 +73,7 @@ Steel02
 Formulation
 -----------
 
-The hardening formulation was developed by [FilippouEtAl1983]_.
+The hardening formulation was developed by [R1]_.
 The parameters ``a1`` and ``a2`` increase of compression yield envelope as proportion of yield strength after a plastic strain of :math:`a_2 F_y/E`. 
 
 The parameters ``a3`` and ``a4`` increase of tension yield envelope as proportion of yield strength after a plastic strain of :math:`a_4 F_y/E`. 
@@ -98,15 +98,18 @@ Typical values are ``R0`` between 10 and 20, ``cR1=0.925``, ``cR2=0.15``
 
 	Hysteretic behavior without isotropic hardening
 
-\cite{goldberg1963analysis} proposed a curve which furnishes the stress explicitly in terms of strain, as expressed below:
+Goldberg et al (1963) [R2]_ proposed a curve which furnishes the stress explicitly in terms of strain, as expressed below:
 
 .. math::
 
    \bar{\sigma}(\bar{\varepsilon}) = b{\bar{\varepsilon}} + \frac{(1-b){\bar{\varepsilon}}}{\left(1 + |{\bar{\varepsilon}}|^r\right)^\frac{1}{r}},
 
 where :math:`\bar{\sigma}=\sigma/F_y`, :math:`\bar{\varepsilon}=\varepsilon/\varepsilon_y`, :math:`(F_y, \varepsilon_y)` is the yield point, :math:`b` is the strain hardening parameter, and the parameter :math:`r` influences the shape of the transition curve and takes account of the Bauschinger effect. 
-A hysteretic loading-reloading algorithm for this curve was proposed by \cite{giuffre1970comportamento}, which was extended by \cite{filippou1983effects} to include isotropic hardening.
+A hysteretic loading-reloading algorithm for this curve was proposed by Giuffre et al. (1970) [R3]_, which was extended by Filippou et al (1983) [R1]_ to include isotropic hardening.
 
+.. math::
+
+   R(\xi) = R_0 \frac{1-(c_{R1} \xi)}{(c_{R2}+\xi)}
 
 
 Examples
@@ -138,8 +141,9 @@ The following example defines a *Steel02* material with tag ``1``, a yield stres
 References
 ----------
 
-.. [FilippouEtAl1983] Filippou, F. C., Popov, E. P., Bertero, V. V. (1983). "Effects of Bond Deterioration on Hysteretic Behavior of Reinforced Concrete Joints". Report EERC 83-19, Earthquake Engineering Research Center, University of California, Berkeley.
-
+.. [R1] Filippou, F. C., Popov, E. P., Bertero, V. V. (1983). "Effects of Bond Deterioration on Hysteretic Behavior of Reinforced Concrete Joints". Report EERC 83-19, Earthquake Engineering Research Center, University of California, Berkeley.
+.. [R2] Goldberg, John E., Richard, Ralph M. (1963). "Analysis of Nonlinear Structures". Journal of the Structural Division. 89 (4). doi:10.1061/JSDEAG.0000948.
+.. [R3] Giuffrè, A. e Pinto, P. E. (1970). Il comportamento del cemento armato per sollecitazioni cicliche di forte intensità. Giornale del Genio Civile, 5, 391-408.
 
 Code Developed by: |mhs|, |fcf|
 
