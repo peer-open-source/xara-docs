@@ -11,7 +11,6 @@ Interpreters
    parallel
 
 
-
 There are several ways to use the `xara` package:
 
 - The :ref:`standard way <xara-python>` to use `xara` is to import it into your Python script and create an instance of the :py:class:`xara.Model` class. 
