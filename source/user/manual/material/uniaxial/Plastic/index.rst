@@ -18,10 +18,11 @@ Plastic
             :param |float| eta: optional parameter 
 
 
+
 Theory 
 ------
 
-This model implements a 1D specialization of the :ref:`J2Plasticity` material, without the nonlinear exponential hardening option.
+This model implements a 1D specialization of the :ref:`PlasticJ2` material, without the nonlinear exponential hardening option.
 
 
 Examples 

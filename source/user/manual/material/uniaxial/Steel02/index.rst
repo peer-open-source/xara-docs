@@ -157,8 +157,10 @@ References
 ----------
 
 .. [R1] Filippou, F. C., Popov, E. P., Bertero, V. V. (1983). "Effects of Bond Deterioration on Hysteretic Behavior of Reinforced Concrete Joints". Report EERC 83-19, Earthquake Engineering Research Center, University of California, Berkeley.
-.. [R2] Goldberg, John E., Richard, Ralph M. (1963). "Analysis of Nonlinear Structures". Journal of the Structural Division. 89 (4). doi:10.1061/JSDEAG.0000948.
-.. [R3] Giuffrè, A. e Pinto, P. E. (1970). Il comportamento del cemento armato per sollecitazioni cicliche di forte intensità. Giornale del Genio Civile, 5, 391-408.
+.. [R2] Goldberg, John E., Richard, Ralph M. (1963). "Analysis of Nonlinear Structures". Journal of the Structural Division. 89 (4). doi:10.1061/JSDEAG.0000948. 
+.. [R3] Giuffrè, A. e Pinto, P. E. (1970). "Il comportamento del cemento armato per sollecitazioni cicliche di forte intensità". Giornale del Genio Civile, 5, 391-408.
 
-Code Developed by: |mhs|, |fcf|
+
+
+Code Developed by: |fcf|, |mhs|
 

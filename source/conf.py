@@ -20,6 +20,7 @@ suppress_warnings = [
 # Project information
 #
 project = "xara"
+language = "en"
 copyright = 'Berkeley, CA'
 description = "Finite element analysis"
 author = "PEER"
@@ -37,8 +38,6 @@ from _setup.prolog import rst_prolog
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-#   'toctree_filter',
-    # "myst_parser",
     "myst_nb",
     "xara_sphinx_gallery" if XARA_GALLERY else "myst_sphinx_gallery",
     'sphinxcontrib.googleanalytics',
