@@ -2,9 +2,10 @@ Overview
 =========
 
 |xara| (pronouced *Kar-ah*, like the Gaelic word for "friend") is a free and open source tool for simulating the nonlinear response of structural and geotechnical systems. 
-|xara| is developed by PEER as an alternative front-end to the simulation framework proposed by :ref:`McKenna (1997) <references>`.
+|xara| is developed by PEER as an alternative front-end to the simulation framework proposed by :ref:`McKenna (1997) <references>` and :ref:`McKenna, Scott and Fenves (2010) <references>`.
 The design of the interface was guided by the demands of the |BRACE2| project, for which a suitably *reliable* and *performant* solution was not available.
 
+Three main approaches are available for using |xara|:
 
 .. grid:: 2 2 3 3 
    :gutter: 3
@@ -77,3 +78,5 @@ All three approaches above require only a standard :ref:`install <install>` of |
    cite
 
 
+References
+----------
