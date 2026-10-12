@@ -81,3 +81,9 @@ html[data-theme="dark"] .sphinx-tabs-tab[aria-selected="true"] {
 html[data-theme="dark"] [role="tablist"] {
     border-bottom-color: #4a4a4a;
 }
+
+dl.py-parameter-list > dt > strong {
+  font-family: var(--pst-font-family-monospace);
+  font-weight: 400;
+  color: var(--pst-color-text-base);
+}

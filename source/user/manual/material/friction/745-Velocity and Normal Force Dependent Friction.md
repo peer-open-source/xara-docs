@@ -47,8 +47,7 @@ frictionModel VelNormalFrcDep $tag $aSlow $nSlow
 <td><p>factor for determining the maximum coefficient of friction. This
 value prevents the friction coefficient from exceeding an unrealistic
 maximum value when the normal force becomes very small. The maximum
-friction coefficient is determined from μFast, for example μ ≤
-$maxMuFac*μFast.</p></td>
+friction coefficient is determined from μFast, for example μ ≤ maxMuFac*μFast.</p></td>
 </tr>
 </tbody>
 </table>
@@ -56,58 +55,37 @@ $maxMuFac*μFast.</p></td>
 
 ## Theory
 
-1. Define the friction coefficient at slow (μSlow) and fast (μFast)
-   velocity [1] (Figure 3):
-   <dl>
-   <dt></dt>
-   <dd>
-   <dl>
-   <dt></dt>
-   <dd>
-   μSlow = aSlow*N^(nSlow-1)
-   </dd>
-   </dl>
-   </dd>
-   </dl>
-   <dl>
-   <dt></dt>
-   <dd>
-   <dl>
-   <dt></dt>
-   <dd>
-   μFast = aFast*N^(nFast-1)
-   </dd>
-   </dl>
-   </dd>
-   </dl>
-   where `aSlow`, `aFast`, `nSlow` ≤ 1, `nFast` ≤ 1 are constants that determine
-   the friction coefficient models. As the friction coefficients μSlow and
+1. Define the friction coefficient at slow (μSlow) and fast (μFast) velocity [1] (Figure 3):
+
+   $$
+   \begin{aligned}
+   \mu_{\mathrm{Slow}} &= a_{\mathrm{Slow}} N^{n_{\mathrm{slow}}-1} \\
+   \mu_{\mathrm{Fast}} &= a_{\mathrm{Fast}} N^{n_{\mathrm{fast}}-1}
+   \end{aligned}
+   $$
+
+   where `aSlow`, `aFast`, `nSlow` ≤ 1, `nFast` ≤ 1 are constants that determine the friction coefficient models. 
+   As the friction coefficients μSlow and
    μFast are unitless, the user must be careful to define the constants to
    coincide with the units of the model input data.
 
 2. The friction coefficient as a function of velocity is [2]:
-   <dl>
-   <dt></dt>
-   <dd>
-   <dl>
-   <dt></dt>
-   <dd>
-   μ = μFast - (μFast-μSlow )*exp(-a*udot)
-   </dd>
-   </dl>
-   </dd>
-   </dl>
 
-   where udot is the velocity at the sliding interface and a is a rate
-   parameter.
+   $$
+   \mu = \mu_{\mathrm{fast}} - (\mu_{\mathrm{fast}} - \mu_{\mathrm{slow}} ) \exp (-a \dot{u})
+   $$
 
-3. In this friction model, a is assumed to be dependent on axial
-   force $N$ through:
+   where $\dot{u}$ is the velocity at the sliding interface and $a$ is a rate parameter.
+
+3. In this friction model, a is assumed to be dependent on axial force $N$ through:
+
    $$
    a = \alpha_0 + \alpha_1 N + \alpha_2 N^2
    $$
+
    where $\alpha_0$, $\alpha_1$ and $\alpha_2$ are constants, with units of Time/Length,
    Time/Length/Force and Time/Length/Force<sup class="superscript">2</sup> respectively.
+
 
 <figure>
 <img src="/_static/wiki/TPB_Nhan_Fig3.jpg" title="TPB_Nhan_Fig3.jpg" width="300" />
