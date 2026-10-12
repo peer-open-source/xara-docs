@@ -40,7 +40,7 @@ Steel02
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
 
-         tag, |integer|,	    integer tag identifying material
+         tag, |integer|,  integer tag identifying material
          Fy, |float|, yield strength
          E, |float|, initial elastic tangent
          b, |float|, strain-hardening ratio (ratio between post-yield tangent and initial elastic tangent)
