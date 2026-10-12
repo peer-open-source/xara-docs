@@ -78,5 +78,3 @@ All three approaches above require only a standard :ref:`install <install>` of |
    cite
 
 
-References
-----------
