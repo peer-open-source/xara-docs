@@ -73,12 +73,18 @@ Steel02
 Formulation
 -----------
 
-The hardening formulation was developed by [R1]_.
-The parameters ``a1`` and ``a2`` increase of compression yield envelope as proportion of yield strength after a plastic strain of :math:`a_2 F_y/E`. 
+Monotonic Envelope
+******************
 
-The parameters ``a3`` and ``a4`` increase of tension yield envelope as proportion of yield strength after a plastic strain of :math:`a_4 F_y/E`. 
+Goldberg et al (1963) [R2]_ proposed a curve which furnishes the stress explicitly in terms of strain, as expressed below:
 
-Typical values are ``R0`` between 10 and 20, ``cR1=0.925``, ``cR2=0.15``
+.. math::
+
+   \bar{\sigma}(\bar{\varepsilon}) = b{\bar{\varepsilon}} + \frac{(1-b){\bar{\varepsilon}}}{\left(1 + |{\bar{\varepsilon}}|^{R} \right)^\frac{1}{R}},
+
+where  :math:`\bar{\sigma}=\sigma/F_y`, 
+:math:`\bar{\varepsilon}=\varepsilon/\varepsilon_y`, :math:`(F_y, \varepsilon_y)` is the yield point, 
+:math:`b`  is the strain hardening parameter, and the exponent :math:`R` influences the shape of the transition curve and takes account of the Bauschinger effect. 
 
 
 .. _fig-steel02:
@@ -91,25 +97,34 @@ Typical values are ``R0`` between 10 and 20, ``cR1=0.925``, ``cR2=0.15``
 	Steel02 monotonic envelope
 
 
-.. figure:: figures/Steel02-Cycling.png
-	:align: center
-	:figclass: align-center
-        :alt: Hysteretic curves of Steel02 without isotropic hardening
+Bauschinger Effect
+*******************
 
-	Hysteretic behavior without isotropic hardening
-
-Goldberg et al (1963) [R2]_ proposed a curve which furnishes the stress explicitly in terms of strain, as expressed below:
-
-.. math::
-
-   \bar{\sigma}(\bar{\varepsilon}) = b{\bar{\varepsilon}} + \frac{(1-b){\bar{\varepsilon}}}{\left(1 + |{\bar{\varepsilon}}|^r\right)^\frac{1}{r}},
-
-where :math:`\bar{\sigma}=\sigma/F_y`, :math:`\bar{\varepsilon}=\varepsilon/\varepsilon_y`, :math:`(F_y, \varepsilon_y)` is the yield point, :math:`b` is the strain hardening parameter, and the parameter :math:`r` influences the shape of the transition curve and takes account of the Bauschinger effect. 
-A hysteretic loading-reloading algorithm for this curve was proposed by Giuffre et al. (1970) [R3]_, which was extended by Filippou et al (1983) [R1]_ to include isotropic hardening.
+A hysteretic loading-reloading algorithm for this curve was proposed by Giuffre et al. (1970) [R3]_, which was extended by Filippou et al (1983) [R1]_ to include isotropic hardening. 
 
 .. math::
 
    R(\xi) = R_0 \frac{1-(c_{R1} \xi)}{(c_{R2}+\xi)}
+
+
+Typical values are ``R0`` between 10 and 20, ``cR1=0.925``, ``cR2=0.15``
+
+
+.. figure:: figures/Steel02-Cycling.png
+	:align: center
+	:figclass: align-center
+   :alt: Hysteretic curves of Steel02 without isotropic hardening
+
+	Hysteretic behavior without isotropic hardening
+
+
+Hardening
+*********
+
+The hardening formulation was developed by [R1]_.
+The parameters ``a1`` and ``a2`` increase of compression yield envelope as proportion of yield strength after a plastic strain of :math:`a_2 F_y/E`. 
+
+The parameters ``a3`` and ``a4`` increase of tension yield envelope as proportion of yield strength after a plastic strain of :math:`a_4 F_y/E`. 
 
 
 Examples
