@@ -89,11 +89,11 @@ where  :math:`\bar{\sigma}=\sigma/F_y`,
 .. _fig-steel02:
 
 .. figure:: figures/Steel02-Backbone.png
-	:align: center
-	:figclass: align-center
-        :alt: Monotonic envelope curve produced by Steel02
+   :align: center
+   :figclass: align-center
+   :alt: Monotonic envelope curve produced by Steel02
 
-	Steel02 monotonic envelope
+   Steel02 monotonic envelope
 
 
 Bauschinger Effect
@@ -103,18 +103,18 @@ A hysteretic loading-reloading algorithm for this curve was proposed by Giuffre 
 
 .. math::
 
-   R(\xi) = R_0 \frac{1-(c_{R1} \xi)}{(c_{R2}+\xi)}
+   R(\xi) = R_0 \frac{1- c_{R1} \xi}{(c_{R2}+\xi)}
 
 
 Typical values are ``R0`` between 10 and 20, ``cR1=0.925``, ``cR2=0.15``
 
 
 .. figure:: figures/Steel02-Cycling.png
-	:align: center
-	:figclass: align-center
+   :align: center
+   :figclass: align-center
    :alt: Hysteretic curves of Steel02 without isotropic hardening
 
-	Hysteretic behavior without isotropic hardening
+   Hysteretic behavior without isotropic hardening
 
 
 Hardening
