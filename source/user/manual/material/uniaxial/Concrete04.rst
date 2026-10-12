@@ -50,10 +50,10 @@ where :math:`r` is a parameter often computed from:
 
 .. math::
    
-   r =\frac{E}{E-\left(f_{c p} / \epsilon_{c p}\right)},
+   r = \frac{E}{E-\left(f_{c p} / \epsilon_{c p}\right)},
 
 
-and :math:`E` is the Young's modulus of the concrete material. 
+and :math:`E` is the Young's modulus of the material. 
 
 .. math::
    
