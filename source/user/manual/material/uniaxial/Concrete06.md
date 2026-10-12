@@ -8,7 +8,7 @@ This command is used to construct a uniaxial concrete material with tensile stre
 
 
 ```tcl
-uniaxialMaterial Concrete06 $matTag $fc $e0 $n $k $alpha1
+uniaxialMaterial Concrete06 tag $fc $e0 $n $k $alpha1
         fcr ecr b alpha2
 ```
 
@@ -16,7 +16,7 @@ uniaxialMaterial Concrete06 $matTag $fc $e0 $n $k $alpha1
 <table>
 <tbody>
 <tr class="odd">
-<td><code class="parameter-table-variable">matTag</code></td>
+<td><code class="parameter-table-variable">tag</code></td>
 <td><p>integer tag identifying material</p></td>
 </tr>
 <tr class="even">
