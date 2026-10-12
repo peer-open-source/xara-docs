@@ -17,7 +17,7 @@
 
    Construct a uniaxial Bouc-Wen material with optional pinching and degradation.
 
-   :param E: initial stiffness, :math:`E` [1]_
+   :param E: initial stiffness, :math:`E_0` [1]_
    :type  E: float
    :param Fy: yield force, :math:`F_y` [1]_
    :type  Fy: float
