@@ -1,3 +1,4 @@
+.. _xara-python:
 
 Python
 ^^^^^^

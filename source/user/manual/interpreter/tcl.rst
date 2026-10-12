@@ -1,4 +1,4 @@
-.. _tcl-format:
+.. _tcl-shell:
 
 Tcl
 ^^^
