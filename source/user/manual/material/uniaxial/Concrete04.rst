@@ -59,7 +59,7 @@ and :math:`E` is the Young's modulus of the concrete material.
    
    f_{c i}=f_c^{\prime}\left(\frac{\varepsilon_{c i}}{\varepsilon_c}\right) \frac{n}{n-1+\left(\frac{\varepsilon_{c i}}{\varepsilon_c}\right)^n}
 
-If one sets :math:`E = 57000 \sqrt(f_{cc})` (in units of *psi*) then the envelope curve is identical to that proposed by [Mander1988]_.
+If one sets :math:`E = 57000 \sqrt{f_{cc}}` (in units of *psi*) then the envelope curve is identical to that proposed by [Mander1988]_.
 For loading in compression, the envelope to the stress-strain curve follows the model proposed by [Popovic1973]_ until the concrete crushing strength is achieved and also for strains beyond that corresponding to the crushing strength. 
 For unloading and reloading in compression, the [Karsan1969]_ is used to determine the slope of the curve. 
 

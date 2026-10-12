@@ -92,91 +92,25 @@
 ```
 
 
-## OpenSees Compatibility
-
-This material superceeds the following materials, which are supported for legacy purposes:
-
-```{eval-rst}
-
-.. tabs::
-
-   .. tab:: BoucWen
-
-      Bouc-Wen-Baber, written by Terje Haukaas and described by Haukaas and Der Kiureghian (2003).
-      
-      .. code-block:: Tcl
-
-         uniaxialMaterial BoucWen $tag $b $E $n $gamma $beta $Ao \
-                                  $delta_a $delta_v $delta_n
-
-      Note that this version does not expose an :math:`F_y` parameter.
-
-
-   .. tab:: BoucWenOriginal
-      
-      Bouc-Wen without pinching or degradation, implemented by A. Schellenberg.
-
-      .. code-block:: Tcl
-
-         uniaxialMaterial BoucWenOriginal tag E? Fy? alphaL? < alphaNL? mu? n? beta? gamma? >
-
-      In order to capture hardening effects that may occur in various hysteretic systems, this material appends a Duffing-like nonlinear term to the stress, parameterized by the exponent :math:`\mu`:
-
-      .. math::
-         
-         \sigma = \alpha_L E \varepsilon + \alpha_{NL} E \operatorname{sgn}(\varepsilon)\|\varepsilon\|^{\mu} + \bar{F}_y z
-      
-      where 
-
-      .. math::
-         
-         \bar{F}_y \triangleq F_y - \alpha_{L} F_y - \alpha_{NL}E\, \left( \frac{F_y}{E}\right)^{\mu}
-
-      An example with :math:`\beta = \gamma = 0.5`, :math:`\mu = 2`, :math:`n = 1`:
-
-      .. code-block:: Tcl
-         
-         uniaxialMaterial BoucWenOriginal 1 $E $Fy $alphaL $alphaNL 2.0 1.0 0.5 0.5
-
-      References:
-
-      * Hybrid Simulation of Seismic Isolation Systems Applied to an APR-1400 Nuclear Power Plant
-
-
-   .. tab:: BWBN
-
-      Bouc-Wen with Foliente pinching, but no degradation. Implemented by Raquib Hossain
-
-      .. code-block:: Tcl
-
-         uniaxialMaterial BWBN tag \
-                          alpha E n $gamma $beta $Ao \
-                          $q $zetas $p $Shi $deltaShi $lambda $tol $maxIter
-
-      
-      `Raquib Hossain <http://scholar.google.com.au/citations?user=I_li3qkAAAAJ&hl=en&oi=ao>`__, 
-      `The University of Queensland (UQ), Australia <http://www.uq.edu.au/>`__ 
-      and
-      `Bangladesh University of Engineering and Technology (BUET) <http://www.buet.ac.bd/>`__
-   
-   .. tab:: BoucWenInfill
-      
-      See `this <./BoucWenInfill.html>`__ page.
-
-```
-
 
 <hr />
 
 
 ## Theory
 
+A [Bouc-Wen](https://en.wikipedia.org/wiki/Bouc%E2%80%93Wen_model_of_hysteresis) uniaxial material defines a scalar relation between a stress $\sigma$ and strain $\varepsilon$ in the form:
+
+$$
+\sigma(\varepsilon, z) = \alpha E_{0} \varepsilon + (1-\alpha) F_{y} z
+$$
+where $z$ is an internal history variable governed by an ordinary differential equation. 
+
 This material model is an extension of the
 original Bouc-Wen model that includes pinching (Baber and Noori (1986) and Foliente (1995)).
 
 $$
 \begin{aligned} 
-\dot{z}&=\frac{h}{\eta}\left[A-|z|^n(\gamma+\beta \operatorname{sgn}(\dot{\varepsilon} z)) \nu\right] \frac{k_0}{F_y}  \dot{\varepsilon}\\ 
+\dot{z}&=\frac{h}{\eta}\left[A-|z|^n(\gamma+\beta \operatorname{sgn}(\dot{\varepsilon} z)) \nu\right] \frac{E_0}{F_y}  \dot{\varepsilon}\\ 
 \dot{e}&=(1-\alpha) F_y z \dot{\varepsilon}
 \end{aligned}
 $$
@@ -261,6 +195,80 @@ $\delta_\nu, \delta_\psi$, and $\lambda$ are rather insensitive parameters.
    examples/material/material-0004
 ```
 
+
+
+## OpenSees Compatibility
+
+This material superceeds the following materials, which are supported for legacy purposes:
+
+```{eval-rst}
+
+.. tabs::
+
+   .. tab:: BoucWen
+
+      Bouc-Wen-Baber, written by Terje Haukaas and described by Haukaas and Der Kiureghian (2003).
+      
+      .. code-block:: Tcl
+
+         uniaxialMaterial BoucWen $tag $b $E $n $gamma $beta $Ao \
+                                  $delta_a $delta_v $delta_n
+
+      Note that this version does not expose an :math:`F_y` parameter.
+
+
+   .. tab:: BoucWenOriginal
+      
+      Bouc-Wen without pinching or degradation, implemented by A. Schellenberg.
+
+      .. code-block:: Tcl
+
+         uniaxialMaterial BoucWenOriginal tag E? Fy? alphaL? < alphaNL? mu? n? beta? gamma? >
+
+      In order to capture hardening effects that may occur in various hysteretic systems, this material appends a Duffing-like nonlinear term to the stress, parameterized by the exponent :math:`\mu`:
+
+      .. math::
+         
+         \sigma = \alpha_L E \varepsilon + \alpha_{NL} E \operatorname{sgn}(\varepsilon)\|\varepsilon\|^{\mu} + \bar{F}_y z
+      
+      where 
+
+      .. math::
+         
+         \bar{F}_y \triangleq F_y - \alpha_{L} F_y - \alpha_{NL}E\, \left( \frac{F_y}{E}\right)^{\mu}
+
+      An example with :math:`\beta = \gamma = 0.5`, :math:`\mu = 2`, :math:`n = 1`:
+
+      .. code-block:: Tcl
+         
+         uniaxialMaterial BoucWenOriginal 1 $E $Fy $alphaL $alphaNL 2.0 1.0 0.5 0.5
+
+      References:
+
+      * Hybrid Simulation of Seismic Isolation Systems Applied to an APR-1400 Nuclear Power Plant
+
+
+   .. tab:: BWBN
+
+      Bouc-Wen with Foliente pinching, but no degradation. Implemented by Raquib Hossain
+
+      .. code-block:: Tcl
+
+         uniaxialMaterial BWBN tag \
+                          alpha E n $gamma $beta $Ao \
+                          $q $zetas $p $Shi $deltaShi $lambda $tol $maxIter
+
+      
+      `Raquib Hossain <http://scholar.google.com.au/citations?user=I_li3qkAAAAJ&hl=en&oi=ao>`__, 
+      `The University of Queensland (UQ), Australia <http://www.uq.edu.au/>`__ 
+      and
+      `Bangladesh University of Engineering and Technology (BUET) <http://www.buet.ac.bd/>`__
+   
+   .. tab:: BoucWenInfill
+      
+      See `this <./BoucWenInfill.html>`__ page.
+
+```
 
 
 ## References

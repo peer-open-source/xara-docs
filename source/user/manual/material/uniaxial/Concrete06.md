@@ -6,10 +6,10 @@
 
 This command is used to construct a uniaxial concrete material with tensile strength, nonlinear tension stiffening and compressive behavior based on Thorenfeldt curve.
 
-:::{apidoc="opensees.uniaxial.Concrete06"}
+
 ```tcl
 uniaxialMaterial Concrete06 $matTag $fc $e0 $n $k $alpha1
-        $fcr $ecr $b $alpha2
+        fcr ecr b alpha2
 ```
 
 <hr />
@@ -59,7 +59,8 @@ strain definition</p></td>
 </tr>
 </tbody>
 </table>
-:::
+
+
 
 <figure>
 <img src="/_static/wiki/Concrete06C.png" title="Concrete06C.png"
@@ -106,7 +107,8 @@ and Hsu (1994) with a general exponent $b$.
 
 
 $$
-\epsilon_c \le \epsilon_{\text{cr}}, \sigma_c = \left(
+\epsilon_c \le \epsilon_{\text{cr}}, \sigma_c
+= \left(
 \frac{f_\text{cr}}{\epsilon_\text{cr}} \right) \epsilon_c
 $$
 
@@ -131,24 +133,20 @@ stiffness).
 The unloading and reloading paths in compression are
 connected through unloading/reloading paths with initial elastic
 stiffness (Fig. 2 and 3). 
-The unloading path in compression has a
-stiffness of $7.1\%$ of the initial elastic stiffness ($0.071E_c$) as adopted
-by Palermo and Vecchio (2003). 
-The plastic compressive strain
-$\epsilon^p_c$), defined as the residual
+The unloading path in compression has a stiffness of $7.1\%$ of the initial elastic stiffness ($0.071 E_c$) as adopted by Palermo and Vecchio (2003). 
+The plastic compressive strain $\epsilon^p_c$, defined as the residual
 unrecoverable compressive strain obtained after full unloading (zero
 stress) is characterized by:
 
 $$
-\epsilon^c_p = \epsilon^c_m \left( 1 - e
+\epsilon^c_p = \epsilon^c_m \left(1 - e
 ^{-\frac{\epsilon^c_m}{\epsilon_\text{cr}} \alpha_1} \right)
 $$
 
 
-where $\epsilon_m^c$is the maximum (absolute
+where $\epsilon_m^c$ is the maximum (absolute
 value) compressive strain attained previously on the envelope (stored
-value by the uniaxial material), and $\alpha_1$
-is a parameter.
+value by the uniaxial material), and $\alpha_1$ is a parameter.
 
 A origin-oriented hysteretic rule for tension may introduce
 inaccuracies in the analysis. In this case, stresses are linear and
@@ -173,12 +171,12 @@ previous unloading stiffness in tension until the previous attained
 maximum tensile stress is reached.
 
 In tension, the unloading and reloading paths are the same, and are
-defined by the tensile plastic strain
-$(\epsilon_p^t)$. 
+defined by the tensile plastic strain $\epsilon_p^t$. 
 A similar equation is used to characterize the tensile plastic strain as in compression:
 
 $$
-\epsilon^t_p = \epsilon^t_m \left(1 - e^{-\frac{\epsilon^t_m}{\epsilon_\text{cr}} \alpha_2} \right)
+\epsilon^t_p = \epsilon^t_m \left(1 - e^{-\frac{\epsilon^t_m}{\epsilon_\text{cr}} \alpha_2} 
+\right)
 $$
 
 where $\epsilon_m^t$ is the maximum tensile
