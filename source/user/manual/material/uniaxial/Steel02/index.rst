@@ -6,7 +6,7 @@ Steel02
 *Steel02* is a uniaxial material based on the Giuffre-Menegotto-Pinto formulation with added isotropic strain hardening by Filippou et al (1983) [R1]_.
 
 .. tabs::
-   
+
    .. tab:: Python 
 
       .. py:method:: xara.UniaxialMaterial("Steel02", Fy, E, b, R0, cR1, cR2, [a1, a2, a3, a4])
@@ -79,10 +79,10 @@ Goldberg et al (1963) [R2]_ proposed a curve which furnishes the stress explicit
 
 .. math::
 
-   \bar{\sigma}(\bar{\varepsilon}) = b{\bar{\varepsilon}} + \frac{(1-b){\bar{\varepsilon}}}{\left(1 + |{\bar{\varepsilon}}|^{R} \right)^\frac{1}{R}},
+   s(e) = b e + \frac{(1-b){\bar{\varepsilon}}}{\left(1 + |e|^{R} \right)^\frac{1}{R}},
 
-where  :math:`\bar{\sigma}=\sigma/F_y`, 
-:math:`\bar{\varepsilon}=\varepsilon/\varepsilon_y`, :math:`(F_y, \varepsilon_y)` is the yield point, 
+where  :math:`s=\sigma/F_y`, 
+:math:`e =\varepsilon/\varepsilon_y`, :math:`(F_y, \varepsilon_y)` is the yield point, 
 :math:`b`  is the strain hardening parameter, and the exponent :math:`R` influences the shape of the transition curve and takes account of the Bauschinger effect. 
 
 
@@ -120,7 +120,7 @@ Typical values are ``R0`` between 10 and 20, ``cR1=0.925``, ``cR2=0.15``
 Hardening
 *********
 
-The hardening formulation was developed by [R1]_.
+The hardening formulation was developed by [R1]_. 
 The parameters ``a1`` and ``a2`` increase of compression yield envelope as proportion of yield strength after a plastic strain of :math:`a_2 F_y/E`. 
 
 The parameters ``a3`` and ``a4`` increase of tension yield envelope as proportion of yield strength after a plastic strain of :math:`a_4 F_y/E`. 
