@@ -1,4 +1,4 @@
-Plane Elasticity
-================
+Plane Mechanics
+===============
 
-Plane examples.
+Solid mechanics problems under plane stress and strain.
