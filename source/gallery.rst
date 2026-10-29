@@ -56,16 +56,18 @@ Sections
    
 `More <examples/sections/index.html>`_
 
-Plane Elasticity
+Plane Mechanics
 ------------------
 
 
 .. ref-gallery::
 
-    examples/plane/plane-0002
     examples/plane/plane-0101
     examples/plane/plane-2001
+    examples/plane/plane-2030
 
+..
+    examples/plane/plane-0002
 
 .. toctree::
    :maxdepth: 1
@@ -95,7 +97,6 @@ Shells
    examples/shell/index
 
 `More <examples/shell/index.html>`_
-
 
 
 
