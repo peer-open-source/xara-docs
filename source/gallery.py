@@ -43,14 +43,15 @@ Galleries = [
         ],
     },
     {
-        "name": "Plane Elasticity",
+        "name": "Plane Mechanics",
         "directory": "plane",
-        "description": "Plane examples.",
+        "description": "Solid mechanics problems under plane stress and strain.",
         "examples": [
             # "plane-0002/main.ipynb",
             "plane-0101/main.ipynb",
             # "plane-2001/mesh.ipynb",
             "plane-2001/main.ipynb",
+            "plane-2030/main.ipynb",
         ],
     },
     {
@@ -75,6 +76,10 @@ Galleries = [
             "material-0005/main.ipynb",
             "material-0030/main.ipynb",
             "material-0031/main.ipynb",
+            "material-2001/main.ipynb",
+            "material-2002/main.ipynb",
+            "material-2003/main.ipynb",
+            "material-2004/main.ipynb",
             "model-5012/main.ipynb",
             "solid-0203/main.ipynb",
         ],
