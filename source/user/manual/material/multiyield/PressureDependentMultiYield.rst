@@ -1,7 +1,7 @@
 .. _PressureDependentMultiYield:
 
-Pressure Dependent Multi Yield
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+DruckerMultiYield
+^^^^^^^^^^^^^^^^^
 
 Code Developed by: UC San Diego (**Dr. Zhaohui Yang**):
 
@@ -11,11 +11,13 @@ When this material is employed in regular solid elements (e.g., FourNodeQuad, Br
 To simulate soil response under fully undrained condition, this material may be either embedded in a FluidSolidPorousMaterial, or used with one of the solid-fluid fully coupled elements (Four Node Quad u-p Element, Nine Four Node Quad u-p Element, Brick u-p Element, Twenty Eight Node Brick u-p Element) with very low permeability. 
 To simulate partially drained soil response, this material should be used with a solid-fluid fully coupled element with proper permeability values.
 
-During the application of gravity load (and static loads if any), material behavior is linear elastic. In the subsequent dynamic (fast) loading phase(s), the stress-strain response is elastic-plastic (see updateMaterialStage). Plasticity is formulated based on the multi-surface (nested surfaces) concept, with a non-associative flow rule to reproduce dilatancy effect. The yield surfaces are of the Drucker-Prager type.
+During the application of gravity load (and static loads if any), material behavior is linear elastic. 
+In the subsequent dynamic (fast) loading phase(s), the stress-strain response is elastic-plastic (see updateMaterialStage). 
+Plasticity is formulated based on the multi-surface (nested surfaces) concept, with a non-associative flow rule to reproduce dilatancy effect. The yield surfaces are of the Drucker-Prager type.
 
 The command to generate such a material
 
-.. function:: nDMaterial PressureDependMultiYield tag nd rho refShearModul refBulkModul frictionAng peakShearStra refPress pressDependCoe PTAng contrac dilat1 dilat2 liquefac1 liquefac2 liquefac3 <noYieldSurf=20 <r1 Gs1 ...> e=0.6 cs1=0.9 cs2=0.02 cs3=0.7 pa=101 <c=0.3>>
+.. function:: nDMaterial PressureDependMultiYield tag nd rho Gref Bref frictionAng peakShearStra refPress pressDependCoe PTAng contrac dilat1 dilat2 liquefac1 liquefac2 liquefac3 <noYieldSurf=20 <r1 Gs1 ...> e=0.6 cs1=0.9 cs2=0.02 cs3=0.7 pa=101 <c=0.3>>
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
@@ -24,12 +26,12 @@ The command to generate such a material
    tag, |integer|, "A positive integer uniquely identifying the material among all nDMaterials."
    nd, |integer|, "Number of dimensions, 2 for plane-strain, and 3 for 3D analysis."
    rho, |float|, "Saturated soil mass density."
-   refShearModul (Gr), |float|, "Reference low-strain shear modulus, specified at a reference mean effective confining pressure refPress of p’r (see below)"
-   refBulkModul (Br), |float|, "Reference bulk modulus, specified at a reference mean effective confining pressure refPress of p’r (see below)."
+   Gref (:math:`G_r`), |float|, "Reference low-strain shear modulus, specified at a reference mean effective confining pressure refPress of :math:`p'_r` (see below)"
+   Bref (:math:`B_r`), |float|, "Reference bulk modulus, specified at a reference mean effective confining pressure refPress of :math:`p'_r` (see below)."
    frictionAng (Φ), |float|, "Friction angle at peak shear strength, in degrees."
-   peakShearStra (γmax), |float|,"An octahedral shear strain at which the maximum shear strength is reached, specified at a reference mean effective confining pressure refPress of p’r (see below)."
-   refPress (p’r), |float|, "Reference mean effective confining pressure at which Gr, Br, and γmax are defined."
-   pressDependCoe (d), |float|, "A positive constant defining variations of G and B as a function of instantaneous effective confinement p’:"
+   peakShearStra (γmax), |float|,"An octahedral shear strain at which the maximum shear strength is reached, specified at a reference mean effective confining pressure refPress of :math:`p'_r` (see below)."
+   refPress (:math:`p'_r`), |float|, "Reference mean effective confining pressure at which :math:`G_r`, :math:`B_r`, and γmax are defined."
+   pressDependCoe (:math:`d`), |float|, "A positive constant defining variations of :math:`G` and :math:`B` as a function of instantaneous effective confinement p’:"
    PTAng (ΦPT), |float|, "Phase transformation angle, in degrees."
    contrac, |float|, "A non-negative constant defining the rate of shear-induced volume decrease (contraction) or pore pressure buildup. A larger value corresponds to faster contraction rate."
    dilat1 dilat2, |float|, "Non-negative constants defining the rate of shear-induced volume increase (dilation). Larger values correspond to stronger dilation rate."
@@ -51,7 +53,7 @@ Notes
       \gamma = \frac{2}{3} \left [ (\epsilon_{xx} - \epsilon_{yy})^2 + (\epsilon_{yy} - \epsilon_{zz})^2 + (\epsilon_{xx} - \epsilon_{zz})^2 + 6 \epsilon_{xy}^2 + 6 \epsilon_{yz}^2 + 6 \epsilon_{xz}^2 \right] ^ {1/2}
 
 
-2. ``presDependCoef``, :math:`d`, defines variations of G and B as a function of instantaneous effective confinement :math:`p^t` as follows:
+2. ``presDependCoef``, :math:`d`, defines variations of :math:`G` and :math:`B` as a function of instantaneous effective confinement :math:`p^t` as follows:
 
    .. math::
 
@@ -59,11 +61,13 @@ Notes
 
       B = B_r \left ( \frac{p^t}{{p^t}_r} \right)^d
 
-3. The friction angle :math:`\phi` and cohesion c define the variation of peak (octahedral) shear strength :math:`\tau_f` as a function of current effective confinement :math:`{p^t}_i`:
+
+3. The friction angle :math:`\phi` and cohesion :math:`c` define the variation of peak (octahedral) shear strength :math:`\tau_f` as a function of current effective confinement :math:`{p^t}_i`:
 
    .. math::
 
       \tau_f = \frac{2 \sqrt{2} \sin \phi}{3 - \sin \phi}{p^t}_i + \frac{2 \sqrt{2}}{3}c
+
 
 4. Automatic surface generation. At a constant confinement :math:`p^t`, the shear stress :math:`\tau` (octahedral) - shear strain :math:`\gamma` (octahedral) nonlinearity is defined by a hyperbolic curve (backbone curve):
 
@@ -79,7 +83,7 @@ Notes
 
 5. (User defined surfaces) The user specified friction angle :math:`\phi = 0`. cohesion :math:`c` will be ignored. Instead, :math:`c` is defined by :math:`c=\sqrt 3 \sigma_m / 2`, where :math:`\sigma_m` is the product of the last modulus and strain pair in the modulus reduction curve. Therefore, it is important to adjust the backbone curve so as to render an appropriate :math:`c`.
 
-   If the user specifies :math:`\gamma` > 0, this :math:`\phi` will be ignored. Instead, :math:`\phi` is defined as follows:
+   If the user specifies :math:`\gamma > 0`, this :math:`\phi` will be ignored. Instead, :math:`\phi` is defined as follows:
 
    .. math::
 
@@ -136,7 +140,7 @@ The following parameters are suggested:
    :widths: 1, 1, 1, 1, 1
    
    rho, "1.7 ton/m3 or 1.59x10-4 (lbf)(s2)/in4", "1.9 ton/m3 or 1.778x10-4 (lbf)(s2)/in4", "2.0 ton/m3 or 1.872x10-4 (lbf)(s2)/in4", "2.1 ton/m3 or 1.965x10-4 (lbf)(s2)/in4"
-   "refShearModul (at p’r=80 kPa or 11.6 psi)", "5.5x104 kPa or 7.977x103 psi", "7.5x104 kPa or 1.088x104 psi", "1.0x105 kPa or 1.45x104 psi", "1.3x105 kPa or 1.885x104 psi"
+   "Gref (at p’r=80 kPa or 11.6 psi)", "5.5x104 kPa or 7.977x103 psi", "7.5x104 kPa or 1.088x104 psi", "1.0x105 kPa or 1.45x104 psi", "1.3x105 kPa or 1.885x104 psi"
    "refBulkModu (at p’r=80 kPa or 11.6 psi)", "1.5x105 kPa or 2.176x104 psi", "2.0x105 kPa or 2.9x104 psi", "3.0x105 kPa or 4.351x104 psi", "3.9x105 kPa or 5.656x104 psi"
    frictionAng,  29,	 33,	37,  40
    "refPress (p’r)", "80 kPa or 11.6 psi", "80 kPa or 11.6 psi", "80 kPa or 11.6 psi", "80 kPa or 11.6 psi"
