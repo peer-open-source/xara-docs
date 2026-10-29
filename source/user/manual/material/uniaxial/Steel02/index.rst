@@ -79,7 +79,7 @@ Goldberg et al (1963) [R2]_ proposed a curve which furnishes the stress explicit
 
 .. math::
 
-   s(e) = b e + \frac{(1-b){\bar{\varepsilon}}}{\left(1 + |e|^{R} \right)^\frac{1}{R}},
+   s(e) = b e + \frac{(1-b)e}{\left(1 + |e|^{R} \right)^\frac{1}{R}},
 
 where  :math:`s=\sigma/F_y`, 
 :math:`e =\varepsilon/\varepsilon_y`, :math:`(F_y, \varepsilon_y)` is the yield point, 
@@ -99,14 +99,30 @@ where  :math:`s=\sigma/F_y`,
 Bauschinger Effect
 *******************
 
-A hysteretic loading-reloading algorithm for this curve was proposed by Giuffre et al. (1970) [R3]_, which was extended by Filippou et al (1983) [R1]_ to include isotropic hardening. 
 
 .. math::
 
    R(\xi) = R_0 \frac{1- c_{R1} \xi}{(c_{R2}+\xi)}
 
+Typical values are ``R0`` between 10 and 20, ``cR1=0.925``, ``cR2=0.15``. 
 
-Typical values are ``R0`` between 10 and 20, ``cR1=0.925``, ``cR2=0.15``
+This was proposed by Giuffre et al. (1970) [R3]_. 
+
+
+.. note::
+
+   An alternative parameterization is
+
+   .. math::
+      
+      R(\xi) = R_0 - \frac{\bar{c}_{R1} \xi}{\bar{c}_{R2}+\xi}
+   
+   This is the form that appears in the original paper by Filippou et al. (1983) [R1]_. 
+   The two forms are equivalent, with the following relationships between the parameters:
+
+   .. math::
+
+      \bar{c}_{R1} = R_0 c_{R1}, \quad \bar{c}_{R2} = c_{R2}
 
 
 .. figure:: figures/Steel02-Cycling.png
@@ -120,7 +136,27 @@ Typical values are ``R0`` between 10 and 20, ``cR1=0.925``, ``cR2=0.15``
 Hardening
 *********
 
-The hardening formulation was developed by [R1]_. 
+Early works that proposed isotropic hardening for this type of material include [R4]_.
+
+``PowerRange``
++++++++++++++++
+
+This hardening formulation is not well documented in the literature. 
+It was introduced in the FEDEAS material library (likely in the late 1990s) as an alternative to the Filippou et al. (1983) [R1]_ formulation. 
+
+.. math::
+
+   \bar{Y} = 1 + a_3 \left(\frac{\epsilon_{max} - \epsilon_{min}}{2 a_4 \epsilon_y}\right)^{0.8}
+
+``Filippou83``
+++++++++++++++
+
+The hardening formulation was proposed by [R1]_. 
+
+.. math::
+
+   \bar{Y} = 1 + a_3 \left(\frac{\varepsilon_{\mathrm{max}}}{\varepsilon_y} - a_4\right)
+
 The parameters ``a1`` and ``a2`` increase of compression yield envelope as proportion of yield strength after a plastic strain of :math:`a_2 F_y/E`. 
 
 The parameters ``a3`` and ``a4`` increase of tension yield envelope as proportion of yield strength after a plastic strain of :math:`a_4 F_y/E`. 
@@ -158,6 +194,7 @@ References
 .. [R1] Filippou, F. C., Popov, E. P., Bertero, V. V. (1983). "Effects of Bond Deterioration on Hysteretic Behavior of Reinforced Concrete Joints". Report EERC 83-19, Earthquake Engineering Research Center, University of California, Berkeley.
 .. [R2] Goldberg, John E., Richard, Ralph M. (1963). "Analysis of Nonlinear Structures". Journal of the Structural Division. 89 (4). doi:10.1061/JSDEAG.0000948. 
 .. [R3] Giuffrè, A. e Pinto, P. E. (1970).  Giornale del Genio Civile, 5, 391-408.
+.. [R4] J. F. Stanton and H. D. McNiven, (1979). "The Development of a Mathematical Model to Predict the Flexural Response of Reinforced Concrete Beams to Cyclic Loads, Using System Identification," University of California, Earthquake Engineering Research Center, UCB/EERC-79/02, 1979.
 
 .. 
    "Il comportamento del cemento armato per sollecitazioni cicliche di forte intensità".

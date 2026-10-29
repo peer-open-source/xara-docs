@@ -92,6 +92,7 @@ Theory
 The ``ASDPlasticMaterial`` internally uses Voigt notation to represent tensors. 
 
 .. math::
+
    \newcommand{\vec}[1]{\boldsymbol{#1}}
    \newcommand{\state}{\sigma, \left\lbrace iv \right\rbrace, \left\lbrace param \right\rbrace }
    \newcommand{\matorvec}[2]{

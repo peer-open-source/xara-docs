@@ -5,18 +5,19 @@ SANISAND-MS Material
 
 **Code Developed by**: `Haoyuan Liu <https://www.linkedin.com/in/haoyuan-liu-059500171/?originalSubdomain=nl>`_ (Norwegian Geotechnical Institute (NGI), formerly TUDelft), `José A. Abell <http://www.joseabell.com>`_ (UANDES, Chile), `Andrea Diambra <https://research-information.bris.ac.uk/en/persons/andrea-diambra>`_ (University of Bristol), and `Federico Pisanò <https://www.tudelft.nl/citg/over-faculteit/afdelingen/geoscience-engineering/sections/geo-engineering/staff/academic-staff/dr-f-federico-pisano>`_ (TU Delft).
 
-This command is used to construct a multi-dimensional SANISAND-MS (``SAniSandMS``) material, which is an extension of the Manzari-Dafalias (SAniSand) model with cyclic ratcheting control using the memory-surface (MS) concept. This allows capturing the ratcheting effects in sands that occur in high-cyclic loading in the presence of a static stress field or in the case of assymetric loading. 
+This command is used to construct a multi-dimensional SANISAND-MS (``SAniSandMS``) material, which is an extension of the :ref:`Manzari-Dafalias (SAniSand) <ManzariDafalias>` model with cyclic ratcheting control using the memory-surface (MS) concept.
+This allows capturing the ratcheting effects in sands that occur in high-cyclic loading in the presence of a static stress field or in the case of assymetric loading. 
 
 .. figure:: SAniSandMS-fig0a.png
    :align: center
    :width: 400px
    :figclass: align-center
 
+
 .. admonition:: TCL command:
 
    nDMaterial SAniSandMS  $matTag $G0 $nu $e_init $Mc $c $lambda_c $e0 $ksi $P_atm $m $h0 $ch $nb $A0 $nd $zeta $mu0 $beta $Den $fabric_flag $flow_flag $intScheme $TanType $JacoType $TolF $TolR
 
-   Please report bugs as an issue on the main OpenSees repositoy and tag ``@jaabell`` 
 
 Where,
 
@@ -53,7 +54,9 @@ Where,
    $TolE, |float|, (adimensional) relative error for explicit integrator
 
 
-The current implementation on SANISAND-MS uses fourth-order Runge-Kutta with error control for constitutive integration. The strain coming from a finite-element containing SANISAND-MS is applied incrementally by subdividing automatically to keep the constitutive integration error below the parameter ``$TolE``. The integration error :math:`e` is defined as:
+The current implementation on SANISAND-MS uses fourth-order Runge-Kutta with error control for constitutive integration. 
+The strain coming from a finite-element containing SANISAND-MS is applied incrementally by subdividing automatically to keep the constitutive integration error below the parameter ``$TolE``. 
+The integration error :math:`e` is defined as:
 
 .. math::
 
@@ -76,36 +79,32 @@ The above equations differ from those in the main reference by Liu et al. (2019)
    If you use SANISAND-MS in your published research work, please cite the main reference ([SANISAND-MS]_) and also inform ``jaabell`` (*at* miuandes *dot* cl), to update the list of published articles and works that use the code. 
 
 
-.. admonition:: Naming convention
-
-   In text documents we use the spelling `SANISAND-MS`, but the OpenSees implementation uses ``SAniSandMS`` to accomodate coding conventions in OpenSees. 
+   Please report bugs as an issue on the main OpenSees repositoy and tag ``@jaabell`` 
 
 
-
-.. admonition:: Available formulations
-
-   The material formulations for the SAniSandMS object are "ThreeDimensional" and "PlaneStrain"
-
-.. admonition:: Recorder queries
-   
-   Valid Element recorder queries are:
-   
-   *  ``stress`` returns stress tensor 
-   *  ``strain``returns strain tensor 
-   *  ``alpha``  for :math:`\mathbf{\alpha}`, the back-stress ratio tensor for the yield surface
-   *  ``alphaM``  for :math:`\mathbf{\alpha^M}`, the back-stress ratio tensor for the memory surface
-   *  ``alpha_in`` for :math:`\mathbf{\alpha_{in}}`
-   *  ``MM`` size of memory surface
-   *  ``estrain`` elastic strain tensor
+Output
+------
 
 
-   .. code:: tcl
+Valid Element recorder queries are:
 
-    recorder Element -eleRange 1 $numElem -time -file stress.out  stress
+*  ``stress`` returns stress tensor 
+*  ``strain``returns strain tensor 
+*  ``alpha``  for :math:`\mathbf{\alpha}`, the back-stress ratio tensor for the yield surface
+*  ``alphaM``  for :math:`\mathbf{\alpha^M}`, the back-stress ratio tensor for the memory surface
+*  ``alpha_in`` for :math:`\mathbf{\alpha_{in}}`
+*  ``MM`` size of memory surface
+*  ``estrain`` elastic strain tensor
 
-    #. Elastic or Elastoplastic response could be enforced by
-       Elastic:   updateMaterialStage -material $matTag -stage 0
-       Elastoplastic:	updateMaterialStage -material $matTag -stage 1
+
+.. code:: tcl
+
+   recorder Element -eleRange 1 $numElem -time -file stress.out  stress
+
+Elastic or plastic response could be enforced by
+
+* Elastic:   updateMaterialStage -material $matTag -stage 0
+* Plastic:	updateMaterialStage -material $matTag -stage 1
 
 
 
@@ -115,28 +114,30 @@ Examples
 --------
 
 This example, provides an asymetric drained triaxial test of the constitutive model to show the effect of ratcheting. 
-First the sample is compressed isotropically to 200KPa, then a cyclic deviator stress is applied. 
+First the sample is compressed isotropically to 200 KPa, then a cyclic deviator stress is applied. 
 
-   .. literalinclude:: SAniSandMS.tcl
-      :language: Tcl
+.. literalinclude:: TriaxialSAniSandMS.tcl
+   :language: Tcl
 
 
-   The script produces an output that can be visualized as follows. 
+The script produces an output that can be visualized as follows. 
 
-   .. figure:: SAniSandMS-fig1.png
-      :align: center
-      :width: 600px
-      :figclass: align-center
+.. figure:: SAniSandMS-fig1.png
+   :align: center
+   :width: 600px
+   :figclass: align-center
 
-   .. figure:: SAniSandMS-fig2.png
-      :align: center
-      :width: 600px
-      :figclass: align-center
+.. figure:: SAniSandMS-fig2.png
+   :align: center
+   :width: 600px
+   :figclass: align-center
 
-   .. figure:: SAniSandMS-fig3.png
-      :align: center
-      :width: 600px
-      :figclass: align-center
+
+.. figure:: SAniSandMS-fig3.png
+   :align: center
+   :width: 600px
+   :figclass: align-center
+
 
 References
 ----------
@@ -144,6 +145,7 @@ References
 .. [SANISAND-MS] Liu, H. Y., Abell, J. A., Diambra, A., & Pisanò, F. (2019). `Modelling the cyclic ratcheting of sands through <https://www.researchgate.net/publication/328211282_Modelling_the_cyclic_ratcheting_of_sands_through_memory-enhanced_bounding_surface_plasticity>`_. Géotechnique, 69(9), 783-800.
 
 * Liu, H.Y.  (2020). `Constitutive modelling of cyclic sand behaviour for offshore foundations <https://repository.tudelft.nl/islandora/object/uuid%3A6e3ae33c-e95d-474f-8d6b-d8c0f8aa4788?collection=research>`_ (Doctoral dissertation, Delft University of Technology).
+
 
 **List of works using SANISAND-MS**
 

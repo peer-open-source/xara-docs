@@ -32,6 +32,15 @@
    :gtype density: float
 ```
 
+## Examples
+
+```{eval-rst}
+
+.. ref-gallery::
+
+   examples/plane/plane-2030
+
+```
 
 ## Theory
 

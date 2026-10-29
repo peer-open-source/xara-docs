@@ -45,6 +45,7 @@ J2Plasticity
          delta, |float|,	   exponential hardening parameter
          H, |float|,linear hardening parameter
 
+
 .. [1] These arguments are supported by the :ref:`parameter <parameter>` commands.
 
 Notes
@@ -62,6 +63,7 @@ Parameters
      Updates to :math:`E` are performed at constant Poisson ratio :math:`\nu`.
 
 * ``Fy`` - Initial yield stress :math:`F_y`
+
 
 Examples
 --------
@@ -82,13 +84,13 @@ In the elastic range, the material response follows an :ref:`ElasticIsotropic` f
 
 .. math::
 
-   \boldsymbol{T} = K \operatorname{tr} \boldsymbol{E}_e + 2 G \operatorname{dev} \boldsymbol{E}_e
+   \boldsymbol{\sigma} = K \operatorname{tr} \boldsymbol{E}_e + 2 G \operatorname{dev} \boldsymbol{E}_e
 
 Plastic response is distinguished by the yield function :math:`f`
 
 .. math::
 
-   f (\boldsymbol{T},h) \triangleq \| \operatorname{dev} \boldsymbol{T} \| - \sqrt{\tfrac{2}{3}} \, h^{\mathrm{iso}}(\bar{\epsilon}_{\mathrm{p}})
+   f (\boldsymbol{\sigma},h) \triangleq \| \operatorname{dev} \boldsymbol{\sigma} \| - \sqrt{\tfrac{2}{3}} \, h^{\mathrm{iso}}(\bar{\epsilon}_{\mathrm{p}})
 
 where :math:`\bar{\epsilon}_{\mathrm{p}}` is the scalar *equivalent plastic tensile strain*, and :math:`h^{\mathrm{iso}}` is a scalar function that defines the *saturation isotropic hardening* given by:
 
@@ -96,7 +98,8 @@ where :math:`\bar{\epsilon}_{\mathrm{p}}` is the scalar *equivalent plastic tens
    
    h^{\mathrm{iso}}(\bar{\epsilon}_{\mathrm{p}}) = H_{\mathrm{iso}} \bar{\epsilon}_{\mathrm{p}} + F_{s}  + (F_y - F_{s}) \exp \left(-H_{\mathrm{s}} \bar{\epsilon}_{\mathrm{p}} \right)
 
-.. note:: 
+.. note::
+
    This is identical to the hardening function for :ref:`DruckerPrager`, when :math:`F_y \equiv F_0`.
 
 This hardening rule is equivalent to the model implemented by FEAP. 
@@ -104,7 +107,7 @@ The flow rules are
 
 .. math::
 
-   \dot{\boldsymbol{E}}_{\mathrm{p}} = \gamma  \frac{\partial f}{\partial \boldsymbol{T}}
+   \dot{\boldsymbol{E}}_{\mathrm{p}} = \gamma  \frac{\partial f}{\partial \boldsymbol{\sigma}}
 
 ..
    \dot{\bar{\epsilon}}_{\mathrm{p}} = - \gamma  \frac{\partial f}{\partial Y}

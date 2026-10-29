@@ -17,14 +17,14 @@ The angle that defines the orientation of the steel layers with respect to the l
 	SmearedSteelDoubleLayer Material: (a) Distributed reinforcement; (b) Rebar layers; (c) Steel layers orientation; (d) Steel behavior in the local coordinate system; (e) Uniaxial steel behavior.
 
 
-.. function:: nDMaterial SmearedSteelDoubleLayer $matTag $s1 $s2 $ratioSteelLayer1 $ratioSteelLayer2 $OrientationEmbeddedSteel
+.. function:: nDMaterial SmearedSteelDoubleLayer tag $s1 $s2 $ratioSteelLayer1 $ratioSteelLayer2 $OrientationEmbeddedSteel
 
 
 .. csv-table:: 
    :header: "Parameter", "Type", "Description"
    :widths: 10, 10, 40
 
-   $matTag, integer, unique tag identifyieng this material
+   tag, integer, unique tag identifyieng this material
    $s1, integer, tag of unixial simulating horizontal reinforcement
    $s2, integer, tag of unixial simulating vertical reinforcement
    $ratioSteelLayer1, float, reinforcing ratio in horizontal direction of smeared steel
@@ -46,6 +46,7 @@ The following recorders are available with the SmearedSteelDoubleLayer material.
 .. note::
 
    1. The implementation of this material does not include the reductions in yield strength and strain-hardening ratio for embedded steel bars in concrete (Belarbi and Hsu, 1995).
+
 
 Examples
 --------

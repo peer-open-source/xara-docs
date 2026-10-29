@@ -1,6 +1,11 @@
+# Asymetric drained triaxial test
+#
+# This example, provides an asymetric drained triaxial test of the constitutive model to show the effect of ratcheting. 
+# First the sample is compressed isotropically to 200 KPa, then a cyclic deviator stress is applied. 
+#
+
 set test_type "drained_triaxial_cyc" ; # Used in recorders.tcl
 
- 
 # Create a 3D model with 4 Degrees of Freedom
 model BasicBuilder -ndm 3 -ndf 3
  
@@ -74,9 +79,9 @@ fix 8   1 1 0
  
 
 # Create element
-#       SSPbrickUP  tag    i j k l m n p q  matTag  fBulk  fDen    k1    k2   k3   void   alpha    <b1 b2 b3>
+#       SSPbrickUP  tag  i j k l m n p q  matTag  fBulk  fDen    k1    k2   k3   void   alpha    <b1 b2 b3>
 element SSPbrick   1     1 2 3 4 5 6 7 8    1
- 
+
 recorder Element -file ${type}_${test_type}_stress.out -ele 1  -time stress
 recorder Element -file ${type}_${test_type}_strain.out -ele 1 -time strain
 
@@ -144,18 +149,11 @@ loadConst
 
 puts "Starting cyclic analysis"
 
-
 set Ncyc 1000
 set NcycActuallyDo 1000
 set dT      [expr 0.001]
 set tmax    [expr $NcycActuallyDo]
 set numStep [expr int(2.0*$tmax / $dT)]
- 
-
-
-
-
-
 
 
 set qlist [list 0]
@@ -175,7 +173,6 @@ eval "pattern Plain 4 $tsq { load 5  0 0 1.0;  }"
 eval "pattern Plain 5 $tsq { load 6  0 0 1.0;  }"
 eval "pattern Plain 6 $tsq { load 7  0 0 1.0;  }"
 eval "pattern Plain 7 $tsq { load 8  0 0 1.0;  }"
-
 
 
 

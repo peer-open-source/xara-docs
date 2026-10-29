@@ -7,9 +7,10 @@ Code Developed by: **Alborz Ghofrani**, |pedro|, U. Washington
 
 This command is used to construct a multi-dimensional [Manzari-Dafalias2004]_ material.
 
-.. function:: nDmaterial ManzariDafalias $matTag $G0 $nu $e_init $Mc $c $lambda_c $e0 $ksi $P_atm $m $h0 $ch $nb $A0 $nd $z_max $cz $Den
 
-.. csv-table:: 
+.. function:: nDmaterial ManzariDafalias matTag G0 nu e_init Mc c lambda_c e0 ksi P_atm m h0 ch nb A0 nd z_max cz Den
+
+.. csv-table::
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
@@ -47,6 +48,7 @@ This command is used to construct a multi-dimensional [Manzari-Dafalias2004]_ ma
 
       recorder Element -eleRange 1 $numElem -time -file stress.out  stress
 
+
 #. Elastic or Elastoplastic response could be enforced by
 
    .. code-block:: tcl
@@ -65,7 +67,7 @@ Theory
 
 .. math::
    
-    \mathbf{s} = \mathrm{dev} (\mathbf{\sigma}) = \mathbf{\sigma} - \frac{1}{3} p \mathbf{1} 
+    \mathbf{s} = \mathrm{dev} (\mathbf{\sigma}) = \mathbf{\sigma} - \frac{1}{3} p \mathbf{1}
 
 
 Elasticity
@@ -111,12 +113,12 @@ Yield surface is a stress-ratio dependent surface in this model and is defined a
 
 .. math::
 
-   \left\| \mathbf{s} - p \mathbf{\alpha} \right\| - \sqrt\frac{2}{3}pm = 0 
+   \left\| \mathbf{s} - p \mathbf{\alpha} \right\| - \sqrt\frac{2}{3} p m = 0 
 
 with :math:`\mathbf{\alpha}` being the deviatoric back stress-ratio.
 
-Plastic Strain Increment
-""""""""""""""""""""""""
+Flow Rule
+"""""""""
 
 The increment of the plastic strain tensor is given by
 
@@ -145,7 +147,8 @@ where :math:`\mathbf{n}` is the deviatoric part of the gradient to yield surface
 
    \mathbf{\alpha}^b_{\theta} = \sqrt{\frac{2}{3}} \bigl( g(\theta,c) M_c \exp(-n^b \Psi) - m\bigr) \mathbf{n}
 
-where :math:`\Psi` is the state parameter. The hardening parameter :math:`h` is defined as
+where :math:`\Psi` is the state parameter. 
+The hardening parameter :math:`h` is defined as
 
 .. math:: 
 
