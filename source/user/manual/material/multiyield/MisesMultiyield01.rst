@@ -15,46 +15,48 @@ In the subsequent dynamic (fast) loading phase(s), the stress-strain response is
 Plasticity is formulated based on the multi-surface (nested surfaces) concept, with an associative flow rule. 
 The yield surfaces are of the Von Mises type.
 
-.. py:class:: xara.MultiaxialMaterial("MisesMultiyield01", nd, rho, Gr, Br, c, es_max, frictionAng=0, pr=100, d=0. nys=20, <r1 Gs1 ...> >)
-   :noindex:
+.. tabs::
 
-   :param nd: number of dimensions (2 for plane-strain, 3 for 3D)
-   :type nd: |integer|
-   :param rho: saturated soil mass density
-   :type rho: |float|
-   :param Gr: reference low-strain shear modulus, specified at a reference mean effective confining pressure :math:`p'_r`. Units of :ref:`stress <UnitStress>`.
-   :type Gr: |float|
-   :param Br: reference bulk modulus, specified at a reference mean effective confining pressure :math:`p'_r`. Units of :ref:`stress <UnitStress>`.
-   :type Br: |float|
-   :param c: apparent cohesion :math:`c` at zero effective confinement. Units of :ref:`stress <UnitStress>`.
-   :type c: |float|
-   :param es_max: octahedral shear strain :math:`\gamma_{\mathrm{max}}` at which the maximum shear strength is reached, specified at a reference mean effective confining pressure :math:`p'_r`.
-   :type es_max: |float|
-   :param frictionAng: friction angle at peak shear strength in degrees (optional, default is 0.0)
-   :type frictionAng: |float|
-   :param pr: reference mean effective confining pressure :math:`p'_r` at which :math:`G_r`, :math:`B_r`, and :math:`\gamma_{\mathrm{max}}` are defined (optional, default is 100. kPa)
-   :type pr: |float|
+   .. tab:: Python
 
+      .. py:class:: xara.MultiaxialMaterial("MisesMultiyield01", nd, rho, Gr, Br, c, es_max, frictionAng=0, pr=100, d=0. nys=20, <r1 Gs1 ...> >)
+         :noindex:
 
+         :param density: saturated soil mass density
+         :type density: |float|
+         :param Gr: reference low-strain shear modulus, specified at a reference mean effective confining pressure :math:`p'_r`. Units of :ref:`stress <UnitStress>`.
+         :type Gr: |float|
+         :param Br: reference bulk modulus, specified at a reference mean effective confining pressure :math:`p'_r`. Units of :ref:`stress <UnitStress>`.
+         :type Br: |float|
+         :param c: apparent cohesion :math:`c` at zero effective confinement. Units of :ref:`stress <UnitStress>`.
+         :type c: |float|
+         :param es_max: octahedral shear strain :math:`\gamma_{\mathrm{max}}` at which the maximum shear strength is reached, specified at a reference mean effective confining pressure :math:`p'_r`.
+         :type es_max: |float|
+         :param frictionAng: friction angle at peak shear strength in degrees (optional, default is 0.0)
+         :type frictionAng: |float|
+         :param pr: reference mean effective confining pressure :math:`p'_r` at which :math:`G_r`, :math:`B_r`, and :math:`\gamma_{\mathrm{max}}` are defined (optional, default is 100. kPa)
+         :type pr: |float|
 
-.. function:: nDmaterial PressureIndependMultiYield tag nd rho Gr Br c es_max <frictionAng=0. pr=100. d=0. nys=20 <r1 Gs1 …> >
+   .. tab:: Tcl
 
-.. csv-table:: Arguments
-   :header: "Argument", "Type", "Description"
-   :widths: 1, 1, 98
+      .. function:: nDmaterial PressureIndependMultiYield tag nd rho Gr Br c es_max <frictionAng=0. pr=100. d=0. nys=20 <r1 Gs1 …> >
 
-   tag, |integer|,  A positive integer uniquely identifying the material among all nDMaterials.
-   nd, |integer|, "Number of dimensions, 2 for plane-strain, and 3 for 3D analysis."
-   rho, |float|, "Saturated soil mass density."
-   Gr, |float|,  "Reference low-strain shear modulus :math:`G_r`, specified at a reference mean effective confining pressure :math:`p'_r` (see below)."
-   Br, |float|, "Reference bulk modulus :math:`B_r`, specified at a reference mean effective confining pressure :math:`p'_r` (see below)."
-   c (:math:`c`), |float|, "Apparent cohesion :math:`c` at zero effective confinement."
-   es_max, |float|, "Octahedral shear strain :math:`\gamma_{\mathrm{max}}` at which the maximum shear strength is reached, specified at a reference mean effective confining pressure :math:`p'_r` (see below)."
-   frictionAng (Φ), |float|, "Friction angle at peak shear strength in degrees. (optional: default is 0.0)."
-   pr (:math:`p'_r`), |float|, "Reference mean effective confining pressure :math:`p'_r` at which :math:`G_r` and :math:`B_r` and :math:`\gamma_{\mathrm{max}}` are defined. Optional (default is 100. kPa)."
-   d, |float|,  "A positive constant :math:`d > 0` defining variations of :math:`G` and :math:`B` as a function of instantaneous effective confinement :math:`p'` (default is 0.0). see notes 4 and 5 below."
-   nys, |integer|, "Number of yield surfaces, optional (must be less than 40: default is 20). The surfaces are generated based on the hyperbolic relation defined in Note 2 below."
-   r Gs, |float|, "Instead of automatic surfaces generation (Note 2), you can define yield surfaces directly based on desired shear modulus reduction curve. To do so, add a minus sign in front of ``nys``, then provide noYieldSurf pairs of shear strain (γ) and modulus ratio (Gs) values. For example, to define 10 surfaces: … -10γ1Gs1 … γ10Gs10 …"
+      .. csv-table:: Arguments
+         :header: "Argument", "Type", "Description"
+         :widths: 1, 1, 98
+
+         tag, |integer|,  A positive integer uniquely identifying the material among all nDMaterials.
+         nd, |integer|, "Number of dimensions, 2 for plane-strain, and 3 for 3D analysis."
+         rho, |float|, "Saturated soil mass density."
+         Gr, |float|,  "Reference low-strain shear modulus :math:`G_r`, specified at a reference mean effective confining pressure :math:`p'_r` (see below)."
+         Br, |float|, "Reference bulk modulus :math:`B_r`, specified at a reference mean effective confining pressure :math:`p'_r` (see below)."
+         c (:math:`c`), |float|, "Apparent cohesion :math:`c` at zero effective confinement."
+         es_max, |float|, "Octahedral shear strain :math:`\gamma_{\mathrm{max}}` at which the maximum shear strength is reached, specified at a reference mean effective confining pressure :math:`p'_r` (see below)."
+         frictionAng (Φ), |float|, "Friction angle at peak shear strength in degrees. (optional: default is 0.0)."
+         pr (:math:`p'_r`), |float|, "Reference mean effective confining pressure :math:`p'_r` at which :math:`G_r` and :math:`B_r` and :math:`\gamma_{\mathrm{max}}` are defined. Optional (default is 100. kPa)."
+         d, |float|,  "A positive constant :math:`d > 0` defining variations of :math:`G` and :math:`B` as a function of instantaneous effective confinement :math:`p'` (default is 0.0). see notes 4 and 5 below."
+         nys, |integer|, "Number of yield surfaces, optional (must be less than 40: default is 20). The surfaces are generated based on the hyperbolic relation defined in Note 2 below."
+         r Gs, |float|, "Instead of automatic surfaces generation (Note 2), you can define yield surfaces directly based on desired shear modulus reduction curve. To do so, add a minus sign in front of ``nys``, then provide noYieldSurf pairs of shear strain (γ) and modulus ratio (Gs) values. For example, to define 10 surfaces: … -10γ1Gs1 … γ10Gs10 …"
 
 
 Notes
