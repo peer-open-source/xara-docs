@@ -3,6 +3,8 @@
 Legendre  
 ^^^^^^^^
 
+This class lays out section integration points along the length of a :ref:`beam element <Frame>`
+according to a `Gauss-Legendre <https://en.wikipedia.org/wiki/Gauss%E2%80%93Legendre_quadrature>`_ quadrature rule. 
 Gauss-Legendre quadrature is more accurate than :ref:`Gauss-Lobatto <Lobatto-BeamIntegration>`; however, it is not common in force-based elements because there are no integration points at the element ends. 
 The formulation places ``N`` integration points along the element. 
 The order of accuracy for Gauss-Legendre integration is :math:`2N-1`.
