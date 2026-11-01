@@ -9,10 +9,10 @@ A popular envelope model for metalic materials was developed by \citep{ramberg19
 
 .. math::
 
-    \varepsilon = \frac{\sigma}{E} + a\left(\frac{\sigma}{\sigma_y}\right)^n,
+    \varepsilon = \frac{\sigma}{E} + a\left(\frac{\sigma}{F_y}\right)^n,
 
 
-where $E$ is the elastic modulus, $\sigma_y$ is the yield stress, assumed to be at the 0.2\% offset strain, $n$ is a parameter controlling the transition to yield, and $a$ is a yield offset parameter, typically taken as 0.002. 
+where :math:`E` is the elastic modulus, :math:`F_y` is the yield stress, assumed to be at the 0.2\% offset strain, :math:`n` is a parameter controlling the transition to yield, and :math:`a` is a yield offset parameter, typically taken as 0.002.
 
-Note that the stress \(\sigma\) is defined implicitly in terms of strain \(\varepsilon\) in this model and must be solved for numerically.
+Note that the stress :math:`\sigma` is defined implicitly in terms of strain :math:`\varepsilon` in this model and must be solved for numerically.
 
