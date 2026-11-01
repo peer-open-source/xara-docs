@@ -71,3 +71,6 @@ The following examples demonstrate the command in Tcl and Python script to add a
         model.beamIntegration("UserDefined",1, len(secs), secs, locs, wts)
 
 
+.. ref-gallery::
+
+   examples/frames/frame-0013
