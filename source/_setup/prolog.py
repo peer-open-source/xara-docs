@@ -51,7 +51,7 @@ rst_prolog = """
 .. _fcf: https://fedeas.net
 .. |rms| replace:: *Remo Magalhaes de Souza*
 .. |cmp| replace:: `Claudio M. Perez`_
-.. _Claudio M. Perez: https://stairlab.berkeley.edu/people/claudioperez
+.. _Claudio M. Perez: https://claudioperez.com
 .. |pedro| replace:: `Pedro Arduino`_
 .. _Pedro Arduino: https://www.ce.washington.edu/facultyfinder/pedro-arduino
 .. |peter| replace:: `Peter Mackenzie-Helnwein`_
