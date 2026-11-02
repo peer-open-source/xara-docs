@@ -42,3 +42,6 @@ The **ElasticFrame** section implements a general linear elastic :ref:`Frame <Fr
       .. [2] These arguments are *always* required.
       .. [3] These arguments are required in 3D.
 
+
+
+Code developed by: |cmp|

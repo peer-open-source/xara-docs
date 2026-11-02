@@ -28,3 +28,9 @@ Examples
 .. ref-gallery::
 
    examples/frames/frame-2007
+
+References
+----------
+
+
+Code developed by: |cmp|

@@ -11,4 +11,5 @@ For more complicated *unstructured* meshes, external meshing tools such as Gmsh 
    block2D
    block3D
    mesh
+   helpers
 

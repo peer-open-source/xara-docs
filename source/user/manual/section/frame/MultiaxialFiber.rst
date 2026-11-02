@@ -63,3 +63,6 @@ References
 ----------
 
 * `Perez, C.M. "Nonlinear modeling of frame members for rapid infrastructure assessment." PhD Dissertation, UC Berkeley, 2026 <https://escholarship.org/uc/item/3zn367p3>`__
+
+
+Code developed by: |cmp|

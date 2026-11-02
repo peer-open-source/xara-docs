@@ -13,6 +13,10 @@ Unlike other Python packages which merely wrap the broken OpenSeesPy package, *x
   - https://isocpp.org/wiki/faq/coding-standards#global-vars
   - https://www.learncpp.com/cpp-tutorial/why-non-const-global-variables-are-evil/
 
+
+Output
+------
+
 - Improved :ref:`printA <printA>` for obtaining structural matrices:
 
   - does not require `FullGen` solver; now all one needs
@@ -28,6 +32,10 @@ Unlike other Python packages which merely wrap the broken OpenSeesPy package, *x
   - more reliable JSON printing
   - includes `MP_Constraint` information
 
+
+Analysis
+--------
+
 - Add `-det` option to static integrators:
 
   - :ref:`ArcLength <ArcLengthControl>`
@@ -36,14 +44,15 @@ Unlike other Python packages which merely wrap the broken OpenSeesPy package, *x
 
   - `FullGenLapack`, :ref:`Umfpack`, `BandGenLapack`
 
-- Verbosity control
 
-- new `export` command in Python and Tcl, when run through Python
-- new `invoke` Tcl command and Python constructs
-- new `progress` command in Tcl
-- new `=` command, fixes vexing operator precedence in `expr`
+.. - Verbosity control
 
-- Minimized use of ``exit()`` syscalls.
+.. - new `export` command in Python and Tcl, when run through Python
+.. - new `invoke` Tcl command and Python constructs
+.. - new `progress` command in Tcl
+.. - new `=` command, fixes vexing operator precedence in `expr`
+
+.. - Minimized use of ``exit()`` syscalls.
 
 
 Diagnostics

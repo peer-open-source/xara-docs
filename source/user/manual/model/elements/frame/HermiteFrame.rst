@@ -23,3 +23,5 @@ Two-node frame finite element with cubic displacement formulation.
          :param integration: identifier for previously-defined integration rule, optional.
          :type integration: |integer|, optional
 
+
+Code developed by: |cmp|

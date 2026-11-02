@@ -78,3 +78,6 @@ References
       pagetotal = {286},
       keywords = {Beam-column element,Civil engineering,Collapse simulation,Damage assessment,Damage plasticity,Materials science,Stress resultants}
    }
+
+
+Code developed by: |cmp|, |fcf|
