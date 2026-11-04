@@ -1,17 +1,17 @@
 CamClayPlastic
 ^^^^^^^^^^^^^^
 
-.. py:method:: xara.MultiaxialMaterial("CamClayPlastic", nd, rho, Gr, Br, M, lamda, kappa, e0, p0)
+.. py:method:: xara.MultiaxialMaterial("CamClayPlastic", ...)
    :noindex:
 
-   :param E: Young's modulus
+   :param E: Young's modulus. Units of :ref:`stress <UnitStress>`.
    :type E: |float|
-   :param nu: Poisson's ratio
+   :param nu: Poisson's ratio. Dimensionless.
    :type nu: |float|
-   :param lamda: :math:`\lambda` parameter in the Cam-Clay model
-   :type lamda: |float|
-   :param kappa: :math:`\kappa` parameter in the Cam-Clay model
-   :type kappa: |float|
+   :param clamda: :math:`\lambda` parameter in the Cam-Clay model
+   :type clamda: |float|
+   :param ckappa: :math:`\kappa` parameter in the Cam-Clay model
+   :type ckappa: |float|
    :param c: :math:`c` parameter in the Cam-Clay model
    :type c: |float|
    :param M: :math:`M` parameter in the Cam-Clay model
@@ -20,6 +20,7 @@ CamClayPlastic
    :type p0: |float|
    :param density: Density of the material.
    :type density: |float|
+
 
 
 .. math::
