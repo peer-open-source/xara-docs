@@ -34,23 +34,23 @@ set a0 [expr $a1*$omega1*$omega2]
 model BasicBuilder -ndm 3 -ndf 4
 
 # Create nodes
-node 11.00.00.0
-node 21.01.00.0
-node 3 0.01.00.0
-node 40.00.00.0
-node 51.00.01.0
-node 6 1.01.01.0
-node 7 0.01.01.0
-node 8 0.00.01.0
+node 1 1.0 0.0 0.0
+node 2 1.0 1.0 0.0
+node 3 0.0 1.0 0.0
+node 4 0.0 0.0 0.0
+node 5 1.0 0.0 1.0
+node 6 1.0 1.0 1.0
+node 7 0.0 1.0 1.0
+node 8 0.0 0.0 1.0
 
 # Create Fixities
 fix 1 0 1 1 1
 fix 2 0 0 1 1
-fix 31 0 1 1
+fix 3 1 0 1 1
 fix 4 1 1 1 1
-fix 50 1 0 1
+fix 5 0 1 0 1
 fix 6 0 0 0 1
-fix 71 0 0 1
+fix 7 1 0 0 1
 fix 8 1 1 0 1
 
 
@@ -63,12 +63,12 @@ nDMaterial ManzariDafalias   1    125  0.05   $vR    1.25  0.712   0.019    0.93
 element SSPbrickUP   1     1 2 3 4 5 6 7 8    1     2.2e6   1.0  $perm $perm $perm  $vR   1.5e-9 
 
 # Create recorders
-recorder Node    -file disp.out   -time -nodeRange 1 8 -dof 1 2 3 disp
-recorder Node    -file press.out  -time -nodeRange 1 8 -dof 4     vel
-recorder Element -file stress.out -time stress
-recorder Element -file strain.out -time strain
-recorder Element -file alpha.out  -time alpha
-recorder Element -file fabric.out -time fabric
+recorder Node    -file out/disp.out   -time -nodeRange 1 8 -dof 1 2 3 disp
+recorder Node    -file out/press.out  -time -nodeRange 1 8 -dof 4     vel
+recorder Element -file out/stress.out -time stress
+recorder Element -file out/strain.out -time strain
+recorder Element -file out/alpha.out  -time alpha
+recorder Element -file out/fabric.out -time fabric
 
 
 # Create analysis
@@ -112,8 +112,8 @@ set ts "{Series -time {20000 1020000 10020000} -values {$lValues} -factor 1}"
 
 # loading object deviator stress
 eval "pattern Plain 2 $ts { 
-sp 5  3$vertDisp
-sp 6  3$vertDisp
+sp 5  3 $vertDisp
+sp 6  3 $vertDisp
 sp 7  3 $vertDisp
 sp 8  3 $vertDisp
 }"
@@ -171,3 +171,4 @@ set endT [clock seconds]
 puts "loading analysis execution time: [expr $endT-$startT] seconds."
 
 wipe
+
