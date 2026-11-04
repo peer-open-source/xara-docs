@@ -41,7 +41,7 @@ Theory
 ------
 
 The formulation of the Elastic Isotropic material is often referred to as the *Saint Venant–Kirchhoff model*.
-Any linear isotropic function can be expressed in terms of two parameters :math:`\lambda` and :math:`\mu` as follows :cite:p:`gurtin1981introduction`:
+Any linear isotropic function can be expressed in terms of two parameters :math:`\lambda` and :math:`\mu` as follows :footcite:p:`gurtin1981introduction`:
 
 .. math::
 
@@ -100,6 +100,10 @@ Examples
 
 References
 ----------
+
+
+.. footbibliography::
+
 
 Code Developed by: |mhs|
 
