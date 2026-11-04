@@ -1,7 +1,7 @@
 .. _SAniSandMS:
 
-SANISAND-MS Material
-^^^^^^^^^^^^^^^^^^^^
+SANISAND-MS
+^^^^^^^^^^^
 
 **Code Developed by**: `Haoyuan Liu <https://www.linkedin.com/in/haoyuan-liu-059500171/?originalSubdomain=nl>`_ (Norwegian Geotechnical Institute (NGI), formerly TUDelft), `José A. Abell <http://www.joseabell.com>`_ (UANDES, Chile), `Andrea Diambra <https://research-information.bris.ac.uk/en/persons/andrea-diambra>`_ (University of Bristol), and `Federico Pisanò <https://www.tudelft.nl/citg/over-faculteit/afdelingen/geoscience-engineering/sections/geo-engineering/staff/academic-staff/dr-f-federico-pisano>`_ (TU Delft).
 
@@ -14,44 +14,40 @@ This allows capturing the ratcheting effects in sands that occur in high-cyclic 
    :figclass: align-center
 
 
-.. admonition:: TCL command:
+.. function:: nDMaterial SAniSandMS  tag G0 nu e_init Mc c lambda_c e0 ksi P_atm m h0 ch nb A0 nd zeta mu0 beta Den fabric_flag flow_flag intScheme TanType JacoType TolF TolR
 
-   nDMaterial SAniSandMS  $matTag $G0 $nu $e_init $Mc $c $lambda_c $e0 $ksi $P_atm $m $h0 $ch $nb $A0 $nd $zeta $mu0 $beta $Den $fabric_flag $flow_flag $intScheme $TanType $JacoType $TolF $TolR
-
-
-Where,
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   $matTag, |integer|,	   unique tag identifying material
-   $G0, |float|, 	   dimensionless shear modulus constant
-   $nu, |float|, 	   Poisson ratio
-   $e_init, |float|, 	   initial void ratio
-   $Mc, |float|, 	   critical state stress ratio
-   $c, |float|, 	   ratio of critical state stress ratio in extension and compression
-   $lambda_c, |float|, critical state line constant
-   $e0, |float|, reference critical void ratio at p = 0
-   $ksi, |float|, critical state line constant
-   $P_atm, |float|, atmospheric pressure
-   $m, |float|, yield locus opening parameter (radius of yield surface in stress ratio space)
-   $h0, |float|, hardening parameter
-   $ch, |float|, hardening parameter
-   $nb, |float|, bounding surface void ratio dependence parameter  $nb ≥ 0
-   $A0, |float|, intrinsic dilatancy parameter
-   $nd, |float|, dilatancy surface parameter $nd ≥ 0
-   $zeta , |float|, memory surface shrinkage parameter
-   $mu0 , |float|, ratcheting parameter
-   $beta , |float|, dilatancy memory parameter
-   $Den, |float|, mass density of the material
-   $fabric_flag , |integer|, (deprecated)
-   $flow_flag , |integer|, (deprecated)
-   $intScheme , |integer|, constitutive integration method (3: Runge-Kutta 4th order with error control (the only one currently implemented))
-   $TanType , |integer|, type of tangent stiffness to report (0: elastic stiffness | 1: continuum elastoplastic stiffness )
-   $JacoType , |integer|, placeholder (not used in explicit methods)
-   $TolF , |float|, tolerance for yield surface intersection calculation (stress units)
-   $TolE, |float|, (adimensional) relative error for explicit integrator
+   tag, |integer|, unique tag identifying material
+   G0, |float|,     dimensionless shear modulus constant
+   nu, |float|,     Poisson ratio
+   e_init, |float|,     initial void ratio
+   Mc, |float|,     critical state stress ratio
+   c, |float|,     ratio of critical state stress ratio in extension and compression
+   lambda_c, |float|, critical state line constant
+   e0, |float|, reference critical void ratio at p = 0
+   ksi, |float|, critical state line constant
+   P_atm, |float|, atmospheric pressure
+   m, |float|, yield locus opening parameter (radius of yield surface in stress ratio space)
+   h0, |float|, hardening parameter
+   ch, |float|, hardening parameter
+   nb, |float|, bounding surface void ratio dependence parameter  nb ≥ 0
+   A0, |float|, intrinsic dilatancy parameter
+   nd, |float|, dilatancy surface parameter nd ≥ 0
+   zeta , |float|, memory surface shrinkage parameter
+   mu0 , |float|, ratcheting parameter
+   beta , |float|, dilatancy memory parameter
+   Den, |float|, mass density of the material
+   fabric_flag , |integer|, (deprecated)
+   flow_flag , |integer|, (deprecated)
+   intScheme , |integer|, constitutive integration method (3: Runge-Kutta 4th order with error control (the only one currently implemented))
+   TanType , |integer|, type of tangent stiffness to report (0: elastic stiffness | 1: continuum elastoplastic stiffness )
+   JacoType , |integer|, placeholder (not used in explicit methods)
+   TolF , |float|, tolerance for yield surface intersection calculation (stress units)
+   TolE, |float|, (adimensional) relative error for explicit integrator
 
 
 The current implementation on SANISAND-MS uses fourth-order Runge-Kutta with error control for constitutive integration. 
@@ -77,7 +73,6 @@ The above equations differ from those in the main reference by Liu et al. (2019)
 .. admonition:: Citation information
 
    If you use SANISAND-MS in your published research work, please cite the main reference ([SANISAND-MS]_) and also inform ``jaabell`` (*at* miuandes *dot* cl), to update the list of published articles and works that use the code. 
-
 
    Please report bugs as an issue on the main OpenSees repositoy and tag ``@jaabell`` 
 
