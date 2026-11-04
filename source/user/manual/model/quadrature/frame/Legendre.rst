@@ -23,15 +23,15 @@ The order of accuracy for Gauss-Legendre integration is :math:`2N-1`.
 
    .. tab:: Tcl
 
-      .. function:: beamIntegration "Legendre" tag secTag N
+      .. function:: beamIntegration "Legendre" tag section N
 
       .. csv-table::
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
 
-         "$tag",       "|integer|",    "Unique object tag"
-         "$sectTag",   "|integer|",    "A previous-defined section"
-         "$N",         "|integer|",    "Number of Integration Points along the elementa"
+         "tag",       "|integer|",    "Unique object tag"
+         "section",   "|integer|",    "A previous-defined section"
+         "N",         "|integer|",    "Number of Integration Points along the element"
          
 
 Example
