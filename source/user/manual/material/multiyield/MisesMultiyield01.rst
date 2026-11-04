@@ -10,10 +10,6 @@ The volumetric stress-strain response is linear-elastic and is independent of th
 This material is implemented to simulate monotonic or cyclic response of materials whose shear behavior is insensitive to the confinement change. 
 Such materials include, for example, organic soils or clay under fast (undrained) loading conditions.
 
-During the application of gravity load (and static loads if any), material behavior is linear elastic. 
-In the subsequent dynamic (fast) loading phase(s), the stress-strain response is elastic-plastic (see MATERIAL STAGE UPDATE below). 
-Plasticity is formulated based on the multi-surface (nested surfaces) concept, with an associative flow rule. 
-The yield surfaces are of the Von Mises type.
 
 .. tabs::
 
@@ -63,16 +59,27 @@ Notes
 =====
 
 
+Stages
+++++++
+
+
+During the application of gravity load (and static loads if any), material behavior is linear elastic. 
+In the subsequent dynamic (fast) loading phase(s), the stress-strain response is elastic-plastic (see MATERIAL STAGE UPDATE below). 
+Plasticity is formulated based on the multi-surface (nested surfaces) concept, with an associative flow rule. 
+
+
+
+Yield Surfaces
+++++++++++++++
+
+The yield surfaces are of the Von Mises type.
+
 The friction angle :math:`\phi` and cohesion :math:`c` define the variation of peak (octahedral) shear strength :math:`\tau_f` as a function of current effective confinement :math:`{p^t}_i`:
 
 .. math::
 
    \tau_f = \frac{2 \sqrt{2} \sin \phi}{3 - \sin \phi}{p^t}_i + \frac{2 \sqrt{2}}{3}c
 
-
-
-Yield Surfaces
-++++++++++++++
 
 2. Automatic surface generation: at a constant confinement :math:`p^t`, the shear stress :math:`\tau` (octahedral) - shear strain :math:`\gamma` (octahedral) nonlinearity is defined by a hyperbolic curve (backbone curve):
 
@@ -124,13 +131,13 @@ The following information may be extracted for this material at a given integrat
 
   .. code::
 
-     recorder Element –ele $eleNum -file $fName -dT $deltaT material $GaussNum backbone $p1 <$p2 …>
+     recorder Element –ele $tag -file $path -dT $deltaT material $GaussNum backbone $p1 <$p2 …>
 
   where p1, p2, ... are the confinements at which modulus reduction curves are recorded. In the output file, corresponding to each given confinement there are two columns: shear strain γ and secant modulus Gs. The number of rows equals the number of yield surfaces.
 
 
-Parameters
-==========
+Parameters Suggestions
+======================
 
 
 .. tabs::
@@ -139,7 +146,7 @@ Parameters
          :header: "Parameters", "Soft Clay", "Medium Clay", "Stiff Clay"
          :widths: 20, 20, 20, 20
 
-         rho, "1.3 ton/m3", "1.5 ton/m3", "1.8 ton/m3"
+         density, "1.3 ton/m3", "1.5 ton/m3", "1.8 ton/m3"
          Gr, "1.3x104 kPa", "6.0x104 kPa", "1.5x105 kPa"
          Br, "6.5x104 kPa", "3.0x105 kPa", "7.5x105 kPa"
          cohesi, "18 kPa", "37 kPa", "75 kPa "
@@ -153,7 +160,7 @@ Parameters
          :header: "Parameters", "Soft Clay", "Medium Clay", "Stiff Clay"
          :widths: 20, 20, 20, 20
 
-         rho, "1.217x10-4(lbf)(s2)/in4", "1.404x10-4 (lbf)(s2)/in4", "1.685x10-4 (lbf)(s2)/in4"
+         density, "1.217x10-4(lbf)(s2)/in4", "1.404x10-4 (lbf)(s2)/in4", "1.685x10-4 (lbf)(s2)/in4"
          Gr, "1.885x103psi", "8.702x104psi", "2.176x104 psi"
          Br, "9.427x103psi", "4.351x104psi", "1.088x105psi"
          cohesi, "2.611psi", "5.366psi", "10.878psi"
