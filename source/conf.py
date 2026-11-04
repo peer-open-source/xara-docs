@@ -25,7 +25,7 @@ copyright = 'Berkeley, CA'
 description = "Finite element analysis"
 author = "PEER"
 #html_logo = "_static/images/xara.png"
-html_title = "xara: Nonlinear finite element analysis" # "xara: An OpenSees application"
+html_title = "Xara: Nonlinear finite element analysis" # "xara: An OpenSees application"
 html_short_title = "xara"
 
 root_doc = "launch" #"user/index"
@@ -112,28 +112,25 @@ exclude_patterns = [
     "user/manual/model/elements/other/SFI_MVLEM_3D.rst",
     "user/manual/model/elements/other/E_SFI.rst",
     "user/manual/model/elements/other/E_SFI_MVLEM_3D.rst",
-    "user/manual/model/elements/grainfluid/7045-BbarBrickUP.rst",
-    "user/manual/model/elements/grainfluid/7045-BbarBrickUP.md",
-    "user/manual/model/elements/grainfluid/7046-BbarQuadUP.rst",
-    "user/manual/model/elements/grainfluid/7066-BrickUP.rst",
-    "user/manual/model/elements/grainfluid/7264-FourNodeQuadUP.rst",
-    "user/manual/model/elements/grainfluid/7266-Four Node QuadUP.rst",
-    "user/manual/model/elements/grainfluid/7419-NineFourNodeQuadUP.rst",
-    "user/manual/model/elements/grainfluid/7612-SSPbrickUP.rst",
-    "user/manual/model/elements/grainfluid/7614-SSPquadUP.rst",
-    "user/manual/model/elements/grainfluid/7720-TwentyEightNodeBrickUP.rst",
+    "user/manual/model/elements/soil/7045-BbarBrickUP.rst",
+    "user/manual/model/elements/soil/7045-BbarBrickUP.md",
+    "user/manual/model/elements/soil/7046-BbarQuadUP.rst",
+    "user/manual/model/elements/soil/7066-BrickUP.rst",
+    "user/manual/model/elements/soil/7264-FourNodeQuadUP.rst",
+    "user/manual/model/elements/soil/7266-Four Node QuadUP.rst",
+    "user/manual/model/elements/soil/7419-NineFourNodeQuadUP.rst",
+    "user/manual/model/elements/soil/7612-SSPbrickUP.rst",
+    "user/manual/model/elements/soil/7614-SSPquadUP.rst",
+    "user/manual/model/elements/soil/7720-TwentyEightNodeBrickUP.rst",
     # "user/manual/model/elements/fluid/index.rst",
     "user/manual/materialCommands.rst",
-    # "user/manual/material/ndMaterials/BoundingCamClay.rst",
     "user/manual/material/ndMaterials/PM4Sand.rst",
     "user/manual/material/ndMaterials/PM4Silt.rst",
     "user/manual/material/ndMaterials/PressureIndependentMultiYield.rst",
     "user/manual/material/ndMaterials/PressureIndependentMultiYieldExample1.rst",
     "user/manual/material/ndMaterials/PressureDependentMultiYield.rst",
     "user/manual/material/ndMaterials/PressureDependentMultiYield02.rst",
-    "user/manual/material/ndMaterials/J2CyclicBoundingSurface.rst",
-    "user/manual/material/ndMaterials/SAniSandMS.rst",
-    "user/manual/material/ndMaterials/Orthotropic.rst",
+    # "user/manual/material/ndMaterials/Orthotropic.rst",
     "user/manual/material/ndMaterials/Series3D.rst",
     "user/manual/material/ndMaterials/Parallel3D.rst",
     "user/manual/material/ndMaterials/InitStrain.rst",
