@@ -1,6 +1,6 @@
 .. _SAniSandMS:
 
-SANISAND-MS
+SAniSandMS
 ^^^^^^^^^^^
 
 **Code Developed by**: `Haoyuan Liu <https://www.linkedin.com/in/haoyuan-liu-059500171/?originalSubdomain=nl>`_ (Norwegian Geotechnical Institute (NGI), formerly TUDelft), `José A. Abell <http://www.joseabell.com>`_ (UANDES, Chile), `Andrea Diambra <https://research-information.bris.ac.uk/en/persons/andrea-diambra>`_ (University of Bristol), and `Federico Pisanò <https://www.tudelft.nl/citg/over-faculteit/afdelingen/geoscience-engineering/sections/geo-engineering/staff/academic-staff/dr-f-federico-pisano>`_ (TU Delft).
@@ -144,9 +144,9 @@ References
 
 **List of works using SANISAND-MS**
 
-.. [1] Liu, H. Y., & Pisano, F. (2019). `Prediction of oedometer terminal densities through a memory-enhanced cyclic model for sand <https://www.icevirtuallibrary.com/doi/pdf/10.1680/jgele.18.00187>`_. Géotechnique Letters, 9(2), 81-88.
+#. Liu, H. Y., & Pisano, F. (2019). `Prediction of oedometer terminal densities through a memory-enhanced cyclic model for sand <https://www.icevirtuallibrary.com/doi/pdf/10.1680/jgele.18.00187>`_. Géotechnique Letters, 9(2), 81-88.
  
-.. [2] Liu, H. Y., Kementzetzidis, E., Abell, J. A., & Pisanò, F. (2021). `From cyclic sand ratcheting to tilt accumulation of offshore monopiles: 3D FE modelling using SANISAND-MS <https://www.icevirtuallibrary.com/doi/pdf/10.1680/jgeot.20.P.029>`_. Géotechnique, 1-16.
+#. Liu, H. Y., Kementzetzidis, E., Abell, J. A., & Pisanò, F. (2021). `From cyclic sand ratcheting to tilt accumulation of offshore monopiles: 3D FE modelling using SANISAND-MS <https://www.icevirtuallibrary.com/doi/pdf/10.1680/jgeot.20.P.029>`_. Géotechnique, 1-16.
 
-.. [3] Liu, H.Y., & Kaynia, A. M. (2021). `Characteristics of cyclic undrained model SANISAND-MSu and their effects on response of monopiles for offshore wind structures <https://www.icevirtuallibrary.com/doi/pdf/10.1680/jgeot.21.00068>`_. Géotechnique, 1-39.
+#. Liu, H.Y., & Kaynia, A. M. (2021). `Characteristics of cyclic undrained model SANISAND-MSu and their effects on response of monopiles for offshore wind structures <https://www.icevirtuallibrary.com/doi/pdf/10.1680/jgeot.21.00068>`_. Géotechnique, 1-39.
 
