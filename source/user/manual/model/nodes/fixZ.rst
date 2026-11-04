@@ -19,6 +19,7 @@ fixZ
 
       .. function:: fixZ $z (ndf $ConstrValues) <-tol $tol>
 
+
       .. csv-table:: 
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
