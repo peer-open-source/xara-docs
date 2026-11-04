@@ -78,9 +78,8 @@ Examples
 --------
 
 .. ref-gallery::
-    :tooltip:
 
-    examples/sections/fiber-0002
+   examples/sections/fiber-0002
 
 
 .. The following example demonstrates how to create a ``MultiaxialFiber`` section representing a circle.

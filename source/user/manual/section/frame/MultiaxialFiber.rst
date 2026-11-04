@@ -3,7 +3,7 @@
 MultiaxialFiber
 ^^^^^^^^^^^^^^^
 
-A ``MultiaxialFiber`` section is used to model a :ref:`Frame <frame>` section with shear deformation. 
+A ``MultiaxialFiber`` section is used to model a :ref:`Frame <frame>` section with shear deformation :footcite:p:`perez2026nonlinear`. 
 The section is defined by a collection of fibers that discretize the cross-section. 
 
 .. tabs::
@@ -53,16 +53,18 @@ Examples
 --------
 
 .. ref-gallery::
-    :tooltip:
+   :tooltip:
 
-    examples/sections/fiber-000
-    examples/frames/frame-2007
+   examples/sections/fiber-0002
+   examples/frames/frame-2007
 
 
 References
 ----------
 
-* `Perez, C.M. "Nonlinear modeling of frame members for rapid infrastructure assessment." PhD Dissertation, UC Berkeley, 2026 <https://escholarship.org/uc/item/3zn367p3>`__
+.. * `Perez, C.M. "Nonlinear modeling of frame members for rapid infrastructure assessment." PhD Dissertation, UC Berkeley, 2026 <https://escholarship.org/uc/item/3zn367p3>`__
+
+.. footbibliography::
 
 
 Code developed by: |cmp|
