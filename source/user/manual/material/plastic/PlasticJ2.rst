@@ -31,7 +31,7 @@ PlasticJ2
 
    .. tab:: OpenSees
 
-      .. function:: nDMaterial J2Plasticity $tag $K $G $sig0 $sigInf $delta $Hiso <$eta>;
+      .. function:: nDMaterial J2Plasticity tag K G sig0 sigInf delta Hiso <eta>;
 
       .. csv-table:: 
          :header: "Argument", "Type", "Description"
@@ -45,7 +45,14 @@ PlasticJ2
          delta, |float|,	   exponential hardening parameter
          H, |float|,linear hardening parameter
 
+
 .. [1] These arguments are supported by the :ref:`parameter <parameter>` commands.
+
+
+Theory
+------
+
+This material implements a classical :math:`J_2` plasticity model :footcite:p:`simo1998computational`.
 
 
 Examples
@@ -56,3 +63,17 @@ Examples
    examples/material/material-0011
    examples/frames/frame-2007
    examples/plane/plane-2001
+
+
+
+
+References
+----------
+
+
+.. footbibliography::
+
+
+Code Developed by: |cmp|
+
+
