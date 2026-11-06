@@ -21,6 +21,5 @@ Examples
 --------
 
 .. ref-gallery::
-    :tooltip:
 
-    examples/sections/fiber-0003
+   examples/sections/fiber-0003
