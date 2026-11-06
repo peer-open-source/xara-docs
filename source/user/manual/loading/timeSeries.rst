@@ -25,15 +25,15 @@ A TimeSeries represents the relationship between the time in the domain, :math:`
 
    .. tab:: Tcl
 
-      .. function:: timeSeries $type $tag $args ...
+      .. function:: timeSeries type tag args ...
 
       .. csv-table:: 
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
 
-         $type, |string|,      type of time series
-         $tag,  |integer|,     unique time series tag.
-         $args, |list|,        a list of arguments with args depending on type
+         type, |string|,      type of time series
+         tag,  |integer|,     unique time series tag.
+         args, |list|,        a list of arguments with args depending on type
 
 
 
