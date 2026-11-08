@@ -167,12 +167,13 @@ The following parameters are suggested:
 
 .. tabs::
    .. tab:: SI Units
+
       .. csv-table:: 
          :header: "Parameters","Loose Sand (15%-35%)", "Medium Sand (35%-65%)", "Medium-dense Sand (65%-85%)", "Dense Sand (85%-100%)"
          :widths: 1, 1, 1, 1, 1
          
-         density, "1.7 ton/m3 or 1.59e-4 (lbf)(s2)/in4", "1.9 ton/m3", "2.0 ton/m3", "2.1 ton/m3"
-         "Gref (at p’r=80 kPa)", "5.5e4 kPa or 7.977e3 psi", "7.5e4 kPa", "1.0e5 kPa", "1.3e5 kPa"
+         density, "1.7 ton/m3", "1.9 ton/m3", "2.0 ton/m3", "2.1 ton/m3"
+         "Gref (at p’r=80 kPa)", "5.5e4 kPa", "7.5e4 kPa", "1.0e5 kPa", "1.3e5 kPa"
          "refBulkModu (at p’r=80 kPa)", "1.5e5 kPa", "2.0e5 kPa", "3.0e5 kPa", "3.9e5 kPa"
          frictionAng,  29,	 33,	37,  40
          "refPress (p’r)", "80 kPa", "80 kPa", "80 kPa", "80 kPa"
@@ -187,6 +188,7 @@ The following parameters are suggested:
          e,		0.85,   0.7,  0.55,  0.45
 
    .. tab:: US Units
+
       .. csv-table:: 
          :header: "Parameters","Loose Sand (15%-35%)", "Medium Sand (35%-65%)", "Medium-dense Sand (65%-85%)", "Dense Sand (85%-100%)"
          :widths: 1, 1, 1, 1, 1
@@ -195,7 +197,7 @@ The following parameters are suggested:
          "Gref (at p’r=11.6 psi)", "7.977e3 psi", "1.088e4 psi", "1.45e4 psi", "1.885e4 psi"
          "refBulkModu (at p’r=11.6 psi)", "2.176e4 psi", "2.9e4 psi", "4.351e4 psi", "5.656e4 psi"
          frictionAng,  29,	 33,	37,  40
-         "refPress (p’r)", "80 kPa or 11.6 psi", "80 kPa or 11.6 psi", "80 kPa or 11.6 psi", "80 kPa or 11.6 psi"
+         "refPress (p’r)", "11.6 psi", "11.6 psi", "11.6 psi", "11.6 psi"
          pressDependCoe,	  0.5, 0.5, 0.5,	  0.5
          PTAng,		  29 ,  27,   27,		  27
          contrac,		  0.21, 0.07, 0.05,	  0.03
