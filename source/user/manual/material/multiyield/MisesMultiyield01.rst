@@ -147,8 +147,8 @@ Parameters Suggestions
          :widths: 20, 20, 20, 20
 
          density, "1.3 ton/m3", "1.5 ton/m3", "1.8 ton/m3"
-         Gr, "1.3x104 kPa", "6.0x104 kPa", "1.5x105 kPa"
-         Br, "6.5x104 kPa", "3.0x105 kPa", "7.5x105 kPa"
+         Gr, "1.3e4 kPa", "6.0e4 kPa", "1.5e5 kPa"
+         Br, "6.5e4 kPa", "3.0e5 kPa", "7.5e5 kPa"
          cohesi, "18 kPa", "37 kPa", "75 kPa "
          "es_max (at p’r=80 kPa)", 0.1 , 0.1, 0.1
          frictionAng, 	0, 	0,	0
@@ -160,10 +160,10 @@ Parameters Suggestions
          :header: "Parameters", "Soft Clay", "Medium Clay", "Stiff Clay"
          :widths: 20, 20, 20, 20
 
-         density, "1.217x10-4(lbf)(s2)/in4", "1.404x10-4 (lbf)(s2)/in4", "1.685x10-4 (lbf)(s2)/in4"
-         Gr, "1.885x103psi", "8.702x104psi", "2.176x104 psi"
-         Br, "9.427x103psi", "4.351x104psi", "1.088x105psi"
-         cohesi, "2.611psi", "5.366psi", "10.878psi"
+         density, "1.217x10-4 (lbf)(s2)/in4", "1.404e-4 (lbf)(s2)/in4", "1.685x10-4 (lbf)(s2)/in4"
+         Gr, "1.885e3 psi", "8.702e4 psi", "2.176e4 psi"
+         Br, "9.427e3 psi", "4.351e4 psi", "1.088e5 psi"
+         cohesi, "2.611 psi", "5.366psi", "10.878psi"
          "es_max (at p’r=11.6 psi)", 0.1 , 0.1, 0.1
          frictionAng, 	0, 	0,	0
          d, 0, 	0,	0
@@ -173,8 +173,6 @@ Examples
 ========
 
 .. ref-gallery::
-   :maxdepth: 1
-   :hidden:
 
    examples/soil/model-5101
 
