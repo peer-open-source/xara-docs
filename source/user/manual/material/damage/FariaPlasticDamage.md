@@ -111,15 +111,6 @@ $$
 * `std::fma(a,b,c)` for $a\cdot b + c$ in one rounding step.
 -->
 
-<!-- 
-
-## Examples
-
-The properties of confined concrete were used for the boundaries, and those of unconfined concrete for the web (with $F_c= 45 \mathrm{Mpa}$ and $E_c=36,900 \mathrm{MPa}$). 
-For unconfined concrete the following material parameters were adopted: $E_c=36,900 \mathrm{Mpa}, \nu=0.2$ $F_c=25.6$ МPa, $F_t=5 \mathrm{Mpa}, B_n=0.75, \beta=0.5, A_n=5, A_p=0.1$.
-For confined concrete $F_t$ and $\beta$ were kept the same and the remaining parameters were modified as follows: $F_c=28 \mathrm{Mpa}, B_n=0.7$, $A_n=3, A_p=0.05$.  
-
--->
 
 
 
